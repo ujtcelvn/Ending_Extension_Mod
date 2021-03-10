@@ -1,0 +1,70 @@
+################ medicine ###########
+#first official communication about the breakthrough discovery was not published until 1935, more than two years after the drug was patented
+# For several years in the late 1930s, hundreds of manufacturers produced tens of thousands of tons of myriad forms of sulfa. This and nonexistent testing requirements led to the elixir sulfanilamide disaster in the fall of 1937, during which at least 100 people were poisoned with diethylene glycol. 
+sulfa_antibiotics = {
+    limit = { chemistry_and_electricity_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = synthetic_dye
+        }
+        modifier = {
+            factor = 2
+            invention = i_empiricism
+        }
+    }
+    effect = {
+        pop_growth = 0.0001
+    }
+}
+
+#purifying the first penicillin, penicillin G, in 1942, but it did not become widely available outside the Allied military before 1945
+mass_produced_penicillin = {
+    limit = { chemistry_and_electricity_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            organizational_development = 1
+        }
+        modifier = {
+            factor = 2
+            market_functionality_7 = 1
+        }
+        modifier = {
+            factor = 2
+            invention = sulfa_antibiotics
+        }
+    }
+    effect = {
+        land_attrition = -0.05
+        soldier_to_pop_loss = 0.01
+    }
+}
+
+#Throughout America's first 145 years of war, far more of the country's military personnel perished from infectious diseases than from enemy action. This enduring feature of war was finally reversed in World War II, chiefly as a result of major medical advances in prevention (vaccines) and treatment (antibiotics). Safeguarding the health of a command is indispensable for the success of any campaign. Wars are lost by disease, which causes an enormous drain on the military's resources and affects both strategy and tactics. Disease and combat mortality data from America's principal wars (1775-present) fall into two clearly defined time periods: the Disease Era (1775-1918), during which infectious diseases were the major killer of America's armed forces, and the Trauma Era (1941-present), in which combat-related fatalities predominated. The trend established in World War II continues to the present day. Although there are currently more than 3,400 U.S. military fatalities in Iraq, the disease-death toll is so low that it is exceeded by the number of suicides. 
+#https://pubmed.ncbi.nlm.nih.gov/18192771/
+improved_antibiotics = {
+    limit = { chemistry_and_electricity_7 = 1 }
+    chance = {
+        base = -4
+        modifier = {
+            factor = 2
+            invention = synthetic_opioids
+        }
+        modifier = {
+            factor = 4
+            invention = sulfa_antibiotics
+        }
+        modifier = {
+            factor = 4
+            invention = mass_produced_penicillin
+        }
+    }
+    effect = {
+        pop_growth = 0.0001
+        land_attrition = -0.05
+        soldier_to_pop_loss = 0.01
+    }
+}
