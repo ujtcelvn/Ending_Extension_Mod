@@ -1,0 +1,187 @@
+############ Computer Science ##################
+# In 1938 a technique was developed to use an all-glass construction with the pins fused in the glass base of the envelope.
+miniature_vacuum_tube = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = vacuum_tube
+        }
+        modifier = {
+            factor = 2
+            chemistry_and_electricity_7 = 1
+        }
+        modifier = {
+            factor = 2
+            invention = basic_oxygen_steelmaking
+        }
+    }
+    effect = {
+        factory_goods_output = { radio = 0.02 }
+        factory_goods_output = { telephones = 0.02 }
+    }
+}
+
+#V. K. Zworykin described a permanently sealed, high-vacuum cathode ray tube with a thermionic emitter in 1931. This stable and reproducible component allowed General Radio to manufacture an oscilloscope that was usable outside a laboratory setting
+oscilloscope = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = vacuum_tube
+        }
+        modifier = {
+            factor = 2
+            invention = miniature_vacuum_tube
+        }
+    }
+    effect = {
+        factory_goods_output = { electric_gear = 0.02 }
+    }
+}
+
+#The first practical tape recorder from AEG was the Magnetophon K1, demonstrated in Germany in 1935.
+modern_tape_record = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = national_radio_networks
+        }
+        modifier = {
+            factor = 2
+            invention = stainless_steel
+        }
+    }
+    effect = {
+        factory_goods_output = { telephones = 0.01 }
+    }
+}
+
+#The first commercially made electronic television sets with cathode-ray tubes were manufactured by Telefunken in Germany in 1934
+#The image iconoscope (Superikonoskop) became the industrial standard for public broadcasting in Europe from 1936 
+television = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = vacuum_tube
+        }
+        modifier = {
+            factor = 2
+            invention = national_radio_networks
+        }
+        modifier = {
+            factor = 2
+            invention = oscilloscope
+        }
+    }
+    effect = {
+        factory_goods_output = { radio = 0.01 }
+    }
+}
+
+
+#experimental_radar
+#Given all required funding and development support, the team produced working radar systems in 1935
+experimental_radar = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = oscilloscope
+        }
+        modifier = {
+            factor = 2
+            invention = national_radio_networks
+        }
+        modifier = {
+            factor = 2
+            invention = vacuum_tube
+        }
+    }
+    effect = {
+        factory_goods_output = { radio = 0.01 }
+    }
+}
+
+#The compact cavity magnetron tube drastically reduced the size of radar sets
+# In 1940, at the University of Birmingham in the UK, John Randall and Harry Boot produced a working prototype of a cavity magnetron that produced about 400 W.
+cavity_magetron = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -6
+            NOT = {
+                invention = experimental_radar
+            }
+        }
+        modifier = {
+            factor = 2
+            metallurgy_7 = 1
+        }
+        modifier = {
+            factor = 2
+            invention = miniature_vacuum_tube
+        }
+    }
+    effect = {
+        factory_goods_output = { radio = 0.02 }
+    }
+}
+
+
+#1943 Colossus First programmable (by switches and plug panels) special-purpose (cryptanalysis) electronic digital computer.
+computerized_decryption = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            psychology_7 = 1
+        }
+        modifier = {
+            factor = 2
+            invention = advanced_fire_control
+        }
+        modifier = {
+            factor = 1
+            invention = telephone_switchboard
+        }
+    }
+    effect = {
+        factory_goods_output = { electric_gear = 0.01 }
+    }
+}
+
+#1945 ENIAC First large-scale general-purpose programmable electronic digital computer.
+general_computer_programming = {
+    limit = { tech_power_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -5
+            NOT = { invention = computerized_decryption } 
+        }
+        modifier = {
+            factor = 1
+            OR = {
+                government = hms_government
+                government = democracy
+            }
+        }
+        modifier = {
+            factor = 2
+            invention = miniature_vacuum_tube
+        }
+    }
+    effect = {
+        factory_goods_output = { electric_gear = 0.01 }
+    }
+}
