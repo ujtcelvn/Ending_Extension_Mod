@@ -553,33 +553,30 @@ ryotwari = {
 # }
 
 small_refund = {
-        trigger = {
-            exists = yes
-            money = 300000
-        }
-
+    trigger = {
+        exists = yes
+        money = 6000000
+    }
     tax_efficiency = -0.2
     tariff_efficiency_modifier = -0.2
     icon = 16
 }
 
 medium_refund = {
-        trigger = {
-            exists = yes
-            money = 600000
-        }
-
+    trigger = {
+        exists = yes
+        money = 7000000
+    }
     tax_efficiency = -0.3
     tariff_efficiency_modifier = -0.3
     icon = 16
 }
 
 large_refund = {
-        trigger = {
-            exists = yes
-            money = 900000
-        }
-
+    trigger = {
+        exists = yes
+        money = 8000000
+    }
     tax_efficiency = -0.5
     tariff_efficiency_modifier = -0.5
     icon = 16
