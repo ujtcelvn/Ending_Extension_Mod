@@ -56,6 +56,11 @@ WE ARE HERE
 >v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
 >v1.0 Full release!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
+v0.4.0b
+uploaded onto github
+restore liquidity now injects 250,000 dollars back into the economy each time
+ajustments to tax refund triggers to start at 6,000,000 because that's how much the panama canal costs
+
 v0.4.0a 2021-03-10
 new inventions speed up genocide Population_eff.txt
 halved infamy gain from internment_camps event_modifiers.txt, because people irl are really bad at stopping genocide
