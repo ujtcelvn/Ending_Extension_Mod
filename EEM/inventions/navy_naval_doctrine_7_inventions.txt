@@ -52,8 +52,8 @@ indirect_strike_doctrine = {
 
     effect = {
         aircraft_carrier = {
-            gun_power = 1
-            torpedo_attack = 4
+            gun_power = 2
+            torpedo_attack = 5
         }
     }
 }
@@ -110,8 +110,8 @@ coordinated_strike_doctrine = {
 
     effect = {
         aircraft_carrier = {
-            torpedo_attack = 4
-            gun_power = 1
+            torpedo_attack = 5
+            gun_power = 2
         }
     }
 }
