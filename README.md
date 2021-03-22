@@ -6,7 +6,7 @@ Run this mod with HPM v0.4.6 for best results.
 
 ## Featuring:
 
-Extended play to 1946
+Extended play to 1950
 
 1 new technology for each technology group
 
