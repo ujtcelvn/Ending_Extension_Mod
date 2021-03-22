@@ -56,6 +56,10 @@ WE ARE HERE
 >v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
 >v1.0 Full release!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
+v0.4.0c
+moved end date to 1950.01.01
+buffed CVs
+
 v0.4.0b
 uploaded onto github
 restore liquidity now injects 250,000 dollars back into the economy each time
