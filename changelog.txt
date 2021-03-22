@@ -54,12 +54,13 @@ WE ARE HERE
 >v0.7 GOTT ERHALTE, GOTT BESCHÜTZE, east asia fix (cuz grandi, that lazy faggot, is never gonna do it), other flavor events
 >v0.8 new factories and goods
 >v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
->v1.0 Full release!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+>v1.0 Full release!
 
 v0.4.0c
 moved end date to 1950.01.01
 buffed CVs
 added Segregation.txt from older HPM version so France doesn't spam the accepting natives decision
+added terrain.txt, made coral island and desert min_build_railroad = 7 so you can't build railways there anymore
 
 v0.4.0b
 uploaded onto github
