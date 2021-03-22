@@ -193,6 +193,7 @@ large_air_carriers = {
         aircraft_carrier = {
             maximum_speed = 1
             hull = 2
+            torpedo_attack = 2
         }
     }
 }
