@@ -59,6 +59,7 @@ WE ARE HERE
 v0.4.0c
 moved end date to 1950.01.01
 buffed CVs
+added Segregation.txt from older HPM version so France doesn't spam the accepting natives decision
 
 v0.4.0b
 uploaded onto github
