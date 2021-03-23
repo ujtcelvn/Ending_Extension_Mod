@@ -1,0 +1,327 @@
+Tech Unlock Dates		number of inventions (125 + 5 = 130)
+1926 7 
+1930 9
+1936 9
+
+1936 army doctrine			 6
+1936 light armament			 3
+1936 heavy armament			 8
+1936 military science			 8
+1936 army leadership			 7
+
+army = 32
+
+1936 naval doctrine			 4
+1926 ship construction			 4	1919 oil_driven_ships	5
+1926 naval engineering			14
+1936 naval science			 3
+1936 naval leadership			 3
+
+navy = 33
+
+1930 aesthetics				10
+1930 philosphy 				 4
+1930 social thought			 1
+1930 political thought			 2
+1930 psychology				 1
+
+culture = 18
+
+1926 financial institutions		 1
+1926 monetary system			 2
+1926 economic thought and critique	 5
+1926 market functionality		 4
+1926 organization			 4
+
+commerce = 16
+
+1930 power				10 (comp sci = 8) (industry = 2)
+1930 mechanization			 6
+1930 metallurgy				 5 (mining = 3) (industry = 2)
+1930 infrastructure			 0
+1936 chemistry and electricity		10 (nuke = 1) (medicine = 3) (industry = 6)
+
+industry = 31
+
+#TODO list
+>v0.1 end date and political party end dates moved to 1946, 1 new tech for each field, with unlock dates ranging from 1922 to 1936!
+>v0.2 new unit, the aircraft carrier, and beginning work on inventions
+>v0.3 inventions (except strategic bombing, the Bomb, localizations, integrating with decisions and event MTTH)
+>v0.4 Solving the liquidity crisis
+WE ARE HERE
+>v0.5 the industrial revolution and its consequences have been a disaster to the human race, the final solution to the artisan problem
+>v0.6 strategic bombing, the Bomb, localizations, integrating with decisions and event MTTH
+>v0.7 GOTT ERHALTE, GOTT BESCHÜTZE, east asia fix (cuz HPM is never gonna do it), other flavor events
+>v0.8 new factories and goods
+>v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
+>v1.0 Full release!
+
+v0.4.0c
+moved end date to 1950.01.01
+buffed CVs
+added Segregation.txt from older HPM version so France doesn't spam the accepting natives decision
+added terrain.txt, made coral island and desert min_build_railroad = 7 so you can't build railways there anymore
+
+v0.4.0b
+uploaded onto github
+restore liquidity now injects 250,000 dollars back into the economy each time
+ajustments to tax refund triggers to start at 6,000,000 because that's how much the panama canal costs
+
+v0.4.0a 2021-03-10
+new inventions speed up genocide Population_eff.txt
+halved infamy gain from internment_camps event_modifiers.txt, because people irl are really bad at stopping genocide
+minor invention adjustments
+slightly increased administrative_multiplier for health care and education reforms in issues.txt
+
+v0.4.0 2021-03-09
+filled in army inventions
+adjusted naval techs yet again, removed SHBB and moved bonuses around, moved CVL to oil_driven_ships
+offshore oil drilling renamed bassinger_tool
+adjusted plastic inventions
+removed welded_steamers
+Liquidity crisis fix:
+NG: HPM already has a weaker version of the No Gold fix (GOLD_TO_CASH_RATE = 10 and GOLD_TO_WORKER_PAY_RATE = 1.5)
+TR: modified version of tax refund added in CleanUp.txt, made tax and tarriff efficiency deductions triggered_modifiers.txt
+P: FACTORY_PAYCHECKS_LEFTOVER_FACTOR is already increased (to 0.5) in HPM
+Fixed a bunch of typos
+unitpanel.gfx unit_strip number_of_frames increased to 23 units
+combat.gfx naval_combat number_of_frames increased to 11 naval units
+
+v0.3.7b 2021-03-08
+improved tech names csv
+added tech gfx, they are in black and white not sepia because it's WW2 time yeah
+modern_philosophy renamed being_and_nothingness by jean paul sarte
+naval_dive_bombers removed, merged with naval_bombers
+
+v0.3.7a 2021-03-07
+removed floating fortress, hurricane bow, O2 torpedo
+adjusted bonuses of other naval inventions to compensate
+kaiser_shipbuilding renamed welded_steamers, and buffed
+removed tungsten_carbide, combine_harvester, cypher_machine
+ljungstrom_air_preheater renamed air_preheater
+compsci bonuses filled out, will probably be changed during the industry / goods rework
+improved CV gfx, based on USS Essex
+mot gfx based on jeep
+filled in unit strip gfx
+
+v0.3.7 2021-03-06
+army_doctrine_7 max_fort +1, buildings.txt max fort increased to 7
+buildings.txt maximum naval base increased to 7, also added colonial points for level 7
+tech_infrastructure_7 increases max railroad by +1, original bonuses removed, buildings.txt max railroad increased to 7
+heavy armament 7 only increases art def by +1, and no longer increases support
+motorized_infantry unit file and gfx added, country_military.gfx and buildunit.gui updated
+my copy of victoria 2's plane gfx is bugged and irregular gfx is missing for some reason? plane and irregular gfx replacements added
+fixed some typos
+mod now named Ending Extension Mod, EEM for short
+new .mod file
+improved CV gfx, based on USS Yorktown
+
+v0.3.6 2021-03-05
+CV weighted_value = increased
+CV priority = increased
+CV base fire range increased to 2, from 1, and techs no longer increase CV fire range
+CV base speed reduced to 21 (+4 from previous techs = 25 kts like IJN Hosho)
+CV base gun reduced to 4 (+11 from previous techs = 15, like commerce raider)
+base_strike, fleet_in_being, wolfpack, battlefleet_concentration, schnorkel, elektroboot, carrier_air_wing_integration, diving_shells deleted
+other invention conditions modified to fit with above
+indirect_strike_doctrine CV gun reduced to +1, but also torp +1
+added coordinated_strike_doctrine
+seaplane_tenders now improve naval base org +1 instead of CV hull
+modern_air_carriers renamed to large_air_carriers
+super_cruisers renamed to large_cruisers
+hurricane_bow added
+blind_fire_radar_fire_control only increases BB gun by +2
+ducol steel only increases CA and BB armor by +4
+plastic armor only increases CA and BB armor by +2
+naval bomber increass gun and torp by +1 instead of just gun by +2
+acoustic homing torpedo and hydraulic aircraft catapult added
+naval_torpedo_bombers torp increased by only +4
+
+v0.3.5g 2021-02-21
+national_revolution increases seperatism by 50% instead of increasing rebel org
+television networks chance -1 if not free press
+
+v0.3.5f 2021-01-27
+army_leadership_7 morale boost increased to +50%, matching Great War Experience
+
+v0.3.5e 2021-01-23
+tanks and planes can be built by unaccepted pops again (eg: British Indian army in WW2)
+operations_research replaced drop_tanks
+night_vision_device replaced dive_breaks
+civil_defense replaced combined_arms
+
+v0.3.5d 2021-01-22
+navy_literate_recruits replaced chief_of_naval_operations
+canned_drinks added to metallurgy
+filled in nuclear_theory
+
+v0.3.5c 2021-01-17
+notes.txt added
+army_literate_recruits and made to activate with social_thought_7
+Military doctrine is NOT a decision! Instead, doctrine in real life is shaped by what techs and resources you have!
+nonviolent_protest removed, it's not really fitting in
+
+v0.3.5b 2020-12-24
+increased aircraft carrier build costs and supply consumption
+improved antibiotics also reduce pop loss and attrition
+scoot_and_shoot replaced by armored_column_cover 
+
+v0.3.5 2020-12-19
+removed vacuum_tube_computer, reduced invention chance of computerized_decryption and general_computer_programming
+added telex to tech_organization_7, this invention represents the teletype network as it existed in between the telegraph and the fax machine ages
+guerrilla_tactics removed because it belongs more in the 1950s, replaced with hedgehog_defence, and then replaced again by air_bridge, and then again by scoot_and_shoot
+tanks and planes now can only be manned by primary culture pops for balance reasons
+
+v0.3.4d 2020-12-13
+turned nukes to only 1 invention, the invention unlocks the nuclear weapons development decision
+added airliner to tech_organization_7
+hedge_funds and quantative_easing now reduce factory cost
+
+v0.3.4c 2020-11-29
+commented out steel_cans
+rocket_experiments moved to mechanization, and now depends on kraft_pulping and increases paper production
+added remote_control_mine to light armament
+
+v0.3.4b 2020-11-26
+removed individual ship organization boosts in naval doctrines
+reworked aircraft carrier range increase inventions
+elektroboot invention chance decreased, now depends on rocket_experiments instead of oxygen_torpedos
+fleet_air_carriers invention chance -4 if fleet_auxiliary_carrier_doctrine not discovered
+modern_air_carriers invention chance +2 if naval_radar discovered, and -4 if carrier_task_force_doctrine not discovered
+sea_air_integration now depends on purpose_built_air_carriers and naval_radar
+
+v0.3.4a 2020-11-22
+reoganized army inventions
+wrote down preliminary military doctrines for the decision
+made dual_purpose_guns depend on proximity_fuse
+television_networks no longer increase consciousness
+army_leadership_7 inventions completed
+rocket_experiments completed
+
+v0.3.4 2020-11-21
+edited army inventions
+ship construction moved to 1926
+carrier unlock inventions moved to oil_driven_ships (1919 tech, 1st aircraft carrier was built in 1922)
+carrier_air_wing_integration and carrier unlock inventions bonuses spread around
+basic_air_carriers removed, carrier unlock is now in purpose_built_air_carriers
+super ship inventions conditions rebalanced
+short_range_submarines deleted
+oxygen_propelled_torpedos invention conditions modified
+medium_range_submarines renamed to schnorchel, modified invention conditions
+long_range_submarines renamed to elektroboot, modified invention conditions, added torpedo_attack increase
+sealane_interdiction deleted
+naval inventions no longer buff commerce raiders
+carrier_air_wing_integration now depends on naval_radar instead of modern_air_carriers
+aircraft_carrier fire_range now starts at 1, will be increased to 2 through inventions
+naval_radar, carrier_air_wing_integration, base_strike, indirect_strike_doctrine, carrier_task_force_doctrine increase aircraft_carrier fire_range by 0.2 each
+nuclear_medicine deleted
+modified some industrial invention conditions to make more sense
+deleted electronic_analog_computer, rebalanced computer science inventions' conditions
+reduced chance of several naval inventions
+
+v0.3.3 2020-11-19
+buffed aircraft carrier hull inventions
+deleted some excess naval doctrine inventions, distributed bonuses to other naval inventions
+buffed cruiser inventions
+nuclear carriers, battleships, cruisers, submarines deleted because they are outside of the timeframe (invented in ~1955), distributed bonuses to other naval inventions
+fixed missing closing bracket in stamped_small_arms
+deleted fluorescent_lighting and ballpoint_pen to reduce clutter, there's too many power inventions
+ship construction tech moved to 1922 and naval engineering tech moved to 1926, adjusted aircraft carrier unlock inventions to reflect this change
+general_computer_programming helps unlock computerized_naval_intelligence now
+kaiser_shipbuilding also checks if government is a democracy
+steel_cans also improve wine production
+deleted fleet_auxiliary_submarine_doctrine to reduce clutter
+verified and edited AI technology research weights and conditions
+consolidated and renamed invention files
+edited anticolonialism conditions and effects
+added rocket_experiments invention to power
+added all planned army invention placeholders
+
+v0.3.2b 2020-11-18
+deleted extra opening bracket in synthetic rubber tech
+
+v0.3.2a 2020-11-16
+nuclear carriers, battleships, cruisers, submarines commented out because they are outside of the timeframe (invented in ~1955)
+penicillin renamed to mass produced penicillin
+antibiotic revolution renamed to improved antibiotics
+added stamped small arms invention
+reduced infrastructure 7 tech's production boosts
+reduced industrial plastics production glass production bonus to 0.02
+
+v0.3.2 2020-11-15
+3 light armament inventions added (general purpose machine gun, semi-automatic rifle, assault rifle)
+
+v0.3.1g 2020-11-09
+changed conditions for naval plastic armor
+nerfed steel inventions
+synthetic rubber also makes fuel
+added synthetic opoids invention
+antibiotic revolution depends on synthetic opoids now
+nerfed agriculture inventions
+
+v0.3.1f 2020-11-05
+consolidated culture inventions into one file and modified some conditions
+naval doctrine moved from 1930 to 1936
+aircraft carrier stats modified
+
+v0.3.1e 2020-11-04
+naval engineering unlock date moved to 1922
+mass_surveillance conditions changed
+nonviolent_protest conditions changed
+deleted cinema invention
+modified inventions that depended on cinema (television networks, movies)
+
+v0.3.1d 2020-11-03
+copied anti unemployment modifiers from HPM to mining inventions
+reduced pop growth from antibiotic revolution
+removed nuclear medicine because it was out of the timeframe of the game (1946)
+spread org gain from naval radar to experimental carrier and seaplane tender
+naval doctrine moved from 1926 to 1930
+naval science and naval leadership moved from 1926 to 1936
+monetary system inventions changed
+
+v0.3.1c 2020-11-02
+spread out some gun power boosts from naval engineering to naval doctrine
+cavity magnetron radar renamed to cavity magnetron, also increases radio production
+industrial techs (except for chemistry and electricity) unlock in 1930 instead of 1936
+kaiser shipbuilding conditions changed
+
+v0.3.1b 2020-11-01
+monetary system 7 inventions changed to increase tax efficiency
+compsci conditions filled in
+changed modern_business_management to human_relations_theory
+naval inventions modified, added diving shells and 'blindfire' radar fire-control
+
+v0.3.1a 2020-10-19
+political thought and psychology and aesthetics inventions edited
+culture techs moved to 1930
+
+v0.3.1 2020-10-17
+industry inventions edited
+mining inventions split from industry inventions and completed
+medicine complete
+computer science edited
+
+v0.3.0a 2020-10-11
+all industrial inventions edited
+
+v0.3.0 2020-10-10
+naval doctrine inventions adjusted
+industrial inventions added
+industrial inventions split into industry, medicine, nuke, and computer science
+nuke and computer placeholders added
+
+v0.2.0 2020-10-09
+naval inventions
+aircraft carriers added
+naval gui rescaled
+new naval and commerce techs become available in 1926
+new army, culture, and industry techs become available in 1936
+
+v0.1.0 2020-10-08
+1 new tech for each field made
+tech gfx placeholder files made
+tech localizations placeholders made
+culture and commerce inventions made
+political party end dates changed to 2000.1.1
+changed end date to 1946.1.1
