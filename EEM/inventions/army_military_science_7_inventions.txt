@@ -11,7 +11,7 @@ motorized_infantry_activation = {
             invention = armoured_cars
         }
         modifier = {
-            factor = -8
+            factor = -5
             NOT = { invention = army_motorization }
         }
         modifier = {
