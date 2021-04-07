@@ -1,7 +1,7 @@
 Tech Unlock Dates		number of inventions (125 + 5 = 130)
-1926 7 
-1930 9
-1936 9
+1926 5 
+1930 10
+1936 10
 
 1936 army doctrine			 6
 1936 light armament			 3
@@ -12,8 +12,8 @@ Tech Unlock Dates		number of inventions (125 + 5 = 130)
 army = 32
 
 1936 naval doctrine			 4
-1926 ship construction			 4	1919 oil_driven_ships	5
-1926 naval engineering			14
+1930 ship construction			 4	1919 oil_driven_ships	5
+1930 naval engineering			14
 1936 naval science			 3
 1936 naval leadership			 3
 
@@ -22,10 +22,10 @@ navy = 33
 1930 aesthetics				10
 1930 philosphy 				 4
 1930 social thought			 1
-1930 political thought			 2
+1936 political thought			 3
 1930 psychology				 1
 
-culture = 18
+culture = 19
 
 1926 financial institutions		 1
 1926 monetary system			 2
@@ -36,12 +36,12 @@ culture = 18
 commerce = 16
 
 1930 power				10 (comp sci = 8) (industry = 2)
-1930 mechanization			 6
-1930 metallurgy				 5 (mining = 3) (industry = 2)
+1930 mechanization			 4
+1930 metallurgy				 6 (mining = 3) (industry = 3)
 1930 infrastructure			 0
 1936 chemistry and electricity		10 (nuke = 1) (medicine = 3) (industry = 6)
 
-industry = 31
+industry = 30
 
 #TODO list
 >v0.1 end date and political party end dates moved to 1946, 1 new tech for each field, with unlock dates ranging from 1922 to 1936!
@@ -55,6 +55,37 @@ WE ARE HERE
 >v0.8 new factories and goods
 >v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
 >v1.0 Full release!
+
+Event IDs used
+29905 intensive agriculture
+99900 Vietnam decolonization
+99901 Indonesia decolonization
+99902 Malay decolonization
+
+v0.4.1
+moved ship construction and naval engineering from 1926 to 1930
+added spread of local_intensive_agriculture to both production events (event 29905) and event modifiers
+artificial_herbicides now also increases farm_rgo_eff
+removed scientific_agriculture and intensive_animal_farming
+buffed bassinger_tool and stamped_small_arms
+plastics inventions also improve silk production, representing artifical silk
+added fischer_tropsch_process
+adjusted rocket_experiments invention chance
+added oil production switch in Goods.txt
+motorized_infantry_activation made slightly easier to invent
+mechanized assault arm supply cost increased
+buffed heavy armament tank inventions
+added finest_hour to culture
+moved political thought 7 to 1936
+demographic transition based on literacy and clerks
+tax refund tiers reduced to 2
+hormuz strait now active if suez canal is built instead of if it's past 1880
+improved_antibiotics make some diseases less likely
+great_war_3, total_collapse, and no_more_war make Strange Influenza more likely
+buffed metallurgy_7
+adjusted mining inventions
+Decolonization of Vietnam (event 99900), Indonesia (event 99901), Malaysia (event 99902)
+incremented .mod version number
 
 v0.4.0c
 moved end date to 1950.01.01
