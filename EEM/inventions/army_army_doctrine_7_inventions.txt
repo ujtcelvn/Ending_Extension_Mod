@@ -45,7 +45,7 @@ mechanized_assault_doctrine = {
     effect = {
         tank = {
             attack = 4
-            supply_consumption = 0.05
+            supply_consumption = 0.20
         }
         motorized_infantry = {
             attack = 2
