@@ -1185,7 +1185,7 @@ oil_driven_ships = {
 }
 ship_construction_7 = {
     area = ship_construction
-    year = 1926
+    year = 1930
     cost = 25200
     unciv_military = yes
 
@@ -1836,7 +1836,7 @@ modern_naval_design = {
 
 naval_engineering_7 = {
     area = naval_engineering
-    year = 1926
+    year = 1930
     cost = 25200
     unciv_military = yes
     navy_base = { build_time = -10 }

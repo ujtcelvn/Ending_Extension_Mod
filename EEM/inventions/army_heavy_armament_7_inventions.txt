@@ -127,9 +127,9 @@ assault_gun = {
     }
     effect = {
         tank = {
-            attack = 1
+            attack = 2
             defence = 1
-            supply_consumption = 0.10
+            supply_consumption = 0.25
         }
     }
 }
@@ -150,9 +150,9 @@ sloped_armor = {
     }
     effect = {
         tank = {
-            attack = 1
+            attack = 2
             defence = 1
-            supply_consumption = 0.10
+            supply_consumption = 0.25
         }
     }
 }
@@ -181,7 +181,7 @@ main_battle_tank = {
         tank = {
             attack = 2
             defence = 1
-            supply_consumption = 0.20
+            supply_consumption = 0.25
         }
     }
 }
