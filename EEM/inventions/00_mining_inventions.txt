@@ -166,7 +166,7 @@ bassinger_tool = {
             factor = -1
             any_greater_power = {
                 any_owned_province = {
-                    trade_goods = coal
+                    trade_goods = oil
                     unemployment_by_type = { value = 0.01 type = labourers }
                     province_control_days = 365
                 }
@@ -174,7 +174,7 @@ bassinger_tool = {
         }
     }
     effect = {
-        rgo_goods_output = { oil = 0.2 }
+        rgo_goods_output = { oil = 0.5 }
     }
 }
 
