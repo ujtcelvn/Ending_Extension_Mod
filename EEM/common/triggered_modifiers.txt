@@ -445,7 +445,8 @@ admin_spen = {
 
 hormuz_strait = {
         trigger = {
-            exists = yes
+            # exists = yes
+            is_canal_enabled = 2
             year = 1880
             owns = 1071
             owns = 2664
@@ -557,8 +558,8 @@ small_refund = {
         exists = yes
         money = 6000000
     }
-    tax_efficiency = -0.2
-    tariff_efficiency_modifier = -0.2
+    tax_efficiency = -0.25
+    tariff_efficiency_modifier = -0.25
     icon = 16
 }
 
@@ -567,17 +568,50 @@ medium_refund = {
         exists = yes
         money = 7000000
     }
-    tax_efficiency = -0.3
-    tariff_efficiency_modifier = -0.3
+    tax_efficiency = -0.5
+    tariff_efficiency_modifier = -0.5
+    min_social_spending = 0.25
     icon = 16
 }
 
-large_refund = {
-    trigger = {
-        exists = yes
-        money = 8000000
-    }
-    tax_efficiency = -0.5
-    tariff_efficiency_modifier = -0.5
-    icon = 16
+literate_nation = {
+	trigger = {
+		literacy = 0.9
+	}
+	global_population_growth = -0.001
+    icon = 18
+}
+
+clerked_nation = {
+	trigger = {
+        clerks = 0.05
+	}
+	global_population_growth = -0.001
+    icon = 18
+}
+
+clerked_nation2 = {
+	trigger = {
+        clerks = 0.10
+	}
+	global_population_growth = -0.001
+    icon = 18
+}
+
+clerked_nation3 = {
+	trigger = {
+        clerks = 0.15
+	}
+	global_population_growth = -0.001
+    research_points = 0.1
+    icon = 18
+}
+
+clerked_nation4 = {
+	trigger = {
+        clerks = 0.20
+	}
+	global_population_growth = -0.001
+    research_points = 0.1
+    icon = 18
 }
