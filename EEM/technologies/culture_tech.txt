@@ -1040,7 +1040,7 @@ mass_politics = {
 
 political_thought_7 = {
     area = political_thought
-    year = 1930
+    year = 1936
     cost = 25200
 
     max_national_focus = 1
