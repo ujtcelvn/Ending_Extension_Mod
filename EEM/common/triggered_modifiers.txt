@@ -445,9 +445,9 @@ admin_spen = {
 
 hormuz_strait = {
         trigger = {
-            # exists = yes
+            exists = yes
             is_canal_enabled = 2
-            year = 1880
+            #year = 1880
             owns = 1071
             owns = 2664
         }
