@@ -17,7 +17,7 @@ army = 32
 1936 naval science			 3
 1936 naval leadership			 3
 
-navy = 33
+navy = 28 + 5
 
 1930 aesthetics				10
 1930 philosphy 				 4
@@ -62,6 +62,12 @@ Event IDs used
 99901 Indonesia decolonization
 99902 Malay decolonization
 
+v0.4.2
+naval engineering 7 only speeds up aircraft carrier construction instead of that of all ship types
+increase aircraft carrier unmodified build time to 480 days (16 months), - 70 days from techs = 410 days (13.67 months) 
+increase aircraft_carrier build priority because AI wasn't building any
+motorized_infantry_activation made even more easier to invent
+
 v0.4.1
 moved ship construction and naval engineering from 1926 to 1930
 added spread of local_intensive_agriculture to both production events (event 29905) and event modifiers
@@ -85,7 +91,6 @@ great_war_3, total_collapse, and no_more_war make Strange Influenza more likely
 buffed metallurgy_7
 adjusted mining inventions
 Decolonization of Vietnam (event 99900), Indonesia (event 99901), Malaysia (event 99902)
-incremented .mod version number
 
 v0.4.0c
 moved end date to 1950.01.01
