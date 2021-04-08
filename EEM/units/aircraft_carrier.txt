@@ -15,7 +15,7 @@ aircraft_carrier = {
     colonial_points = 30
 
     #Core Abilities
-    priority = 70
+    priority = 80
     max_strength = 100
     default_organisation = 30
     maximum_speed = 21
@@ -23,7 +23,7 @@ aircraft_carrier = {
 
 
     #Building Costs
-    build_time = 360
+    build_time = 480
     build_cost = {
         steamer_convoy = 120    
         artillery = 20            
