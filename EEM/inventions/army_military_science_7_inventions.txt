@@ -1,7 +1,11 @@
 motorized_infantry_activation = {
     limit = { military_science_7 = 1 }
     chance = {
-        base = 2
+        base = 0
+        modifier = {
+            factor = 2
+            invention = interwar_cavalry
+        }
         modifier = {
             factor = 2
             invention = firepower_vs_mobility
@@ -11,7 +15,7 @@ motorized_infantry_activation = {
             invention = armoured_cars
         }
         modifier = {
-            factor = -5
+            factor = -4
             NOT = { invention = army_motorization }
         }
         modifier = {
