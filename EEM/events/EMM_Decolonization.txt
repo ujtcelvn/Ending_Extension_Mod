@@ -630,7 +630,7 @@ country_event = {
 
     id = 99902
     title = "Malay Emergency"
-    desc = "Malaysian nationalists are pestering for independence!  How should we respond?"
+    desc = "Malaysian nationalists are pestering for independence! How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
