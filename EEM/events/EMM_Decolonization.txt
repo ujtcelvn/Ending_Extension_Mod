@@ -1,8 +1,8 @@
 country_event = {
 
     id = 99900
-    title = "Viet Nam Doc Lap Dong Minh Hoi"
-    desc = "Vietnamese nationalists are pestering for independence! What should we do?"
+    title = "League for the Independence of Vietnam"
+    desc = "Vietnamese nationalists are pestering for independence! How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
@@ -297,7 +297,7 @@ country_event = {
 
     id = 99901
     title = "Indonesian National Awakening"
-    desc = "Indonesian nationalists are pestering for independence! What should we do?"
+    desc = "Indonesian nationalists are pestering for independence! How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
@@ -630,7 +630,7 @@ country_event = {
 
     id = 99902
     title = "Malay Emergency"
-    desc = "Malaysian nationalists are pestering for independence! What should we do?"
+    desc = "Malaysian nationalists are pestering for independence!  How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
