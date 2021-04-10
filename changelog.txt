@@ -62,6 +62,13 @@ Event IDs used
 99901 Indonesia decolonization
 99902 Malay decolonization
 
+#TODO: tech_bg.bbs modified to fit 7 techs 
+
+v0.4.2a
+Made Fort, Naval Base, Railroad level 7 gfx display properly (province_fort_strip.dds, province_navalbase_strip.dds, province_infra_strip.dds, province_interface.gfx)
+increased carrier weighted_value to 120 so AI builds them more (turns out priority just changes the order in which units are displayed)
+adjusted decolonization event localizations
+
 v0.4.2
 naval engineering 7 only speeds up aircraft carrier construction instead of that of all ship types
 increase aircraft carrier unmodified build time to 480 days (16 months), - 70 days from techs = 410 days (13.67 months) 
