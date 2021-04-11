@@ -19,7 +19,7 @@ aircraft_carrier = {
     max_strength = 100
     default_organisation = 30
     maximum_speed = 21
-    weighted_value = 120.0
+    weighted_value = 140.0
 
 
     #Building Costs
