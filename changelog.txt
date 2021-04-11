@@ -52,7 +52,7 @@ WE ARE HERE
 >v0.5 the industrial revolution and its consequences have been a disaster to the human race, the final solution to the artisan problem
 >v0.6 strategic bombing, the Bomb, localizations, integrating with decisions and event MTTH
 >v0.7 GOTT ERHALTE, GOTT BESCHÜTZE, east asia fix (cuz HPM is never gonna do it), other flavor events
->v0.8 new factories and goods
+>v0.8 synthetic factories, telecom and pharmamed clerk-staffed factories
 >v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
 >v1.0 Full release!
 
@@ -63,6 +63,11 @@ Event IDs used
 99902 Malay decolonization
 
 #TODO: tech_bg.bbs modified to fit 7 techs 
+
+v0.4.2b
+fix national focus and province display bugs
+increase motorized_infantry weighted_value so AI builds them more
+Increase carrier weighted_value to even higher so AI builds them more (Only Japan is building any in 1940)
 
 v0.4.2a
 Made Fort, Naval Base, Railroad level 7 gfx display properly (province_fort_strip.dds, province_navalbase_strip.dds, province_infra_strip.dds, province_interface.gfx)
