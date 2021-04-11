@@ -12,7 +12,7 @@ motorized_infantry = {
 	max_strength = 3
 	default_organisation = 30
 	maximum_speed = 10.00
-	weighted_value = 8.0
+	weighted_value = 9.0
 
 
 	#Building Costs
