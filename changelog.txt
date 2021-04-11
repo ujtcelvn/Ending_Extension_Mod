@@ -53,7 +53,7 @@ WE ARE HERE
 >v0.6 strategic bombing, the Bomb, localizations, integrating with decisions and event MTTH
 >v0.7 GOTT ERHALTE, GOTT BESCHÜTZE, east asia fix (cuz HPM is never gonna do it), other flavor events
 >v0.8 synthetic factories, telecom and pharmamed clerk-staffed factories
->v0.9 what happens if country gets dismantled twice (like post WW2 Germany)
+>v0.9 what happens if country gets dismantled twice (like post WW2 Germany), daddy UN
 >v1.0 Full release!
 
 Event IDs used
@@ -63,6 +63,9 @@ Event IDs used
 99902 Malay decolonization
 
 #TODO: tech_bg.bbs modified to fit 7 techs 
+
+v0.4.2c
+3 tiers of tax refund modifiers again to make tax refund event less spammy
 
 v0.4.2b
 fix national focus and province display bugs
