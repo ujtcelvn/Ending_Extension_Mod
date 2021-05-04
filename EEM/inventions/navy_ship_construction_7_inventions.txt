@@ -13,7 +13,7 @@ seaplane_tenders = {
     }
     effect = {
         aircraft_carrier = {
-            hull = 1
+            gun_power = 1
         }
     }
 }
@@ -33,6 +33,7 @@ experimental_air_carriers = {
     }
     effect = {
         aircraft_carrier = {
+            gun_power = 1
             hull = 1
         }
     }
@@ -53,7 +54,7 @@ converted_hulk_air_carriers = {
     }
     effect = {
         aircraft_carrier = {
-            hull = 1
+            hull = 2
         }
     }
 }
@@ -208,7 +209,7 @@ large_cruisers = {
         }
         modifier = {
             factor = 2
-            invention = oxygen_propelled_torpedos
+            invention = acoustic_homing_torpedo
         }
         modifier = {
             factor = 2
