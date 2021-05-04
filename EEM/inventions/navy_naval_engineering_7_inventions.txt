@@ -12,7 +12,7 @@ naval_radar = {
         }
         modifier = {
             factor = 2
-            invention = cavity_magentron
+            invention = cavity_magnetron
         }
     }
     effect = {
@@ -64,7 +64,7 @@ naval_radar = {
         }
         modifier = {
             factor = 2
-            invention = floating_fortress_doctrine
+            heavy_armament_7 = 1
         }
     }
     effect = {
@@ -117,7 +117,7 @@ blind_fire_radar_fire_control = {
         }
         modifier = {
             factor = 2
-            invention = cavity_magentron
+            invention = cavity_magnetron
         }
         modifier = {
             factor = 2
@@ -341,7 +341,7 @@ acoustic_homing_torpedo = {
         }
 		modifier = {
             factor = 2
-            invention = cavity_magentron
+            invention = cavity_magnetron
         }
         modifier = {
             factor = 2
