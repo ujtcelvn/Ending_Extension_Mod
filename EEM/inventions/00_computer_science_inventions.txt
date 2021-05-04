@@ -112,7 +112,7 @@ experimental_radar = {
 
 #The compact cavity magnetron tube drastically reduced the size of radar sets
 # In 1940, at the University of Birmingham in the UK, John Randall and Harry Boot produced a working prototype of a cavity magnetron that produced about 400 W.
-cavity_magetron = {
+cavity_magnetron = {
     limit = { tech_power_7 = 1 }
     chance = {
         base = 2
