@@ -19,19 +19,19 @@ aircraft_carrier = {
     max_strength = 100
     default_organisation = 30
     maximum_speed = 21
-    weighted_value = 140.0
+    weighted_value = 400.0
 
 
     #Building Costs
     build_time = 480
     build_cost = {
-        steamer_convoy = 120    
+        steamer_convoy = 130    
         artillery = 20            
         canned_food = 60        
         telephones = 20           
         regular_clothes = 60    
         fuel = 100               
-        radio = 70                
+        radio = 40                
         aeroplanes = 60
     }
 
@@ -49,8 +49,8 @@ aircraft_carrier = {
         ammunition = 0.5
         regular_clothes = 0.5
         tobacco = 2
-        radio = 0.04
-        aeroplanes = 0.2
+        radio = 0.02
+        aeroplanes = 0.6
     }
 
     #Naval Abilities
