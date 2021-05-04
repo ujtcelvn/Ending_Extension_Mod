@@ -75,7 +75,7 @@ province_event = {
             province_id = 104            # San Francisco
             province_id = 3                # Kenai
             province_id = 90            # San Diego
-            province_id = 695            # Königsberg
+            province_id = 695            # KÃ¶nigsberg
             province_id = 2470            # Port Macquaire Australia
             province_id = 2471            # Bathurst Australia
             province_id = 2472            # Eden Australia
@@ -632,6 +632,8 @@ province_event = {
                     province_id = 1163        # Qatif 1910
                     province_id = 2270        # Maracaibo 1910
                     province_id = 1170        # Nizwa  1910
+					
+                    province_id = 168        # Olney 1905 Illinois Oil Field EEM
                 }
             }
 
@@ -651,12 +653,12 @@ province_event = {
             AND = {
                 year = 1930
                 OR = {
-                    # province_id = 43        # East Texas 1930 (Clarksville 43 already oil)
+                    province_id = 137        # East Texas 1930 (Clarksville / Dallas 43 already oil, so choose 137 San Antonio which did have oil wells instead)
                     province_id = 89        # Wilmington 1932 (Los Angeles)
                     province_id = 1162        # Awali, Bahrain 1932
-                    # province_id = 1132        # Agha Jari, Abadan, Iran 1937 (already oil)
+                    province_id = 1137        # Agha Jari, Abadan, Iran 1930 1937 1938, (1132 already oil) 1137 is Yasuj, capital of Kohgiluyeh and Boyer-Ahmad Province, where the Aghajari and Gachsaran oil fields are
                     province_id = 935        # Burgan, Kuwait 1937
-                    # province_id = 1132        # Aghajari 1938 (Abadan, Iran already oil)
+                    province_id = 1772       # Ras Gharib "more petroleum was found in the late 1930s along the Gulf of Suez. "
                 }
             }
 
@@ -665,13 +667,14 @@ province_event = {
                 OR = {
                     province_id = 1164        # Abqaiq 1940 (hufuf, saudi arabia)
                     province_id = 136        # Spraberry Texas 1943
-                    # province_id = 2270        # Boscan 1946 (Maracaibo, Venexuela already oil)
+                    #province_id = 2270        # Boscan 1946 (Maracaibo already oil)
                     province_id = 932        # Nahr Umr, Basra, Iraq 1946
-                    province_id = 1034        # Romashkino 1948 (Samara is in the ural-vogla gas district, and makes grain instead of nearby iron and coal)
+                    province_id = 1043        # Romashkino 1948 (Busuluk is in the ural-vogla gas district, isn't super duper populated, doesn't make iron and coal)
                     province_id = 1157        # Ghawar 1948 Riyadh, arabia
-                    # province_id = 932        # Az Zubayr 1949(Basra already oil)
+                    #province_id = 932        # Az Zubayr 1949(Basra already oil)
                 }
             }
+
         }
         not = { trade_goods = oil }
         owner = {
