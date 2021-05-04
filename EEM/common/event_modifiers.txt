@@ -1686,7 +1686,7 @@ local_distribution_channels_und_electricity = {
 }
 
 local_intensive_agriculture = {
-    farm_RGO_eff = 1
+    farm_RGO_eff = 0.75
     icon = 13
 }
 
