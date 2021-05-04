@@ -179,7 +179,7 @@ electronic_music = {
         }
         modifier = {
             factor = 2
-            invention = vaccuum_tube_computer
+            invention = modern_tape_record
         }
     }
     effect = {
@@ -433,7 +433,7 @@ anticolonialism = {
         }
     }
 
-    pop_consciousness_modifier = 0.01
+    core_pop_consciousness_modifier = 0.01
     effect = {
         plurality = 0.05
     }
