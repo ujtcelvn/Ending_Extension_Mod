@@ -62,7 +62,38 @@ Event IDs used
 99901 Indonesia decolonization
 99902 Malay decolonization
 
-#TODO: tech_bg.bbs modified to fit 7 techs 
+#TODO: tech_bg.bbs modified to better fit 7 techs 
+#TODO: adjust inventions
+#TODO: Stop the dahomey - outer hausaland noodle
+#TODO: make 1st and 2nd rank great powers dislike each other mpre often
+#TODO: make decolonization revolt events spread from country to country instead of being independent from each other, and make them not happen forever
+#TODO: releasing Egypt as a puppet in the Arab revolt not removing your core on the Suez canal if you built it.
+#TODO: somehow let max fort, navy base, and infrastructure level be 7 in buildings.txt without causing the game to crash
+
+v0.4.3
+removed clerked_nation tiers 3 and 4
+reduced local_intensive_agriculture farm_rgo_eff from 1 to 0.75
+quantum_theory is now required for nuclear_theory
+fixed typos in commerce, industry, army_leadership, computer_science, culture, naval_engineering, ship_construction, military_science, naval_doctrine inventions
+buffed early carrier construction inventions, nerfed carrier doctrine inventions.
+secondary powers made to want to cling on to their colonies more
+made motorized_infantry cheaper to supply but also require radios, and increased its weighted_value from 9 to 40 so the AI builds them more
+increased aircraft_carrier weighted_value from 140 to 400 so AI builds them more, adjusted build and supply cost
+renamed changelog to EEM_changelog.txt
+
+cleaned up Goods.txt
+Busuluk 1043 made to flip to oil instead of than Samara 1034, because Samara isn't known for oil while Busuluk is.
+Yasuj 1137 made to flip to oil in 1930, capital of Kohgiluyeh and Boyer-Ahmad Province, where the Aghajari and Gachsaran oil fields are
+San Antonio 137 to flip to oil in 1930, representing the spread of the East Texas oil field
+Ras Gharib 1772 to flip to oil in 1930 "more petroleum was found in the late 1930s along the Gulf of Suez. "
+Olney 168 to flip to oil in 1905 "The Illinois Basin has produced more than four billion barrels of petroleum.[6] Major oil production began in 1905, and from 1907 through 1912, the basin was the third-most oil productive area in the United States. Oil production peaked in 1908 at 34 million barrels per year, and declined steadily to 5 million barrels in 1933. A new wave of exploration brought oil production to a new high of 140 million barrels in 1940, after which production again declined.[8] Waterflooding of old reservoirs caused a third peak of oil production in the 1950s. "
+
+1940s crash bug fix:
+delete buildings.txt
+maximum fort, navy base, and infrastructure reduced to 6
+naval_doctrine_7 now speeds up carrier build time
+tech_infrastructure_7 now increases rgo and factory output
+army_doctrine_7 now only increases dig in cap
 
 v0.4.2c
 3 tiers of tax refund modifiers again to make tax refund event less spammy
