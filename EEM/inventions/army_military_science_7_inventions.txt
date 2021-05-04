@@ -137,7 +137,7 @@ air_to_air_radar = {
         }
         modifier = {
             factor = 2
-            invention = cavity_magentron
+            invention = cavity_magnetron
         }
     }
     effect = {
