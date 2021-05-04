@@ -77,6 +77,10 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
+                factor = 1.1
+                is_secondary_power = yes
+            }
+            modifier = {
                 factor = 0.5
                 government = democracy
             }
@@ -191,6 +195,10 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
+                factor = 0.9
+                is_secondary_power = yes
+            }
+            modifier = {
                 factor = 1.2
                 militancy = 3
             }
@@ -278,6 +286,10 @@ country_event = {
             modifier = {
                 factor = 0.5
                 is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.9
+                is_secondary_power = yes
             }
             modifier = {
                 factor = 1.2
@@ -525,6 +537,10 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
+                factor = 0.9
+                is_secondary_power = yes
+            }
+            modifier = {
                 factor = 1.2
                 militancy = 3
             }
@@ -612,6 +628,10 @@ country_event = {
             modifier = {
                 factor = 0.5
                 is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.9
+                is_secondary_power = yes
             }
             modifier = {
                 factor = 1.2
@@ -840,6 +860,10 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
+                factor = 0.9
+                is_secondary_power = yes
+            }
+            modifier = {
                 factor = 1.2
                 militancy = 3
             }
@@ -927,6 +951,10 @@ country_event = {
             modifier = {
                 factor = 0.5
                 is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.9
+                is_secondary_power = yes
             }
             modifier = {
                 factor = 1.2
