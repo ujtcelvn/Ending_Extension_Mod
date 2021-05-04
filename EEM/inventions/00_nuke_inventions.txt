@@ -6,10 +6,10 @@ nuclear_theory = {
     limit = { chemistry_and_electricity_7 = 1 }
     news = no
     chance = {
-        base = -4
+        base = 2
         modifier = {
-            factor = 4
-            invention = quantum_theory
+            factor = -6
+            NOT = { invention = quantum_theory }
         }
         modifier = {
             factor = 2
