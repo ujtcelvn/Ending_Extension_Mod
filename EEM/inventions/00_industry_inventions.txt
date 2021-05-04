@@ -323,7 +323,7 @@ rocket_experiments = {
         }
         modifier = {
             factor = 2
-            invention = tech_power_7
+            tech_power_7 = 1
         }
         modifier = {
             factor = 2
