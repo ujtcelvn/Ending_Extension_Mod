@@ -122,7 +122,7 @@ adolf_a_berle = {
         base = 2
         modifier = {
             factor = 2
-            economic_policy = interventionsim
+            ruling_party_ideology = socialist
         }
         modifier = {
             factor = 2
@@ -168,7 +168,7 @@ john_hicks = {
         base = 2
         modifier = {
             factor = 2
-            economic_policy = interventionsim
+            invention = distribution_channels
         }
         modifier = {
             factor = 2
@@ -313,7 +313,7 @@ airliner = {
         base = 0
         modifier = {
             factor = 2
-            aeronautics = 1 = 1
+            aeronautics = 1
         }
         modifier = {
             factor = 2
