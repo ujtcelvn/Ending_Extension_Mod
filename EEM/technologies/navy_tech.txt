@@ -536,7 +536,10 @@ naval_doctrine_7 = {
     year = 1936
     cost = 25200
     unciv_military = yes
-    max_naval_base = 1
+
+    #max_naval_base = 1
+    aircraft_carrier = { build_time = -10 }
+
     ai_chance = {
         factor = 1.5
         # Land-locked countries don't research this
