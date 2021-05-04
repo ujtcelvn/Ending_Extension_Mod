@@ -58,7 +58,7 @@ portable_radio = {
         }
         modifier = {
             factor = 2
-            invention = cavity_magetron 
+            invention = cavity_magnetron 
         }
     }
     effect = {
@@ -79,7 +79,7 @@ early_warning_radar = {
         }
         modifier = {
             factor = 3
-            invention = cavity_magentron
+            invention = cavity_magnetron
         }
         modifier = {
             factor = 2
@@ -129,7 +129,7 @@ motorized_recon = {
         }
         modifier = {
             factor = 2
-            invention = armored_cars
+            invention = armoured_cars
         }
         modifier = {
             factor = 2
