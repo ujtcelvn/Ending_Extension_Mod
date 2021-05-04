@@ -609,21 +609,3 @@ clerked_nation2 = {
 	global_population_growth = -0.001
     icon = 18
 }
-
-clerked_nation3 = {
-	trigger = {
-        clerks = 0.15
-	}
-	global_population_growth = -0.001
-    research_points = 0.1
-    icon = 18
-}
-
-clerked_nation4 = {
-	trigger = {
-        clerks = 0.20
-	}
-	global_population_growth = -0.001
-    research_points = 0.1
-    icon = 18
-}
