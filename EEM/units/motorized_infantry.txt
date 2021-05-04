@@ -12,7 +12,7 @@ motorized_infantry = {
 	max_strength = 3
 	default_organisation = 30
 	maximum_speed = 10.00
-	weighted_value = 9.0
+	weighted_value = 40.0
 
 
 	#Building Costs
@@ -22,6 +22,7 @@ motorized_infantry = {
 		canned_food = 10
 		automobiles = 10
 		fuel = 5
+		radio = 1 #0
 	}
 	
 	supply_consumption = 1.0
@@ -29,8 +30,9 @@ motorized_infantry = {
 		small_arms = 0.012 #0.008
 		ammunition = 0.075 # 0
 		canned_food = 0.07 #0.08
-		automobiles = 0.15
-		fuel = 0.2
+		automobiles = 0.05 #0.15
+		fuel = 0.1 #0.2
+		radio = 0.001 #0
 	}
 	
 
