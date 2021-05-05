@@ -20,3 +20,8 @@ Economic and Liquidity crisis tweaks
 
 
 Please read the changelog.txt for more details.
+
+## Acknowledgements:
+
+* Thanks to arkhometha and everyone else who contributed to HPM for making HPM so this mod could be based on it
+* Thanks to Anons for suggestions and playtesting!
