@@ -17,9 +17,33 @@ saturation_bombing_doctrine = {
     }
     effect = {
         plane = {
-            reconnaissance = 1
             attack = 0.1
             supply_consumption = 0.10
+        }
+    }
+}
+
+army_motorization = {
+    limit = { army_doctrine_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = daimlers_automobile
+        }
+        modifier = {
+            factor = 2
+            invention = interwar_cavalry
+        }
+        modifier = {
+            factor = 2
+            limited_access_roads = 1
+        }
+    }
+    effect = {
+        army_base = {
+            maximum_speed = 1
+            supply_consumption = 0.20
         }
     }
 }
@@ -45,7 +69,7 @@ mechanized_assault_doctrine = {
     effect = {
         tank = {
             attack = 4
-            supply_consumption = 0.20
+            supply_consumption = 0.10
         }
         motorized_infantry = {
             attack = 2
@@ -91,19 +115,19 @@ ceremonial_cavalry = {
     effect = {
         cuirassier = {
             attack = 1
-            defence = 1
+            defence = 2
             supply_consumption = -0.20
         }
         dragoon = {
-            defence = 1
+            defence = 2
         }
         hussar = {
-            defence = 1
+            defence = 2
             supply_consumption = 0.10
         }
         cavalry = {
             attack = 1
-            defence = 1
+            defence = 2
             supply_consumption = 0.10
         }
     }
@@ -158,61 +182,6 @@ combined_arms_offensive = {
         }
         irregular = {
             attack = 1
-        }
-        army_base = {
-            supply_consumption = 0.05
-        }
-    }
-}
-
-general_purpose_machine_gun_doctrine = {
-    limit = { army_doctrine_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 1
-            invention = interwar_infantry
-        }
-        modifier = {
-            factor = 1
-            modern_divisional_structure = 1
-        }
-        modifier = {
-            factor = -4
-            not = { machine_guns = 1 }
-        }
-    }
-    effect = {
-        infantry = {
-            attack = 1
-            defence = 2
-        }
-        guard = {
-            attack = 1
-            defence = 2
-        }
-        engineer = {
-            attack = 1
-            defence = 1
-        }
-        cuirassier = {
-            defence = 1
-        }
-        dragoon = {
-            defence = 1
-        }
-        hussar = {
-            defence = 1
-        }
-        motorized_infantry = {
-            attack = 1
-            defence = 1
-        }
-        cavalry = {
-            defence = 1
-        }
-        irregular = {
-            defence = 1
         }
         army_base = {
             supply_consumption = 0.05
