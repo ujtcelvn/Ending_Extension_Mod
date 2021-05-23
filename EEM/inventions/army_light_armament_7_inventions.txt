@@ -64,37 +64,49 @@ semi_automatic_rifle_armament = {
 assault_rifle_experiments = {
     limit = { light_armament_7 = 1 }
     chance = {
-        base = 2
+        base = 0
         modifier = {
             factor = 2
             invention = semi_automatic_rifle_armament
         }
         modifier = {
+            factor = 2
+            invention = motorized_infantry_activation
+        }
+        modifier = {
+            factor = 1
+            war = yes
+            war_countries = { invention = assault_rifle_experiments }
+        }
+        modifier = {
             factor = -4
-            not = { invention = general_purpose_machine_gun_doctrine }
+            not = { machine_guns = 1 }
         }
     }
     effect = {
-        infantry = {
+        irregular = {
             attack = 1
+            defence = 1
+            supply_consumption = 0.05
+        }
+		infantry = {
+            attack = 2
             defence = 2
             supply_consumption = 0.05
         }
         guard = {
-            attack = 1
-            defence = 1
+            attack = 2
+            defence = 3
             supply_consumption = 0.25
         }
         engineer = {
-            attack = 1
-            supply_consumption = 0.05
-        }
-        irregular = {
-            attack = 1
+            attack = 2
+            defence = 1
             supply_consumption = 0.05
         }
         motorized_infantry = {
-            attack = 1
+            attack = 2
+            defence = 1
             supply_consumption = 0.05
         }
     }
@@ -126,7 +138,7 @@ shaped_charge = {
         engineer  = {
             siege = 1
             defence = 1
-            supply_consumption = 0.10
+            supply_consumption = 0.25
         }
         irregular = {
             defence = 1
