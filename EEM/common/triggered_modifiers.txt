@@ -590,7 +590,7 @@ literate_nation = {
 	trigger = {
 		literacy = 0.9
 	}
-	global_population_growth = -0.001
+	global_population_growth = -0.0001
     icon = 18
 }
 
@@ -598,14 +598,30 @@ clerked_nation = {
 	trigger = {
         clerks = 0.05
 	}
-	global_population_growth = -0.001
+	global_population_growth = -0.0001
     icon = 18
 }
 
-clerked_nation2 = {
+clerked_nation_2 = {
 	trigger = {
         clerks = 0.10
 	}
-	global_population_growth = -0.001
+	global_population_growth = -0.0001
+    icon = 18
+}
+
+clerked_nation_3 = {
+	trigger = {
+        clerks = 0.15
+	}
+	global_population_growth = -0.0001
+    icon = 18
+}
+
+clerked_nation_4 = {
+	trigger = {
+        clerks = 0.20
+	}
+	global_population_growth = -0.0001
     icon = 18
 }
