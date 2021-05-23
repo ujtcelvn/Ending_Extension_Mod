@@ -64,6 +64,27 @@ fluid_catalytic_cracking = {
     }
 }
 
+#Haensel's process was subsequently commercialized by UOP in 1949 for producing a high octane gasoline from low octane naphthas and the UOP process become known as the Platforming process.[2] The first Platforming unit was built in 1949 at the refinery of the Old Dutch Refining Company in Muskegon, Michigan. 
+catalytic_reforming = {
+    limit = { chemistry_and_electricity_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -4
+            NOT = { invention = fluid_catalytic_cracking }
+        }
+        modifier = {
+            factor = 2
+            invention = basic_oxygen_steelmaking
+        }
+    }
+    effect = {
+        factory_goods_output = {
+            fuel = 0.05
+        }
+    }
+}
+
 #developed in 1948 by Swiss engineer Robert Durrer 
 basic_oxygen_steelmaking = {
     limit = { metallurgy_7 = 1 }
