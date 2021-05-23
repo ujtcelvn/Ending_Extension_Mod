@@ -18,11 +18,11 @@ tracked_mine = {
     effect = {
         engineer = {
             siege = 1
-            supply_consumption = 0.10
+            supply_consumption = 0.20
         }
         tank = {
             siege = 1
-            supply_consumption = 0.10
+            supply_consumption = 0.20
         }
     }
 }
