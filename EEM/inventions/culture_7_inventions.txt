@@ -433,7 +433,7 @@ anticolonialism = {
         }
     }
 
-    core_pop_consciousness_modifier = 0.01
+    non_accepted_pop_consciousness_modifier = 0.01
     effect = {
         plurality = 0.05
     }
