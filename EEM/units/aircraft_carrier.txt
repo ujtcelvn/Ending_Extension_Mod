@@ -25,14 +25,14 @@ aircraft_carrier = {
     #Building Costs
     build_time = 480
     build_cost = {
-        steamer_convoy = 130    
+        steamer_convoy = 125    
         artillery = 20            
         canned_food = 60        
         telephones = 20           
         regular_clothes = 60    
         fuel = 100               
         radio = 40                
-        aeroplanes = 60
+        aeroplanes = 20
     }
 
     min_port_level = 6
@@ -41,7 +41,7 @@ aircraft_carrier = {
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 1.6
+        steamer_convoy = 1.2
         artillery = 0.1
         canned_food = 1
         telephones = 0.01
@@ -50,7 +50,7 @@ aircraft_carrier = {
         regular_clothes = 0.5
         tobacco = 2
         radio = 0.02
-        aeroplanes = 0.6
+        aeroplanes = 0.2
     }
 
     #Naval Abilities
