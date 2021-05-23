@@ -1,0 +1,292 @@
+province_event = {
+    id = 12300
+    title = "Pollution!"
+    desc = "Pollution, pollution, we've got smog and sewage and mud,"
+
+    trigger = {
+		is_colonial = no
+		total_pops = 400000 #London 1836
+ 		has_pop_type = craftsmen
+        #owner = { NOT = { has_global_flag = workplace_events_disabled } }
+    }
+
+    mean_time_to_happen = {
+        months = 1200
+
+        modifier = {
+            factor = 0.8
+		    total_pops = 800000
+        }
+        modifier = {
+            factor = 0.8
+		    total_pops = 1600000
+        }
+
+        modifier = {
+            factor = 0.8
+            has_province_modifier = local_modern_transportation
+        }
+        modifier = {
+            factor = 0.8
+			OR = {
+				trade_goods = oil
+				trade_goods = coal
+				trade_goods = sulphur
+			}
+        }
+        modifier = {
+            factor = 0.9
+			state_scope = {
+				OR = {
+					has_building = cement_factory
+					has_building = fertilizer_factory
+				}
+			}
+        }
+        modifier = {
+            factor = 0.9
+			state_scope = {
+				OR = {
+					has_building = steel_factory
+					has_building = machine_parts_factory
+				}
+			}
+        }
+        modifier = {
+            factor = 0.9
+			state_scope = {
+				OR = {
+					has_building = synthetic_oil_factory
+					has_building = fuel_refinery
+				}
+			}
+        }
+        modifier = {
+            factor = 0.9
+			state_scope = {
+				OR = {
+					has_building = automobile_factory
+					has_building = steamer_shipyard
+				}
+			}
+        }
+		
+        modifier = {
+            factor = 1.2
+            safety_regulations = low_safety
+        }
+        modifier = {
+            factor = 1.5
+            safety_regulations = acceptable_safety
+        }
+        modifier = {
+            factor = 2
+            safety_regulations = good_safety
+        }
+        modifier = {
+            factor = 2
+            owner = { has_country_modifier = clean_air_act }
+        }
+    }
+
+    option = {
+        name = "Turn on your tap and get hot and cold running crud."
+        add_province_modifier = { name = local_pollution_problem duration = 365 }
+        any_pop = { reduce_pop = 0.9995 }
+    }
+}
+
+
+
+country_event = {
+    id = 12301
+    title = "Clean Air Act"
+    desc = "The severe pollution problem in the capital has prompted officials to propose a bill aimed regulating and reducing air pollution."
+    picture = "air_pollution"
+
+    trigger = {
+		capital_scope = { has_province_modifier = local_pollution_problem }
+        safety_regulations = good_safety
+        NOT = { has_country_modifier = clean_air_act }
+        NOT = { government = bourgeois_dictatorship }
+        NOT = { has_country_flag = government_busy_with_something }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+        modifier = {
+            factor = 0.5
+            literacy = 0.8
+        }
+    }
+
+    option = {
+        name = "No way! This would ruin the economy!"
+
+        any_pop = {
+            limit = {
+                strata = middle
+            }
+            consciousness = 0.5
+        }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 2
+                economic_policy = laissez_faire
+            }
+
+            modifier = {
+                factor = 2
+                OR = {
+                    ruling_party_ideology = reactionary
+                    ruling_party_ideology = anarcho_liberal
+                }
+            }
+            modifier = {
+                factor = 1.5
+                OR = {
+                    ruling_party_ideology = conservative
+                    ruling_party_ideology = liberal
+                }
+            }
+
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "This is necessary to improve air quality."
+        add_country_modifier = { name = clean_air_act duration = -1 }
+        any_pop = {
+            limit = {
+                type = capitalists
+            }
+            consciousness = 3
+            militancy = 1
+        }
+
+        ai_chance = {
+            factor = 50
+
+            modifier = {
+                factor = 0
+                OR = {
+                    ruling_party_ideology = reactionary
+                    ruling_party_ideology = anarcho_liberal
+                }
+            }
+            modifier = {
+                factor = 0.5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = fascist_dictatorship
+                }
+            }
+
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 12302
+    title = "Repeal Clean Air Act?"
+    desc = "Business and industry representatives claim that current air quality laws unecessarily restrict their operations and strangle their competitiveness. Should we listen to their complaints and repeal the Clean Air Act?"
+    picture = "air_pollution"
+
+    trigger = {
+        has_country_modifier = clean_air_act
+        OR = {
+            ruling_party_ideology = reactionary
+            ruling_party_ideology = anarcho_liberal
+            ruling_party_ideology = fascist
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 30
+        modifier = {
+            factor = 0.1
+            OR = {
+                government = bourgeois_dictatorship
+                government = presidental_dictatorship
+            }
+        }
+        modifier = {
+            factor = 4
+            has_country_flag = clean_air_act_not_repealed
+        }
+    }
+
+    option = {
+        name = "Of course! Finally the economy can thrive again!"
+
+        remove_country_modifier = clean_air_act
+        clr_country_flag = clean_air_act_not_repealed
+        any_pop = {
+            limit = {
+                strata = middle
+            }
+            consciousness = 1
+        }
+        any_pop = {
+            limit = {
+                type = capitalists
+            }
+            militancy = -2
+        }
+
+        ai_chance = {
+            factor = 80
+            modifier = {
+                factor = 0.5
+                ruling_party_ideology = fascist
+            }
+        }
+    }
+
+
+    option = {
+        name = "No, air quality is too important to sacrifice."
+
+        set_country_flag = clean_air_act_not_repealed
+        any_pop = {
+            limit = {
+                type = capitalists
+            }
+            militancy = 2
+        }
+
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = presidental_dictatorship
+                }
+            }
+            modifier = {
+                factor = 2
+                ruling_party_ideology = fascist
+            }
+        }
+    }
+}
