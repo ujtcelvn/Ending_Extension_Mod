@@ -7,9 +7,9 @@ Tech Unlock Dates		number of inventions (125 + 5 = 130)
 1936 light armament			 3
 1936 heavy armament			 8
 1936 military science			 8
-1936 army leadership			 7
+1936 army leadership			 6
 
-army = 32
+army = 31
 
 1936 naval doctrine			 4
 1930 ship construction			 4	1919 oil_driven_ships	5
@@ -39,36 +39,86 @@ commerce = 16
 1930 mechanization			 4
 1930 metallurgy				 6 (mining = 3) (industry = 3)
 1930 infrastructure			 0
-1936 chemistry and electricity		10 (nuke = 1) (medicine = 3) (industry = 6)
+1936 chemistry and electricity		11 (nuke = 1) (medicine = 3) (industry = 7)
 
-industry = 30
+industry = 31
 
-#TODO list
+#Feature list
 >v0.1 end date and political party end dates moved to 1946, 1 new tech for each field, with unlock dates ranging from 1922 to 1936!
 >v0.2 new unit, the aircraft carrier, and beginning work on inventions
->v0.3 inventions (except strategic bombing, the Bomb, localizations, integrating with decisions and event MTTH)
->v0.4 Solving the liquidity crisis
-WE ARE HERE
->v0.5 the industrial revolution and its consequences have been a disaster to the human race, the final solution to the artisan problem, migration rework
->v0.6 strategic bombing, the Bomb, localizations, integrating with decisions and event MTTH
->v0.7 GOTT ERHALTE, GOTT BESCHÜTZE, east asia fix (cuz HPM is never gonna do it), other flavor events
->v0.8 what happens if country gets dismantled twice (like post WW2 Germany), daddy UN
->v0.9 synthetic factories, telecom and pharmamed clerk-staffed factories
->v1.0 Full release!
+>v0.3 inventions (except strategic bombing, the Bomb, localizations)
+>v0.4 Solving the liquidity crisis, economy tweaks (oil, pollution, artisan production boost), decolonization
 
-Event IDs used
-29905 intensive agriculture
-99900 Vietnam decolonization
-99901 Indonesia decolonization
-99902 Malay decolonization
+Events
+12300 Pollution!
+12301 Clean Air Act
+12302 Repeal Clean Air Act?
 
-#TODO: tech_bg.bbs modified to better fit 7 techs 
-#TODO: adjust inventions
-#TODO: Stop the dahomey - outer hausaland noodle
-#TODO: make 1st and 2nd rank great powers dislike each other mpre often
-#TODO: make decolonization revolt events spread from country to country instead of being independent from each other, and make them not happen forever
-#TODO: releasing Egypt as a puppet in the Arab revolt not removing your core on the Suez canal if you built it.
-#TODO: somehow let max fort, navy base, and infrastructure level be 7 in buildings.txt without causing the game to crash
+29905 Intensive Agriculture
+29906 Modern Transportation
+
+Decolonization
+99900 Vietnam
+99901 Indonesia
+99902 Malay
+99903 Laos
+99904 Cambodia
+99905 Siam
+99906 Burma
+
+#TODO List
+#strategic bombing
+#the Bomb
+#events and decisions
+	the industrial revolution and its consequences have been a disaster to the human race
+		Preservationist Movement
+		National parks
+		Environmental protection Agency 1970
+	the final solution to the artisan problem
+	decolonization
+		make revolt events spread from country to country instead of being independent from each other
+		Colony revolution
+			If colony can be released as a civilized nation, they are released (with minimum techs and post-colonial nation tech school)
+			former master has choice to let them go (prestige loss, jingoists angry, slight relations gain) or go to war to annex them
+			if the revolution is crushed, the nationalists demand independence events stop firing, and the colony calms down to like just a non-core territory?
+		Egypt
+			releasing Egypt as a puppet in the Arab revolt having a choice of not removing your core on the Suez canal if you built it
+			Egypt if not a puppet can sieze the canal (infamy and prestige gain)
+			leading to a suez crisis
+	GOTT ERHALTE, GOTT BESCHÜTZE
+	east asia fix (cuz HPM is never gonna do it)
+	AI genocide
+	what happens if country gets dismantled twice (like post WW2 Germany)
+	daddy UN
+	proxy wars: let rival GPs fund independence movements?
+#Stopping the dahomey - outer hausaland noodle
+#localizations
+#Migration rework
+#Assimilation rework
+#somehow let max fort, navy base, and infrastructure level be 7 in buildings.txt without causing the game to crash
+#synthetic factories, telecom and pharmamed clerk-staffed factories
+
+v0.4.4
+major readjustment and balancing of army inventions
+armored flight deck moved from naval engineering to ship construction
+added catalytic_reforming
+reduced CV build and supply cost
+tech_bg.bbs modified to better fit 7 techs 
+
+events/Environment_and_Pollution.txt
+added pollution 12300, clean air act 12301, repeal clean air act 12302 events and modifiers
+added gfx/pictures/events/air_pollution.tga
+
+clerked_nation_3 and 4 re-added in triggered_modifiers, reduced population decrease to 0.0001 per tier
+
+local_intensive_agriculture farm_rgo_eff reduced to 0.5
+local_distribution_channels_und_electricity now also increases local_artisan_output by 0.25
+added Modern Transportation event and modifier
+
+decolonization adjustments
+added lao, khmer, thai, and burmese decolonization
+anticolonialism invention increases non_accepted_pop_consciousness_modifier instead of that of core pops now
+
 
 v0.4.3
 removed clerked_nation tiers 3 and 4
