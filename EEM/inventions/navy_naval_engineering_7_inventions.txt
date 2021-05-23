@@ -221,29 +221,6 @@ naval_plastic_armor = {
     }
 }
 
-
-armored_flight_deck = {
-    limit = { naval_engineering_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = naval_plastic_armor
-        }
-        modifier = {
-            factor = -4
-            NOT = {
-                invention = fleet_air_carriers
-            }
-        }
-    }
-    effect = {
-        aircraft_carrier = {
-            hull = 5
-        }
-    }
-}
-
 naval_fighters = {
     limit = { naval_engineering_7 = 1 }
     chance = {
