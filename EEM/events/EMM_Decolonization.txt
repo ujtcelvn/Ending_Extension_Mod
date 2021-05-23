@@ -2,7 +2,7 @@ country_event = {
 
     id = 99900
     title = "League for the Independence of Vietnam"
-    desc = "Vietnamese nationalists are pestering for independence! How should we respond?"
+    desc = "Vietnamese nationalists are requesting independence! How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
@@ -73,11 +73,11 @@ country_event = {
                 government = absolute_monarchy
             }
             modifier = {
-                factor = 1.25
+                factor = 1.5
                 is_greater_power = yes
             }
             modifier = {
-                factor = 1.1
+                factor = 1.25
                 is_secondary_power = yes
             }
             modifier = {
@@ -195,7 +195,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.9
+                factor = 0.75
                 is_secondary_power = yes
             }
             modifier = {
@@ -206,7 +206,6 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
-
         }
     }
 
@@ -288,7 +287,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.9
+                factor = 0.75
                 is_secondary_power = yes
             }
             modifier = {
@@ -299,7 +298,6 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
-
         }
     }
 }
@@ -309,7 +307,7 @@ country_event = {
 
     id = 99901
     title = "Indonesian National Awakening"
-    desc = "Indonesian nationalists are pestering for independence! How should we respond?"
+    desc = "Indonesian nationalists are requesting independence! How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
@@ -328,20 +326,23 @@ country_event = {
         months = 120
         modifier = {
             factor = 1.5
-            any_pop = {
-                has_pop_culture = javan
-                is_accepted_culture = yes
-            }
-        }
-        modifier = {
-            factor = 1.2
-            any_pop = {
-                OR = {
-                    has_pop_culture = malay
-                    has_pop_culture = moluccan
-                    has_pop_culture = melanesian
+            OR = {
+                any_pop = {
+                    has_pop_culture = javan
+                    is_accepted_culture = yes
                 }
-                is_accepted_culture = yes
+                any_pop = {
+                    has_pop_culture = malay
+                    is_accepted_culture = yes
+                }
+                any_pop = {
+                    has_pop_culture = moluccan
+                    is_accepted_culture = yes
+                }
+                any_pop = {
+                    has_pop_culture = melanesian
+                    is_accepted_culture = yes
+                }
             }
         }
 
@@ -373,29 +374,12 @@ country_event = {
         name = "No way!"
         any_pop = {
             limit = {
-                has_pop_culture = javan
-                location = { is_core = INO }
-            }
-            militancy = 3
-        }
-
-        any_pop = {
-            limit = {
-                has_pop_culture = malay 
-                location = { is_core = INO }
-            }
-            militancy = 3
-        }
-        any_pop = {
-            limit = {
-                has_pop_culture = moluccan  
-                location = { is_core = INO }
-            }
-            militancy = 3
-        }
-        any_pop = {
-            limit = {
-                has_pop_culture = melanesian 
+                OR = {
+                    has_pop_culture = javan
+                    has_pop_culture = malay
+                    has_pop_culture = moluccan
+                    has_pop_culture = melanesian 
+                }
                 location = { is_core = INO }
             }
             militancy = 3
@@ -415,11 +399,11 @@ country_event = {
                 government = absolute_monarchy
             }
             modifier = {
-                factor = 1.25
+                factor = 1.5
                 is_greater_power = yes
             }
             modifier = {
-                factor = 1.1
+                factor = 1.25
                 is_secondary_power = yes
             }
             modifier = {
@@ -537,7 +521,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.9
+                factor = 0.75
                 is_secondary_power = yes
             }
             modifier = {
@@ -548,7 +532,6 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
-
         }
     }
 
@@ -630,7 +613,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.9
+                factor = 0.75
                 is_secondary_power = yes
             }
             modifier = {
@@ -641,7 +624,6 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
-
         }
     }
 }
@@ -649,8 +631,8 @@ country_event = {
 country_event = {
 
     id = 99902
-    title = "Malay Emergency"
-    desc = "Malaysian nationalists are pestering for independence! How should we respond?"
+    title = "Kebangsaan Melayu Malaya"
+    desc = "Malaysian nationalists are requesting independence! How should we respond?"
     picture = "Cubanrebels"
 
     trigger = {
@@ -671,13 +653,6 @@ country_event = {
             factor = 1.5
             any_pop = {
                 has_pop_culture = malay
-                is_accepted_culture = yes
-            }
-        }
-        modifier = {
-            factor = 1.2
-            any_pop = {
-                has_pop_culture = yue
                 is_accepted_culture = yes
             }
         }
@@ -716,14 +691,6 @@ country_event = {
             militancy = 3
         }
 
-        any_pop = {
-            limit = {
-                has_pop_culture = yue 
-                location = { is_core = MLY }
-            }
-            militancy = 2
-        }
-
         any_owned = {
             limit = { is_core = MLY }
             add_province_modifier = {
@@ -738,11 +705,11 @@ country_event = {
                 government = absolute_monarchy
             }
             modifier = {
-                factor = 1.25
+                factor = 1.5
                 is_greater_power = yes
             }
             modifier = {
-                factor = 1.1
+                factor = 1.25
                 is_secondary_power = yes
             }
             modifier = {
@@ -799,7 +766,7 @@ country_event = {
         }
         any_pop = {
             limit = {
-                NOT = { OR = { has_pop_culture = malay has_pop_culture = yue } }
+                NOT = { has_pop_culture = malay }
                 is_primary_culture = no
                 is_accepted_culture = no
             }
@@ -860,7 +827,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.9
+                factor = 0.75
                 is_secondary_power = yes
             }
             modifier = {
@@ -871,7 +838,6 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
-
         }
     }
 
@@ -953,7 +919,7 @@ country_event = {
                 is_greater_power = yes
             }
             modifier = {
-                factor = 0.9
+                factor = 0.75
                 is_secondary_power = yes
             }
             modifier = {
@@ -964,7 +930,1226 @@ country_event = {
                 factor = 1.2
                 militancy = 5
             }
+        }
+    }
+}
 
+
+country_event = {
+
+    id = 99903
+    title = "Lao Issara"
+    desc = "Lao nationalists are requesting independence! How should we respond?"
+    picture = "Cubanrebels"
+
+    trigger = {
+        NOT = {
+            exists = LXA
+        }
+        is_possible_vassal = LXA
+        mass_politics = 1
+        any_owned_province = {
+            is_core = LXA
+            average_consciousness = 5
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 1.5
+            any_pop = {
+                has_pop_culture = lao
+                is_accepted_culture = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            NOT = { invention = national_liberation }
+        }
+        modifier = {
+            factor = 0.8
+            1357 = { average_militancy = 2 }
+        }
+        modifier = {
+            factor = 0.8
+            1357 = { average_militancy = 4 }
+        }
+        modifier = {
+            factor = 0.8
+            1357 = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                1357 = { average_militancy = 2 }
+            }
+        }
+    }
+
+    option = {
+        name = "No way!"
+        any_pop = {
+            limit = {
+                has_pop_culture = lao
+                location = { is_core = LXA }
+            }
+            militancy = 3
+        }
+        any_owned = {
+            limit = { is_core = LXA }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1825
+            }
+        }
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 1.25
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                government = democracy
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Perhaps home rule would make them happy?"
+        badboy = -3
+        prestige = -10
+        release_vassal = LXA
+        LXA = {
+            any_pop = { militancy = -2 }
+            any_owned = {
+                add_province_modifier = {
+                    name = nationalist_agitation
+                    duration = 730
+                }
+            }
+        }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.02
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = lao }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 2
+        }
+        relation = {
+            who = LXA
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = LXA
+                    value = 200
+                }
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Give them what they want."
+        badboy = -5
+        prestige = -25
+        release = LXA
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.05
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = lao }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 4
+        }
+        LXA = {
+            any_pop = { militancy = -8 }
+        }
+        relation = {
+            who = LXA
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = LXA
+                    value = 100
+                }
+            }
+        }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+}
+
+
+country_event = {
+
+    id = 99904
+    title = "Khmer Issarak"
+    desc = "Cambodian nationalists are requesting independence! How should we respond?"
+    picture = "Cubanrebels"
+
+    trigger = {
+        NOT = {
+            exists = CAM
+        }
+        is_possible_vassal = CAM
+        mass_politics = 1
+        any_owned_province = {
+            is_core = CAM
+            average_consciousness = 5
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 1.5
+            any_pop = {
+                has_pop_culture = khmer
+                is_accepted_culture = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            NOT = { invention = national_liberation }
+        }
+        modifier = {
+            factor = 0.8
+            1364 = { average_militancy = 2 }
+        }
+        modifier = {
+            factor = 0.8
+            1364 = { average_militancy = 4 }
+        }
+        modifier = {
+            factor = 0.8
+            1364 = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                1364 = { average_militancy = 2 }
+            }
+        }
+    }
+
+    option = {
+        name = "No way!"
+        any_pop = {
+            limit = {
+                has_pop_culture = khmer
+                location = { is_core = CAM }
+            }
+            militancy = 3
+        }
+        any_owned = {
+            limit = { is_core = CAM }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1825
+            }
+        }
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 1.25
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                government = democracy
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Perhaps home rule would make them happy?"
+        badboy = -3
+        prestige = -10
+        release_vassal = CAM
+        CAM = {
+            any_pop = { militancy = -2 }
+            any_owned = {
+                add_province_modifier = {
+                    name = nationalist_agitation
+                    duration = 730
+                }
+            }
+        }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.02
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = khmer }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 2
+        }
+        relation = {
+            who = CAM
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = CAM
+                    value = 200
+                }
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Give them what they want."
+        badboy = -5
+        prestige = -25
+        release = CAM
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.05
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = khmer }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 4
+        }
+        CAM = {
+            any_pop = { militancy = -8 }
+        }
+        relation = {
+            who = CAM
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = CAM
+                    value = 100
+                }
+            }
+        }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+}
+
+
+country_event = {
+
+    id = 99905
+    title = "Thai People's Party"
+    desc = "Thai nationalists are requesting independence! How should we respond?"
+    picture = "Cubanrebels"
+
+    trigger = {
+        NOT = {
+            exists = SIA
+        }
+        is_possible_vassal = SIA
+        mass_politics = 1
+        any_owned_province = {
+            is_core = SIA
+            average_consciousness = 5
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 1.5
+            any_pop = {
+                has_pop_culture = thai
+                is_accepted_culture = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            NOT = { invention = national_liberation }
+        }
+        modifier = {
+            factor = 0.8
+            1346 = { average_militancy = 2 }
+        }
+        modifier = {
+            factor = 0.8
+            1346 = { average_militancy = 4 }
+        }
+        modifier = {
+            factor = 0.8
+            1346 = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                1346 = { average_militancy = 2 }
+            }
+        }
+    }
+
+    option = {
+        name = "No way!"
+        any_pop = {
+            limit = {
+                has_pop_culture = thai
+                location = { is_core = SIA }
+            }
+            militancy = 3
+        }
+        any_owned = {
+            limit = { is_core = SIA }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1825
+            }
+        }
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 1.25
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                government = democracy
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Perhaps home rule would make them happy?"
+        badboy = -3
+        prestige = -10
+        release_vassal = SIA
+        SIA = {
+            any_pop = { militancy = -2 }
+            any_owned = {
+                add_province_modifier = {
+                    name = nationalist_agitation
+                    duration = 730
+                }
+            }
+        }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.02
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = thai }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 2
+        }
+        relation = {
+            who = SIA
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = SIA
+                    value = 200
+                }
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Give them what they want."
+        badboy = -5
+        prestige = -25
+        release = SIA
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.05
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = thai }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 4
+        }
+        SIA = {
+            any_pop = { militancy = -8 }
+        }
+        relation = {
+            who = SIA
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = SIA
+                    value = 100
+                }
+            }
+        }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+}
+
+
+country_event = {
+
+    id = 99900
+    title = "We Burmans Association"
+    desc = "Burmese nationalists are requesting independence! How should we respond?"
+    picture = "Cubanrebels"
+
+    trigger = {
+        NOT = {
+            exists = BUR
+        }
+        is_possible_vassal = BUR
+        mass_politics = 1
+        any_owned_province = {
+            is_core = BUR
+            average_consciousness = 5
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 1.5
+            any_pop = {
+                has_pop_culture = burmese
+                is_accepted_culture = yes
+            }
+        }
+        modifier = {
+            factor = 2
+            NOT = { invention = national_liberation }
+        }
+        modifier = {
+            factor = 0.8
+            1334 = { average_militancy = 2 }
+        }
+        modifier = {
+            factor = 0.8
+            1334 = { average_militancy = 4 }
+        }
+        modifier = {
+            factor = 0.8
+            1334 = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                1334 = { average_militancy = 2 }
+            }
+        }
+    }
+
+    option = {
+        name = "No way!"
+        any_pop = {
+            limit = {
+                has_pop_culture = burmese
+                location = { is_core = BUR }
+            }
+            militancy = 3
+        }
+        any_owned = {
+            limit = { is_core = BUR }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1825
+            }
+        }
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 1.25
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                government = democracy
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Perhaps home rule would make them happy?"
+        badboy = -3
+        prestige = -10
+        release_vassal = BUR
+        BUR = {
+            any_pop = { militancy = -2 }
+            any_owned = {
+                add_province_modifier = {
+                    name = nationalist_agitation
+                    duration = 730
+                }
+            }
+        }
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.02
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = burmese }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 2
+        }
+        relation = {
+            who = BUR
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = BUR
+                    value = 200
+                }
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "Give them what they want."
+        badboy = -5
+        prestige = -25
+        release = BUR
+        any_pop = {
+            limit = { is_primary_culture = yes }
+            ideology = {
+                value = reactionary
+                factor = 0.05
+            }
+        }
+        any_pop = {
+            limit = {
+                NOT = { has_pop_culture = burmese }
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 4
+        }
+        BUR = {
+            any_pop = { militancy = -8 }
+        }
+        relation = {
+            who = BUR
+            value = 50
+        }
+        random_owned = {
+            limit = {
+                owner = { is_greater_power = yes }
+            }
+            owner = {
+                diplomatic_influence = {
+                    who = BUR
+                    value = 100
+                }
+            }
+        }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
         }
     }
 }
