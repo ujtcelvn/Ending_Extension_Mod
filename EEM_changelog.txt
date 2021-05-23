@@ -112,7 +112,7 @@ added gfx/pictures/events/air_pollution.tga
 clerked_nation_3 and 4 re-added in triggered_modifiers, reduced population decrease to 0.0001 per tier
 
 local_intensive_agriculture farm_rgo_eff reduced to 0.5
-local_distribution_channels_und_electricity now also increases local_artisan_output by 0.25
+local_distribution_channels_und_electricity now also increases local_artisan_output by 0.2
 added Modern Transportation event and modifier
 
 decolonization adjustments
