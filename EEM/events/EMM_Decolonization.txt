@@ -1,5 +1,5 @@
 country_event = {
-    id = 99000
+    id = 999000
     title = "Decolonization of Southeast Asia"
     desc = "Should we decolonize Southeast Asia? Many citizens see the colonies as a burden and are complaining about the treatment of the native population. Moreover, local officials are warning that nationalist sentiment in the Southeast Asian colonies is getting harder and harder to suppress."
     picture = "GFX_event_no_image"
@@ -233,7 +233,7 @@ country_event = {
 
 
 country_event = {
-    id = 99001
+    id = 999001
     title = "Cancel Southeast Asian Decolonization"
     desc = "Our proud nation has recently been on a misguided journey to withdraw from our colonies in Southeast Asia! Luckily, with the recent change in government, we can put a stop to this nonsense."
     picture = "GFX_event_no_image"
@@ -311,7 +311,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99002
+    id = 999002
     title = "Restart Southeast Asian Decolonization"
     desc = "We should decolonize! I mean come on, it's literally the current year."
     picture = "GFX_event_no_image"
@@ -556,7 +556,7 @@ country_event = {
 
 ########## DAI Vietnam ##########
 country_event = {
-    id = 99010
+    id = 999010
     title = "League for the Independence of Vietnam"
     desc = "Nationalist sentiment is growing in Vietnam!"
     picture = "colonial_uprising"
@@ -633,7 +633,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99011
+    id = 999011
     title = "Vietnam Puppet"
     desc = "We promised to give Vietnam Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -721,7 +721,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99010
+        country_event = 999010
 
         ai_chance = {
             factor = 20
@@ -738,7 +738,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99012
+    id = 999012
     title = "Vietnam Independence"
     desc = "We promised to give Vietnam independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -821,7 +821,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99010
+        country_event = 999010
 
         ai_chance = {
             factor = 20
@@ -840,7 +840,7 @@ country_event = {
 
 ########## INO Indonesia ##########
 country_event = {
-    id = 99020
+    id = 999020
     title = "Indonesian National Awakening"
     desc = "Nationalist sentiment is growing in Indonesia!"
     picture = "colonial_uprising"
@@ -917,7 +917,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99021
+    id = 999021
     title = "Indonesia Puppet"
     desc = "We promised to give Indonesia Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1005,7 +1005,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99020
+        country_event = 999020
 
         ai_chance = {
             factor = 20
@@ -1022,7 +1022,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99022
+    id = 999022
     title = "Indonesia Independence"
     desc = "We promised to give Indonesia independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1105,7 +1105,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99020
+        country_event = 999020
 
         ai_chance = {
             factor = 20
@@ -1124,7 +1124,7 @@ country_event = {
 
 ########## MLY Malay ##########
 country_event = {
-    id = 99030
+    id = 999030
     title = "Kebangsaan Melayu Malaya"
     desc = "Nationalist sentiment is growing in Malaysia!"
     picture = "colonial_uprising"
@@ -1201,7 +1201,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99031
+    id = 999031
     title = "Malaysia Puppet"
     desc = "We promised to give Malaysia Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1289,7 +1289,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99030
+        country_event = 999030
 
         ai_chance = {
             factor = 20
@@ -1306,7 +1306,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99032
+    id = 999032
     title = "Malaysia Independence"
     desc = "We promised to give Malaysia independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1389,7 +1389,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99030
+        country_event = 999030
 
         ai_chance = {
             factor = 20
@@ -1408,7 +1408,7 @@ country_event = {
 
 ########## LXA Laos ##########
 country_event = {
-    id = 99040
+    id = 999040
     title = "Lao Issara"
     desc = "Nationalist sentiment is growing in Laos!"
     picture = "colonial_uprising"
@@ -1485,7 +1485,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99041
+    id = 999041
     title = "Laos Puppet"
     desc = "We promised to give Laos Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1577,7 +1577,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99040
+        country_event = 999040
 
         ai_chance = {
             factor = 20
@@ -1594,7 +1594,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99042
+    id = 999042
     title = "Laos Independence"
     desc = "We promised to give Laos independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1681,7 +1681,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99040
+        country_event = 999040
 
         ai_chance = {
             factor = 20
@@ -1701,7 +1701,7 @@ country_event = {
 
 ########## CAM Cambodia ##########
 country_event = {
-    id = 99050
+    id = 999050
     title = "Khmer Issarak"
     desc = "Nationalist sentiment is growing in Cambodia!"
     picture = "colonial_uprising"
@@ -1778,7 +1778,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99051
+    id = 999051
     title = "Cambodia Puppet"
     desc = "We promised to give Cambodia Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1866,7 +1866,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99050
+        country_event = 999050
 
         ai_chance = {
             factor = 20
@@ -1883,7 +1883,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99052
+    id = 999052
     title = "Cambodia Independence"
     desc = "We promised to give Cambodia independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -1966,7 +1966,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99050
+        country_event = 999050
 
         ai_chance = {
             factor = 20
@@ -1985,7 +1985,7 @@ country_event = {
 
 ########## SIA Siam ##########
 country_event = {
-    id = 99060
+    id = 999060
     title = "Thai People's Party"
     desc = "Nationalist sentiment is growing in Siam!"
     picture = "colonial_uprising"
@@ -2062,7 +2062,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99061
+    id = 999061
     title = "Siam Puppet"
     desc = "We promised to give Siam Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -2150,7 +2150,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99060
+        country_event = 999060
 
         ai_chance = {
             factor = 20
@@ -2167,7 +2167,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99062
+    id = 999062
     title = "Siam Independence"
     desc = "We promised to give Siam independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -2250,7 +2250,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99060
+        country_event = 999060
 
         ai_chance = {
             factor = 20
@@ -2269,7 +2269,7 @@ country_event = {
 
 ########## BUR Burma ##########
 country_event = {
-    id = 99070
+    id = 999070
     title = "We Burmans Association"
     desc = "Nationalist sentiment is growing in Burma!"
     picture = "colonial_uprising"
@@ -2346,7 +2346,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99071
+    id = 999071
     title = "Burma Puppet"
     desc = "We promised to give Burma Home Rule, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -2434,7 +2434,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for Home Rule!"
-        country_event = 99070
+        country_event = 999070
 
         ai_chance = {
             factor = 20
@@ -2451,7 +2451,7 @@ country_event = {
 }
 
 country_event = {
-    id = 99072
+    id = 999072
     title = "Burma Independence"
     desc = "We promised to give Burma independence, and it is time to fufill that promise."
     picture = "asian_administration"
@@ -2534,7 +2534,7 @@ country_event = {
 	
     option = {
         name = "They are not ready for independence!"
-        country_event = 99070
+        country_event = 999070
 
         ai_chance = {
             factor = 20
