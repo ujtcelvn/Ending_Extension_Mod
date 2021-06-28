@@ -1,8 +1,8 @@
 country_event = {
     id = 999000
     title = "Decolonization of Southeast Asia"
-    desc = "Should we decolonize Southeast Asia? Many citizens see the colonies as a burden and are complaining about the treatment of the native population. Moreover, local officials are warning that nationalist sentiment in the Southeast Asian colonies is getting harder and harder to suppress."
-    picture = "GFX_event_no_image"
+    desc = "Should we decolonize Southeast Asia? Nationalist sentiment in the Southeast Asian colonies is getting harder and harder to suppress."
+     
 
     trigger = {
         mass_politics = 1
@@ -236,7 +236,7 @@ country_event = {
     id = 999001
     title = "Cancel Southeast Asian Decolonization"
     desc = "Our proud nation has recently been on a misguided journey to withdraw from our colonies in Southeast Asia! Luckily, with the recent change in government, we can put a stop to this nonsense."
-    picture = "GFX_event_no_image"
+     
 
     trigger = {
         colonial_nation = yes
@@ -314,7 +314,7 @@ country_event = {
     id = 999002
     title = "Restart Southeast Asian Decolonization"
     desc = "We should decolonize! I mean come on, it's literally the current year."
-    picture = "GFX_event_no_image"
+     
 
     trigger = {
         colonial_nation = yes
@@ -371,7 +371,7 @@ country_event = {
 
     option = {
         name = "The colonies are too valuable to let go!"
-        #set_country_flag = southeast_asia_decolonization_refused
+
 
         ai_chance = {
             factor = 70
