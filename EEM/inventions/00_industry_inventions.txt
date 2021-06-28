@@ -47,10 +47,10 @@ air_preheater = {
 fluid_catalytic_cracking = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
-        base = 0
+        base = 3
         modifier = {
-            factor = 3
-            invention = cracking
+            factor = -6
+            NOT = { invention = cracking }
         }
         modifier = {
             factor = 3
@@ -131,21 +131,43 @@ kraft_pulping = {
 #The strip mill was a major innovation, with the first being erected at Ashland, Kentucky in 1923. This provided a continuous process, cutting out the need to pass the plates over the rolls and to double them. At the end the strip was cut with a guillotine shear or rolled into a coil. Early (hot rolling) strip mills did not produce strip suitable for tinplate, but in 1929 cold rolling began to be used to reduce the gauge further. 
 #The first commercial beer available in cans began in 1935 in Richmond, Virginia.[2] Not long after that, sodas, with their higher acidity and somewhat higher pressures, were available in cans. The key development for storing drinks in cans was the interior liner, typically plastic or sometimes a waxy substance, that helped to keep the product's flavor from being ruined by a chemical reaction with the metal. 
 # the steel beer can, introduced in the 1930s by Pabst for its Blue Ribbon brew.
-canned_drinks = {
+#canned_drinks = {
+#    limit = { metallurgy_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = human_relations_theory 
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = air_preheater
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { liquor = 0.02 }
+#    }
+#}
+
+#The Claus process is the most significant gas desulfurizing process, recovering elemental sulfur from gaseous hydrogen sulfide. First patented in 1883 by the chemist Carl Friedrich Claus, the Claus process has become the industry standard. 
+#In the mid-1950s, the first noble metal catalytic reforming process (the Platformer process) was commercialized.
+#starting in the 1970s, byproduct sulfur recovery from oil and natural gas lowered the price of sulfur and drove many Frasch-process mines out of business.
+#The vast majority of the 64,000,000 tonnes of sulfur produced worldwide in 2005 was byproduct sulfur from refineries and other hydrocarbon processing plants
+hydrodesulphurization = {
     limit = { metallurgy_7 = 1 }
     chance = {
         base = 2
         modifier = {
             factor = 2
-            invention = human_relations_theory 
+            invention = fischer_tropsch_process
         }
         modifier = {
             factor = 2
-            invention = air_preheater
+            chemistry_and_electricity_7 = 1
         }
     }
     effect = {
-        factory_goods_output = { liquor = 0.02 }
+        activate_building = hydrodesulphurization_plant
     }
 }
 
@@ -230,7 +252,7 @@ fischer_tropsch_process = {
         }
     }
     effect = {
-        factory_goods_output = { oil = 0.05 }
+        factory_goods_output = { oil = 0.1 }
     }
 }
 
@@ -249,7 +271,7 @@ synthetic_rubber = {
         }
     }
     effect = {
-        rgo_goods_output = { rubber = 0.2 }
+        activate_building = synthetic_rubber_factory
     }
 }
 
@@ -290,7 +312,6 @@ nylon = {
     }
     effect = {
         factory_goods_output = { fabric = 0.05 }
-        rgo_goods_output = { silk = 0.05 }
     }
 }
 
@@ -305,14 +326,13 @@ nylon = {
 industrial_plastics_production = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
-        base = 0
+        base = -2
         modifier = {
-            factor = 2
-            invention = polystyrene
-        }
-        modifier = {
-            factor = 2
-            invention = nylon
+            factor = 4
+            AND = {
+                invention = polystyrene
+                invention = nylon
+            }
         }
         modifier = {
             factor = 2
@@ -322,7 +342,7 @@ industrial_plastics_production = {
     effect = {
         factory_goods_output = { fabric  = 0.05 }
         factory_goods_output = { glass  = 0.05 }
-        rgo_goods_output = { silk = 0.05 }
+        factory_goods_output = { rubber = 0.05 }
     }
 }
 
