@@ -68,30 +68,30 @@ industry = 31
 		12301 Clean Air Act
 		12302 Repeal Clean Air Act
 	decolonization
-		99000 SEA Decol?
-			1 Cancel SEA decol!
-			2 restart SEA decol
-		99010 DAI Vietnam Revolt!
-		   11 puppet
-		   12 full
-		99020 INO Indonesia
-		   21 puppet
-		   22 full
-		99030 MLY Malay
-		   31 puppet
-		   32 full
-		99040 LXA Laos
-		   41 puppet
-		   42 full
-		99050 CAM Cambodia
-	   	   51 puppet
-		   52 full
-		99060 SIA Siam
-		   61 puppet
-		   62 full
-		99070 BUR Burma
-		   71 puppet
-		   72 full
+		999000 SEA Decol?
+		 	 1 Cancel SEA decol!
+		  	 2 restart SEA decol
+		999010 DAI Vietnam Revolt!
+		    11 puppet
+		    12 full
+		999020 INO Indonesia
+		    21 puppet
+		    22 full
+		999030 MLY Malay
+		    31 puppet
+		    32 full
+		999040 LXA Laos
+		    41 puppet
+		    42 full
+		999050 CAM Cambodia
+	   	    51 puppet
+		    52 full
+		999060 SIA Siam
+		    61 puppet
+		    62 full
+		999070 BUR Burma
+		    71 puppet
+		    72 full
 
 
 #TODO
@@ -141,6 +141,8 @@ industry = 31
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
 
+v0.4.5a
+Fix Decolonization event id bug (999000 ~ 999072)
 
 v0.4.5
 Clean Air Act reduces militancy by 2 when passed, doesn't have constant militancy decrease any more.
