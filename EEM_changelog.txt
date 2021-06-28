@@ -44,43 +44,73 @@ commerce = 16
 industry = 31
 
 #Feature list
->v0.1 end date and political party end dates moved to 1946, 1 new tech for each field, with unlock dates ranging from 1922 to 1936!
->v0.2 new unit, the aircraft carrier, and beginning work on inventions
->v0.3 inventions (except strategic bombing, the Bomb, localizations)
->v0.4 Solving the liquidity crisis, economy tweaks (oil, pollution, artisan production boost), decolonization
+>v0.1 
+	end date and political party end dates moved to 1946
+	1 new tech for each field, with unlock dates ranging from 1922 to 1936
+>v0.2 
+	aircraft carrier
+	beginning work on inventions
+>v0.3 
+	inventions
+	motorized infantry
+>v0.4 
+	end date and political party end dates moved to 1950
+	Solving the liquidity crisis
+		6660000 Tax Refund
+	economy tweaks
+		Oil RGO spread
+		29905 Intensive Agriculture
+		29906 Modern Transportation
+		synthetic rubber factory (fuel -> rubber)
+		hydrodesulphurization plant (oil -> sulphur)
+	the industrial revolution and its consequences have been a disaster to the human race
+		12300 Pollution!
+		12301 Clean Air Act
+		12302 Repeal Clean Air Act
+	decolonization
+		99000 SEA Decol?
+			1 Cancel SEA decol!
+			2 restart SEA decol
+		99010 DAI Vietnam Revolt!
+		   11 puppet
+		   12 full
+		99020 INO Indonesia
+		   21 puppet
+		   22 full
+		99030 MLY Malay
+		   31 puppet
+		   32 full
+		99040 LXA Laos
+		   41 puppet
+		   42 full
+		99050 CAM Cambodia
+	   	   51 puppet
+		   52 full
+		99060 SIA Siam
+		   61 puppet
+		   62 full
+		99070 BUR Burma
+		   71 puppet
+		   72 full
 
-Events
-12300 Pollution!
-12301 Clean Air Act
-12302 Repeal Clean Air Act?
 
-29905 Intensive Agriculture
-29906 Modern Transportation
-
-Decolonization
-99900 Vietnam
-99901 Indonesia
-99902 Malay
-99903 Laos
-99904 Cambodia
-99905 Siam
-99906 Burma
-
-#TODO List
+#TODO
 #strategic bombing
 #the Bomb
-#events and decisions
+#other events and decisions
 	the industrial revolution and its consequences have been a disaster to the human race
 		Preservationist Movement
 		National parks
 		Environmental protection Agency 1970
-	the final solution to the artisan problem
+	Colonization
+		stop the dahomey - outer hausaland noodle?
+		stop the morroco clusterfuck?
 	decolonization
 		make revolt events spread from country to country instead of being independent from each other
 		Colony revolution
-			If colony can be released as a civilized nation, they are released (with minimum techs and post-colonial nation tech school)
-			former master has choice to let them go (prestige loss, jingoists angry, slight relations gain) or go to war to annex them
-			if the revolution is crushed, the nationalists demand independence events stop firing, and the colony calms down to like just a non-core territory?
+			If colony can be released as a civilized nation, they are released (with few techs and post-colonial nation tech school) (slightly stronger than just normal rebels so they don't get stomped?)
+			former master has choice to let them go (prestige loss, jingoists angry, slight relations gain) or go to war to annex them vs white peace
+			if the revolution is crushed, the nationalists demand independence events stop firing, and the colony calms down?
 		Egypt
 			releasing Egypt as a puppet in the Arab revolt having a choice of not removing your core on the Suez canal if you built it
 			Egypt if not a puppet can sieze the canal (infamy and prestige gain)
@@ -90,13 +120,45 @@ Decolonization
 	AI genocide
 	what happens if country gets dismantled twice (like post WW2 Germany)
 	daddy UN
-	proxy wars: let rival GPs fund independence movements?
-#Stopping the dahomey - outer hausaland noodle
+		UN founder gets to choose 1st Secretariat (and thus the UN focus for the 1st 5 years (USA thus can cuck everyone else by choosing the decolonization focus))
+		UN Secretariat elections every 5 years (votes by UN security council)
+			UN_focus_decolonization				"encourages" countries to decolonize
+			UN_focus_global_development			helps education in undeveloped countries
+			UN_focus_world_trade				trade and economy boosts
+			UN_focus_world_health				prevent disease events, can eradicate smallpox, anti-pollution
+			UN_focus_environmentalism			by some miracle if environmentalists somehow get into power without being corrupt, fight a losing battle against global warming and pollution
+	proxy wars: let rival GPs fund rebel movements?
+#Economy
+	the final solution to the artisan problem
+	White Collar Ofice:
+		Staff: Clerks and Capitalists
+		Build: cement, steel, electric gear
+		Maintenence: cement, electric gear, paper
+		electric gear + telephone + radio -> telecom
+		dye + glass + fuel + sulfur -> pharmamed
 #localizations
 #Migration rework
 #Assimilation rework
-#somehow let max fort, navy base, and infrastructure level be 7 in buildings.txt without causing the game to crash
-#synthetic factories, telecom and pharmamed clerk-staffed factories
+#max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
+
+
+v0.4.5
+Clean Air Act reduces militancy by 2 when passed, doesn't have constant militancy decrease any more.
+local_pollution_problem now decreases farm_rgo_eff instead of increasing consciousness
+adjust fluid_catalytic_cracking conditions
+fischer_tropsch_process synthetic oil production buffed from 0.05 to 0.1
+nylon and industrial_plastics_production no longer boost silk production
+industrial_plastics_production improve synthetic_rubber_factory production by 0.05
+removed canned_drinks invention
+synthetic oil factory output reduced (production_types.txt), so most oil actually comes out of the ground like in real life
+synthetic_rubber_factory (fuel -> rubber) added into buildings.txt and production_types.txt and pollution event mtth, activated by synthetic_rubber invention
+hydrodesulphurization_plant (oil -> sulphur) added into buildings.txt and production_types.txt and pollution event mtth, boosting fertilizer and small arms factories, activated by hydrodesulphurization invention
+Decolonization events made dynamic (99000 ~ 99072)
+SEA cultures don't get SEA decol and revolt events
+If you manage to state all your colonies you won't get any decol or revolt events
+Made Sphere unciv -> colony event (Scramble for Africa.txt, 95505) not fire if sphere_owner doesn't have ports
+
+#TODO: Africans can now to reform RGOs to cash crops (decisions/New Colonies Africa.txt)
 
 v0.4.4
 major readjustment and balancing of army inventions
