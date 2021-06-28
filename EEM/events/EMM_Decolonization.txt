@@ -1,20 +1,575 @@
 country_event = {
-
-    id = 99900
-    title = "League for the Independence of Vietnam"
-    desc = "Vietnamese nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    id = 99000
+    title = "Decolonization of Southeast Asia"
+    desc = "Should we decolonize Southeast Asia? Many citizens see the colonies as a burden and are complaining about the treatment of the native population. Moreover, local officials are warning that nationalist sentiment in the Southeast Asian colonies is getting harder and harder to suppress."
+    picture = "GFX_event_no_image"
 
     trigger = {
-        NOT = {
-            exists = DAI
+        mass_politics = 1
+        colonial_nation = yes
+        war = no
+        OR = {
+            is_possible_vassal = DAI
+            is_possible_vassal = INO
+            is_possible_vassal = MLY
+            is_possible_vassal = LXA
+            is_possible_vassal = CAM
+            is_possible_vassal = SIA
+            is_possible_vassal = BUR
         }
+        NOT = { has_country_flag = southeast_asia_decolonization_refused }
+        NOT = { has_country_flag = southeast_asia_decolonization_puppets }
+        NOT = { has_country_flag = southeast_asia_decolonization_full }
+        NOT = { is_culture_group = southeast_asian }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+
+        modifier = {
+            factor = 2
+            NOT = { invention = national_liberation }
+        }
+        modifier = {
+            factor = 2
+            NOT = { invention = anticolonialism }
+        }
+        modifier = {
+            factor = 0.8
+            average_consciousness = 4
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+    }
+
+    option = {
+        name = "The colonies are too valuable to let go!"
+        set_country_flag = southeast_asia_decolonization_refused
+
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 1.25
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                government = democracy
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "We should indirectly rule them as puppets."
+        set_country_flag = southeast_asia_decolonization_puppets
+		
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+            modifier = {
+                factor = 0.5
+                capital_scope = {
+                    OR = {
+                        continent = asia
+                        continent = australia_new_zealand 
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "It's time to let them go."
+        set_country_flag = southeast_asia_decolonization_full
+		
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+            modifier = {
+                factor = 0.25
+                capital_scope = {
+                    OR = {
+                        continent = asia
+                        continent = australia_new_zealand 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 99001
+    title = "Cancel Southeast Asian Decolonization"
+    desc = "Our proud nation has recently been on a misguided journey to withdraw from our colonies in Southeast Asia! Luckily, with the recent change in government, we can put a stop to this nonsense."
+    picture = "GFX_event_no_image"
+
+    trigger = {
+        colonial_nation = yes
+        OR = {
+            has_country_flag = southeast_asia_decolonization_puppets
+            has_country_flag = southeast_asia_decolonization_full
+        }
+        OR = {
+            is_possible_vassal = DAI
+            is_possible_vassal = INO
+            is_possible_vassal = MLY
+            is_possible_vassal = LXA
+            is_possible_vassal = CAM
+            is_possible_vassal = SIA
+            is_possible_vassal = BUR
+        }
+        OR = {
+            government = proletarian_dictatorship
+            government = bourgeois_dictatorship
+            government = fascist_dictatorship
+            government = presidential_dictatorship
+            government = absolute_monarchy
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 6
+    }
+
+    option = {
+        name = "We will not leave without a fight!"
+        any_pop = {
+            limit = {
+                is_primary_culture = no
+                is_accepted_culture = no
+                location = {
+                    OR = {
+                        is_core = DAI
+                        is_core = INO
+                        is_core = MLY
+                        is_core = LXA
+                        is_core = CAM
+                        is_core = SIA
+                        is_core = BUR
+                    }
+	            }
+            }
+            militancy = 3
+        }
+		
+        any_owned = {
+            limit = {
+                OR = {
+                    is_core = DAI
+                    is_core = INO
+                    is_core = MLY
+                    is_core = LXA
+                    is_core = CAM
+                    is_core = SIA
+                    is_core = BUR
+                }
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1825
+            }
+        }
+        set_country_flag = southeast_asia_decolonization_refused
+        clr_country_flag = southeast_asia_decolonization_puppets
+        clr_country_flag = southeast_asia_decolonization_full
+    }
+}
+
+country_event = {
+    id = 99002
+    title = "Restart Southeast Asian Decolonization"
+    desc = "We should decolonize! I mean come on, it's literally the current year."
+    picture = "GFX_event_no_image"
+
+    trigger = {
+        colonial_nation = yes
+        has_country_flag = southeast_asia_decolonization_refused
+
+        OR = {
+            is_possible_vassal = DAI
+            is_possible_vassal = INO
+            is_possible_vassal = MLY
+            is_possible_vassal = LXA
+            is_possible_vassal = CAM
+            is_possible_vassal = SIA
+            is_possible_vassal = BUR
+        }
+        NOT = {
+            OR = {
+                government = proletarian_dictatorship
+                government = bourgeois_dictatorship
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                government = absolute_monarchy
+            }
+        }
+        OR = {
+            war_policy = anti_military
+            war_policy = pacifism
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 240
+
+        modifier = {
+            factor = 2
+            NOT = { invention = national_liberation }
+        }
+        modifier = {
+            factor = 2
+            NOT = { invention = anticolonialism }
+        }
+        modifier = {
+            factor = 0.8
+            average_consciousness = 4
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+    }
+
+    option = {
+        name = "The colonies are too valuable to let go!"
+        #set_country_flag = southeast_asia_decolonization_refused
+
+        ai_chance = {
+            factor = 70
+            modifier = {
+                factor = 1.75
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 1.25
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 0.5
+                government = democracy
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 3
+            }
+            modifier = {
+                factor = 0.8
+                militancy = 5
+            }
+        }
+    }
+
+    option = {
+        name = "We should indirectly rule them as puppets."
+        clr_country_flag = southeast_asia_decolonization_refused
+        set_country_flag = southeast_asia_decolonization_puppets
+		
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+            modifier = {
+                factor = 0.5
+                capital_scope = {
+                    OR = {
+                        continent = asia
+                        continent = australia_new_zealand 
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "We had a good run, it's time to let them go."
+        clr_country_flag = southeast_asia_decolonization_refused
+        set_country_flag = southeast_asia_decolonization_full
+		
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
+            }
+            modifier = {
+                factor = 0.25
+                government = absolute_monarchy
+            }
+            modifier = {
+                factor = 1.5
+                government = democracy
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.75
+                war_policy = pro_military
+            }
+            modifier = {
+                factor = 1.25
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = pacifism
+            }
+            modifier = {
+                factor = 0.5
+                is_greater_power = yes
+            }
+            modifier = {
+                factor = 0.75
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 3
+            }
+            modifier = {
+                factor = 1.2
+                militancy = 5
+            }
+            modifier = {
+                factor = 0.25
+                capital_scope = {
+                    OR = {
+                        continent = asia
+                        continent = australia_new_zealand 
+                    }
+                }
+            }
+        }
+    }
+}
+
+########## DAI Vietnam ##########
+country_event = {
+    id = 99010
+    title = "League for the Independence of Vietnam"
+    desc = "Nationalist sentiment is growing in Vietnam!"
+    picture = "colonial_uprising"
+
+    trigger = {
         is_possible_vassal = DAI
         mass_politics = 1
         any_owned_province = {
             is_core = DAI
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
@@ -48,10 +603,18 @@ country_event = {
                 1369 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
                 has_pop_culture = vietnamese
@@ -66,53 +629,40 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99011
+    title = "Vietnam Puppet"
+    desc = "We promised to give Vietnam Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = DAI
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = LXA
+        }
+        modifier = {
+            factor = 0.5
+            exists = CAM
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = DAI
@@ -138,7 +688,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = DAI
@@ -155,62 +705,69 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99010
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99012
+    title = "Vietnam Independence"
+    desc = "We promised to give Vietnam independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = DAI
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = LXA
+        }
+        modifier = {
+            factor = 0.5
+            exists = CAM
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = DAI
@@ -227,7 +784,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         DAI = {
             any_pop = { militancy = -8 }
@@ -247,8 +804,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -258,94 +816,55 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99010
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
 }
 
-
+########## INO Indonesia ##########
 country_event = {
-
-    id = 99901
+    id = 99020
     title = "Indonesian National Awakening"
-    desc = "Indonesian nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    desc = "Nationalist sentiment is growing in Indonesia!"
+    picture = "colonial_uprising"
 
     trigger = {
-        NOT = {
-            exists = INO
-        }
         is_possible_vassal = INO
         mass_politics = 1
         any_owned_province = {
             is_core = INO
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
         months = 120
         modifier = {
             factor = 1.5
-            OR = {
-                any_pop = {
-                    has_pop_culture = javan
-                    is_accepted_culture = yes
-                }
-                any_pop = {
-                    has_pop_culture = malay
-                    is_accepted_culture = yes
-                }
-                any_pop = {
-                    has_pop_culture = moluccan
-                    is_accepted_culture = yes
-                }
-                any_pop = {
-                    has_pop_culture = melanesian
-                    is_accepted_culture = yes
-                }
+            any_pop = {
+                OR = { has_pop_culture = javan has_pop_culture = malay has_pop_culture = moluccan has_pop_culture = melanesian }
+                is_accepted_culture = yes
             }
         }
-
         modifier = {
             factor = 2
             NOT = { invention = national_liberation }
@@ -368,23 +887,25 @@ country_event = {
                 1413 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
-                OR = {
-                    has_pop_culture = javan
-                    has_pop_culture = malay
-                    has_pop_culture = moluccan
-                    has_pop_culture = melanesian 
-                }
+                OR = { has_pop_culture = javan has_pop_culture = malay has_pop_culture = moluccan has_pop_culture = melanesian }
                 location = { is_core = INO }
             }
             militancy = 3
         }
-
         any_owned = {
             limit = { is_core = INO }
             add_province_modifier = {
@@ -392,53 +913,40 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99021
+    title = "Indonesia Puppet"
+    desc = "We promised to give Indonesia Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = INO
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = MLY
+        }
+        modifier = {
+            factor = 0.5
+            exists = PHL
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = INO
@@ -464,7 +972,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = INO
@@ -481,62 +989,69 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99020
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99022
+    title = "Indonesia Independence"
+    desc = "We promised to give Indonesia independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = INO
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = MLY
+        }
+        modifier = {
+            factor = 0.5
+            exists = PHL
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = INO
@@ -549,11 +1064,11 @@ country_event = {
         }
         any_pop = {
             limit = {
-                NOT = { has_pop_culture = javan }
+                NOT = { OR = { has_pop_culture = javan has_pop_culture = malay has_pop_culture = moluccan has_pop_culture = melanesian } }
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         INO = {
             any_pop = { militancy = -8 }
@@ -573,8 +1088,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -584,67 +1100,44 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99020
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
 }
 
+########## MLY Malay ##########
 country_event = {
-
-    id = 99902
+    id = 99030
     title = "Kebangsaan Melayu Malaya"
-    desc = "Malaysian nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    desc = "Nationalist sentiment is growing in Malaysia!"
+    picture = "colonial_uprising"
 
     trigger = {
-        NOT = {
-            exists = MLY 
-        }
-        is_possible_vassal = MLY 
+        is_possible_vassal = MLY
         mass_politics = 1
         any_owned_province = {
-            is_core = MLY 
+            is_core = MLY
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
@@ -656,7 +1149,6 @@ country_event = {
                 is_accepted_culture = yes
             }
         }
-
         modifier = {
             factor = 2
             NOT = { invention = national_liberation }
@@ -679,10 +1171,18 @@ country_event = {
                 1387 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
                 has_pop_culture = malay
@@ -690,7 +1190,6 @@ country_event = {
             }
             militancy = 3
         }
-
         any_owned = {
             limit = { is_core = MLY }
             add_province_modifier = {
@@ -698,53 +1197,40 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99031
+    title = "Malaysia Puppet"
+    desc = "We promised to give Malaysia Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = MLY
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = INO
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = MLY
@@ -770,7 +1256,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = MLY
@@ -787,62 +1273,69 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99030
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99032
+    title = "Malaysia Independence"
+    desc = "We promised to give Malaysia independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = MLY
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = INO
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = MLY
@@ -855,11 +1348,11 @@ country_event = {
         }
         any_pop = {
             limit = {
-                NOT = { has_pop_culture = javan }
+                NOT = { has_pop_culture = malay }
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         MLY = {
             any_pop = { militancy = -8 }
@@ -879,8 +1372,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -890,68 +1384,44 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99030
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
 }
 
-
+########## LXA Laos ##########
 country_event = {
-
-    id = 99903
+    id = 99040
     title = "Lao Issara"
-    desc = "Lao nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    desc = "Nationalist sentiment is growing in Laos!"
+    picture = "colonial_uprising"
 
     trigger = {
-        NOT = {
-            exists = LXA
-        }
         is_possible_vassal = LXA
         mass_politics = 1
         any_owned_province = {
             is_core = LXA
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
@@ -985,10 +1455,18 @@ country_event = {
                 1357 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
                 has_pop_culture = lao
@@ -1003,53 +1481,44 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99041
+    title = "Laos Puppet"
+    desc = "We promised to give Laos Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = LXA
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = DAI
+        }
+        modifier = {
+            factor = 0.5
+            exists = CAM
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = LXA
@@ -1075,7 +1544,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = LXA
@@ -1092,62 +1561,73 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99040
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99042
+    title = "Laos Independence"
+    desc = "We promised to give Laos independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = LXA
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = DAI
+        }
+        modifier = {
+            factor = 0.5
+            exists = CAM
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = LXA
@@ -1164,7 +1644,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         LXA = {
             any_pop = { militancy = -8 }
@@ -1184,8 +1664,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -1195,68 +1676,45 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99040
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
 }
 
 
+########## CAM Cambodia ##########
 country_event = {
-
-    id = 99904
+    id = 99050
     title = "Khmer Issarak"
-    desc = "Cambodian nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    desc = "Nationalist sentiment is growing in Cambodia!"
+    picture = "colonial_uprising"
 
     trigger = {
-        NOT = {
-            exists = CAM
-        }
         is_possible_vassal = CAM
         mass_politics = 1
         any_owned_province = {
             is_core = CAM
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
@@ -1264,7 +1722,7 @@ country_event = {
         modifier = {
             factor = 1.5
             any_pop = {
-                has_pop_culture = khmer
+                has_pop_culture = malay
                 is_accepted_culture = yes
             }
         }
@@ -1290,10 +1748,18 @@ country_event = {
                 1364 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
                 has_pop_culture = khmer
@@ -1308,53 +1774,40 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99051
+    title = "Cambodia Puppet"
+    desc = "We promised to give Cambodia Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = CAM
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = DAI
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = CAM
@@ -1380,7 +1833,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = CAM
@@ -1397,62 +1850,69 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99050
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99052
+    title = "Cambodia Independence"
+    desc = "We promised to give Cambodia independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = CAM
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = DAI
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = CAM
@@ -1469,7 +1929,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         CAM = {
             any_pop = { militancy = -8 }
@@ -1489,8 +1949,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -1500,68 +1961,44 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99050
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
 }
 
-
+########## SIA Siam ##########
 country_event = {
-
-    id = 99905
+    id = 99060
     title = "Thai People's Party"
-    desc = "Thai nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    desc = "Nationalist sentiment is growing in Siam!"
+    picture = "colonial_uprising"
 
     trigger = {
-        NOT = {
-            exists = SIA
-        }
         is_possible_vassal = SIA
         mass_politics = 1
         any_owned_province = {
             is_core = SIA
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
@@ -1595,10 +2032,18 @@ country_event = {
                 1346 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
                 has_pop_culture = thai
@@ -1613,53 +2058,40 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99061
+    title = "Siam Puppet"
+    desc = "We promised to give Siam Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = SIA
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = MLY
+        }
+        modifier = {
+            factor = 0.5
+            exists = BUR
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = SIA
@@ -1685,7 +2117,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = SIA
@@ -1702,62 +2134,69 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99060
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99062
+    title = "Siam Independence"
+    desc = "We promised to give Siam independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = SIA
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = BUR
+        }
+        modifier = {
+            factor = 0.5
+            exists = MLY
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = SIA
@@ -1774,7 +2213,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         SIA = {
             any_pop = { militancy = -8 }
@@ -1794,8 +2233,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -1805,68 +2245,44 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99060
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
 }
 
-
+########## BUR Burma ##########
 country_event = {
-
-    id = 99900
+    id = 99070
     title = "We Burmans Association"
-    desc = "Burmese nationalists are requesting independence! How should we respond?"
-    picture = "Cubanrebels"
+    desc = "Nationalist sentiment is growing in Burma!"
+    picture = "colonial_uprising"
 
     trigger = {
-        NOT = {
-            exists = BUR
-        }
         is_possible_vassal = BUR
         mass_politics = 1
         any_owned_province = {
             is_core = BUR
             average_consciousness = 5
         }
+        NOT = { is_culture_group = southeast_asian }
+        colonial_nation = yes
     }
 
     mean_time_to_happen = {
@@ -1900,10 +2316,18 @@ country_event = {
                 1334 = { average_militancy = 2 }
             }
         }
+        modifier = {
+            factor = 0.5
+            has_country_flag = southeast_asia_decolonization_refused
+        }
+        modifier = {
+            factor = 2
+            has_country_flag = southeast_asia_decolonization_full
+        }
     }
 
     option = {
-        name = "No way!"
+        name = "Pesky nationalists"
         any_pop = {
             limit = {
                 has_pop_culture = burmese
@@ -1918,53 +2342,40 @@ country_event = {
                 duration = 1825
             }
         }
-        ai_chance = {
-            factor = 70
-            modifier = {
-                factor = 1.75
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 1.25
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 0.5
-                government = democracy
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 3
-            }
-            modifier = {
-                factor = 0.8
-                militancy = 5
-            }
+    }
+}
+
+country_event = {
+    id = 99071
+    title = "Burma Puppet"
+    desc = "We promised to give Burma Home Rule, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = BUR
+        has_country_flag = southeast_asia_decolonization_puppets
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = HND
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Perhaps home rule would make them happy?"
+        name = "They'd better thank us for this..."
         badboy = -3
         prestige = -10
         release_vassal = BUR
@@ -1990,7 +2401,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 2
+            consciousness = 1
         }
         relation = {
             who = BUR
@@ -2007,62 +2418,69 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 20
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
-                    government = proletarian_dictatorship
                     government = bourgeois_dictatorship
                     government = fascist_dictatorship
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for Home Rule!"
+        country_event = 99070
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
+                factor = 5
+                OR = {
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
-            }
+        }
+    }
+}
+
+country_event = {
+    id = 99072
+    title = "Burma Independence"
+    desc = "We promised to give Burma independence, and it is time to fufill that promise."
+    picture = "asian_administration"
+
+    trigger = {
+        is_possible_vassal = BUR
+        has_country_flag = southeast_asia_decolonization_full
+        war = no
+        colonial_nation = yes
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.5
+            has_global_flag = UN_focus_decolonization
+        }
+        modifier = {
+            factor = 0.5
+            exists = HND
+        }
+        modifier = {
+            factor = 0.5
+            exists = SIA
         }
     }
 
     option = {
-        name = "Give them what they want."
+        name = "They'd better thank us for this..."
         badboy = -5
         prestige = -25
         release = BUR
@@ -2079,7 +2497,7 @@ country_event = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
-            militancy = 4
+            consciousness = 2
         }
         BUR = {
             any_pop = { militancy = -8 }
@@ -2099,8 +2517,9 @@ country_event = {
                 }
             }
         }
+
         ai_chance = {
-            factor = 10
+            factor = 80
             modifier = {
                 factor = 0
                 OR = {
@@ -2110,45 +2529,23 @@ country_event = {
                     government = presidential_dictatorship
                 }
             }
+        }
+    }
+	
+    option = {
+        name = "They are not ready for independence!"
+        country_event = 99070
+
+        ai_chance = {
+            factor = 20
             modifier = {
-                factor = 0.25
-                government = absolute_monarchy
-            }
-            modifier = {
-                factor = 1.5
-                government = democracy
-            }
-            modifier = {
-                factor = 0.5
-                war_policy = jingoism
-            }
-            modifier = {
-                factor = 0.75
-                war_policy = pro_military
-            }
-            modifier = {
-                factor = 1.25
-                war_policy = anti_military
-            }
-            modifier = {
-                factor = 1.5
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0.5
-                is_greater_power = yes
-            }
-            modifier = {
-                factor = 0.75
-                is_secondary_power = yes
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 3
-            }
-            modifier = {
-                factor = 1.2
-                militancy = 5
+                factor = 5
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = fascist_dictatorship
+                    government = presidential_dictatorship
+                }
             }
         }
     }
