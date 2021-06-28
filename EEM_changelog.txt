@@ -142,7 +142,7 @@ industry = 31
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
 
 v0.4.5a
-Fix Decolonization event id bug (999000 ~ 999072)
+Fix Decolonization event id and localization bug (999000 ~ 999072)
 
 v0.4.5
 Clean Air Act reduces militancy by 2 when passed, doesn't have constant militancy decrease any more.
