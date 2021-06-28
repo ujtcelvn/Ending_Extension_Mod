@@ -157,8 +157,7 @@ Decolonization events made dynamic (99000 ~ 99072)
 SEA cultures don't get SEA decol and revolt events
 If you manage to state all your colonies you won't get any decol or revolt events
 Made Sphere unciv -> colony event (Scramble for Africa.txt, 95505) not fire if sphere_owner doesn't have ports
-
-#TODO: Africans can now to reform RGOs to cash crops (decisions/New Colonies Africa.txt)
+Africans can now to reform RGOs to cash crops (decisions/New Colonies Africa.txt)
 
 v0.4.4
 major readjustment and balancing of army inventions
