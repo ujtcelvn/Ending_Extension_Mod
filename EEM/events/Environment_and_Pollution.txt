@@ -70,6 +70,15 @@ province_event = {
 				}
 			}
         }
+        modifier = {
+            factor = 0.9
+			state_scope = {
+				OR = {
+					has_building = synthetic_rubber_factory
+					has_building = hydrodesulphurization_plant
+				}
+			}
+        }
 		
         modifier = {
             factor = 1.2
@@ -167,11 +176,15 @@ country_event = {
         name = "This is necessary to improve air quality."
         add_country_modifier = { name = clean_air_act duration = -1 }
         any_pop = {
+            militancy = -2
+        }
+
+        any_pop = {
             limit = {
                 type = capitalists
             }
-            consciousness = 3
-            militancy = 1
+            consciousness = 2
+            militancy = 2
         }
 
         ai_chance = {
