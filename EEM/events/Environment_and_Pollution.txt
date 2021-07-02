@@ -1,6 +1,6 @@
 province_event = {
     id = 12300
-    title = "Pollution!"
+    title = "Pollution in $PROVINCENAME$!"
     desc = "Pollution, pollution, we've got smog and sewage and mud,"
 
     trigger = {
