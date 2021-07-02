@@ -1745,6 +1745,11 @@ advanced_naval_design = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        # We're late with this!
+        modifier = {
+            factor = 1.25
+            year = 1920
+        }
     }
 }
 modern_naval_design = {
@@ -1834,6 +1839,20 @@ modern_naval_design = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+		#Our ships need better fire control!
+        modifier = {
+            factor = 1.25
+            invention = modern_battleships
+        }
+        modifier = {
+            factor = 1.25
+            invention = modern_cruisers
+        }
+        # We're late with this!
+        modifier = {
+            factor = 1.25
+            year = 1930
+        }
     }
 }
 
@@ -1918,11 +1937,21 @@ naval_engineering_7 = {
         }
         modifier = {
             factor = 0
-            NOT = { oil_driven_ships = 1 }
+            NOT = { ship_construction_7 = 1 }
         }
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        #Our carriers need better planes!
+        modifier = {
+            factor = 4
+            invention = purpose_built_air_carriers
+        }
+        # We're late with this!
+        modifier = {
+            factor = 1.25
+            year = 1945
         }
     }
 }
