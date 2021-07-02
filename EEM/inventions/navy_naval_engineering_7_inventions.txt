@@ -221,6 +221,93 @@ naval_plastic_armor = {
     }
 }
 
+naval_fighters = {
+    limit = { naval_engineering_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = late_interwar_fighters
+        }
+        modifier = {
+            factor = 2
+            invention = t_air_superiority
+        }
+	    modifier = {
+            factor = 2
+            invention = flying_circus_doctrine
+        }
+        modifier = {
+            factor = -6
+            NOT = {
+                invention = purpose_built_air_carriers
+            }
+        }
+    }
+    effect = {
+        aircraft_carrier = {
+            hull = 2
+        }
+    }
+}
+
+naval_bombers = {
+    limit = { naval_engineering_7 = 1 }
+    chance = {
+        base = 0
+	    modifier = {
+            factor = 2
+            invention = early_interwar_bombers
+        }
+        modifier = {
+            factor = 2
+            invention = late_interwar_bombers
+        }
+        modifier = {
+            factor = 2
+            invention = battlefield_destruction_doctrine
+        }
+        modifier = {
+            factor = -6
+            NOT = {
+                invention = purpose_built_air_carriers
+            }
+        }
+    }
+    effect = {
+        aircraft_carrier = {
+            gun_power = 5
+            torpedo_attack = 2
+        }
+    }
+}
+
+naval_torpedo_bombers = {
+    limit = { naval_engineering_7 = 1 }
+    chance = {
+        base = 2
+		modifier = {
+            factor = 2
+            invention = late_interwar_bombers
+        }
+        modifier = {
+            factor = 2
+            invention = gun_and_bomb_sights
+        }
+        modifier = {
+            factor = -6
+            NOT = {
+                invention = naval_bombers
+            }
+        }
+    }
+    effect = {
+        aircraft_carrier = {
+            torpedo_attack = 5
+        }
+    }
+}
+
 acoustic_homing_torpedo = {
     limit = { naval_engineering_7 = 1 }
     chance = {
