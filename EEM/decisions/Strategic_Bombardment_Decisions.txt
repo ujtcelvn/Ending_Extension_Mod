@@ -1,0 +1,75 @@
+political_decisions = {
+
+	start_strategic_bombardment = {
+		alert = yes
+		
+		picture = start_strat_bomb
+		
+		potential = {
+			war = yes
+			NOT = { has_country_modifier = strat_bombers }
+			money = 1000000
+			military_score = 500
+			is_disarmed = no
+			NOT = { war_policy = pacifism }
+			
+			#Must have allies near the war country
+			war_countries = {
+				OR = {
+					neighbour = THIS
+					any_neighbor_country = {
+						OR = {
+							in_sphere = THIS 
+							alliance_with = THIS
+							military_access = THIS
+						}
+					}
+				}
+			}
+			invention = strategic_destruction_doctrine
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			prestige = -25
+			add_country_modifier = { name = strat_bombers duration = -1 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	end_strategic_bombardment = {
+		alert = yes
+		
+		picture = end_strat_bomb
+		
+		potential = {
+			has_country_modifier = strat_bombers
+			OR = {
+				war_policy = pacifism 
+				is_vassal = yes 
+				NOT = { money = 500000 }
+				NOT = { military_score = 250 } 
+				war = no 
+				is_disarmed = yes
+				ai = no
+			}
+		}
+		
+		allow = {
+		}
+
+		effect = {
+			remove_country_modifier = strat_bombers
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
