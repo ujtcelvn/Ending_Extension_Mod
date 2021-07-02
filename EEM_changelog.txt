@@ -157,7 +157,7 @@ numerical_control invention boosts machine parts production, reducing the machin
 removed tape_recorder invention, moved its telephone bonus to television and television's radio bonus to experimental_radar
 Strategic bombing decisions and events and modifier and localizations
 added events/end_strategic_bombardment.tga and decisions/start_strat_bomb.dds and end_strat_bomb.dds
-added 00_EEM_decisions.csv
+added 00_EEM_decisions.csv, 00_EEM_modifiers.csv, 00_EEM_units.csv, 00_EEM_factories.csv
 renamed 00_tech_mod.csv to 00_EEM_techs.csv
 
 v0.4.5a
