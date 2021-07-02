@@ -11,9 +11,9 @@ Tech Unlock Dates		number of inventions (125 + 5 = 130)
 
 army = 31
 
-1936 naval doctrine			 7
+1936 naval doctrine			 4
 1930 ship construction			 5	1919 oil_driven_ships	5
-1930 naval engineering			10
+1930 naval engineering			13
 1936 naval science			 3
 1936 naval leadership			 3
 
@@ -58,7 +58,7 @@ industry = 31
 	Solving the liquidity crisis
 		6660000 Tax Refund
 	economy tweaks
-		Oil RGO spread
+		Oil RGO spread to 1950
 		29905 Intensive Agriculture
 		29906 Modern Transportation
 		synthetic rubber factory (fuel -> rubber)
@@ -92,10 +92,14 @@ industry = 31
 		999070 BUR Burma
 		    71 puppet
 		    72 full
-
+	Strategic Bombing
+		start_strategic_bombardment
+		end_strategic_bombardment
+		23000 province has been bombed
+		23100 cancel bombing: air force too weak
+		23101 cancel bombing: war is over
 
 #TODO
-#strategic bombing
 #the Bomb
 #other events and decisions
 	the industrial revolution and its consequences have been a disaster to the human race
@@ -138,12 +142,16 @@ industry = 31
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
 
+
+
 v0.4.6
 adjusted pollution event localization
 Los Angeles no longer flips to oil
 optimized tax refund event, adjust tax refund tiers
 Made CVs and Motorized inf cheaper and increased their weighted_value so the AI builds them more
 buffed CVs and its inventions
+Modern Transportation event also needs steamer_transports
+increase AI naval engineering tech research priority
 increased mot maneuver from 3 to 4
 numerical_control invention boosts machine parts production, reducing the machine parts shortage
 removed tape_recorder invention, moved its telephone bonus to television and television's radio bonus to experimental_radar
