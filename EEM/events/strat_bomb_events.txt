@@ -1,0 +1,208 @@
+#state bombardment event
+province_event = {
+	id = 23000
+	title = "Bombing of $PROVINCENAME$"
+	desc = "$PROVINCENAME$ has been bombed!"
+
+	trigger = {
+
+		owner = {
+			war = yes
+			war_countries = { has_country_modifier = strat_bombers } 	
+		}
+
+		OR = { 
+			total_pops = 250000 
+			has_building = naval_base
+			is_capital = yes
+			is_state_capital = yes
+		}
+
+		is_colonial = no
+		NOT = { has_province_modifier = bomb_damage }
+		
+		controlled_by = THIS
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+
+		modifier = {
+			factor = 1.25
+			owner = { invention = late_interwar_fighters }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { invention = improved_anti_aircraft_artillery }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { invention = proximity_fuze }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { invention = air_to_air_radar }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { invention = early_warning_radar }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { invention = civil_defense }
+		}
+		modifier = {
+			factor = 1.25
+			owner = { invention = rocket_powered_aircraft }
+		}
+
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = late_interwar_fighters }
+		}
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = late_interwar_bombers }
+		}
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = saturation_bombing_doctrine }
+		}
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = operations_research }
+		}
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = gun_and_bomb_sights }
+		}
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = strategic_rocket }
+		}
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers invention = turbojet }
+		}
+
+		modifier = {
+			factor = 0.8
+			war_countries = { has_country_modifier = strat_bombers military_score = 1000 }
+			NOT = { owner = { military_score = 200 } }
+		}
+
+		modifier = {
+			factor = 0.8
+			NOT = { owner = { military_score = 100 } }
+		}
+		
+		modifier = {
+			factor = 2
+			has_building = fort
+		}
+		
+		modifier = {
+			factor = 2
+			country_units_in_province = THIS
+		}
+
+	}
+
+	option = {
+		name = "Oh no!"
+
+		owner = { war_exhaustion = 0.5 }
+        add_province_modifier = { name = bomb_damage duration = 365 }
+		any_pop = { reduce_pop = 0.99 }
+				
+		infrastructure = -1
+		random = {
+			chance = 25
+			fort = -1
+		}
+		#random = {
+		#	chance = 25
+		#	naval_base = -1 #this deletes all naval base levels from the province for some reason. Yes, a level 6 naval base got reduced to level 0
+		#}
+
+        any_neighbor_province = {
+            limit = {
+				OR = { 
+					total_pops = 250000 
+					has_building = naval_base
+					is_capital = yes
+					is_state_capital = yes
+				}
+				is_colonial = no
+				owned_by = THIS
+				controlled_by = THIS
+				NOT = { has_province_modifier = bomb_damage }
+            }
+				
+            add_province_modifier = { name = bomb_damage duration = 365 }
+			any_pop = { reduce_pop = 0.99 }
+			
+			infrastructure = -1
+			random = {
+				chance = 25
+				fort = -1
+			}
+			#random = {
+			#	chance = 25
+			#	naval_base = -1
+			#}
+        }
+
+	}
+
+}
+
+
+
+
+
+### end bombing ###
+
+country_event = {
+	id = 23100
+	title = "End Strategic Bombardment"
+	desc = "Our air force is too weak to maintain our strategic bombing missions!"
+	picture = "end_strategic_bombardment"
+
+	trigger = {
+		NOT = { money = 500000 }
+		NOT = { military_score = 250 }
+		is_disarmed = yes
+		has_country_modifier = strat_bombers
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "End the bomber raids!"
+		remove_country_modifier = strat_bombers
+	}
+}
+
+country_event = {
+	id = 23101
+	title = "End Strategic Bombardment"
+	desc = "The war is over, it's time to disband our bombers."
+	picture = "end_strategic_bombardment"
+
+	trigger = {
+		war = no
+		has_country_modifier = strat_bombers
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "End the bomber raids!"
+		remove_country_modifier = strat_bombers
+	}
+}
