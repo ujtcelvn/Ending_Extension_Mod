@@ -11,9 +11,9 @@ Tech Unlock Dates		number of inventions (125 + 5 = 130)
 
 army = 31
 
-1936 naval doctrine			 4
-1930 ship construction			 4	1919 oil_driven_ships	5
-1930 naval engineering			14
+1936 naval doctrine			 7
+1930 ship construction			 5	1919 oil_driven_ships	5
+1930 naval engineering			10
 1936 naval science			 3
 1936 naval leadership			 3
 
@@ -102,9 +102,6 @@ industry = 31
 		Preservationist Movement
 		National parks
 		Environmental protection Agency 1970
-	Colonization
-		stop the dahomey - outer hausaland noodle?
-		stop the morroco clusterfuck?
 	decolonization
 		make revolt events spread from country to country instead of being independent from each other
 		Colony revolution
@@ -140,6 +137,20 @@ industry = 31
 #Migration rework
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
+
+v0.4.6
+adjusted pollution event localization
+Los Angeles no longer flips to oil
+optimized tax refund event, adjust tax refund tiers
+Made CVs and Motorized inf cheaper and increased their weighted_value so the AI builds them more
+buffed CVs and its inventions
+increased mot maneuver from 3 to 4
+numerical_control invention boosts machine parts production, reducing the machine parts shortage
+removed tape_recorder invention, moved its telephone bonus to television and television's radio bonus to experimental_radar
+Strategic bombing decisions and events and modifier and localizations
+added events/end_strategic_bombardment.tga and decisions/start_strat_bomb.dds and end_strat_bomb.dds
+added 00_EEM_decisions.csv
+renamed 00_tech_mod.csv to 00_EEM_techs.csv
 
 v0.4.5a
 Fix Decolonization event id and localization bug (999000 ~ 999072)
