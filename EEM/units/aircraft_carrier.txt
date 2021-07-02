@@ -19,29 +19,29 @@ aircraft_carrier = {
     max_strength = 100
     default_organisation = 30
     maximum_speed = 21
-    weighted_value = 400.0
+    weighted_value = 500.0		#400
 
 
     #Building Costs
     build_time = 480
     build_cost = {
-        steamer_convoy = 125    
-        artillery = 20            
+        steamer_convoy = 100 	#125    
+        artillery = 20          
         canned_food = 60        
         telephones = 20           
         regular_clothes = 60    
         fuel = 100               
-        radio = 40                
-        aeroplanes = 20
+        radio = 20 				#40
+        aeroplanes = 10			#20
     }
 
     min_port_level = 6
     limit_per_port = 1
-    supply_consumption_score = 120
+    supply_consumption_score = 80 #120
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 1.2
+        steamer_convoy = 1.0	#1.2
         artillery = 0.1
         canned_food = 1
         telephones = 0.01
@@ -50,12 +50,12 @@ aircraft_carrier = {
         regular_clothes = 0.5
         tobacco = 2
         radio = 0.02
-        aeroplanes = 0.2
+        aeroplanes = 0.2		#0.1
     }
 
     #Naval Abilities
     hull = 20
-    gun_power = 4
+    gun_power = 14 #4 + 11 = 15
     fire_range = 2
     evasion = 0
     torpedo_attack = 0
