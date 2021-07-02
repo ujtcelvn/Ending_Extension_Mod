@@ -13,7 +13,7 @@ seaplane_tenders = {
     }
     effect = {
         aircraft_carrier = {
-            gun_power = 1
+            gun_power = 2
         }
     }
 }
@@ -33,7 +33,7 @@ experimental_air_carriers = {
     }
     effect = {
         aircraft_carrier = {
-            gun_power = 1
+            gun_power = 2
             hull = 1
         }
     }
@@ -55,6 +55,7 @@ converted_hulk_air_carriers = {
     effect = {
         aircraft_carrier = {
             hull = 2
+            gun_power = 1
         }
     }
 }
@@ -110,6 +111,7 @@ light_air_carriers = {
     effect = {
         aircraft_carrier = {
             maximum_speed = 2
+            gun_power = 1
         }
     }
 }
@@ -139,6 +141,7 @@ fleet_air_carriers = {
         aircraft_carrier = {
             maximum_speed = 2
             hull = 2
+			gun_power = 2
         }
     }
 }
@@ -195,6 +198,7 @@ large_air_carriers = {
             maximum_speed = 1
             hull = 2
             torpedo_attack = 2
+			gun_power = 2
         }
     }
 }
