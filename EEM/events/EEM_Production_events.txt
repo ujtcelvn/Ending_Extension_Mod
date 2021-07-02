@@ -675,6 +675,7 @@ province_event = {
         owner = {
             invention = airliner 
             invention = fordism
+			invention = steamer_transports
             tech_infrastructure_7 = 1
         }
         NOT = {
