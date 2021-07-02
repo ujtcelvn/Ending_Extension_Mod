@@ -43,21 +43,46 @@ oscilloscope = {
 }
 
 #The first practical tape recorder from AEG was the Magnetophon K1, demonstrated in Germany in 1935.
-modern_tape_record = {
+#modern_tape_record = {
+#    limit = { tech_power_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = national_radio_networks
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = stainless_steel
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { telephones = 0.01 }
+#    }
+#}
+
+#The history of numerical control (NC) began when the automation of machine tools first incorporated concepts of abstractly programmable logic, and it continues today with the ongoing evolution of computer numerical control (CNC) technology.
+#The first NC machines were built in the 1940s and 1950s, based on existing tools that were modified with motors that moved the controls to follow points fed into the system on punched tape
+#Arma's first automated lathe was made in 1948, and announced in 1950
+numerical_control = {
     limit = { tech_power_7 = 1 }
     chance = {
         base = 2
         modifier = {
             factor = 2
-            invention = national_radio_networks
+            invention = computerized_decryption
+        }
+        modifier = {
+            factor = -6
+            NOT = { invention = general_computer_programming }
         }
         modifier = {
             factor = 2
-            invention = stainless_steel
+            tech_organization_7 = 1
         }
     }
     effect = {
-        factory_goods_output = { telephones = 0.01 }
+        factory_goods_output = { machine_parts = 0.05 }
     }
 }
 
@@ -81,7 +106,7 @@ television = {
         }
     }
     effect = {
-        factory_goods_output = { radio = 0.01 }
+        factory_goods_output = { telephones = 0.01 }
     }
 }
 
@@ -106,7 +131,7 @@ experimental_radar = {
         }
     }
     effect = {
-        factory_goods_output = { radio = 0.01 }
+        factory_goods_output = { radio = 0.02 }
     }
 }
 
