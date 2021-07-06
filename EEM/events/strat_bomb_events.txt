@@ -1,8 +1,8 @@
 #state bombardment event
 province_event = {
 	id = 23000
-	title = "Bombing of $PROVINCENAME$"
-	desc = "$PROVINCENAME$ has been bombed!"
+	title = "Bombing of $STATENAME$"
+	desc = "$STATENAME$ has been bombed!"
 
 	trigger = {
 
@@ -44,11 +44,11 @@ province_event = {
 			owner = { invention = air_to_air_radar }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 2
 			owner = { invention = early_warning_radar }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 2
 			owner = { invention = civil_defense }
 		}
 		modifier = {
@@ -58,36 +58,36 @@ province_event = {
 
 		modifier = {
 			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = late_interwar_fighters }
+			war_countries = { invention = late_interwar_fighters }
 		}
 		modifier = {
 			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = late_interwar_bombers }
+			war_countries = { invention = late_interwar_bombers }
+		}
+		modifier = {
+			factor = 0.5
+			war_countries = { invention = saturation_bombing_doctrine }
+		}
+		modifier = {
+			factor = 0.5
+			war_countries = { invention = operations_research }
 		}
 		modifier = {
 			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = saturation_bombing_doctrine }
+			war_countries = { invention = gun_and_bomb_sights }
 		}
 		modifier = {
 			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = operations_research }
+			war_countries = { invention = strategic_rocket }
 		}
 		modifier = {
 			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = gun_and_bomb_sights }
-		}
-		modifier = {
-			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = strategic_rocket }
-		}
-		modifier = {
-			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers invention = turbojet }
+			war_countries = { invention = turbojet }
 		}
 
 		modifier = {
 			factor = 0.8
-			war_countries = { has_country_modifier = strat_bombers military_score = 1000 }
+			war_countries = { military_score = 1000 }
 			NOT = { owner = { military_score = 200 } }
 		}
 
@@ -96,6 +96,61 @@ province_event = {
 			NOT = { owner = { military_score = 100 } }
 		}
 		
+		modifier = {
+			factor = 1.25
+			NOT = { war_countries = { military_score = 500 } }
+			owner = { military_score = 500 }
+		}
+		
+		modifier = {
+			factor = 1.25
+			NOT = { war_countries = { military_score = 500 } }
+			owner = { military_score = 1000 }
+		}
+
+		modifier = {
+			factor = 1.25
+			NOT = { war_countries = { military_score = 1000 } }
+			owner = { military_score = 2000 }
+		}
+
+
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { north_america } } }
+			continent = north_america
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { south_america } } }
+			continent = south_america
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { europe } } }
+			continent = europe
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { africa } } }
+			continent = africa
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { asia } } }
+			continent = asia
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { oceania } } }
+			continent = oceania
+		}
+		modifier = {
+			factor = 2
+			NOT = { war_countries = { capital_scope = { australia_new_zealand } } }
+			continent = australia_new_zealand
+		}
+
 		modifier = {
 			factor = 2
 			has_building = fort
