@@ -1,47 +1,47 @@
-Tech Unlock Dates		number of inventions (125 + 5 = 130)
+Tech Unlock Dates		number of inventions (5 + 5 + 120 = 130)
 1926 5 
 1930 10
 1936 10
 
-1936 army doctrine			 6
-1936 light armament			 3
-1936 heavy armament			 8
-1936 military science			 8
-1936 army leadership			 6
+1936 army doctrine					 6
+1936 light armament					 3
+1936 heavy armament					 7
+1936 military science				 8
+1936 army leadership				 6
 
-army = 31
+army = 30
 
-1936 naval doctrine			 4
-1930 ship construction			 5	1919 oil_driven_ships	5
-1930 naval engineering			13
-1936 naval science			 3
-1936 naval leadership			 3
+1936 naval doctrine					 4
+1930 ship construction				 5		1919 oil_driven_ships	5
+1930 naval engineering				11
+1936 naval science					 3
+1936 naval leadership				 3
 
-navy = 28 + 5
+navy = 26 + 5
 
-1930 aesthetics				10
-1930 philosphy 				 4
-1930 social thought			 1
-1936 political thought			 3
-1930 psychology				 1
+1930 aesthetics						10
+1930 philosphy						 4
+1930 social thought					 1
+1936 political thought				 2
+1930 psychology						 1
 
-culture = 19
+culture = 18
 
-1926 financial institutions		 1
-1926 monetary system			 2
+1926 financial institutions			 1
+1926 monetary system				 2
 1926 economic thought and critique	 5
-1926 market functionality		 4
-1926 organization			 4
+1926 market functionality			 4
+1926 organization					 4
 
 commerce = 16
 
-1930 power				10 (comp sci = 8) (industry = 2)
-1930 mechanization			 4
-1930 metallurgy				 6 (mining = 3) (industry = 3)
-1930 infrastructure			 0
-1936 chemistry and electricity		11 (nuke = 1) (medicine = 3) (industry = 7)
+1930 power							10
+1930 mechanization					 3
+1930 metallurgy						 6		1900 electric_furnace	2
+1930 infrastructure					 0
+1936 chemistry and electricity		11		1870 organic_chemistry	1			1880 electricity 2
 
-industry = 31
+industry = 30 + 5
 
 #Feature list
 >v0.1 
@@ -98,6 +98,12 @@ industry = 31
 		23000 province has been bombed
 		23100 cancel bombing: air force too weak
 		23101 cancel bombing: war is over
+	China
+		165000 Huang He flood 1898
+		165001 Yangtze flood 1931
+		166000 Nanking Massacre Japan
+		166001 Nanking Massacre China
+		blow_yellow_river_dikes
 
 #TODO
 #the Bomb
@@ -142,7 +148,21 @@ industry = 31
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
 
-
+v0.4.7
+harder to strategic bomb if on different continents
+adjust strat bomb invention mtth modifiers
+strat bomb event shows state name instead of province name
+basic_oxygen_steelmaking steel production increased from 0.02 to 0.05
+removed stamped_small_arms and finest_hour
+merged armored_personnel_carrier into assault_gun
+merged naval_fighters into dual_purpose_guns
+merged 18_inch_main_armament into blind_fire_radar_fire_control
+added lubrication_oil, ball_screw, zinc_carbon_battery, arc_welding, and haber_process to help relieve midgame goods shortages
+added 2 more Chinese floods 165000 and 165001
+added blow_yellow_river_dikes decision
+chinese_floods also increase movement_cost by 1
+added Nanking Massacre 166000 and reaction 166001
+increase AI_ARMY_TAXBASE_FRACTION and AI_NAVY_TAXBASE_FRACTION from 0.1 to 0.15
 
 v0.4.6
 adjusted pollution event localization
