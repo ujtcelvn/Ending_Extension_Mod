@@ -1,0 +1,229 @@
+country_event = {
+    id = 165000
+    title = "The Yangtze River bursts its banks yet again!"
+    desc = "The enormous Yangtze River has caused yet another flood!"
+    fire_only_once = yes
+    picture = "destroyed_forest"
+
+    trigger = {
+        owns = 1563
+        year = 1898
+        NOT = { has_global_flag = huang4 }
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    option = {
+        name = "It just keeps happening!"
+        set_global_flag = huang4
+        1563 = {
+            any_pop = {
+                reduce_pop = 0.80
+            }
+            add_province_modifier = {
+                name = chinese_floods
+                duration = 1800
+            }
+        }
+    }
+}
+
+country_event = {
+    id = 165001
+    title = "The Yangtze River bursts its banks!"
+    desc = "The enormous Yangtze River has flooded!"
+    fire_only_once = yes
+    picture = "destroyed_forest"
+
+    trigger = {
+        owns = 1522
+        year = 1931
+        NOT = { has_global_flag = huang5 }
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    option = {
+        name = "At least it's not the Huang He this time..."
+        set_global_flag = huang5
+        2221 = {
+            any_pop = {
+                reduce_pop = 0.90
+            }
+            add_province_modifier = {
+                name = chinese_floods
+                duration = 1800
+            }
+			infrastructure = -6
+        }
+        1522 = {
+            any_pop = {
+                reduce_pop = 0.90
+            }
+            add_province_modifier = {
+                name = chinese_floods
+                duration = 1800
+            }
+			infrastructure = -6
+        }
+        1475 = {
+            any_pop = {
+                reduce_pop = 0.90
+            }
+            add_province_modifier = {
+                name = chinese_floods
+                duration = 1800
+            }
+			infrastructure = -6
+        }
+        1470 = {
+            any_pop = {
+                reduce_pop = 0.90
+            }
+            add_province_modifier = {
+                name = chinese_floods
+                duration = 1800
+            }
+			infrastructure = -6
+        }
+    }
+}
+
+country_event = {
+    id = 166000
+    title = "Nanking Massacre"
+    desc = "Our troops, frustrated by the lack of a swift victory, have sacked Nanking."
+    picture = "cityfire"
+    fire_only_once = yes
+	
+    trigger = {
+        OR = {
+            tag = JAP
+            tag = TKG
+        }
+        NOT = { has_global_flag = nanking_massacre }
+		
+        NOT = { has_global_flag = warlord_era_has_begun } #China is unified, either before or after warlord era
+
+		war_exhaustion = 10
+
+		2221 = {
+			controlled_by = THIS
+			owner = {
+				OR = {
+					tag = TPG 
+					tag = KMT 
+					tag = CHI
+				}
+			}
+		}
+		
+		OR = { 
+			TPG = { civilized = yes } 
+			KMT = { civilized = yes }
+			CHI = { civilized = yes }
+		}
+		
+		OR = {
+			war_policy = jingoism
+			war_policy = pro_military
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 3
+    }
+
+    option = {
+        name = "Oh well, things happen in war."
+		badboy = 5
+        any_country = {
+            limit = {
+                owns = 2221
+            }
+            country_event = 166001
+        }
+		set_global_flag = nanking_massacre
+        prestige = -10
+		
+		
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "Punish those responsible!"
+		badboy = 3
+        any_country = {
+            limit = {
+                owns = 2221
+            }
+            country_event = 166001
+        }
+		set_global_flag = nanking_massacre
+        prestige = -40
+		
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+                OR = {
+                    pop_type = soldiers
+                    pop_type = officers
+                }
+            }
+            consciousness = 4
+            militancy = 4
+        }
+		
+        ai_chance = {
+            factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					government = fascist_dictatorship
+					government = proletarian_dictatorship
+					government = absolute_monarchy
+					government = presidential_dictatorship
+					government = bourgeois_dictatorship
+				}
+			}
+        }
+    }
+}
+
+country_event = {
+    id = 166001
+    title = "The Nanking Massacre"
+    desc = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
+    news = yes
+    news_desc_long = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
+    news_desc_medium = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
+    news_desc_short = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
+    major = yes
+    picture = "cityfire"
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "How DARE they!"
+        add_country_modifier = {
+            name = drive_to_reunify 
+            duration = 1825
+        }
+        2221 = {
+            any_pop = {
+                reduce_pop = 0.67
+            }
+            add_province_modifier = {
+                name = the_massacre
+                duration = 365
+            }
+			infrastructure = -6
+        }
+    }
+}
