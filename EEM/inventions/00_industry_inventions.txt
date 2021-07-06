@@ -101,7 +101,7 @@ basic_oxygen_steelmaking = {
     }
     effect = {
         factory_goods_output = {
-            steel = 0.02
+            steel = 0.05
         }
     }
 }
@@ -128,27 +128,6 @@ kraft_pulping = {
     }
 }
 
-#The strip mill was a major innovation, with the first being erected at Ashland, Kentucky in 1923. This provided a continuous process, cutting out the need to pass the plates over the rolls and to double them. At the end the strip was cut with a guillotine shear or rolled into a coil. Early (hot rolling) strip mills did not produce strip suitable for tinplate, but in 1929 cold rolling began to be used to reduce the gauge further. 
-#The first commercial beer available in cans began in 1935 in Richmond, Virginia.[2] Not long after that, sodas, with their higher acidity and somewhat higher pressures, were available in cans. The key development for storing drinks in cans was the interior liner, typically plastic or sometimes a waxy substance, that helped to keep the product's flavor from being ruined by a chemical reaction with the metal. 
-# the steel beer can, introduced in the 1930s by Pabst for its Blue Ribbon brew.
-#canned_drinks = {
-#    limit = { metallurgy_7 = 1 }
-#    chance = {
-#        base = 2
-#        modifier = {
-#            factor = 2
-#            invention = human_relations_theory 
-#        }
-#        modifier = {
-#            factor = 2
-#            invention = air_preheater
-#        }
-#    }
-#    effect = {
-#        factory_goods_output = { liquor = 0.02 }
-#    }
-#}
-
 #The Claus process is the most significant gas desulfurizing process, recovering elemental sulfur from gaseous hydrogen sulfide. First patented in 1883 by the chemist Carl Friedrich Claus, the Claus process has become the industry standard. 
 #In the mid-1950s, the first noble metal catalytic reforming process (the Platformer process) was commercialized.
 #starting in the 1970s, byproduct sulfur recovery from oil and natural gas lowered the price of sulfur and drove many Frasch-process mines out of business.
@@ -168,25 +147,6 @@ hydrodesulphurization = {
     }
     effect = {
         activate_building = hydrodesulphurization_plant
-    }
-}
-
-
-stamped_small_arms = {
-    limit = { mechanization_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            metallurgy_7  = 1
-        }
-        modifier = {
-            factor = 2
-            light_armament_7 = 1
-        }
-    }
-    effect = {
-        factory_goods_output = { small_arms = 0.05 }
     }
 }
 
@@ -232,7 +192,7 @@ artificial_herbicides = {
 }
 
 
-############# plastics #####################
+############# plastics #############
 # converts a mixture of carbon monoxide and hydrogen into liquid hydrocarbons. Germany, in 1925
 fischer_tropsch_process = {
     limit = { metallurgy_7 = 1 }
@@ -377,5 +337,114 @@ rocket_experiments = {
     }
     effect = {
         factory_goods_output = { paper = 0.01 }
+    }
+}
+
+########## Earlier Inventions ##########
+#Lubrication oil was an accidental discovery while attempting to distil kerosene. Everest noted the residue from the extraction was suitable as a lubricant.
+#In 1880 Vacuum was absorbed by Standard Oil and developed rapidly when lubricating oil was needed for the stationary engine, the automobile, and finally the electric generator, motor and transformer and the steam turbine. 
+lubrication_oil = {
+    limit = { organic_chemistry = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = cracking
+        }
+        modifier = {
+            factor = 2
+            invention = oil_pumping_machinery
+        }
+    }
+    effect = {
+        factory_goods_output = { machine_parts = 0.02 }
+    }
+}
+
+#The ball screw was invented independently by H.M. Stevenson and D. Glenn who were issued in 1898 patents
+#1929: The ball screw is invented by Rudolph G. Boehm.
+#Low friction in ball screws yields high mechanical efficiency compared to alternatives. A typical ball screw may be 90 percent efficient, versus 20 to 25 percent efficiency of an Acme lead screw of equal size
+ball_screw = {
+    limit = { electric_furnace = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = lubrication_oil
+        }
+        modifier = {
+            factor = 2
+            assembly_line = 1
+        }
+    }
+    effect = {
+        factory_goods_output = { machine_parts = 0.02 }
+    }
+}
+
+#1886: Carl Gassner invents the zinc–carbon battery, the first dry cell battery, making portable electronics practical.
+#1899: Waldemar Jungner invents the rechargeable nickel-cadmium battery (NiCd) as well as the nickel-iron electric storage battery (NiFe) and the rechargeable alkaline silver-cadmium battery (AgCd)
+zinc_carbon_battery = {
+    limit = { electricity = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = edison_light_bulb  
+        }
+        modifier = {
+            factor = 2
+            invention = electrical_lighting 
+        }
+        modifier = {
+            factor = 2
+            invention = electric_rolling_techniques
+        }
+    }
+    effect = {
+        factory_goods_output = { electric_gear = 0.02 }
+    }
+}
+
+#1881: Nikolay Benardos presents carbon arc welding, the first practical arc welding method.
+arc_welding = {
+    limit = { electricity = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = electric_furnace
+        }
+        modifier = {
+            factor = 2
+            invention = electrical_lighting 
+        }
+    }
+    effect = {
+        factory_goods_output = { automobiles = 0.01 }
+        factory_goods_output = { steamer_convoy = 0.02 }
+    }
+}
+
+#1909: Fritz Haber invents the Haber process.
+haber_process = {
+    limit = { electric_furnace = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = 2
+            invention = steel_alloys 
+        }
+        modifier = {
+            factor = 2
+            organic_chemistry = 1
+        }
+        modifier = {
+            factor = 2
+            invention = cracking 
+        }
+    }
+    effect = {
+        factory_goods_output = { fertilizer = 0.05 }
     }
 }
