@@ -48,31 +48,31 @@ naval_radar = {
     }
 }
 
-18_inch_main_armament = {
-    limit = { naval_engineering_7 = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = -4
-            NOT = {
-                invention = 16_inch_main_armament
-            }
-        }
-        modifier = {
-            factor = 2
-            metallurgy_7 = 1
-        }
-        modifier = {
-            factor = 2
-            heavy_armament_7 = 1
-        }
-    }
-    effect = {
-        dreadnought = {
-            gun_power = 2
-        }
-    }
-}
+#18_inch_main_armament = {
+#    limit = { naval_engineering_7 = 1 }
+#    chance = {
+#        base = 0
+#        modifier = {
+#            factor = -4
+#            NOT = {
+#                invention = 16_inch_main_armament
+#            }
+#        }
+#        modifier = {
+#            factor = 2
+#            metallurgy_7 = 1
+#        }
+#        modifier = {
+#            factor = 2
+#            heavy_armament_7 = 1
+#        }
+#    }
+#    effect = {
+#        dreadnought = {
+#            gun_power = 2
+#        }
+#    }
+#}
 
 electronic_fire_control = {
     limit = { naval_engineering_7 = 1 }
@@ -126,7 +126,7 @@ blind_fire_radar_fire_control = {
     }
     effect = {
         dreadnought = {
-            gun_power = 2
+            gun_power = 4
         }
     }
 }
@@ -158,6 +158,9 @@ dual_purpose_guns = {
         dreadnought = {
             gun_power = 2
             hull = 1
+        }
+        aircraft_carrier = {
+            hull = 2
         }
     }
 }
@@ -221,35 +224,35 @@ naval_plastic_armor = {
     }
 }
 
-naval_fighters = {
-    limit = { naval_engineering_7 = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = late_interwar_fighters
-        }
-        modifier = {
-            factor = 2
-            invention = t_air_superiority
-        }
-	    modifier = {
-            factor = 2
-            invention = flying_circus_doctrine
-        }
-        modifier = {
-            factor = -6
-            NOT = {
-                invention = purpose_built_air_carriers
-            }
-        }
-    }
-    effect = {
-        aircraft_carrier = {
-            hull = 2
-        }
-    }
-}
+#naval_fighters = {
+#    limit = { naval_engineering_7 = 1 }
+#    chance = {
+#        base = 0
+#        modifier = {
+#            factor = 2
+#            invention = late_interwar_fighters
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = t_air_superiority
+#        }
+#	    modifier = {
+#            factor = 2
+#            invention = flying_circus_doctrine
+#        }
+#        modifier = {
+#            factor = -6
+#            NOT = {
+#                invention = purpose_built_air_carriers
+#            }
+#        }
+#    }
+#    effect = {
+#        aircraft_carrier = {
+#            hull = 2
+#        }
+#    }
+#}
 
 naval_bombers = {
     limit = { naval_engineering_7 = 1 }
