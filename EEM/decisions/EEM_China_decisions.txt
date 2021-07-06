@@ -1,0 +1,118 @@
+political_decisions = {
+	blow_yellow_river_dikes = {
+		picture = yellow_river_dikes
+		potential = {
+			OR = {
+				tag = TPG
+				tag = CHI
+				tag = KMT
+			}
+			has_global_flag = huang5 #past 1931
+			civilized = yes
+			NOT = { has_global_flag = yellow_river_dikes_blown }
+			NOT = { has_global_flag = warlord_era_has_begun }
+			owns = 1511
+		}
+		
+		allow = {
+			OR = {
+				war_with = JAP
+				war_with = TKG
+			}
+			#Pingyang, Luan, Weihui, Jinan, Wuding occupied
+			OR = {
+				1575 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1574 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1515 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1515 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1570 = { controller = { OR = { tag = JAP tag = TKG } } }
+			}
+		}
+		
+		effect = {
+			set_global_flag = yellow_river_dikes_blown
+			1511 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+			1508 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+			1512 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+			1509 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+			1478 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+			1472 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+			1476 = {
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+			}
+		}
+		
+        ai_will_do = { 
+			factor = 1
+            modifier = {
+                factor = 0
+                OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					war_policy = pacifism
+				}
+            }
+		}
+	}
+}
