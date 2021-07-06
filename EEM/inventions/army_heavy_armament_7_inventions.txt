@@ -131,6 +131,12 @@ assault_gun = {
             defence = 1
             supply_consumption = 0.25
         }
+        motorized_infantry = {
+            reconnaissance = 1
+            maximum_speed = 1
+            attack = 1
+            supply_consumption = 0.50
+        }
     }
 }
 
@@ -186,29 +192,29 @@ main_battle_tank = {
     }
 }
 
-armored_personnel_carrier = {
-    limit = { heavy_armament_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = -6
-            NOT = { invention = tankette }
-        }
-        modifier = {
-            factor = 2
-            invention = combined_arms_offensive
-        }
-        modifier = {
-            factor = 2
-            invention = mechanized_assault_doctrine
-        }
-    }
-    effect = {
-        motorized_infantry = {
-            reconnaissance = 1
-            maximum_speed = 1
-            attack = 1
-            supply_consumption = 0.50
-        }
-    }
-}
+#armored_personnel_carrier = {
+#    limit = { heavy_armament_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = -6
+#            NOT = { invention = tankette }
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = combined_arms_offensive
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = mechanized_assault_doctrine
+#        }
+#    }
+#    effect = {
+#        motorized_infantry = {
+#            reconnaissance = 1
+#            maximum_speed = 1
+#            attack = 1
+#            supply_consumption = 0.50
+#        }
+#    }
+#}
