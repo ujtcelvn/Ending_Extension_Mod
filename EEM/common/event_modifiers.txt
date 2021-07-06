@@ -2144,6 +2144,7 @@ chinese_floods = {
     immigrant_attract = -0.25
     immigrant_push = 0.75
     life_rating = -5
+	movement_cost = 1
     icon = 14
 }
 
