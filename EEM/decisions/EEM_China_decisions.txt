@@ -10,7 +10,7 @@ political_decisions = {
 			has_global_flag = huang5 #past 1931
 			civilized = yes
 			NOT = { has_global_flag = yellow_river_dikes_blown }
-			NOT = { has_global_flag = warlord_era_has_begun }
+
 			owns = 1511
 		}
 		
@@ -26,6 +26,15 @@ political_decisions = {
 				1515 = { controller = { OR = { tag = JAP tag = TKG } } }
 				1515 = { controller = { OR = { tag = JAP tag = TKG } } }
 				1570 = { controller = { OR = { tag = JAP tag = TKG } } }
+			}
+			OR = {
+				1511 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1508 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1512 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1509 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1478 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1472 = { controller = { OR = { tag = JAP tag = TKG } } }
+				1476 = { controller = { OR = { tag = JAP tag = TKG } } }
 			}
 		}
 		
