@@ -140,7 +140,7 @@ country_event = {
 country_event = {
     id = 165003
     title = "Haiyuan Great Earthquake"
-    desc = "The Haiyuan Earthquake was assigned the maximum intensity on the Mercalli intensity scale – (XII Extreme)."
+    desc = "The Haiyuan Earthquake was assigned the maximum intensity on the Mercalli intensity scale (XII Extreme). Aftershocks continued for 3 years."
     picture = "haiyuan_earthquake"
 
     fire_only_once = yes
@@ -156,25 +156,12 @@ country_event = {
 
     option = {
         name = "Eep!"
-        random_owned = {
-            limit = { province_id = 1491 has_building = railroad }
-            infrastructure = -6
-        }
-        random_owned = {
-            limit = { province_id = 1491 has_building = fort }
-            fort = -6
-        }
-        random_owned = {
-            limit = { province_id = 1491 }
-            random_list = {
-                50 = { any_pop = { reduce_pop = 0.9 } }
-                50 = { any_pop = { reduce_pop = 0.8 } }
-            }
-        }
-        1491 = {
-			add_province_modifier = { name = earthquake_devastation duration = 365 } 
-		}
-        ai_chance = { factor = 100 }
+        1491 = { infrastructure = -6 fort = -6 any_pop = { reduce_pop = 0.8 } add_province_modifier = { name = earthquake_devastation duration = 1095 } }
+        1561 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
+        1490 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
+        1492 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
+        1535 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
+        1532 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
     }
 }
 
