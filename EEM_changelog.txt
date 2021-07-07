@@ -101,6 +101,8 @@ industry = 30 + 5
 	China
 		165000 Huang He flood 1898
 		165001 Yangtze flood 1931
+		165002 Yangtze flood 1935
+		165003 Haiyuan Earthquake 1920
 		166000 Nanking Massacre Japan
 		166001 Nanking Massacre China
 		blow_yellow_river_dikes
@@ -147,6 +149,15 @@ industry = 30 + 5
 #Migration rework
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
+
+v0.4.7a
+adjust blow_yellow_river_dikes conditions and desc
+Nanking massacre now occurs if China dominates central China, instead of if warlord era is over, because irl it happened during the warlord era
+Nanking massacre now only occurs if Japan is jingoist
+Nanking massacre now also destroys Nanking forts
+Halved war exhaustion threshold for Nanking Massacre
+Made Japan punishing the Nanking Massacre perpetrators more costly
+Added the 1935 Yangtze flood and the 1920 Haiyuan Earthquake
 
 v0.4.7
 harder to strategic bomb if on different continents
