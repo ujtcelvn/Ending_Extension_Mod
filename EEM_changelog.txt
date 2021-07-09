@@ -199,6 +199,9 @@ integrating RTR into warlord era is unnecessary, warlord era doesn't happen as M
 
 Capitalsts and pops in neighboring provinces to the capital also flee with the KMT/Taiping to Taiwan. IRL: two million refugees, predominantly from the Nationalist government, military, and business community, fled to Taiwan.
 
+CHIFlavor.txt    added kowloon_incident_cucked flag if Qing cucks to the UK in event 1316081
+EEM_China_events.txt kowloon_incident_cucked flag makes tiandihui and gelaohui more likely
+
 
 v0.4.7a
 adjust blow_yellow_river_dikes conditions and desc
