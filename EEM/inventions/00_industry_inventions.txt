@@ -445,6 +445,6 @@ haber_process = {
         }
     }
     effect = {
-        factory_goods_output = { fertilizer = 0.05 }
+        factory_goods_output = { fertilizer = 0.1 }
     }
 }
