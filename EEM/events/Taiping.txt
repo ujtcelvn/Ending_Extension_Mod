@@ -44,13 +44,15 @@ country_event = {
         }
         modifier = {
             factor = 0.5
-            year = 1855
-            NOT = { year = 1858 }
+            year = 1853
         }
         modifier = {
-            factor = 0.1
-            year = 1858
-            NOT = { year = 1860 }
+            factor = 0.5
+            year = 1855
+        }
+        modifier = {
+            factor = 0.5
+            year = 1857
         }
         modifier = {
             factor = 0.01
