@@ -150,6 +150,56 @@ industry = 30 + 5
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
 
+v0.4.8 (remember to clear flag cache!)
+doubled haber_process fertilizer production from 0.05 to 0.1
+AI_ARMY_TAXBASE_FRACTION and AI_ARMY_TAXBASE_FRACTION reduced back to 0.1 because the AI is fucking retarded
+
+Halved 1898 Huang He flood casulties to ~150,000 
+Adjust Nanking Massacre localization
+
+Gave Taiping Hakka in history/countries/TPG - Taiping.txt as accepted because the main leaders of the Taiping were Hakka
+common/countries.txt add RTR (Red Turban Rebellion / Ming LARPers tag)
+common/countries/Ming.txt
+history/countries/RTR - Ming.txt
+gfx/flags/
+    RTR.tga             Ming flag from Chinese Wikipedia https://upload.wikimedia.org/wikipedia/commons/c/ce/China_Ming_Dynasty_Flag_1567.png
+    RTR_communist.tga   Copied from Reddit
+    RTR_fascist.tga     Nine Star Taijitu Flag https://www.crwflags.com/fotw/flags/cn-myst.html
+    RTR_monarchy.tga    Ming flag from EU4 
+    RTR_republic.tga    Iron Blood 18-Star Flag https://www.crwflags.com/fotw/flags/cn%5Ewupr.html  https://www.crwflags.com/fotw/flags/cn%5Ewupr.html
+localization/00_EEM_countries.csv
+gfx/pictures/events/
+    event_base      empty frame for events
+    white_lotus
+    gelaohui
+    tiandihui
+	red_turban_attack
+    tiandihui_statue
+	taiping_siege
+    juye_incident
+gfx/pictures/decisions
+    nanking
+    ww2_chinese_arty
+events/EEM_China_debug.txt
+events/Taiping.txt Taiping and Ming rebellions delay and disable each other, also added modifiers to speed it up past 1858
+
+For some reason adding RTR to decisions/China.txt revoke_sino_portuguese_treaty messes up the game so I put Ming (and KMT) versions of some decisions into EEM_China_decisions.txt
+RTR and KMT can now claim sakhalin and tibet
+RTR can now self_strengthening_movement
+KMT reunified keeps capital in Nanking
+RTR, TPG, CHI, KMT can now inherit ryukyu
+reunification_of_china now also can be done if the warlords are your puppet
+
+events/China.txt Ming also gets the_dragon_wakes event if westernized
+
+move warlord events from events/CHIFlavor.txt to events/EEM_Warlord_Era.txt
+
+making reunification of china decisions also annex Ming and remove Ming cores is unnecessary, warlord era doesn't happen as Ming, after Ming civilizes they become China and the warlord era happens afterwards
+integrating RTR into warlord era is unnecessary, warlord era doesn't happen as Ming, after Ming civilizes they become China and the warlord era happens afterwards
+
+Capitalsts and pops in neighboring provinces to the capital also flee with the KMT/Taiping to Taiwan. IRL: two million refugees, predominantly from the Nationalist government, military, and business community, fled to Taiwan.
+
+
 v0.4.7a
 adjust blow_yellow_river_dikes conditions and desc
 Nanking massacre now occurs if China dominates central China, instead of if warlord era is over, because irl it happened during the warlord era
