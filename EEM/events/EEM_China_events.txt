@@ -604,10 +604,15 @@ country_event = {
     option = {
         name = "What can a hatchet do against the Qing army?"
         set_country_flag = gelaohui
-        GXI = { all_core = { add_core = RTR } }
-        change_variable = {
-            which = ming_provinces
-            value = 1
+        any_owned = {
+            limit = {
+                any_neighbor_province = { is_core = RTR }
+                NOT = { is_core = RTR }
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
         }
     }
 }
