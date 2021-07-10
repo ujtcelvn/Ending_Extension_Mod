@@ -217,6 +217,7 @@ decisions/RUS.txt
     added ming_has_happened to convention_of_peking
     added peking_convention_RTR
     RTR can now rename chinese_outer_manchuria
+    RTR also gets mad if RUS integrates TNT
 
 #TODO: update the following
 EEM_China_events
