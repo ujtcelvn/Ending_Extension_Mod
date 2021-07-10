@@ -1808,8 +1808,9 @@ country_event = {
     trigger = {
         OR = { tag = ENG tag = ENL }
         is_greater_power = yes
-        NOT = { truce_with = THIS }
-        NOT = { casus_belli = THIS }
+        NOT = { truce_with = RTR }
+        NOT = { casus_belli = RTR }
+        NOT = { war_with = RTR }
         num_of_ports = 1
         has_global_flag = ming_victorious
         NOT = { has_global_flag = eng_ming }
@@ -2008,8 +2009,9 @@ country_event = {
         any_greater_power = {
             limit = {
                 has_country_flag = catholic_country
-                NOT = { truce_with = THIS }
-                NOT = { casus_belli = THIS }
+                NOT = { truce_with = TPG }
+                NOT = { casus_belli = TPG }
+                NOT = { war_with = TPG }
                 num_of_ports = 1
             }
             country_event = 166308
@@ -2087,8 +2089,9 @@ country_event = {
     trigger = {
         OR = { tag = ENG tag = ENL }
         is_greater_power = yes
-        NOT = { truce_with = THIS }
-        NOT = { casus_belli = THIS }
+        NOT = { truce_with = TPG }
+        NOT = { casus_belli = TPG }
+        NOT = { war_with = TPG }
         num_of_ports = 1
         has_global_flag = taiping_victorious
         NOT = { has_global_flag = eng_taiping }
