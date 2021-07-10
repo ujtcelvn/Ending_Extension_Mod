@@ -1696,6 +1696,18 @@ country_event = {
 
     mean_time_to_happen = {
         months = 120
+        modifier = {
+            factor = 0.8
+            revolt_percentage = 0.1
+        }
+        modifier = {
+            factor = 0.8
+            revolt_percentage = 0.25
+        }
+        modifier = {
+            factor = 0.8
+            revolt_percentage = 0.5
+        }
     }
 
     option = {
