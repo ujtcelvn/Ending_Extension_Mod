@@ -876,6 +876,8 @@ political_decisions = {
         potential = {
             tag = RTR
             civilized = yes
+            TPG = { exists = no }
+            QNG = { exists = no }
         }
 
         allow = {
@@ -885,10 +887,9 @@ political_decisions = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
                 #government = hms_government
+                government = bourgeois_dictatorship
             }
-            NOT = { has_country_flag = mandate }
-            TPG = { exists = no }
-            QNG = { exists = no }
+            nationalism_n_imperialism = 1 #1850
         }
 
         effect = {
@@ -990,5 +991,38 @@ political_decisions = {
         }
 
         ai_will_do = { factor = 1 }
+    }
+
+
+    kongsi_ming = {
+        picture = singapore_1900
+        alert = yes
+        potential = {
+            tag = RTR
+            civilized = yes
+            government = bourgeois_dictatorship
+        }
+
+        allow = {
+            war = no
+            is_greater_power = yes
+            nationalism_n_imperialism = 1 #1850
+            owns = 1496 #Hong Kong
+        }
+
+        effect = {
+            prestige = 20
+            badboy = 5
+            1384 = { add_core = RTR } #Singapore
+            1426 = { add_core = RTR } #Lanfang
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                badboy = 0.8
+            }
+        }
     }
 }
