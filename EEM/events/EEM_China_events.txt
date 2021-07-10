@@ -1812,7 +1812,7 @@ country_event = {
         NOT = { casus_belli = THIS }
         num_of_ports = 1
         has_global_flag = ming_victorious
-        NOT = { has_global_flag = ming_taiping }
+        NOT = { has_global_flag = eng_ming }
         RTR = { civilized = no }
         exists = RTR
     }
@@ -1823,7 +1823,7 @@ country_event = {
 
     option = {
         name = "EVT166302OPTA"
-        set_global_flag = ming_taiping
+        set_global_flag = eng_ming
         badboy = 2.4
 
         war = {
