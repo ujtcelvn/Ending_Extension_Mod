@@ -2638,7 +2638,7 @@ country_event = {
 
 #Ming Victory event
 country_event = {
-    id = 166205
+    id = 166313
     title = "The Red Turbans are Victorious!"
     desc = "We have toppled the Taiping upsurpers!"
 
