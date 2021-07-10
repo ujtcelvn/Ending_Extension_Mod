@@ -12,7 +12,7 @@ Tech Unlock Dates		number of inventions (5 + 5 + 120 = 130)
 army = 30
 
 1936 naval doctrine					 4
-1930 ship construction				 5		1919 oil_driven_ships	5
+1930 ship construction				 5		1919 oil_driven_ships		5
 1930 naval engineering				11
 1936 naval science					 3
 1936 naval leadership				 3
@@ -36,10 +36,10 @@ culture = 18
 commerce = 16
 
 1930 power							10
-1930 mechanization					 3
-1930 metallurgy						 6		1900 electric_furnace	2
+1930 mechanization					 3      
+1930 metallurgy						 6		1850 regenerative_furnaces 	1			1900 electric_furnace	2
 1930 infrastructure					 0
-1936 chemistry and electricity		11		1870 organic_chemistry	1			1880 electricity 2
+1936 chemistry and electricity		11		1870 organic_chemistry		1			1880 electricity 		1
 
 industry = 30 + 5
 
@@ -202,6 +202,29 @@ Capitalsts and pops in neighboring provinces to the capital also flee with the K
 CHIFlavor.txt    added kowloon_incident_cucked flag if Qing cucks to the UK in event 1316081
 EEM_China_events.txt kowloon_incident_cucked flag makes tiandihui and gelaohui more likely
 
+events/
+    EEM_China_events  166300 and onwards: Taiping western reaction, anti-Taiping civil war
+    Taiping  Taiping and Red Turban rebellions don't remove each other's cores, but make them stop spreading
+    China.txt   the dragon wakes removes RTR cores if you aren't RTR
+    EEM_China_debug event id changed to 166207
+
+decisions/
+    EEM_China_decisions
+        bourgeois_dictatorship Ming doesn't become China, become china needs nationalism_n_imperialism = 1 (1850)
+        added meme bourgeois_dictatorship Ming decision: establish_kongsi_ming, gain cores on Lanfang and Singapore
+
+gfx/pictures/events/
+    guanyin
+    sanhehui
+gfx/pictures/decisions/
+    singapore_1900
+
+localization/00_EEM_events.csv
+localization/00_EEM_decisions.csv
+
+00_industry_inventions
+    removed arc_welding
+    added magnetic_separation, increases iron production to reduce HPM's notorious iron shortage
 
 v0.4.7a
 adjust blow_yellow_river_dikes conditions and desc
