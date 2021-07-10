@@ -80,7 +80,7 @@ country_event = {
     option = {
         name = "EVT160001OPTA"
 
-        RTR = { all_core = { remove_core = RTR } }
+        #RTR = { all_core = { remove_core = RTR } }
         set_global_flag = ming_has_happened
         set_global_flag = ming_has_been_defeated
 
