@@ -407,24 +407,24 @@ zinc_carbon_battery = {
 }
 
 #1881: Nikolay Benardos presents carbon arc welding, the first practical arc welding method.
-arc_welding = {
-    limit = { electricity = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = electric_furnace
-        }
-        modifier = {
-            factor = 2
-            invention = electrical_lighting 
-        }
-    }
-    effect = {
-        factory_goods_output = { automobiles = 0.01 }
-        factory_goods_output = { steamer_convoy = 0.02 }
-    }
-}
+#arc_welding = {
+#    limit = { electricity = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = electric_furnace
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = electrical_lighting 
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { automobiles = 0.01 }
+#        factory_goods_output = { steamer_convoy = 0.02 }
+#    }
+#}
 
 #1909: Fritz Haber invents the Haber process.
 haber_process = {
@@ -446,5 +446,75 @@ haber_process = {
     }
     effect = {
         factory_goods_output = { fertilizer = 0.1 }
+    }
+}
+
+#In the 1860s, magnetic separation started to become commercialized. It was used to separate iron from brass.[3]
+#After the 1880s, ferromagnetic materials started to be magnetically separated. In the 1900s, high intensity magnetic separation was inaugurated which allowed the separation of pragmatic materials.[3] 
+#After the Second World War, systems that were the most common were electromagnets. The technique was used in scrap yards. 
+#Magnetic separation was developed again in the late 1970s with new technologies being inaugurated.[2] The new forms of magnetic separation included magnetic pulleys, overhead magnets and magnetic drums. 
+magnetic_separation = {
+    limit = { regenerative_furnaces = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = electrical_lighting #electromagnet
+        }
+        modifier = {
+            factor = 2
+            assembly_line = 1 #1870
+        }
+        modifier = {
+            factor = -10
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.05 type = labourers }
+                province_control_days = 1825
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.01 type = labourers }
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.03 type = labourers }
+            }
+        }
+        modifier = {
+            factor = -1
+            any_neighbor_country = {
+                is_greater_power = no
+                any_owned_province = {
+                    trade_goods = iron
+                    unemployment_by_type = { value = 0.01 type = labourers }
+                    province_control_days = 365
+                }
+            }
+        }
+        modifier = {
+            factor = -1
+            any_greater_power = {
+                any_owned_province = {
+                    trade_goods = iron
+                    unemployment_by_type = { value = 0.01 type = labourers }
+                    province_control_days = 365
+                }
+            }
+        }
+    }
+    effect = {
+        rgo_goods_output = {
+            iron = 0.25
+        }
     }
 }
