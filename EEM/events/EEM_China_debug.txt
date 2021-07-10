@@ -1,12 +1,15 @@
 country_event = {
-    id = 166300
+    id = 166207
     title = "Our Lodge Masters Arrive!"
     desc = "For some reason the event that gives generals works fine for Taiping but doesn't work for Ming."
     picture = "tiandihui_statue"
     fire_only_once = yes
 	
     trigger = {
-        has_global_flag = ming_has_happened
+        OR = { 
+            has_global_flag = ming_has_happened
+            has_global_flag = ming_has_happened_2
+        }
         NOT = { has_country_flag = ming_leaders_arrived }
         tag = RTR
     }
