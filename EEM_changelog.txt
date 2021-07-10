@@ -226,6 +226,8 @@ localization/00_EEM_decisions.csv
     removed arc_welding
     added magnetic_separation, increases iron production to reduce HPM's notorious iron shortage
 
+CleanUp.txt event 6016813 made so RTR can stay as a theocracy if it wants
+
 v0.4.7a
 adjust blow_yellow_river_dikes conditions and desc
 Nanking massacre now occurs if China dominates central China, instead of if warlord era is over, because irl it happened during the warlord era
