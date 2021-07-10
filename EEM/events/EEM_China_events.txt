@@ -1689,10 +1689,13 @@ country_event = {
         civilized = yes
         is_ideology_enabled = anarcho_liberal
         NOT = { has_country_flag = triad_ming }
+        ruling_party_ideology = conservative
+        average_consciousness = 4
+        average_militancy = 4
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 120
     }
 
     option = {
@@ -1772,7 +1775,7 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 50
+            factor = 20
         }
     }
 
@@ -1790,7 +1793,7 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 50
+            factor = 80
         }
     }
 }
