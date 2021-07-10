@@ -159,6 +159,11 @@ country_event = {
                 }
             }
         }
+
+        random_owned = {
+		    limit = { owner = { NOT = { tag = RTR } } }
+            RTR = { all_core = { remove_core = RTR } }
+		}
     }
 }
 
