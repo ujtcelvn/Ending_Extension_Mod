@@ -152,6 +152,9 @@ industry = 30 + 5
 
 v0.4.8 (remember to clear flag cache!)
 doubled haber_process fertilizer production from 0.05 to 0.1
+removed arc_welding
+added magnetic_separation, increases iron production to reduce HPM's notorious iron shortage
+
 AI_ARMY_TAXBASE_FRACTION and AI_ARMY_TAXBASE_FRACTION reduced back to 0.1 because the AI is fucking retarded
 
 Halved 1898 Huang He flood casulties to ~150,000 
@@ -164,10 +167,12 @@ history/countries/RTR - Ming.txt
 gfx/flags/
     RTR.tga             Ming flag from Chinese Wikipedia https://upload.wikimedia.org/wikipedia/commons/c/ce/China_Ming_Dynasty_Flag_1567.png
     RTR_communist.tga   Copied from Reddit
-    RTR_fascist.tga     Nine Star Taijitu Flag https://www.crwflags.com/fotw/flags/cn-myst.html
+    RTR_fascist.tga     Iron Blood 18-Star Flag https://www.crwflags.com/fotw/flags/cn%5Ewupr.html https://www.crwflags.com/fotw/flags/cn-nwarf.html
     RTR_monarchy.tga    Ming flag from EU4 
-    RTR_republic.tga    Iron Blood 18-Star Flag https://www.crwflags.com/fotw/flags/cn%5Ewupr.html  https://www.crwflags.com/fotw/flags/cn%5Ewupr.html
+    RTR_republic.tga    Nine Star Taijitu Flag https://www.crwflags.com/fotw/flags/cn-myst.html
 localization/00_EEM_countries.csv
+localization/00_EEM_events.csv
+localization/00_EEM_decisions.csv
 gfx/pictures/events/
     event_base      empty frame for events
     white_lotus
@@ -177,10 +182,13 @@ gfx/pictures/events/
     tiandihui_statue
 	taiping_siege
     juye_incident
+    guanyin
+    sanhehui
 gfx/pictures/decisions
     nanking
     ww2_chinese_arty
-events/EEM_China_debug.txt
+    singapore_1900
+events/EEM_China_debug.txt event id 166207
 events/Taiping.txt Taiping and Ming rebellions delay and disable each other, also added modifiers to speed it up past 1858
 
 For some reason adding RTR to decisions/China.txt revoke_sino_portuguese_treaty messes up the game so I put Ming (and KMT) versions of some decisions into EEM_China_decisions.txt
@@ -189,44 +197,32 @@ RTR can now self_strengthening_movement
 KMT reunified keeps capital in Nanking
 RTR, TPG, CHI, KMT can now inherit ryukyu
 reunification_of_china now also can be done if the warlords are your puppet
-
-events/China.txt Ming also gets the_dragon_wakes event if westernized
-
-move warlord events from events/CHIFlavor.txt to events/EEM_Warlord_Era.txt
-
 making reunification of china decisions also annex Ming and remove Ming cores is unnecessary, warlord era doesn't happen as Ming, after Ming civilizes they become China and the warlord era happens afterwards
 integrating RTR into warlord era is unnecessary, warlord era doesn't happen as Ming, after Ming civilizes they become China and the warlord era happens afterwards
 
 Capitalsts and pops in neighboring provinces to the capital also flee with the KMT/Taiping to Taiwan. IRL: two million refugees, predominantly from the Nationalist government, military, and business community, fled to Taiwan.
 
 CHIFlavor.txt    added kowloon_incident_cucked flag if Qing cucks to the UK in event 1316081
-EEM_China_events.txt kowloon_incident_cucked flag makes tiandihui and gelaohui more likely
+EEM_China_events  166300 and onwards: Taiping western reaction, anti-Taiping civil war, kowloon_incident_cucked flag makes tiandihui and gelaohui more likely
+Taiping  Taiping and Red Turban rebellions don't remove each other's cores, but make them stop spreading
+China.txt   Ming also gets the_dragon_wakes event if westernized, the dragon wakes removes RTR cores if you aren't RTR
+move warlord events from events/CHIFlavor.txt to events/EEM_Warlord_Era.txt
 
-events/
-    EEM_China_events  166300 and onwards: Taiping western reaction, anti-Taiping civil war
-    Taiping  Taiping and Red Turban rebellions don't remove each other's cores, but make them stop spreading
-    China.txt   the dragon wakes removes RTR cores if you aren't RTR
-    EEM_China_debug event id changed to 166207
-
-decisions/
-    EEM_China_decisions
-        bourgeois_dictatorship Ming doesn't become China, become china needs nationalism_n_imperialism = 1 (1850)
-        added meme bourgeois_dictatorship Ming decision: establish_kongsi_ming, gain cores on Lanfang and Singapore
-
-gfx/pictures/events/
-    guanyin
-    sanhehui
-gfx/pictures/decisions/
-    singapore_1900
-
-localization/00_EEM_events.csv
-localization/00_EEM_decisions.csv
-
-00_industry_inventions
-    removed arc_welding
-    added magnetic_separation, increases iron production to reduce HPM's notorious iron shortage
+bourgeois_dictatorship Ming doesn't become China, become china needs nationalism_n_imperialism = 1 (1850)
+added meme bourgeois_dictatorship Ming decision: establish_kongsi_ming, gain cores on Lanfang and Singapore
 
 CleanUp.txt event 6016813 made so RTR can stay as a theocracy if it wants
+
+decisions/RUS.txt
+    added ming_has_happened to convention_of_peking
+    added peking_convention_RTR
+    RTR can now rename chinese_outer_manchuria
+
+#TODO: update the following
+EEM_China_events
+
+#TODO: organize the clusterfuck of the v0.4.8 changelog
+
 
 v0.4.7a
 adjust blow_yellow_river_dikes conditions and desc
