@@ -3,6 +3,11 @@ This is a submod for the HPM mod of Victoria 2, that extends the end date to 195
 
 Run this mod with HPM v0.4.6 (clicking on both this EEM and HPM in the mod selection menu) for best results.
 
+Since this mod adds new nations, you need to clear the flag cache every time you switch between this mod enabled and HPM alone.
+
+Google drive link of version 0.4.8 that werks on my machine
+
+https://drive.google.com/file/d/1uY0I_AG6NjN5kTTA2LHeylqmZoSt5NbS/view?usp=sharing
 
 ## Featuring:
 
@@ -10,14 +15,13 @@ Extended play to 1950
 
 1 new technology for each technology group
 
-130 new inventions
+130 new inventions (120 in the new techs, 10 earlier)
 
 Motorized infantry
 
 Aircraft Carriers
 
 Economic and Liquidity crisis tweaks
-
 
 Please read the changelog.txt for more details.
 
