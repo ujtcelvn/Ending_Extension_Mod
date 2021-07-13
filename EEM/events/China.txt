@@ -164,6 +164,10 @@ country_event = {
 		    limit = { owner = { NOT = { tag = RTR } } }
             RTR = { all_core = { remove_core = RTR } }
 		}
+        random_owned = {
+		    limit = { owner = { NOT = { tag = TPG } } }
+            TPG = { all_core = { remove_core = TPG } }
+		}
     }
 }
 
