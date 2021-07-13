@@ -149,6 +149,10 @@ industry = 30 + 5
 #Migration rework
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
+#interesting post techs:
+	foam_concrete: back to the early 1920s and the production of autoclaved aerated concrete, which was used mainly as insulation.[2] A detailed study concerning the composition, physical properties and production of foamed concrete was first carried out in the 1950s and 60s.[3][4][5] Following this research, new admixtures were developed in the late 1970s and early 80s, which led to the commercial use of foamed concrete in construction projects
+	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%. U
+	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
 
 v0.4.8 (remember to clear flag cache!)
 doubled haber_process fertilizer production from 0.05 to 0.1
@@ -205,7 +209,7 @@ Capitalsts and pops in neighboring provinces to the capital also flee with the K
 CHIFlavor.txt    added kowloon_incident_cucked flag if Qing cucks to the UK in event 1316081
 EEM_China_events  166300 and onwards: Taiping western reaction, anti-Taiping civil war, kowloon_incident_cucked flag makes tiandihui and gelaohui more likely
 Taiping  Taiping and Red Turban rebellions don't remove each other's cores, but make them stop spreading
-China.txt   Ming also gets the_dragon_wakes event if westernized, the dragon wakes removes RTR cores if you aren't RTR
+China.txt   Ming also gets the_dragon_wakes event if westernized, the dragon wakes removes RTR cores if you aren't RTR and TPG cores if you're not TPG
 move warlord events from events/CHIFlavor.txt to events/EEM_Warlord_Era.txt
 
 bourgeois_dictatorship Ming doesn't become China, become china needs nationalism_n_imperialism = 1 (1850)
@@ -218,11 +222,6 @@ decisions/RUS.txt
     added peking_convention_RTR
     RTR can now rename chinese_outer_manchuria
     RTR also gets mad if RUS integrates TNT
-
-#TODO: update the following
-EEM_China_events
-
-#TODO: organize the clusterfuck of the v0.4.8 changelog
 
 
 v0.4.7a
