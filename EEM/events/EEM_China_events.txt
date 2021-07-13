@@ -449,9 +449,10 @@ country_event = {
         name = "Secret societies are forbidden by law!"
         set_country_flag = tiandihui
         GNG = { all_core = { add_core = RTR } }
+        GXI = { all_core = { add_core = RTR } }
         change_variable = {
             which = ming_provinces
-            value = 2
+            value = 3
         }
     }
 }
@@ -1071,7 +1072,7 @@ country_event = {
     }
 
     option = {
-        name = "We must root out any rebels in hiding!"
+        name = "Root out the Rebels!"
         set_global_flag = ming_has_been_defeated
         prestige = 10
         any_owned = {
@@ -1708,6 +1709,14 @@ country_event = {
             factor = 0.8
             revolt_percentage = 0.5
         }
+        modifier = {
+            factor = 0.5
+            upper_house = { ideology = anarcho_liberal value = 0.05 }
+        }
+        modifier = {
+            factor = 0.5
+            upper_house = { ideology = anarcho_liberal value = 0.1 }
+        }
     }
 
     option = {
@@ -1924,6 +1933,7 @@ country_event = {
             }
             secede_province = FROM
         }
+        add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
             limit = {
                 port = yes
@@ -1958,7 +1968,7 @@ country_event = {
         name = "EVT166304OPTB" #give them cash
         set_global_flag = eng_ming_cuck
         relation = { who = FROM value = 200 }
-
+        add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
             limit = {
                 owner = {
@@ -2194,9 +2204,9 @@ country_event = {
     }
 
     option = {
-        name = "EVT166303OPTB" #They'll get bored and leave eventually
+        name = "EVT166303OPTB" #discourage them
         set_global_flag = usa_taiping_missionaries_not_welcomed
-        add_country_modifier = { name = missionary_activity duration = 365 }
+        add_country_modifier = { name = divided_society duration = 3650 }
         ai_chance = {
             factor = 10
         }
@@ -2236,6 +2246,7 @@ country_event = {
             }
             secede_province = FROM
         }
+        add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
             limit = {
                 port = yes
@@ -2270,7 +2281,7 @@ country_event = {
         name = "EVT166304OPTB" #give them cash
         set_global_flag = eng_taiping_cuck
         relation = { who = FROM value = 200 }
-
+        add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
             limit = {
                 owner = {
@@ -2438,24 +2449,32 @@ country_event = {
         has_global_flag = usa_taiping
         NOT = { has_country_flag = ming_larpers_2 }
         civilized = no
+        NOT = {
+            AND = {
+                has_country_modifier = uncivilized_isolationism
+                has_global_flag = eng_taiping_based
+                has_global_flag = usa_taiping_missionaries_not_welcomed
+                NOT = { government = theocracy }
+            }
+        }
     }
 
     mean_time_to_happen = {
         months = 120
         modifier = {
-            factor = 0.8
+            factor = 0.9
             has_global_flag = eng_taiping_cuck
         }
         modifier = {
-            factor = 0.8
+            factor = 0.9
             has_country_modifier = national_confusion
         }
         modifier = {
-            factor = 0.8
+            factor = 0.5
             government = theocracy
         }
         modifier = {
-            factor = 0.8
+            factor = 0.9
             government = usa_taiping_missionaries_welcomed
         }
         modifier = {
@@ -2463,14 +2482,7 @@ country_event = {
             pop_majority_religion = protestant
         }
         modifier = {
-            factor = 100
-            AND = {
-                has_global_flag = eng_taiping_based
-                has_global_flag = usa_taiping_missionaries_not_welcomed
-            }
-        }
-        modifier = {
-            factor = 100 #highly delayed if own all treaty ports (except Macao)
+            factor = 100 #if own all treaty ports (except Macao)
             AND = {
                 #owns = 1498 #Macao
                 owns = 1538 #Shanghai
@@ -2491,7 +2503,6 @@ country_event = {
         set_country_flag = ming_larpers_2
         GNG = { all_core = { add_core = RTR } }
         GXI = { all_core = { add_core = RTR } }
-        FJN = { all_core = { add_core = RTR } }
         any_owned = {
             limit = { is_core = RTR }
             add_province_modifier = {
@@ -2514,24 +2525,31 @@ country_event = {
         has_country_flag = ming_larpers_2
         NOT = { has_global_flag = ming_has_happened_2 }
         civilized = no
+        NOT = {
+            AND = {
+                has_country_modifier = uncivilized_isolationism
+                has_global_flag = eng_taiping_based
+                has_global_flag = usa_taiping_missionaries_not_welcomed
+            }
+        }
     }
 
     mean_time_to_happen = {
         months = 120
         modifier = {
-            factor = 0.8
+            factor = 0.9
             has_global_flag = eng_taiping_cuck
         }
         modifier = {
-            factor = 0.8
+            factor = 0.9
             has_country_modifier = national_confusion
         }
         modifier = {
-            factor = 0.8
+            factor = 0.5
             government = theocracy
         }
         modifier = {
-            factor = 0.8
+            factor = 0.9
             government = usa_taiping_missionaries_welcomed
         }
         modifier = {
@@ -2539,14 +2557,7 @@ country_event = {
             pop_majority_religion = protestant
         }
         modifier = {
-            factor = 100
-            AND = {
-                has_global_flag = eng_taiping_based
-                has_global_flag = usa_taiping_missionaries_not_welcomed
-            }
-        }
-        modifier = {
-            factor = 100 #highly delayed if own all treaty ports (except Macao)
+            factor = 100 #if own all treaty ports (except Macao)
             AND = {
                 #owns = 1498 #Macao
                 owns = 1538 #Shanghai
@@ -2758,7 +2769,95 @@ country_event = {
 
 #Ming power struggle event works
 
-########## Russa-backed Qinghai Dynasty Puppet 166500 ##########
+########## Russia-backed Qinghai Dynasty Puppet 166500 ##########
+#166500
+#title = "Hong Xiuquan and Feng Yunshan captured!"
+#desc = "Many of their delusional followers are still at large but the God Worshipping Society will have trouble operating without their chariasmatic leaders."
+#picture = "caishikou_execution_grounds"
+#trigger = won opium war, kicked out all smugglers, owns all consessions except Macao, no western influences
+#Taiping cores stop spreading, Taiping rebellion event doesn't fire, (TPG cores stay)
+#nationalist_agitation on TPG cores
+
+#166501
+#title = "Chen Kai and Li Wenmao captured!"
+#desc = "Many secret society lodge masters are still at large but the Tiandihui will have trouble operating without their Alliance Masters."
+#picture = "caishikou_execution_grounds"
+#trigger = won opium war, kicked out all smugglers, owns all consessions except Macao, no western influences
+#RTR cores stop spreading, Red turban rebellion event doesn't fire, (RTR cores stay)
+#nationalist_agitation on RTR cores
+
+#decision = Our agents are ready to replace the Qing with a more friendly regime
+#allow =
+#    Russia Influences Tannu Tuva TNT, Mongolia MGL, Manchuria MCK, Qinghai XBI, Kashgaria KML, Xinjiang XIN (or they don't exist)
+#    Qing prevented Taiping and Red Turban Rebellions and is still uncivilized
+#Effects =
+#    badboy ++
+#    chance of plan successful event 
+#    chance of Russian agents caught event 
+
+#title = "success!"
+#desc = "W"
+#triggered only
+#option = "Excellent"
+
+
+#title = "Russian Agents"
+#desc = "We have caught a Russian "
+#triggered only
+#option = ""
+#option = ""
+
+
+#title = "Agents in China caught!"
+#desc = "Several of our agents infiltrating the Qing protectorates have been captured and our plans of dominating China has been released to the international community. Our violation of the Open China Policy where access to China is shared between the great powers has caused some of their politicans to condemn us."
+#triggered only
+#Option: "Back down and pretend we planned nothing of the sort"
+#prestige --
+#Option: "We WILL dominate China, whether the rest of the world likes it or not!"
+#badboy ++
+#starts war against Qing, cut down to size cb vs status_quo
+#triggers event to every other GP who isn't a Russian ally
+
+#title = "Fears of a Russian-dominated China"
+#desc = "Russia plans to dominate China, which will greatly reduce our access to the Chinese market. Several merchants and economists recommend intervening in China's favor to prevent such an outcome."
+#Option = "China must be open to all!"
+#Option = "We can't afford to displease Russia at this time"
+
+
+
+#title = "Qing defeated!"
+#desc = "through force of arms, we have
+
+
+
+#decision
+#title = "Russian Chinese puppets rebel"
+#desc = "The Chinese plundered us, but they did not drive and hustle us, and we could do as we pleased. In contrast, Russian administrators harrass us and intrude on our daily affairs. We should take the chance to declare independence if the Russians are weak."
+#allow = westernized, is russian chinese puppet
+#ai will do = high consciousness, RUS is not gp or is weak militarily
+#effect = 
+#    declare independence, starts war: Russian wargoal is repuppet, your wargoal is status quo
+#    triggers event to other Russian Chinese puppets
+
+#id = 1665??
+#title = "Join anti-Russian rebellion?"
+#desc = "One of our fellow formerly Chinese puppet governments has revolted against our Russian masters, should we take the chance and declare independence as well?" 
+#is_triggered_only = yes
+#option = "Throw off the Russian yoke!"
+#effect = declare independence, starts war: Russian wargoal is repuppet, your wargoal is status quo
+#option = "We will remain loyal to Russia."
+#effect = nothing
+
+
+#id = 1665??
+#title = "Rebels Rooted Out"
+#desc = "We have shut down the most prominent anti-Qing organizations and restored order to our rebellious vassals. This will put a stop to subservisive activities for some time."
+#trigger = Qing won Russia chinese puppets vs Qing war or Russia backs down or the war never happens, Hong Xiuquan and Chen Kai captured
+#kills a few pops and reduces militancy in TPG and RTR cores
+#removes TPG and RTR cores
+
+#TPG and RTR cores also removed if westernized (China.txt the dragon wakes)
+#Warlord Era begins normally if Qing still exists / someone becomes China and westernizes
 
 ########## More bullying China for treaty ports 166600 ##########
 country_event = {
