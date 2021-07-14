@@ -263,7 +263,7 @@ political_decisions = {
                 #government = hms_government
                 government = bourgeois_dictatorship
                 government = fascist_dictatorship
-                government = presidental_dictatorship
+                government = presidential_dictatorship
             }
             nationalism_n_imperialism = 1 #1850
         }
