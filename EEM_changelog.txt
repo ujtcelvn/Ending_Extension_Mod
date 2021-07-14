@@ -161,10 +161,10 @@ v0.4.8a
 events:
 EEM_China_events
     adjust tiandihui and gelaohui and anti-taiping rebellion mtth
-    Red turban main rebellion event to remove TPG cores properly
+    Red turban main rebellion event to not remove TPG cores properly
     added mongolian and manchu anti-taiping wars
 Taiping
-    Tiaping main rebellion event to remove RTR cores properly
+    Tiaping main rebellion event to not remove RTR cores properly
 
 decisions:
 China
