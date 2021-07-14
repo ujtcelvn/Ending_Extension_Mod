@@ -2452,6 +2452,14 @@ country_event = {
     mean_time_to_happen = {
         months = 120
         modifier = {
+            factor = 0.025
+            capital_scope = { controlled_by_rebels = yes }
+        }
+        modifier = {
+            factor = 0.05
+            revolt_percentage = 0.30
+        }
+        modifier = {
             factor = 0.8
             average_militancy = 4
         }
@@ -2515,7 +2523,7 @@ country_event = {
 country_event = {
     id = 166311
     title = "The Red Turban Rebellion"
-    desc = "Tiandihui and Gelaohui members sporting red turbans are rebelling against our new Christian religion!"
+    desc = "Tiandihui and Gelaohui members sporting red turbans are rebelling against our Christian religion!"
     fire_only_once = yes
     picture = "red_turban_attack"
 
@@ -2536,6 +2544,14 @@ country_event = {
 
     mean_time_to_happen = {
         months = 120
+        modifier = {
+            factor = 0.025
+            capital_scope = { controlled_by_rebels = yes }
+        }
+        modifier = {
+            factor = 0.05
+            revolt_percentage = 0.30
+        }
         modifier = {
             factor = 0.8
             average_militancy = 4
