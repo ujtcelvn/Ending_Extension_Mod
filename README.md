@@ -5,7 +5,7 @@ Run this mod with HPM v0.4.6 (clicking on both this EEM and HPM in the mod selec
 
 Since this mod adds new nations, you need to clear the flag cache every time you switch between this mod enabled and HPM alone.
 
-Google drive link of version 0.4.8 that werks on my machine
+Google drive link of version 0.4.8 that werks on my machine (not the latest version, has a core removing bug as China)
 
 https://drive.google.com/file/d/1uY0I_AG6NjN5kTTA2LHeylqmZoSt5NbS/view?usp=sharing
 
