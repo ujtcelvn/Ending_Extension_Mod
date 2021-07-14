@@ -262,6 +262,8 @@ political_decisions = {
                 government = prussian_constitutionalism
                 #government = hms_government
                 government = bourgeois_dictatorship
+                government = fascist_dictatorship
+                government = presidental_dictatorship
             }
             nationalism_n_imperialism = 1 #1850
         }
@@ -300,27 +302,37 @@ political_decisions = {
                     TPG = { exists = no }
                     CHI = { exists = no }
                     KMT = { exists = no }
+                    #RTR = { exists = no }
                 }
                 AND = {
                     tag = TPG
                     QNG = { exists = no }
                     CHI = { exists = no }
                     KMT = { exists = no }
+                    #RTR = { exists = no }
                 }
                 AND = {
                     tag = CHI
                     TPG = { exists = no }
                     QNG = { exists = no }
                     KMT = { exists = no }
+                    #RTR = { exists = no }
                 }
                 AND = {
                     tag = KMT
                     TPG = { exists = no }
                     QNG = { exists = no }
                     CHI = { exists = no }
+                    #RTR = { exists = no }
                 }
+                #AND = {
+                    #tag = RTR
+                    #TPG = { exists = no }
+                    #QNG = { exists = no }
+                    #CHI = { exists = no }
+                    #KMT = { exists = no }
+                #}
             }
-            civilized = yes
             has_global_flag = the_new_army
             has_global_flag = spread_warlord_influence
             NOT = { has_global_flag = warlord_era_has_begun }
@@ -328,21 +340,129 @@ political_decisions = {
 
         allow = {
             war = no
-            owns = 1498 #Macao
-            owns = 1538 #Shanghai
-            owns = 1496 #Hong Kong
-            owns = 1566 #Qingdao
-            owns = 1569 #Weihaiwei
-            owns = 1606 #Jiaxing
-            owns = 2681 #Taibei
-            owns = 2562 #Tainan
-            owns = 1499 #Hainan
-            owns = 2632 #Kwangchowan
-            THIS = {
-                all_core = { owned_by = THIS }
-            }
             psychology_7 = 1
             army_leadership_7 = 1
+
+            QNG = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            KMT = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            CHI = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            FJN = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            GMJ = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            GNG = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            GXI = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            HNN = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            HUI = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            MCK = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            SXI = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            SZC = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            TPG = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            XBI = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            YNN = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
         }
 
         effect = {
