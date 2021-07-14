@@ -55,7 +55,7 @@ country_event = {
             year = 1857
         }
         modifier = {
-            factor = 0.01
+            factor = 0.2
             year = 1860
         }
         modifier = {
@@ -69,11 +69,17 @@ country_event = {
         }
         modifier = {
             factor = 2
-            has_country_flag = tiandihui
+            check_variable = {
+                which = ming_provinces
+                value = 5
+            }
         }
         modifier = {
             factor = 5
-            has_country_flag = gelaohui
+            check_variable = {
+                which = ming_provinces
+                value = 15
+            }
         }
     }
 
@@ -289,7 +295,7 @@ country_event = {
     option = {
         name = "EVT160001OPTB"
 
-        RTR = { all_core = { remove_core = RTR } }
+        #RTR = { all_core = { remove_core = RTR } }
         set_global_flag = ming_has_happened
         set_global_flag = ming_has_been_defeated
 
