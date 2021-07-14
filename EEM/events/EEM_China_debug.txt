@@ -1,15 +1,13 @@
 country_event = {
     id = 166207
     title = "Our Lodge Masters Arrive!"
-    desc = "For some reason the event that gives generals works fine for Taiping but doesn't work for Ming."
+    desc = "For some reason the event that gives generals works fine for Taiping but doesn't work for the Red Turbans."
     picture = "tiandihui_statue"
     fire_only_once = yes
 	
     trigger = {
-        OR = { 
-            has_global_flag = ming_has_happened
-            has_global_flag = ming_has_happened_2
-        }
+        has_global_flag = ming_has_happened
+        NOT = { has_global_flag = ming_has_happened_2 }
         NOT = { has_country_flag = ming_leaders_arrived }
         tag = RTR
     }
@@ -140,6 +138,151 @@ country_event = {
 
         random_owned = {
             limit = { QNG = { foreign_artillery = yes_foreign_artillery } }
+            THIS = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+        }
+    }
+}
+
+
+country_event = {
+    id = 166401
+    title = "Our Lodge Masters Arrive!"
+    desc = "For some reason the event that gives generals works fine for Taiping but doesn't work for the Red Turbans."
+    picture = "tiandihui_statue"
+    fire_only_once = yes
+	
+    trigger = {
+        has_global_flag = ming_has_happened_2
+        NOT = { has_country_flag = ming_leaders_arrived }
+        tag = RTR
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Excellent!"
+        any_pop = {
+            consciousness = -5
+            militancy = -5
+        }
+
+        set_country_flag = ming_leaders_arrived
+        add_country_modifier = { name = fanatic_army duration = 1825 }
+
+        define_general = {
+            name = "Chen Kai"
+            personality = charismatic
+            background = gifted_administrator
+        }
+
+        define_general = {
+            name = "Li Wenmao"
+            personality = diplomatic
+            background = gifted_administrator
+        }
+
+        define_general = {
+            name = "Huang Dingfeng"
+            personality = scared
+            background = spoiled
+        }
+
+        define_general = {
+            name = "Li Wencai"
+            personality = indifferent
+            background = old_school
+        }
+
+        define_general = {
+            name = "Li Jingui"
+            personality = audacious
+            background = expert_raider
+        }
+
+        random_owned = {
+            limit = { TPG = { land_reform = yes_land_reform } }
+            THIS = { economic_reform = yes_land_reform }
+        }
+
+        random_owned = {
+            limit = { TPG = { admin_reform = yes_admin_reform } }
+            THIS = { economic_reform = yes_admin_reform }
+        }
+
+        random_owned = {
+            limit = { TPG = { finance_reform = yes_finance_reform } }
+            THIS = { economic_reform = yes_finance_reform }
+        }
+
+        random_owned = {
+            limit = { TPG = { finance_reform = finance_reform_two } }
+            THIS = { economic_reform = finance_reform_two }
+        }
+
+        random_owned = {
+            limit = { TPG = { monetary_reform = yes_monetary_reform } }
+            THIS = { economic_reform = yes_monetary_reform }
+        }
+
+        random_owned = {
+            limit = { TPG = { monetary_reform = monetary_reform_two } }
+            THIS = { economic_reform = monetary_reform_two activate_technology = no_standard }
+        }
+
+        random_owned = {
+            limit = { TPG = { education_reform = yes_education_reform } }
+            THIS = { economic_reform = yes_education_reform }
+        }
+
+        random_owned = {
+            limit = { TPG = { research_reform = yes_research_reform } }
+            THIS = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+        }
+
+        random_owned = {
+            limit = { TPG = { foreign_training = yes_foreign_training } }
+            THIS = { military_reform = yes_foreign_training }
+        }
+
+        random_owned = {
+            limit = { TPG = { foreign_weapons = yes_foreign_weapons } }
+            THIS = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+
+        random_owned = {
+            limit = { TPG = { foreign_officers = yes_foreign_officers } }
+            THIS = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+        }
+
+        random_owned = {
+            limit = { TPG = { army_schools = yes_army_schools } }
+            THIS = { military_reform = yes_army_schools }
+        }
+
+        random_owned = {
+            limit = { TPG = { foreign_naval_officers = yes_foreign_naval_officers } }
+            THIS = { military_reform = yes_foreign_naval_officers }
+        }
+
+        random_owned = {
+            limit = { TPG = { naval_schools = yes_naval_schools } }
+            THIS = { military_reform = yes_naval_schools }
+        }
+
+        random_owned = {
+            limit = { TPG = { foreign_navies = yes_foreign_navies } }
+            THIS = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+        }
+
+        random_owned = {
+            limit = { TPG = { western_shipyards = yes_western_shipyards } }
+            THIS = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+        }
+
+        random_owned = {
+            limit = { TPG = { foreign_artillery = yes_foreign_artillery } }
             THIS = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
         }
     }
