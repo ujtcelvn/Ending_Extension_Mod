@@ -157,22 +157,32 @@ industry = 30 + 5
 #TODO: restore_qing as MCK
 #TODO: make manchu_elite_cleared_out affect the Warlord Era somehow
 
+v0.4.8b
+Red Turban Rebels no longer restore the Ming, instead, they can declare a new Xiu Empire. When the Red Turbans captured Xunzhou (modern-day Guiping) in 1855 in real life, they renamed it to Xiujing (秀京), and Xiu means "beautiful, elegant, excellent, handsome"
+
+RTR_monarchy.tga     虎 combined with a Xiu 秀 https://www.cinarc.org/Freemasons.html the Tiandihui liked mushing 虎 together with other words. It's a triangle because fuck you
+RTR.tga     Secret Society flag https://practicalhungkyun.com/wp-content/uploads/2013/03/hung-mun-society-symbol.jpg colored according to https://en.wikipedia.org/wiki/File:Heavenearthman.gif
+            The term triad is derived from the three-sided symbol used by the Hung Mun. The sides signify Heaven, Earth and Man.
+
+Added notification event for Taiping if Pope denounces you
+fixed bug in Anti-Christian rebellion mtth, sped up event
+adjust ai chance of several events
+The anti-Qing of version of the Red Turbans Victorious event no longer fires in the anti-Taiping Red Turban rebellion
+RTR cores no longer spread to CHI_2221 (South Jiangsu / Nanjing) because Taiping influence there is too strong
+fascist and presidental dictatorship RTR no longer can become China
+alternative lodge masters arrive event for anti-Taiping revolt
+adjusted prevent_warlord_era so player can see how to activate it, made conditions easier and make more sense
+
+change FACTORY_PURCHASE_MIN_FACTOR = 0.5 to FACTORY_PURCHASE_MIN_FACTOR = 1.0
+	"Basically vic 2 has a mechanic where as a demand for a good lowers a factory will begin lowering its' production over time, before it starts firing workers. The problem is the mechanic is glitched, once demand increases the production is meant to increase as well but it doesn't, it'll just stay low until you reload your save (for some reason reloading fixes it). In the base game production drops to 75% but HPM changes it to drop to 50%, meaning your factories will drop to half production and stay there when demand decreases if you don't reload. Even if the demand increases later the production will not increase to previous levels due to aforementioned glitch. There is a very simple fix which is to just stop factories from lowering production when there is oversupply in the market (they'll just go straight to firing workers when they are no longer turning a profit from not being able to sell goods). Common > Defines and change FACTORY_PURCHASE_MIN_FACTOR = 0.5 to FACTORY_PURCHASE_MIN_FACTOR = 1.0"
+
 v0.4.8a
-events:
-EEM_China_events
-    adjust tiandihui and gelaohui and anti-taiping rebellion mtth
-    Red turban main rebellion event to not remove TPG cores properly
-    added mongolian and manchu anti-taiping wars
-Taiping
-    Tiaping main rebellion event to not remove RTR cores properly
-
-decisions:
-China
-    clear_out_the_manchu_elite to reduce more north han militancy and consciousness, in order to reduce the thing where Qing and Taiping both get swarmed by reactionary rebels
-EEM_China_decisions
-    removed substate_adopt_tech_ming because Ming shouldn't even have any substates
-
-
+adjust tiandihui and gelaohui and anti-taiping rebellion mtth
+Red turban main rebellion event to not remove TPG cores properly
+added mongolian and manchu anti-taiping wars
+Tiaping main rebellion event to not remove RTR cores properly
+clear_out_the_manchu_elite to reduce more north han militancy and consciousness, in order to reduce the thing where Qing and Taiping both get swarmed by reactionary rebels
+removed substate_adopt_tech_ming because Ming shouldn't even have any substates
 
 v0.4.8 (remember to clear flag cache!)
 doubled haber_process fertilizer production from 0.05 to 0.1
@@ -190,7 +200,7 @@ common/countries/Ming.txt
 history/countries/RTR - Ming.txt
 gfx/flags/
     RTR.tga             Ming flag from Chinese Wikipedia https://upload.wikimedia.org/wikipedia/commons/c/ce/China_Ming_Dynasty_Flag_1567.png
-    RTR_communist.tga   Copied from Reddit
+    RTR_communist.tga   Chinese Soviet Republic flag
     RTR_fascist.tga     Iron Blood 18-Star Flag https://www.crwflags.com/fotw/flags/cn%5Ewupr.html https://www.crwflags.com/fotw/flags/cn-nwarf.html
     RTR_monarchy.tga    Ming flag from EU4 
     RTR_republic.tga    Nine Star Taijitu Flag https://www.crwflags.com/fotw/flags/cn-myst.html
