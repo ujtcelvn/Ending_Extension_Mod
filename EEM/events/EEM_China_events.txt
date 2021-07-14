@@ -347,21 +347,6 @@ country_event = {
     mean_time_to_happen = {
         months = 120
         modifier = {
-            factor = 100 #highly delayed if own all treaty ports (except Macao)
-            AND = {
-                #owns = 1498 #Macao
-                owns = 1538 #Shanghai
-                owns = 1496 #Hong Kong
-                owns = 1566 #Qingdao
-                owns = 1569 #Weihaiwei
-                owns = 1606 #Jiaxing
-                owns = 2681 #Taibei
-                owns = 2562 #Tainan
-                owns = 1499 #Hainan
-                owns = 2632 #Kwangchowan
-            }
-        }
-        modifier = {
             factor = 0.8
             NOT = { owns = 1498 } #Macao
         }
@@ -569,28 +554,21 @@ country_event = {
             }
         }
         modifier = {
-            factor = 0.7
-            check_variable = {
-                which = ming_provinces
-                value = 3
-            }
-        }
-        modifier = {
-            factor = 0.7
+            factor = 0.8
             check_variable = {
                 which = ming_provinces
                 value = 4
             }
         }
         modifier = {
-            factor = 0.7
+            factor = 0.8
             check_variable = {
                 which = ming_provinces
                 value = 5
             }
         }
         modifier = {
-            factor = 0.7
+            factor = 0.8
             check_variable = {
                 which = ming_provinces
                 value = 6
@@ -811,7 +789,7 @@ country_event = {
             year = 1857
         }
         modifier = {
-            factor = 0.01
+            factor = 0.2
             year = 1860
         }
         modifier = {
@@ -825,18 +803,9 @@ country_event = {
         }
         modifier = {
             factor = 2
-            NOT = {
-                check_variable = {
-                    which = ming_provinces
-                    value = 6
-                }
-            }
-        }
-        modifier = {
-            factor = 2
             check_variable = {
                 which = taiping_provinces
-                value = 10
+                value = 5
             }
         }
         modifier = {
@@ -939,7 +908,7 @@ country_event = {
     option = {
         name = "Out with the Qing!"
 
-        TPG = { all_core = { remove_core = TPG } }
+        #TPG = { all_core = { remove_core = TPG } }
         set_global_flag = taiping_has_happened
         set_global_flag = taiping_has_been_defeated
 
@@ -2532,10 +2501,15 @@ country_event = {
                 has_global_flag = usa_taiping_missionaries_not_welcomed
             }
         }
+        average_consciousness = 4
     }
 
     mean_time_to_happen = {
         months = 120
+        modifier = {
+            factor = 0.9
+            average_militancy = 4
+        }
         modifier = {
             factor = 0.9
             has_global_flag = eng_taiping_cuck
@@ -2768,6 +2742,120 @@ country_event = {
 }
 
 #Ming power struggle event works
+
+
+country_event = {
+    id = 166314
+    title = "Taiping Distracted"
+    desc = "The Taiping are being distracted by the Red Turban Rebels in the south, so we should take the chance to liberate our Mongolian brothers in Inner Mongolia!"
+    picture = "taiping_defeated"
+    fire_only_once = yes
+
+    trigger = {
+        has_global_flag = ming_has_happened_2
+        tag = MGL
+        exists = TPG
+        exists = RTR
+        NOT = { has_global_flag = ming_victorious_2 }
+        war = no
+        neighbour = TPG
+        TPG = { owns = 1532 }
+        is_vassal = no
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Let's do it!"
+        war = {
+            target = TPG
+            attacker_goal = { casus_belli = acquire_any_state  state_province_id = 1532 }
+            defender_goal = { }
+        }
+        ai_chance = { factor = 100 }
+    }
+
+    option = {
+        name = "We can't afford a war right now..."
+        prestige = -5
+        any_pop = {
+            scaled_militancy = {
+                issue = jingoism
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+country_event = {
+    id = 166315
+    title = "Taiping Distracted"
+    desc = "The Taiping are being distracted by the Red Turban Rebels in the south, so we should take the chance to liberate our Manchu brothers!"
+    picture = "taiping_defeated"
+    fire_only_once = yes
+
+    trigger = {
+        has_global_flag = ming_has_happened_2
+        tag = MCK
+        exists = TPG
+        exists = RTR
+        NOT = { has_global_flag = ming_victorious_2 }
+        war = no
+        neighbour = TPG
+        TPG = { owns = 1612 }
+        is_vassal = no
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Let's do it!"
+        1612 = { add_core = MCK }
+        1614 = { add_core = MCK }
+        1615 = { add_core = MCK }
+        1618 = { add_core = MCK }
+        1616 = { add_core = MCK }
+        1613 = { add_core = MCK }
+        1617 = { add_core = MCK }
+        war = {
+            target = TPG
+            attacker_goal = { casus_belli = acquire_all_cores country = MCK }
+            defender_goal = { casus_belli = civil_war }
+        }
+        ai_chance = { factor = 100 }
+    }
+
+    option = {
+        name = "We can't afford a war right now..."
+        prestige = -5
+        any_pop = {
+            scaled_militancy = {
+                issue = jingoism
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 ########## Russia-backed Qinghai Dynasty Puppet 166500 ##########
 #166500
