@@ -169,7 +169,7 @@ fixed bug in Anti-Christian rebellion mtth, sped up event
 adjust ai chance of several events
 The anti-Qing of version of the Red Turbans Victorious event no longer fires in the anti-Taiping Red Turban rebellion
 RTR cores no longer spread to CHI_2221 (South Jiangsu / Nanjing) because Taiping influence there is too strong
-fascist and presidental dictatorship RTR no longer can become China
+fascist and presidential dictatorship RTR no longer can become China
 alternative lodge masters arrive event for anti-Taiping revolt
 adjusted prevent_warlord_era so player can see how to activate it, made conditions easier and make more sense
 
