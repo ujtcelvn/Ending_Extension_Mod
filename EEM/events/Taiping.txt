@@ -1513,6 +1513,14 @@ province_event = {
             factor = 3
             NOT = { culture = nanfaren }
         }
+        modifier = {
+            factor = 1.5
+            has_global_flag = qing_won_opium_war
+        }
+        modifier = {
+            factor = 1.5
+            has_global_flag = qing_won_second_opium_war
+        }
     }
 
     option = {
