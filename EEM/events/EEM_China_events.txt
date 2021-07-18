@@ -719,6 +719,14 @@ province_event = {
                 culture = nanfaren
             }
         }
+        modifier = {
+            factor = 1.5
+            has_global_flag = qing_won_opium_war
+        }
+        modifier = {
+            factor = 1.5
+            has_global_flag = qing_won_second_opium_war
+        }
     }
 
     option = {
@@ -1648,10 +1656,10 @@ country_event = {
 country_event = {
     id = 166208
     title = "The Sanhehui"
-    desc = "A branch of the Tiandihui ,the Sanhehui, literally meaning Triple Union Society, referring to the union of heaven, earth and humanity, or more commonly known as the Triads, have been making moves to sieze power."
+    desc = "A branch of the Tiandihui, the Sanhehui, literally meaning Triple Union Society, referring to the union of heaven, earth and humanity, or more commonly known as the Triads, have been making moves to sieze power."
     picture = "sanhehui"
     fire_only_once = yes
-
+    
     trigger = {
         tag = RTR
         OR = { 
@@ -1661,25 +1669,16 @@ country_event = {
         civilized = yes
         is_ideology_enabled = anarcho_liberal
         NOT = { has_country_flag = triad_ming }
-        ruling_party_ideology = conservative
-        average_consciousness = 4
-        average_militancy = 4
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = theocracy
+        }
+        upper_house = { ideology = anarcho_liberal value = 0.025 }
     }
 
     mean_time_to_happen = {
         months = 120
-        modifier = {
-            factor = 0.8
-            revolt_percentage = 0.1
-        }
-        modifier = {
-            factor = 0.8
-            revolt_percentage = 0.25
-        }
-        modifier = {
-            factor = 0.8
-            revolt_percentage = 0.5
-        }
         modifier = {
             factor = 0.5
             upper_house = { ideology = anarcho_liberal value = 0.05 }
@@ -1687,6 +1686,10 @@ country_event = {
         modifier = {
             factor = 0.5
             upper_house = { ideology = anarcho_liberal value = 0.1 }
+        }
+        modifier = {
+            factor = 0.1
+            upper_house = { ideology = anarcho_liberal value = 0.2 }
         }
     }
 
@@ -1704,10 +1707,6 @@ country_event = {
 
         political_reform = none_voting
         political_reform = party_appointed
-        random_owned = {
-            limit = { owner = { NOT = { political_reform = bankruptcy } } }
-            political_reform = debtors_prisons
-        }
 
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
@@ -2171,7 +2170,7 @@ country_event = {
         relation = { who = USA value = 400 }
 
         ai_chance = {
-            factor = 90
+            factor = 80
         }
     }
 
@@ -2180,7 +2179,7 @@ country_event = {
         set_global_flag = usa_taiping_missionaries_not_welcomed
         add_country_modifier = { name = divided_society duration = 3650 }
         ai_chance = {
-            factor = 10
+            factor = 20
         }
     }
 }
@@ -2366,10 +2365,6 @@ country_event = {
                 war_policy = anti_military
             }
             modifier = {
-                factor = 2
-                war_policy = jingoism
-            }
-            modifier = {
                 factor = 0.5
                 religious_policy = pro_atheism
             }
@@ -2392,7 +2387,7 @@ country_event = {
     id = 166309
     title = "EVTNAME166309" #Pope supports Taiping
     desc = "EVTDESC166309"
-    picture = "god"
+    picture = "pope"
 
     is_triggered_only = yes
 
@@ -2402,7 +2397,6 @@ country_event = {
         any_pop = {
             limit = { has_pop_religion = protestant }
             militancy = -9
-            reduce_pop = 0.95
         }
     }
 }
@@ -2416,7 +2410,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = "What? They are the heretics!"
+        name = "What? He is the heretic!"
         prestige = -10
         relation = { who = FROM value = -400 }
     }
@@ -2446,7 +2440,6 @@ country_event = {
                 NOT = { government = theocracy }
             }
         }
-        average_consciousness = 4
     }
 
     mean_time_to_happen = {
@@ -2461,11 +2454,11 @@ country_event = {
         }
         modifier = {
             factor = 0.8
-            average_militancy = 4
+            average_consciousness = 4
         }
         modifier = {
             factor = 0.8
-            average_militancy = 6
+            average_militancy = 4
         }
         modifier = {
             factor = 0.8
@@ -2492,7 +2485,7 @@ country_event = {
             has_country_modifier = western_influences 
         }
         modifier = {
-            factor = 2
+            factor = 5
             pop_majority_religion = protestant
         }
         modifier = {
@@ -2554,11 +2547,11 @@ country_event = {
         }
         modifier = {
             factor = 0.8
-            average_militancy = 4
+            average_consciousness = 4
         }
         modifier = {
             factor = 0.8
-            average_militancy = 6
+            average_militancy = 4
         }
         modifier = {
             factor = 0.8
@@ -2585,7 +2578,7 @@ country_event = {
             has_country_modifier = western_influences 
         }
         modifier = {
-            factor = 2
+            factor = 5
             pop_majority_religion = protestant
         }
         modifier = {
@@ -2878,7 +2871,7 @@ country_event = {
         name = "Let's do it!"
         war = {
             target = TPG
-            attacker_goal = { casus_belli = acquire_any_state  state_province_id = 1616 }
+            attacker_goal = { casus_belli = china_acquire_state  state_province_id = 1616 }
             defender_goal = { }
         }
         ai_chance = { factor = 100 }
@@ -2926,7 +2919,7 @@ country_event = {
         name = "Let's do it!"
         war = {
             target = TPG
-            attacker_goal = { casus_belli = acquire_any_state  state_province_id = 1490 }
+            attacker_goal = { casus_belli = china_acquire_state  state_province_id = 1490 }
             defender_goal = { }
         }
         ai_chance = { factor = 100 }
@@ -2975,7 +2968,7 @@ country_event = {
         name = "Let's do it!"
         war = {
             target = TPG
-            attacker_goal = { casus_belli = acquire_any_state  state_province_id = 1601 } #1601 kunming 1585 Yibin 1586 yazhou 1582 longan
+            attacker_goal = { casus_belli = acquire_core_state state_province_id = 1601 } #1601 kunming 1585 Yibin 1586 yazhou 1582 longan
             defender_goal = { }
         }
         ai_chance = { factor = 100 }
@@ -3000,99 +2993,224 @@ country_event = {
 
 
 
-########## Russia-backed Qinghai Dynasty Puppet 166500 ##########
-#166500
-#title = "Hong Xiuquan and Feng Yunshan captured!"
-#desc = "Many of their delusional followers are still at large but the God Worshipping Society will have trouble operating without their chariasmatic leaders."
-#picture = "caishikou_execution_grounds"
-#trigger = won opium war, kicked out all smugglers, owns all consessions except Macao, no western influences
-#Taiping cores stop spreading, Taiping rebellion event doesn't fire, (TPG cores stay)
-#nationalist_agitation on TPG cores
-
-#166501
-#title = "Chen Kai and Li Wenmao captured!"
-#desc = "Many secret society lodge masters are still at large but the Tiandihui will have trouble operating without their Alliance Masters."
-#picture = "caishikou_execution_grounds"
-#trigger = won opium war, kicked out all smugglers, owns all consessions except Macao, no western influences
-#RTR cores stop spreading, Red turban rebellion event doesn't fire, (RTR cores stay)
-#nationalist_agitation on RTR cores
-
-#decision = Our agents are ready to replace the Qing with a more friendly regime
-#allow =
-#    Russia Influences Tannu Tuva TNT, Mongolia MGL, Manchuria MCK, Qinghai XBI, Kashgaria KML, Xinjiang XIN (or they don't exist)
-#    Qing prevented Taiping and Red Turban Rebellions and is still uncivilized
-#Effects =
-#    badboy ++
-#    chance of plan successful event 
-#    chance of Russian agents caught event 
-
-#title = "success!"
-#desc = "W"
-#triggered only
-#option = "Excellent"
-
-
-#title = "Russian Agents"
-#desc = "We have caught a Russian "
-#triggered only
-#option = ""
-#option = ""
-
-
-#title = "Agents in China caught!"
-#desc = "Several of our agents infiltrating the Qing protectorates have been captured and our plans of dominating China has been released to the international community. Our violation of the Open China Policy where access to China is shared between the great powers has caused some of their politicans to condemn us."
-#triggered only
-#Option: "Back down and pretend we planned nothing of the sort"
-#prestige --
-#Option: "We WILL dominate China, whether the rest of the world likes it or not!"
-#badboy ++
-#starts war against Qing, cut down to size cb vs status_quo
-#triggers event to every other GP who isn't a Russian ally
-
-#title = "Fears of a Russian-dominated China"
-#desc = "Russia plans to dominate China, which will greatly reduce our access to the Chinese market. Several merchants and economists recommend intervening in China's favor to prevent such an outcome."
-#Option = "China must be open to all!"
-#Option = "We can't afford to displease Russia at this time"
-
-
-
-#title = "Qing defeated!"
-#desc = "through force of arms, we have
-
-
-
-#decision
-#title = "Russian Chinese puppets rebel"
-#desc = "The Chinese plundered us, but they did not drive and hustle us, and we could do as we pleased. In contrast, Russian administrators harrass us and intrude on our daily affairs. We should take the chance to declare independence if the Russians are weak."
-#allow = westernized, is russian chinese puppet
-#ai will do = high consciousness, RUS is not gp or is weak militarily
-#effect = 
-#    declare independence, starts war: Russian wargoal is repuppet, your wargoal is status quo
-#    triggers event to other Russian Chinese puppets
-
-#id = 1665??
-#title = "Join anti-Russian rebellion?"
-#desc = "One of our fellow formerly Chinese puppet governments has revolted against our Russian masters, should we take the chance and declare independence as well?" 
-#is_triggered_only = yes
-#option = "Throw off the Russian yoke!"
-#effect = declare independence, starts war: Russian wargoal is repuppet, your wargoal is status quo
-#option = "We will remain loyal to Russia."
-#effect = nothing
-
-
-#id = 1665??
-#title = "Rebels Rooted Out"
-#desc = "We have shut down the most prominent anti-Qing organizations and restored order to our rebellious vassals. This will put a stop to subservisive activities for some time."
-#trigger = Qing won Russia chinese puppets vs Qing war or Russia backs down or the war never happens, Hong Xiuquan and Chen Kai captured
-#kills a few pops and reduces militancy in TPG and RTR cores
-#removes TPG and RTR cores
-
-#TPG and RTR cores also removed if westernized (China.txt the dragon wakes)
-#Warlord Era begins normally if Qing still exists / someone becomes China and westernizes
-
-########## More bullying China for treaty ports 166600 ##########
+########## Qing 166500 ##########
 country_event = {
-    id = 166600
+    id = 166500
+    title = "English Smugglers Evicted"
+    desc = "We have ejected the British opium peddlers back across the sea, where they belong."
+    fire_only_once = yes
+    picture = "Opiumwar"
+
+    trigger = {
+        tag = QNG
+        war = no
+        OR = {
+            AND = { has_global_flag = kowloon_incident_war truce_with = ENG }
+            has_global_flag = kowloon_incident_no_war 
+		}
+        AND = {
+            owns = 1538 #Shanghai
+            owns = 1496 #Hong Kong
+            owns = 1566 #Qingdao
+            owns = 1569 #Weihaiwei
+            owns = 1606 #Jiaxing
+            owns = 2681 #Taibei
+            owns = 2562 #Tainan
+            owns = 1499 #Hainan
+            owns = 2632 #Kwangchowan
+        }
+        NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
+        has_recently_lost_war = no
+        NOT = { has_global_flag = qing_won_opium_war } #1839
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "And don't come back!"
+        set_global_flag = qing_won_opium_war
+        any_pop = {
+            consciousness = -2
+        }
+    }
+}
+
+country_event = {
+    id = 166501
+    title = "English Pirates Evicted"
+    desc = "We have once again ejected the British opium peddlers back across the sea, where they belong."
+    fire_only_once = yes
+    picture = "arrow_incident"
+
+    trigger = {
+        tag = QNG
+        war = no
+        OR = {
+            AND = { has_global_flag = second_opium_war truce_with = ENG }
+            has_global_flag = second_opium_no_war 
+		}
+        AND = {
+            owns = 1538 #Shanghai
+            owns = 1496 #Hong Kong
+            owns = 1566 #Qingdao
+            owns = 1569 #Weihaiwei
+            owns = 1606 #Jiaxing
+            owns = 2681 #Taibei
+            owns = 2562 #Tainan
+            owns = 1499 #Hainan
+            owns = 2632 #Kwangchowan
+        }
+        NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
+        has_recently_lost_war = no
+        has_global_flag = qing_won_opium_war
+        NOT = { has_global_flag = qing_won_second_opium_war } #1856
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = "Let's hope the barbarians learned their lession this time."
+        set_global_flag = qing_won_second_opium_war
+        any_pop = {
+            consciousness = -2
+        }
+    }
+}
+
+country_event = {
+    id = 166502
+    title = "Chen Kai and Li Wenmao Captured!"
+    desc = "Local troops report that Chen Kai and Li Wenmao were captured after a raid of a secret society meeting. The loss of their Alliance Masters will definitely cripple the Tiandihui's ability to organize."
+    fire_only_once = yes
+    picture = "peking_police"
+
+    trigger = {
+        tag = QNG
+        war = no
+
+        AND = {
+            owns = 1538 #Shanghai
+            owns = 1496 #Hong Kong
+            owns = 1566 #Qingdao
+            owns = 1569 #Weihaiwei
+            owns = 1606 #Jiaxing
+            owns = 2681 #Taibei
+            owns = 2562 #Tainan
+            owns = 1499 #Hainan
+            owns = 2632 #Kwangchowan
+        }
+        NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
+        has_recently_lost_war = no
+        NOT = { has_global_flag = ming_has_happened }
+        has_global_flag = qing_won_opium_war
+        NOT = { revolt_percentage = 0.10 }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 2
+            any_owned_province = { has_province_modifier = western_presence_research }
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = european_military_mission 
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = legation_quarter 
+        }
+        modifier = {
+            factor = 0.1
+            has_global_flag = qing_won_second_opium_war
+        }
+    }
+
+    option = {
+        name = "Excellent!"
+        any_owned = {
+            limit = { is_core = RTR }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 1825
+            }
+        }
+        set_global_flag = ming_has_happened
+        set_global_flag = ming_has_been_defeated
+    }
+}
+
+country_event = {
+    id = 166503
+    title = "Hong Xiuquan Captured!"
+    desc = "After a Taiping mass outdoor sermon thousands strong were ordered to but refused to disperse, Qing troops surrounded and arrested the lot of them, including their leader, Hong Xiuquan."
+    fire_only_once = yes
+    picture = "peking_police"
+
+    trigger = {
+        tag = QNG
+        war = no
+
+        AND = {
+            owns = 1538 #Shanghai
+            owns = 1496 #Hong Kong
+            owns = 1566 #Qingdao
+            owns = 1569 #Weihaiwei
+            owns = 1606 #Jiaxing
+            owns = 2681 #Taibei
+            owns = 2562 #Tainan
+            owns = 1499 #Hainan
+            owns = 2632 #Kwangchowan
+        }
+        NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
+        has_recently_lost_war = no
+        NOT = { has_global_flag = taiping_has_happened }
+        has_global_flag = qing_won_opium_war
+        NOT = { revolt_percentage = 0.10 }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 2
+            any_owned_province = { has_province_modifier = western_presence_research }
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = european_military_mission 
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = legation_quarter 
+        }
+        modifier = {
+            factor = 0.1
+            has_global_flag = qing_won_second_opium_war
+        }
+    }
+
+    option = {
+        name = "A crippling blow to the Taiping movement"
+        any_owned = {
+            limit = { is_core = TPG }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 1825
+            }
+        }
+        set_global_flag = taiping_has_happened
+        set_global_flag = taiping_has_been_defeated
+    }
+}
+
+#RTR and TPG cores are removed by westernizing
+
+country_event = {
+    id = 166504
     title = "Juye Incident"
     desc = "German missionaries Richard Henle and Franz Xaver Nies have been murdered in Shandong! The German government is demanding compensation!"
     fire_only_once = yes
@@ -3237,3 +3355,14 @@ country_event = {
         }
     }
 }
+
+
+########## 166600 ##########
+
+#The Tongmenghui
+#Revolutionary Uprising in $STATENAME$
+#Xinhai Revolution
+
+#The New Army
+#The Warlord Era begins
+
