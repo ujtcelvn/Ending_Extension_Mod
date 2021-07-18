@@ -302,28 +302,28 @@ political_decisions = {
                     TPG = { exists = no }
                     CHI = { exists = no }
                     KMT = { exists = no }
-                    #RTR = { exists = no }
+                    RTR = { exists = no }
                 }
                 AND = {
                     tag = TPG
                     QNG = { exists = no }
                     CHI = { exists = no }
                     KMT = { exists = no }
-                    #RTR = { exists = no }
+                    RTR = { exists = no }
                 }
                 AND = {
                     tag = CHI
                     TPG = { exists = no }
                     QNG = { exists = no }
                     KMT = { exists = no }
-                    #RTR = { exists = no }
+                    RTR = { exists = no }
                 }
                 AND = {
                     tag = KMT
                     TPG = { exists = no }
                     QNG = { exists = no }
                     CHI = { exists = no }
-                    #RTR = { exists = no }
+                    RTR = { exists = no }
                 }
                 #AND = {
                     #tag = RTR
@@ -341,7 +341,7 @@ political_decisions = {
         allow = {
             war = no
             psychology_7 = 1
-            army_leadership_7 = 1
+            army_professionalism = 1
 
             QNG = {
                 OR = {
@@ -519,4 +519,52 @@ political_decisions = {
             }
         }
     }
+
+    become_qing = {
+        picture = qing_emperor
+        alert = yes
+        potential = {
+            tag = MCK
+            TPG = { exists = no }
+            QNG = { exists = no }
+	        RTR = { exists = no }
+	        CHI = { exists = no }
+	        KMT = { exists = no }
+        }
+
+        allow = {
+            war = no
+            owns = 2221
+            owns = 1612
+            owns = 1552
+            owns = 1524
+            owns = 1577
+            owns = 1493
+            owns = 1555
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+        }
+
+        effect = {
+            prestige = 40
+            all_core = { add_core = QNG }
+            change_tag = QNG
+            any_owned_province = {
+                limit = {
+                    NOT = { is_core = QNG }
+                }
+                add_province_modifier = {
+                    name = anti_manchu_sentiment
+                    duration = 3650
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
 }
