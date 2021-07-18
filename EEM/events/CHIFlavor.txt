@@ -229,6 +229,7 @@ country_event = {
             limit = { is_primary_culture = no }
             militancy = 3
         }
+        set_global_flag = kowloon_incident_cucked
         ai_chance = { factor = 10 }
     }
 }
@@ -247,6 +248,7 @@ country_event = {
 
     option = {
         name = "EVT131709OPTA"
+        set_global_flag = kowloon_incident_war
         leave_alliance = FROM
         end_military_access = FROM
         war = {
@@ -264,6 +266,7 @@ country_event = {
 
     option = {
         name = "EVT131709OPTB"
+        set_global_flag = kowloon_incident_no_war
         prestige_factor = -0.25
         random_owned = {
             limit = {
@@ -922,6 +925,7 @@ country_event = {
 
     option = {
         name = "EVT1316182OPTB"
+        set_global_flag = second_opium_no_war
         prestige_factor = -0.25
         random_owned = {
             limit = {
