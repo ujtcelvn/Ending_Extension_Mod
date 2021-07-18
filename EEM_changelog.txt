@@ -116,7 +116,7 @@ industry = 30 + 5
 		Environmental protection Agency 1970
 	decolonization
 		make revolt events spread from country to country instead of being independent from each other
-		Colony revolution
+		Colony revolution?
 			If colony can be released as a civilized nation, they are released (with few techs and post-colonial nation tech school) (slightly stronger than just normal rebels so they don't get stomped?)
 			former master has choice to let them go (prestige loss, jingoists angry, slight relations gain) or go to war to annex them vs white peace
 			if the revolution is crushed, the nationalists demand independence events stop firing, and the colony calms down?
@@ -136,9 +136,7 @@ industry = 30 + 5
 			UN_focus_world_trade				trade and economy boosts
 			UN_focus_world_health				prevent disease events, can eradicate smallpox, anti-pollution
 			UN_focus_environmentalism			by some miracle if environmentalists somehow get into power without being corrupt, fight a losing battle against global warming and pollution
-	proxy wars: let rival GPs fund rebel movements?
 #Economy
-	the final solution to the artisan problem
 	White Collar Ofice:
 		Staff: Clerks and Capitalists
 		Build: cement, steel, electric gear
@@ -153,9 +151,19 @@ industry = 30 + 5
 	foam_concrete: back to the early 1920s and the production of autoclaved aerated concrete, which was used mainly as insulation.[2] A detailed study concerning the composition, physical properties and production of foamed concrete was first carried out in the 1950s and 60s.[3][4][5] Following this research, new admixtures were developed in the late 1970s and early 80s, which led to the commercial use of foamed concrete in construction projects
 	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%. U
 	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
-#jam in Africamod somehow
-#TODO: restore_qing as MCK
+#jam in Africamod
 #TODO: make manchu_elite_cleared_out affect the Warlord Era somehow
+
+
+v0.4.8c
+Moved colonial migration bonus from social thought (except Malthusian Thought and Social Alienation because those increasing colonial migration fit) to naval science techs of the same tier
+slightly increased chance that colonial nations would research those naval science techs
+adjust mtth of various events
+Triad rule event only happens if you're absolute_monarchy, prussian_constitutionalism, or theocracy, because only then would they have enough influence
+fixed bug where if Pope supports Taiping your protestant pops die 
+added event if Qing won the 1st and 2nd Opium War / wars didn't happen, makes taiping / red turban cores spread slower, makes it possible to avoid the rebellions outright
+become_qing decision as MCK
+prevent warlord era's tech requirement reduced
 
 v0.4.8b
 Red Turban Rebels no longer restore the Ming, instead, they can declare a new Xiu Empire. When the Red Turbans captured Xunzhou (modern-day Guiping) in 1855 in real life, they renamed it to Xiujing (秀京), and Xiu means "beautiful, elegant, excellent, handsome"
