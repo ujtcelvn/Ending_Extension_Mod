@@ -2013,7 +2013,7 @@ naval_plans = {
     cost = 7200
     unciv_military = yes
     supply_range = 0.5
-
+    colonial_migration = 0.05
     ai_chance = {
         factor = 0.25
         modifier = {
@@ -2057,6 +2057,11 @@ naval_plans = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.01
+            rank = 16
+            colonial_nation = yes
+        }
     }
 }
 naval_statistics = {
@@ -2065,6 +2070,7 @@ naval_statistics = {
     cost = 10800
     unciv_military = yes
     supply_range = 0.5
+    colonial_migration = 0.05
         ai_chance = {
         factor = 0.25
         modifier = {
@@ -2116,6 +2122,11 @@ naval_statistics = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.01
+            rank = 16
+            colonial_nation = yes
+        }
     }
 }
 naval_logistics = {
@@ -2124,6 +2135,7 @@ naval_logistics = {
     cost = 14400
     unciv_military = yes
     supply_range = 1.0
+    colonial_migration = 0.05
         ai_chance = {
         factor = 0.25
         modifier = {
@@ -2166,6 +2178,11 @@ naval_logistics = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.01
+            rank = 16
+            colonial_nation = yes
+        }
     }
 }
 naval_directionism = {
@@ -2174,6 +2191,7 @@ naval_directionism = {
     cost = 18000
     unciv_military = yes
     supply_range = 1.0
+    colonial_migration = 0.05
         ai_chance = {
         factor = 0.25
         modifier = {
@@ -2216,6 +2234,11 @@ naval_directionism = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.01
+            rank = 16
+            colonial_nation = yes
+        }
     }
 }
 naval_integration = {
@@ -2224,6 +2247,7 @@ naval_integration = {
     cost = 21600
     unciv_military = yes
     supply_range = 1.0
+
         ai_chance = {
         factor = 0.25
         modifier = {
@@ -2283,6 +2307,7 @@ naval_science_7 = {
     cost = 25200
     unciv_military = yes
     supply_range = 1.0
+    colonial_migration = 0.05
         ai_chance = {
         factor = 0.25
         modifier = {
@@ -2332,6 +2357,11 @@ naval_science_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.01
+            rank = 16
+            colonial_nation = yes
         }
     }
 }
