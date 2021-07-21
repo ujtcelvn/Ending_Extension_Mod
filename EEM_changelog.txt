@@ -152,8 +152,45 @@ industry = 30 + 5
 	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%. U
 	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
 #jam in Africamod
-#TODO: make manchu_elite_cleared_out affect the Warlord Era somehow
+#Consent reforms
+    administrative = yes
+    next_step_only = yes
+    None
+        global_population_growth = 0.001
+        global_immigrant_attract = 0.01
+        education_efficiency_modifier = -0.025
+    on Puberty (~10, most western nations start here) 
+        no effect
+        education_efficiency_modifier = 0.025
+    mid-puberty (~14)
+        education_efficiency_modifier = 0.05
+    post-puberty (16~18)
+        global_population_growth = -0.001
+        education_efficiency_modifier = 0.075
+        global_immigrant_attract = 0.01
+        administrative_multiplier = 1
+    LGBT rights
+        global_population_growth = -0.002
+        education_efficiency_modifier = 0.01
+        global_immigrant_attract = 0.02
+        administrative_multiplier = 2
+    attraction to the reform if high literacy, women allowed to vote
+    Each step gives + literacy and - population growth, reflecting the demographic transition, thus the demographic transition triggered modifiers can be removed
+    each healthcare invention gives 0.0001 pop growth, but each health care reform gives 0.001 global pop growth
+    nerf base education efficiency
 
+v0.4.9
+cleaned up a few China events
+Moved RTR capital from 1493 Canton to 1504 Pingle, Guangxi (irl it's Guping, Guangxi)
+RTR decision to rename Pingle to Xiujing: "Xunzhou (modern-day Guiping) in 1855, renamed it to Xiujing (秀京), and made it their capital"
+decision to rename Xiujing back to Pingle
+KMT can move capital to Nanjing
+Xiu Empire renamed to Cheng empire, the Red Turban Rebels actually named themselves 大成國
+Edited RTR_monarchy to better put 成 instead of 秀 next to the 虎
+RTR's become china decision made to be more like Qing's
+Made Chinese event ids slightly more compact
+Yuan Shikai can make himself Emperor
+Warlord Era complete rework, featuring several different types of warlord eras or it being prevented completely
 
 v0.4.8c
 Moved colonial migration bonus from social thought (except Malthusian Thought and Social Alienation because those increasing colonial migration fit) to naval science techs of the same tier
