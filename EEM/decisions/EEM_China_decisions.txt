@@ -129,12 +129,12 @@ political_decisions = {
         picture = nanking
         alert = yes
         potential = {
-            tag = RTR
+            OR = { tag = RTR tag = KMT }
             NOT = { capital = 2221 }
-            war = no
         }
 
         allow = {
+            war = no
             owns = 2221
         }
 
@@ -260,7 +260,7 @@ political_decisions = {
             NOT = {
                 government = absolute_monarchy
                 government = prussian_constitutionalism
-                #government = hms_government
+                government = hms_government
                 government = bourgeois_dictatorship
                 government = fascist_dictatorship
                 government = presidential_dictatorship
@@ -272,15 +272,50 @@ political_decisions = {
             prestige = 20
             all_core = { remove_core = RTR }
             change_tag = CHI
-            add_accepted_culture = beifaren
-            add_accepted_culture = nanfaren
-            add_accepted_culture = manchu
-            add_accepted_culture = hakka
-            add_accepted_culture = miao
-            add_accepted_culture = min
-            add_accepted_culture = zhuang
-            add_accepted_culture = yue
-            add_accepted_culture = yi
+
+            random_country = {
+                limit = {
+                    tag = TIB
+                    vassal_of = THIS
+                }
+                THIS = { release_vassal = TIB }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1587
+                    NOT = { exists = TIB }
+                }
+                owner = {
+                    any_owned = {
+                        limit = {
+                            region = TIB_1591
+                        }
+                        secede_province = TIB
+                    }
+                }
+            }
+            random_country = {
+                limit = {
+                    tag = MGL
+                    vassal_of = THIS
+                }
+                THIS = { release_vassal = MGL }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1465
+                    NOT = { exists = MGL }
+                }
+                owner = {
+                    any_owned = {
+                        limit = {
+                            is_core = MGL
+                            NOT = { region = CHI_1532 }
+                        }
+                        secede_province = MGL
+                    }
+                }
+            }
             CHI_1468 = { remove_core = CHI }
             CHI_1465 = { remove_core = CHI }
             random_owned = { limit = { region = CHI_1082 } CHI_1082 = { add_core = MCK } }
@@ -297,13 +332,13 @@ political_decisions = {
         alert = yes
         potential = {
             OR = {
-                AND = {
-                    tag = QNG
-                    TPG = { exists = no }
-                    CHI = { exists = no }
-                    KMT = { exists = no }
-                    RTR = { exists = no }
-                }
+                #AND = {
+                #    tag = QNG
+                #    TPG = { exists = no }
+                #    CHI = { exists = no }
+                #    KMT = { exists = no }
+                #    RTR = { exists = no }
+                #}
                 AND = {
                     tag = TPG
                     QNG = { exists = no }
@@ -342,7 +377,7 @@ political_decisions = {
             war = no
             psychology_7 = 1
             army_professionalism = 1
-
+            invention = secret_police
             QNG = {
                 OR = {
                     exists = no
@@ -463,11 +498,18 @@ political_decisions = {
                     vassal_of = THIS
                 }
             }
+            RTR = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
         }
 
         effect = {
             prestige = 20
-            set_global_flag = warlord_era_prevented
             add_country_modifier = {
                 name = national_confusion
                 duration = 1825
@@ -549,7 +591,7 @@ political_decisions = {
         }
 
         effect = {
-            prestige = 40
+            prestige = 25
             all_core = { add_core = QNG }
             change_tag = QNG
             any_owned_province = {
@@ -558,7 +600,7 @@ political_decisions = {
                 }
                 add_province_modifier = {
                     name = anti_manchu_sentiment
-                    duration = 3650
+                    duration = 1825
                 }
             }
         }
@@ -567,4 +609,109 @@ political_decisions = {
     }
 
 
+    xiu_capital = {
+    picture = tiandihui_seal
+        potential = {
+            tag = RTR
+            NOT = { has_global_flag = xiu_capital_decreted }
+            NOT = { capital = 2221 }
+        }
+
+        allow = {
+            owns = 1504
+        }
+
+        effect = {
+            prestige = 1
+            set_global_flag = xiu_capital_decreted
+            1504 = { change_province_name = "Xiujing" }
+            capital = 1504
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    abolish_xiu_capital = {
+    picture = tiandihui_seal
+        potential = {
+            NOT = { tag = RTR }
+            #NOT = { tag = LAN }
+            is_culture_group = east_asian
+            has_global_flag = xiu_capital_decreted
+        }
+
+        allow = {
+            owns = 1504
+        }
+
+        effect = {
+            clr_global_flag = xiu_capital_decreted
+            1504 = { change_province_name = "Pingle" }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    empire_of_china = {
+        picture = yuan_shikai_emperor
+        alert = yes
+        potential = {
+            tag = CHI
+            government = presidential_dictatorship
+        }
+
+        allow = {
+            state_n_government = 1
+            war = no
+            KMT = { exists = no }
+            TPG = { exists = no }
+            RTR = { exists = no }
+            QNG = { exists = no }
+        }
+
+        effect = {
+            prestige = 25
+
+            government = absolute_monarchy
+
+            any_owned_province = {
+                add_province_modifier = {
+                    name = liberal_agitation
+                    duration = 1825
+                }
+            }
+            any_pop = {
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = 9
+                }
+            }
+
+
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = FJN
+                        tag = GMJ
+                        tag = GNG
+                        tag = GXI
+                        tag = HNN
+                        tag = HUI
+                        tag = MCK
+                        tag = SXI
+                        tag = SZC
+                        tag = TAI
+                        tag = XBI
+                        tag = XIN
+                        tag = YNN
+                    }
+                }
+                relation = { who = THIS value = -400 }
+            }
+
+
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }

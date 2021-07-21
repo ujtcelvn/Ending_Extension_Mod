@@ -596,6 +596,20 @@ political_decisions = {
         allow = {
             war = no
             owns = 2221
+            RTR = {
+                OR = {
+                    exists = no
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            QNG = {
+                OR = {
+                    exists = no
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
             CHI = {
                 OR = {
                     exists = no
@@ -780,6 +794,24 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
+            random_country = {
+                limit = {
+                    tag = RTR
+                    ai = yes
+                    exists = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = QNG
+                    ai = yes
+                    exists = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
             any_country = {
                 limit = {
                     exists = yes
@@ -807,6 +839,7 @@ political_decisions = {
         picture = become_leader_of_communists
         potential = {
             is_culture_group = east_asian
+            NOT = { tag = QNG }
             NOT = { tag = LAN }
             NOT = { tag = KMT }
             has_country_flag = communist_faction
@@ -834,6 +867,20 @@ political_decisions = {
                     in_sphere = THIS
                     vassal_of = THIS
                     exists = no
+                }
+            }
+            RTR = {
+                OR = {
+                    exists = no
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            QNG = {
+                OR = {
+                    exists = no
+                    in_sphere = THIS
+                    vassal_of = THIS
                 }
             }
             FJN = {
@@ -1003,6 +1050,24 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
+            random_country = {
+                limit = {
+                    tag = RTR
+                    ai = yes
+                    exists = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = QNG
+                    ai = yes
+                    exists = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
             random_owned = {
                 limit = {
                     owner = {
@@ -1042,6 +1107,7 @@ political_decisions = {
         picture = form_china
         potential = {
             is_culture_group = east_asian
+            NOT = { tag = QNG }
             NOT = { tag = LAN }
             NOT = { tag = KMT }
             NOT = { has_country_flag = communist_faction }
@@ -1050,6 +1116,12 @@ political_decisions = {
                 NOT = { has_country_flag = beiyang_faction }
             }
             has_global_flag = warlord_era_has_begun
+            
+            OR = {
+                NOT = { has_country_flag = CHI_KMT_negotiations_fail }
+                has_global_flag = CHI_victorious_over_KMT
+                NOT = { tag = CHI }
+            }
         }
 
         allow = {
@@ -1063,6 +1135,21 @@ political_decisions = {
                 OR = {
                     exists = no
                     tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            RTR = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
+            QNG = {
+                OR = {
+                    exists = no
                     in_sphere = THIS
                     vassal_of = THIS
                 }
@@ -1242,10 +1329,29 @@ political_decisions = {
                 }
                 annex_to = THIS
             }
+            random_country = {
+                limit = {
+                    tag = RTR
+                    ai = yes
+                    exists = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = QNG
+                    ai = yes
+                    exists = yes
+                    in_sphere = THIS
+                }
+                annex_to = THIS
+            }
             random_owned = {
                 limit = {
                     owner = {
                         NOT = { tag = TPG }
+                        NOT = { tag = RTR }
                         NOT = { tag = CHI }
                         NOT = { has_country_flag = kuomintang_faction }
                     }
@@ -1261,6 +1367,7 @@ political_decisions = {
                 limit = {
                     owner = {
                         NOT = { tag = TPG }
+                        NOT = { tag = RTR }
                         NOT = { tag = CHI }
                         has_country_flag = kuomintang_faction
                     }
@@ -1281,6 +1388,14 @@ political_decisions = {
                 }
                 CHI = {
                     all_core = { add_core = TPG }
+                }
+            }
+            random_owned = {
+                limit = {
+                    owner = { tag = RTR }
+                }
+                CHI = {
+                    all_core = { add_core = RTR }
                 }
             }
             any_country = {
