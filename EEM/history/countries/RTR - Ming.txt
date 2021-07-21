@@ -1,4 +1,4 @@
-capital = 1493
+capital = 1504
 primary_culture = nanfaren
 culture = beifaren
 culture = zhuang
