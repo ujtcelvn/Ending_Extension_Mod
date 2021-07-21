@@ -6,7 +6,7 @@ end_strategic_bombardment_desc;We no longer can or want to maintain our strategi
 blow_yellow_river_dikes_title;Blow the Yellow River Dikes!;;;;;;;;;;;;;
 blow_yellow_river_dikes_desc;If we were to destroy the dikes along the Yellow River and cause an artifical flood, perhaps we can slow down the Japanese advance.;;;;;;;;;;;;;
 move_capital_to_nanking_ming_title;Move Capital to Nanjing;;;;;;;;;;;;;
-move_capital_to_nanking_ming_desc;We can move our capital back to its rightful place in Nanjing.;;;;;;;;;;;;;
+move_capital_to_nanking_ming_desc;We can move our capital to its rightful place in Nanjing.;;;;;;;;;;;;;
 revoke_sino_portuguese_treaty_ming_title;Revoke the $CAPITAL$ Treaty over Macao;;;;;;;;;;;;;
 revoke_sino_portuguese_treaty_ming_desc;The $CAPITAL$ Treaty of Friendship and Commerce, signed years ago over Macao, is no longer valid. Not only the country that proposed it breached its terms, their interpretation of the treaty is completely wrong. They argue that we agreed to "perpetual occupation and government" by them were no such thing would ever be done for chinese territory by the Chinese.;;;;;;;;;;;;;
 inherit_ryukyu_china_title;Inherit Ryukyu;;;;;;;;;;;;;
@@ -14,10 +14,16 @@ inherit_ryukyu_china_desc;The islands of Ryukyu have always had blood ties to bo
 become_qing_title;Restore the Qing Empire;;;;;;;;;;;;;
 become_qing_desc;We have reconquered enough of China to declare ourselves the Qing Empire again.;;;;;;;;;;;;;
 become_china_ming_title;Become China;;;;;;;;;;;;;
-become_china_ming_desc;We should reform our government to better administer the vast lands of China. I mean, it is literally the current year, your imperial majesty.;;;;;;;;;;;;;
+become_china_ming_desc;We should reform our government to better administer the vast lands of China. I mean, it is literally the current year.;;;;;;;;;;;;;
 prevent_warlord_era_title;Bring Generals Under Control;;;;;;;;;;;;;
 prevent_warlord_era_desc;By dismissing disloyal governors and generals who are gathering too much power, we can prevent potential revolts and better centralize our nation. It will take a few years before our administration can find replacements for everyone, however. Our current puppets will remain as puppets, they won't be annexed even if we were to centralize further.;;;;;;;;;;;;;
 kongsi_ming_title;Expand Branch Offices;;;;;;;;;;;;;
 kongsi_ming_desc;Singapore and Lanfang historically have had heavy Chinese Kongsi and Triad influence, we should expand our business (crime) empire to encompass them.;;;;;;;;;;;;;
 peking_convention_RTR_title;The Peking Convention;;;;;;;;;;;;;
 peking_convention_RTR_desc;Since the Treaty of Nerchinsk (1689), the Russian Empire has recognized the Argun river and the Stanovoy mountains as the natural frontiers between Russia and China.  In the mid 19th century the Russians would expand beyond this border to seize the vast lands between the Stanovoy Mountains and the Amur River. The Western Allies would later bring the Second Opium War to a conclusion by burning the Chinese Emperor's summer palaces, and entering Beijing. A cunning major general named Nikolay Ignatiev was able to convinced the Chinese that only Russian support would cause the allies to evacuate Peking. The price for this support was the Convention of Peking, which confirmed Muravyov's gains and, additionally, ceded territory between the Ussuri River and the Pacific to Russia. Thus, Russia had gained some 350,000 square miles of territory without firing a single shot.;;;;;;;;;;;;;
+xiu_captial_title;A Fragrant Capital;;;;;;;;;;;;;
+xiu_capital_desc;Xunzhou, near Pingle, is a city in a safe location that we should use as our captial until we can reunify China. It is a fragrant place - so we should name it Xiujing, literally meaning "fragrant capital"  ;;;;;;;;;;;;;
+abolish_xiu_capital_title;Pingle Recaptured;;;;;;;;;;;;;
+abolish_xiu_capital_desc;We have captured Xunzhou, which the Red Turbans rebels used as their capital and renamed to Xiujing. With the end of their rebellion, Xiujing should be returned back to its original name and demoted back to an insignificant local city.;;;;;;;;;;;;;
+empire_of_china_title;Become the Empire of China;;;;;;;;;;;;;
+empire_of_china_desc;China has always been ruled by an Emperor, so clearly we should declare ourselves an empire too.;;;;;;;;;;;;;
