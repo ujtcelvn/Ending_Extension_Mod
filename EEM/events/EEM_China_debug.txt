@@ -1,5 +1,5 @@
 country_event = {
-    id = 166207
+    id = 165208
     title = "Our Lodge Masters Arrive!"
     desc = "For some reason the event that gives generals works fine for Taiping but doesn't work for the Red Turbans."
     picture = "tiandihui_statue"

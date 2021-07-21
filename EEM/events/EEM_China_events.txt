@@ -167,7 +167,7 @@ country_event = {
 
 
 country_event = {
-    id = 166000
+    id = 165004
     title = "Nanking Massacre"
     desc = "Our troops have sacked Nanking."
     picture = "cityfire"
@@ -221,7 +221,7 @@ country_event = {
             limit = {
                 owns = 2221
             }
-            country_event = 166001
+            country_event = 165005
         }
 		set_global_flag = nanking_massacre
         prestige = -40
@@ -260,7 +260,7 @@ country_event = {
 }
 
 country_event = {
-    id = 166001
+    id = 165005
     title = "The Nanking Massacre"
     desc = "Countless unarmed civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
     news = yes
@@ -292,10 +292,10 @@ country_event = {
     }
 }
 
-########## Alternative Anti-Qing Rebellion: Ming LARPers 166100 ~ 166200 ##########
+########## Alternative Anti-Qing Rebellion: Ming LARPers 165100 ~ 165200 ##########
 #Memories of the Ming
 country_event = {
-    id = 166100
+    id = 165100
     title = "White Lotus Society"
     desc = "Secret societies such as the White Lotus Society have been formenting rebellion against non-Han rule ever since the Yuan dynasty."
     picture = "white_lotus"
@@ -319,7 +319,7 @@ country_event = {
             which = ming_provinces
             value = 0
         }
-        1493 = {
+        1504 = {
             any_pop = {
                 limit = { is_primary_culture = no }
                 militancy = 3
@@ -330,7 +330,7 @@ country_event = {
 }
 
 country_event = {
-    id = 166101
+    id = 165101
     title = "The Tiandihui"
     desc = "The Heaven and Earth Soceity was founded as a mutual aid society in 1761 but known for its anti-Qing activity."
     picture = "tiandihui"
@@ -443,7 +443,7 @@ country_event = {
 }
 
 country_event = {
-    id = 166102
+    id = 165102
     title = "The Gelaohui"
     desc = "The Elder Brother Society, aka the Hatchet Gang for the small hatchet every member carried, was an anti-Qing soceity."
     picture = "gelaohui"
@@ -597,7 +597,7 @@ country_event = {
 }
 
 province_event = {
-    id = 166103
+    id = 165103
     title = "Secret Societies Spread to $STATENAME$!"
     desc = "The Tiandihui and Gelaohui have recruited many members in $STATENAME$"
 
@@ -750,7 +750,7 @@ province_event = {
 
 #Main Rebellion Event
 country_event = {
-    id = 166200
+    id = 165200
     title = "The Red Turban Rebellion"
     desc = "Tiandihui and Gelaohui members, inspired by the Red Turban Rebellion that overthrew the Mongloian Yuan Dynasty, are sporting red turbans and rebelling against Qing rule!"
     picture = "red_turban_attack"
@@ -1006,7 +1006,7 @@ country_event = {
 
 #If the Red Turban Rebellion is Defeated
 country_event = {
-    id = 166201
+    id = 165201
     title = "Red Turban Rebellion Defeated"
     desc = "We have defeated the Red Turban rebels!"
     picture = "taiping_defeated"
@@ -1066,7 +1066,7 @@ country_event = {
 
 #If the Qing have a truce with Ming
 country_event = {
-    id = 166202
+    id = 165202
     title = "Truce with the Red Turbans"
     desc = "Our campaign against the Red Turban Rebels has reached a stalemate."
     picture = "taiping_siege"
@@ -1117,7 +1117,7 @@ country_event = {
 
 #Truce With the Manchu
 country_event = {
-    id = 166202
+    id = 165203
     title = "Truce with the Qing"
     desc = "Our campaign against the Manchu has reached a stalemate."
     picture = "taiping_siege"
@@ -1165,7 +1165,7 @@ country_event = {
 
 #Resuming the War against Ming
 country_event = {
-    id = 166203
+    id = 165204
     title = "Red Turban Rebellion continued"
     desc = "The Red Turban rebels are still at large!"
     picture = "red_turban_attack"
@@ -1256,7 +1256,7 @@ country_event = {
 
 #Resuming the War against Qing Empire
 country_event = {
-    id = 166204
+    id = 165205
     title = "Truce with the Qing"
     desc = "Our revolt against the Qing is still incomplete!"
     picture = "red_turban_attack"
@@ -1346,7 +1346,7 @@ country_event = {
 
 #Ming Victory event
 country_event = {
-    id = 166205
+    id = 165206
     title = "The Red Turbans are Victorious!"
     desc = "We have toppled the Qing oppressors!"
     news = yes
@@ -1452,7 +1452,7 @@ country_event = {
 
 
 country_event = {
-    id = 166206
+    id = 165207
     title = "Secret Society Power Struggle"
     desc = "After our successful rebellion, the secret societies are fighting among themselves over who gets to lead China."
     picture = "tiandihui_statue"
@@ -1473,7 +1473,7 @@ country_event = {
     }
 
     option = {
-        name = "The Tiandihui will declare the new Xiu Dynasty!"
+        name = "The Tiandihui will declare the new Great Cheng Empire!"
         government = absolute_monarchy
         ruling_party_ideology = conservative
         clr_country_flag = communist_gov
@@ -1611,7 +1611,7 @@ country_event = {
     }
 
     option = {
-        name = "Secret theocratic handshakes will keep any faction from getting uncontrollably strong."
+        name = "Our current theocracy will keep any faction from getting uncontrollably strong."
 
         any_pop = {
             limit = {
@@ -1650,11 +1650,11 @@ country_event = {
 
 }
 
-#id = 166207 = debug event, gives RTR generals and tech from QNG
+#id = 165208 = debug event, gives RTR generals and tech from QNG
 
 
 country_event = {
-    id = 166208
+    id = 165209
     title = "The Sanhehui"
     desc = "A branch of the Tiandihui, the Sanhehui, literally meaning Triple Union Society, referring to the union of heaven, earth and humanity, or more commonly known as the Triads, have been making moves to sieze power."
     picture = "sanhehui"
@@ -3092,17 +3092,16 @@ country_event = {
         tag = QNG
         war = no
 
-        AND = {
-            owns = 1538 #Shanghai
-            owns = 1496 #Hong Kong
-            owns = 1566 #Qingdao
-            owns = 1569 #Weihaiwei
-            owns = 1606 #Jiaxing
-            owns = 2681 #Taibei
-            owns = 2562 #Tainan
-            owns = 1499 #Hainan
-            owns = 2632 #Kwangchowan
-        }
+        owns = 1538 #Shanghai
+        owns = 1496 #Hong Kong
+        owns = 1566 #Qingdao
+        owns = 1569 #Weihaiwei
+        owns = 1606 #Jiaxing
+        owns = 2681 #Taibei
+        owns = 2562 #Tainan
+        owns = 1499 #Hainan
+        owns = 2632 #Kwangchowan
+
         NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
         has_recently_lost_war = no
         NOT = { has_global_flag = ming_has_happened }
@@ -3155,17 +3154,16 @@ country_event = {
         tag = QNG
         war = no
 
-        AND = {
-            owns = 1538 #Shanghai
-            owns = 1496 #Hong Kong
-            owns = 1566 #Qingdao
-            owns = 1569 #Weihaiwei
-            owns = 1606 #Jiaxing
-            owns = 2681 #Taibei
-            owns = 2562 #Tainan
-            owns = 1499 #Hainan
-            owns = 2632 #Kwangchowan
-        }
+        owns = 1538 #Shanghai
+        owns = 1496 #Hong Kong
+        owns = 1566 #Qingdao
+        owns = 1569 #Weihaiwei
+        owns = 1606 #Jiaxing
+        owns = 2681 #Taibei
+        owns = 2562 #Tainan
+        owns = 1499 #Hainan
+        owns = 2632 #Kwangchowan
+
         NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
         has_recently_lost_war = no
         NOT = { has_global_flag = taiping_has_happened }
@@ -3259,7 +3257,7 @@ country_event = {
         GER = {
             relation = { who = THIS value = -200 }
             leave_alliance = THIS
-            country_event = 166601
+            country_event = 166505
         }
         any_owned = {
             limit = { port = yes }
@@ -3322,7 +3320,7 @@ country_event = {
 }
 
 country_event = {
-    id = 166601
+    id = 166505
     title = "China Refuses to Give Compensation!"
     desc = "China refuses to compensate us for the murder of our missionaries, Richard Henle and Franz Xaver Nies!"
     picture = "juye_incident"
@@ -3356,13 +3354,4 @@ country_event = {
     }
 }
 
-
-########## 166600 ##########
-
-#The Tongmenghui
-#Revolutionary Uprising in $STATENAME$
-#Xinhai Revolution
-
-#The New Army
-#The Warlord Era begins
 
