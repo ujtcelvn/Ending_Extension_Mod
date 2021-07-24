@@ -1,7 +1,7 @@
 country_event = {
     id = 165000
-    title = "The Yangtze River bursts its banks yet again!"
-    desc = "The enormous Yangtze River has caused yet another flood!"
+    title = "The Huang He bursts its banks yet again!"
+    desc = "The enormous Yellow River has caused yet another flood!"
     fire_only_once = yes
     picture = "destroyed_forest"
 
