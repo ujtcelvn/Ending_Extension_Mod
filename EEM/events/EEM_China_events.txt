@@ -280,7 +280,7 @@ country_event = {
         }
         2221 = {
             any_pop = {
-                reduce_pop = 0.67
+                reduce_pop = 0.75
             }
             add_province_modifier = {
                 name = the_massacre
@@ -1460,10 +1460,8 @@ country_event = {
 
     trigger = {
         tag = RTR
-        OR = { 
-            has_global_flag = ming_victorious
-            has_global_flag = ming_victorious_2
-        }
+        NOT = { exists = QNG }
+        NOT = { exists = RTR }
         war = no
         civilized = no
     }
@@ -1794,22 +1792,39 @@ country_event = {
 ########## Western Powers react to Ming 166210 ##########
 country_event = {
     id = 166210
-    title = "EVTNAME166302" #UK reacts to Ming, basically the same as event 166302
+    title = "EVTNAME166302" #basically the same as event 166302
     desc = "EVTDESC166302"
     fire_only_once = yes
     picture = "tiandihui_statue"
 
     trigger = {
-        OR = { tag = ENG tag = ENL }
+        tag = ENG
         is_greater_power = yes
         NOT = { truce_with = RTR }
         NOT = { casus_belli = RTR }
         NOT = { war_with = RTR }
-        num_of_ports = 1
+
         has_global_flag = ming_victorious
-        NOT = { has_global_flag = eng_ming }
+        NOT = { OR = { has_global_flag = eng_supports_mck has_global_flag = eng_does_not_support_mck } }
         RTR = { civilized = no }
         exists = RTR
+        exists = MCK
+        MCK = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            OR = {
+                is_vassal = no
+                is_substate = no
+            }
+        }
+        
+		OR = {
+            is_sphere_leader_of = MCK
+            MCK = { part_of_sphere = no }
+        }
     }
 
     mean_time_to_happen = {
@@ -1818,73 +1833,148 @@ country_event = {
 
     option = {
         name = "EVT166302OPTA"
-        set_global_flag = eng_ming
-        badboy = 2.4
+        set_global_flag = eng_supports_mck
 
-        war = {
-            target = RTR
-            attacker_goal = { casus_belli = treaty_port_casus_belli }
-            defender_goal = { casus_belli = status_quo }
-            call_ally = yes
+        relation = {
+            who = MCK
+            value = 400
         }
 
+        MCK = { country_event = 165211 }
+
         ai_chance = {
-            factor = 40
+            factor = 80
             modifier = {
                 factor = 0
-                OR = {
-                    badboy = 0.9
-                    war_policy = pacifism
-                }
+                war_policy = pacifism
             }
             modifier = {
                 factor = 0.5
-                any_greater_power = { war_with = THIS }
+                OR = {
+                    any_greater_power = { war_with = THIS }
+                    war_policy = anti_military
+                }
             }
         }
     }
 
+
     option = {
         name = "EVT166302OPTB"
-        set_global_flag = eng_ming
-        add_country_modifier = { name = international_negotiations duration = 730 } #0.01 * 24 months = 0.24 infamy }
-        relation = { who = RTR value = -100 }
-        RTR = { country_event = 166211 }
+        set_global_flag = eng_does_not_support_mck
         ai_chance = {
-            factor = 50
+            factor = 20
+        }
+    }
+}
+
+
+country_event = {
+    id = 165211
+    title = "Fight the Red Turbans?"
+    desc = "Our British contancts claim that the British are ready to help us to restore the Qing Empire. However, they demand a treaty port if we succeed!"
+    picture = "red_turban_attack"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "We must crush the rebels!"
+        prestige = 5
+        leadership = 20
+        war_exhaustion = -20
+        any_pop = {
+            dominant_issue = {
+                factor = 0.05
+                value = jingoism
+            }
+        }
+        poor_strata = { militancy = 3 }
+
+        random_country = {
+            limit = {
+                is_sphere_leader_of = RTR
+                is_sphere_leader_of = MCK
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        random_country = {
+            limit = {
+                tag = RTR
+                is_sphere_leader_of = MCK
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        war = {
+            target = RTR
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+            call_ally = yes
+        }
+		
+		ENG = {
+            war = {
+                target = RTR
+                attacker_goal = { casus_belli = cut_down_to_size  }
+                call_ally = yes
+            }
+        }
+
+        ai_chance = {
+            factor = 80
         }
     }
 
     option = {
-        name = "EVT166302OPTC"
-        set_global_flag = eng_ming
-        set_global_flag = eng_ming_based
-        relation = { who = RTR value = 400 }
+        name = "Refuse, the British are why they rebelled in the first place!"
+        any_pop = {
+            scaled_militancy = {
+                issue = pacifism
+                factor = -3
+            }
+        }
         ai_chance = {
-            factor = 10
+            factor = 20
             modifier = {
-                factor = 5
-                war_policy = pacifism
+                factor = 2
+                RTR = { brigades_compare = 1 }
+            }
+            modifier = {
+                factor = 2
+                RTR = { brigades_compare = 2 }
             }
         }
     }
 }
 
+
+
+
 country_event = {
-    id = 166211
-    title = "EVTNAME166304" #UK ming trade mission, basically the same as 166304
-    desc = "EVTDESC166304"
+    id = 166212
+    title = "Red Turbans Crushed with Western Support" #basically the same as 166304
+    desc = "With British support, we have crushed the Red Turban rebels. It is time for us to give the British compensation, as we promised."
     fire_only_once = yes
     picture = "bazaar"
 
-    is_triggered_only = yes
+    trigger = {
+        OR = { tag = MCK tag = QNG }
+        exists = ENG
+
+        has_global_flag = eng_supports_mck 
+        NOT = { exists = RTR }
+        war = no
+        civilized = no
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
 
     option = {
-        name = "EVT166304OPTA" #give them a treaty port
-        set_global_flag = eng_ming_cuck
-        relation = { who = FROM value = 400 }
+        name = "We have no choice but to comply" #give them a treaty port
+        clr_global_flag = eng_supports_mck 
+        relation = { who = ENG value = 400 }
 
-        prestige = -10
         remove_country_modifier = trade_restrictions
         random_owned = {
             limit = {
@@ -1901,7 +1991,7 @@ country_event = {
                     province_id = 2632 #Kwangchowan
                 }
             }
-            secede_province = FROM
+            secede_province = ENG
         }
         add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
@@ -1922,51 +2012,13 @@ country_event = {
                 }
             }
         }
-        FROM = { relation = { who = THIS value = 100 } }
+        ENG = { relation = { who = THIS value = 100 } }
         any_pop = {
             limit = { is_primary_culture = no }
             militancy = 3
         }
 
-        FROM = { country_event = 166305 }
-        ai_chance = {
-            factor = 10
-        }
-    }
-
-    option = {
-        name = "EVT166304OPTB" #give them cash
-        set_global_flag = eng_ming_cuck
-        relation = { who = FROM value = 200 }
-        add_country_modifier = { name = legation_quarter duration = 3650 }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = { treasury = 500000 }
-                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                }
-            }
-            owner = { set_variable = { which = owed_cash_money value = 500 } }
-        }
-
-        FROM = { country_event = 166306 }
-        ai_chance = {
-            factor = 40
-        }
-    }
-
-    option = {
-        name = "EVT166304OPTC" #no way!
-        set_global_flag = eng_ming_based
-        prestige = 10
-        relation = { who = FROM value = -200 }
-        any_pop = {
-            scaled_militancy = {
-                factor = -4
-                ideology = reactionary
-            }
-        }
-        FROM = { country_event = 166307 }
+        ENG = { country_event = 166306 }
         ai_chance = {
             factor = 50
         }
@@ -2082,17 +2134,35 @@ country_event = {
     fire_only_once = yes
     picture = "taiping"
 
+
     trigger = {
-        OR = { tag = ENG tag = ENL }
+        tag = ENG
         is_greater_power = yes
         NOT = { truce_with = TPG }
         NOT = { casus_belli = TPG }
         NOT = { war_with = TPG }
-        num_of_ports = 1
-        has_global_flag = taiping_victorious
-        NOT = { has_global_flag = eng_taiping }
+
+        has_global_flag = ming_victorious
+        NOT = { OR = { has_global_flag = eng_supports_mck has_global_flag = eng_does_not_support_mck } }
         TPG = { civilized = no }
         exists = TPG
+        exists = MCK
+        MCK = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            OR = {
+                is_vassal = no
+                is_substate = no
+            }
+        }
+        
+		OR = {
+            is_sphere_leader_of = MCK
+            MCK = { part_of_sphere = no }
+        }
     }
 
     mean_time_to_happen = {
@@ -2101,54 +2171,37 @@ country_event = {
 
     option = {
         name = "EVT166302OPTA"
-        set_global_flag = eng_taiping
-        badboy = 2.4
+        set_global_flag = eng_supports_mck
 
-        war = {
-            target = TPG
-            attacker_goal = { casus_belli = treaty_port_casus_belli }
-            defender_goal = { casus_belli = status_quo }
-            call_ally = yes
+        relation = {
+            who = MCK
+            value = 400
         }
 
+        MCK = { country_event = 166304 }
+
         ai_chance = {
-            factor = 40
+            factor = 80
             modifier = {
                 factor = 0
-                OR = {
-                    badboy = 0.9
-                    war_policy = pacifism
-                }
+                war_policy = pacifism
             }
             modifier = {
                 factor = 0.5
-                any_greater_power = { war_with = THIS }
+                OR = {
+                    any_greater_power = { war_with = THIS }
+                    war_policy = anti_military
+                }
             }
         }
     }
+
 
     option = {
         name = "EVT166302OPTB"
-        set_global_flag = eng_taiping
-        add_country_modifier = { name = international_negotiations duration = 730 } #0.01 * 24 months = 0.24 infamy }
-        relation = { who = TPG value = -100 }
-        TPG = { country_event = 166304 }
+        set_global_flag = eng_does_not_support_mck
         ai_chance = {
-            factor = 50
-        }
-    }
-
-    option = {
-        name = "EVT166302OPTC"
-        set_global_flag = eng_taiping
-        set_global_flag = eng_taiping_based
-        relation = { who = TPG value = 400 }
-        ai_chance = {
-            factor = 10
-            modifier = {
-                factor = 5
-                war_policy = pacifism
-            }
+            factor = 20
         }
     }
 }
@@ -2186,19 +2239,110 @@ country_event = {
 
 country_event = {
     id = 166304
-    title = "EVTNAME166304" #UK taiping trade mission
-    desc = "EVTDESC166304"
-    fire_only_once = yes
-    picture = "bazaar"
+    title = "Fight the Taiping?"
+    desc = "Our British contancts claim that the British are ready to help us to restore the Qing Empire. However, they demand a treaty port if we succeed!"
+    picture = "red_turban_attack"
 
     is_triggered_only = yes
 
     option = {
-        name = "EVT166304OPTA" #give them a treaty port
-        set_global_flag = eng_taiping_cuck
-        relation = { who = FROM value = 400 }
+        name = "We must crush the rebels!"
+        prestige = 5
+        leadership = 20
+        war_exhaustion = -20
+        any_pop = {
+            dominant_issue = {
+                factor = 0.05
+                value = jingoism
+            }
+        }
+        poor_strata = { militancy = 3 }
 
-        prestige = -10
+        random_country = {
+            limit = {
+                is_sphere_leader_of = TPG
+                is_sphere_leader_of = MCK
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        random_country = {
+            limit = {
+                tag = TPG
+                is_sphere_leader_of = MCK
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        war = {
+            target = TPG
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+            call_ally = yes
+        }
+		
+		ENG = {
+            war = {
+                target = TPG
+                attacker_goal = { casus_belli = cut_down_to_size  }
+                call_ally = yes
+            }
+        }
+
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "Refuse, the British are why they rebelled in the first place!"
+        any_pop = {
+            scaled_militancy = {
+                issue = pacifism
+                factor = -3
+            }
+        }
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 2
+                TPG = { brigades_compare = 1 }
+            }
+            modifier = {
+                factor = 2
+                TPG = { brigades_compare = 2 }
+            }
+        }
+    }
+}
+
+
+
+
+country_event = {
+    id = 166305
+    title = "Taiping Crushed with Western Support"
+    desc = "With British support, we have crushed the Taiping rebels. It is time for us to give the British compensation, as we promised."
+    fire_only_once = yes
+    picture = "bazaar"
+
+    trigger = {
+        OR = { tag = MCK tag = QNG }
+        exists = ENG
+
+        has_global_flag = eng_supports_mck 
+        NOT = { exists = TPG }
+        war = no
+        civilized = no
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "We have no choice but to comply" #give them a treaty port
+        clr_global_flag = eng_supports_mck 
+        relation = { who = ENG value = 400 }
+
         remove_country_modifier = trade_restrictions
         random_owned = {
             limit = {
@@ -2215,7 +2359,7 @@ country_event = {
                     province_id = 2632 #Kwangchowan
                 }
             }
-            secede_province = FROM
+            secede_province = ENG
         }
         add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
@@ -2236,98 +2380,37 @@ country_event = {
                 }
             }
         }
-        FROM = { relation = { who = THIS value = 100 } }
+        ENG = { relation = { who = THIS value = 100 } }
         any_pop = {
             limit = { is_primary_culture = no }
             militancy = 3
         }
 
-        FROM = { country_event = 166305 }
-        ai_chance = {
-            factor = 10
-        }
-    }
-
-    option = {
-        name = "EVT166304OPTB" #give them cash
-        set_global_flag = eng_taiping_cuck
-        relation = { who = FROM value = 200 }
-        add_country_modifier = { name = legation_quarter duration = 3650 }
-        random_owned = {
-            limit = {
-                owner = {
-                    NOT = { treasury = 500000 }
-                    NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                }
-            }
-            owner = { set_variable = { which = owed_cash_money value = 500 } }
-        }
-
-        FROM = { country_event = 166306 }
-        ai_chance = {
-            factor = 40
-        }
-    }
-
-    option = {
-        name = "EVT166304OPTC" #no way!
-        set_global_flag = eng_taiping_based
-        prestige = 10
-        relation = { who = FROM value = -200 }
-        any_pop = {
-            scaled_militancy = {
-                factor = -4
-                ideology = reactionary
-            }
-        }
-        FROM = { country_event = 166307 }
+        ENG = { country_event = 166306 }
         ai_chance = {
             factor = 50
         }
     }
 }
 
-country_event = {
-    id = 166305
-    title = "EVTNAME166305" #we got a treaty port!
-    desc = "EVTDESC166305"
-    picture = "tea_weighing_station"
 
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166305OPTA"
-        prestige = 5
-    }
-}
 
 country_event = {
     id = 166306
-    title = "EVTNAME166306" #we got $500,000!
-    desc = "EVTDESC166306"
+    title = "Manchu Victory"
+    desc = "With our support, the Manchu have crushed their southern rebels. As promised, they have given us a treaty port."
     picture = "tea_weighing_station"
-
     is_triggered_only = yes
 
     option = {
-        name = "EVT166306OPTA"
-        treasury = 500000
+        name = "Excellent"
     }
 }
 
-country_event = {
-    id = 166307
-    title = "EVTNAME166307" #we got nothing
-    desc = "EVTDESC166307"
-    picture = "tea_weighing_station"
 
-    is_triggered_only = yes
 
-    option = {
-        name = "EVT166307OPTA"
-        prestige = -10
-    }
-}
+
+#166307
 
 
 country_event = {
@@ -2682,13 +2765,7 @@ country_event = {
     }
 }
 
-#If the Taiping have a truce with Ming
 
-#Ming Truce With the Taiping
-
-#Resuming the War against Ming
-
-#Resuming the War against Taiping
 
 #Ming Victory event
 country_event = {
@@ -2991,7 +3068,185 @@ country_event = {
 
 
 
+country_event = {
+    id = 165318
+    title = "Red Turbans at Large"
+    desc = "China is divided between us and the Red Turbans. We must show them who has the true Mandate of Heaven."
+    picture = "red_turban_attack"
 
+    trigger = {
+        tag = TPG
+        war = no
+        exists = RTR
+        NOT = { num_of_revolts = 1 }
+        NOT = { exists = QNG }
+        NOT = { truce_with = RTR }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+        modifier = {
+            factor = 2
+            RTR = { brigades_compare = 1 }
+        }
+        modifier = {
+            factor = 2
+            RTR = { brigades_compare = 2 }
+        }
+    }
+
+    option = {
+        name = "We must crush them!"
+        prestige = 5
+        leadership = 20
+        war_exhaustion = -20
+        any_pop = {
+            dominant_issue = {
+                factor = 0.05
+                value = jingoism
+            }
+        }
+        poor_strata = { militancy = 3 }
+        add_country_modifier = {
+            name = taiping_draft
+            duration = 90
+        }
+        random_country = {
+            limit = {
+                is_sphere_leader_of = RTR
+                is_sphere_leader_of = TPG
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        random_country = {
+            limit = {
+                tag = RTR
+                is_sphere_leader_of = TPG
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        war = {
+            target = RTR
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = civil_war
+            }
+            call_ally = yes
+        }
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "We can't afford that right now..."
+        prestige = -5
+        any_pop = {
+            scaled_militancy = {
+                issue = pacifism
+                factor = -3
+            }
+            scaled_militancy = {
+                issue = jingoism
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 5
+        }
+    }
+}
+
+
+country_event = {
+    id = 165319
+    title = "Taiping at Large"
+    desc = "China is divided between us and the Taiping. We must show them who has the true Mandate of Heaven."
+    picture = "red_turban_attack"
+
+    trigger = {
+        tag = RTR
+        war = no
+        exists = TPG
+        NOT = {
+            num_of_revolts = 1
+        }
+        NOT = { exists = QNG }
+        NOT = { truce_with = TPG }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+        modifier = {
+            factor = 2
+            TPG = { brigades_compare = 1 }
+        }
+        modifier = {
+            factor = 2
+            TPG = { brigades_compare = 2 }
+        }
+    }
+
+    option = {
+        name = "The Taiping must fall!"
+        prestige = 5
+        leadership = 20
+        war_exhaustion = -20
+        any_pop = {
+            dominant_issue = {
+                factor = 0.05
+                value = jingoism
+            }
+        }
+        random_country = {
+            limit = {
+                is_sphere_leader_of = RTR
+                is_sphere_leader_of = TPG
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        random_country = {
+            limit = {
+                tag = QNG
+                is_sphere_leader_of = RTR
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        war = {
+            target = TPG
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = civil_war
+            }
+            call_ally = yes
+        }
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "We can't afford that right now..."
+        prestige = -5
+        any_pop = {
+            scaled_militancy = {
+                issue = pacifism
+                factor = -3
+            }
+            scaled_militancy = {
+                issue = jingoism
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 5
+        }
+    }
+}
 
 ########## Qing 166500 ##########
 country_event = {
@@ -3229,6 +3484,7 @@ country_event = {
         }
         GER = { is_greater_power = yes }
         GER = { invention = protected_cruisers } #1880
+        1563 = { average_consciousness = 4 }
     }
 
     mean_time_to_happen = {
@@ -3236,10 +3492,6 @@ country_event = {
         modifier = {
             factor = 0.5
             1563 = { average_militancy = 4 }
-        }
-        modifier = {
-            factor = 0.5
-            1563 = { average_consciousness = 4 }
         }
         modifier = {
             factor = 0.5

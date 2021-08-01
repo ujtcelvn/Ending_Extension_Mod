@@ -2092,15 +2092,6 @@ country_event = {
 
 
 
-
-
-
-
-
-
-
-
-
 country_event = {
     id = 166602
     title = "North South Conference"
@@ -2112,6 +2103,9 @@ country_event = {
     option = {
         name = "We must try to avoid a civil war. WARNING: This is a game over for you!"
         KMT = { all_core = { remove_core = KMT } }
+        any_owned = {
+            secede_province = CHI
+        }
         annex_to = CHI
         CHI = { set_country_flag = CHI_KMT_negotiations_successful }
         ai_chance = {
