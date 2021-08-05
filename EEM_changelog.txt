@@ -180,6 +180,7 @@ Russia also expels Manchus also expelled from those 2 provinces in Amur
 Anti-Taiping Red Turban Rebellion event now gated by militancy
 Events to help AI China westernize, because it seems to get stuck with max research points pretty often
 coal mine base production increased from 2.6 to 2.8 and iron increased from 1.8 to 2 to reduce HPM's notorious coal and iron shortage (even after the change, there's still a shortage, esp. for Iron) (boost iron more?)
+Fixed clean air act militancy bug
 
 v0.4.9a
 RTR - TPG rematch event war(s) if both exist
