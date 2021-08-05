@@ -2626,6 +2626,10 @@ clean_air_act = {
     icon = 11
 }
 
+communist_peace_summit = {
+    icon = 5
+}
+
 ### Strategic Bombardment ###
 
 strat_bombers = {
