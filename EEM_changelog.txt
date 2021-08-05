@@ -103,10 +103,21 @@ industry = 30 + 5
 		165001 Yangtze flood 1931
 		165002 Yangtze flood 1935
 		165003 Haiyuan Earthquake 1920
-		166000 Nanking Massacre Japan
-		166001 Nanking Massacre China
+		165004 Nanking Massacre Japan
+		165005 Nanking Massacre China
 		blow_yellow_river_dikes
-
+		165100 White Lotus Society
+		165101 Tiandihui
+		165102 gelaohui
+		165103 secret societies spread
+		165200 red turban rebellion
+		165201 RTR defeat
+		165202 QNG RTR truce
+		165202 RTR QBG truce
+		165204 QNG resume war
+		165205 RTR resume war
+		165206 RTR victory vs QNG
+		165207 secret society power struggle
 #TODO
 #the Bomb
 #other events and decisions
@@ -152,32 +163,32 @@ industry = 30 + 5
 	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%. U
 	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
 #jam in Africamod
-#Consent reforms
-    administrative = yes
-    next_step_only = yes
-    None
-        global_population_growth = 0.001
-        global_immigrant_attract = 0.01
-        education_efficiency_modifier = -0.025
-    on Puberty (~10, most western nations start here) 
-        no effect
-        education_efficiency_modifier = 0.025
-    mid-puberty (~14)
-        education_efficiency_modifier = 0.05
-    post-puberty (16~18)
-        global_population_growth = -0.001
-        education_efficiency_modifier = 0.075
-        global_immigrant_attract = 0.01
-        administrative_multiplier = 1
-    LGBT rights
-        global_population_growth = -0.002
-        education_efficiency_modifier = 0.01
-        global_immigrant_attract = 0.02
-        administrative_multiplier = 2
-    attraction to the reform if high literacy, women allowed to vote
-    Each step gives + literacy and - population growth, reflecting the demographic transition, thus the demographic transition triggered modifiers can be removed
-    each healthcare invention gives 0.0001 pop growth, but each health care reform gives 0.001 global pop growth
-    nerf base education efficiency
+
+#TODO: Nian rebellion event (irl they were unorganized anti-Qing bandits) 
+#TODO: Miao rebellion event (RTR cores on Guizhou?)
+#TODO: nukes
+#TODO: Ottomemes
+#TODO: take Pacific islands CB
+#TODO: “Seize Rest of State” CB
+
+v0.4.9b
+adjust tax refund event and modifiers. AI builds troops and ships according to how much taxes they make, so if tax efficency is reduced early on their military suffers
+adjust clean air act so you can pass it even if the polluted province is not the capital
+Fixed wrong country flag in UK supports Manchuria against Taiping event
+added Communist international summit every 10 years that improves relations between communists like the democratic peace summit, but doesn't decrease infamy
+Russia also expels Manchus also expelled from those 2 provinces in Amur
+Anti-Taiping Red Turban Rebellion event now gated by militancy
+Events to help AI China westernize, because it seems to get stuck with max research points pretty often
+coal mine base production increased from 2.6 to 2.8 and iron increased from 1.8 to 2 to reduce HPM's notorious coal and iron shortage (even after the change, there's still a shortage, esp. for Iron) (boost iron more?)
+
+v0.4.9a
+RTR - TPG rematch event war(s) if both exist
+increased MAX_RESEARCH_POINTS for uncivs from 28000 to 30000 to make AI less likely to get stuck with max research points yet not westernizing
+adjust secret society power struggle conditions to if QNG and TPG don't exist instead of using global flags
+adjust juye incident mtth
+Beiyang-KMT negotiations, if successful, returns the KMT army to Beiyang instead of disbanding them all
+Reduced pops killed in the Nanking Massacre
+Pro-qing intervention if MCK exists, replaces UK reaction to TPG/RTR victory event
 
 v0.4.9
 cleaned up a few China events
@@ -186,7 +197,7 @@ RTR decision to rename Pingle to Xiujing: "Xunzhou (modern-day Guiping) in 1855,
 decision to rename Xiujing back to Pingle
 KMT can move capital to Nanjing
 Xiu Empire renamed to Cheng empire, the Red Turban Rebels actually named themselves 大成國
-Edited RTR_monarchy to better put 成 instead of 秀 next to the 虎
+Edited RTR_monarchy to put 成 instead of 秀 next to the 虎
 RTR's become china decision made to be more like Qing's
 Made Chinese event ids slightly more compact
 Yuan Shikai can make himself Emperor
