@@ -548,6 +548,8 @@ political_decisions = {
         picture = russian_vladivostok
 
         potential = {
+            owns = 1081
+            owns = 2697
             owns = 1082
             owns = 1083
             owns = 1084
@@ -576,11 +578,13 @@ political_decisions = {
             any_owned = {
                 limit = {
                     OR = {
-                    province_id = 1082
-                    province_id = 1083
-                    province_id = 1084
-                    province_id = 1085
-                    province_id = 2617
+                        province_id = 1081
+                        province_id = 2697
+                        province_id = 1082
+                        province_id = 1083
+                        province_id = 1084
+                        province_id = 1085
+                        province_id = 2617
                     }
                 }
             add_province_modifier = { name = nationalist_agitation duration = 1095 }
