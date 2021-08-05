@@ -184,7 +184,7 @@ country_event = {
             limit = {
                 NOT = { type = capitalists }
             }
-            militancy = 2
+            militancy = -2
         }
 
         ai_chance = {
