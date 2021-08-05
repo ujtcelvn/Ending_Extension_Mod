@@ -287,3 +287,696 @@ country_event = {
         }
     }
 }
+
+
+country_event = {
+    id = 165110
+    title = "Chinese Woes"
+    desc = "For some reason AI China often gets stuck with tons of research points yet doesn't want to pass reforms."
+    picture = "commodore_perry"
+	
+    trigger = {
+        OR = { tag = RTR tag = TPG tag = QNG tag = CHI }
+        ai = yes
+        civilized = no
+        NOT = { has_country_modifier = academic_confusion }
+        NOT = { has_country_modifier = reactionary_demands }
+        year = 1900
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 10
+            ideology = reactionary
+        }
+        modifier = {
+            factor = 0.5
+            ideology = liberal
+        }
+        modifier = {
+            factor = 0.5
+            war = yes
+        }
+        modifier = {
+            factor = 0.2
+            has_recently_lost_war = yes
+        }
+        modifier = {
+            factor = 0.5
+            has_country_modifier = self_strengthening_movement 
+        }
+    }
+
+    option = {
+        name = "Actually, never mind."
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 5
+                ideology = reactionary
+            }
+        }
+    }
+
+    option = {
+        name = "Land Reform"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 2500
+        }
+
+        research_points = -10000
+        THIS = { economic_reform = yes_land_reform }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 0.5
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                land_reform = yes_land_reform
+            }
+        }
+    }
+
+    option = {
+        name = "Administrative Reform"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 3000
+        }
+
+        research_points = -12000
+        THIS = { economic_reform = yes_admin_reform }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 0.5
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                admin_reform = yes_admin_reform
+            }
+        }
+    }
+
+    #Finance and monetary reform ignored because it has 2 steps and who takes those anyways lmao
+
+    option = {
+        name = "Education Reform"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 3125
+        }
+
+        research_points = -12500
+        plurality = 5
+        THIS = { economic_reform = yes_education_reform }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 0.5
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                education_reform = yes_education_reform
+            }
+        }
+    }
+
+    option = {
+        name = "Research Reform"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 5500
+        }
+
+        research_points = -22000
+        THIS = { economic_reform = yes_research_reform }
+        plurality = 5
+        activate_technology = late_enlightenment_philosophy
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 0.5
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                research_reform = yes_research_reform
+            }
+        }
+    }
+
+    #skip transport, firearms, pre_indust, and industrial reforms because they cost money
+
+    option = {
+        name = "Foreign Training"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 2250
+        }
+
+        research_points = -9000
+        THIS = { military_reform = yes_foreign_training }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                foreign_training = yes_foreign_training
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_ships
+                        has_country_flag = using_foreign_shipyards
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+        }
+    }
+
+
+    option = {
+        name = "Foreign Weapons"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 2750
+        }
+
+        research_points = -11000
+        THIS = { military_reform = yes_foreign_weapons }
+        activate_technology = flintlock_rifles
+        set_country_flag = using_foreign_weapons
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                foreign_weapons = yes_foreign_weapons
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+        }
+    }
+
+    #military_constructions cost money
+
+    option = {
+        name = "Foreign Officers"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 2750
+        }
+
+        research_points = -11000
+        THIS = { military_reform = yes_foreign_officers }
+        activate_technology = military_staff_system
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                foreign_officers = yes_foreign_officers
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_ships
+                        has_country_flag = using_foreign_shipyards
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+        }
+    }
+
+    option = {
+        name = "Army Schools"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 2750
+        }
+
+        research_points = -11000
+        THIS = { military_reform = yes_army_schools }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                army_schools = yes_army_schools
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_ships
+                        has_country_flag = using_foreign_shipyards
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+        }
+    }
+
+    option = {
+        name = "Foreign Naval Officers"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 3000
+        }
+
+        research_points = -12000
+        THIS = { military_reform = yes_foreign_naval_officers }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                foreign_naval_officers = yes_foreign_naval_officers
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_ships
+                        has_country_flag = using_foreign_shipyards
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0
+                NOT = { any_owned_province = { port = yes } }
+            }
+        }
+    }
+
+    option = {
+        name = "Naval Schools"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 3000
+        }
+
+        research_points = -12000
+        THIS = { military_reform = yes_naval_schools }
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                naval_schools = yes_naval_schools
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_ships
+                        has_country_flag = using_foreign_shipyards
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0
+                NOT = { any_owned_province = { port = yes } }
+            }
+        }
+    }
+
+
+    option = {
+        name = "Foreign Navies"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 4000
+        }
+
+        research_points = -16000
+        THIS = { military_reform = yes_foreign_navies }
+
+        activate_technology = clipper_design
+        activate_technology = steamers
+        set_country_flag = using_foreign_ships
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                foreign_navies = yes_foreign_navies
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0
+                NOT = { any_owned_province = { has_building = naval_base } }
+            }
+        }
+    }
+
+    option = {
+        name = "Western Shipyards"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 3000
+        }
+
+        research_points = -12000
+        THIS = { military_reform = yes_western_shipyards }
+
+        activate_technology = post_nelsonian_thought
+        set_country_flag = using_foreign_shipyards
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                western_shipyards = yes_western_shipyards
+            }
+            modifier = {
+                factor = 0
+                NOT = {
+					AND = {
+                        has_country_flag = using_foreign_weapons
+                        has_country_flag = using_foreign_artillery
+                    }
+				}
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+            modifier = {
+                factor = 0
+                NOT = { any_owned_province = { port = yes } }
+            }
+        }
+    }
+
+    option = {
+        name = "Foreign Artillery"
+
+        add_country_modifier = {
+            name = academic_confusion
+            duration = 2750
+        }
+
+        research_points = -11000
+        THIS = { military_reform = yes_western_shipyards }
+
+        activate_technology = bronze_muzzle_loaded_artillery
+        set_country_flag = using_foreign_artillery
+
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                foreign_artillery = yes_foreign_artillery
+            }
+            modifier = {
+                factor = 2
+                war = yes
+            }
+            modifier = {
+                factor = 2
+                has_recently_lost_war = yes
+            }
+        }
+    }
+}

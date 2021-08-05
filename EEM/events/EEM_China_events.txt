@@ -2142,7 +2142,7 @@ country_event = {
         NOT = { casus_belli = TPG }
         NOT = { war_with = TPG }
 
-        has_global_flag = ming_victorious
+        has_global_flag = taiping_victorious
         NOT = { OR = { has_global_flag = eng_supports_mck has_global_flag = eng_does_not_support_mck } }
         TPG = { civilized = no }
         exists = TPG
@@ -2615,6 +2615,7 @@ country_event = {
                 NOT = { government = theocracy }
             }
         }
+        average_militancy = 2
         average_consciousness = 4
     }
 

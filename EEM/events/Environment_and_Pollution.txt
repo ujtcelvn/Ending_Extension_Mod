@@ -110,11 +110,11 @@ province_event = {
 country_event = {
     id = 12301
     title = "Clean Air Act"
-    desc = "The severe pollution problem in the capital has prompted officials to propose a bill aimed regulating and reducing air pollution."
+    desc = "The recent pollution problem has prompted officials to propose a bill aimed regulating and reducing air pollution."
     picture = "air_pollution"
 
     trigger = {
-		capital_scope = { has_province_modifier = local_pollution_problem }
+		any_owned_province = { has_province_modifier = local_pollution_problem }
         safety_regulations = good_safety
         NOT = { has_country_modifier = clean_air_act }
         NOT = { government = bourgeois_dictatorship }
@@ -122,10 +122,14 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 12
+        months = 24
         modifier = {
             factor = 0.5
             literacy = 0.8
+        }
+        modifier = {
+            factor = 0.5
+            capital_scope = { has_province_modifier = local_pollution_problem }
         }
     }
 
@@ -175,15 +179,11 @@ country_event = {
     option = {
         name = "This is necessary to improve air quality."
         add_country_modifier = { name = clean_air_act duration = -1 }
-        any_pop = {
-            militancy = -2
-        }
 
         any_pop = {
             limit = {
-                type = capitalists
+                NOT = { type = capitalists }
             }
-            consciousness = 2
             militancy = 2
         }
 
