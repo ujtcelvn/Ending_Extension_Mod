@@ -672,6 +672,41 @@ country_event = {
     immediate = {
         set_country_flag = xinhai_revolution
         prestige = -25
+        KMT = {
+            civilized = yes
+        }
+        any_owned = {
+            limit = {
+                OR = {
+                    culture = nanfaren
+                    culture = yue
+                    culture = yi
+                    culture = hakka
+                    culture = miao
+                    culture = min
+                    culture = zhuang
+                    culture = asian_minor
+                    AND = { state_id = 2221 owner = { OR = { tag = QNG tag = CHI } } }
+                }
+               is_core = CHI
+            }
+            add_core = KMT
+            secede_province = KMT
+        }
+        #release_vassal = KMT
+        create_vassal = KMT
+        KMT = {
+            set_country_flag = unreleasable_country
+            set_country_flag = exempt_from_vassal_contribution
+            government = democracy
+            ruling_party_ideology = liberal
+            political_reform = universal_weighted_voting
+            political_reform = party_appointed
+            political_reform = yes_meeting
+            political_reform = state_press
+            political_reform = state_controlled
+            political_reform = harassment
+        }
     }
 
     option = {
@@ -754,36 +789,7 @@ country_event = {
         CHI_1468 = { remove_core = CHI }
         CHI_1465 = { remove_core = CHI }
 
-
-        any_owned = {
-            limit = {
-                OR = {
-                    culture = nanfaren
-                    culture = yue
-                    culture = yi
-                    culture = hakka
-                    culture = miao
-                    culture = min
-                    culture = zhuang
-                    culture = asian_minor
-                    AND = { state_id = 2221 owner = { OR = { tag = QNG tag = CHI } } }
-                }
-               is_core = CHI
-            }
-            add_core = KMT
-        }
-        release_vassal = KMT
         KMT = {
-            set_country_flag = unreleasable_country
-            set_country_flag = exempt_from_vassal_contribution
-            government = democracy
-            ruling_party_ideology = liberal
-            political_reform = universal_weighted_voting
-            political_reform = party_appointed
-            political_reform = yes_meeting
-            political_reform = state_press
-            political_reform = state_controlled
-            political_reform = harassment
             any_pop = {
                 limit = { has_pop_culture = nanfaren }
                 militancy = -8
@@ -826,10 +832,10 @@ country_event = {
             leadership = 80
             treasury = 40000
             random_list = {
+                25 = { add_country_modifier = { name = preparing_for_war duration = 210 } }
                 25 = { add_country_modifier = { name = preparing_for_war duration = 180 } }
                 25 = { add_country_modifier = { name = preparing_for_war duration = 150 } }
-                25 = { add_country_modifier = { name = preparing_for_war duration = 120 } }
-                25 = { add_country_modifier = { name = preparing_for_war duration = 100 } }
+                25 = { add_country_modifier = { name = preparing_for_war duration = 130 } }
             }
         }
 		
@@ -920,35 +926,7 @@ country_event = {
         CHI_1465 = { remove_core = CHI }
 
 
-        any_owned = {
-            limit = {
-                OR = {
-                    culture = nanfaren
-                    culture = yue
-                    culture = yi
-                    culture = hakka
-                    culture = miao
-                    culture = min
-                    culture = zhuang
-                    culture = asian_minor
-                    AND = { state_id = 2221 owner = { OR = { tag = QNG tag = CHI } } }
-                }
-               is_core = CHI
-            }
-            add_core = KMT
-        }
-        release_vassal = KMT
         KMT = {
-            set_country_flag = unreleasable_country
-            set_country_flag = exempt_from_vassal_contribution
-            government = democracy
-            ruling_party_ideology = liberal
-            political_reform = universal_weighted_voting
-            political_reform = party_appointed
-            political_reform = yes_meeting
-            political_reform = state_press
-            political_reform = state_controlled
-            political_reform = harassment
             any_pop = {
                 limit = { has_pop_culture = nanfaren }
                 militancy = -8
