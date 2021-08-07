@@ -658,10 +658,11 @@ political_decisions = {
         potential = {
             tag = CHI
             government = presidential_dictatorship
+            NOT = { has_global_flag = yuan_shikai_declared_emperor }
         }
 
         allow = {
-            state_n_government = 1
+            nationalism_n_imperialism = 1
             war = no
             KMT = { exists = no }
             TPG = { exists = no }
@@ -671,7 +672,7 @@ political_decisions = {
 
         effect = {
             prestige = 25
-
+            set_global_flag = yuan_shikai_declared_emperor
             government = absolute_monarchy
 
             any_owned_province = {
