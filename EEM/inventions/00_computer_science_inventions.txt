@@ -82,7 +82,7 @@ numerical_control = {
         }
     }
     effect = {
-        factory_goods_output = { machine_parts = 0.05 }
+        factory_goods_output = { machine_parts = 0.02 }
     }
 }
 

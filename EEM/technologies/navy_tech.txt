@@ -2042,7 +2042,7 @@ naval_plans = {
             war = yes
         }
         modifier = {
-            factor = 1.02
+            factor = 1.05
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2058,9 +2058,12 @@ naval_plans = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.01
-            rank = 16
+            factor = 1.05
             colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.05
+            any_owned_province = { is_overseas = yes }
         }
     }
 }
@@ -2095,7 +2098,7 @@ naval_statistics = {
             }
         }
         modifier = {
-            factor = 1.02
+            factor = 1.05
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2123,9 +2126,12 @@ naval_statistics = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.01
-            rank = 16
+            factor = 1.05
             colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.05
+            any_owned_province = { is_overseas = yes }
         }
     }
 }
@@ -2163,7 +2169,7 @@ naval_logistics = {
             war = yes
         }
         modifier = {
-            factor = 1.02
+            factor = 1.05
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2179,9 +2185,12 @@ naval_logistics = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.01
-            rank = 16
+            factor = 1.05
             colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.05
+            any_owned_province = { is_overseas = yes }
         }
     }
 }
@@ -2219,7 +2228,7 @@ naval_directionism = {
             war = yes
         }
         modifier = {
-            factor = 1.02
+            factor = 1.05
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2235,9 +2244,12 @@ naval_directionism = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.01
-            rank = 16
+            factor = 1.05
             colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.05
+            any_owned_province = { is_overseas = yes }
         }
     }
 }
@@ -2331,7 +2343,7 @@ naval_science_7 = {
             war = yes
         }
         modifier = {
-            factor = 1.02
+            factor = 1.05
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2359,9 +2371,12 @@ naval_science_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.01
-            rank = 16
+            factor = 1.05
             colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.05
+            any_owned_province = { is_overseas = yes }
         }
     }
 }

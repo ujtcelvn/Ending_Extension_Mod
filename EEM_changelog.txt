@@ -96,6 +96,7 @@ industry = 30 + 5
 		start_strategic_bombardment
 		end_strategic_bombardment
 		23000 province has been bombed
+		23001 province has been heavily bombed
 		23100 cancel bombing: air force too weak
 		23101 cancel bombing: war is over
 	China
@@ -164,22 +165,83 @@ industry = 30 + 5
 	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
 #jam in Africamod
 
-#TODO: Nian rebellion event (irl they were unorganized anti-Qing bandits) 
-#TODO: Miao rebellion event (RTR cores on Guizhou?)
-#TODO: nukes
+#TODO: split up asian_minor
+#TODO: return cores and release vassal for RTR and MAO
+#TODO: San Blas Rebellion event
 #TODO: Ottomemes
+#TODO: FRCA become guatemala fix
+
+#TODO: peace march event (I think there is already a peace march event, either giving pacifism or war exhaustion, adjust its mtth, make it more likely to happen if no_more_war)
+
+#TODO: League of Nations
+#TODO: disarmament conference
+#TODO: UN
+
+#TODO: nukes
+
+
 #TODO: take Pacific islands CB
 #TODO: “Seize Rest of State” CB
 
+#TODO: make AI always build at 100% budget so projects don't stall
+
+v0.4.9c
+Adjust AI China westernization help mtth
+anti-imperialism league and Colonial Weariness mtth reduced by anticolonialism invention
+Increased AI naval science research rate modifiers
+Strategic bombing damage also decreases immigrant_attract, local_factory_output, and local_RGO_output. Adjusted bomb damage to affect artisans less and factories more.
+Adjust strategic bombing mtth, bombing no longer increases war exhaustion, Added heavy_bomb_damage tier
+adjust tax refund tiers, instead of min_social_spending
+Increased tax refund
+local_modern_transportation no longer increases RGO output
+Reduced clerked_nation tiers to only 1
+nerf several industry inventions/techs because late game good surplus crashes the market with no survivors
+    metallurgy_7 no longer increases sulphur mine output
+    numerical_control machine_parts boost reduced to 0.02 from 0.05
+    magnetic_separation iron boost reduced to 0.2 from 0.25
+    industrial_plastics_production only increases glass and fabric by 0.02 instead of 0.05
+    air_preheater now increases fuel production by 0.02 instead of rgo_output and factory_throughput
+    fluid_catalytic_cracking and catalytic_reforming fuel produced reduced to 0.02 from 0.05
+    diesel_excavator and rocker_shovel_loader now only increases iron or coal production by 0.25
+if large fleet, colonial, and has lots of ports, import cost reduced and tarriff efficiency increased, representing the commerce protection of large fleets not represented in game
+pandemic influenza made more likely in / after a great war, and less likely to happen again after getting it already
+make sure KMT is civilzed and inherets China's techs in the Xinhai revolution, lets KMT keep its provinces' troops, and increased amount of time KMT has to prepare for war
+Yuan Shikai declaring himself emperor can only occur once, and needs nationalism_n_imperialism instead of state_n_government 
+RTR and TPG cores don't spread to Guizhou, Henan, and Shandong
+RTR and TPG cores slow each other down but spread faster if the province is controlled by rebels
+adjusted Red Turban localizations
+Qing - Taiping - Red Turban truces no longer increase militancy, accepted pops also don't get the consciousness increase
+Lodge Masters arrive event makes sure the Red Turbans start as a theocracy
+Nian rebellion event (Henan and Shandong may defect to TPG/RTR)
+common/countries.txt add MAO
+common/countries/Miao.txt
+history/countries/MAO - Miao.txt cultures: miao, yi, asian_minor (hmong)
+gfx/flags/
+    MAO.tga             republic flag
+    MAO_communist.tga   Qiongya Soviet flag (technically in Hainan) https://www.worldstatesmen.org/cn-Qiongya.png
+    MAO_fascist.tga     Li and Miao Hainan War flag 1943-1949 https://www.crwflags.com/fotw/flags/cn-haina.html
+    MAO_monarchy.tga    Miao flag from EU4 https://eu4.paradoxwikis.com/images/2/24/Miao.png
+    MAO_republic.tga    Guiyang University flag but says "Gui Miao" meaning Precious Miao people https://upload.wikimedia.org/wikipedia/en/2/2e/National_guizhou_univ_xiaohui.gif
+Miao rebellion event, given Zhang Xiumei (Resolute, School Of The Bayonet), Guizhou released, cores spread where logical
+Miao defeated event removing cores
+MAO completely avoids warlord era, but can't become china.
+Lanfang will rename Tianjing to Nanjing
+Punti-Hakka Clan Wars event
+Juye incident no longer gives militancy if the chinese government gives up a treaty port peacefully
+Added a bunch of Chinese leader names to cultures.txt
+fixed bug where the UK will sometimes never pick a treaty port, even when there are several available
+Nanking Massacre now only happens if Japan controls Nanjing for less than a year, adjust conditions and mtth
+Generic war crimes event
+
 v0.4.9b
-adjust tax refund event and modifiers. AI builds troops and ships according to how much taxes they make, so if tax efficency is reduced early on their military suffers
+adjust tax refund event and modifiers. (AI builds troops and ships according to how much taxes they make, so if tax efficiency is reduced early on their military suffers)
 adjust clean air act so you can pass it even if the polluted province is not the capital
 Fixed wrong country flag in UK supports Manchuria against Taiping event
 added Communist international summit every 10 years that improves relations between communists like the democratic peace summit, but doesn't decrease infamy
 Russia also expels Manchus also expelled from those 2 provinces in Amur
 Anti-Taiping Red Turban Rebellion event now gated by militancy
 Events to help AI China westernize, because it seems to get stuck with max research points pretty often
-coal mine base production increased from 2.6 to 2.8 and iron increased from 1.8 to 2 to reduce HPM's notorious coal and iron shortage (even after the change, there's still a shortage, esp. for Iron) (boost iron more?)
+coal mine base production increased from 2.6 to 2.8 and iron increased from 1.8 to 2 to reduce HPM's notorious coal and iron shortage
 Fixed clean air act militancy bug
 
 v0.4.9a

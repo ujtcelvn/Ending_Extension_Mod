@@ -261,17 +261,31 @@ country_event = {
         }
 
         modifier = {
-            factor = 0.9
+            factor = 0.5
             OR = {
                 has_country_modifier = great_war3
                 has_country_modifier = total_collapse
                 has_country_modifier = no_more_war
             }
         }
+
+        modifier = {
+            factor = 0.1
+            NOT = { has_country_flag = spanish_flu_happened }
+            any_neighbor_country = { has_country_modifier = pandemic_influenza }
+            NOT = { AND = { continent = oceania civilized = no } }
+            OR = {
+                has_country_modifier = great_war3
+                has_country_modifier = total_collapse
+                has_country_modifier = no_more_war
+            }
+        }
+
     }
 
     option = {
         name = "EVTOPTA21030"
+        set_country_flag = spanish_flu_happened
         random_list = {
             50 = {
                 add_country_modifier = { name = pandemic_influenza duration = 365 }
@@ -311,6 +325,7 @@ country_event = {
 
     option = {
         name = "EVTOPTB21030"
+        set_country_flag = spanish_flu_happened
         random_list = {
             50 = {
                 add_country_modifier = { name = pandemic_influenza duration = 480 }

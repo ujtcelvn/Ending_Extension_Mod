@@ -610,7 +610,6 @@ country_event = {
                     }
                 }
             }
-            militancy = 1
             consciousness = 2
         }
     }
@@ -656,8 +655,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { is_primary_culture = no }
-            militancy = 1
+            limit = { OR = { is_primary_culture = no is_accepted_culture = no } }
             consciousness = 2
         }
     }
@@ -1426,6 +1424,12 @@ province_event = {
             region = CHI_1612
             region = CHI_1572
             region = CHI_1559
+
+            region = CHI_1508 #Nian Rebellion
+            region = CHI_1510
+            region = CHI_1563
+            region = CHI_1565
+            region = CHI_1505 #Miao Rebellion
         }
         is_core = CHI
         is_primary_culture = no
@@ -1520,6 +1524,14 @@ province_event = {
         modifier = {
             factor = 1.5
             has_global_flag = qing_won_second_opium_war
+        }
+        modifier = {
+            factor = 2
+            is_core = RTR
+        }
+        modifier = {
+            factor = 0.5
+            controlled_by_rebels = yes
         }
     }
 

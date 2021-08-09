@@ -6,10 +6,9 @@ country_event = {
     fire_only_once = yes
 	
     trigger = {
-        has_global_flag = ming_has_happened
-        NOT = { has_global_flag = ming_has_happened_2 }
         NOT = { has_country_flag = ming_leaders_arrived }
         tag = RTR
+        exists = QNG
     }
 
     mean_time_to_happen = {
@@ -140,6 +139,25 @@ country_event = {
             limit = { QNG = { foreign_artillery = yes_foreign_artillery } }
             THIS = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
         }
+        government = theocracy
+        ruling_party_ideology = conservative
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        clr_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        clr_country_flag = democracy_gov
+        clr_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        clr_country_flag = anarcho_liberal_gov
+        set_country_flag = theocratic_government
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
     }
 }
 
@@ -152,9 +170,9 @@ country_event = {
     fire_only_once = yes
 	
     trigger = {
-        has_global_flag = ming_has_happened_2
         NOT = { has_country_flag = ming_leaders_arrived }
         tag = RTR
+        exists = TPG
     }
 
     mean_time_to_happen = {
@@ -285,6 +303,25 @@ country_event = {
             limit = { TPG = { foreign_artillery = yes_foreign_artillery } }
             THIS = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
         }
+        government = theocracy
+        ruling_party_ideology = conservative
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        clr_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        clr_country_flag = democracy_gov
+        clr_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        clr_country_flag = anarcho_liberal_gov
+        set_country_flag = theocratic_government
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
     }
 }
 
@@ -323,8 +360,28 @@ country_event = {
             has_recently_lost_war = yes
         }
         modifier = {
-            factor = 0.5
+            factor = 0.1
             has_country_modifier = self_strengthening_movement 
+        }
+        modifier = {
+            factor = 0.5
+            NOT = { owns = 1485 } #Taipei
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = summer_palace_torched
+        }
+        modifier = {
+            factor = 0.5
+            has_global_flag = spread_warlord_influence
+        }
+        modifier = {
+            factor = 0.5
+            year = 1920
+        }
+        modifier = {
+            factor = 0.5
+            year = 1940
         }
     }
 

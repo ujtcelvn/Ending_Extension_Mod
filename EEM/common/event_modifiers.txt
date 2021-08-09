@@ -2606,8 +2606,8 @@ local_intensive_agriculture = {
 }
 
 local_modern_transportation = {
-    farm_RGO_eff = 0.5
-    mine_RGO_eff = 0.5
+    #farm_RGO_eff = 0.5
+    #mine_RGO_eff = 0.5
     local_factory_throughput = 0.1
     local_artisan_output = 0.2
     icon = 11
@@ -2637,12 +2637,27 @@ strat_bombers = {
     icon = 15
 }
 
-bomb_damage = { 
-    immigrant_push = 0.10
-    local_artisan_output = -0.50
-    local_factory_throughput = -0.50
+#BASE_POPGROWTH = 0.0001
+bomb_damage = {
+    immigrant_attract = -0.25
+    immigrant_push = 0.25
+    local_RGO_output = -0.25
+    local_artisan_output = -0.25
+    local_factory_throughput = -0.5
+    local_factory_output = -0.5
+    population_growth = -0.001
+    icon = 18
+}
+
+heavy_bomb_damage = {
+    immigrant_attract = -0.25
+    immigrant_push = 0.25
+    local_RGO_output = -0.25
+    local_artisan_output = -0.25
+    local_factory_throughput = -0.5
+    local_factory_output = -0.5
+    population_growth = -0.002
     local_repair = -0.50
     local_ship_build = 0.50
-    population_growth = -0.001
     icon = 18
 }

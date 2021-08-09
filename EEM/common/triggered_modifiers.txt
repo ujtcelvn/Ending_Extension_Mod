@@ -558,29 +558,30 @@ small_refund = {
         exists = yes
         money = 5000000
     }
-    min_social_spending = 0.5
+    min_social_spending = 0.25
+    pension_level = 1.0
     icon = 16
 }
 
-medium_refund = {
-    trigger = {
-        exists = yes
-        money = 6000000
-    }
-    tax_efficiency = -0.5
-    tariff_efficiency_modifier = -0.5
-    min_social_spending = 0.25
-    icon = 16
-}
+#medium_refund = {
+#    trigger = {
+#        exists = yes
+#        money = 6000000
+#    }
+#    tax_efficiency = -0.25
+#    tariff_efficiency_modifier = -0.25
+#    pension_level = 1.0
+#    icon = 16
+#}
 
 large_refund = {
     trigger = {
         exists = yes
         money = 7000000
     }
-    tax_efficiency = -0.5
-    tariff_efficiency_modifier = -0.5
-    min_social_spending = 0.25
+    tax_efficiency = -0.75
+    tariff_efficiency_modifier = -0.75
+    pension_level = 1.0
     icon = 16
 }
 
@@ -588,38 +589,27 @@ literate_nation = {
 	trigger = {
 		literacy = 0.9
 	}
-	global_population_growth = -0.0001
+	global_population_growth = -0.0005
     icon = 18
 }
 
 clerked_nation = {
 	trigger = {
-        clerks = 0.05
-	}
-	global_population_growth = -0.0001
-    icon = 18
-}
-
-clerked_nation_2 = {
-	trigger = {
         clerks = 0.10
 	}
-	global_population_growth = -0.0001
+	global_population_growth = -0.0005
     icon = 18
 }
 
-clerked_nation_3 = {
+large_commerce_protection_navy = {
 	trigger = {
-        clerks = 0.15
+        total_amount_of_ships = 50
+        total_num_of_ports = 25
+        is_greater_power = yes
+        colonial_nation = yes
+        war = no
 	}
-	global_population_growth = -0.0001
-    icon = 18
-}
-
-clerked_nation_4 = {
-	trigger = {
-        clerks = 0.20
-	}
-	global_population_growth = -0.0001
-    icon = 18
+    tariff_efficiency_modifier = 0.05
+    import_cost = -0.025
+    icon = 16
 }

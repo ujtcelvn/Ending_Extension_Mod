@@ -36,13 +36,12 @@ air_preheater = {
         }
     }
     effect = {
-        rgo_output = 0.05
-        factory_throughput = 0.02
+        factory_goods_output = {
+            fuel = 0.02
+        }
     }
 }
 
-
-################# misc factory boosts ############
 #in 1936, Socony-Vacuum converted an older thermal cracking unit to the Houdry process to catalytically crack 2,000 barrels per day (320 m3/d) of petroleum oil. 
 fluid_catalytic_cracking = {
     limit = { chemistry_and_electricity_7 = 1 }
@@ -59,7 +58,7 @@ fluid_catalytic_cracking = {
     }
     effect = {
         factory_goods_output = {
-            fuel = 0.05
+            fuel = 0.02
         }
     }
 }
@@ -80,7 +79,7 @@ catalytic_reforming = {
     }
     effect = {
         factory_goods_output = {
-            fuel = 0.05
+            fuel = 0.02
         }
     }
 }
@@ -300,8 +299,8 @@ industrial_plastics_production = {
         }
     }
     effect = {
-        factory_goods_output = { fabric  = 0.05 }
-        factory_goods_output = { glass  = 0.05 }
+        factory_goods_output = { fabric = 0.02 }
+        factory_goods_output = { glass  = 0.02 }
         factory_goods_output = { rubber = 0.05 }
     }
 }
@@ -514,7 +513,7 @@ magnetic_separation = {
     }
     effect = {
         rgo_goods_output = {
-            iron = 0.25
+            iron = 0.2
         }
     }
 }

@@ -170,7 +170,7 @@ country_event = {
     id = 165004
     title = "Nanking Massacre"
     desc = "Our troops have sacked Nanking."
-    picture = "cityfire"
+    picture = "nanking_destruction"
     fire_only_once = yes
 	
     trigger = {
@@ -186,19 +186,31 @@ country_event = {
 		#Nanking
 		2221 = {
 			controlled_by = THIS
-            is_captial = yes
+            is_capital = yes
+            NOT = { province_control_days = 365 }
 		}
-
-		war_policy = jingoism
+        war_policy = jingoism
     }
 
     mean_time_to_happen = {
         months = 3
+		modifier = {
+			factor = 10
+			has_country_modifier = signed_the_geneva_convention
+		}
+		modifier = {
+			factor = 0.1
+			has_country_modifier = withdrew_from_geneva_convention
+		}
     }
 
     option = {
-        name = "Oh well, things happen in war."
-		badboy = 5
+        name = "The international community would not like this..."
+        random_list = {
+            25 = { badboy = 2.5 }
+            50 = { badboy = 5 }
+            25 = { badboy = 7.5 }
+        }
         any_country = {
             limit = {
                 owns = 2221
@@ -207,68 +219,18 @@ country_event = {
         }
 		set_global_flag = nanking_massacre
         prestige = -10
-		
-		
-        ai_chance = {
-            factor = 80
-        }
-    }
-
-    option = {
-        name = "Punish those responsible!"
-		badboy = 3
-        any_country = {
-            limit = {
-                owns = 2221
-            }
-            country_event = 165005
-        }
-		set_global_flag = nanking_massacre
-        prestige = -40
-		
-        any_pop = {
-            limit = {
-                is_primary_culture = yes
-                OR = {
-                    pop_type = soldiers
-                    pop_type = officers
-                }
-            }
-            consciousness = 4
-            militancy = 4
-        }
-		
-        add_country_modifier = {
-            name = disunited_country 
-            duration = 365
-        }
-		
-        ai_chance = {
-            factor = 20
-			modifier = {
-				factor = 0
-				OR = {
-					government = fascist_dictatorship
-					government = proletarian_dictatorship
-					government = absolute_monarchy
-					government = presidential_dictatorship
-					government = bourgeois_dictatorship
-				}
-			}
-        }
     }
 }
 
 country_event = {
     id = 165005
     title = "The Nanking Massacre"
-    desc = "Countless unarmed civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
+    desc = "Countless unarmed civilians and POWs in Nanking have been killed and tortured by rampaging Japanese troops!"
     news = yes
-    news_desc_long = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
-    news_desc_medium = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
-    news_desc_short = "Countless civilians and POWs in Nanking have been killed by rampaging Japanese troops!"
-    major = yes
-    picture = "cityfire"
+    news_desc_long = "Countless civilians and POWs in Nanking have been killed and tortured by rampaging Japanese troops!"
+    news_desc_medium = "Countless civilians and POWs in Nanking have been killed and tortured by rampaging Japanese troops!"
+    news_desc_short = "Countless civilians and POWs in Nanking have been killed and tortured by rampaging Japanese troops!"
+    picture = "nanking_destruction"
     fire_only_once = yes
     is_triggered_only = yes
 
@@ -585,8 +547,7 @@ country_event = {
         set_country_flag = gelaohui
         any_owned = {
             limit = {
-                any_neighbor_province = { is_core = RTR }
-                NOT = { is_core = RTR }
+                is_core = RTR
             }
             add_province_modifier = {
                 name = anti_manchu_sentiment
@@ -612,7 +573,7 @@ province_event = {
 
         }
         NOT = {
-            #is_core = TPG
+            is_core = RTR
             is_core = QNG
             is_core = TIB
             is_core = XBI
@@ -622,7 +583,12 @@ province_event = {
             region = CHI_1572
             region = CHI_1559
             region = CHI_2221
-            is_core = RTR
+
+            region = CHI_1508 #Nian Rebellion
+            region = CHI_1510
+            region = CHI_1563
+            region = CHI_1565
+            region = CHI_1505 #Miao Rebellion
         }
         is_core = CHI
         is_primary_culture = no
@@ -726,6 +692,14 @@ province_event = {
         modifier = {
             factor = 1.5
             has_global_flag = qing_won_second_opium_war
+        }
+        modifier = {
+            factor = 2
+            is_core = TPG
+        }
+        modifier = {
+            factor = 0.5
+            controlled_by_rebels = yes
         }
     }
 
@@ -1109,7 +1083,6 @@ country_event = {
                     }
                 }
             }
-            militancy = 1
             consciousness = 2
         }
     }
@@ -1156,8 +1129,7 @@ country_event = {
             }
         }
         any_pop = {
-            limit = { is_primary_culture = no }
-            militancy = 1
+            limit = { OR = { is_primary_culture = no is_accepted_culture = no } }
             consciousness = 2
         }
     }
@@ -2024,6 +1996,642 @@ country_event = {
         }
     }
 }
+
+########## Nian / Miao Rebellions 166220 ##########
+country_event = {
+    id = 166220
+    title = "EVTNAME166220" #Nian Rebellion TPG
+    desc = "EVTDESC166220"
+    picture = "nian_rebellion"
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = QNG
+        exists = TPG
+        OR = {
+            1508 = {
+                owned_by = QNG
+                OR = {
+                    has_province_modifier = anti_manchu_sentiment
+                    average_militancy = 3
+                    has_province_modifier = chinese_floods
+                    controlled_by_rebels = yes
+                }
+            }
+            1510 = {
+                owned_by = QNG
+                OR = {
+                    has_province_modifier = anti_manchu_sentiment
+                    average_militancy = 3
+                    has_province_modifier = chinese_floods
+                    controlled_by_rebels = yes
+                }
+            }
+            1563 = {
+                owned_by = QNG
+                OR = {
+                    has_province_modifier = anti_manchu_sentiment
+                    average_militancy = 3
+                    has_province_modifier = chinese_floods
+                    controlled_by_rebels = yes
+                }
+            }
+        }
+        OR = {
+            has_global_flag = taiping_has_happened
+            has_global_flag = ming_has_happened
+        }
+        has_global_flag = huang1
+        war = yes
+        NOT = { has_global_flag = nian_rebellion }
+    }
+
+    mean_time_to_happen = {
+        months = 12 #irl, happened in 1851, at the same time as the Taiping
+        modifier = {
+            factor = 0.01
+            has_global_flag = huang2
+        }
+    }
+
+    option = {
+        name = "EVT166220OPTA"
+        set_global_flag = nian_rebellion
+        CHI_1508 = {
+            limit = { owned_by = QNG }
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            add_core = TPG
+            secede_province = TPG
+        }
+
+        random = {
+            chance = 75
+            CHI_1510 = {
+                limit = { owned_by = QNG }
+                any_pop = {
+                    consciousness = -5
+                    militancy = -5
+                }
+                add_core = TPG
+                secede_province = TPG
+            }
+        }
+        random = {
+            chance = 50
+            CHI_1563 = {
+                limit = { owned_by = QNG }
+                any_pop = {
+                    consciousness = -5
+                    militancy = -5
+                }
+                add_core = TPG
+                secede_province = TPG
+            }
+        }
+        random = {
+            chance = 25
+            CHI_1565 = {
+                limit = { owned_by = QNG }
+                any_pop = {
+                    consciousness = -5
+                    militancy = -5
+                }
+                add_core = TPG
+                secede_province = TPG
+            }
+        }
+
+        TPG = { country_event = 166222 }
+
+        ai_chance = { factor = 100 }
+    }
+}
+
+country_event = {
+    id = 166221
+    title = "EVTNAME166220" #Nian Rebellion RTR
+    desc = "EVTDESC166220"
+    picture = "nian_rebellion"
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = QNG
+        exists = RTR
+        OR = {
+            1508 = {
+                owned_by = QNG
+                OR = {
+                    has_province_modifier = anti_manchu_sentiment
+                    average_militancy = 3
+                    has_province_modifier = chinese_floods
+                    controlled_by_rebels = yes
+                }
+            }
+            1510 = {
+                owned_by = QNG
+                OR = {
+                    has_province_modifier = anti_manchu_sentiment
+                    average_militancy = 3
+                    has_province_modifier = chinese_floods
+                    controlled_by_rebels = yes
+                }
+            }
+            1563 = {
+                owned_by = QNG
+                OR = {
+                    has_province_modifier = anti_manchu_sentiment
+                    average_militancy = 3
+                    has_province_modifier = chinese_floods
+                    controlled_by_rebels = yes
+                }
+            }
+        }
+        OR = {
+            has_global_flag = taiping_has_happened
+            has_global_flag = ming_has_happened
+        }
+        has_global_flag = huang1
+        war = yes
+        NOT = { has_global_flag = nian_rebellion }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+        modifier = {
+            factor = 0.01
+            has_global_flag = huang2
+        }
+    }
+
+    option = {
+        name = "EVT166220OPTA"
+        set_global_flag = nian_rebellion
+        CHI_1508 = {
+            limit = { owned_by = QNG }
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            add_core = RTR
+            secede_province = RTR
+        }
+
+        random = {
+            chance = 75
+            CHI_1510 = {
+                limit = { owned_by = QNG }
+                any_pop = {
+                    consciousness = -5
+                    militancy = -5
+                }
+                add_core = RTR
+                secede_province = RTR
+            }
+        }
+        random = {
+            chance = 50
+            CHI_1563 = {
+                limit = { owned_by = QNG }
+                any_pop = {
+                    consciousness = -5
+                    militancy = -5
+                }
+                add_core = RTR
+                secede_province = RTR
+            }
+        }
+        random = {
+            chance = 25
+            CHI_1565 = {
+                limit = { owned_by = QNG }
+                any_pop = {
+                    consciousness = -5
+                    militancy = -5
+                }
+                add_core = RTR
+                secede_province = RTR
+            }
+        }
+
+        RTR = { country_event = 166222 }
+
+        ai_chance = { factor = 100 }
+    }
+}
+
+country_event = {
+    id = 166222
+    title = "EVTNAME166222" #Nian Rebellion notification
+    desc = "EVTDESC166222"
+    picture = "nian_rebellion"
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT166222OPTA"
+        set_global_flag = nian_rebellion
+
+        define_general = {
+            name = "Zhang Lexing"
+            personality = brutish
+            background = warmonger
+        }
+
+        define_general = {
+            name = "Zhang Zongyu"
+            personality = ballsy
+            background = bureaucrat_speed
+        }
+
+        ai_chance = { factor = 100 }
+    }
+}
+
+#166223 Miao Rebellion
+country_event = {
+    id = 166223
+    title = "The Miao Rebellion" #The Miao Rebellion
+    desc = "The hill dwellers in Guizhou have been a hotbed of anti-government unrest ever since the Ming dynasty. Once again, the Miao people have risen in revolt."
+    picture = "miao_attack"
+    fire_only_once = yes
+    trigger = {
+        tag = QNG
+        OR = {
+            has_global_flag = taiping_has_happened
+            has_global_flag = ming_has_happened
+        }
+        1505 = {
+            owned_by = QNG
+        }
+        NOT = { has_global_flag = miao_rebellion }
+    }
+
+    mean_time_to_happen = {
+        months = 36 # irl 4 years after taiping
+        modifier = {
+            factor = 0.5
+            1505 = { average_militancy = 3 }
+        }
+        modifier = {
+            factor = 0.5
+            1505 = { average_militancy = 6 }
+        }
+        modifier = {
+            factor = 0.01
+            1505 = { controlled_by_rebels = yes }
+        }
+    }
+
+    immediate = {
+        set_global_flag = miao_rebellion
+    }
+
+    option = {
+        name = "Crush the rebels!"
+
+        CHI_1505 = { add_core = MAO } #Guizhou
+        any_owned = {
+            limit = {
+                is_core = MAO
+            }
+            secede_province = MAO
+        }
+        CHI_1578 = { add_core = MAO } #West Sichuan
+        CHI_1601 = { add_core = MAO } #Yunnan
+        1499 = { add_core = MAO } #Guangxi
+        1502 = { add_core = MAO } #Guangxi
+        1503 = { add_core = MAO } #Guangxi
+        1504 = { add_core = MAO } #Guangxi
+        CHI_1499 = { add_core = MAO } #West Canton
+        1493 = { add_core = MAO } #Canton
+        CHI_1524 = { add_core = MAO } #North Hunan
+        1371 = { add_core = MAO } #Cao Bang
+        1372 = { add_core = MAO } #Son La
+        1356 = { add_core = MAO } #Luang Prabang
+        any_pop = {
+            limit = { OR = { culture = miao culture = yi culture = asian_minor } }
+            consciousness = 2
+        }
+
+        war = {
+            target = MAO
+            attacker_goal = {
+                casus_belli = conquest
+            }
+        }
+
+        MAO = {
+            capital = 1505
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+
+            add_country_modifier = { name = fanatic_army duration = 1825 }
+
+            define_general = {
+                name = "Zhang Xiumei"
+                personality = resolute
+                background = school_of_the_bayonet
+            }
+        }
+
+        random_owned = {
+            limit = { owner = { land_reform = yes_land_reform } }
+            MAO = { economic_reform = yes_land_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { admin_reform = yes_admin_reform } }
+            MAO = { economic_reform = yes_admin_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = yes_finance_reform } }
+            MAO = { economic_reform = yes_finance_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = finance_reform_two } }
+            MAO = { economic_reform = finance_reform_two }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = yes_monetary_reform } }
+            MAO = { economic_reform = yes_monetary_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = monetary_reform_two } }
+            MAO = { economic_reform = monetary_reform_two activate_technology = no_standard }
+        }
+
+        random_owned = {
+            limit = { owner = { education_reform = yes_education_reform } }
+            MAO = { economic_reform = yes_education_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { research_reform = yes_research_reform } }
+            MAO = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_training = yes_foreign_training } }
+            MAO = { military_reform = yes_foreign_training }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_weapons = yes_foreign_weapons } }
+            MAO = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_officers = yes_foreign_officers } }
+            MAO = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+        }
+
+        random_owned = {
+            limit = { owner = { army_schools = yes_army_schools } }
+            MAO = { military_reform = yes_army_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_naval_officers = yes_foreign_naval_officers } }
+            MAO = { military_reform = yes_foreign_naval_officers }
+        }
+
+        random_owned = {
+            limit = { owner = { naval_schools = yes_naval_schools } }
+            MAO = { military_reform = yes_naval_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_navies = yes_foreign_navies } }
+            MAO = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+        }
+
+        random_owned = {
+            limit = { owner = { western_shipyards = yes_western_shipyards } }
+            MAO = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_artillery = yes_foreign_artillery } }
+            MAO = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+        }
+
+        ai_chance = { factor = 100 }
+    }
+
+    option = {
+        name = "Long Live the Miao People!"
+
+        CHI_1505 = { add_core = MAO } #Guizhou
+        any_owned = {
+            limit = {
+                is_core = MAO
+            }
+            secede_province = MAO
+        }
+        CHI_1578 = { add_core = MAO } #West Sichuan
+        CHI_1601 = { add_core = MAO } #Yunnan
+        1499 = { add_core = MAO } #Guangxi
+        1502 = { add_core = MAO } #Guangxi
+        1503 = { add_core = MAO } #Guangxi
+        1504 = { add_core = MAO } #Guangxi
+        CHI_1499 = { add_core = MAO } #West Canton
+        1493 = { add_core = MAO } #Canton
+        CHI_1524 = { add_core = MAO } #North Hunan
+        1371 = { add_core = MAO } #Cao Bang
+        1372 = { add_core = MAO } #Son La
+        1356 = { add_core = MAO } #Luang Prabang
+        any_pop = {
+            limit = { OR = { culture = miao culture = yi culture = asian_minor } }
+            consciousness = 2
+        }
+
+        war = {
+            target = MAO
+            attacker_goal = {
+                casus_belli = conquest
+            }
+        }
+
+        MAO = {
+            capital = 1505
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+
+            add_country_modifier = { name = fanatic_army duration = 1825 }
+
+            define_general = {
+                name = "Zhang Xiumei"
+                personality = resolute
+                background = school_of_the_bayonet
+            }
+        }
+
+        random_owned = {
+            limit = { owner = { land_reform = yes_land_reform } }
+            MAO = { economic_reform = yes_land_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { admin_reform = yes_admin_reform } }
+            MAO = { economic_reform = yes_admin_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = yes_finance_reform } }
+            MAO = { economic_reform = yes_finance_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = finance_reform_two } }
+            MAO = { economic_reform = finance_reform_two }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = yes_monetary_reform } }
+            MAO = { economic_reform = yes_monetary_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = monetary_reform_two } }
+            MAO = { economic_reform = monetary_reform_two activate_technology = no_standard }
+        }
+
+        random_owned = {
+            limit = { owner = { education_reform = yes_education_reform } }
+            MAO = { economic_reform = yes_education_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { research_reform = yes_research_reform } }
+            MAO = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_training = yes_foreign_training } }
+            MAO = { military_reform = yes_foreign_training }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_weapons = yes_foreign_weapons } }
+            MAO = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_officers = yes_foreign_officers } }
+            MAO = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+        }
+
+        random_owned = {
+            limit = { owner = { army_schools = yes_army_schools } }
+            MAO = { military_reform = yes_army_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_naval_officers = yes_foreign_naval_officers } }
+            MAO = { military_reform = yes_foreign_naval_officers }
+        }
+
+        random_owned = {
+            limit = { owner = { naval_schools = yes_naval_schools } }
+            MAO = { military_reform = yes_naval_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_navies = yes_foreign_navies } }
+            MAO = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+        }
+
+        random_owned = {
+            limit = { owner = { western_shipyards = yes_western_shipyards } }
+            MAO = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_artillery = yes_foreign_artillery } }
+            MAO = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+        }
+        change_tag_no_core_switch = MAO
+        ai_chance = { factor = 0 }
+    }
+}
+
+
+
+country_event = {
+    id = 166224
+    title = "Miao Rebellion Defeated"
+    desc = "We have defeated the Miao rebels!"
+    picture = "miao_defeated"
+    fire_only_once = yes
+
+    trigger = {
+        has_global_flag = miao_rebellion
+        owns = 1505
+        is_culture_group = east_asian
+        NOT = { exists = MAO }
+        1505 = { is_core = MAO }
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = "Excellent"
+        prestige = 5
+        MAO = { all_core = { remove_core = MAO } }
+    }
+}
+
+country_event = {
+    id = 166225
+    title = "Punti-Hakka Clan Wars"
+    desc = "The Cantonese and the Hakka are feuding after the Cantonese accused the Hakka of being Qing collaborators during our campaign against the southern rebels!"
+    picture = "punti_hakka"
+    fire_only_once = yes
+
+    trigger = {
+        owns = 1493 #Canton
+        tag = QNG
+        has_global_flag = taiping_has_been_defeated
+        has_global_flag = ming_has_been_defeated
+        NOT = { has_global_flag = punti_hakka_war_happened }
+    }
+
+    mean_time_to_happen = { months = 12 }
+
+    option = {
+        name = "At least we're not directly involved."
+        set_global_flag = punti_hakka_war_happened
+        CHI_1493 = {
+            limit = { owned_by = QNG }
+            any_pop = {
+                limit = { OR = { culture = yue culture = hakka } }
+                militancy = 2
+                consciousness = 5
+                reduce_pop = 0.95 #12.72 million population * 0.05 = ~636,000 casulties
+            }
+            add_province_modifier = {
+                name = war_torn
+                duration = 1095 #3 years, 1855 to 1868
+            }
+        }
+    }
+}
+
 
 ########## Western Powers react to Taiping 166300 ##########
 country_event = {
@@ -3564,7 +4172,7 @@ country_event = {
         GER = { relation = { who = THIS value = 100 } }
         any_pop = {
             limit = { is_primary_culture = no }
-            militancy = 3
+            militancy = 1
         }
         ai_chance = {
             factor = 80
