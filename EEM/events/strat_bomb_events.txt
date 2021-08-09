@@ -455,7 +455,7 @@ country_event = {
 
 ##### War crimes #####
 country_event = {
-    id = 23200
+    id = 23110
     title = "Atrocities"
     desc = "EVTDESC23200"
     picture = "war_crimes"
@@ -520,7 +520,7 @@ country_event = {
 }
 
 country_event = {
-    id = 23201
+    id = 23111
     title = "$FROMCOUNTRY$ Atrocities"
     desc = "EVTDESC23201"
     picture = "war_crimes"
