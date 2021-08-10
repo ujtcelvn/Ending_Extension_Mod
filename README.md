@@ -1,7 +1,7 @@
 ## Ending_Extension_Mod
 This is a submod for the HPM mod of Victoria 2, that extends the end date to 1950 and adds many new features to flesh out the end game. 
 
-Run this mod with HPM v0.4.6 (clicking on both this EEM and HPM in the mod selection menu) for best results.
+Run this mod with the development branch of HPM on the HPM github, updated 2020-05-27 (clicking on both this EEM and HPM in the mod selection menu) for best results.
 
 Since this mod adds new nations, you need to clear the flag cache every time you switch between this mod enabled and HPM alone.
 
