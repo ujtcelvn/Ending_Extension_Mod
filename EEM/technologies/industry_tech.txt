@@ -552,6 +552,13 @@ pneumatic_and_hydraulics = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = { #We have large oil fields!
+            factor = 2
+            OR = {
+                owns = 1102
+                owns = 2270
+            }
+        }
     }
 }
 assembly_line = {

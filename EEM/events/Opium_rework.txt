@@ -1,0 +1,93 @@
+#################### Opium Trade id = 166600 ####################
+
+#country_event = {
+#    id = 166600
+#    title = "The North Chinese Opium Trade"
+#    desc = ""
+#    picture = "opium_feeding"
+
+#    trigger = {
+#        NOT = { is_culture_group = east_asian }
+#        civilized = yes
+#        war = no
+#        NOT = { has_country_flag = north_chinese_opium_trade_domination }
+#        owns = 1566 #Qingdao
+#    }
+
+#    mean_time_to_happen = {
+#        months = 120
+#        modifier = {
+#            factor = 0.5
+#            is_greater_power = yes
+#        }
+#    }
+
+#    option = {
+#        name = "This trade will be very profitable."
+#        set_country_flag = north_chinese_opium_trade_domination
+#        any_owned = {
+#            limit = {
+#                NOT = { has_province_modifier = north_chinese_opium_trade_province }
+#                trade_goods = opium
+#            }
+#            add_province_modifier = { name = north_chinese_opium_trade_province duration = -1 }
+#        }
+#        any_country = {
+#            limit = { has_country_flag = north_chinese_opium_trade_domination }
+#            country_event = 166601
+#        }
+#    }
+#}
+
+#country_event = {
+#    id = 166601
+#    title = "North Chinese Opium Trade Lost to $FROMCOUNTRY$"
+#    desc = "$FROMCOUNTRY$ now dominates the North Chinese opium trade, reducing opportunities for $COUNTRY_ADJ$ merchants."
+#    picture = "opium_feeding"
+
+#    is_triggered_only = yes
+
+#    option = {
+#        name = "Our profits will suffer."
+#        relation = { who = FROM value = -25 }
+#        clr_country_flag = north_chinese_opium_trade_domination
+#        any_owned = {
+#            limit = {
+#                has_province_modifier = north_chinese_opium_trade_province
+#            }
+#            remove_province_modifier = north_chinese_opium_trade_province
+#        }
+#    }
+#}
+
+#country_event = {
+#    id = 166602
+#    title = "Lost Access to North Chinese Opium Market"
+#    desc = "$COUNTRY_ADJ$ merchants and smugglers no longer have easy access to the opium market in Northern China."
+#    picture = "opium_feeding"
+
+#    trigger = {
+#        has_country_flag = north_chinese_opium_trade_domination
+#        NOT = { owns = 1566 #Qingdao }
+#        NOT = { borders a Chinese province }
+#    }
+
+#    mean_time_to_happen = {
+#        months = 12
+#        modifier = {
+#            factor = 2
+#            is_greater_power = yes
+#        }
+#    }
+
+#    option = {
+#        name = "Our profits will suffer."
+#        clr_country_flag = north_chinese_opium_trade_domination
+#        any_owned = {
+#            limit = {
+#                has_province_modifier = north_chinese_opium_trade_province
+#            }
+#            remove_province_modifier = north_chinese_opium_trade_province
+#        }
+#    }
+#}

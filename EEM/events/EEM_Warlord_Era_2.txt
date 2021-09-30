@@ -1002,7 +1002,7 @@ country_event = {
         has_country_flag = xinhai_revolution
         OR = {
             KMT = { NOT = { has_country_modifier = preparing_for_war } }
-            NOT = { is_our_vassal = KTM }
+            KMT = { NOT = { substate_of = THIS } }
         }
         NOT = { has_global_flag = xinhai_revolution_has_happened }
     }
@@ -1544,7 +1544,7 @@ country_event = {
         has_country_flag = xinhai_revolution
         OR = {
             KMT = { NOT = { has_country_modifier = preparing_for_war } }
-            NOT = { is_our_vassal = KTM }
+            KMT = { NOT = { substate_of = THIS } }
         }
         NOT = { has_global_flag = xinhai_revolution_has_happened }
     }

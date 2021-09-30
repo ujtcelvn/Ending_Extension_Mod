@@ -537,11 +537,11 @@ naval_doctrine_7 = {
     cost = 25200
     unciv_military = yes
 
-    #max_naval_base = 1
+    #max_naval_base = 0.5
     aircraft_carrier = { build_time = -10 }
 
     ai_chance = {
-        factor = 1.5
+        factor = 1
         # Land-locked countries don't research this
         modifier = {
             factor = 0
@@ -605,6 +605,11 @@ naval_doctrine_7 = {
         modifier = {
             factor = 1.1
             total_num_of_ports = 40
+        }
+        # Only research this after you have carriers
+        modifier = {
+            factor = 0
+            NOT = { invention = purpose_built_air_carriers }
         }
     }
 }
@@ -1197,7 +1202,7 @@ ship_construction_7 = {
     dreadnought = { maximum_speed = 1 }        #38
 
     ai_chance = {
-        factor = 1.25
+        factor = 1
         # Land-locked countries don't research this
         modifier = {
             factor = 0
@@ -1264,9 +1269,10 @@ ship_construction_7 = {
             factor = 1.1
             total_num_of_ports = 40
         }
+        # Only research this after you have carriers
         modifier = {
             factor = 0
-            NOT = { modern_naval_doctrine = 1 }
+            NOT = { invention = purpose_built_air_carriers }
         }
     }
 }
@@ -1315,7 +1321,15 @@ naval_design_bureaus = {
             factor = 1.25
             year = 1860
         }
+        modifier = {
+            factor = 1.25
+            year = 1880
+        }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1408,7 +1422,15 @@ fire_control_systems = {
             factor = 1.25
             year = 1860
         }
+        modifier = {
+            factor = 1.25
+            year = 1880
+        }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1505,7 +1527,15 @@ weapon_platforms = {
             factor = 1.25
             year = 1870
         }
+        modifier = {
+            factor = 1.25
+            year = 1890
+        }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1549,6 +1579,27 @@ weapon_platforms = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        # Our ships need better guns
+        modifier = {
+            factor = 1.25
+            invention = dreadnoughts
+        }
+        modifier = {
+            factor = 1.15
+            invention = modern_battleships
+        }
+        modifier = {
+            factor = 1.25
+            invention = modern_cruisers
+        }
+        modifier = {
+            factor = 1.25
+            invention = protected_cruisers
+        }
+        modifier = {
+            factor = 1.25
+            invention = purpose_built_air_carriers
         }
     }
 }
@@ -1601,12 +1652,28 @@ main_armament = {
             factor = 1.25
             year = 1880
         }
+        modifier = {
+            factor = 1.25
+            year = 1900
+        }
         # Our cruisers need torpedoes!
         modifier = {
             factor = 1.25
             invention = protected_cruisers
         }
+        modifier = {
+            factor = 1.25
+            invention = modern_cruisers
+        }
+        modifier = {
+            factor = 2
+            invention = purpose_built_air_carriers
+        }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1700,7 +1767,15 @@ advanced_naval_design = {
             factor = 4
             invention = dreadnoughts
         }
+        modifier = {
+            factor = 2
+            invention = modern_battleships
+        }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1750,6 +1825,10 @@ advanced_naval_design = {
             factor = 1.25
             year = 1920
         }
+        modifier = {
+            factor = 1.25
+            year = 1940
+        }
     }
 }
 modern_naval_design = {
@@ -1795,6 +1874,10 @@ modern_naval_design = {
             clipper_design = 1
         }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1848,10 +1931,19 @@ modern_naval_design = {
             factor = 1.25
             invention = modern_cruisers
         }
+        #Our carriers need better planes!
+        modifier = {
+            factor = 4
+            invention = purpose_built_air_carriers
+        }
         # We're late with this!
         modifier = {
             factor = 1.25
-            year = 1930
+            year = 1939
+        }
+        modifier = {
+            factor = 1.25
+            year = 1959
         }
     }
 }
@@ -1899,6 +1991,10 @@ naval_engineering_7 = {
             clipper_design = 1
         }
         # Bigger navy, more weight
+        modifier = {
+            factor = 0.5
+            NOT = { total_amount_of_ships = 10 }
+        }
         modifier = {
             factor = 1.1
             total_amount_of_ships = 20
@@ -1951,7 +2047,11 @@ naval_engineering_7 = {
         # We're late with this!
         modifier = {
             factor = 1.25
-            year = 1945
+            year = 1950
+        }
+        modifier = {
+            factor = 1.25
+            year = 1970
         }
     }
 }
@@ -1994,7 +2094,7 @@ alphabetic_flag_signaling = {
             NOT = { rank = 18 }
         }
         modifier = {
-            factor = 1.02
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2004,6 +2104,14 @@ alphabetic_flag_signaling = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.2
+            colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.2
+            any_owned_province = { is_overseas = yes }
         }
     }
 }
@@ -2042,7 +2150,7 @@ naval_plans = {
             war = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2058,11 +2166,11 @@ naval_plans = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             any_owned_province = { is_overseas = yes }
         }
     }
@@ -2098,7 +2206,7 @@ naval_statistics = {
             }
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2126,11 +2234,11 @@ naval_statistics = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             any_owned_province = { is_overseas = yes }
         }
     }
@@ -2169,7 +2277,7 @@ naval_logistics = {
             war = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2185,11 +2293,11 @@ naval_logistics = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             any_owned_province = { is_overseas = yes }
         }
     }
@@ -2228,7 +2336,7 @@ naval_directionism = {
             war = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2244,11 +2352,11 @@ naval_directionism = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             any_owned_province = { is_overseas = yes }
         }
     }
@@ -2283,7 +2391,7 @@ naval_integration = {
             war = yes
         }
         modifier = {
-            factor = 1.02
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2309,6 +2417,14 @@ naval_integration = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.2
+            colonial_nation = yes
+        }
+        modifier = {
+            factor = 1.2
+            any_owned_province = { is_overseas = yes }
         }
     }
 }
@@ -2343,7 +2459,7 @@ naval_science_7 = {
             war = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             OR = { tech_school = naval_tech_school tech_school = japanese_tech_school }
         }
         modifier = {
@@ -2371,11 +2487,11 @@ naval_science_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.05
+            factor = 1.2
             any_owned_province = { is_overseas = yes }
         }
     }

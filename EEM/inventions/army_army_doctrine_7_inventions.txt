@@ -73,6 +73,7 @@ mechanized_assault_doctrine = {
         }
         motorized_infantry = {
             attack = 2
+            supply_consumption = 0.10
         }
     }
 }
@@ -148,10 +149,10 @@ combined_arms_offensive = {
     }
     effect = {
         infantry = {
-            attack = 1
+            attack = 2
         }
         guard = {
-            attack = 1
+            attack = 2
         }
         artillery = {
             attack = 0.1

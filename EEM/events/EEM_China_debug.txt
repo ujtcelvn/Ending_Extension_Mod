@@ -344,44 +344,8 @@ country_event = {
     mean_time_to_happen = {
         months = 60
         modifier = {
-            factor = 10
-            ideology = reactionary
-        }
-        modifier = {
             factor = 0.5
-            ideology = liberal
-        }
-        modifier = {
-            factor = 0.5
-            war = yes
-        }
-        modifier = {
-            factor = 0.2
-            has_recently_lost_war = yes
-        }
-        modifier = {
-            factor = 0.1
-            has_country_modifier = self_strengthening_movement 
-        }
-        modifier = {
-            factor = 0.5
-            NOT = { owns = 1485 } #Taipei
-        }
-        modifier = {
-            factor = 0.5
-            has_global_flag = summer_palace_torched
-        }
-        modifier = {
-            factor = 0.5
-            has_global_flag = spread_warlord_influence
-        }
-        modifier = {
-            factor = 0.5
-            year = 1920
-        }
-        modifier = {
-            factor = 0.5
-            year = 1940
+            year = 1925
         }
     }
 
@@ -391,8 +355,16 @@ country_event = {
         ai_chance = {
             factor = 10
             modifier = {
-                factor = 5
+                factor = 10
                 ideology = reactionary
+            }
+            modifier = {
+                factor = 0.5
+                war = yes
+            }
+            modifier = {
+                factor = 0.5
+                has_recently_lost_war = yes
             }
         }
     }

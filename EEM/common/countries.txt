@@ -6,6 +6,7 @@ REB     =     "countries/rebels.txt"
 ##EEM
 RTR        ="countries/Ming.txt"
 MAO        ="countries/Miao.txt"
+NWO        ="countries/New World Order.txt"
 
 ##HPM
 PNK        ="countries/Pontianak.txt"

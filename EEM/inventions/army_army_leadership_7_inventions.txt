@@ -115,7 +115,11 @@ motorized_recon = {
             reconnaissance = 1
             maximum_speed = 1
             attack = 1
-            supply_consumption = 0.50
+            supply_consumption = 0.4
+        }
+        tank = {
+            attack = 2
+            supply_consumption = 0.25
         }
     }
 }

@@ -13,11 +13,11 @@ army = 30
 
 1936 naval doctrine					 4
 1930 ship construction				 5		1919 oil_driven_ships		5
-1930 naval engineering				11
+1930 naval engineering				10      1919 modern_naval_design    2
 1936 naval science					 3
 1936 naval leadership				 3
 
-navy = 26 + 5
+navy = 25 + 7
 
 1930 aesthetics						10
 1930 philosphy						 4
@@ -29,19 +29,19 @@ culture = 18
 
 1926 financial institutions			 1
 1926 monetary system				 2
-1926 economic thought and critique	 5
+1926 economic thought and critique	 6
 1926 market functionality			 4
 1926 organization					 4
 
-commerce = 16
+commerce = 17
 
 1930 power							10
 1930 mechanization					 3      
-1930 metallurgy						 6		1850 regenerative_furnaces 	1			1900 electric_furnace	2
+1930 metallurgy						 6		1850 regenerative_furnaces 	1			1900 electric_furnace	1
 1930 infrastructure					 0
-1936 chemistry and electricity		11		1870 organic_chemistry		1			1880 electricity 		1
+1936 chemistry and electricity		11		1900 synthetic_polymers 1
 
-industry = 30 + 5
+industry = 30 + 3
 
 #Feature list
 >v0.1 
@@ -99,6 +99,7 @@ industry = 30 + 5
 		23001 province has been heavily bombed
 		23100 cancel bombing: air force too weak
 		23101 cancel bombing: war is over
+        etc
 	China
 		165000 Huang He flood 1898
 		165001 Yangtze flood 1931
@@ -119,8 +120,11 @@ industry = 30 + 5
 		165205 RTR resume war
 		165206 RTR victory vs QNG
 		165207 secret society power struggle
-#TODO
-#the Bomb
+        etc
+    UN
+        666000
+
+#TODO:
 #other events and decisions
 	the industrial revolution and its consequences have been a disaster to the human race
 		Preservationist Movement
@@ -137,53 +141,426 @@ industry = 30 + 5
 			Egypt if not a puppet can sieze the canal (infamy and prestige gain)
 			leading to a suez crisis
 	GOTT ERHALTE, GOTT BESCHÜTZE
-	east asia fix (cuz HPM is never gonna do it)
-	AI genocide
 	what happens if country gets dismantled twice (like post WW2 Germany)
-	daddy UN
-		UN founder gets to choose 1st Secretariat (and thus the UN focus for the 1st 5 years (USA thus can cuck everyone else by choosing the decolonization focus))
-		UN Secretariat elections every 5 years (votes by UN security council)
-			UN_focus_decolonization				"encourages" countries to decolonize
-			UN_focus_global_development			helps education in undeveloped countries
-			UN_focus_world_trade				trade and economy boosts
-			UN_focus_world_health				prevent disease events, can eradicate smallpox, anti-pollution
-			UN_focus_environmentalism			by some miracle if environmentalists somehow get into power without being corrupt, fight a losing battle against global warming and pollution
+    OPEC, oil crisis
 #Economy
 	White Collar Ofice:
 		Staff: Clerks and Capitalists
 		Build: cement, steel, electric gear
 		Maintenence: cement, electric gear, paper
 		electric gear + telephone + radio -> telecom
-		dye + glass + fuel + sulfur -> pharmamed
+		dye + glass + fuel + sulfur + opium(?) -> pharmachem
+    1970s: economic maliase, USSR stagnation, Dengism/ market socialsm, Neoliberalism https://astralcodexten.substack.com/p/book-review-a-brief-history-of-neoliberalism
+    Near Future: Demographic collapse will btfo the whole world except America, which will return to isolationism https://astralcodexten.substack.com/p/your-book-review-the-accidental-superpower
+    How complex societies collapse https://astralcodexten.substack.com/p/your-book-review-the-collapse-of
+	1980s: Rise of obesity and Anorexia https://slimemoldtimemold.com/
 #localizations
+    inventions
+    modern political parties!
+    CV names
 #Migration rework
 #Assimilation rework
 #max fort, navy base, and infrastructure max level 7 in buildings.txt without crashing
 #interesting techs:
 	foam_concrete: back to the early 1920s and the production of autoclaved aerated concrete, which was used mainly as insulation.[2] A detailed study concerning the composition, physical properties and production of foamed concrete was first carried out in the 1950s and 60s.[3][4][5] Following this research, new admixtures were developed in the late 1970s and early 80s, which led to the commercial use of foamed concrete in construction projects
-	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%. U
+	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%.
 	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
 #jam in Africamod
-
 #TODO: split up asian_minor
 #TODO: return cores and release vassal for RTR and MAO
 #TODO: San Blas Rebellion event
 #TODO: Ottomemes
 #TODO: FRCA become guatemala fix
+#TODO: Indonesia making like 30% of the world's sulphur is no fair
+    Mercury(II) fulminate, or Hg(CNO)2, is a primary explosive. It is highly sensitive to friction, heat and shock and is mainly used as a trigger for other explosives in percussion caps and detonators. 
+        First used as a priming composition in small copper caps beginning in the 1820s, mercury fulminate quickly replaced flints as a means to ignite black powder charges in muzzle-loading firearms. Later, during the late 19th century and most of the 20th century, mercury fulminate or potassium chlorate became widely used in primers for self-contained rifle and pistol ammunition.
+    Almadén cinnabar mine 
+        491 Ciudad Real, currently makes grain
+        Almadén is home to the world's greatest reserves of cinnabar
+        opened before 16th century, closed in 2002
+    New Almaden cinnabar mine
+        Discovered in the 1820's by Mexican settlers, New Almaden mines are the oldest mines in California and were one of the most productive mercury mines in the country
+        closed in 1976 
+        doesn't have a province, make a San Jose / Santa Clara County province?
+#TODO: 1104 Sheki to silk? "During 1850–70, Shaki became international silk production centre.[39] More than 200 European companies opened offices in the city, while silkworms to the tune of 3 million roubles were sold to them in a year.[39] Shaki possesses a small silk industry and relies on its agricultural sector, which produces tobacco, grapes, cattle, nuts, cereals and milk."
+#TODO: 1107 Lankaran to tea? "Dominating spheres in the economy of Lankaran are vegetable-growing, tea-growing, paddy cultivating, cattle-breeding, citrus plants, beekeeping, fishing, and grain farming.[10] Favourable humid subtropical climate, availability of good arable land, water and sufficient labour resources of the city provides a good basis for agricultural activities as well as the development of agro-processing enterprises. The city is also home to Azerbaijan's first tea plant, built in 1937.[11]"
+#TODO: “Seize Rest of State” CB
+#TODO: Decision to gift money to ally/sphere
+#TODO: crimes against humanity
+    Pogroms
+    atrocities when suppressing rebels
+    Fascist AI genocides
+    Anti-immigrant riots
+#TODO: add a Bureaucrat_events.txt event id 11003 continued from GovernmentFlavor.txt
+    #TODO: Anarcho-liberals fire bureaucrats
+    #TODO: oh god I need to adjust all the promotion chances in poptypes so bureaucrats don't get promoted as often when anarcho-lib
+    #TODO: corruption
+        there is already a kleptocrat crime, but it's not in use.
+    #TODO: large country bureaucrat bloat and corruption event
+       Switzerland, which is so federal that it's barely a single country at all, and argues that its small size (or rather, the small size of each canton) has helped it stay one of the world's most stable and prosperous areas (also, Venice!). He argues that a large country isn't just a small country times X. Small countries operate partly on informal bonds of personal relationships; everybody has "skin in the game" regarding decisions. Larger countries don't just multiply everything by a constant, they switch from personal/Near Mode to bureaucratic/Far Mode and get gradually worse as they expand.
+       https://astralcodexten.substack.com/p/book-review-antifragile
+    #TODO: maybe an "anti-corruption drive" decision for dictatorships that actually purges 1% of bureaucrats and capitalists and landowners, but makes the remainder too scared to rebel (increases party support)?
+        "Anti corruption campaign" seems to be a code word for "arresting the enemies of people in power", whether in Erdogan's Turkey or Xi's China. I'm not sure what to do about it without leaving corruption in place, but, uh, maybe we should leave corruption in place. Hard to say.
+        https://astralcodexten.substack.com/p/book-review-the-new-sultan
+#TODO: Education
+    #TODO: Wade–Giles was developed by Thomas Francis Wade, a scholar of Chinese and a British ambassador in China who was the first professor of Chinese at Cambridge University. Wade published in 1867
+    #TODO: simplify_chinese decision
+        KMT rejected it in 1936 
+        CCP passed it in 1952, 2nd round in 1977, 2nd round retracted in 1986 (~30 years)
+        low literacy
+        liberal, socialist, or communist
+        is absolute_monarchy or proletarian_dictatorship or democratic but mostly liberal / socialist and no one else has ever simplified chinese
+        education_efficiency_modifier = 0.05
+        global_pop_consciousness_modifier = 0.01
+        lasts 30 years?
+        conservatives and reactionaries and fascists very butthurt
+    #TODO: Hanyu Pinyin: The Committee for the Reform of the Chinese Written Language was formed in 1954 and, four years later, the 1st National People’s Congress gave its assent to the adoption of pinyin.
+    #TODO: illiterate commies / fascists can force intellectuals to move to illiterate rural areas? move_pop doesn't work very well though
+#TODO: Opium Rework
+    #TODO: after westernizing, local_opium_habit turns into local_opoid_crisis for 1825 days (5 years) (normal opium spread lasts for 10 years)
+    #TODO: local_opoid_crisis spreads from treaty ports to nearby east asian provinces, and so on
+    #TODO: reuse this mechanism for the late 1990s ~ now American Opoid Epidemic
+	#TODO: dominate north / central / south chinese opium trade
+        if own the right treaty port and aren't Chinese, you can dominate opium trade in a part of china so your opium provinces make more money (opium directly generates money and is not a luxury good in HPM)
+        You can steal the opium trade domination if the port you own is of a higher priority than that of another province.
+	    (Only 1 country can dominate opium trade in 1 place at a time ) (1 country can dominate opium trade in multiple places) (top = higher priority)
+        north_chinese_opium_trade opium production + 0.1 on opium producing provinces if:
+            Qingdao 1566
+            Lushun 1481
+            Weihaiwei 1569
+        central_chinese_opium_trade opium production + 0.2 on opium producing provinces if:
+            Shanghai 1538
+            Ningbo 1608    (Southernmost)
+            Jiaxing 1606   (Northernmost)
+        south_chinese_opium_trade opium production + 0.2 on opium producing provinces if:
+            Hong Kong 1496
+            Macao 1498 
+            Kwangchowan 2632
+            Hainan 2632
+            Taiwan 2406
+    #TODO: International Opium Commission 1909
+        "The United States convened a 13-nation conference of the International Opium Commission in 1909 in Shanghai, China, in response to increasing criticism of the opium trade."
+        After this event, the international opium commission will keep trying to pass the international opium convention until it passes
+	#TODO: International Opium Convention January 23, 1912
+        The International Opium Convention, signed at The Hague on January 23, 1912 during the First International Opium Conference, was the first international drug control treaty... The treaty was signed by Germany, the United States, China, France, the United Kingdom, Italy, Japan, the Netherlands, Persia, Portugal, Russia, and Siam. The Convention provided, "The contracting Powers shall use their best endeavours to control, or to cause to be controlled, all persons manufacturing, importing, selling, distributing, and exporting morphine, cocaine, and their respective salts, as well as the buildings in which these persons carry such an industry or trade."
+        Vote yes: landowners in opium provinces slightly upset
+        Vote no: socialists and liberals slightly upset, prestige --, infamy +
+		if at least 8 great powers vote yes: International Opium Convention event for everyone with opium provinces (also happens naturally if any opium province lacks the modifier)
+            opium production -0.5, local_opoid_crisis spreads more slowly
+    #TODO: Anti-opium campaign
+        East Asian nation must be westernized, have techs, at peace, not liberal or anarcho-liberal
+        makes anarcho-liberals mad
+        easier if a dictatorship?
+        comes in stages?
+        Falure event: consciousness +, ruling party support -
+        Progression event: local_opoid_crisis spreads more slowly, anarcho-liberals mad
+        Success event: local_opoid_crisis removed and no longer spreads in China, all chinese_opium_trade modifiers for everyone removed, no one can dominate opium trade anymore, prestige +, anarcho-liberals mad
+#TODO: proxy wars / GP sponsored ideological-driven rebels / coups
+#TODO: generic commission cruiser decision, based on svenska_pansarbats_foreningen and commission_warship decisions	
 
-#TODO: peace march event (I think there is already a peace march event, either giving pacifism or war exhaustion, adjust its mtth, make it more likely to happen if no_more_war)
+#TODO: The World Bank Group
+    the International Bank for Reconstruction and Development (IBRD), established in 1944, which provides debt financing on the basis of sovereign guarantees;
+    the International Finance Corporation (IFC), established in 1956, which provides various forms of financing without sovereign guarantees, primarily to the private sector;
+    the International Development Association (IDA), established in 1960, which provides concessional financing (interest-free loans or grants), usually with sovereign guarantees; When a country reaches a GDP per person over US$1,145, they are no longer eligible for IDA financial support.
+    the International Centre for Settlement of Investment Disputes (ICSID), established in 1965, which works with governments to reduce investment risk;
+    the Multilateral Investment Guarantee Agency (MIGA), established in 1988, which provides insurance against certain types of risk, including political risk, primarily to the private sector.
+
+	The Group of Ten (G-10 or G10) refers to the group of countries that agreed to participate in the General Arrangements to Borrow (GAB), an agreement to provide the International Monetary Fund (IMF) with additional funds to increase its lending ability. (1962)
+
+
+#TODO: Tech school flavor events
+	traditional_academic
+	army_tech_school
+	naval_tech_school	
+	industrial_tech_school 	
+	culture_tech_school
+		Culture Celebration: prestige_factor = 0.01
+	commerce_tech_school
+	prussian_tech_school
+		If dismantled past 1930:
+			We will demilitarize
+				change to industrial_tech_school
+			Never!
+				infamy +
+	czech_tech_school
+	japanese_tech_school
+		Army-Navy rivary
+			Favor the Army
+			Favor the Navy 
+		If dismantled past 1930:
+			We will demilitarize
+				lose Line of Advantage
+				change to commerce_tech_school
+			Never!
+				infamy +
+	developing_tech_school 
+		unesco_education_aid modifier: gives +0.01 tech_research_bonus in all fields
+
+#TODO: In 1948, the OECD originated as the Organisation for European Economic Co-operation (OEEC),[7] led by Robert Marjolin of France, to help administer the Marshall Plan (which was rejected by the Soviet Union and its satellite states).[8] 
+
+#TODO: The Council for Mutual Economic Assistance (Russian: Сове́т Экономи́ческой Взаимопо́мощи, tr. Sovét Ekonomícheskoy Vzaimopómoshchi, СЭВ; English abbreviation COMECON, CMEA, CEMA, or CAME) was an economic organization from 1949 to 1991
+
+#TODO: coup / interfere with nations of wrong government type in sphere
+
+#################### Notes on How Liqqy Works: ####################
+Loan Interest
+    LOAN_BASE_INTEREST            = 0.02,
+    inventions loan_interest = -0.002 -0.002 -0.005 -0.005 -0.005 = -0.019
+    central_bank_established = -0.002
+    total = -0.021
+	Final interest = (1 + -0.021) * 0.02 = 0.01958
+
+    "Loan interest is controlled primarily by the LOAN_BASE_INTEREST value (in defines.lua, monthly value), but it cannot be set below 0.01 (the game runs with 0.001, 0.00 and even with negative values, but in-game an interest rate of 0.01 is applied). This can be circumvented via the 'loan_interest' modifier, which works as a fraction of LOAN_BASE_INTEREST that is added to LOAN_BASE_INTEREST. For example with LOAN_BASE_INTEREST at 0.02, and a 'loan_interest' modifier of -1.0, the effective interest becomes 0. With a modifier of -2.0 it becomes -0.02. With a modifier of -0.5 it gets halved to 0.01."
+do not set TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS to 1 because AI will bankrupt itself whenever it decides to upgrade its forts and railroads
+
+####################################################################################################
+#TODO: v0.5.1
+
+#TODO: peace / anti-imperialist war march event
 
 #TODO: League of Nations
+
 #TODO: disarmament conference
+#TODO: if chose to rearm before treaty ends, takes time for military to be ready again
+
 #TODO: UN
 
+#TODO: #1 north/south american non-super colonial GP anounces support for decolonization (flag UN_focus_decolonization)
+#TODO: if no north/south american GP in the top 4, then decolonization support flag is removed
+
+#TODO: Bretton Woods Conference (1944) decision
+    The conference conducted its major work through three "commissions." Commission I dealt with the IMF and was chaired by Harry Dexter White, Assistant to the Secretary of the U.S. Treasury and the chief American negotiator at the conference. Commission II dealt with the IBRD and was chaired by John Maynard Keynes ...  Commission III dealt with "other means of international financial cooperation" 
+	
+	Voters: all UN GP members
+	(the USSR joined but rejected the terms because it was too capitalist)
+	(the USA rejected the ITO and the ICU because it was too capitalist)
+	(all other voters voted yes)
+	
+	1 point of NWO world_bank_funds = $25,000
+
+	IBRD
+	IMF
+	International Trade Organization (ITO, rejected, replaced by General Agreement on Tariffs and Trade GATT)
+	International Clearing Union (ICU, wanted to establish the "bancor" a world currency, the USA rejected it so the US dollar was the world currency instead)
+
+	conditions: 
+		interventionism or laissez_faire
+		UN founder
+		not a dicatorship or monarchy
+		#1 GP
+		commerce invention John Maynard Keynes
+
+	triggers the following events, weeks apart:
+		
+		#TODO: Commission I: the IMF
+			option: contribute $2,000,000 (world_bank_funds + 80)
+			option: contribute $1,000,000 (world_bank_funds + 40)
+			option: contribute $  500,000 (world_bank_funds + 20)
+
+		#TODO: Commission II: the IBRD
+			option: contribute $2,000,000 (world_bank_funds + 80)
+			option: contribute $1,000,000 (world_bank_funds + 40)
+			option: contribute $  500,000 (world_bank_funds + 20)
+
+		#TODO: Commission III: "other means of international financial cooperation"
+			option: approve the ITO
+			option: approve the GATT
+			option: but I like tariffs!
+
+		#TODO: Fixed exchange rates / the ICU?
+			option: The "bancor" sounds like a fair and neutral choice
+			option for conference leader: Insist on using the [COUNTRY_ADJ] dollar!
+			option: nah
+	
+	
+	#TODO: The IBRD offers loans to middle-income developing countries
+		conditions
+			IBRD established
+			not be a 2ndary power or above
+			have < $25,000
+			war = no
+			NOT currently have IBRD loan
+			NOT currently have IMF loan
+			world_bank_funds >= 20
+			NOT unrecognized_country 
+		effects
+			get $500,000
+			world_bank_funds - 20
+			leader of world bank gets 50 influence on you
+			get unpaid_IBRD_loan flag
+
+	#TODO: decision repay IBRD loan
+		conditions: 
+			unpaid_IBRD_loan
+			have >= $1,000,000
+			war = no
+			NOT have "imf_laissez_faire_conditionality" or "imf_interventionism_etc_conditionality" or "imf_credit_risk" (unpaid IMF loan)
+		effect:
+			you return $525,000
+			remove unpaid_IBRD_loan
+			world_bank_funds + 21
+
+
+	#TODO: take IMF loan
+        conditons:
+			IMF established
+			not be a 2ndary power or above
+			lazy fairy or interventionism 
+			free trade
+			NOT colonial_spending_policy
+			have < $25,000
+			war = no
+			currently have IBRD loan
+			NOT currently have IMF loan
+			NOT unrecognized_country 
+
+			world_bank_funds >= 20
+			
+		effects:
+			get $500,000
+			law_changed_by_force for 1 year (timer so you don't keep taking and refunding loan)
+		
+			NWO IMF_loan_counter + 1
+			world_bank_funds - 20
+			leader of world bank gets 50 influence on you
+
+			One of the following:
+				imf_laissez_faire_conditionality = {
+					max_tariff = -0.05 ( base free trade tariff is 0.25, french_liberal_school -0.2)
+					max_social_spending = -0.25
+					prestige = -0.1
+					icon = 10
+				}
+			
+				imf_interventionism_etc_conditionality = {
+					max_tariff = -0.05 ( base free trade tariff is 0.25, french_liberal_school -0.2)
+					max_tax = -0.15 (interventionism max tax = 0.90, so 0.75 tax)
+					max_social_spending = -0.25
+					prestige = -0.1
+					icon = 10
+				}
+
+	#TODO: Event to change to lazy fairy or interventionism version of the imf conditionality modifier if your party changes
+
+	#TODO: You can choose to ignore the IMF's conditionalities if you're a commie or a fascist, in exchange for infamy and IMF_credit_risk modifier
+		imf_credit_risk = {
+			max_loan_modifier = -0.1
+			loan_interest = 0.5
+			icon = 10
+		}
+
+	#TODO: You can repay the money by a decision where you click "repay IMF loan" 
+		conditions: 
+			"imf_laissez_faire_conditionality" or "imf_interventionism_etc_conditionality" or "imf_credit_risk" 
+			have >= $1,000,000
+			NOT law_changed_by_force
+			war = no
+		you return $525,000
+		remove "imf_laissez_faire_conditionality" or "imf_interventionism_etc_conditionality" or "imf_credit_risk"
+		world_bank_funds + 21
+
+
+
+
+
+#TODO: World Health Organization (1948)
+    leads to events to eradicate disease
+    support to poor country disease fighting
+    use WHO to deflect blame for virus originating in your country if you're a top 4 GP
+
+#TODO: United Nations Educational, Scientific and Cultural Organization (UNESCO) (1945)
+    gives prestige for culture
+    education aid to poor countries
+
+
+
+
 #TODO: nukes
+#TODO: anti-nuclear stuff
 
 
-#TODO: take Pacific islands CB
-#TODO: “Seize Rest of State” CB
 
-#TODO: make AI always build at 100% budget so projects don't stall
+########## currently in progress files
+event_modifiers
+
+Atrocities
+
+Pacifist_events
+Pacifist_decisions
+
+EEM_Decolonization
+
+world_trade_decisions
+##################################
+
+v0.5.0
+Shortened localization file names
+
+adjust AI navy research rates
+moved naval_dive_bombers and naval_torpedo_bombers to modern_naval_design
+added 18 inch guns, both 18 in guns and DP guns now only increase dreadnaught gun by 1 instead of 2
+hulk and fleet cvs only increase cv hull by 1 instead of 2
+You now need ironclads, 40 ports, and 80 ships in order to get the benefits of large_commerce_protection_navy
+Slightly reduced WW2 improvements to arty defense
+Increased WW2 Infantry, Guard, Armor, and Motorized attack
+Increased supply cost increases for the new Armor inventions (Matilda I cost £15,000 but the Centurion cost £35,000) (in game, a 1950 tank costs 1.41x the cost a 1936 tank, previously it was 1.26x )
+
+reduce tax refund event spam, tax refund event now refunds $1,000,000 at a time
+removed large tax refund tier
+reduced strategic bombing deaths and RGO production damage
+removed lubrication_oil and ball_screw inventions and zinc_carbon_battery
+added paul_samuelson invention in commerce
+Oil changes
+    2699 Izhma flips to oil in 1930 (Petchora oil field)
+    1037 Saratov flips to oil in 1940 (ural-volga oil district)
+    expand_oil_fields decisions and large_oil_field modifier oil production and RGO size modifier for famously large oil fields 1102 Baku and 2270 Maracaibo
+        "Between 1898 and 1901, Baku produced more oil than the US. By 1901, half of the world's oil was produced from 1900 wells, located within 6 square miles"
+        "By 1940 Venezuela was the third largest producer of crude oil in the world with more than 27 million tonnes per year - just slightly less than the production in the USSR."
+    AI more likely to research pneumatic_and_hydraulics if they own Baku or Maracaibo, so they can expand_oil_fields
+    event to flip 2173 Queretaro back to fruit after 1922 to represent Mexican oil production decline around 1925.
+Increase the amount of wine demanded by soldiers and officers while reducing their beverage demands
+interventionism max_tax set to 0.9 and state_capitalism max_tax set to 0.95, so only commies (planned economy) can set tax to 100%
+Fixed bug where non-africans can use the African version of organize Dahomey
+leaded_gasoline invention added to synthetic_polymers. (Invented in 1921, inceases fuel production by 0.02, reduces education efficiency by 0.2 https://en.wikipedia.org/wiki/Tetraethyllead)
+Pollution event made more likely to happen if you have leaded_gasoline, gave event a debug variable
+reduced import_cost reduction of large_commerce_protection_navy from 0.025 to 0.01
+
+removed folkis_educates modifier and event 36601 because giving 1% research to Sweden forever is just Paradox wanking
+pass_folkskolereformen now gives low_schools and 1 prestige, which is what event 36601 used to give
+svenska_pansarbats_foreningen no longer unlocks the Flintlock Rifles technology because wtf why would buying a cruiser give you flintlock rifles
+
+adjust AI China westernization help mtth
+fixed misspelled tag in warlord era events
+AI China will change away from nv_tradition (but only after westernizing) because being stuck at -20% research forever is kind of sad
+Fixed bug where some Taiwan parties end before the end date
+
+take Pacific islands CB, costs 2.75 infamy (2.75 * 8 = 22), reduces jingoism by 0.1 (vs 0.25 for most other wargoals) if added, can be used on (even if it's a state, but not if it's the capital):
+    SPA_610  #Caroline Islands
+    AST_2454 #Fiji
+    SPA_2517 #Mariana Islands
+    AST_2534 #Solomon Islands
+    AST_1097 #New Caledonia
+    TON_2540 #Tonga
+    USA_2543 #Samoa Islands
+    FRA_801  #Tahiti
+    can be used if has nationalism and imperialism, the Berlin Conference happened, is a great or secondary power, and own any of the above islands and/or
+    JAP_1654 #Bonin Islands
+    HAW_658  #Hawaiian Islands
+
+renamed strat_bomb_events.txt to Atrocities.txt
+slightly adjusted bomb damage
+adjust war crimes mtth, infamy gain, more infamy gain and prestige loss if free press, and fixed localization
+
+common/countries.txt add NWO (New World Order)
+common/countries/New World Order.txt     UN Blue = R0 G158 B219
+history/countries/NWO - New World Order.txt
+gfx/flags/
+    NWO.tga             Semi-official League of Nations flag 1939 https://commons.wikimedia.org/wiki/File:Flag_of_the_League_of_Nations_(1939).svg 
+    NWO_communist.tga   USSR flag 1922~1923 https://en.wikipedia.org/wiki/Flag_of_the_Soviet_Union https://www.worldstatesmen.org/urss-0b.gif
+    NWO_fascist.tga     American Nazi Party flag (there's a little globe in the swatzika)  http://www.loeser.us/flags/hate.html
+    NWO_monarchy.tga    Commonwealth of Nations flag version 1 (1973 ~ 2013) but with the rays all around the earth instead of making a C https://en.wikipedia.org/wiki/Flag_of_the_Commonwealth_of_Nations
+    NWO_republic.tga    2nd edition of the UN flag (1946 ~ now) https://en.wikipedia.org/wiki/Flag_of_the_United_Nations
+added debug variables for strategic bombing and war crimes to NWO
 
 v0.4.9c
 Adjust AI China westernization help mtth
@@ -203,7 +580,7 @@ nerf several industry inventions/techs because late game good surplus crashes th
     air_preheater now increases fuel production by 0.02 instead of rgo_output and factory_throughput
     fluid_catalytic_cracking and catalytic_reforming fuel produced reduced to 0.02 from 0.05
     diesel_excavator and rocker_shovel_loader now only increases iron or coal production by 0.25
-if large fleet, colonial, and has lots of ports, import cost reduced and tarriff efficiency increased, representing the commerce protection of large fleets not represented in game
+if large fleet, colonial, and has lots of ports, import cost reduced and tariff efficiency increased, representing the commerce protection of large fleets not represented in game
 pandemic influenza made more likely in / after a great war, and less likely to happen again after getting it already
 make sure KMT is civilzed and inherets China's techs in the Xinhai revolution, lets KMT keep its provinces' troops, and increased amount of time KMT has to prepare for war
 Yuan Shikai declaring himself emperor can only occur once, and needs nationalism_n_imperialism instead of state_n_government 
@@ -229,7 +606,7 @@ Lanfang will rename Tianjing to Nanjing
 Punti-Hakka Clan Wars event
 Juye incident no longer gives militancy if the chinese government gives up a treaty port peacefully
 Added a bunch of Chinese leader names to cultures.txt
-fixed bug where the UK will sometimes never pick a treaty port, even when there are several available
+fixed HPM bug where the UK will sometimes not pick a treaty port even when there are several available
 Nanking Massacre now only happens if Japan controls Nanjing for less than a year, adjust conditions and mtth
 Generic war crimes event
 
@@ -549,7 +926,7 @@ adjusted plastic inventions
 removed welded_steamers
 Liquidity crisis fix:
 NG: HPM already has a weaker version of the No Gold fix (GOLD_TO_CASH_RATE = 10 and GOLD_TO_WORKER_PAY_RATE = 1.5)
-TR: modified version of tax refund added in CleanUp.txt, made tax and tarriff efficiency deductions triggered_modifiers.txt
+TR: modified version of tax refund added in CleanUp.txt, made tax and tariff efficiency deductions triggered_modifiers.txt
 P: FACTORY_PAYCHECKS_LEFTOVER_FACTOR is already increased (to 0.5) in HPM
 Fixed a bunch of typos
 unitpanel.gfx unit_strip number_of_frames increased to 23 units

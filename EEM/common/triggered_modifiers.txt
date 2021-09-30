@@ -558,7 +558,7 @@ small_refund = {
         exists = yes
         money = 5000000
     }
-    min_social_spending = 0.25
+    min_social_spending = 0.5
     pension_level = 1.0
     icon = 16
 }
@@ -574,16 +574,16 @@ small_refund = {
 #    icon = 16
 #}
 
-large_refund = {
-    trigger = {
-        exists = yes
-        money = 7000000
-    }
-    tax_efficiency = -0.75
-    tariff_efficiency_modifier = -0.75
-    pension_level = 1.0
-    icon = 16
-}
+#large_refund = {
+#    trigger = {
+#        exists = yes
+#        money = 7000000
+#    }
+#    tax_efficiency = -1
+#    tariff_efficiency_modifier = -1
+#    pension_level = 1.0
+#    icon = 16
+#}
 
 literate_nation = {
 	trigger = {
@@ -603,13 +603,14 @@ clerked_nation = {
 
 large_commerce_protection_navy = {
 	trigger = {
-        total_amount_of_ships = 50
-        total_num_of_ports = 25
+        invention = ironclads
+        total_amount_of_ships = 80
+        total_num_of_ports = 40
         is_greater_power = yes
         colonial_nation = yes
         war = no
 	}
     tariff_efficiency_modifier = 0.05
-    import_cost = -0.025
+    import_cost = -0.01
     icon = 16
 }

@@ -96,12 +96,25 @@ province_event = {
             factor = 2
             owner = { has_country_modifier = clean_air_act }
         }
+		
+        modifier = {
+            factor = 0.8
+            owner = { invention = leaded_gasoline }
+        }
     }
 
     option = {
         name = "Turn on your tap and get hot and cold running crud."
         add_province_modifier = { name = local_pollution_problem duration = 365 }
         any_pop = { reduce_pop = 0.9995 }
+
+        NWO = {
+            change_variable = {
+                which = pollution_counter
+                value = 1
+            }
+        }
+
     }
 }
 
@@ -302,4 +315,44 @@ country_event = {
             }
         }
     }
+}
+
+
+
+
+########################## Peak Oil ########################## 
+
+country_event = {
+    id = 12310
+    title = "Oil Runs Dry in Queretaro"
+    desc = "The oil field in Queretaro has run out of oil."
+    picture = "abandoned_oil_well"
+
+    trigger = {
+        year = 1922
+        owns = 2173
+        2173 = { trade_goods = oil }
+        NOT = { has_global_flag = queretaro_peak_oil }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 0.5
+            year = 1925
+        }
+        modifier = {
+            factor = 0.5
+            year = 1930
+        }
+    }
+
+    option = {
+        name = "Unfortunate."
+        set_global_flag = queretaro_peak_oil
+        2173 = {
+            trade_goods = fruit
+        }
+    }
+
 }

@@ -1,0 +1,86 @@
+political_decisions = {
+    expand_oil_fields_baku = {
+        picture = baku_oil
+        potential = {
+            1102 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = large_oil_field } } #Baku
+            invention = oil_pumping_machinery
+        }
+
+        allow = {
+            war = no
+            money = 100000
+        }
+
+        effect = {
+            treasury = -50000
+            any_owned = {
+                limit = {
+                    province_id = 1102
+                    trade_goods = oil
+                }
+                add_province_modifier = { name = large_oil_field duration = -1 }
+                add_province_modifier = { name = province_small_immigration_boom duration = 365 }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    expand_oil_fields_maracaibo = {
+        picture = baku_oil
+        potential = {
+            2270 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = large_oil_field } } #Maracaibo
+            invention = oil_pumping_machinery
+        }
+
+        allow = {
+            war = no
+            money = 100000
+        }
+
+        effect = {
+            treasury = -50000
+            any_owned = {
+                limit = {
+                    province_id = 2270
+                    trade_goods = oil
+                }
+                add_province_modifier = { name = large_oil_field duration = -1 }
+                add_province_modifier = { name = province_small_immigration_boom duration = 365 }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+#    north_chinese_opium_trade_decision = {
+#        picture = opium_crates
+#    
+#        potential = {
+#            has_country_flag = north_chinese_opium_trade_domination
+#            any_owned_province = {
+#                trade_goods = opium
+#                NOT = { has_province_modifier = north_chinese_opium_trade_province }
+#            }
+#        }
+#    
+#        allow = {
+#            war = no
+#        }
+#    
+#        effect = {
+#            any_owned = {
+#                limit = {
+#                    NOT = { has_province_modifier = north_chinese_opium_trade_province }
+#                    trade_goods = opium
+#                }
+#                add_province_modifier = { name = north_chinese_opium_trade_province duration = -1 }
+#            }
+#        }
+#    
+#        ai_will_do = { factor = 1 }
+#    }
+
+
+}

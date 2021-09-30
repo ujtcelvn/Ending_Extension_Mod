@@ -612,12 +612,19 @@ province_event = {
                     province_id = 1086        # Pogobi
                     province_id = 131        # Oklahoma City 1893
                     province_id = 1680        # Fez 1893
-                    province_id = 2173        # Queretaro 1894
                     province_id = 87        # Monterey 1896
                     province_id = 2162        # Veracruz 1896
                     province_id = 2163        # Tampico 1896
                     province_id = 702        # Lvov 1896
                 }
+            }
+
+            AND = {
+                year = 1892
+                OR = {
+                    province_id = 2173        # Queretaro 1894
+                }
+                NOT = { has_global_flag = queretaro_peak_oil }
             }
 
             AND = {
@@ -633,7 +640,7 @@ province_event = {
                     province_id = 2270        # Maracaibo 1910
                     province_id = 1170        # Nizwa  1910
 					
-                    province_id = 168        # Olney 1905 Illinois Oil Field EEM
+                    province_id = 168        # Olney 1905 Illinois Oil Field
                 }
             }
 
@@ -659,6 +666,7 @@ province_event = {
                     province_id = 1137        # Agha Jari, Abadan, Iran 1930 1937 1938, (1132 already oil) 1137 is Yasuj, capital of Kohgiluyeh and Boyer-Ahmad Province, where the Aghajari and Gachsaran oil fields are
                     province_id = 935        # Burgan, Kuwait 1937
                     province_id = 1772       # Ras Gharib "more petroleum was found in the late 1930s along the Gulf of Suez. "
+                    province_id = 2699       #Izhma (Petchora)
                 }
             }
 
@@ -669,7 +677,8 @@ province_event = {
                     province_id = 136        # Spraberry Texas 1943
                     #province_id = 2270        # Boscan 1946 (Maracaibo already oil)
                     province_id = 932        # Nahr Umr, Basra, Iraq 1946
-                    province_id = 1043        # Romashkino 1948 (Busuluk is in the ural-vogla gas district, isn't super duper populated, doesn't make iron and coal)
+                    province_id = 1043        # Romashkino 1948 (Busuluk is in the ural-volga gas district, doesn't make iron and coal) 
+                    province_id = 1037        # Romashkino 1948 (Saratov is in the ural-volga gas district, doesn't make iron and coal)
                     province_id = 1157        # Ghawar 1948 Riyadh, arabia
                     #province_id = 932        # Az Zubayr 1949(Basra already oil)
                 }

@@ -4858,6 +4858,7 @@ political_decisions = {
                 has_global_flag = dahomey_organized
             }
             owns = 1920
+            capital_scope = { continent = africa }
         }
 
         allow = {

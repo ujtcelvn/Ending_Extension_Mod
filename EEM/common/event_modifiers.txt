@@ -1842,10 +1842,10 @@ signed_the_geneva_convention = {
 }
 
 #### SWE - Sweden ####
-folkis_educates = {
-    research_points_modifier = 0.01
-    icon = 5
-}
+#folkis_educates = {
+#    research_points_modifier = 0.01
+#    icon = 5
+#}
 
 motala_verkstad = {
     local_factory_throughput = 0.05
@@ -2615,7 +2615,7 @@ local_modern_transportation = {
 
 local_pollution_problem = {
     farm_RGO_eff = -0.05
-    icon = 20
+    icon = 14
 }
 
 clean_air_act = {
@@ -2623,12 +2623,36 @@ clean_air_act = {
     factory_maintenance = 0.1
     administrative_multiplier = 1
     global_immigrant_attract = 0.01
-    icon = 11
-}
-
-communist_peace_summit = {
     icon = 5
 }
+
+
+large_oil_field = {
+    mine_RGO_eff = 4
+    mine_rgo_size = 1
+    icon = 13
+}
+
+#north_chinese_opium_trade_province = {
+#    local_RGO_output = 0.1
+#    icon = 11
+#}
+
+#central_chinese_opium_trade_province = {
+#    local_RGO_output = 0.2
+#    icon = 11
+#}
+
+#south_chinese_opium_trade_province = {
+#    local_RGO_output = 0.2
+#    icon = 11
+#}
+
+#local_opoid_crisis = {
+#    local_RGO_throughput = -0.2
+#    local_factory_throughput = -0.2
+#    icon = 20
+#}
 
 ### Strategic Bombardment ###
 
@@ -2637,11 +2661,10 @@ strat_bombers = {
     icon = 15
 }
 
-#BASE_POPGROWTH = 0.0001
 bomb_damage = {
     immigrant_attract = -0.25
     immigrant_push = 0.25
-    local_RGO_output = -0.25
+    local_RGO_output = -0.125
     local_artisan_output = -0.25
     local_factory_throughput = -0.5
     local_factory_output = -0.5
@@ -2652,12 +2675,50 @@ bomb_damage = {
 heavy_bomb_damage = {
     immigrant_attract = -0.25
     immigrant_push = 0.25
-    local_RGO_output = -0.25
+    local_RGO_output = -0.125
     local_artisan_output = -0.25
     local_factory_throughput = -0.5
     local_factory_output = -0.5
-    population_growth = -0.002
-    local_repair = -0.50
-    local_ship_build = 0.50
+    population_growth = -0.001
+    local_repair = -0.5
+    local_ship_build = 0.5
+    icon = 18
+}
+
+### Anti-war ###
+communist_peace_summit = {
+    icon = 5
+}
+
+anti_war_movement = {
+    war_exhaustion = 0.1
+    icon = 16
+}
+
+league_of_nations_member = {
+    icon = 7
+}
+
+united_nations_member = {
+    icon = 7
+}
+
+naval_limitation_treaty = {
+    badboy = -0.01
+    war_exhaustion = -0.01
+    max_military_spending = -0.10
+    leadership_modifier = -0.25
+    icon = 5
+}
+
+naval_limitation_treaty_province = {
+    local_repair = -0.5
+    local_ship_build = 1
+    icon = 18
+}
+
+broke_naval_limitation_treaty_province = {
+    local_repair = -0.25
+    local_ship_build = 0.5
     icon = 18
 }

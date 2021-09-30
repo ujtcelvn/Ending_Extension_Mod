@@ -4214,5 +4214,3 @@ country_event = {
         }
     }
 }
-
-
