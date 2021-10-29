@@ -85,47 +85,4 @@
 #        }
 #    }
 #
-#    found_united_nations = {
-#        #picture = united_nations_logo
-#        potential = {
-#            has_country_flag = new_world_nation
-#            is_greater_power = yes
-#            great_wars_enabled = yes
-#            political_thought_7 = 1
-#            government = democracy
-#            has_global_flag = league_of_nations_failed
-#            NOT = { has_global_flag = united_nations_founded }
-#            has_country_flag = league_of_nations_member
-#        }
-#
-#        allow = {
-#            rank = 4
-#            war = no
-#            is_disarmed = no
-#            has_recently_lost_war = no
-#            has_country_modifier = no_more_war
-#            has_country_modifier = signed_the_geneva_convention
-#            badboy = 0.5
-#            NOT = {
-#                OR = {
-#                    ruling_party_ideology = reactionary
-#                    ruling_party_ideology = anarcho_liberal
-#                    ruling_party_ideology = fascist
-#                }
-#            }
-#        }
-#
-#        effect = {
-#            set_global_flag = united_nations_founded
-#            set_country_flag = united_nations_member
-#            set_country_flag = united_nations_founder
-#            set_country_flag = united_nations_security_council_member
-#            prestige = 10
-#        }
-#
-#        ai_will_do = { 
-#            factor = 1 
-#        }
-#    }
-#
 #}

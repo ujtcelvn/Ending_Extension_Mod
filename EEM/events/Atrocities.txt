@@ -372,7 +372,7 @@ province_event = {
                 value = 1
             }
         }
-        add_province_modifier = { name = bomb_damage duration = 365 }
+        remove_province_modifier = bomb_damage
         add_province_modifier = { name = heavy_bomb_damage duration = 365 }
 		any_pop = { reduce_pop = 0.985 }
 

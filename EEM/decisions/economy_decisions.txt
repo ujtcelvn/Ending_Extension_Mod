@@ -53,34 +53,125 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+    enact_opium_ban = {
+        picture = opium_crates
 
-#    north_chinese_opium_trade_decision = {
-#        picture = opium_crates
-#    
-#        potential = {
-#            has_country_flag = north_chinese_opium_trade_domination
-#            any_owned_province = {
-#                trade_goods = opium
-#                NOT = { has_province_modifier = north_chinese_opium_trade_province }
-#            }
-#        }
-#    
-#        allow = {
-#            war = no
-#        }
-#    
-#        effect = {
-#            any_owned = {
-#                limit = {
-#                    NOT = { has_province_modifier = north_chinese_opium_trade_province }
-#                    trade_goods = opium
-#                }
-#                add_province_modifier = { name = north_chinese_opium_trade_province duration = -1 }
-#            }
-#        }
-#    
-#        ai_will_do = { factor = 1 }
-#    }
+        potential = {
+            social_alienation = 1 #1900
+            NOT = { has_country_modifier = opium_ban }
+        }
+
+        allow = {
+            OR = {
+                moralism = 5
+                liberal = 50
+                government = proletarian_dictatorship
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = opium_ban
+                duration = -1
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                is_vassal = no 
+            }
+            modifier = {
+                factor = 0
+                debt_law = serfdom 
+            }
+            modifier = {
+                factor = 0
+                war = yes
+            }
+            modifier = {
+                factor = 0
+                NOT = { moralism = 5 }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                        government = presidential_dictatorship
+
+                        has_country_flag = orthodox_country
+                        has_country_flag = coptic_country
+                        has_country_flag = sunni_country
+                        has_country_flag = shiite_country
+                        has_country_flag = ibadi_country
+                        has_country_flag = druze_country
+                        has_country_flag = jewish_country
+                        has_country_flag = yazidi_country
+                        has_country_flag = theravada_country
+                        has_country_flag = sikh_country
+                        has_country_flag = animist_country
+                }
+            }
+        }
+    }
+
+    end_opium_ban = {
+        picture = opium_crates
+
+        potential = {
+            has_country_modifier = opium_ban
+        }
+
+        allow = {
+            OR = {
+                #filled with hippies
+                NOT = { moralism = 2 }
+                government = proletarian_dictatorship
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                government = bourgeois_dictatorship
+            }
+        }
+
+        effect = {
+            remove_country_modifier = opium_ban
+            any_owned = {
+                limit = {
+                    has_province_modifier = local_opium_ban
+                }
+                remove_province_modifier = local_opium_ban
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+
+            modifier = {
+                factor = 0
+                moralism = 2
+                NOT = { government = bourgeois_dictatorship }
+            }
+
+            modifier = {
+                factor = 0
+                OR = {
+                    has_country_flag = catholic_country
+                    has_country_flag = protestant_country
+                    has_country_flag = mormon_country
+                    has_country_flag = coptic_country
+                    has_country_flag = mahayana_country
+                    has_country_flag = gelugpa_country
+                    has_country_flag = hindu_country
+                    has_country_flag = shinto_country
+                    has_country_flag = animist_country
+                }
+            }
+
+        }
+    }
 
 
 }

@@ -1584,16 +1584,16 @@ east_asian = {
     }
     beifaren = {
         color = {145 30 30}
-        first_names = { Wang Li Zhang Liu Chen Yang Huang Zhao Wu Zhou Xu Sun Ma Zhu Hu Guo He Lin Gao Luo Zheng Liang Xie Song Tang Xu Deng Han Feng Cao Peng Zeng Xiao Tian Dong Pan Yuan Cai Jiang Yu Du Ye Cheng Wei Su Lu Ding Ren Yao Shen Zhong Jiang Cui Tan Fan Wang Liao Shi Jun Jia Xia Fu Fang Zou Xiong Bai Meng Qin Qiu Hou Jiang Yin Xue Yan Duan Lei Long Shi Tao He Mao Hao Gu Gong Shao Wan Tan Wu Qian Dai Yan Ou Mo Kong Xiang
+        first_names = { Wang Li Zhang Liu Chen Yang Huang Zhao Wu Zhou Xu Sun Ma Zhu Hu Guo He Lin Gao Luo Zheng Liang Xie Song Tang Deng Han Feng Cao Peng Zeng Xiao Tian Dong Pan Yuan Cai Jiang Yu Du Ye Cheng Wei Su Lu Ding Ren Yao Shen Zhong Cui Tan Fan Liao Shi Jun Jia Xia Fu Fang Zou Xiong Bai Meng Qin Qiu Hou Yin Xue Yan Duan Lei Long Tao Mao Hao Gu Gong Shao Wan Qian Dai Ou Mo Kong Xiang
         }
-        last_names = { Aiping Anping Baihan Baoguo Biao Bin Bo Bude Chao Cheng Chenggong Chenghan Chenglong Chengyong Chongxi De Dehuai Deming Dingkai Dong Du Erlu Fakui Fang Fei Fo Fuzhi Gang Geming Geng Gong Gu Guang Guangda Guanlin Guanting Guanyu Guohua Guoqiang Hai Haibo Haifeng Haoran Haoxuan Haoyu Heping Hong Hua Hui Ji Jiahao Jiakan Jiaming Jianguo Jianguo Jianhong Jianhua Jianping Jianying Jiawei Jie Jiwei Jun Junhong Junjie Junxian Ke Kenong Lei Li Lianjie Ling Lingguang Linzheng Long Mi Min Ming Mingguo Mingren Na Peng Ping Qi Qiang Qing Shaohui Shaokuan Shaokun Sheng Shikai Shuai Tao Tian Tianming Tianyou Wei Weiguo Weiting Wen Xiang Xiao Xiaolong Xiaoping Xingwu Xinhong Xishan Xiuying Xu Xuezhi Yang Yanping Yanting Yi Yichen Yong Yu Yue Yuhang Yuming Yunyi Yuxiang Yuxuan Zedong Zhen Zheng Zhensong Zhewei Zheyuan Zhihao Zhihong Zhiming Zhiwei Zhong Zhonghan Zhongting Zhongzheng Zihan Zihao Zixuan Ziyu Zongren
+        last_names = { Aiping Anping Baihan Baoguo Biao Bin Bo Bude Chao Cheng Chenggong Chenghan Chenglong Chengyong Chongxi De Dehuai Deming Dingkai Dong Du Erlu Fakui Fang Fei Fo Fuzhi Gang Geming Geng Gong Gu Guang Guangda Guanlin Guanting Guanyu Guohua Guoqiang Hai Haibo Haifeng Haoran Haoxuan Haoyu Heping Hong Hua Hui Ji Jiahao Jiakan Jiaming Jianguo Jianhong Jianhua Jianping Jianying Jiawei Jie Jiwei Jun Junhong Junjie Junxian Ke Kenong Lei Li Lianjie Ling Lingguang Linzheng Long Mi Min Ming Mingguo Mingren Na Peng Ping Qi Qiang Qing Shaohui Shaokuan Shaokun Sheng Shikai Shuai Tao Tian Tianming Tianyou Wei Weiguo Weiting Wen Xiang Xiao Xiaolong Xiaoping Xingwu Xinhong Xishan Xiuying Xu Xuezhi Yang Yanping Yanting Yi Yichen Yong Yu Yue Yuhang Yuming Yunyi Yuxiang Yuxuan Zedong Zhen Zheng Zhensong Zhewei Zheyuan Zhihao Zhihong Zhiming Zhiwei Zhong Zhonghan Zhongting Zhongzheng Zihan Zihao Zixuan Ziyu Zongren
         }
     }
     nanfaren = {
         color = {181 106 106}
-        first_names = { Wang Li Zhang Liu Chen Yang Huang Zhao Wu Zhou Xu Sun Ma Zhu Hu Guo He Lin Gao Luo Zheng Liang Xie Song Tang Xu Deng Han Feng Cao Peng Zeng Xiao Tian Dong Pan Yuan Cai Jiang Yu Du Ye Cheng Wei Su Lu Ding Ren Yao Shen Zhong Jiang Cui Tan Fan Wang Liao Shi Jun Jia Xia Fu Fang Zou Xiong Bai Meng Qin Qiu Hou Jiang Yin Xue Yan Duan Lei Long Shi Tao He Mao Hao Gu Gong Shao Wan Tan Wu Qian Dai Yan Ou Mo Kong Xiang
+        first_names = { Wang Li Zhang Liu Chen Yang Huang Zhao Wu Zhou Xu Sun Ma Zhu Hu Guo He Lin Gao Luo Zheng Liang Xie Song Tang Deng Han Feng Cao Peng Zeng Xiao Tian Dong Pan Yuan Cai Jiang Yu Du Ye Cheng Wei Su Lu Ding Ren Yao Shen Zhong Cui Tan Fan Liao Shi Jun Jia Xia Fu Fang Zou Xiong Bai Meng Qin Qiu Hou Yin Xue Yan Duan Lei Long Tao Mao Hao Gu Gong Shao Wan Qian Dai Ou Mo Kong Xiang
         }
-        last_names = { Aiping Anping Baihan Baoguo Biao Bin Bo Bude Chao Cheng Chenggong Chenghan Chenglong Chengyong Chongxi De Dehuai Deming Dingkai Dong Du Erlu Fakui Fang Fei Fo Fuzhi Gang Geming Geng Gong Gu Guang Guangda Guanlin Guanting Guanyu Guohua Guoqiang Hai Haibo Haifeng Haoran Haoxuan Haoyu Heping Hong Hua Hui Ji Jiahao Jiakan Jiaming Jianguo Jianguo Jianhong Jianhua Jianping Jianying Jiawei Jie Jiwei Jun Junhong Junjie Junxian Ke Kenong Lei Li Lianjie Ling Lingguang Linzheng Long Mi Min Ming Mingguo Mingren Na Peng Ping Qi Qiang Qing Shaohui Shaokuan Shaokun Sheng Shikai Shuai Tao Tian Tianming Tianyou Wei Weiguo Weiting Wen Xiang Xiao Xiaolong Xiaoping Xingwu Xinhong Xishan Xiuying Xu Xuezhi Yang Yanping Yanting Yi Yichen Yong Yu Yue Yuhang Yuming Yunyi Yuxiang Yuxuan Zedong Zhen Zheng Zhensong Zhewei Zheyuan Zhihao Zhihong Zhiming Zhiwei Zhong Zhonghan Zhongting Zhongzheng Zihan Zihao Zixuan Ziyu Zongren
+        last_names = { Aiping Anping Baihan Baoguo Biao Bin Bo Bude Chao Cheng Chenggong Chenghan Chenglong Chengyong Chongxi De Dehuai Deming Dingkai Dong Du Erlu Fakui Fang Fei Fo Fuzhi Gang Geming Geng Gong Gu Guang Guangda Guanlin Guanting Guanyu Guohua Guoqiang Hai Haibo Haifeng Haoran Haoxuan Haoyu Heping Hong Hua Hui Ji Jiahao Jiakan Jiaming Jianguo Jianhong Jianhua Jianping Jianying Jiawei Jie Jiwei Jun Junhong Junjie Junxian Ke Kenong Lei Li Lianjie Ling Lingguang Linzheng Long Mi Min Ming Mingguo Mingren Na Peng Ping Qi Qiang Qing Shaohui Shaokuan Shaokun Sheng Shikai Shuai Tao Tian Tianming Tianyou Wei Weiguo Weiting Wen Xiang Xiao Xiaolong Xiaoping Xingwu Xinhong Xishan Xiuying Xu Xuezhi Yang Yanping Yanting Yi Yichen Yong Yu Yue Yuhang Yuming Yunyi Yuxiang Yuxuan Zedong Zhen Zheng Zhensong Zhewei Zheyuan Zhihao Zhihong Zhiming Zhiwei Zhong Zhonghan Zhongting Zhongzheng Zihan Zihao Zixuan Ziyu Zongren
         }
     }
     hakka = {
@@ -2163,14 +2163,14 @@ west_african = {
         last_names = { Coulibaly Koro Dembele Bari Tonmansa Dyara Makoto Tonkomo Keryengole Naluma Demba Mari
         }
     }
-    dyula = {
-        color = {78 99 230}
-        first_names = { Seku Famagan Samory Al-Hajj Koumbi Maghari Fode Muhammad al-Mustafa
-        }
-
-        last_names = { Wattara Toure Salim-Suwari Drame Saghanughu
-        }
-    }
+#    dyula = {
+#        color = {78 99 230}
+#        first_names = { Seku Famagan Samory Al-Hajj Koumbi Maghari Fode Muhammad al-Mustafa
+#        }
+#
+#        last_names = { Wattara Toure Salim-Suwari Drame Saghanughu
+#        }
+#    }
     edo = {
         color = {88 99 154}
         first_names = { Odayon Ode Edegbe Osahon Igodo Erediauwa Osemwende Adolo Ovonramwen Eweka Akenzua Ezoti Esigie
@@ -2354,14 +2354,14 @@ central_african = {
         }
         radicalism = 5
     }
-    fang = {
-        color = {164 45 180}
-        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-        }
-
-        last_names = { Samba Atangana Tufoyn Kumong Yuh Nggam Ndi
-        }
-    }
+#    fang = {
+#        color = {164 45 180}
+#        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+#        }
+#
+#        last_names = { Samba Atangana Tufoyn Kumong Yuh Nggam Ndi
+#        }
+#    }
     kanuri = {
         color = {189 142 177}
         first_names = { Muhammad al-Amin Umar Mustapha Ahmad Dunama Ibrahim Ali Waziri Mamane
@@ -2567,14 +2567,14 @@ east_african = {
         last_names = { "Ole Mbatian" "Ole Lenana" "Ole Segi" "Ole Parasayip" "Ole Koyati"
         }
     }
-    nuer = {
-        color = {68 199 204}
-        first_names = { Diu Chol Dei Tongyiik Hon Pal Nyuon Deng Gai Ochan Puot Ruai
-        }
-
-        last_names = { Anya-Nya Top Juak Gaach Bany Lieth Nyuot Luth Chotper Weiu
-        }
-    }
+#    nuer = {
+#        color = {68 199 204}
+#        first_names = { Diu Chol Dei Tongyiik Hon Pal Nyuon Deng Gai Ochan Puot Ruai
+#        }
+#
+#        last_names = { Anya-Nya Top Juak Gaach Bany Lieth Nyuot Luth Chotper Weiu
+#        }
+#    }
     nuba = {
         color = {48 213 48}
         first_names = { Awin Akoc Nyidok Kwadker Ajang Dedunyal Kuikon Yor Kur Fadyet Fafiti Nyadwai Muko Wak Tyelgut Kodit Aney
@@ -2606,14 +2606,14 @@ east_african = {
         last_names = { Ibrahim Adeer Hassan  Gurey Hirsi Doreh Dekiye Afrah Mujahid Kenadid
         }
     }
-    sukuma = {
-        color = {54 167 122}
-        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-        }
-
-        last_names = { Mnywasele Mkasiwa Mirambo Msemwa Bulungute Mudimbe
-        }
-    }
+#    sukuma = {
+#        color = {54 167 122}
+#        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+#        }
+#
+#        last_names = { Mnywasele Mkasiwa Mirambo Msemwa Bulungute Mudimbe
+#        }
+#    }
     swahili = {
         color = {84 96 204}
         first_names = { Ahmed Jabari Kamari Amiri  Asani Babu Balozi Darweshi Erevu Faraji Fupi Heri Hishima Ibada Huru Husani Imara Issa Jahidi Jalali Juma Jumaane Kafeel Khamisi Kifimbo Kivuli Kondo Lumbwi Machupa Mbwana Mosi Salehe Safi Zuberi
@@ -2638,14 +2638,14 @@ east_african = {
         last_names = { Mnywasele Mkasiwa Mirambo Msemwa Bulungute Mudimbe
         }
     }
-    kilombero = {
-        color = {96 106 66}
-        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
-        }
-
-        last_names = { Mnywasele Mkasiwa Mirambo Msemwa Bulungute Mudimbe
-        }
-    }
+#    kilombero = {
+#        color = {96 106 66}
+#        first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth
+#        }
+#
+#        last_names = { Mnywasele Mkasiwa Mirambo Msemwa Bulungute Mudimbe
+#        }
+#    }
     lacustrine_bantu = {
         color = {128 175 93}
         first_names = { Mutesa Mwanga Kalema Kiweewa Ssemakookiro Jjunju Kyabaggo Namugala Kikulwe Kabulu

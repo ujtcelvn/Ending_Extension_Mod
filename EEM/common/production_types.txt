@@ -363,6 +363,7 @@ luxury_clothes_factory = {
         regular_clothes = 0.9    #5.22
         silk = 3.9        #39    total input+maint = 54
     }
+
     output_goods = luxury_clothes
     value = 1.1        #71.5 - profit = 17.5
     bonus = {
@@ -506,13 +507,18 @@ paper_mill = {
 regular_clothes_factory = {
     template = factory_template
     input_goods = {
-        fabric = 40        #72    total input+maint = 82
+        fabric = 39.125     #40        #72    total input+maint = 82
+        wool = 2.25       #0
     }
     output_goods = regular_clothes
     value = 16            #92.8, from 87/15. Profit margin is 11.63% - total profit is 10.8
     bonus = {
         trigger = { has_building = fabric_factory }
-        value = 0.25
+        value = 0.225     #0.25
+    }
+    bonus = {
+        trigger = { trade_goods_in_state = wool	}
+        value = 0.025
     }
 }
 
@@ -1153,7 +1159,7 @@ artisan_steamer = {
 artisan_luxury_clothes = {
     input_goods = {
         regular_clothes = 0.9    #5.22
-        silk = 3.9        #39    total input = 44.22
+        silk = 3.9                   #39        total input = 44.22
     }
     output_goods = luxury_clothes
     value = 1            #65 - profit = 20.78
@@ -1302,7 +1308,8 @@ artisan_paper = {
 
 artisan_regular_clothes = {
     input_goods = {
-        fabric = 42        #was 75.6
+        fabric = 41.125    #42        #75.6
+        wool = 2.25   #0
     }
     output_goods = regular_clothes
     value = 15            #87 - profit = 11.4

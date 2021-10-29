@@ -1036,7 +1036,7 @@ uncivilized_isolationism = {
     core_pop_militancy_modifier = -0.1
     research_points_modifier = -0.3
     cb_generation_speed_modifier = 0.5
-    min_tariff = 0.5
+    min_tariff = 0.6
     prestige = -0.01
     icon = 10
 }
@@ -1179,6 +1179,9 @@ female_suffrage = {
     rich_vote = -0.01
     core_pop_militancy_modifier = -0.02
     global_immigrant_attract = 0.05
+
+    global_population_growth = -0.001
+    factory_throughput = 0.01
     icon = 7
 }
 
@@ -2621,7 +2624,7 @@ local_pollution_problem = {
 clean_air_act = {
     factory_cost = 0.20
     factory_maintenance = 0.1
-    administrative_multiplier = 1
+    administrative_efficiency_modifier = -0.05
     global_immigrant_attract = 0.01
     icon = 5
 }
@@ -2633,26 +2636,24 @@ large_oil_field = {
     icon = 13
 }
 
-#north_chinese_opium_trade_province = {
-#    local_RGO_output = 0.1
-#    icon = 11
-#}
+local_drug_problem = {
+    local_RGO_throughput = -0.2
+    local_factory_throughput = -0.2
+    pop_consciousness_modifier = -0.05
+    icon = 20
+}
 
-#central_chinese_opium_trade_province = {
-#    local_RGO_output = 0.2
-#    icon = 11
-#}
+opium_ban = {
+    poor_luxury_needs = -0.05                      #middle and rich people ignore drug laws
+    #prestige = 0.01
+    #administrative_efficiency_modifier = -0.05
+    icon = 18
+}
 
-#south_chinese_opium_trade_province = {
-#    local_RGO_output = 0.2
-#    icon = 11
-#}
-
-#local_opoid_crisis = {
-#    local_RGO_throughput = -0.2
-#    local_factory_throughput = -0.2
-#    icon = 20
-#}
+local_opium_ban = {
+    farm_RGO_eff = -0.75
+    icon = 14
+}
 
 ### Strategic Bombardment ###
 
@@ -2673,13 +2674,13 @@ bomb_damage = {
 }
 
 heavy_bomb_damage = {
-    immigrant_attract = -0.25
-    immigrant_push = 0.25
-    local_RGO_output = -0.125
-    local_artisan_output = -0.25
-    local_factory_throughput = -0.5
-    local_factory_output = -0.5
-    population_growth = -0.001
+    immigrant_attract = -0.5
+    immigrant_push = 0.5
+    local_RGO_output = -0.25
+    local_artisan_output = -0.5
+    local_factory_throughput = -0.75
+    local_factory_output = -0.75
+    population_growth = -0.002
     local_repair = -0.5
     local_ship_build = 0.5
     icon = 18
@@ -2695,16 +2696,8 @@ anti_war_movement = {
     icon = 16
 }
 
-league_of_nations_member = {
-    icon = 7
-}
-
-united_nations_member = {
-    icon = 7
-}
-
 naval_limitation_treaty = {
-    badboy = -0.01
+    #badboy = -0.01
     war_exhaustion = -0.01
     max_military_spending = -0.10
     leadership_modifier = -0.25
@@ -2714,11 +2707,5 @@ naval_limitation_treaty = {
 naval_limitation_treaty_province = {
     local_repair = -0.5
     local_ship_build = 1
-    icon = 18
-}
-
-broke_naval_limitation_treaty_province = {
-    local_repair = -0.25
-    local_ship_build = 0.5
     icon = 18
 }

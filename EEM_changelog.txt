@@ -121,8 +121,16 @@ industry = 30 + 3
 		165206 RTR victory vs QNG
 		165207 secret society power struggle
         etc
+v0.5
     UN
         666000
+    China terrain and RGO rework
+    Opium rework
+    wool can be used to make clothes
+    African cultures reduced = 5
+
+
+
 
 #TODO:
 #other events and decisions
@@ -149,8 +157,10 @@ industry = 30 + 3
 		Build: cement, steel, electric gear
 		Maintenence: cement, electric gear, paper
 		electric gear + telephone + radio -> telecom
-		dye + glass + fuel + sulfur + opium(?) -> pharmachem
+		opium + dye + fuel + sulphur + glass -> pharmachem
+#History and stuff
     1970s: economic maliase, USSR stagnation, Dengism/ market socialsm, Neoliberalism https://astralcodexten.substack.com/p/book-review-a-brief-history-of-neoliberalism
+        amphetamine ban, causing research speed to drop: https://slimemoldtimemold.com/2021/04/19/higher-than-the-shoulders-of-giants-or-a-scientists-history-of-drugs/
     Near Future: Demographic collapse will btfo the whole world except America, which will return to isolationism https://astralcodexten.substack.com/p/your-book-review-the-accidental-superpower
     How complex societies collapse https://astralcodexten.substack.com/p/your-book-review-the-collapse-of
 	1980s: Rise of obesity and Anorexia https://slimemoldtimemold.com/
@@ -165,9 +175,28 @@ industry = 30 + 3
 	foam_concrete: back to the early 1920s and the production of autoclaved aerated concrete, which was used mainly as insulation.[2] A detailed study concerning the composition, physical properties and production of foamed concrete was first carried out in the 1950s and 60s.[3][4][5] Following this research, new admixtures were developed in the late 1970s and early 80s, which led to the commercial use of foamed concrete in construction projects
 	ready_mix_concrete: The first ready-mix factory was built in the 1930s. The industry did not expand significantly until the 1960s, and has continued to grow since then... reduce the consumption of cement by 10 – 12%.
 	shotcrete: invented in 1907 by American taxidermist Carl Akeley to repair the crumbling façade of the Field Columbian Museum in Chicago (the old Palace of Fine Arts from the World's Columbian Exposition).[2] He used the method of blowing dry material out of a hose with compressed air, injecting water at the nozzle as it was released. In 1911, he was granted a patent for his inventions, the "cement gun", the equipment used, and "gunite", the material that was produced. The dry-mix process was used until the wet-mix process was devised in the 1950s. In the 1960s, an alternative method for gunning dry material with a rotary gun appeared, using a continuously fed open hopper. 
+    Heroin invented in 1874, popularized 1895
+    the concept of "underuse" 1960 https://www.lesswrong.com/posts/RAftfkp3NqDDR2o79/the-tragedy-of-the-anticommons
+
 #jam in Africamod
-#TODO: split up asian_minor
-#TODO: return cores and release vassal for RTR and MAO
+
+#split up asian_minor:
+	>asian_minor
+	>not in Asia Minor
+
+    Miao				Separate out the Hmong in southeast asia and turn them into Miao (existing culture)
+    Austronesian minor	(renamed asian_minor)
+		Cham 				South Vietnam Montagnards
+		Kalimantan minor	
+		Sumatra minor
+		Malay minor
+		Burma/Bengal minor
+    Indian minor
+		Gondi		Asian minor centered in Raipur https://www.quora.com/Is-there-a-dominant-ethnic-group-in-India-How-do-various-ethnicities-treat-each-other-in-India
+		Dhivehin 	Maldives
+
+
+#TODO: return cores and release vassal for new tags
 #TODO: San Blas Rebellion event
 #TODO: Ottomemes
 #TODO: FRCA become guatemala fix
@@ -182,11 +211,13 @@ industry = 30 + 3
         Discovered in the 1820's by Mexican settlers, New Almaden mines are the oldest mines in California and were one of the most productive mercury mines in the country
         closed in 1976 
         doesn't have a province, make a San Jose / Santa Clara County province?
+    East Guizhou cinnabar mines
+        birthplace of Chinese cinnabar culture
 #TODO: 1104 Sheki to silk? "During 1850–70, Shaki became international silk production centre.[39] More than 200 European companies opened offices in the city, while silkworms to the tune of 3 million roubles were sold to them in a year.[39] Shaki possesses a small silk industry and relies on its agricultural sector, which produces tobacco, grapes, cattle, nuts, cereals and milk."
 #TODO: 1107 Lankaran to tea? "Dominating spheres in the economy of Lankaran are vegetable-growing, tea-growing, paddy cultivating, cattle-breeding, citrus plants, beekeeping, fishing, and grain farming.[10] Favourable humid subtropical climate, availability of good arable land, water and sufficient labour resources of the city provides a good basis for agricultural activities as well as the development of agro-processing enterprises. The city is also home to Azerbaijan's first tea plant, built in 1937.[11]"
 #TODO: “Seize Rest of State” CB
 #TODO: Decision to gift money to ally/sphere
-#TODO: crimes against humanity
+#TODO: crimes against humanity           Reference: Politics and the English Language: https://www.orwell.ru/library/essays/politics/english/e_polit/
     Pogroms
     atrocities when suppressing rebels
     Fascist AI genocides
@@ -203,8 +234,8 @@ industry = 30 + 3
         "Anti corruption campaign" seems to be a code word for "arresting the enemies of people in power", whether in Erdogan's Turkey or Xi's China. I'm not sure what to do about it without leaving corruption in place, but, uh, maybe we should leave corruption in place. Hard to say.
         https://astralcodexten.substack.com/p/book-review-the-new-sultan
 #TODO: Education
-    #TODO: Wade–Giles was developed by Thomas Francis Wade, a scholar of Chinese and a British ambassador in China who was the first professor of Chinese at Cambridge University. Wade published in 1867
-    #TODO: simplify_chinese decision
+    Wade–Giles was developed by Thomas Francis Wade, a scholar of Chinese and a British ambassador in China who was the first professor of Chinese at Cambridge University. Wade published in 1867
+    simplify_chinese decision
         KMT rejected it in 1936 
         CCP passed it in 1952, 2nd round in 1977, 2nd round retracted in 1986 (~30 years)
         low literacy
@@ -214,47 +245,12 @@ industry = 30 + 3
         global_pop_consciousness_modifier = 0.01
         lasts 30 years?
         conservatives and reactionaries and fascists very butthurt
-    #TODO: Hanyu Pinyin: The Committee for the Reform of the Chinese Written Language was formed in 1954 and, four years later, the 1st National People’s Congress gave its assent to the adoption of pinyin.
-    #TODO: illiterate commies / fascists can force intellectuals to move to illiterate rural areas? move_pop doesn't work very well though
-#TODO: Opium Rework
-    #TODO: after westernizing, local_opium_habit turns into local_opoid_crisis for 1825 days (5 years) (normal opium spread lasts for 10 years)
-    #TODO: local_opoid_crisis spreads from treaty ports to nearby east asian provinces, and so on
-    #TODO: reuse this mechanism for the late 1990s ~ now American Opoid Epidemic
-	#TODO: dominate north / central / south chinese opium trade
-        if own the right treaty port and aren't Chinese, you can dominate opium trade in a part of china so your opium provinces make more money (opium directly generates money and is not a luxury good in HPM)
-        You can steal the opium trade domination if the port you own is of a higher priority than that of another province.
-	    (Only 1 country can dominate opium trade in 1 place at a time ) (1 country can dominate opium trade in multiple places) (top = higher priority)
-        north_chinese_opium_trade opium production + 0.1 on opium producing provinces if:
-            Qingdao 1566
-            Lushun 1481
-            Weihaiwei 1569
-        central_chinese_opium_trade opium production + 0.2 on opium producing provinces if:
-            Shanghai 1538
-            Ningbo 1608    (Southernmost)
-            Jiaxing 1606   (Northernmost)
-        south_chinese_opium_trade opium production + 0.2 on opium producing provinces if:
-            Hong Kong 1496
-            Macao 1498 
-            Kwangchowan 2632
-            Hainan 2632
-            Taiwan 2406
-    #TODO: International Opium Commission 1909
-        "The United States convened a 13-nation conference of the International Opium Commission in 1909 in Shanghai, China, in response to increasing criticism of the opium trade."
-        After this event, the international opium commission will keep trying to pass the international opium convention until it passes
-	#TODO: International Opium Convention January 23, 1912
-        The International Opium Convention, signed at The Hague on January 23, 1912 during the First International Opium Conference, was the first international drug control treaty... The treaty was signed by Germany, the United States, China, France, the United Kingdom, Italy, Japan, the Netherlands, Persia, Portugal, Russia, and Siam. The Convention provided, "The contracting Powers shall use their best endeavours to control, or to cause to be controlled, all persons manufacturing, importing, selling, distributing, and exporting morphine, cocaine, and their respective salts, as well as the buildings in which these persons carry such an industry or trade."
-        Vote yes: landowners in opium provinces slightly upset
-        Vote no: socialists and liberals slightly upset, prestige --, infamy +
-		if at least 8 great powers vote yes: International Opium Convention event for everyone with opium provinces (also happens naturally if any opium province lacks the modifier)
-            opium production -0.5, local_opoid_crisis spreads more slowly
-    #TODO: Anti-opium campaign
-        East Asian nation must be westernized, have techs, at peace, not liberal or anarcho-liberal
-        makes anarcho-liberals mad
-        easier if a dictatorship?
-        comes in stages?
-        Falure event: consciousness +, ruling party support -
-        Progression event: local_opoid_crisis spreads more slowly, anarcho-liberals mad
-        Success event: local_opoid_crisis removed and no longer spreads in China, all chinese_opium_trade modifiers for everyone removed, no one can dominate opium trade anymore, prestige +, anarcho-liberals mad
+    Hanyu Pinyin: The Committee for the Reform of the Chinese Written Language was formed in 1954 and, four years later, the 1st National People’s Congress gave its assent to the adoption of pinyin.
+    illiterate commies / fascists can force intellectuals to move to illiterate rural areas? move_pop doesn't work very well though
+
+
+#TODO: rework Chinese industrial RGOs
+
 #TODO: proxy wars / GP sponsored ideological-driven rebels / coups
 #TODO: generic commission cruiser decision, based on svenska_pansarbats_foreningen and commission_warship decisions	
 
@@ -267,40 +263,15 @@ industry = 30 + 3
 
 	The Group of Ten (G-10 or G10) refers to the group of countries that agreed to participate in the General Arrangements to Borrow (GAB), an agreement to provide the International Monetary Fund (IMF) with additional funds to increase its lending ability. (1962)
 
-
-#TODO: Tech school flavor events
-	traditional_academic
-	army_tech_school
-	naval_tech_school	
-	industrial_tech_school 	
-	culture_tech_school
-		Culture Celebration: prestige_factor = 0.01
-	commerce_tech_school
-	prussian_tech_school
-		If dismantled past 1930:
-			We will demilitarize
-				change to industrial_tech_school
-			Never!
-				infamy +
-	czech_tech_school
-	japanese_tech_school
-		Army-Navy rivary
-			Favor the Army
-			Favor the Navy 
-		If dismantled past 1930:
-			We will demilitarize
-				lose Line of Advantage
-				change to commerce_tech_school
-			Never!
-				infamy +
-	developing_tech_school 
-		unesco_education_aid modifier: gives +0.01 tech_research_bonus in all fields
-
 #TODO: In 1948, the OECD originated as the Organisation for European Economic Co-operation (OEEC),[7] led by Robert Marjolin of France, to help administer the Marshall Plan (which was rejected by the Soviet Union and its satellite states).[8] 
 
 #TODO: The Council for Mutual Economic Assistance (Russian: Сове́т Экономи́ческой Взаимопо́мощи, tr. Sovét Ekonomícheskoy Vzaimopómoshchi, СЭВ; English abbreviation COMECON, CMEA, CEMA, or CAME) was an economic organization from 1949 to 1991
 
 #TODO: coup / interfere with nations of wrong government type in sphere
+
+#TODO: hippies and drugs
+
+#TODO: healthcare reform rework?
 
 #################### Notes on How Liqqy Works: ####################
 Loan Interest
@@ -311,17 +282,79 @@ Loan Interest
 	Final interest = (1 + -0.021) * 0.02 = 0.01958
 
     "Loan interest is controlled primarily by the LOAN_BASE_INTEREST value (in defines.lua, monthly value), but it cannot be set below 0.01 (the game runs with 0.001, 0.00 and even with negative values, but in-game an interest rate of 0.01 is applied). This can be circumvented via the 'loan_interest' modifier, which works as a fraction of LOAN_BASE_INTEREST that is added to LOAN_BASE_INTEREST. For example with LOAN_BASE_INTEREST at 0.02, and a 'loan_interest' modifier of -1.0, the effective interest becomes 0. With a modifier of -2.0 it becomes -0.02. With a modifier of -0.5 it gets halved to 0.01."
+
 do not set TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS to 1 because AI will bankrupt itself whenever it decides to upgrade its forts and railroads
 
+stack overflow error caused by either a factory throughput value exceeding 400+% or one of the nations have exceeded 2.00+ billion dollars in either their national bank or national treasury.
+
+it seems that 'local_factory_x' modifiers, including throughput, output, and etc. do not actually work. They show up on the province-view interface, but in the actual production interface, hovering over the factories' outputs make no mention of said modifiers at all, and do not seemed to be influenced by them either. There is the sole exception of infrastructure/railroads, but I would not be surprised if they were specifically hard-coded to do so.
+
+BASE_POPGROWTH                  = 0.0001
+medicine inventions: pop_growth = 0.0001
+
+                            base  + if funded + if fully funded
+no_health_care 		
+trinket_health_care 		0.001 + 0.001
+low_health_care 			0.002 + 0.002
+acceptable_health_care 		0.003 + 0.003
+good_health_care 			0.004 + 0.004 + 0.001
+
+How to add goods:
+goods.txt
+production.txt
+gfx\interface\resources.tga  (_big, _small) good icon is matched according to where the good appears on the list in goods.txt (I think)
+
+interface\mapitems.gfx
+spriteType = {
+    name = "GFX_tradegoods"    
+    texturefile = "\\gfx\\interface\\resources.tga"
+    noOfFrames = 22
+    norefcount = yes
+} 
+
+localization
 ####################################################################################################
-#TODO: v0.5.1
+
 
 #TODO: peace / anti-imperialist war march event
 
-#TODO: League of Nations
+#TODO: propose League of Nations (democratic)
 
-#TODO: disarmament conference
-#TODO: if chose to rearm before treaty ends, takes time for military to be ready again
+#TODO: racial equality clause
+
+#TODO: Permanent Court of International Justice
+
+#TODO: naval limitation treaty
+
+#TODO: Conference for the Reduction and Limitation of Armaments
+
+#TODO: League of Nations sanction rules (if league member attacks another league member)
+    No sanctions
+    Weak sanctions
+    Strong sactions
+
+#TODO: let losers join?
+
+#TODO: let communists join?
+
+
+#TODO: Ineffectual League of Nations
+	Theodore Roosevelt, in a January 1919 article titled, "The League of Nations", published in Metropolitan Magazine, warned: "If the League of Nations is built on a document as high-sounding and as meaningless as the speech in which Mr. Wilson laid down his fourteen points, it will simply add one more scrap to the diplomatic waste paper basket. Most of these fourteen points... would be interpreted... to mean anything or nothing."[17] 
+    Sir Eyre Crowe also wrote a memorandum to the British cabinet claiming that "a solemn league and covenant" would just be "a treaty, like other treaties". "What is there to ensure that it will not, like other treaties, be broken?"
+
+
+#TODO: join League of Nations
+
+#TODO: condemned by League of Nations
+
+#TODO: withdraw from League of Nations
+
+#TODO: League of Nations fails
+    too few countries join / are members  OR there is another Great War
+
+
+
+
 
 #TODO: UN
 
@@ -460,9 +493,6 @@ do not set TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS to 1 because AI will bankrupt itsel
 		world_bank_funds + 21
 
 
-
-
-
 #TODO: World Health Organization (1948)
     leads to events to eradicate disease
     support to poor country disease fighting
@@ -473,11 +503,56 @@ do not set TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS to 1 because AI will bankrupt itsel
     education aid to poor countries
 
 
+    #TODO: International Opium Commission 1909
+        "The United States convened a 13-nation conference of the International Opium Commission in 1909 in Shanghai, China, in response to increasing criticism of the opium trade."
 
+	#TODO: International Opium Convention January 23, 1912
+        The International Opium Convention, signed at The Hague on January 23, 1912 during the First International Opium Conference, was the first international drug control treaty... The treaty was signed by Germany, the United States, China, France, the United Kingdom, Italy, Japan, the Netherlands, Persia, Portugal, Russia, and Siam. The Convention provided, "The contracting Powers shall use their best endeavours to control, or to cause to be controlled, all persons manufacturing, importing, selling, distributing, and exporting morphine, cocaine, and their respective salts, as well as the buildings in which these persons carry such an industry or trade."
+		if at least 8 great powers vote yes: International Opium Convention event for everyone with opium provinces (also happens naturally if any opium province lacks the modifier)
+            opium production - a lot, local_drug_problem spreads more slowly
+
+	#TODO: https://en.wikipedia.org/wiki/International_Narcotics_Control_Board League of Nations anti-opium organization
+    #TODO: UN Drug organization
+
+
+    #TODO: local_drug_problem
+        after westernizing, local_opium_habit cleared as usual (like how the Qing anti-opium campaign actually began to work in the 1900s)
+        local_drug_problem is like local_opium_habit but for civilized nations, esp. China
+        appears in opium producing provinces, ports
+        spreads to neighboring provinces
+        much faster if east_asian
+        faster if colonial
+        slower if opium_ban
+
+    #TODO: Mothers Against Drugs
+        condition: have local_drug_problem, penal_system is rehabilitation, female suffrage, % moralists, drugs legal
+        option 1: change penal_system to incarceration, socialists angry
+        option 2: moralists angry
+
+    #TODO: anti-opium speech ( William Ewart Gladstone )
+        condition: opium legal, making opium, Christian,  moralist %
+        option 1: but think of the profits! (moralists angry)
+        option 2: he has a point (moralist +%)
+
+    #TODO: Drug research suffers
+        condition: opium ban
+        mtth: like a workplace event
+            modifier = 0.8 if also liquor prohibition
+        option 1: Grant them an exception (intellectual consciousness -, moralists slightly mad, few research points lost)
+        option 2: This research is just an excuse to get people high! (some research points lost)
+
+    #TODO: Higher than the shoulders of giants (story about researchers complaining they don't have drugs)
+        condition: opium ban
+        mtth: like a workplace event
+            modifier = 0.8 if also liquor prohibition
+        option 1: turn a blind eye (intellectual consciousness -, moralists slightly mad)
+        option 2: There is no such thing as a functioning drug addict (some research points lost)
+
+    #TODO: UN mad because you have legal drugs
+        reduce relations between you and banned drug countries
 
 #TODO: nukes
 #TODO: anti-nuclear stuff
-
 
 
 ########## currently in progress files
@@ -491,7 +566,75 @@ Pacifist_decisions
 EEM_Decolonization
 
 world_trade_decisions
-##################################
+
+
+
+
+
+
+
+
+
+
+
+
+####################################################################################################
+v0.5.1
+
+Fixed HPM Bug #198 where rivers.bmp was offset by one pixel
+Fixed HPM Bug #241 so now capitalists do want to move to laissez_faire countries. (adjusted modifier from 0.5 to 1.5)
+Fixed HPM Bug #243 where an infamy war flag gets stuck by changing badboy threshold for firing event 96135 from 1.8 to 2
+Fixed typo in leaded_gasoline
+
+New regular clothes recipe: +2.25 wool, -0.875 fabric, production bonus wool +0.025, fabric -0.025
+
+uncivilized_isolationism min_tariff increased from 0.5 to 0.6, to help unciv AI make money
+state capitalists can set taxes to 100% again
+heavy_bomb_damage now removes bomb_damage, added values together to reduce modifier clutter
+Female suffrage reduces global_population_growth by 0.001 and factory_throughput by 0.01
+clean_air_act now, instead of increasing administrative_multiplier, decreases administrative_efficiency_modifier by 0.05
+clear_out_the_manchu_elite no longer increases manchu militancy, increased non-manchu militancy decrease to -3 and north han to -6 in order to reduce the Qing reactionary rebel problem
+abolish_forced_work now needs china to be at least 80% civilized
+Changed Qing parties to be Qing themed, so dumb shit like the revolutionary KMT leading the Qing doesn't happen. 
+Removed duplicate Chinese names
+
+China terrain changes, terrain.bmp
+    parts of Henan (1508 Kaifeng, 1509 Guide, 1510 Luoyang, 1511 Zhengzhou), the center of the North China Plain, to farmlands
+    1561 Yan'an grasslands to hills
+    1602 Dali grasslands to hills, move 5th Green Standard Army from 1602 Dali to 1601 Kunming so it doesn't die from attrition
+    1490 Lanzhou forest to dryhills
+    1491 Ningxia hills to dryhills
+
+Massive overhaul of Chinese RGOs, goods moved to their historical locations, no more dumb shit like Tea in North China
+
+1488 Jiayuguan flips to oil after 1940 https://en.wikipedia.org/wiki/Yumen_City#Economy https://en.wikipedia.org/wiki/Bombing_of_Chongqing
+
+Opium rework:
+    opium base price increased from 3 to 6
+    Opium is once again a tradable good that pops eat instead of generating money from thin air, also represents painkillers and such
+    serf life opium demand increased from 0 to 0.5 , other life needs reduced slightly to keep total cost equal
+    serf everyday opium demand changed from 10 to 7.5, leftover life needs upgraded to everyday needs, other everyday needs reduced slightly to keep total cost equal
+    serf luxury opium demand changed from 2 to 7, and no longer want small arms
+    soldiers want 0.375 everyday opium and 0.125 luxury opium, everyday regular clothes and furniture reduced from 2 to 1.95 and 1.6
+    officers want 0.1 everyday opium, everyday liquor reduced from 1.8 to 1.6
+    aristocrat and capitalist opium demand decreased from 30 and 20 to 7.5 and 5
+    farmers, labourers, and craftsmen want 0.02 luxury opium
+
+    event 166506 filps provinces to opium, only happens if China lost treaty ports or the year is past 1970, won't happen if province owner banned opium
+    if has_country_modifier = opium_ban, opium provinces switch to previous production (if there isn't massive unemployment of the good it wants to change to)
+
+    opium_ban available after social_alienation tech (1900), can unban opium
+    if opium_ban, event to put province_modifier = local_opium_ban on opium provinces
+    debug event to remove_province_modifier = local_opium_ban if opium_ban lifted or not opium province
+
+Africa cultures reduced: 5
+	Sukuma merged into Unyamwezi, rename to Sukuma–Nyamwezi
+    Dyula merged into Bambara, rename to Bambara–Dyula
+    Nuer merged into Dinka, rename to Dinka-Nuer 
+    Fang merged into forest_bantu (Northwest Bantu, Zone A)
+    Kilombero merged into lacustrine_bantu (Northeast Bantu)
+    rename Maures to Hassaniya
+
 
 v0.5.0
 Shortened localization file names

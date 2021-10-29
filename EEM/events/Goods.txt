@@ -681,6 +681,7 @@ province_event = {
                     province_id = 1037        # Romashkino 1948 (Saratov is in the ural-volga gas district, doesn't make iron and coal)
                     province_id = 1157        # Ghawar 1948 Riyadh, arabia
                     #province_id = 932        # Az Zubayr 1949(Basra already oil)
+                    province_id = 1488        # 1939-1941 Yumen / Jiuquan basin / Jiayuguan
                 }
             }
 

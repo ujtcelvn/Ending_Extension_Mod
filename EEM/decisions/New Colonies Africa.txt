@@ -501,7 +501,7 @@ political_decisions = {
 			}
             IVC = {
                 primary_culture = THIS
-                add_accepted_culture = dyula
+                add_accepted_culture = bambara #dyula
                 tech_school = developing_tech_school
                 set_country_flag = post_colonial_country
                 clr_country_flag = sunni_country
@@ -1613,7 +1613,7 @@ political_decisions = {
                     limit = {
                         OR = {
                             has_pop_culture = forest_bantu
-                            has_pop_culture = fang
+                            #has_pop_culture = fang
                         }
                     }
                     literacy = -0.99
@@ -1626,7 +1626,7 @@ political_decisions = {
 
             GAB = {
                 primary_culture = THIS
-                add_accepted_culture = fang
+                add_accepted_culture = forest_bantu #fang
                 tech_school = developing_tech_school
                 set_country_flag = post_colonial_country
                 clr_country_flag = sunni_country
