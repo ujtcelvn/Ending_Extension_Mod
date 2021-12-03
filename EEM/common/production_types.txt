@@ -303,7 +303,7 @@ hydrodesulphurization_plant = {
         oil = 2        #24    total input+maint = 33.825
     }
     output_goods = sulphur
-    value = 6            #36 - profit = 2.175
+    value = 5.5 #6            #33 - profit = -0.825
     bonus = {
         trigger = { trade_goods_in_state = oil }
         value = 0.25
@@ -894,7 +894,7 @@ oil_rig = {
 opium_plantation = {
     template = RGO_template_farmers
     output_goods = opium
-    value = 0.7
+    value = 1 #0.7
     farm = yes
 }
 

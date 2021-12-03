@@ -8,6 +8,17 @@ RTR        ="countries/Ming.txt"
 MAO        ="countries/Miao.txt"
 NWO        ="countries/New World Order.txt"
 
+TZ1        ="countries/TZ1.txt"
+TZ2        ="countries/TZ2.txt"
+TZ3        ="countries/TZ3.txt"
+TZ4        ="countries/TZ4.txt"
+TZ5        ="countries/TZ5.txt"
+TZ6        ="countries/TZ6.txt"
+TZ7        ="countries/TZ7.txt"
+TZ8        ="countries/TZ8.txt"
+
+
+
 ##HPM
 PNK        ="countries/Pontianak.txt"
 GHN        ="countries/Ghana.txt"

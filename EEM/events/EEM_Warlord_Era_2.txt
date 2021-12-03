@@ -1622,7 +1622,7 @@ country_event = {
             diplomatic_influence = { who = THIS value = -200 }
         }
 
-
+        release_vassal = KMT
         KMT = { country_event = 166602 }
 
         ai_chance = {
@@ -1864,7 +1864,7 @@ country_event = {
         }
 
         random = {
-            chance = 75
+            chance = 0
             random_country = {
                 limit = { MCK = { OR = { exists = no vassal_of = THIS substate_of = THIS } have_core_in = THIS } }
                 MCK = {
@@ -2377,7 +2377,7 @@ country_event = {
         }
 
         random = {
-            chance = 100
+            chance = 75
             random_country = {
                 limit = { XBI = { OR = { exists = no vassal_of = THIS substate_of = THIS } have_core_in = THIS } }
                 XBI = {
@@ -2439,7 +2439,7 @@ country_event = {
         }
 
         random = {
-            chance = 25
+            chance = 50
             random_country = {
                 limit = { YNN = { OR = { exists = no vassal_of = THIS substate_of = THIS } have_core_in = THIS } }
                 YNN = {

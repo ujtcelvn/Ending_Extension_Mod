@@ -57,14 +57,13 @@ political_decisions = {
         picture = opium_crates
 
         potential = {
-            social_alienation = 1 #1900
+            mass_politics = 1 #1900
             NOT = { has_country_modifier = opium_ban }
         }
 
         allow = {
             OR = {
-                moralism = 5
-                liberal = 50
+                moralism = 1.5
                 government = proletarian_dictatorship
                 government = fascist_dictatorship
                 government = presidential_dictatorship
@@ -76,6 +75,12 @@ political_decisions = {
                 name = opium_ban
                 duration = -1
             }
+            any_owned = {
+                limit = {
+                    trade_goods = opium
+                }
+                add_province_modifier = { name = local_opium_ban duration = -1 }
+            }
         }
 
         ai_will_do = {
@@ -83,7 +88,7 @@ political_decisions = {
 
             modifier = {
                 factor = 0
-                is_vassal = no 
+                is_vassal = yes
             }
             modifier = {
                 factor = 0
@@ -95,7 +100,7 @@ political_decisions = {
             }
             modifier = {
                 factor = 0
-                NOT = { moralism = 5 }
+                NOT = { moralism = 1.5 }
             }
             modifier = {
                 factor = 0
@@ -128,7 +133,10 @@ political_decisions = {
         allow = {
             OR = {
                 #filled with hippies
-                NOT = { moralism = 2 }
+                AND = { 
+                    pro_atheism = 5
+                    NOT = { moralism = 1 }
+                }
                 government = proletarian_dictatorship
                 government = fascist_dictatorship
                 government = presidential_dictatorship
@@ -151,7 +159,8 @@ political_decisions = {
 
             modifier = {
                 factor = 0
-                moralism = 2
+                NOT = { pro_atheism = 5 }
+                moralism = 1
                 NOT = { government = bourgeois_dictatorship }
             }
 

@@ -36,8 +36,6 @@ luxury_needs = {
     radio = 1.0
     fuel = 0.1
     #dye = 0.5
-
-    opium = 0.02
 }
 
 

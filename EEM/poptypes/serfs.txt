@@ -18,27 +18,30 @@ rebel = {
 life_needs = {
     opium =  0.5                     # 0                 3
 
-    cattle = 0.45                    # 1       #2.0
-    wool =   0.8                     # 1       #0.7
-    fish =   0.8                     # 1       #1.5
-    fruit =  0.8                     # 1       #1.8       
-    grain =  2                       # 2.5     #5.5     2.2
+    cattle = 0.725    #0.45                    # 1       #2.0
+    wool =   0.9      #0.8                     # 1       #0.7
+    fish =   0.9      #0.8                     # 1       #1.5
+    fruit =  0.9      #0.8                     # 1       #1.8       
+    grain =  2.25     #2                       # 2.5     #5.5     2.2
 }
 
 #HPM: 43.75 (73.75 with opium)
 everyday_needs = {
-    coal = 1                          #2.3
-    tobacco = 1          #5            #1.1
-    tea = 1              #2             #2.6
-    liquor = 2                         #4.4
-    regular_clothes = 1  #1.2        #5.8
-    furniture = 1        #1.1         #4.9
-    opium = 7.5           #10            #10
-    fertilizer = 0.1     #0.5          #10
-    #explosives = 0.25               #20
+    coal = 1                                 #2.3
+    tobacco = 3   #1          #5             #1.1
+    tea = 1.5     #1          #2             #2.6
+    liquor = 2                               #4.4
+    regular_clothes = 1.1    #1     #1.2     #5.8
+    furniture = 1.05         #1     #1.1     #4.9
+    opium = 7.5                     #10
+    fertilizer = 0.3         #0.1   #0.5     #10
+    explosives = 0.125              #0.25    #20
 
 
-    #0.55 * 3 + 0.05 * 20 = 2.65
+    # food: 0.55 * 3 + 0.05 * 20 = 2.65  
+    # 10 * 0.069 fertilizer    + 2.6 * 0.6 tea  + 1.1*.6 tobacco + 4.4 * 0.1 liquor  = 3.35
+    # 10 * 0.035 fertilizer =  .35
+
     cattle = 0.375
     wool = 0.2
     fish = 0.2
@@ -58,7 +61,7 @@ luxury_needs = {
     automobiles = 0.5
     radio = 1.0
     fuel = 0.1
-	#small_arms = 1                     #HPM: 1 * 37    = 37
+	small_arms = 3.5       #0        #HPM: 1 * 37    = 37
     opium = 7          # 7 * 6 = 42         - 2 * 3     = 36
 }
 

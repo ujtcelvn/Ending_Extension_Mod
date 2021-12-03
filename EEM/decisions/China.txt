@@ -1438,7 +1438,7 @@ political_decisions = {
     }
 
     self_strengthening_movement = {
-    picture = self_strengthening_movement
+        picture = self_strengthening_movement
         potential = {
             OR = {
                 AND = {
@@ -1488,7 +1488,7 @@ political_decisions = {
     }
 
     annex_the_kumul = {
-    picture = self_strengthening_movement
+        picture = self_strengthening_movement
         potential = {
             NOT = { has_global_flag = kumul_over }
             neighbour = KML
@@ -1536,7 +1536,7 @@ political_decisions = {
     }
 
     claim_tibet = {
-    picture = tibet_capital
+        picture = tibet_capital
         potential = {
             OR = {
                 tag = CHI
@@ -1570,7 +1570,7 @@ political_decisions = {
     }
 
     heavenly_capital = {
-    picture = heavenly_seal
+        picture = heavenly_seal
         potential = {
             tag = TPG
             NOT = { has_global_flag = heavenly_capital_decreted }
@@ -1591,7 +1591,7 @@ political_decisions = {
     }
 
     abolish_heavenly_capital = {
-    picture = heavenly_seal
+        picture = heavenly_seal
         potential = {
             NOT = { tag = TPG }
             #NOT = { tag = LAN }
@@ -1612,7 +1612,7 @@ political_decisions = {
     }
 
     claim_sakhalin_china = {
-    picture = map_yellow_sea
+        picture = map_yellow_sea
         potential = {
             OR = {
                 tag = TPG
@@ -1674,7 +1674,7 @@ political_decisions = {
     }
 
     formosa_independence = {
-    picture = form_china
+        picture = form_china
         potential = {
             tag = TAI
             exists = yes
@@ -1706,7 +1706,7 @@ political_decisions = {
     }
 
     revoke_sino_portuguese_treaty = {
-    picture = macao_city
+        picture = macao_city
         potential = {
             OR = {
                 QNG = { exists = yes owns = 1616 NOT = { TPG = { exists = yes } CHI = { exists = yes } } }
@@ -1758,12 +1758,12 @@ political_decisions = {
     }
 
     abolish_forced_work = {
-    alert = no
-    picture = form_china
+        alert = no
+        picture = form_china
         potential = {
             is_culture_group = east_asian
             OR = {
-                civilization_progress = 0.8
+                civilization_progress = 0.9
                 civilized = yes
             }
             NOT = { has_country_flag = abolish_forced_work }
@@ -1782,14 +1782,14 @@ political_decisions = {
             set_country_flag = abolish_forced_work
             any_pop = { militancy = 2 consciousness = 4 }
             random_owned = { limit = { owner = { NOT = { slavery = no_slavery } } } owner = { political_reform = no_slavery } }
-            random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage country_event = 6016804 } }
+            random_owned = { limit = { owner = { debt_law = serfdom } } owner = { political_reform = peonage } }                  #country_event = 6016804 (missing event)
         }
 
         ai_will_do = { factor = 1 }
     }
 
     claim_tsushima = { #Move to its own file later
-    picture = tsushima_japan
+        picture = tsushima_japan
         potential = {
             tag = KOR
             civilized = yes
@@ -1852,10 +1852,14 @@ political_decisions = {
 				tag = QNG
 				tag = CHI
 				tag = TPG
+				tag = RTR
 			}
 			any_neighbor_country = { 
 				civilized = no
-				substate_of = THIS
+				OR = {
+					substate_of = THIS
+					AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+				}
 				OR = {
 					###Military Reforms
 					AND = {
@@ -1962,7 +1966,10 @@ political_decisions = {
 						land_reform = yes_land_reform
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { land_reform = yes_land_reform }
 						}
 					}
@@ -1970,7 +1977,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { land_reform = yes_land_reform }
 						}
 						economic_reform = yes_land_reform
@@ -1984,7 +1994,10 @@ political_decisions = {
 						admin_reform = yes_admin_reform
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { admin_reform = yes_admin_reform }
 						}
 					}
@@ -1992,7 +2005,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { admin_reform = yes_admin_reform }
 						}
 						economic_reform = yes_admin_reform
@@ -2006,7 +2022,10 @@ political_decisions = {
 						finance_reform = yes_finance_reform
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { finance_reform = yes_finance_reform }
 						}
 					}
@@ -2014,7 +2033,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { finance_reform = yes_finance_reform }
 						}
 						economic_reform = yes_finance_reform
@@ -2028,7 +2050,10 @@ political_decisions = {
 						finance_reform = finance_reform_two
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { finance_reform = finance_reform_two }
 						}
 					}
@@ -2036,7 +2061,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { finance_reform = finance_reform_two }
 						}
 						economic_reform = finance_reform_two
@@ -2050,7 +2078,10 @@ political_decisions = {
 						monetary_reform = yes_monetary_reform
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { monetary_reform = yes_monetary_reform }
 						}
 					}
@@ -2058,7 +2089,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { monetary_reform = yes_monetary_reform }
 						}
 						economic_reform = yes_monetary_reform
@@ -2072,7 +2106,10 @@ political_decisions = {
 						monetary_reform = monetary_reform_two
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { monetary_reform = monetary_reform_two }
 						}
 					}
@@ -2080,7 +2117,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { monetary_reform = monetary_reform_two }
 						}
 						economic_reform = monetary_reform_two
@@ -2095,7 +2135,10 @@ political_decisions = {
 						education_reform = yes_education_reform
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { education_reform = yes_education_reform }
 						}
 					}
@@ -2103,7 +2146,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { education_reform = yes_education_reform }
 						}
 						economic_reform = yes_education_reform
@@ -2117,7 +2163,10 @@ political_decisions = {
 						research_reform = yes_research_reform
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { research_reform = yes_research_reform }
 						}
 					}
@@ -2125,7 +2174,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { research_reform = yes_research_reform }
 						}
 						economic_reform = yes_research_reform
@@ -2140,7 +2192,10 @@ political_decisions = {
 						transport_improv = yes_transport_improv
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { transport_improv = yes_transport_improv }
 						}
 					}
@@ -2148,7 +2203,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { transport_improv = yes_transport_improv }
 						}
 						economic_reform = yes_transport_improv
@@ -2169,7 +2227,10 @@ political_decisions = {
 						firearms_production = yes_firearms_production
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { firearms_production = yes_firearms_production }
 						}
 					}
@@ -2177,7 +2238,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { firearms_production = yes_firearms_production }
 						}
 						economic_reform = yes_firearms_production
@@ -2193,7 +2257,10 @@ political_decisions = {
 						pre_indust = yes_pre_indust
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { pre_indust = yes_pre_indust }
 						}
 					}
@@ -2201,7 +2268,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { pre_indust = yes_pre_indust }
 						}
 						economic_reform = yes_pre_indust
@@ -2215,7 +2285,10 @@ political_decisions = {
 						industrial_construction = yes_industrial_construction
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { industrial_construction = yes_industrial_construction }
 						}
 					}
@@ -2223,7 +2296,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { industrial_construction = yes_industrial_construction }
 						}
 						economic_reform = yes_industrial_construction
@@ -2239,7 +2315,10 @@ political_decisions = {
 						foreign_artillery = yes_foreign_artillery
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_artillery = yes_foreign_artillery }
 						}
 					}
@@ -2247,7 +2326,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_artillery = yes_foreign_artillery }
 						}
 						military_reform = yes_foreign_artillery
@@ -2261,7 +2343,10 @@ political_decisions = {
 						western_shipyards = yes_western_shipyards
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { western_shipyards = yes_western_shipyards }
 						}
 					}
@@ -2269,7 +2354,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { western_shipyards = yes_western_shipyards }
 						}
 						military_reform = yes_western_shipyards
@@ -2285,7 +2373,10 @@ political_decisions = {
 						foreign_navies = yes_foreign_navies
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_navies = yes_foreign_navies }
 						}
 					}
@@ -2293,7 +2384,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_navies = yes_foreign_navies }
 						}
 						military_reform = yes_foreign_navies
@@ -2310,7 +2404,10 @@ political_decisions = {
 						naval_schools = yes_naval_schools
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { naval_schools = yes_naval_schools }
 						}
 					}
@@ -2318,7 +2415,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { naval_schools = yes_naval_schools }
 						}
 						military_reform = yes_naval_schools
@@ -2332,7 +2432,10 @@ political_decisions = {
 						foreign_naval_officers = yes_foreign_naval_officers
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_naval_officers = yes_foreign_naval_officers }
 						}
 					}
@@ -2340,7 +2443,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_naval_officers = yes_foreign_naval_officers }
 						}
 						military_reform = yes_foreign_naval_officers
@@ -2354,7 +2460,10 @@ political_decisions = {
 						army_schools = yes_army_schools
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { army_schools = yes_army_schools }
 						}
 					}
@@ -2362,7 +2471,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { army_schools = yes_army_schools }
 						}
 						military_reform = yes_army_schools
@@ -2376,7 +2488,10 @@ political_decisions = {
 						foreign_officers = yes_foreign_officers
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_officers = yes_foreign_officers }
 						}
 					}
@@ -2384,7 +2499,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_officers = yes_foreign_officers }
 						}
 						military_reform = yes_foreign_officers
@@ -2399,7 +2517,10 @@ political_decisions = {
 						military_constructions = yes_military_constructions
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { military_constructions = yes_military_constructions }
 						}
 					}
@@ -2407,7 +2528,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { military_constructions = yes_military_constructions }
 						}
 						military_reform = yes_military_constructions
@@ -2426,7 +2550,10 @@ political_decisions = {
 						foreign_weapons = yes_foreign_weapons
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_weapons = yes_foreign_weapons }
 						}
 					}
@@ -2434,7 +2561,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_weapons = yes_foreign_weapons }
 						}
 						military_reform = yes_foreign_weapons
@@ -2450,7 +2580,10 @@ political_decisions = {
 						foreign_training = yes_foreign_training
 						any_neighbor_country = { 
 							civilized = no
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_training = yes_foreign_training }
 						}
 					}
@@ -2458,7 +2591,10 @@ political_decisions = {
 				owner = {
 					any_country = {
 						limit = {
-							substate_of = THIS
+							OR = {
+								substate_of = THIS
+								AND = { vassal_of = THIS OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+							}
 							NOT = { foreign_training = yes_foreign_training }
 						}
 						military_reform = yes_foreign_training

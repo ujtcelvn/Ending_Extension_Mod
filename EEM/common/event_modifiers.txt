@@ -64,8 +64,8 @@ constitutional_crisis = {
 }
 
 democratic_peace_summit = {
-	badboy = -0.01
-	diplomatic_points_modifier = -0.05
+	#badboy = -0.01
+	#diplomatic_points_modifier = -0.05
 	icon = 5
 }
 
@@ -1839,8 +1839,9 @@ the_eiffel_tower = {
 signed_the_geneva_convention = {
     war_exhaustion = -0.02
     org_regain = 0.05
-    badboy = 0.01
+    #badboy = 0.01
     land_attrition = -0.02
+    cb_generation_speed_modifier = -0.1
     icon = 7
 }
 
@@ -2636,7 +2637,7 @@ large_oil_field = {
     icon = 13
 }
 
-local_drug_problem = {
+local_drug_habit = {
     local_RGO_throughput = -0.2
     local_factory_throughput = -0.2
     pop_consciousness_modifier = -0.05
@@ -2644,9 +2645,9 @@ local_drug_problem = {
 }
 
 opium_ban = {
-    poor_luxury_needs = -0.05                      #middle and rich people ignore drug laws
-    #prestige = 0.01
-    #administrative_efficiency_modifier = -0.05
+    poor_luxury_needs = -0.05
+    middle_luxury_needs = -0.05
+    rich_luxury_needs = -0.05
     icon = 18
 }
 
@@ -2663,10 +2664,10 @@ strat_bombers = {
 }
 
 bomb_damage = {
-    immigrant_attract = -0.25
-    immigrant_push = 0.25
-    local_RGO_output = -0.125
-    local_artisan_output = -0.25
+    immigrant_attract = -0.2
+    immigrant_push = 0.2
+    local_RGO_output = -0.1
+    local_artisan_output = -0.2
     local_factory_throughput = -0.5
     local_factory_output = -0.5
     population_growth = -0.001

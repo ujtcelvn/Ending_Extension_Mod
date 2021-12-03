@@ -168,6 +168,19 @@ country_event = {
 		    limit = { owner = { NOT = { tag = TPG } } }
             TPG = { all_core = { remove_core = TPG } }
 		}
+
+        any_country = {
+            limit = {
+                exists = yes
+                OR = {
+                    substate_of = THIS
+                    vassal_of = THIS
+                }
+                OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 }
+            }
+            country_event = 166702
+        }
+
     }
 }
 
@@ -442,7 +455,21 @@ country_event = {
         }
     }
 
-    mean_time_to_happen = { months = 200 }
+    mean_time_to_happen = {
+        months = 200
+        modifier = {
+            factor = 0.825
+            num_of_revolts = 1
+        }
+        modifier = {
+            factor = 0.8
+            num_of_revolts = 5
+        }
+        modifier = {
+            factor = 0.75
+            num_of_revolts = 10
+        }
+    }
 
     option = {
         name = "EVT90905OPTA"

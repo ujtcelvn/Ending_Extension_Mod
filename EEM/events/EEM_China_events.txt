@@ -215,7 +215,7 @@ country_event = {
             limit = {
                 owns = 2221
             }
-            country_event = 166001
+            country_event = 165005
         }
 		set_global_flag = nanking_massacre
         prestige = -10
@@ -395,8 +395,8 @@ country_event = {
     option = {
         name = "Secret societies are forbidden by law!"
         set_country_flag = tiandihui
-        GNG = { all_core = { add_core = RTR } }
         GXI = { all_core = { add_core = RTR } }
+        GNG = { all_core = { add_core = RTR } }
         change_variable = {
             which = ming_provinces
             value = 3
@@ -1419,6 +1419,8 @@ country_event = {
                 duration = 3650
             }
         }
+
+        country_event = 166700 #puppet trade zones
     }
 }
 
@@ -2305,10 +2307,10 @@ country_event = {
         }
         CHI_1578 = { add_core = MAO } #West Sichuan
         CHI_1601 = { add_core = MAO } #Yunnan
-        1499 = { add_core = MAO } #Guangxi
         1502 = { add_core = MAO } #Guangxi
         1503 = { add_core = MAO } #Guangxi
         1504 = { add_core = MAO } #Guangxi
+        3326 = { add_core = MAO } #Guangxi
         CHI_1499 = { add_core = MAO } #West Canton
         1493 = { add_core = MAO } #Canton
         CHI_1524 = { add_core = MAO } #North Hunan
@@ -2443,10 +2445,10 @@ country_event = {
         }
         CHI_1578 = { add_core = MAO } #West Sichuan
         CHI_1601 = { add_core = MAO } #Yunnan
-        1499 = { add_core = MAO } #Guangxi
         1502 = { add_core = MAO } #Guangxi
         1503 = { add_core = MAO } #Guangxi
         1504 = { add_core = MAO } #Guangxi
+        3326 = { add_core = MAO } #Guangxi
         CHI_1499 = { add_core = MAO } #West Canton
         1493 = { add_core = MAO } #Canton
         CHI_1524 = { add_core = MAO } #North Hunan
@@ -2660,7 +2662,7 @@ country_event = {
     option = {
         name = "EVT166300OPTA"
         set_global_flag = catholics_hate_taiping
-        badboy = 5
+        badboy = 2.5
         any_greater_power = {
             limit = {
                 has_country_flag = catholic_country
@@ -2677,9 +2679,9 @@ country_event = {
         ai_chance = {
             factor = 80
             modifier = {
-                factor = 0
+                factor = 0.5
                 OR = {
-                    badboy = 0.8
+                    badboy = 0.9
                     war_policy = pacifism
                 }
             }
@@ -2702,7 +2704,7 @@ country_event = {
     }
 }
 
-#No orthodox taiping reaction event because Russia can already steal tannu tuva / puppet manchuria (if I remember correctly) and they can just justify normally
+#No orthodox taiping reaction event because Russia can already steal tannu tuva / puppet mongolia (if I remember correctly) and they can just justify normally
 
 country_event = {
     id = 166301
@@ -2726,9 +2728,7 @@ country_event = {
         name = "EVT166301OPTA"
         set_global_flag = usa_taiping
         TPG = {
-            country_event = {
-                id = 166303
-            }
+            country_event = 166303
         }
         prestige = 10
         relation = { who = TPG value = 400 }
@@ -2961,8 +2961,8 @@ country_event = {
                     province_id = 1566 #Qingdao
                     province_id = 1569 #Weihaiwei
                     province_id = 1606 #Jiaxing
-                    province_id = 2681 #Taibei
-                    province_id = 2562 #Tainan
+                    #province_id = 2681 #Taibei
+                    #province_id = 2562 #Tainan
                     province_id = 1499 #Hainan
                     province_id = 2632 #Kwangchowan
                 }
@@ -3094,14 +3094,14 @@ country_event = {
 
 country_event = {
     id = 166400
-    title = "The Pope Denounces Us!" #Pope hates Taiping
-    desc = "In his latest address to the Holy See, the Pope has called us and Taiping Christainity heretics and heresy!"
+    title = "Pope Denounces Taiping!" #Pope hates Taiping
+    desc = "In his latest address to the Holy See, the Pope has called our Taiping Christainity heresy, and has been goading Catholic nations to attack us."
     picture = "god"
 
     is_triggered_only = yes
 
     option = {
-        name = "What? He is the heretic!"
+        name = "Papist scum!"
         prestige = -10
         relation = { who = FROM value = -400 }
     }
@@ -4071,146 +4071,152 @@ country_event = {
 
 #RTR and TPG cores are removed by westernizing
 
-country_event = {
-    id = 166504
-    title = "Juye Incident"
-    desc = "German missionaries Richard Henle and Franz Xaver Nies have been murdered in Shandong! The German government is demanding compensation!"
-    fire_only_once = yes
-    picture = "juye_incident"
+#country_event = {
+#    id = 166504
+#    title = "Juye Incident"
+#    desc = "German missionaries Richard Henle and Franz Xaver Nies have been murdered in Shandong by a mob of angry peasants. The German government is demanding compensation."
+#    fire_only_once = yes
+#    picture = "juye_incident"
+#
+#    trigger = {
+#        OR = {
+#            tag = RTR
+#            tag = QNG
+#        }
+#        owns = 1563 #Jinan, Shandong
+#        civilized = no
+#        NOT = {
+#            any_greater_power = { war_with = GER }
+#            has_country_flag = juye_incident
+#            war_with = GER
+#            truce_with = GER
+#        }
+#        GER = { is_greater_power = yes }
+#        GER = { invention = protected_cruisers } #1880
+#        1563 = { average_consciousness = 4 }
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 120
+#        modifier = {
+#            factor = 0.5
+#            1563 = { average_militancy = 4 }
+#        }
+#        modifier = {
+#            factor = 0.5
+#            1563 = { average_militancy = 6 }
+#        }
+#        modifier = {
+#            factor = 0.5
+#            1563 = { average_militancy = 8 }
+#        }
+#    }
+# 
+#    option = {
+#        name = "No way!"
+#        set_country_flag = juye_incident
+#        GER = {
+#            relation = { who = THIS value = -200 }
+#            leave_alliance = THIS
+#            country_event = 166505
+#        }
+#        any_owned = {
+#            limit = { port = yes }
+#            remove_province_modifier = foreign_smugglers
+#        }
+#        ai_chance = {
+#            factor = 20
+#        }
+#    }
+# 
+#    option = {
+#        name = "Give them what they want."
+#        prestige = -10
+#        set_country_flag = juye_incident
+#        remove_country_modifier = trade_restrictions
+#        random_owned = {
+#            limit = {
+#                OR = {
+#                    province_id = 1498 #Macao
+#                    province_id = 1538 #Shanghai
+#                    province_id = 1496 #Hong Kong
+#                    province_id = 1566 #Qingdao
+#                    province_id = 1569 #Weihaiwei
+#                    province_id = 1606 #Jiaxing
+#                    province_id = 2681 #Taibei
+#                    province_id = 2562 #Tainan
+#                    province_id = 1499 #Hainan
+#                    province_id = 2632 #Kwangchowan
+#                }
+#            }
+#            secede_province = GER
+#        }
+#        random_owned = {
+#            limit = {
+#                port = yes
+#                NOT = { has_province_modifier = foreign_smugglers }
+#            }
+#            add_province_modifier = {
+#                name = foreign_smugglers
+#                duration = 3650
+#            }
+#            state_scope = {
+#                any_owned = {
+#                    add_province_modifier = {
+#                        name = local_opium_habit
+#                        duration = 3650
+#                    }
+#                }
+#            }
+#        }
+#        GER = { relation = { who = THIS value = 100 } }
+#        any_pop = {
+#            limit = { is_primary_culture = no }
+#            militancy = 1
+#        }
+#        ai_chance = {
+#            factor = 80
+#        }
+#    }
+#}
+# 
+#country_event = {
+#    id = 166505
+#    title = "China Refuses to Give Compensation!"
+#    desc = "China refuses to compensate us for the murder of our missionaries, Richard Henle and Franz Xaver Nies!"
+#    picture = "juye_incident"
+# 
+#    is_triggered_only = yes
+# 
+#    option = {
+#        name = "They will pay for this!"
+#        war = {
+#            target = FROM
+#            attacker_goal = { casus_belli = treaty_port_casus_belli }
+#            defender_goal = { casus_belli = status_quo }
+#            call_ally = yes
+#        }
+#        #set_global_flag = german_opium_war
+#        ai_chance = { factor = 95 }
+#    }
+# 
+#    option = {
+#        name = "Oh well."
+#        prestige_factor = -0.25
+# 
+#        relation = { who = FROM value = -50 }
+#        ai_chance = {
+#            factor = 5
+#            modifier = {
+#                factor = 2
+#                any_greater_power = { war_with = THIS }
+#            }
+#        }
+#    }
+#}
 
-    trigger = {
-        OR = {
-            tag = RTR
-            tag = QNG
-        }
-        owns = 1563 #Jinan, Shandong
-        civilized = no
-        NOT = {
-            any_greater_power = { war_with = GER }
-            has_country_flag = juye_incident
-            war_with = GER
-            truce_with = GER
-        }
-        GER = { is_greater_power = yes }
-        GER = { invention = protected_cruisers } #1880
-        1563 = { average_consciousness = 4 }
-    }
+#166600 Xinhai
 
-    mean_time_to_happen = {
-        months = 120
-        modifier = {
-            factor = 0.5
-            1563 = { average_militancy = 4 }
-        }
-        modifier = {
-            factor = 0.5
-            1563 = { average_militancy = 6 }
-        }
-        modifier = {
-            factor = 0.5
-            1563 = { average_militancy = 8 }
-        }
-    }
+#166700 Trade Zones
 
-    option = {
-        name = "No way!"
-        set_country_flag = juye_incident
-        GER = {
-            relation = { who = THIS value = -200 }
-            leave_alliance = THIS
-            country_event = 166505
-        }
-        any_owned = {
-            limit = { port = yes }
-            remove_province_modifier = foreign_smugglers
-        }
-        ai_chance = {
-            factor = 20
-        }
-    }
-
-    option = {
-        name = "Give them what they want."
-        prestige = -10
-        set_country_flag = juye_incident
-        remove_country_modifier = trade_restrictions
-        random_owned = {
-            limit = {
-                OR = {
-                    province_id = 1498 #Macao
-                    province_id = 1538 #Shanghai
-                    province_id = 1496 #Hong Kong
-                    province_id = 1566 #Qingdao
-                    province_id = 1569 #Weihaiwei
-                    province_id = 1606 #Jiaxing
-                    province_id = 2681 #Taibei
-                    province_id = 2562 #Tainan
-                    province_id = 1499 #Hainan
-                    province_id = 2632 #Kwangchowan
-                }
-            }
-            secede_province = GER
-        }
-        random_owned = {
-            limit = {
-                port = yes
-                NOT = { has_province_modifier = foreign_smugglers }
-            }
-            add_province_modifier = {
-                name = foreign_smugglers
-                duration = 3650
-            }
-            state_scope = {
-                any_owned = {
-                    add_province_modifier = {
-                        name = local_opium_habit
-                        duration = 3650
-                    }
-                }
-            }
-        }
-        GER = { relation = { who = THIS value = 100 } }
-        any_pop = {
-            limit = { is_primary_culture = no }
-            militancy = 1
-        }
-        ai_chance = {
-            factor = 80
-        }
-    }
-}
-
-country_event = {
-    id = 166505
-    title = "China Refuses to Give Compensation!"
-    desc = "China refuses to compensate us for the murder of our missionaries, Richard Henle and Franz Xaver Nies!"
-    picture = "juye_incident"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "They will pay for this!"
-        war = {
-            target = FROM
-            attacker_goal = { casus_belli = treaty_port_casus_belli }
-            defender_goal = { casus_belli = status_quo }
-            call_ally = yes
-        }
-        #set_global_flag = german_opium_war
-        ai_chance = { factor = 95 }
-    }
-
-    option = {
-        name = "Oh well."
-        prestige_factor = -0.25
-
-        relation = { who = FROM value = -50 }
-        ai_chance = {
-            factor = 5
-            modifier = {
-                factor = 2
-                any_greater_power = { war_with = THIS }
-            }
-        }
-    }
-}
+#166800 Opium 

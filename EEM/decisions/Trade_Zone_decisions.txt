@@ -1,0 +1,955 @@
+political_decisions = {
+
+    trade_zone_1_0 = {
+        picture = weihaiwei_china
+        potential = {
+            owns = 1569
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ1 }
+            1565 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ1 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1565 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1565 = { owner = { country_event = 166710 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_1_1 = {
+        picture = weihaiwei_china
+        potential = {
+            owns = 1569
+            NOT = { is_culture_group = east_asian }
+            exists = TZ1
+            1567 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ1 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ1 = { in_sphere = THIS }
+                TZ1 = { part_of_sphere = no }
+            }
+            war = no
+            1567 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1567 = { owner = { country_event = 166711 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_1_2 = {
+        picture = weihaiwei_china
+        potential = {
+            owns = 1569
+            NOT = { is_culture_group = east_asian }
+            exists = TZ1
+            1570 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ1 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ1 = { in_sphere = THIS }
+                TZ1 = { part_of_sphere = no }
+            }
+            war = no
+            1570 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1570 = { owner = { country_event = 166712 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+####################
+
+    trade_zone_2_0 = {
+        picture = qingdao_china
+        potential = {
+            owns = 1566
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ2 }
+            1571 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ2 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1571 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1571 = { owner = { country_event = 166720 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_2_1 = {
+        picture = qingdao_china
+        potential = {
+            owns = 1566
+            NOT = { is_culture_group = east_asian }
+            exists = TZ2
+            1568 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ2 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ2 = { in_sphere = THIS }
+                TZ2 = { part_of_sphere = no }
+            }
+            war = no
+            1568 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1568 = { owner = { country_event = 166721 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_2_2 = {
+        picture = qingdao_china
+        potential = {
+            owns = 1566
+            NOT = { is_culture_group = east_asian }
+            exists = TZ2
+            1564 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ2 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ2 = { in_sphere = THIS }
+                TZ2 = { part_of_sphere = no }
+            }
+            war = no
+            1564 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1564 = { owner = { country_event = 166722 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+#################### TZ3 Nantong is not an implemented treaty port
+
+####################
+
+    trade_zone_4_0 = {
+        picture = shanghai_china
+        potential = {
+            owns = 1538
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ4 }
+            1539 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ4 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1539 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1539 = { owner = { country_event = 166740 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_4_1 = {
+        picture = shanghai_china
+        potential = {
+            owns = 1538
+            NOT = { is_culture_group = east_asian }
+            exists = TZ4
+            1537 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ4 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ4 = { in_sphere = THIS }
+                TZ4 = { part_of_sphere = no }
+            }
+            war = no
+            1537 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1537 = { owner = { country_event = 166741 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_4_2 = {
+        picture = shanghai_china
+        potential = {
+            owns = 1538
+            NOT = { is_culture_group = east_asian }
+            exists = TZ4
+            1544 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ4 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ4 = { in_sphere = THIS }
+                TZ4 = { part_of_sphere = no }
+            }
+            war = no
+            1544 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1544 = { owner = { country_event = 166742 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+####################
+
+    trade_zone_5_0 = {
+        picture = jiaxing_china
+        potential = {
+            owns = 1606
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ5 }
+            1605 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ5 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1605 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1605 = { owner = { country_event = 166750 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_5_1 = {
+        picture = jiaxing_china
+        potential = {
+            owns = 1606
+            NOT = { is_culture_group = east_asian }
+            exists = TZ5
+            1471 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ5 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ5 = { in_sphere = THIS }
+                TZ5 = { part_of_sphere = no }
+            }
+            war = no
+            1471 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1471 = { owner = { country_event = 166751 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_5_2 = {
+        picture = jiaxing_china
+        potential = {
+            owns = 1606
+            NOT = { is_culture_group = east_asian }
+            exists = TZ5
+            1470 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ5 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ5 = { in_sphere = THIS }
+                TZ5 = { part_of_sphere = no }
+            }
+            war = no
+            1470 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1470 = { owner = { country_event = 166752 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+####################
+
+    trade_zone_6_0 = {
+        picture = ningbo_china
+        potential = {
+            owns = 1608
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ6 }
+            1610 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ6 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1610 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1610 = { owner = { country_event = 166760 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_6_1 = {
+        picture = ningbo_china
+        potential = {
+            owns = 1608
+            NOT = { is_culture_group = east_asian }
+            exists = TZ6
+            1609 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ6 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ6 = { in_sphere = THIS }
+                TZ6 = { part_of_sphere = no }
+            }
+            war = no
+            1609 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1609 = { owner = { country_event = 166761 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_6_2 = {
+        picture = ningbo_china
+        potential = {
+            owns = 1608
+            NOT = { is_culture_group = east_asian }
+            exists = TZ6
+            1473 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ6 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ6 = { in_sphere = THIS }
+                TZ6 = { part_of_sphere = no }
+            }
+            war = no
+            1473 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1473 = { owner = { country_event = 166762 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+####################
+
+    trade_zone_7_0 = {
+        picture = hong_kong_china
+        potential = {
+            OR = { owns = 1496 owns = 1498 }
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ7 }
+            NOT = { exists = GNG }
+            1493 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ7 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1493 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1493 = { owner = { country_event = 166770 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_7_1 = {
+        picture = hong_kong_china
+        potential = {
+            OR = { owns = 1496 owns = 1498 }
+            NOT = { is_culture_group = east_asian }
+            exists = TZ7
+            NOT = { exists = GNG }
+            1497 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ7 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ7 = { in_sphere = THIS }
+                TZ7 = { part_of_sphere = no }
+            }
+            war = no
+            1497 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1497 = { owner = { country_event = 166771 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_7_2 = {
+        picture = hong_kong_china
+        potential = {
+            OR = { owns = 1496 owns = 1498 }
+            NOT = { is_culture_group = east_asian }
+            exists = TZ7
+            NOT = { exists = GNG }
+            1500 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ7 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ7 = { in_sphere = THIS }
+                TZ7 = { part_of_sphere = no }
+            }
+            war = no
+            1500 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1500 = { owner = { country_event = 166772 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+####################
+
+    trade_zone_8_0 = {
+        picture = kwangchowan_china
+        potential = {
+            OR = { owns = 2632 owns = 1499 }
+            NOT = { is_culture_group = east_asian }
+            NOT = { exists = TZ8 }
+            NOT = { exists = GNG }
+            1495 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ8 }
+                }
+            }
+            invention = steamer_transports    #1836
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            war = no
+            1495 = { owner = { war = no } }
+            alphabetic_flag_signaling = 1    #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1495 = { owner = { country_event = 166780 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_8_1 = {
+        picture = kwangchowan_china
+        potential = {
+            OR = { owns = 2632 owns = 1499 }
+            NOT = { is_culture_group = east_asian }
+            exists = TZ8
+            NOT = { exists = GNG }
+            1501 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ8 }
+                }
+            }
+            invention = monitors #1860
+            OR = {
+                invention = protected_cruisers #1880
+                has_global_flag = taiping_has_happened
+            }
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ8 = { in_sphere = THIS }
+                TZ8 = { part_of_sphere = no }
+            }
+            war = no
+            1501 = { owner = { war = no } }
+            naval_plans = 1 #1836
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            1501 = { owner = { country_event = 166781 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    trade_zone_8_2 = {
+        picture = kwangchowan_china
+        potential = {
+            OR = { owns = 2632 owns = 1499 }
+            NOT = { is_culture_group = east_asian }
+            exists = TZ8
+            NOT = { exists = GNG }
+            3326 = {
+                owner = {
+                    civilized = no
+                    OR = { tag = QNG tag = CHI tag = TPG tag = RTR }
+                    is_vassal = no
+                    is_substate = no
+                    NOT = { has_country_flag = tore_up_unequal_treaties }
+                    NOT = { tag = TZ8 }
+                    OR = {
+                        THIS = { naval_directionism = 1 } #1900
+                        has_country_flag = boxers_disbanded  #QNG only
+                    }
+                }
+            }
+            invention = protected_cruisers #1880
+            num_of_ports = 2
+        }
+
+        allow = {
+            is_greater_power = yes
+            OR = {
+                TZ8 = { in_sphere = THIS }
+                TZ8 = { part_of_sphere = no }
+            }
+            war = no
+            3326 = { owner = { war = no } }
+            naval_logistics = 1 #1870
+            NOT = { has_country_modifier = international_negotiations }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = international_negotiations
+                duration = 31
+            }
+            3326 = { owner = { country_event = 166872 } } 
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+
+}

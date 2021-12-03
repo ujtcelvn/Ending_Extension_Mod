@@ -662,6 +662,7 @@ political_decisions = {
         }
 
         allow = {
+            owns = 1616
             nationalism_n_imperialism = 1
             war = no
             KMT = { exists = no }

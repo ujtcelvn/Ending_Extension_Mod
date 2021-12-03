@@ -4959,15 +4959,14 @@ province_event = {
 country_event = {
 	id = 6660000
 	title = "Tax Refund?"
-	desc = "There's too much money in the treasury, and not enough flowing in the economy!"
+	desc = "In order to avoid a liquidity crisis, money is forcibly injected back into the economy if there is over 6,000,000¤ in the treasury while at peace."
 	picture = "Poor"
 	
 	trigger = {
-        money = 6000000
+        war = no
+        money = 6001000
     }
-	mean_time_to_happen = {
-		months = 1
-	}
+
 	option = {
 		name = "Restore liquidity!"
 		random_pop = {

@@ -2236,7 +2236,7 @@ province_event = {
                 any_pop = { militancy = -3 }
             }
         }
-        CAR = { add_accepted_culture = dinka } #nuer
+        CAR = { add_accepted_culture = nuer }
     }
 }
 

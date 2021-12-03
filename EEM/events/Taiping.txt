@@ -941,6 +941,8 @@ country_event = {
                 duration = 3650
             }
         }
+
+        country_event = 166700 #puppet trade zones
     }
 }
 

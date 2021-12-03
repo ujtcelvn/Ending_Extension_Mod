@@ -14,4 +14,7 @@ clerked_nation;Clerked Nation 1;;;;;;;;;;;;;
 communist_peace_summit;Communist Summit;;;;;;;;;;;;;
 communist_peace_summit_desc;We have recently held a Communist International.;;;;;;;;;;;;;
 large_oil_field;Large Oil Fields;;;;;;;;;;;;;
-local_drug_problem;Local Drug Problem;;;;;;;;;;;;;
+local_drug_habit;Local Narcotic Habit;;;;;;;;;;;;;
+opium_ban;Narcotics Control Act;;;;;;;;;;;;;
+opium_ban_desc;The manufacture and sale of narcotics and opoids are heavily regulated in this country.;;;;;;;;;;;;;
+local_opium_ban;Narcotic Ban;;;;;;;;;;;;;

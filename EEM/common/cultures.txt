@@ -2567,14 +2567,14 @@ east_african = {
         last_names = { "Ole Mbatian" "Ole Lenana" "Ole Segi" "Ole Parasayip" "Ole Koyati"
         }
     }
-#    nuer = {
-#        color = {68 199 204}
-#        first_names = { Diu Chol Dei Tongyiik Hon Pal Nyuon Deng Gai Ochan Puot Ruai
-#        }
-#
-#        last_names = { Anya-Nya Top Juak Gaach Bany Lieth Nyuot Luth Chotper Weiu
-#        }
-#    }
+    nuer = {
+        color = {68 199 204}
+        first_names = { Diu Chol Dei Tongyiik Hon Pal Nyuon Deng Gai Ochan Puot Ruai
+        }
+
+        last_names = { Anya-Nya Top Juak Gaach Bany Lieth Nyuot Luth Chotper Weiu
+        }
+    }
     nuba = {
         color = {48 213 48}
         first_names = { Awin Akoc Nyidok Kwadker Ajang Dedunyal Kuikon Yor Kur Fadyet Fafiti Nyadwai Muko Wak Tyelgut Kodit Aney

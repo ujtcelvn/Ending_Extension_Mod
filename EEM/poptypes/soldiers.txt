@@ -38,20 +38,20 @@ life_needs = {
     grain =  2.5
 }
 
-#Total cash needed: 69.076 - HPM: 69.075 - Vanilla value: 57.35
+#Total cash needed: 69.075 - Vanilla value: 57.35
 everyday_needs = {
     tea = 4
     coal = 1
     liquor = 0.9     #3.96 (HPM: 2, 8.8)
     wine = 0.5     #4.85 (HPM: 0)
-    regular_clothes = 1.95      #base: 2 * 5.8
-    furniture = 1.6            #base: 2 * 4.9
+    regular_clothes = 2 #1.95      #base: 2 * 5.8
+    furniture = 2 #1.6            #base: 2 * 4.9
     coffee = 2
     tobacco = 1
     ammunition = 0.5 #0
     small_arms = 0.35 #0
 
-    opium = 0.375   #base: 0
+    opium = 0.1   #base: 0
 }
 
 #Total cash needed: 136.78 - Vanilla value: 125.995
@@ -68,7 +68,7 @@ luxury_needs = {
     #dye = 0.5
     artillery = 0.05
 
-    opium = 0.125       #0.75
+    opium = 0.1   #base: 0
 }
 
 

@@ -1,6 +1,6 @@
-#################### Opium Trade id = 166600 ####################
+#################### Opium Trade id = 166800 ####################
 province_event = {
-    id = 166600
+    id = 166800
 
     trigger = {
         NOT = { owner = { has_country_modifier = opium_ban } }
@@ -16,9 +16,9 @@ province_event = {
             province_id = 1349	#Sukothai
             province_id = 1335	#Kyaukse
             province_id = 1182	#Guryev
-            province_id = 1170	#Nizwa
-            province_id = 2285	#Salalah
-            province_id = 1166	#Muscat
+            #province_id = 1170	#Nizwa
+            #province_id = 1174	#Salalah
+            #province_id = 1166	#Muscat
             province_id = 1271	#Indore
             province_id = 1269	#Udaipur
             province_id = 1338	#Taunggye
@@ -27,8 +27,8 @@ province_event = {
             province_id = 686	#Merv
             province_id = 1245	#Benares
             province_id = 1333	#Toungoo
-            province_id = 1173	#Mukalla
-            province_id = 1175	#Ghayda
+            #province_id = 1173	#Mukalla
+            #province_id = 1175	#Ghayda
             AND = {
                 year = 1840
                 province_id = 807         #  Bitola 
@@ -36,11 +36,10 @@ province_event = {
             AND = {
                 year = 1860
                 OR = {
-                    province_id = 1602        # Dali
-                    AND = {
-                        province_id = 1258        # Gauhati
-                        NOT = { year = 1900 }     # transitions to tea
-                    }
+                    #AND = {
+                    #    province_id = 1258        # Gauhati
+                    #    NOT = { year = 1900 }     # transitions to tea
+                    #}
                     province_id = 1122        # Hamadan
                     province_id = 1127        # Isfahan
                 }
@@ -48,7 +47,7 @@ province_event = {
             AND = {
                 year = 1880
                 OR = {
-                    province_id = 1580        # Jiading
+                    province_id = 1602        # Dali previously 1860
                     AND = {
                         has_global_flag = laos_organized
                         province_id = 1356        # Luang Prabang
@@ -57,7 +56,10 @@ province_event = {
             }
             AND = {
                 year = 1895
-                province_id = 808         #  Petrich 
+                OR = {
+                    province_id = 808         #  Petrich 
+                    #province_id = 1580        # Jiading previously 1880
+                }
             }
             AND = {
                 year = 1920                  #actually 1924
@@ -125,20 +127,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = opium
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = opium
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = opium
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -161,13 +163,26 @@ province_event = {
             name = switched_production
             duration = 1825
         }
+
+        random_owned = {
+            limit = {
+                owner = { civilized = no }
+				trade_goods = opium
+                NOT = { has_province_modifier = local_opium_habit }
+            }
+            add_province_modifier = {
+                name = local_opium_habit
+                duration = 1825
+            }
+        }
+
     }
 }
 
 
 
 province_event = {
-    id = 166601
+    id = 166801
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -177,20 +192,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = cattle
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = cattle
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = cattle
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -220,7 +235,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166602
+    id = 166802
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -230,20 +245,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = coffee
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = coffee
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = coffee
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -271,7 +286,7 @@ province_event = {
 
 
 province_event = {
-    id = 166603
+    id = 166803
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -281,20 +296,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = cotton
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = cotton
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = cotton
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -323,7 +338,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166604
+    id = 166804
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -333,28 +348,28 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = fish
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = fish
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = fish
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
         }
         OR = {
             province_id = 1182	#Guryev
-            province_id = 2285	#Salalah
-            province_id = 1173	#Mukalla
+            #province_id = 1174	#Salalah
+            #province_id = 1173	#Mukalla
         }
     }
 
@@ -375,7 +390,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166605
+    id = 166805
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -385,28 +400,28 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = fruit
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = fruit
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = fruit
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
         }
         OR = {
             province_id = 1335	#Kyaukse
-            province_id = 1166	#Muscat
-            province_id = 1175	#Ghayda
+            #province_id = 1166	#Muscat
+            #province_id = 1175	#Ghayda
             province_id = 1122	#Hamadan
             province_id = 1580	#Jiading
         }
@@ -429,7 +444,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166606
+    id = 166806
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -439,20 +454,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = grain
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = grain
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = grain
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -461,7 +476,7 @@ province_event = {
             province_id = 1348	#Nakhon Sawan
             province_id = 1347	#Lopburi
             province_id = 1349	#Sukothai
-            province_id = 1170	#Nizwa
+            #province_id = 1170	#Nizwa
             province_id = 1247	#Patna
             province_id = 1333	#Toungoo
             province_id = 1216	#Jalalabad
@@ -491,7 +506,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166607
+    id = 166807
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -501,20 +516,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = silk
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = silk
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = silk
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -541,7 +556,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166608
+    id = 166808
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -551,20 +566,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = tea
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = tea
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = tea
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -594,7 +609,7 @@ province_event = {
 
 
 province_event = {
-    id = 166609
+    id = 166809
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -604,20 +619,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = timber
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = timber
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = timber
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -646,7 +661,7 @@ province_event = {
 
 
 province_event = {
-    id = 166610
+    id = 166810
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -656,20 +671,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = tobacco
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = tobacco
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = tobacco
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -696,7 +711,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166611
+    id = 166811
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -706,20 +721,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = tropical_wood
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = tropical_wood
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = tropical_wood
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -747,7 +762,7 @@ province_event = {
 
 
 province_event = {
-    id = 166612
+    id = 166812
     trigger = {
         trade_goods = opium
         owner = { has_country_modifier = opium_ban }
@@ -757,20 +772,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = wool
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = wool
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = wool
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
                     }
                 }
             }
@@ -804,7 +819,7 @@ province_event = {
 ###################################
 
 province_event = {
-    id = 166620
+    id = 166820
     trigger = {
         trade_goods = opium
         NOT = { has_province_modifier = local_opium_ban }
@@ -834,14 +849,6 @@ province_event = {
         }
         modifier = {
             factor = 0.8
-            owner = { administration_spending = 0.75 }
-        }
-        modifier = {
-            factor = 0.8
-            owner = { administration_spending = 1 }
-        }
-        modifier = {
-            factor = 0.8
             country_units_in_province = THIS
         }
         modifier = {
@@ -867,7 +874,7 @@ province_event = {
 }
 
 province_event = {
-    id = 166621
+    id = 166821
     trigger = {
         has_province_modifier = local_opium_ban
         OR = {
@@ -892,6 +899,76 @@ province_event = {
                     }
                 }
                 remove_province_modifier = local_opium_ban
+            }
+        }
+    }
+}
+
+
+
+
+province_event = {
+    id = 166822
+    trigger = {
+        trade_goods = opium
+        owner = { civilized = yes }
+        NOT = { has_province_modifier = local_drug_habit }
+    }
+
+    title = "Opium Addiction in $STATENAME$"
+    desc = "Opium has long been used both recreationally and therapeutically. However, $STATENAME$ residents are developing a dependence on this analgesic, causing overdoses and withdrawal cases to climb precipitously."
+
+    mean_time_to_happen = {
+        months = 600
+        modifier = {
+            factor = 0.8
+            is_colonial = yes
+        }
+        modifier = {
+            factor = 0.8
+            is_overseas = yes
+        }
+        modifier = {
+            factor = 1.25
+            owner = { has_country_modifier = opium_ban }
+        }
+        modifier = {
+            factor = 2
+            has_province_modifier = local_opium_ban
+        }
+    }
+
+    option = {
+        name = "Let them have their fun."
+        state_scope = {
+            any_owned = {
+                add_province_modifier = {
+                    name = local_drug_habit
+                    duration = 3650
+                }
+            }
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.5
+                religious_policy = pro_atheism
+            }
+        }
+    }
+
+    option = {
+        name = "Crack down on the addicts!"
+        
+        any_pop = {
+            militancy = 4
+            reduce_pop = 0.995
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                religious_policy = moralism
             }
         }
     }

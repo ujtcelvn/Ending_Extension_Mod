@@ -2106,12 +2106,32 @@ alphabetic_flag_signaling = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
+        }
+        # We want China trade!
+        modifier = {
+            factor = 50
+            rank = 16
+            NOT = { is_culture_group = east_asian }
+            OR = {
+                owns = 1498 #Macao
+                owns = 1538 #Shanghai
+                owns = 1496 #Hong Kong
+                owns = 1566 #Qingdao
+                owns = 1481 #Lushun - Port Arthur
+                owns = 1569 #Weihaiwei
+                owns = 1606 #Jiaxing
+                owns = 2681 #Taibei
+                owns = 2562 #Tainan
+                owns = 1499 #Hainan
+                owns = 2632 #Kwangchowan
+                owns = 1608 #Ningbo
+            }
         }
     }
 }
@@ -2140,7 +2160,6 @@ naval_plans = {
             factor = 1.05
             total_num_of_ports = 30
         }
-
         modifier = {
             factor = 1.02
             total_amount_of_ships = 30
@@ -2166,12 +2185,32 @@ naval_plans = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
+        }
+        # We want China trade!
+        modifier = {
+            factor = 50
+            rank = 16
+            NOT = { is_culture_group = east_asian }
+            OR = {
+                owns = 1498 #Macao
+                owns = 1538 #Shanghai
+                owns = 1496 #Hong Kong
+                owns = 1566 #Qingdao
+                owns = 1481 #Lushun - Port Arthur
+                owns = 1569 #Weihaiwei
+                owns = 1606 #Jiaxing
+                owns = 2681 #Taibei
+                owns = 2562 #Tainan
+                owns = 1499 #Hainan
+                owns = 2632 #Kwangchowan
+                owns = 1608 #Ningbo
+            }
         }
     }
 }
@@ -2234,12 +2273,32 @@ naval_statistics = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
+        }
+        # We want China trade!
+        modifier = {
+            factor = 50
+            rank = 16
+            NOT = { is_culture_group = east_asian }
+            OR = {
+                owns = 1498 #Macao
+                owns = 1538 #Shanghai
+                owns = 1496 #Hong Kong
+                owns = 1566 #Qingdao
+                owns = 1481 #Lushun - Port Arthur
+                owns = 1569 #Weihaiwei
+                owns = 1606 #Jiaxing
+                owns = 2681 #Taibei
+                owns = 2562 #Tainan
+                owns = 1499 #Hainan
+                owns = 2632 #Kwangchowan
+                owns = 1608 #Ningbo
+            }
         }
     }
 }
@@ -2293,12 +2352,32 @@ naval_logistics = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
+        }
+        # We want China trade!
+        modifier = {
+            factor = 50
+            rank = 16
+            NOT = { is_culture_group = east_asian }
+            OR = {
+                owns = 1498 #Macao
+                owns = 1538 #Shanghai
+                owns = 1496 #Hong Kong
+                owns = 1566 #Qingdao
+                owns = 1481 #Lushun - Port Arthur
+                owns = 1569 #Weihaiwei
+                owns = 1606 #Jiaxing
+                owns = 2681 #Taibei
+                owns = 2562 #Tainan
+                owns = 1499 #Hainan
+                owns = 2632 #Kwangchowan
+                owns = 1608 #Ningbo
+            }
         }
     }
 }
@@ -2352,12 +2431,32 @@ naval_directionism = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
+        }
+        # We want China trade!
+        modifier = {
+            factor = 50
+            rank = 16
+            NOT = { is_culture_group = east_asian }
+            OR = {
+                owns = 1498 #Macao
+                owns = 1538 #Shanghai
+                owns = 1496 #Hong Kong
+                owns = 1566 #Qingdao
+                owns = 1481 #Lushun - Port Arthur
+                owns = 1569 #Weihaiwei
+                owns = 1606 #Jiaxing
+                owns = 2681 #Taibei
+                owns = 2562 #Tainan
+                owns = 1499 #Hainan
+                owns = 2632 #Kwangchowan
+                owns = 1608 #Ningbo
+            }
         }
     }
 }
@@ -2419,11 +2518,11 @@ naval_integration = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
         }
     }
@@ -2480,18 +2579,18 @@ naval_science_7 = {
         }
         modifier = {
             factor = 0
-            NOT = { oil_driven_ships = 1 }
+            NOT = { ship_construction_7 = 1 }
         }
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             any_owned_province = { is_overseas = yes }
         }
     }

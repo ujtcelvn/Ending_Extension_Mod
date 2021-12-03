@@ -2518,72 +2518,36 @@
 }
 #Bihar Region : 10724000
 #under rule of Britain 1836
-#Patna (3028000/757000 POPS)
+#Patna (3028000/757000 POPS)   EEM: 525,600 POPS - 46,5000 = 479,100
 1247 = {
     aristocrats = {
         culture = bihari
         religion = hindu
-        size = 33000
+        size = 23500
     }
 
     clergymen = {
         culture = bihari
         religion = hindu
-        size = 6500
-    }
-
-    bureaucrats = {
-        culture = bihari
-        religion = hindu
-        size = 2250
+        size = 4500
     }
 
     artisans = {
         culture = bihari
         religion = hindu
-        size = 10000
-    }
-
-    artisans = {
-        culture = bihari
-        religion = hindu
-        size = 5000
+        size = 11000
     }
 
     soldiers = {
         culture = bihari
         religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bihari
-        religion = hindu
-        size = 3000
-    }
-
-    soldiers = {
-        culture = bihari
-        religion = hindu
-        size = 500
+        size = 4500
     }
 
     farmers = {
         culture = bihari
         religion = hindu
-        size = 560750
-    }
-
-    aristocrats = {
-        culture = bihari
-        religion = sunni
-        size = 1500
-    }
-
-    clergymen = {
-        culture = bihari
-        religion = sunni
-        size = 1250
+        size = 360000 #399500
     }
 
     bureaucrats = {
@@ -2592,22 +2556,34 @@
         size = 250
     }
 
+    aristocrats = {
+        culture = bihari
+        religion = sunni
+        size = 1000
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = sunni
+        size = 900
+    }
+
     artisans = {
         culture = bihari
         religion = sunni
-        size = 7000
+        size = 5000
     }
 
     soldiers = {
         culture = bihari
         religion = sunni
-        size = 1250
+        size = 900
     }
 
     farmers = {
         culture = bihari
         religion = sunni
-        size = 103750
+        size = 63000 #70000
     }
 
     bureaucrats = {
@@ -2616,42 +2592,100 @@
         size = 50
     }
 }
-#Gaya (3056000/764000 POPS)
-1248 = {
+
+#Muzaffapur (524,100 POPS) EEM 
+3323 = {
     aristocrats = {
         culture = bihari
         religion = hindu
-        size = 7000
+        size = 500
     }
 
     clergymen = {
         culture = bihari
         religion = hindu
-        size = 6500
+        size = 4500
     }
 
     artisans = {
         culture = bihari
         religion = hindu
-        size = 10000
-    }
-
-    artisans = {
-        culture = bihari
-        religion = hindu
-        size = 2500
+        size = 8500
     }
 
     soldiers = {
         culture = bihari
         religion = hindu
-        size = 2500
+        size = 1750
     }
 
     farmers = {
         culture = bihari
         religion = hindu
-        size = 644500
+        size = 475000
+    }
+
+    aristocrats = {
+        culture = bihari
+        religion = sunni
+        size = 350
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    artisans = {
+        culture = bihari
+        religion = sunni
+        size = 2500
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = sunni
+        size = 500
+    }
+
+    farmers = {
+        culture = bihari
+        religion = sunni
+        size = 47000
+    }
+}
+
+#Gaya (3056000/764000 POPS) EEM: 404,600 + 46,500 = 451,100
+1248 = {
+    aristocrats = {
+        culture = bihari
+        religion = hindu
+        size = 3500
+    }
+
+    clergymen = {
+        culture = bihari
+        religion = hindu
+        size = 3500
+    }
+
+    artisans = {
+        culture = bihari
+        religion = hindu
+        size = 7000
+    }
+
+    soldiers = {
+        culture = bihari
+        religion = hindu
+        size = 1300
+    }
+
+    farmers = {
+        culture = bihari
+        religion = hindu
+        size = 389500 #350000
     }
 
     aristocrats = {
@@ -2663,25 +2697,25 @@
     clergymen = {
         culture = bihari
         religion = sunni
-        size = 750
+        size = 300
     }
 
     artisans = {
         culture = bihari
         religion = sunni
-        size = 3500
+        size = 2000
     }
 
     soldiers = {
         culture = bihari
         religion = sunni
-        size = 750
+        size = 400
     }
 
     farmers = {
         culture = bihari
         religion = sunni
-        size = 61500
+        size = 39500  #32500
     }
 }
 #Kharswari (2740000/685000 POPS)

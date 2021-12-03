@@ -690,12 +690,13 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+
 }
 
-#HPM treaty port conditions for ENG
+#treaty port conditions for ENG
 #hong kong      1496
 #Shanghai       1538 won't pick if 1496
-#qingdao        1566 won't pick if 1496  1566* 1569       *ENG will never pick qingdao!
+#qingdao        1566 won't pick if 1496  1566* 1569       *ENG will never pick qingdao in HPM!
 #lushun         1481 won't pick if 1496  1566  1569 
 #weihaiwei      1569 won't pick if 1496  1566*            *ENG should pick weihaiwei before qingdao, removed
 #jiaxing        1606 won't pick if 1496  1566  1569 

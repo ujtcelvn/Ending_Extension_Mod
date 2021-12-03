@@ -126,8 +126,8 @@ v0.5
         666000
     China terrain and RGO rework
     Opium rework
-    wool can be used to make clothes
-    African cultures reduced = 5
+    wool is now part of the recipe for clothes
+    African cultures reduced 
 
 
 
@@ -200,19 +200,7 @@ v0.5
 #TODO: San Blas Rebellion event
 #TODO: Ottomemes
 #TODO: FRCA become guatemala fix
-#TODO: Indonesia making like 30% of the world's sulphur is no fair
-    Mercury(II) fulminate, or Hg(CNO)2, is a primary explosive. It is highly sensitive to friction, heat and shock and is mainly used as a trigger for other explosives in percussion caps and detonators. 
-        First used as a priming composition in small copper caps beginning in the 1820s, mercury fulminate quickly replaced flints as a means to ignite black powder charges in muzzle-loading firearms. Later, during the late 19th century and most of the 20th century, mercury fulminate or potassium chlorate became widely used in primers for self-contained rifle and pistol ammunition.
-    Almadén cinnabar mine 
-        491 Ciudad Real, currently makes grain
-        Almadén is home to the world's greatest reserves of cinnabar
-        opened before 16th century, closed in 2002
-    New Almaden cinnabar mine
-        Discovered in the 1820's by Mexican settlers, New Almaden mines are the oldest mines in California and were one of the most productive mercury mines in the country
-        closed in 1976 
-        doesn't have a province, make a San Jose / Santa Clara County province?
-    East Guizhou cinnabar mines
-        birthplace of Chinese cinnabar culture
+
 #TODO: 1104 Sheki to silk? "During 1850–70, Shaki became international silk production centre.[39] More than 200 European companies opened offices in the city, while silkworms to the tune of 3 million roubles were sold to them in a year.[39] Shaki possesses a small silk industry and relies on its agricultural sector, which produces tobacco, grapes, cattle, nuts, cereals and milk."
 #TODO: 1107 Lankaran to tea? "Dominating spheres in the economy of Lankaran are vegetable-growing, tea-growing, paddy cultivating, cattle-breeding, citrus plants, beekeeping, fishing, and grain farming.[10] Favourable humid subtropical climate, availability of good arable land, water and sufficient labour resources of the city provides a good basis for agricultural activities as well as the development of agro-processing enterprises. The city is also home to Azerbaijan's first tea plant, built in 1937.[11]"
 #TODO: “Seize Rest of State” CB
@@ -271,7 +259,14 @@ v0.5
 
 #TODO: hippies and drugs
 
-#TODO: healthcare reform rework?
+#TODO: healthcare reform rework? Have healthcare modifiers spread by province, max level based on tech
+    private healthcare: hospitals improve fast but also close fast, depending on how rich pops are
+    mixed healthcare:
+    public healthcare: hospitals improve and close mostly based on admin spending
+    make pops want healthcare reform less
+#TODO: birth control inventions reduce pop growth
+#TODO: natalism encouragement: once you are in the 2000s you can ban abortion, birth control, and encourage births: pop growth + but militancy +
+
 
 #################### Notes on How Liqqy Works: ####################
 Loan Interest
@@ -509,15 +504,15 @@ localization
 	#TODO: International Opium Convention January 23, 1912
         The International Opium Convention, signed at The Hague on January 23, 1912 during the First International Opium Conference, was the first international drug control treaty... The treaty was signed by Germany, the United States, China, France, the United Kingdom, Italy, Japan, the Netherlands, Persia, Portugal, Russia, and Siam. The Convention provided, "The contracting Powers shall use their best endeavours to control, or to cause to be controlled, all persons manufacturing, importing, selling, distributing, and exporting morphine, cocaine, and their respective salts, as well as the buildings in which these persons carry such an industry or trade."
 		if at least 8 great powers vote yes: International Opium Convention event for everyone with opium provinces (also happens naturally if any opium province lacks the modifier)
-            opium production - a lot, local_drug_problem spreads more slowly
+            opium production - a lot, local_drug_habit spreads more slowly
 
 	#TODO: https://en.wikipedia.org/wiki/International_Narcotics_Control_Board League of Nations anti-opium organization
     #TODO: UN Drug organization
 
 
-    #TODO: local_drug_problem
+    #TODO: local_drug_habit
         after westernizing, local_opium_habit cleared as usual (like how the Qing anti-opium campaign actually began to work in the 1900s)
-        local_drug_problem is like local_opium_habit but for civilized nations, esp. China
+        local_drug_habit is like local_opium_habit but for civilized nations, esp. China
         appears in opium producing provinces, ports
         spreads to neighboring provinces
         much faster if east_asian
@@ -525,7 +520,7 @@ localization
         slower if opium_ban
 
     #TODO: Mothers Against Drugs
-        condition: have local_drug_problem, penal_system is rehabilitation, female suffrage, % moralists, drugs legal
+        condition: have local_drug_habit, penal_system is rehabilitation, female suffrage, % moralists, drugs legal
         option 1: change penal_system to incarceration, socialists angry
         option 2: moralists angry
 
@@ -555,6 +550,16 @@ localization
 #TODO: anti-nuclear stuff
 
 
+#TODO: make trade zones flip to protestant if TPG and vice versa
+
+#TODO: make Japan return Haesong and Inchon to Korea if Japan loses the coup war
+
+#TODO: fix Japan-Russia sakhalin split event chain
+
+#TODO: give British cores to northwestern Canada if USA decides to 54 40 or fight
+
+#TODO: more events for free treaty ports
+
 ########## currently in progress files
 event_modifiers
 
@@ -568,15 +573,101 @@ EEM_Decolonization
 world_trade_decisions
 
 
+####################################################################################################
+v0.5.2
 
+opium base production increased to 1, price reduced back to 3
+serf other good consumption increased to balance opium price
+farmers and craftsmen and labourers no longer want opium
+soldiers everyday and luxury opium adjusted to 0.1
+officers everyday and luxury opium adjusted to 0.15
+artisans opium want increased to 5, aeroplane and telephone want reduced to balance it out
+clerks and bureaucrats no longer want opium
+intellectuals opium want increased to 2
+capitalists opium want decreased to 0.2
+aristocrats opium want decreased to 0.5
+if province that switched to opium is unciv, it gets local_opium_habit for 5 years
+Dail flips to opium not in 1860 but in 1880, Jiading no longer flips to opium
+1258 Gauhati (Assam) no longer flips to opium, Assam consumed lots of opium, not produced it
+Fixed reference to Galapagos when I meant Salalah in the opium flip events
+Opium ban thresholds made easier, tech needed changed from social_alienation to mass_politics, ending the opium ban now depends on pro_atheism, now reduces luxury needs for everyone
+banning opium immediately local ban on all opium provinces, switch away from opium unemployment threshold changed from 0.05 to 0.20
+local opium ban mtth adjusted
+added an opium addiction event for civs
+Oman and Yemen grow Khat, a stimulant like tobacco, not Opium https://en.wikipedia.org/wiki/Khat
+	1166	Muscat	tobacco
+	1170	Nizwa	tobacco
+	1173	Mukalla	tobacco
+	1174	Salalah	tobacco
+	1175	Ghayda	tobacco
 
+Made AI China research event slower
+Yuan Shikai also needs to own Beijing to become emperor
+Red Turban fascist flag changed from the 18 star iron blood flag to the Black Flag Army flag
+Red Turbans no longer start with autocracy, instead they start with nv_tradition like other uncivs
+Miao starts with nanfaren accepted and first_past_the_post
+Abolish forced work now needs at least 90% civilization progress and no longer tries to trigger missing event 6016804
+QNG conservative party 3 to be pro military instead of anti
+Removed juye incident events because they are already covered by the generic westerners killed events
 
+If you're a gp, when you get a treaty port you can demand the area around it to become a tag that is an unreleasable vassal/substate of China, but in the sphere of whoever got the treaty port, this way treaty ports actually offer you access to cheap goods instead of just milking China personally for money. 
+trade zones can be expanded around 1860, (after Taiping rebellion, 2nd opium war)
+trade zones can be expanded again around 1895 (boxer rebellion)
+if the trade zone no longer touches its China (QNG, RTR, CHI, TPG) overlord, the trade zone becomes the puppet of the China that touches it instead
+The trade zone gets absorbed if: westernized neighboring east asian country OR treaty port is owned by an east asian OR trade zone is not in a sphere
+the dragon wakes event automatically annexes vassal trade zones 
+if trade zone is independent and civilized, it turns into its relevant clique
+    East and West Shantung -> CHI Zhili Clique
+    North and South Kiangsu, South Anhwei, Chekiang -> HUI Anhui Clique
+    East and West Kwangtung -> GNG
+Trade zones can NOT use the chinese reunification cb, but the cb can be used against them 
+Trade zones and KMT can no longer be released by the vassal sphere coup decision 
+Chinese substate tech now sharing works on trade zones (there is no release_substate or create_substate command so all trade zones are vassals, not substates)
+TPG/RTR victory event: can choose to puppet existing trade zones or reject unequal treaties, letting the trade zones remain independent but unable to expand, but GPs with a treaty port get a free treaty port cb
+boxers, if successful, can reabsorb the trade zones and prevent new ones from forming, and gives the modifier reactionary_demands for 1 year
+If China loses a treaty port war or the Boxer rebellion intervention war, tore_up_unequal_treaties flag is cleared and treaty ports can expand again
+Boxer rebellion intervention war, if won, lets the attacker get a treaty port
+china_trade_zone event pic
+common/countries.txt, gfx/flags/, common/countries/,  history/countries/, localization/EEM_countries.csv
+    TZ1 - East Shantung
+    TZ2 - West Shantung
+    TZ3 - North Kiangsu #Not actually used, Nantong is not a treaty port 
+    TZ4 - Kiangsu
+    TZ5 - Anhwei
+    TZ6 - Chekiang
+    TZ7 - Kwangtung
+    TZ8 - Kochow
+Event 90905 Foreigner Attacked more likely if China has rebel occupied provinces, so the AI is more likely to get treaty ports
+Reduced infamy from pope condemning Taiping, and made AI more likely to do it, reworded flavor text
+Made chinese rebels in QNG more likely to be nationalists and pan nationalists, less likely to be reactionary
+independence_rebels now have unit_transfer, so they stay and fight their old overlord for freeeedom instead of just returning home and leaving the old vassal without an army
 
+hydrodesulphurization_plant base production reduced from 6 to 5.5
+1495 Maoming fish -> fruit
+491 Ciudad Real grain -> sulphur Almadén cinnabar mine
+1507 Zhenyuan -> renamed to Tongren (Chinese cinnabar)
 
+4 new provinces
+    Bihar:
+        1247 Patna split into Patna and 3323 Muzaffapur
+    California:
+        3324 Santa Clara New Almaden cinnabar mine split from  84 Sacramento
+    Guizhou:
+       bottom half of Zhenyuan and 1505 Guiyang -> 3325 Qiannan
+    Guangxi:
+        3326 Qinzhou:    Guangxi Coast split off, give GNG cores (Fangchenggang, Qinzhou, Beihai)
 
+Ranchos in California: can only be activated at peace, no longer needs Romanticism, extended from 5 years to 10 years long, also affects Santa Clara
 
-
-
+Democratic peace theory is bullshit, removed its infamy reduction and its diplomatic point reduction https://policytensor.com/2014/09/16/the-mother-of-all-foreign-policy-myths-that-refuse-to-lie-down-and-die/
+geneva convention no longer increases infamy, instead it reduces cb generation speed by 0.1
+Fixed a bunch of bugs in war crimes event and China events
+Adjust chance of warlords defecting
+Fix bug that made strategic bombing deal too much damage
+fixed tech localization typo
+increased AI research of naval science techs
+tax refund threshold adjusted to >$6 million and only active if not at war
+Split Dinka and Nuer back up
 
 ####################################################################################################
 v0.5.1
