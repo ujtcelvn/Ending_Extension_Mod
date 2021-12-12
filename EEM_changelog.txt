@@ -265,8 +265,12 @@ v0.5
     public healthcare: hospitals improve and close mostly based on admin spending
     make pops want healthcare reform less
 #TODO: birth control inventions reduce pop growth
+    The Second Demographic Transition (SDT) is a conceptual framework first formulated in 1986 by Ron Lesthaeghe and Dirk van de Kaa in a short article that was published in the Dutch sociology journal Mens en Maatschappij.[48]: 181 [48][49][50] SDT addressed the changes in the patterns of sexual and reproductive behavior which occurred in North America and Western Europe in the period from about 1963, when the birth control pill and other cheap effective contraceptive methods such as the IUD were adopted by the general population, to the present. Combined with the sexual revolution and the increased role of women in society and the workforce the resulting changes have profoundly affected the demographics of industrialized countries resulting in a sub-replacement fertility level.[51] The changes, increased numbers of women choosing to not marry or have children, increased cohabitation outside marriage, increased childbearing by single mothers, increased participation by women in higher education and professional careers, and other changes are associated with increased individualism and autonomy, particularly of women. Motivations have changed from traditional and economic ones to those of self-realization.[52]
+
+In 2015, Nicholas Eberstadt, political economist at the American Enterprise Institute in Washington, described the Second Demographic Transition as one in which "long, stable marriages are out, and divorce or separation are in, along with serial cohabitation and increasingly contingent liaisons."[53] 
 #TODO: natalism encouragement: once you are in the 2000s you can ban abortion, birth control, and encourage births: pop growth + but militancy +
 
+#TODO: "Everything is black; the walls, the earth, the air, and the sky. You can feel the oil and inhale the fumes, and reek chokes you. You walk among clouds of smoke which cover up the sky."
 
 #################### Notes on How Liqqy Works: ####################
 Loan Interest
@@ -285,7 +289,7 @@ stack overflow error caused by either a factory throughput value exceeding 400+%
 it seems that 'local_factory_x' modifiers, including throughput, output, and etc. do not actually work. They show up on the province-view interface, but in the actual production interface, hovering over the factories' outputs make no mention of said modifiers at all, and do not seemed to be influenced by them either. There is the sole exception of infrastructure/railroads, but I would not be surprised if they were specifically hard-coded to do so.
 
 BASE_POPGROWTH                  = 0.0001
-medicine inventions: pop_growth = 0.0001
+medicine inventions: pop_growth = 0.0001  (4 + 2x2 in HPM, 1 + 1x2 in EEM)
 
                             base  + if funded + if fully funded
 no_health_care 		
@@ -353,8 +357,8 @@ localization
 
 #TODO: UN
 
-#TODO: #1 north/south american non-super colonial GP anounces support for decolonization (flag UN_focus_decolonization)
-#TODO: if no north/south american GP in the top 4, then decolonization support flag is removed
+#TODO: #1 or #2 non-colonial GP anounces support for decolonization (flag UN_focus_decolonization)
+#TODO: if the GP is no longer in the top 4, decolonization support flag is removed
 
 #TODO: Bretton Woods Conference (1944) decision
     The conference conducted its major work through three "commissions." Commission I dealt with the IMF and was chaired by Harry Dexter White, Assistant to the Secretary of the U.S. Treasury and the chief American negotiator at the conference. Commission II dealt with the IBRD and was chaired by John Maynard Keynes ...  Commission III dealt with "other means of international financial cooperation" 
@@ -550,16 +554,6 @@ localization
 #TODO: anti-nuclear stuff
 
 
-#TODO: make trade zones flip to protestant if TPG and vice versa
-
-#TODO: make Japan return Haesong and Inchon to Korea if Japan loses the coup war
-
-#TODO: fix Japan-Russia sakhalin split event chain
-
-#TODO: give British cores to northwestern Canada if USA decides to 54 40 or fight
-
-#TODO: more events for free treaty ports
-
 ########## currently in progress files
 event_modifiers
 
@@ -574,6 +568,38 @@ world_trade_decisions
 
 
 ####################################################################################################
+#TODO: make trade zones flip to protestant if TPG and vice versa
+#TODO: make Japan return Haesong and Inchon to Korea if Japan loses the coup war
+#TODO: fix Japan-Russia sakhalin split event chain
+#TODO: give British cores to northwestern Canada if USA decides to 54 40 or fight
+####################################################################################################
+v0.5.2a
+
+end date extended to 1956
+Decolonization now gives the country much more influence over the former colony
+The CSA begins with 15 years of the slavery debate so they don't ban slavery so soon
+Trade zones now start with uncivilized isolationism
+Added more events to bully China for treaty ports, even without a war
+adjusted AI chinese unciv helper event
+Reduced synthetic oil base production to 2.8
+Reduced synthetic rubber base production to 4.5
+Reduced synthetic sulphur base production to 5.1
+oil_pumping_machinery oil rgo production increased from 0.1 to 0.2
+tech_power_7 now increases coal, iron, oil, precious metals, sulphur production from 0.2 to 0.25, no longer increases factory throughput
+halved tech_infrastructure_7 rgo_output and factory_throughput boosts
+local_modern_transportation now boosts farm and mine rgo_eff by 0.25, also adjusts movement_cost by -0.05 (like 1 level in infrastructure)
+artificial_herbicides no longer boosts farm_rgo_eff
+large_oil_field rgo size inceased from 1 to 4
+landowner opium use increased to 1
+Artisan everyday opium use increased to 1.5, furniture reduced from 4 to 3
+local_pollution_problem now affects both farms and mines, modifier effect doubled
+Removed large_commerce_protection_navy triggered modifier
+Removed tax refund triggered modifier
+demographic transition global_population_growth changed from -0.0005 to -0.001 so the effect finally shows up on the modifier
+sulfa and improved antibiotics pop_growth increased from 0.0001 to 0.0002, reduced invention chance of improved antibiotics
+localization/EEM_countries.csv
+New tag: HAZ Hazarajat
+
 v0.5.2
 
 opium base production increased to 1, price reduced back to 3
@@ -669,7 +695,6 @@ increased AI research of naval science techs
 tax refund threshold adjusted to >$6 million and only active if not at war
 Split Dinka and Nuer back up
 
-####################################################################################################
 v0.5.1
 
 Fixed HPM Bug #198 where rivers.bmp was offset by one pixel

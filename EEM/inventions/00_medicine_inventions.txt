@@ -15,7 +15,7 @@ sulfa_antibiotics = {
         }
     }
     effect = {
-        pop_growth = 0.0001
+        pop_growth = 0.0002
     }
 }
 
@@ -54,16 +54,16 @@ improved_antibiotics = {
             invention = synthetic_opioids
         }
         modifier = {
-            factor = 4
+            factor = 3
             invention = sulfa_antibiotics
         }
         modifier = {
-            factor = 4
+            factor = 3
             invention = mass_produced_penicillin
         }
     }
     effect = {
-        pop_growth = 0.0001
+        pop_growth = 0.0002
         land_attrition = -0.05
         soldier_to_pop_loss = 0.01
     }

@@ -1,8 +1,8 @@
-color = { 92  148  152 }
+color = { 128 116 225 }
 graphical_culture = MiddleEasternGC
 
 party = {
-    name = "AFG_conservative"
+    name = "HAZ_conservative"
     start_date = 1836.1.1
     end_date = 2000.1.1
 
@@ -17,24 +17,9 @@ party = {
 }
 
 party = {
-    name = "AFG_liberal"
-    start_date = 1901.1.1
-    end_date = 2000.1.1
-
-    ideology = liberal
-
-    social_policy = no_position_set
-    economic_policy = interventionism
-    trade_policy = protectionism
-    religious_policy = pluralism
-    citizenship_policy = limited_citizenship
-    war_policy = pro_military
-}
-
-party = {
-    name = "AFG_liberal_2"
+    name = "HAZ_liberal"
     start_date = 1820.1.1
-    end_date = 1900.1.1
+    end_date = 2000.1.1
 
     ideology = liberal
 
@@ -47,7 +32,7 @@ party = {
 }
 
 party = {
-    name = "AFG_reactionary"
+    name = "HAZ_reactionary"
     start_date = 1820.1.1
     end_date = 2000.1.1
 
@@ -62,7 +47,7 @@ party = {
 }
 
 party = {
-    name = "AFG_anarcho_liberal"
+    name = "HAZ_anarcho_liberal"
     start_date = 1830.1.1
     end_date = 2000.1.1
 
@@ -77,7 +62,7 @@ party = {
 }
 
 party = {
-    name = "AFG_socialist"
+    name = "HAZ_socialist"
     start_date = 1848.1.1
     end_date = 2000.1.1
 
@@ -92,7 +77,7 @@ party = {
 }
 
 party = {
-    name = "AFG_communist"
+    name = "HAZ_communist"
     start_date = 1848.1.1
     end_date = 2000.1.1
 
@@ -107,7 +92,7 @@ party = {
 }
 
 party = {
-    name = "AFG_fascist"
+    name = "HAZ_fascist"
     start_date = 1900.1.1
     end_date = 2000.1.1
 
@@ -123,22 +108,16 @@ party = {
 
 unit_names = {
     dreadnought = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
     ironclad = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
     manowar = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
     cruiser = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
     frigate = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
     monitor = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
     clipper_transport = {
 
@@ -147,6 +126,5 @@ unit_names = {
 
     }
     commerce_raider = {
-        Afghanistan "Sher Ali Khan" "Yakub Khan" Abdurrahman Pashtun Faizabad Kabul Ghazni Herat Jalalabad Kandahar Maymeneh Mazar-i-Sharif
     }
 }

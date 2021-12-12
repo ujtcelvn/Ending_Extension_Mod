@@ -173,4 +173,3 @@ bassinger_tool = {
         rgo_goods_output = { oil = 0.5 }
     }
 }
-

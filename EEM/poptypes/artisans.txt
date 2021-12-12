@@ -25,12 +25,14 @@ everyday_needs = {
     coal = 1
     liquor = 5
     regular_clothes = 5
-    furniture = 4
+    furniture = 3 #4 * 4.9
     paper = 5
     glass = 1
     tobacco = 3
     tea = 5
     coffee = 2
+
+    opium = 1.5 #0
 }
 
 #Total cash needed: 429.2 - Vanilla value: 383.4

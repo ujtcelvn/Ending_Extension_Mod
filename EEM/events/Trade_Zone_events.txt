@@ -376,10 +376,10 @@ country_event = {
         create_alliance = TZ1
         TZ1 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000    # starts with 500,000
         }
@@ -495,10 +495,10 @@ country_event = {
         create_alliance = TZ2
         TZ2 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000
         }
@@ -616,10 +616,10 @@ country_event = {
         create_alliance = TZ4
         TZ4 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000
         }
@@ -735,10 +735,10 @@ country_event = {
         create_alliance = TZ5
         TZ5 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000
         }
@@ -854,10 +854,10 @@ country_event = {
         create_alliance = TZ6
         TZ6 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000
         }
@@ -974,10 +974,10 @@ country_event = {
         create_alliance = TZ7
         TZ7 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000
         }
@@ -1097,10 +1097,10 @@ country_event = {
         create_alliance = TZ8
         TZ8 = {
             add_country_modifier = {
-                name = "western_influences"
+                name = "uncivilized_isolationism"
                 duration = -1
             }
-            remove_province_modifier = uncivilized_isolationism
+            remove_province_modifier = western_influences
             ruling_party_ideology = conservative
             treasury = -400000
         }

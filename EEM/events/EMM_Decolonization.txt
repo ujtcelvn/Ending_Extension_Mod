@@ -701,7 +701,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = DAI
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -800,7 +800,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = DAI
-                    value = 100
+                    value = 200
                 }
             }
         }
@@ -985,7 +985,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = INO
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -1084,7 +1084,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = INO
-                    value = 100
+                    value = 200
                 }
             }
         }
@@ -1269,7 +1269,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = MLY
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -1368,7 +1368,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = MLY
-                    value = 100
+                    value = 200
                 }
             }
         }
@@ -1557,7 +1557,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = LXA
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -1660,7 +1660,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = LXA
-                    value = 100
+                    value = 200
                 }
             }
         }
@@ -1846,7 +1846,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = CAM
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -1945,7 +1945,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = CAM
-                    value = 100
+                    value = 200
                 }
             }
         }
@@ -2130,7 +2130,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = SIA
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -2229,7 +2229,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = SIA
-                    value = 100
+                    value = 200
                 }
             }
         }
@@ -2414,7 +2414,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = BUR
-                    value = 200
+                    value = 400
                 }
             }
         }
@@ -2513,7 +2513,7 @@ country_event = {
             owner = {
                 diplomatic_influence = {
                     who = BUR
-                    value = 100
+                    value = 200
                 }
             }
         }

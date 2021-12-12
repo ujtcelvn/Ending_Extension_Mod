@@ -328,17 +328,20 @@ country_event = {
 
 country_event = {
     id = 165110
-    title = "Chinese Woes"
+    title = "Unwesternized Woes"
     desc = "For some reason AI uncivs often gets stuck with tons of research points yet doesn't want to pass reforms."
     picture = "commodore_perry"
 	
     trigger = {
-        OR = { tag = RTR tag = TPG tag = QNG tag = CHI }
+        OR = {
+            AND = { year = 1900 OR = { tag = RTR tag = TPG tag = QNG tag = CHI  } }
+            AND = { year = 1880 OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+            #has_country_modifier = UN development aid or something like that
+        }
         ai = yes
         civilized = no
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = reactionary_demands }
-        year = 1900
     }
 
     mean_time_to_happen = {

@@ -275,7 +275,7 @@ synthetic_oil_factory = {
         coal = 12        #27.6    total input+maint = 37.425
     }
     output_goods = oil
-    value = 3.1            #37.2 - profit = -0.225 (previously produced 3.4)
+    value = 2.8            #33.6 - profit = -3.825 (HPM: 3.4)
     bonus = {
         trigger = { trade_goods_in_state = coal }
         value = 0.25
@@ -290,7 +290,7 @@ synthetic_rubber_factory = {
         fuel = 1        #25    total input+maint = 34.825
     }
     output_goods = rubber
-    value = 5            #35 - profit = 0.175
+    value = 4.5 #5            #31.5 - profit = -3.325
     bonus = {
         trigger = { has_building = fuel_refinery }
         value = 0.25
@@ -303,7 +303,7 @@ hydrodesulphurization_plant = {
         oil = 2        #24    total input+maint = 33.825
     }
     output_goods = sulphur
-    value = 5.5 #6            #33 - profit = -0.825
+    value = 5.1 #6            #30.6 - profit = -3.225
     bonus = {
         trigger = { trade_goods_in_state = oil }
         value = 0.25

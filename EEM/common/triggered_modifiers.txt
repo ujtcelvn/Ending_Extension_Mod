@@ -553,16 +553,16 @@ ryotwari = {
     # icon = 16
 # }
 
-small_refund = {
-    trigger = {
-        exists = yes
-        war = no
-        money = 6500000
-    }
-    min_social_spending = 0.5
-    pension_level = 2.0
-    icon = 16
-}
+#small_refund = {
+#    trigger = {
+#        exists = yes
+#        war = no
+#        money = 6500000
+#    }
+#    min_social_spending = 0.5
+#    pension_level = 2.0
+#    icon = 16
+#}
 
 #medium_refund = {
 #    trigger = {
@@ -590,28 +590,28 @@ literate_nation = {
 	trigger = {
 		literacy = 0.9
 	}
-	global_population_growth = -0.0005
+	global_population_growth = -0.001
     icon = 18
 }
 
 clerked_nation = {
 	trigger = {
-        clerks = 0.10
+        clerks = 0.04
 	}
-	global_population_growth = -0.0005
+	global_population_growth = -0.001
     icon = 18
 }
 
-large_commerce_protection_navy = {
-	trigger = {
-        invention = ironclads
-        total_amount_of_ships = 80
-        total_num_of_ports = 40
-        is_greater_power = yes
-        colonial_nation = yes
-        war = no
-	}
-    tariff_efficiency_modifier = 0.05
-    import_cost = -0.01
-    icon = 16
-}
+#large_commerce_protection_navy = {
+#	trigger = {
+#        invention = ironclads
+#        total_amount_of_ships = 80
+#        total_num_of_ports = 40
+#        is_greater_power = yes
+#        colonial_nation = yes
+#        war = no
+#	}
+#    tariff_efficiency_modifier = 0.05
+#    import_cost = -0.01
+#    icon = 16
+#}

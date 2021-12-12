@@ -4071,149 +4071,206 @@ country_event = {
 
 #RTR and TPG cores are removed by westernizing
 
-#country_event = {
-#    id = 166504
-#    title = "Juye Incident"
-#    desc = "German missionaries Richard Henle and Franz Xaver Nies have been murdered in Shandong by a mob of angry peasants. The German government is demanding compensation."
-#    fire_only_once = yes
-#    picture = "juye_incident"
-#
-#    trigger = {
-#        OR = {
-#            tag = RTR
-#            tag = QNG
-#        }
-#        owns = 1563 #Jinan, Shandong
-#        civilized = no
-#        NOT = {
-#            any_greater_power = { war_with = GER }
-#            has_country_flag = juye_incident
-#            war_with = GER
-#            truce_with = GER
-#        }
-#        GER = { is_greater_power = yes }
-#        GER = { invention = protected_cruisers } #1880
-#        1563 = { average_consciousness = 4 }
-#    }
-#
-#    mean_time_to_happen = {
-#        months = 120
-#        modifier = {
-#            factor = 0.5
-#            1563 = { average_militancy = 4 }
-#        }
-#        modifier = {
-#            factor = 0.5
-#            1563 = { average_militancy = 6 }
-#        }
-#        modifier = {
-#            factor = 0.5
-#            1563 = { average_militancy = 8 }
-#        }
-#    }
-# 
-#    option = {
-#        name = "No way!"
-#        set_country_flag = juye_incident
-#        GER = {
-#            relation = { who = THIS value = -200 }
-#            leave_alliance = THIS
-#            country_event = 166505
-#        }
-#        any_owned = {
-#            limit = { port = yes }
-#            remove_province_modifier = foreign_smugglers
-#        }
-#        ai_chance = {
-#            factor = 20
-#        }
-#    }
-# 
-#    option = {
-#        name = "Give them what they want."
-#        prestige = -10
-#        set_country_flag = juye_incident
-#        remove_country_modifier = trade_restrictions
-#        random_owned = {
-#            limit = {
-#                OR = {
-#                    province_id = 1498 #Macao
-#                    province_id = 1538 #Shanghai
-#                    province_id = 1496 #Hong Kong
-#                    province_id = 1566 #Qingdao
-#                    province_id = 1569 #Weihaiwei
-#                    province_id = 1606 #Jiaxing
-#                    province_id = 2681 #Taibei
-#                    province_id = 2562 #Tainan
-#                    province_id = 1499 #Hainan
-#                    province_id = 2632 #Kwangchowan
-#                }
-#            }
-#            secede_province = GER
-#        }
-#        random_owned = {
-#            limit = {
-#                port = yes
-#                NOT = { has_province_modifier = foreign_smugglers }
-#            }
-#            add_province_modifier = {
-#                name = foreign_smugglers
-#                duration = 3650
-#            }
-#            state_scope = {
-#                any_owned = {
-#                    add_province_modifier = {
-#                        name = local_opium_habit
-#                        duration = 3650
-#                    }
-#                }
-#            }
-#        }
-#        GER = { relation = { who = THIS value = 100 } }
-#        any_pop = {
-#            limit = { is_primary_culture = no }
-#            militancy = 1
-#        }
-#        ai_chance = {
-#            factor = 80
-#        }
-#    }
-#}
-# 
-#country_event = {
-#    id = 166505
-#    title = "China Refuses to Give Compensation!"
-#    desc = "China refuses to compensate us for the murder of our missionaries, Richard Henle and Franz Xaver Nies!"
-#    picture = "juye_incident"
-# 
-#    is_triggered_only = yes
-# 
-#    option = {
-#        name = "They will pay for this!"
-#        war = {
-#            target = FROM
-#            attacker_goal = { casus_belli = treaty_port_casus_belli }
-#            defender_goal = { casus_belli = status_quo }
-#            call_ally = yes
-#        }
-#        #set_global_flag = german_opium_war
-#        ai_chance = { factor = 95 }
-#    }
-# 
-#    option = {
-#        name = "Oh well."
-#        prestige_factor = -0.25
-# 
-#        relation = { who = FROM value = -50 }
-#        ai_chance = {
-#            factor = 5
-#            modifier = {
-#                factor = 2
-#                any_greater_power = { war_with = THIS }
-#            }
-#        }
-#    }
-#}
+country_event = {
+    id = 166504
+    title = "Foreigner Lynched"
+    desc = "Shortly before midnight, a mob broke into the Westerner's compound and stabbed the man to death. His home government is now demanding a treaty port as an apology!"
+    picture = "juye_incident"
+
+    trigger = {
+        civilized = no
+        OR = {
+            owns = 1498 #Macao
+            owns = 1538 #Shanghai
+            owns = 1496 #Hong Kong
+            owns = 1566    #Qingdao
+            owns = 1481 #Lushun - Port Arthur
+            owns = 1569 #Weihaiwei
+            owns = 1606 #Jiaxing
+            owns = 2562 #Tainan
+            owns = 1499 #Hainan
+            owns = 2632 #Kwangchowan
+            owns = 1608 #Ningbo
+        }
+        num_of_cities = 2
+        any_greater_power = {
+            rank = 5
+            NOT = { truce_with = THIS }
+            NOT = { casus_belli = THIS }
+            NOT = { badboy = 0.8 }
+            num_of_ports = 1
+            ai = yes
+            capital_scope = { continent = europe }
+            NOT = { tag = TUR }
+            invention = protected_cruisers #1880
+            invention = the_dark_continent #1890
+            any_owned_province = { OR = { continent = asia continent = oceania continent = australia_new_zealand continent = polynesia } }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 240
+        modifier = {
+            factor = 2
+            has_global_flag = foreigner_lynched_china
+        }
+    }
+
+    option = {
+        name = "How is a port compensation for a murder?"
+        set_global_flag = foreigner_lynched_china
+        random_country = {
+            limit = {
+                rank = 5
+                NOT = { truce_with = THIS }
+                NOT = { casus_belli = THIS }
+                NOT = { badboy = 0.8 }
+                num_of_ports = 1
+                ai = yes
+                capital_scope = { continent = europe }
+                NOT = { tag = TUR }
+                invention = protected_cruisers #1880
+                invention = the_dark_continent #1890
+                any_owned_province = { OR = { continent = asia continent = oceania continent = australia_new_zealand continent = polynesia } }
+            }
+            country_event = 166506
+            relation = { who = THIS value = -400 }
+        }
+
+        ai_chance = {
+            factor = 20
+        }
+
+    }
+
+
+    option = {
+        name = "We will give them a treaty port, if it will avoid war"
+        set_global_flag = foreigner_lynched_china
+        prestige = -10
+        remove_country_modifier = trade_restrictions
+        remove_country_modifier = tore_up_unequal_treaties
+
+        random_owned = {
+            limit = {
+                port = yes
+                NOT = { has_province_modifier = foreign_smugglers }
+            }
+            add_province_modifier = {
+                name = foreign_smugglers
+                duration = 3650
+            }
+            state_scope = {
+                any_owned = {
+                    add_province_modifier = {
+                        name = local_opium_habit
+                        duration = 3650
+                    }
+                }
+            }
+        }
+
+        random_country = {
+            limit = {
+                rank = 5
+                NOT = { truce_with = THIS }
+                NOT = { casus_belli = THIS }
+                NOT = { badboy = 0.8 }
+                num_of_ports = 1
+                ai = yes
+                capital_scope = { continent = europe }
+                NOT = { tag = TUR }
+                invention = protected_cruisers #1880
+                invention = the_dark_continent #1890
+                any_owned_province = { OR = { continent = asia continent = oceania continent = australia_new_zealand continent = polynesia } }
+            }
+            country_event = 166505
+            relation = { who = THIS value = -400 }
+        }
+
+        any_pop = {
+            limit = { is_primary_culture = no }
+            militancy = 3
+        }
+
+        ai_chance = {
+            factor = 80
+        }
+    }
+}
+
+
+
+
+
+country_event = {
+    id = 166505
+    title = "$FROMCOUNTRY$ Gives Treaty Port"
+    desc = "$FROMCOUNTRY$ has agreed to give compensation for the gruesome butchering of a $COUNTRY_ADJ$ citizen by a $FROMCOUNTRY_ADJ$ mob."
+    picture = "juye_incident"
+ 
+    is_triggered_only = yes
+ 
+    option = {
+        name = "Excellent"
+        FROM = {
+            random_owned = {
+                limit = {
+                    OR = {
+                        province_id = 1498 #Macao
+                        province_id = 1538 #Shanghai
+                        province_id = 1496 #Hong Kong
+                        province_id = 1566 #Qingdao
+                        province_id = 1569 #Weihaiwei
+                        province_id = 1606 #Jiaxing
+                        province_id = 2681 #Taibei
+                        province_id = 2562 #Tainan
+                        province_id = 1499 #Hainan
+                        province_id = 2632 #Kwangchowan
+                    }
+                }
+                secede_province = THIS
+            }
+        }
+    }
+ 
+}
+
+
+country_event = {
+    id = 166506
+    title = "$FROMCOUNTRY$ Refuses to Give Treaty Port"
+    desc = "$FROMCOUNTRY$ refuses to give compensation for the gruesome butchering of a $COUNTRY_ADJ$ citizen by a $FROMCOUNTRY_ADJ$ mob."
+    picture = "juye_incident"
+ 
+    is_triggered_only = yes
+ 
+    option = {
+        name = "They will pay for this!"
+        war = {
+            target = FROM
+            attacker_goal = { casus_belli = treaty_port_casus_belli }
+            defender_goal = { casus_belli = status_quo }
+            call_ally = yes
+        }
+        ai_chance = { factor = 90 }
+    }
+ 
+    option = {
+        name = "We have other worries."
+        prestige_factor = -0.1
+ 
+        relation = { who = FROM value = -50 }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+        }
+    }
+}
+
 
 #166600 Xinhai
 
