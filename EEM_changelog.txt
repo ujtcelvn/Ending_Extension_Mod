@@ -592,6 +592,7 @@ artificial_herbicides no longer boosts farm_rgo_eff
 large_oil_field rgo size inceased from 1 to 4
 landowner opium use increased to 1
 Artisan everyday opium use increased to 1.5, furniture reduced from 4 to 3
+bureaucrats now use 0.1 luxury opium
 local_pollution_problem now affects both farms and mines, modifier effect doubled
 Removed large_commerce_protection_navy triggered modifier
 Removed tax refund triggered modifier
