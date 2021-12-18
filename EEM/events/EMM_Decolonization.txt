@@ -179,7 +179,7 @@ country_event = {
                 }
             }
             modifier = {
-                factor = 0.25
+                factor = 0
                 government = absolute_monarchy
             }
             modifier = {
@@ -187,11 +187,11 @@ country_event = {
                 government = democracy
             }
             modifier = {
-                factor = 0.5
+                factor = 0
                 war_policy = jingoism
             }
             modifier = {
-                factor = 0.75
+                factor = 0
                 war_policy = pro_military
             }
             modifier = {
@@ -502,7 +502,7 @@ country_event = {
                 }
             }
             modifier = {
-                factor = 0.25
+                factor = 0
                 government = absolute_monarchy
             }
             modifier = {
@@ -510,11 +510,11 @@ country_event = {
                 government = democracy
             }
             modifier = {
-                factor = 0.5
+                factor = 0
                 war_policy = jingoism
             }
             modifier = {
-                factor = 0.75
+                factor = 0
                 war_policy = pro_military
             }
             modifier = {

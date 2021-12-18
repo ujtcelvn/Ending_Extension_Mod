@@ -1,3 +1,4 @@
-name = "Ending Extension Mod 0.5.2"
+name = "Ending Extension Mod 0.5.3"
 path = "mod/EEM"
-dependencies = { "Historical Project Mod 0.4.6" }
+user_dir = "EEM"
+replace_path = "history/provinces"

@@ -568,11 +568,21 @@ world_trade_decisions
 
 
 ####################################################################################################
+
+#TODO: healthcare reform
+#TODO: Is there a mod that allows uncivs to civilize if they have high enough literacy regardless of continent? I hate that af*ica can use the colonial legacy decision but say Bali with 70% literacy or North Yemen with 80% literacy cannot.
 #TODO: make trade zones flip to protestant if TPG and vice versa
 #TODO: make Japan return Haesong and Inchon to Korea if Japan loses the coup war
 #TODO: fix Japan-Russia sakhalin split event chain
 #TODO: give British cores to northwestern Canada if USA decides to 54 40 or fight
+
 ####################################################################################################
+v0.5.3
+
+Reduced AI decolonization chance
+EEM is now standalone, do NOT click on HPM when running it
+Square Shaded Flag Frame mod is now built in to EEM, so do not click on it separately
+
 v0.5.2a
 
 end date extended to 1956
@@ -598,7 +608,6 @@ Removed large_commerce_protection_navy triggered modifier
 Removed tax refund triggered modifier
 demographic transition global_population_growth changed from -0.0005 to -0.001 so the effect finally shows up on the modifier
 sulfa and improved antibiotics pop_growth increased from 0.0001 to 0.0002, reduced invention chance of improved antibiotics
-localization/EEM_countries.csv
 New tag: HAZ Hazarajat
 
 v0.5.2
