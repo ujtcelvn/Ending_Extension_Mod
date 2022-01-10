@@ -915,8 +915,8 @@ province_event = {
         NOT = { has_province_modifier = local_drug_habit }
     }
 
-    title = "Opium Addiction in $STATENAME$"
-    desc = "Opium has long been used both recreationally and therapeutically. However, $STATENAME$ residents are developing a dependence on this analgesic, causing overdoses and withdrawal cases to climb precipitously."
+    title = "Drug Addiction in $PROVINCENAME$"
+    desc = "Many in $PROVINCENAME$ have begun to develop a dependence on the locally produced analgesic opium, causing overdose and withdrawal rates to climb precipitously."
 
     mean_time_to_happen = {
         months = 600
@@ -929,24 +929,24 @@ province_event = {
             is_overseas = yes
         }
         modifier = {
-            factor = 1.25
+            factor = 2
             owner = { has_country_modifier = opium_ban }
         }
         modifier = {
             factor = 2
             has_province_modifier = local_opium_ban
         }
+        modifier = {
+            factor = 0.8
+            invention = synthetic_opioids
+        }
     }
 
     option = {
         name = "Let them have their fun."
-        state_scope = {
-            any_owned = {
-                add_province_modifier = {
-                    name = local_drug_habit
-                    duration = 3650
-                }
-            }
+        add_province_modifier = {
+            name = local_drug_habit
+            duration = 3650
         }
         ai_chance = {
             factor = 50
@@ -961,8 +961,83 @@ province_event = {
         name = "Crack down on the addicts!"
         
         any_pop = {
-            militancy = 4
-            reduce_pop = 0.995
+            militancy = 2
+            reduce_pop = 0.999
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                religious_policy = moralism
+            }
+        }
+    }
+}
+
+
+#Opium addiction spreads
+province_event = {
+    id = 166823
+    title = "Drug Addiction Spreads to $PROVINCENAME$"
+    desc = "Although opium has been safely used as medicine for centuries, urbanization and global trade has begun to bring more and more refined, potent, and dangerous forms of this drug to our cities, creating a new underclass of addicts."
+
+    trigger = {
+        owner = { civilized = yes }
+        total_pops = 400000 #London 1836
+        OR = {
+            any_neighbor_province = { has_province_modifier = local_opium_habit }
+            any_neighbor_province = { has_province_modifier = local_drug_habit }
+            AND = { port = yes any_owned_province = { trade_goods = opium } }
+            AND = { is_capital = yes any_owned_province = { trade_goods = opium } }
+        }
+        NOT = { has_province_modifier = local_drug_habit }
+    }
+
+    mean_time_to_happen = {
+        months = 600
+        modifier = {
+            factor = 0.8
+            port = yes
+        }
+        modifier = {
+            factor = 0.8
+            is_colonial = yes
+        }
+        modifier = {
+            factor = 0.8
+            is_overseas = yes
+        }
+        modifier = {
+            factor = 2
+            owner = { has_country_modifier = opium_ban }
+        }
+        modifier = {
+            factor = 0.8
+            invention = synthetic_opioids
+        }
+    }
+
+    option = {
+        name = "Let them have their fun."
+        add_province_modifier = {
+            name = local_drug_habit
+            duration = 3650
+        }
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.5
+                religious_policy = pro_atheism
+            }
+        }
+    }
+
+    option = {
+        name = "Crack down on the addicts!"
+        
+        any_pop = {
+            militancy = 2
+            reduce_pop = 0.999
         }
         ai_chance = {
             factor = 50

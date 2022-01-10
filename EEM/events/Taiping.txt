@@ -1431,7 +1431,6 @@ province_event = {
             region = CHI_1510
             region = CHI_1563
             region = CHI_1565
-            region = CHI_1505 #Miao Rebellion
         }
         is_core = CHI
         is_primary_culture = no
@@ -1441,6 +1440,10 @@ province_event = {
 
     mean_time_to_happen = {
         months = 50
+        modifier = {
+            factor = 4
+            region = CHI_1505 #Miao Rebellion
+        }
         modifier = {
             factor = 0.5
             owner = {

@@ -4,3 +4,4 @@ add_core = CHI
 trade_goods = fruit
 life_rating = 32
 terrain = farmlands
+fort = 1
