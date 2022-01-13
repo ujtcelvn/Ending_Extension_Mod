@@ -555,7 +555,7 @@ province_event = {
 country_event = {
     id = 164599
     title = "EVTNAME164599"
-    desc = "Rebels backed by the Tongmenghui have taken control in the South and have declared a Republic of China, a direct challenge to our rule."
+    desc = "Rebels backed by the Tongmenghui have taken control in the South and have declared a Republic of China, a direct challenge to our rule. Many local garrisons are defecting to these rebels, a conserning development."
     #news = yes
     #news_desc_long = "EVTDESC164599"
     #news_desc_medium = "EVTDESC164599_NEWS_MEDIUM"
@@ -675,6 +675,7 @@ country_event = {
         KMT = {
             civilized = yes
         }
+
         any_owned = {
             limit = {
                 OR = {
@@ -693,6 +694,7 @@ country_event = {
             add_core = KMT
             secede_province = KMT
         }
+
         #release_vassal = KMT
         create_vassal = KMT
         KMT = {

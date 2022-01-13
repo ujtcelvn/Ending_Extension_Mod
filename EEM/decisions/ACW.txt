@@ -422,12 +422,14 @@ political_decisions = {
             2148 = { add_core = USA }
             105 = { add_core = USA }
             104 = { add_core = USA }
+            3324 = { add_core = USA }
             103 = { add_core = USA }
             101 = { add_core = USA }
             100 = { add_core = USA life_rating = 5 } #Phoenix
             89 = { life_rating = 5 } #Los Angeles
             90 = { life_rating = 2 } #San Diego
             104 = { life_rating = 5 } #San Francisco
+            3324 = { life_rating = 4 } #Santa Clara
             84 = { life_rating = 4 } #Sacramento
             87 = { life_rating = 3 } #Monterey
             106 = { life_rating = 3 } #Denver

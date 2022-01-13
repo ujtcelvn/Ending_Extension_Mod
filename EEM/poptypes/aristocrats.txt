@@ -4,12 +4,12 @@ strata = rich
 state_capital_only = yes
 
 rebel = {
-    cavalry = 0.1
+    cavalry = 0      #0.1
     artillery = 0
     cuirassier = 0.1
-    dragoon = 0.1
+    dragoon = 0.15   #0.1
     guard = 0.6
-    hussar = 0.1
+    hussar = 0.15    #0.1
     infantry = 0
     irregular = 0
 }

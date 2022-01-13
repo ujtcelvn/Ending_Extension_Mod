@@ -25,7 +25,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 12
+		months = 24
 
 		modifier = {
 			factor = 0.5
@@ -122,37 +122,37 @@ province_event = {
 
 
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { north_america } } } }
 			continent = north_america
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { south_america } } } }
 			continent = south_america
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { europe } } } }
 			continent = europe
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { africa } } } }
 			continent = africa
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { asia } } } }
 			continent = asia
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { oceania } } } }
 			continent = oceania
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { australia_new_zealand } } } }
 			continent = australia_new_zealand
 		}
@@ -162,11 +162,6 @@ province_event = {
 			has_building = fort
 		}
 		
-		modifier = {
-			factor = 2
-			country_units_in_province = THIS
-		}
-
 	}
 
 	option = {
@@ -236,7 +231,7 @@ province_event = {
             war_countries = { invention = saturation_bombing_doctrine }
             war_countries = { invention = operations_research }
             war_countries = { invention = gun_and_bomb_sights }
-            war_countries = { brigades_compare = 1 } #enemy has larger army
+            war_countries = { brigades_compare = 2 } #enemy has larger army
 		}
 
 		OR = { 
@@ -253,7 +248,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 12
+		months = 24
 
 		modifier = {
 			factor = 0.5
@@ -297,12 +292,8 @@ province_event = {
 
 
 		modifier = {
-			factor = 0.8
-			owner = { war_countries = { brigades_compare = 2 } } #any enemy has larger army
-		}
-		modifier = {
 			factor = 0.5
-			owner = { war_countries = { brigades_compare = 3 } } #any enemy has larger army
+			owner = { war_countries = { brigades_compare = 4 } } #any enemy has larger army
 		}
 
 
@@ -317,37 +308,37 @@ province_event = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { north_america } } } }
 			continent = north_america
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { south_america } } } }
 			continent = south_america
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { europe } } } }
 			continent = europe
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { africa } } } }
 			continent = africa
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { asia } } } }
 			continent = asia
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { oceania } } } }
 			continent = oceania
 		}
 		modifier = {
-			factor = 2
+			factor = 4
 			owner = { NOT = { war_countries = { capital_scope = { australia_new_zealand } } } }
 			continent = australia_new_zealand
 		}
@@ -358,11 +349,6 @@ province_event = {
 			has_building = fort
 		}
 		
-		modifier = {
-			factor = 2
-			country_units_in_province = THIS
-		}
-
 	}
 
 	option = {

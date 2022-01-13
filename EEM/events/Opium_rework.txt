@@ -937,8 +937,12 @@ province_event = {
             has_province_modifier = local_opium_ban
         }
         modifier = {
+            factor = 1.25
+            owner = { has_country_modifier = temperance_league }
+        }
+        modifier = {
             factor = 0.8
-            invention = synthetic_opioids
+            owner = { invention = synthetic_opioids }
         }
     }
 
@@ -984,11 +988,10 @@ province_event = {
     trigger = {
         owner = { civilized = yes }
         total_pops = 400000 #London 1836
+        any_owned_province = { trade_goods = opium }
         OR = {
-            any_neighbor_province = { has_province_modifier = local_opium_habit }
             any_neighbor_province = { has_province_modifier = local_drug_habit }
-            AND = { port = yes any_owned_province = { trade_goods = opium } }
-            AND = { is_capital = yes any_owned_province = { trade_goods = opium } }
+            port = yes
         }
         NOT = { has_province_modifier = local_drug_habit }
     }
@@ -1012,8 +1015,12 @@ province_event = {
             owner = { has_country_modifier = opium_ban }
         }
         modifier = {
+            factor = 1.25
+            owner = { has_country_modifier = temperance_league }
+        }
+        modifier = {
             factor = 0.8
-            invention = synthetic_opioids
+            owner = { invention = synthetic_opioids }
         }
     }
 

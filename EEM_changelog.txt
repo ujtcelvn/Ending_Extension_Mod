@@ -45,6 +45,26 @@ industry = 30 + 3
 
 
 ####################################################################################################
+v0.5.3b
+
+clipper transports now buildable without ports.
+remove unciv conscript fishermen event
+AI adjustments
+	increase AI fleet size, reduce max number of fleets
+	increase AI naval tech weights
+	AI prioritizes intellectuals and soldiers more
+	MONTHS_BEFORE_DISBAND increased from 6 to 9 so AI doesn't disband their entire navy during the early game gun shortage
+TRADE_CAP_LOW_LIMIT for land and constructions increased to 10% to match the naval limit
+fixed missing comma after FACTORY_PURCHASE_DRAWDOWN_FACTOR
+the geneva convention now reduces max military spending by 0.05 and increases war exhaustion decay by 0.02 instead of whatever it was before
+artisan everyday clothing use decreased from 5 to 3 (to match clerks and craftsmen), opium use increased from 1.5 to 2.5 (so overall, artisans need less $)
+upper class pops are now more likely to rebel as better units
+Manifest destiny now properly increases Santa Clara life rating, made sure Santa Clara is included in Mexican-American war events
+Slowed down strategic bombing, especially between continents
+made drug spread event less CPU intensive 
+made sure AI China changes national value
+Guominjun more likely to align with the KMT and not with the Beiyang
+
 v0.5.3a
 
 adjust foreigner killed in China event conditions
