@@ -524,6 +524,13 @@ political_decisions = {
             }
             clr_global_flag = spread_warlord_influence
             set_global_flag = warlord_era_has_begun #take the reunification_of_china decision to remove warlord cores
+
+            any_pop = {
+                limit = { type = officers }
+                militancy = 9
+                consciousness = 9
+                random_list = { 50 = { reduce_pop = 0.9 } 50 = { reduce_pop = 0.95 } }
+            }
         }
 
         ai_will_do = { factor = 1 }
@@ -593,6 +600,10 @@ political_decisions = {
         effect = {
             prestige = 25
             all_core = { add_core = QNG }
+            1616 = { state_scope = { add_core = QNG } }
+            1612 = { state_scope = { add_core = QNG } } #Baoding
+
+
             change_tag = QNG
             any_owned_province = {
                 limit = {
@@ -603,6 +614,27 @@ political_decisions = {
                     duration = 1825
                 }
             }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
+    move_capital_to_beijing_qing = {
+        picture = qing_emperor
+        alert = yes
+        potential = {
+            tag = QNG
+            NOT = { capital = 1616 }
+        }
+
+        allow = {
+            war = no
+            owns = 1616
+        }
+
+        effect = {
+            prestige = 10
+            capital = 1616
         }
 
         ai_will_do = { factor = 1 }
@@ -652,6 +684,8 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+#Increased militancy for Yuan Shikai making himself emperor (Second Revolution)
+#Warlord Era starts much faster when China is not a presidental dicatorship (Warlord Era starts with the National Protection War)
     empire_of_china = {
         picture = yuan_shikai_emperor
         alert = yes
@@ -662,8 +696,9 @@ political_decisions = {
         }
 
         allow = {
+            NOT = { has_country_modifier = law_changed_by_force }
             owns = 1616
-            nationalism_n_imperialism = 1
+            revolution_n_counterrevolution = 1
             war = no
             KMT = { exists = no }
             TPG = { exists = no }
@@ -676,20 +711,34 @@ political_decisions = {
             set_global_flag = yuan_shikai_declared_emperor
             government = absolute_monarchy
 
-            any_owned_province = {
+            any_owned = {
+                limit = { is_core = CHI }
                 add_province_modifier = {
                     name = liberal_agitation
                     duration = 1825
                 }
             }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = liberal
-                    factor = 9
+
+            middle_strata = {
+                limit = { is_culture_group = east_asian }
+                consciousness = 4
+                ideology = {
+                    value = liberal
+                    factor = 0.1
                 }
             }
 
-
+            any_pop = {
+                limit = { is_culture_group = east_asian }
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = 4
+                }
+            }
+            add_country_modifier = {
+                name = law_changed_by_force
+                duration = 365
+            }
             any_country = {
                 limit = {
                     OR = {
@@ -710,8 +759,6 @@ political_decisions = {
                 }
                 relation = { who = THIS value = -400 }
             }
-
-
         }
 
         ai_will_do = { factor = 1 }

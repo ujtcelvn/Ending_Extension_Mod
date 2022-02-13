@@ -335,7 +335,7 @@ country_event = {
     trigger = {
         OR = {
             AND = { year = 1900 OR = { tag = RTR tag = TPG tag = QNG tag = CHI  } }
-            AND = { year = 1880 OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } }
+            #AND = { year = 1880 OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } } #Trade Zones don't need this
             #has_country_modifier = UN development aid or something like that
         }
         ai = yes

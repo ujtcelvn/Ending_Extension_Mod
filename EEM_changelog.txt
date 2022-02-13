@@ -45,6 +45,22 @@ industry = 30 + 3
 
 
 ####################################################################################################
+v0.5.3c
+
+Fixed HPM's AI personality modifiers being backwards (coward_ai speeds up cb generation in HPM, and vice versa)
+Made drug addiction event not so performance impacting
+slightly increase aristocrat everyday opium want
+Expelling foreigners in EVTOPTC13080 reduces militancy by 1 instead of increasing it by 2
+made conditions for AI westernization reforms less restrictive
+Lots of tweaks to westernized China events and decisions
+Beating the Taiping / Red Turban rebellion gives 1 years of research
+The Punti-Hakka clan now wars fire at the right time
+The size of the Xinhai Rebellion is now much more dynamic
+New Army coup
+KMT crushed events stop the province rebellion event spam
+Prevent the Warlord Era decision now makes officers mad and kills some of them (because you purged them)
+Qing can return their capital to Beijing if they ever flee from there
+
 v0.5.3b
 
 clipper transports now buildable without ports.

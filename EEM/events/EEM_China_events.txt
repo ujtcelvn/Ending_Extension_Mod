@@ -1038,6 +1038,7 @@ country_event = {
             }
         }
         RTR = { all_core = { remove_core = RTR } }
+        years_of_research = 1
     }
 }
 
@@ -2604,13 +2605,12 @@ country_event = {
 country_event = {
     id = 166225
     title = "Punti-Hakka Clan Wars"
-    desc = "The Cantonese and the Hakka are feuding after the Cantonese accused the Hakka of being Qing collaborators during our campaign against the southern rebels!"
+    desc = "The Cantonese and the Hakka are feuding once again, this time due to accusations of collaboration and treason after the southern rebellions."
     picture = "punti_hakka"
     fire_only_once = yes
 
     trigger = {
         owns = 1493 #Canton
-        tag = QNG
         has_global_flag = taiping_has_been_defeated
         has_global_flag = ming_has_been_defeated
         NOT = { has_global_flag = punti_hakka_war_happened }
@@ -2619,7 +2619,7 @@ country_event = {
     mean_time_to_happen = { months = 12 }
 
     option = {
-        name = "At least we're not directly involved."
+        name = "The fools bicker."
         set_global_flag = punti_hakka_war_happened
         CHI_1493 = {
             limit = { owned_by = QNG }

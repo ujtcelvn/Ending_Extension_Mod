@@ -296,25 +296,25 @@ country_event = {
     }
 }
 
-country_event = {
-    id = 166707
-    title = "Become China"
-    desc = "Our strategic position in the Northern China and independence has given us the opportunity to become the one true China."
-    picture = "Celebration"
-
-    trigger = {
-        OR = { tag = TZ1 tag = TZ2 }
-        is_vassal = no
-        is_substate = no
-        civilized = yes
-        NOT = { exists = CHI }
-    }
-
-    option = {
-        name = "Excellent"
-        change_tag = CHI
-    }
-}
+#country_event = {
+#    id = 166707
+#    title = "Become China"
+#    desc = "Our strategic position in the Northern China and independence has given us the opportunity to become the one true China."
+#    picture = "Celebration"
+#
+#    trigger = {
+#        OR = { tag = TZ1 tag = TZ2 }
+#        is_vassal = no
+#        is_substate = no
+#        civilized = yes
+#        NOT = { exists = CHI }
+#    }
+#
+#    option = {
+#        name = "Excellent"
+#        change_tag = CHI
+#    }
+#}
 
 country_event = {
     id = 166708
@@ -323,7 +323,7 @@ country_event = {
     picture = "Celebration"
 
     trigger = {
-        OR = { tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 }
+        OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 }
         is_vassal = no
         is_substate = no
         civilized = yes

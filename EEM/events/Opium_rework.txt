@@ -952,6 +952,14 @@ province_event = {
             name = local_drug_habit
             duration = 3650
         }
+        any_neighbor_province = {
+            limit = { owned_by = THIS }
+            add_province_modifier = {
+                name = local_drug_habit
+                duration = 1825
+            }
+        }
+        NWO = { change_variable = { which = addicts_local value = 1 } }
         ai_chance = {
             factor = 50
             modifier = {
@@ -968,6 +976,13 @@ province_event = {
             militancy = 2
             reduce_pop = 0.999
         }
+        any_neighbor_province = {
+            limit = { owned_by = THIS }
+            any_pop = {
+                militancy = 1
+            }
+        }
+        NWO = { change_variable = { which = addict_crack_down value = 1 } }
         ai_chance = {
             factor = 50
             modifier = {
@@ -983,33 +998,19 @@ province_event = {
 province_event = {
     id = 166823
     title = "Drug Addiction Spreads to $PROVINCENAME$"
-    desc = "Although opium has been safely used as medicine for centuries, urbanization and global trade has begun to bring more and more refined, potent, and dangerous forms of this drug to our cities, creating a new underclass of addicts."
+    desc = "Although opium has been safely used as medicine for centuries, urbanization and global trade has begun to bring more and more refined, potent, and dangerous forms of this drug, creating a new underclass of addicts."
 
     trigger = {
-        owner = { civilized = yes }
-        total_pops = 400000 #London 1836
-        any_owned_province = { trade_goods = opium }
-        OR = {
-            any_neighbor_province = { has_province_modifier = local_drug_habit }
-            port = yes
-        }
+        is_capital = yes
         NOT = { has_province_modifier = local_drug_habit }
+        owner = {
+            civilized = yes
+            produces = opium
+        }
     }
 
     mean_time_to_happen = {
         months = 600
-        modifier = {
-            factor = 0.8
-            port = yes
-        }
-        modifier = {
-            factor = 0.8
-            is_colonial = yes
-        }
-        modifier = {
-            factor = 0.8
-            is_overseas = yes
-        }
         modifier = {
             factor = 2
             owner = { has_country_modifier = opium_ban }
@@ -1026,10 +1027,19 @@ province_event = {
 
     option = {
         name = "Let them have their fun."
+
         add_province_modifier = {
             name = local_drug_habit
             duration = 3650
         }
+        any_neighbor_province = {
+            limit = { owned_by = THIS }
+            add_province_modifier = {
+                name = local_drug_habit
+                duration = 1825
+            }
+        }
+        NWO = { change_variable = { which = addicts_capital value = 1 } }
         ai_chance = {
             factor = 50
             modifier = {
@@ -1041,11 +1051,19 @@ province_event = {
 
     option = {
         name = "Crack down on the addicts!"
-        
         any_pop = {
             militancy = 2
             reduce_pop = 0.999
         }
+        any_neighbor_province = {
+            limit = { owned_by = THIS }
+            any_pop = {
+                militancy = 1
+            }
+        }
+        NWO = { change_variable = { which = addict_crack_down_capital value = 1 } }
+
+
         ai_chance = {
             factor = 50
             modifier = {

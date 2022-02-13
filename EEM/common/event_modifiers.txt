@@ -6,17 +6,17 @@
 
 coward_ai = {
     badboy = -0.01
-    cb_generation_speed_modifier = 0.25
+    cb_generation_speed_modifier = -0.25 #0.25
     icon = 3
 }
 
 benefactor_ai = {
-    cb_generation_speed_modifier = 0.1
+    #cb_generation_speed_modifier = 0.1
     icon = 3
 }
 
 malevolent_ai = {
-    cb_generation_speed_modifier = -0.05
+    cb_generation_speed_modifier = 0.25 #-0.05
     icon = 3
 }
 

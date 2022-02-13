@@ -38,6 +38,8 @@ everyday_needs = {
     automobiles = 1
     steel = 0.5
     cement = 0.5
+
+    opium = 0.1 #0
 }
 
 #Total cash needed: 2618 - Vanilla value: 2121

@@ -562,6 +562,7 @@ country_event = {
             }
         }
         TPG = { all_core = { remove_core = TPG } }
+        years_of_research = 1
     }
 }
 

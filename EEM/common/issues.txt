@@ -1554,10 +1554,10 @@ military_reforms = {
                 money = 2000
                 OR = {
                     ai = no
-                    AND = {
+                    #AND = {
                         has_country_flag = using_foreign_weapons
                         has_country_flag = using_foreign_artillery
-                    }
+                    #}
                 }
             }
 
@@ -1606,8 +1606,8 @@ military_reforms = {
                 OR = {
                     ai = no
                     AND = {
-                        has_country_flag = using_foreign_ships
-                        has_country_flag = using_foreign_shipyards
+                        #has_country_flag = using_foreign_ships
+                        #has_country_flag = using_foreign_shipyards
                         has_country_flag = using_foreign_weapons
                         has_country_flag = using_foreign_artillery
                     }
@@ -1648,8 +1648,8 @@ military_reforms = {
                 OR = {
                     ai = no
                     AND = {
-                        has_country_flag = using_foreign_ships
-                        has_country_flag = using_foreign_shipyards
+                        #has_country_flag = using_foreign_ships
+                        #has_country_flag = using_foreign_shipyards
                         has_country_flag = using_foreign_weapons
                         has_country_flag = using_foreign_artillery
                     }
@@ -1693,8 +1693,8 @@ military_reforms = {
                     AND = {
                         has_country_flag = using_foreign_ships
                         has_country_flag = using_foreign_shipyards
-                        has_country_flag = using_foreign_weapons
-                        has_country_flag = using_foreign_artillery
+                        #has_country_flag = using_foreign_weapons
+                        #has_country_flag = using_foreign_artillery
                     }
                 }
             }
@@ -1737,8 +1737,8 @@ military_reforms = {
                     AND = {
                         has_country_flag = using_foreign_ships
                         has_country_flag = using_foreign_shipyards
-                        has_country_flag = using_foreign_weapons
-                        has_country_flag = using_foreign_artillery
+                        #has_country_flag = using_foreign_weapons
+                        #has_country_flag = using_foreign_artillery
                     }
                 }
             }
