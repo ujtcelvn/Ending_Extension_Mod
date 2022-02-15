@@ -1101,3 +1101,242 @@ country_event = {
 }
 
 
+
+
+country_event = {
+    id = 166600
+    title = "North-South Conference?"
+    desc = "EVTDESC166600"
+    picture = "warlords"
+
+    trigger = {
+        KMT = { exists = yes }
+        war_with = KMT
+        has_country_flag = xinhai_revolution
+        NOT = { has_country_flag = beiyang_army_coup }
+        NOT = { exists = CHI }
+        OR = { tag = QNG tag = TPG tag = RTR }
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        }
+    }
+
+    immediate = {
+        set_country_flag = beiyang_army_coup
+    }
+
+    mean_time_to_happen = {
+        months = 6
+        modifier = {
+            factor = 0.5
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 0.1
+            average_militancy = 8
+        }
+        modifier = {
+            factor = 0.5
+            average_consciousness = 4
+        }
+    }
+
+    option = {
+        name = "The Emperor must abdicate. The Beiyang Army shall take control."
+
+        presitge = -10
+        QNG = { all_core = { remove_core = QNG } }
+        TPG = { all_core = { remove_core = TPG } }
+        RTR = { all_core = { remove_core = RTR } }
+
+        government = presidential_dictatorship
+        ruling_party_ideology = reactionary
+        political_reform = none_voting
+        political_reform = party_appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = underground_parties
+
+        random_owned = {
+            limit = { owner = { NOT = { tag = CHI } } }
+            owner = {
+                change_tag = CHI
+            }
+        }
+        CHI = {
+            primary_culture = beifaren
+            add_accepted_culture = nanfaren
+            remove_accepted_culture = manchu
+            remove_accepted_culture = hakka
+            remove_accepted_culture = miao
+            remove_accepted_culture = min
+            remove_accepted_culture = zhuang
+            remove_accepted_culture = yue
+            remove_accepted_culture = yi
+        }
+        any_pop = {
+            limit = { has_pop_culture = beifaren }
+            militancy = -4
+        }
+        any_pop = {
+            limit = { has_pop_culture = nanfaren }
+            militancy = -2
+        }
+        random_owned = {
+            limit = {
+                province_id = 1616
+                is_capital = no
+            }
+            owner = { capital = 1616 }
+        }
+        any_owned = { remove_province_modifier = peasant_revolt }
+        add_country_modifier = {
+            name = national_confusion
+            duration = 365
+        }
+        any_country = {
+            limit = { substate_of = THIS }
+            government = presidential_dictatorship
+            political_reform = none_voting
+            political_reform = party_appointed
+            political_reform = no_meeting
+            political_reform = state_press
+            political_reform = no_trade_unions
+            political_reform = underground_parties
+        }
+        any_country = {
+            limit = { is_greater_power = yes }
+            diplomatic_influence = { who = THIS value = -200 }
+        }
+
+        KMT = { country_event = 166602 }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.1
+                tag = QNG
+                NOT = { has_country_flag = manchu_elite_cleared_out }
+            }
+        }
+    }
+
+    option = {
+        name = "This coup can not be allowed to succeed!"
+
+        CHI = {
+            set_country_flag = CHI_KMT_negotiations_fail
+
+            government = presidential_dictatorship
+            ruling_party_ideology = reactionary
+            political_reform = none_voting
+            political_reform = party_appointed
+            political_reform = no_meeting
+            political_reform = state_press
+            political_reform = no_trade_unions
+            political_reform = underground_parties
+            any_pop = {
+                limit = { has_pop_culture = beifaren }
+                militancy = -4
+            }
+            any_pop = {
+                limit = { has_pop_culture = nanfaren }
+                militancy = -2
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1616
+                    is_capital = no
+                }
+                owner = { capital = 1616 }
+            }
+            any_owned = { remove_province_modifier = peasant_revolt }
+            add_country_modifier = {
+                name = national_confusion
+                duration = 365
+            }
+            any_country = {
+                limit = { substate_of = CHI }
+                government = presidential_dictatorship
+                political_reform = none_voting
+                political_reform = party_appointed
+                political_reform = no_meeting
+                political_reform = state_press
+                political_reform = no_trade_unions
+                political_reform = underground_parties
+            }
+            any_country = {
+                limit = { is_greater_power = yes }
+                diplomatic_influence = { who = CHI value = -200 }
+            }
+            leadership = 100
+            treasury = 40000
+            civilized = yes
+
+            primary_culture = beifaren
+            add_accepted_culture = nanfaren
+            remove_accepted_culture = manchu
+            remove_accepted_culture = hakka
+            remove_accepted_culture = miao
+            remove_accepted_culture = min
+            remove_accepted_culture = zhuang
+            remove_accepted_culture = yue
+            remove_accepted_culture = yi
+        }
+
+        any_owned = {
+            limit = {
+                NOT = { province_id = 1613 } #Beijing, Tianjin defects, Chengde doesn't
+                NOT = { province_id = 1480 } #Jinzhou doesn't
+                NOT = {
+                    AND = {
+                        OR = { owned_by = RTR owned_by = TPG }
+                        state_id = 2221 #Nanjing only rebels if not RTR or TPG
+                    }
+                }
+                NOT = {
+                    AND = {
+                        owned_by = QNG
+                        is_core = MCK #Manchu only rebels if not QNG
+                    }
+                }
+            }
+            secede_province = CHI
+        }
+
+
+        random_owned = {
+            limit = {
+                owned_by = QNG
+                MCK = { OR = { substate_of = QNG vassal_of = QNG } }
+            }
+            MCK = { annex_to = THIS } 
+        }
+
+        random_owned = {
+            limit = {
+                owner = QNG
+                province_id = 1479 #Qing retreats to Mukden
+                is_capital = no
+            }
+            owner = { capital = 1479 }
+        }
+
+        war = {
+            target = CHI
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+        }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.1
+                KMT = { brigades_compare = 2 }
+            }
+        }
+    }
+}
