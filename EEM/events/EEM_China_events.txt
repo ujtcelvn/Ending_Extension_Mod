@@ -2622,7 +2622,7 @@ country_event = {
         name = "The fools bicker."
         set_global_flag = punti_hakka_war_happened
         CHI_1493 = {
-            limit = { owned_by = QNG }
+            #limit = { owned_by = QNG }
             any_pop = {
                 limit = { OR = { culture = yue culture = hakka } }
                 militancy = 2

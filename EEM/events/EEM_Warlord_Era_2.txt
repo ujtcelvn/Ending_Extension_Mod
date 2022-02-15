@@ -405,7 +405,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 2100 #1800
+        months = 2100
         modifier = {
             factor = 3
             NOT = { controlled_by = THIS }
@@ -432,6 +432,14 @@ province_event = {
         modifier = {
             factor = 0.9
             average_militancy = 7
+        }
+        modifier = {
+            factor = 0.9
+            average_consciousness = 5
+        }
+        modifier = {
+            factor = 0.9
+            average_consciousness = 7
         }
         modifier = {
             factor = 4 #2
@@ -536,7 +544,7 @@ province_event = {
                 consciousness = 2
                 ideology = {
                     value = liberal
-                    factor = 0.05
+                    factor = 0.1   #0.05
                 }
             }
             any_pop = {
@@ -554,6 +562,25 @@ province_event = {
         }
 
         owner = {
+            any_pop = {
+                limit = {
+                    is_culture_group = east_asian
+                    is_primary_culture = no
+                    NOT = { strata = rich }
+                    OR = {
+                        liberal = 10
+                        socialist = 10
+                        communist = 10
+                        fascist = 10
+                        militancy = 4
+                    }
+                }
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = 1
+                }
+            }
+
             random_state = {
                 random = {
                     chance = 50
