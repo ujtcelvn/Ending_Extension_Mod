@@ -239,7 +239,6 @@ country_event = {
         }
         has_global_flag = the_new_army
         NOT = { has_country_flag = tongmenghui }
-        NOT = { has_global_flag = xinhai_revolution_global }
     }
 
     mean_time_to_happen = {
@@ -333,6 +332,10 @@ country_event = {
                 factor = 0.12
             }
         }
+        add_country_modifier = {
+            name = global_liberal_agitation
+            duration = 10950
+        }
     }
 
     option = {
@@ -365,14 +368,17 @@ country_event = {
                 }
             }
         }
+        add_country_modifier = {
+            name = global_liberal_agitation
+            duration = 21900
+        }
     }
 }
 
-
 province_event = {
     id = 164601
-    title = "EVTNAME164601" #Revolutionary Uprising in $STATENAME$
-    desc = "EVTDESC164601"
+    title = "$STATENAME$ Uprising"   #Revolutionary Uprising in $STATENAME$
+    desc = "EVTDESC164601_NEW"
 
     trigger = {
         is_core = CHI
@@ -389,7 +395,6 @@ province_event = {
         owner = {
             has_country_flag = tongmenghui
             NOT = { has_global_flag = warlord_era_has_begun }
-            NOT = { has_global_flag = xinhai_revolution_global }
             war = no
             OR = {
                 government = absolute_monarchy
@@ -400,7 +405,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 150
+        months = 2100 #1800
         modifier = {
             factor = 3
             NOT = { controlled_by = THIS }
@@ -429,8 +434,12 @@ province_event = {
             average_militancy = 7
         }
         modifier = {
-            factor = 2
+            factor = 4 #2
             is_primary_culture = yes
+        }
+        modifier = {
+            factor = 2 #1
+            is_accepted_culture = yes
         }
         modifier = {
             factor = 0.8
@@ -472,17 +481,22 @@ province_event = {
             factor = 0.8
             year = 1910
         }
-        modifier = {
-            factor = 2
-            owner = { citizens_rights = all_voting_pops }
-        }
     }
 
     option = {
         name = "EVT164601OPTA"
-        random_pop = {
+
+        NWO = {
+            change_variable = {
+                which = chinese_uprising_counter
+                value = 1
+            }
+        }
+
+        any_pop = {
             limit = {
                 is_culture_group = east_asian
+                is_primary_culture = no
                 OR = {
                     liberal = 10
                     socialist = 10
@@ -491,14 +505,11 @@ province_event = {
                     militancy = 4
                 }
             }
-            reduce_pop = 0.95
-            militancy = 3
+            reduce_pop = 0.99
+            militancy = 6
             consciousness = 6
         }
-        poor_strata = {
-            limit = { is_culture_group = east_asian }
-            consciousness = 3
-        }
+
         state_scope = {
             any_pop = {
                 limit = {
@@ -520,44 +531,126 @@ province_event = {
                     duration = 365
                 }
             }
-        }
-        ai_chance = { factor = 80 }
-    }
-
-    option = {
-        name = "EVT164601OPTB"
-        owner = { prestige = -4 }
-        state_scope = {
-            poor_strata = {
-                limit = { is_culture_group = east_asian }
+            any_pop = {
+                limit = { is_culture_group = east_asian strata = poor }
                 consciousness = 2
                 ideology = {
                     value = liberal
                     factor = 0.05
                 }
             }
-            middle_strata = {
-                limit = { is_culture_group = east_asian }
+            any_pop = {
+                limit = { is_culture_group = east_asian strata = middle }
                 consciousness = 2
                 ideology = {
                     value = liberal
-                    factor = 0.1
+                    factor = 0.2   #0.1
                 }
             }
             scaled_militancy = {
                 ideology = liberal
-                factor = 5
+                factor = 9
             }
         }
-        ai_chance = { factor = 20 }
+
+        owner = {
+            random_state = {
+                random = {
+                    chance = 50
+                    any_pop = {
+                        limit = {
+                            is_culture_group = east_asian
+                            NOT = { strata = rich }
+                            is_primary_culture = no
+                        }
+                        consciousness = 1
+                        ideology = {
+                            value = liberal
+                            factor = 0.05
+                        }
+                    }
+                }
+            }
+            random_state = {
+                random = {
+                    chance = 50
+                    any_pop = {
+                        limit = {
+                            is_culture_group = east_asian
+                            NOT = { strata = rich }
+                            is_primary_culture = no
+                        }
+                        consciousness = 1
+                        ideology = {
+                            value = liberal
+                            factor = 0.05
+                        }
+                    }
+                }
+            }
+            random_state = {
+                random = {
+                    chance = 50
+                    any_pop = {
+                        limit = {
+                            is_culture_group = east_asian
+                            NOT = { strata = rich }
+                            is_primary_culture = no
+                        }
+                        consciousness = 1
+                        ideology = {
+                            value = liberal
+                            factor = 0.05
+                        }
+                    }
+                }
+            }
+            random_state = {
+                random = {
+                    chance = 50
+                    any_pop = {
+                        limit = {
+                            is_culture_group = east_asian
+                            NOT = { strata = rich }
+                            is_primary_culture = no
+                        }
+                        consciousness = 1
+                        ideology = {
+                            value = liberal
+                            factor = 0.05
+                        }
+                    }
+                }
+            }
+            random_state = {
+                random = {
+                    chance = 50
+                    any_pop = {
+                        limit = {
+                            is_culture_group = east_asian
+                            NOT = { strata = rich }
+                            is_primary_culture = no
+                        }
+                        consciousness = 1
+                        ideology = {
+                            value = liberal
+                            factor = 0.05
+                        }
+                    }
+                }
+            }
+
+        }
+
     }
 }
+
 
 #The Xinhai Revolution Set Up
 country_event = {
     id = 164599
     title = "EVTNAME164599"
-    desc = "Tongmenghui Rebels and mutinous troops of the New Army have taken control of many provinces and have declared a Republic of China and demand an end to our rule."
+    desc = "Tongmenghui Rebels, mutinous troops of the New Army, and defecting governors have taken control of many provinces, declaring a Republic of China in defiance of $COUNTRYNAME$."
     #news = yes
     #news_desc_long = "EVTDESC164599"
     #news_desc_medium = "EVTDESC164599_NEWS_MEDIUM"
@@ -674,6 +767,8 @@ country_event = {
     }
 
     immediate = {
+        remove_country_modifier = global_liberal_agitation
+
         set_country_flag = xinhai_revolution
         set_global_flag = xinhai_revolution_global
         prestige = -25
@@ -936,7 +1031,7 @@ country_event = {
         }
 
 
-        any_owned = { add_province_modifier = { name = liberal_agitation duration = 365 } }
+        any_owned = { add_province_modifier = { name = peasant_revolt duration = 365 } }
 
         any_pop = {
             limit = { OR = { has_pop_culture = nanfaren has_pop_culture = beifaren } }
@@ -988,15 +1083,21 @@ country_event = {
     picture = "warlords"
 
     trigger = {
-        tag = QNG
         KMT = { exists = yes }
         war_with = KMT
         has_country_flag = xinhai_revolution
-        NOT = { has_global_flag = beiyang_army_coup }
+        NOT = { has_country_flag = beiyang_army_coup }
+        NOT = { exists = CHI }
+        OR = { tag = QNG tag = TPG tag = RTR }
+        OR = {
+            government = absolute_monarchy
+            government = prussian_constitutionalism
+            government = hms_government
+        }
     }
 
     immediate = {
-        set_global_flag = beiyang_army_coup
+        set_country_flag = beiyang_army_coup
     }
 
     mean_time_to_happen = {
@@ -1162,6 +1263,7 @@ country_event = {
         any_owned = {
             limit = {
                 NOT = { province_id = 1613 } #Beijing, Tianjin defects, Chengde doesn't
+                NOT = { province_id = 1480 } #Jinzhou doesn't
                 NOT = {
                     AND = {
                         OR = { owned_by = RTR owned_by = TPG }
@@ -1178,15 +1280,6 @@ country_event = {
             secede_province = CHI
         }
 
-        CHI = {
-            random_owned = {
-                limit = {
-                    province_id = 1616
-                    is_capital = no
-                }
-                owner = { capital = 1616 }
-            }
-        }
 
         random_owned = {
             limit = {
@@ -1194,6 +1287,15 @@ country_event = {
                 MCK = { OR = { substate_of = QNG vassal_of = QNG } }
             }
             MCK = { annex_to = THIS } 
+        }
+
+        random_owned = {
+            limit = {
+                owner = QNG
+                province_id = 1479 #Qing retreats to Mukden
+                is_capital = no
+            }
+            owner = { capital = 1479 }
         }
 
         war = {
@@ -1212,9 +1314,124 @@ country_event = {
     }
 }
 
-##############################
-#id = 166601 #Unused event id
-##############################
+#End of The Liberal Revolution
+country_event = {
+    title = "Tongmenghui Support Fades"
+    desc = "Although there are still active Tongmenghui cells, governmental reforms have reached a point where popular support for a democratic revolution has declined significantly."
+    picture = "Riot"
+
+    id = 166601
+
+    trigger = {
+        has_country_flag = tongmenghui 
+        OR = {
+            vote_franschise = universal_voting
+            vote_franschise = universal_weighted_voting
+        }
+        citizens_rights = all_voting_pops
+        NOT = { political_parties = underground_parties }
+        NOT = { num_of_revolts = 1 }
+        NOT = { militancy = 5 }
+        has_country_modifier = global_liberal_agitation
+        war = no
+        is_greater_power = yes
+        OR = {
+            AND = {
+                tag = QNG
+                NOT = { exists = TPG }
+                NOT = { exists = CHI }
+                NOT = { exists = RTR }
+            }
+            AND = {
+                tag = TPG
+                NOT = { exists = QNG }
+                NOT = { exists = CHI }
+                NOT = { exists = RTR }
+            }
+            AND = {
+                tag = CHI
+                NOT = { exists = TPG }
+                NOT = { exists = QNG }
+                NOT = { exists = RTR }
+            }
+            AND = {
+                tag = RTR
+                NOT = { exists = TPG }
+                NOT = { exists = QNG }
+                NOT = { exists = CHI }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 12
+        modifier = {
+            factor = 100
+            tag = QNG
+        }
+        modifier = {
+            factor = 1.5
+            vote_franschise = universal_weighted_voting
+        }
+        modifier = {
+            factor = 1.5
+            NOT = { public_meetings = yes_meeting }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = { press_rights = free_press }
+        }
+        modifier = {
+            factor = 1.5
+            NOT = {
+                OR = {
+                    political_parties = gerrymandering
+                    political_parties = non_secret_ballots
+                    political_parties = secret_ballots
+                }
+            }
+        }
+        modifier = {
+            factor = 0.1
+            vote_franschise = universal_voting
+            public_meetings = yes_meeting
+            press_rights = free_press
+            OR = {
+                political_parties = gerrymandering
+                political_parties = non_secret_ballots
+                political_parties = secret_ballots
+            }
+        }
+    }
+
+    option = {
+        name = "Good Riddance."
+        any_owned = {
+            limit = { is_colonial = no }
+            any_pop = {
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = -2
+                }
+                scaled_consciousness = {
+                    ideology = liberal
+                    factor = -1
+                }
+                scaled_militancy = {
+                    ideology = conservative
+                    factor = -4
+                }
+                scaled_consciousness = {
+                    ideology = conservative
+                    factor = -2
+                }
+            }
+            remove_province_modifier = liberal_agitation
+        }
+        remove_country_modifier = global_liberal_agitation
+        prestige = 5
+    }
+}
 
 country_event = {
     id = 166602
@@ -1251,6 +1468,11 @@ country_event = {
 
     option = {
         name = "Those generals cannot be trusted!"
+
+        add_country_modifier = {
+            name = disunited_country 
+            duration = 1825
+        }
 
         war = {
             target = CHI

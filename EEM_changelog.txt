@@ -43,6 +43,23 @@ commerce = 17
 
 industry = 30 + 3
 
+####################################################################################################
+Coming soon:
+
+#TODO: Austria-Hungary only collapses into Austria if Hungary owns all of Hungary proper, instead of just a tiny Hungarian rump state in a corner somewhere
+#TODO: Healthcare
+#TODO: make AI national value changing happen by event, because it's much easier to adjust AI weights in events than in decisions. AI national value choice also now depends on many factors instead of just 20% for each
+####################################################################################################
+
+
+v0.5.3d
+Redid 164601 Revolutionary Uprising in Chinese Province event
+	event is much too spammy in HPM, so increased the mtth and effect
+	redid loc because the main anti-Qing protestors weren't "demonstration by local workers turned violent" Instead, they were mostly planned revolts by revolutionary intellectuals that went wrong or New Army mutinies
+Tongmenghui now gives global_liberal_agitation for 30~60 years
+Xinhai Revolution removes global_liberal_agitation
+Event to remove global_liberal_agitation if the Xinhai Revolution hasn't happened yet but you are super reformed and it hasn't faded away on its own
+Refusing the North South conference made more punishing for KMT
 
 ####################################################################################################
 v0.5.3c
