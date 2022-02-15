@@ -126,3 +126,4 @@ EVTNAME166783;End of Kochow Trade;;;;;;;;;;;;;
 EVTDESC166783;For whatever reason, foreign merchants are having difficulty trading in this area.;;;;;;;;;;;;;
 EVT166783OPTA;Good riddance.;;;;;;;;;;;;;
 EVTDESC164601_NEW;Revolutionaries seeking to bring down the $COUNTRY_ADJ$ monarchy have been stirring up a revolt in $STATENAME$. The authorities have already ambushed and cracked down on rebel cells in $PROVINCENAME$ with the help of informants, but key revolutionaries remain at large.;;;;;;;;;;;;;
+EVTDESC166600;Generals of the New Army warn that they will be unable to protect the Imperial Family if $CAPITAL$ were to fall, and claim they can negotiate a safe retirement with the rebels for Your Imperial Majesty if you were to please resign.;;;;;;;;;;;;;

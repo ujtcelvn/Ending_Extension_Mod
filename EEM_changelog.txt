@@ -52,6 +52,9 @@ Coming soon:
 
 ####################################################################################################
 
+v0.5.3f
+split event file in half because it was so long that it broke the game
+
 v0.5.3e
 Increased the effect of the Qing Province Uprising event because the Qing militancy was too low
 Fixed Punti-Hakka clan wars for real this time
