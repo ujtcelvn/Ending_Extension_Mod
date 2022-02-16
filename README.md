@@ -19,6 +19,8 @@ Aircraft Carriers
 
 Economic and Liquidity crisis tweaks
 
+A bunch of HPM bugfixes
+
 More China flavor (and suffering)
 
 Please read the changelog.txt for more details.

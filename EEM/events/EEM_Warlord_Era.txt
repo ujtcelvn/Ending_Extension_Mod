@@ -1098,10 +1098,6 @@ country_event = {
                 tag = HUI
             }
             modifier = {
-                factor = 4
-                tag = GMJ
-            }
-            modifier = {
                 factor = 0.25
                 exists = KMT
             }
@@ -1422,7 +1418,7 @@ country_event = {
             }
             modifier = {
                 factor = 4
-                tag = GMJ
+                OR = { tag = GMJ tag = GNG }
             }
             modifier = {
                 factor = 0.25
@@ -2263,6 +2259,7 @@ country_event = {
             tag = CHI
             tag = TPG
             tag = KMT
+            tag = RTR
         }
         OR = {
             owns = 1559
@@ -2322,6 +2319,10 @@ country_event = {
                     secede_province = GMJ
                 }
             }
+        }
+        random = {
+            chance = 50
+            GMJ = { ruling_party_ideology = conservative }
         }
         random_owned = {
             limit = {

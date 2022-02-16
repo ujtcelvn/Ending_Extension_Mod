@@ -46,11 +46,22 @@ industry = 30 + 3
 ####################################################################################################
 Coming soon:
 
-#TODO: Austria-Hungary only collapses into Austria if Hungary owns all of Hungary proper, instead of just a tiny Hungarian rump state in a corner somewhere
+#TODO: Austria-Hungary only collapses into Austria if Austria-Hungary does NOT own both AUS_641 Central Hungary and AUS_639 Transdanubia and Hungary exists, a 1 state hungarian rump state is not enough
 #TODO: Healthcare
 #TODO: make AI national value changing happen by event, because it's much easier to adjust AI weights in events than in decisions. AI national value choice also now depends on many factors instead of just 20% for each
 
+
 ####################################################################################################
+
+v0.5.3e
+Sped up north-south conference
+made sure KMT ghost units are cleaned up
+Warlord era tweaks
+Fixed HPM issue where upon reloading a save KMT-aligned warlords immediately switch to Beiyang-aligned
+    presidential dictatorships now can accept conservative parties in certain circumstances
+    Non-Chinese presidential dictatorships are forced into reactionary parties
+Fixed China variant core removal events
+Made sure Venezuela had a reactionary party for all dates
 
 v0.5.3f
 split event file in half because it was so long that it broke the game

@@ -1128,18 +1128,11 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 6
+        months = 3
         modifier = {
-            factor = 0.5
-            average_militancy = 4
-        }
-        modifier = {
-            factor = 0.1
-            average_militancy = 8
-        }
-        modifier = {
-            factor = 0.5
-            average_consciousness = 4
+            factor = 4
+            tag = QNG
+            NOT = { has_country_flag = manchu_elite_cleared_out }
         }
     }
 
@@ -1228,7 +1221,7 @@ country_event = {
         name = "This coup can not be allowed to succeed!"
 
         CHI = {
-            set_country_flag = CHI_KMT_negotiations_fail
+            set_country_flag = no_north_south_conference
 
             government = presidential_dictatorship
             ruling_party_ideology = reactionary

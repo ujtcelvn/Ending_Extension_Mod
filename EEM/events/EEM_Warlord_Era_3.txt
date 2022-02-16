@@ -128,13 +128,25 @@ country_event = {
 
     option = {
         name = "We must try to avoid a civil war. WARNING: This is a game over for you!"
+
+        #TODO: set_country_flag = ghost_country #using HPM's cleanup system works, but it takes several years to fire
+        CHI = { set_country_flag = north_south_conference_successful }
+
         neutrality = yes
-        all_core = { remove_core = THIS }
-        any_owned = {
-            secede_province = CHI
-        }
+        any_owned = { secede_province = CHI }
+        all_core = { remove_core = THIS } 
         annex_to = CHI
-        CHI = { set_country_flag = CHI_KMT_negotiations_successful }
+
+
+        set_global_flag = cleaning_up_ghosts
+        set_country_flag = cleaning_up_ghosts_country
+        add_country_modifier = { name = law_changed_by_force duration = 30 }
+        3319 = { secede_province = THIS }
+        3320 = { secede_province = THIS }
+        3321 = { secede_province = THIS }
+        3322 = { secede_province = THIS }
+        TMT = { country_event = 6016821 }
+
         ai_chance = {
             factor = 10
             modifier = {
@@ -169,7 +181,7 @@ country_event = {
         clr_global_flag = spread_warlord_influence
         set_global_flag = warlord_era_has_begun
         CHI = {
-            set_country_flag = north_south_conference_fails
+            set_country_flag = north_south_conference_failed
             random_owned = {
                 limit = {
                     owner = { NOT = { num_of_cities = 40 } }
@@ -569,7 +581,10 @@ country_event = {
     fire_only_once = yes
     trigger = {
         war = no
-        has_country_flag = north_south_conference_fails
+        OR = {
+            has_country_flag = north_south_conference_fails
+            has_country_flag = no_north_south_conference
+        }
         tag = CHI
         NOT = { exists = KMT }
         NOT = { has_global_flag = KMT_crushed }
@@ -637,8 +652,10 @@ country_event = {
         has_global_flag = xinhai_revolution_global
         NOT = { has_global_flag = QNG_crushed }
         war = no
-        OR = { tag = CHI tag = KMT }
+        is_culture_group = east_asian
         NOT = { exists = QNG }
+        any_owned_province = { is_core = QNG }
+        NOT = { tag = MCK }
     }
 
     mean_time_to_happen = {
@@ -672,8 +689,9 @@ country_event = {
         has_global_flag = xinhai_revolution_global
         NOT = { has_global_flag = TPG_crushed }
         war = no
-        OR = { tag = CHI tag = KMT }
+        is_culture_group = east_asian
         NOT = { exists = TPG }
+        any_owned_province = { is_core = TPG }
     }
 
     mean_time_to_happen = {
@@ -699,8 +717,9 @@ country_event = {
         has_global_flag = xinhai_revolution_global
         NOT = { has_global_flag = RTR_crushed }
         war = no
-        OR = { tag = CHI tag = KMT }
+        is_culture_group = east_asian
         NOT = { exists = RTR }
+        any_owned_province = { is_core = RTR }
     }
 
     mean_time_to_happen = {
