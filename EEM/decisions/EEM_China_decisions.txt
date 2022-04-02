@@ -498,6 +498,14 @@ political_decisions = {
                     vassal_of = THIS
                 }
             }
+            MAO = {
+                OR = {
+                    exists = no
+                    tag = THIS
+                    in_sphere = THIS
+                    vassal_of = THIS
+                }
+            }
             RTR = {
                 OR = {
                     exists = no
@@ -755,6 +763,7 @@ political_decisions = {
                         tag = XBI
                         tag = XIN
                         tag = YNN
+                        tag = MAO
                     }
                 }
                 relation = { who = THIS value = -400 }

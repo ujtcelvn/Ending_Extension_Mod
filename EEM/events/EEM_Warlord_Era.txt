@@ -294,6 +294,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -364,6 +365,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -434,6 +436,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -502,6 +505,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -572,6 +576,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -646,6 +651,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -724,6 +730,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             state_scope = { any_owned_province = { is_capital = yes } }
             region = CHI_1468
             region = CHI_1465
@@ -801,6 +808,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             region = CHI_1468
             region = CHI_1465
             state_scope = { any_owned_province = { is_capital = yes } }
@@ -874,6 +882,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             region = CHI_1468
             region = CHI_1465
             state_scope = { any_owned_province = { is_capital = yes } }
@@ -945,6 +954,7 @@ province_event = {
             is_core = XBI
             is_core = XIN
             is_core = YNN
+            is_core = MAO
             region = CHI_1468
             region = CHI_1465
             state_scope = { any_owned_province = { is_capital = yes } }
@@ -1010,6 +1020,7 @@ country_event = {
             tag = XBI
             tag = XIN
             tag = YNN
+            tag = MAO
         }
         exists = yes
         has_global_flag = warlord_era_has_begun
@@ -1323,6 +1334,7 @@ country_event = {
             tag = XBI
             tag = XIN
             tag = YNN
+            tag = MAO
         }
         exists = yes
         has_global_flag = warlord_era_has_begun
@@ -1725,6 +1737,7 @@ country_event = {
             tag = XBI
             tag = XIN
             tag = YNN
+            tag = MAO
         }
         exists = yes
         has_global_flag = warlord_era_has_begun
@@ -2482,12 +2495,10 @@ country_event = {
         has_global_flag = warlord_era_has_begun
         is_culture_group = east_asian
         NOT = { tag = LAN }
-        NOT = { tag = MAO }
         is_vassal = no
         any_neighbor_country = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
-            NOT = { tag = MAO }
             NOT = { war_with = THIS }
             NOT = { brigades_compare = 1 }
             NOT = { has_country_flag = neutral_faction }
@@ -2530,7 +2541,6 @@ country_event = {
                 is_culture_group = east_asian
                 neighbour = THIS
                 NOT = { tag = LAN }
-                NOT = { tag = MAO }
                 NOT = { war_with = THIS }
                 NOT = { brigades_compare = 1 }
                 NOT = { has_country_flag = neutral_faction }
@@ -2615,6 +2625,7 @@ country_event = {
                         tag = SZC
                         tag = XIN
                         tag = HNN
+                        tag = MAO
                     }
                 }
             }
@@ -2844,7 +2855,6 @@ country_event = {
             war_with = THIS
             is_culture_group = east_asian
             NOT = { tag = LAN }
-            NOT = { tag = MAO }
         }
         1485 = {
             owned_by = THIS
@@ -3069,7 +3079,6 @@ country_event = {
                 neighbour = THIS
                 is_culture_group = east_asian
                 NOT = { tag = LAN }
-                NOT = { tag = MAO }
             }
             country_event = 16050215
         }
@@ -3090,7 +3099,6 @@ country_event = {
             limit = {
                 is_culture_group = east_asian
                 NOT = { tag = LAN }
-                NOT = { tag = MAO }
                 war_with = FROM
             }
             end_war = FROM
@@ -3121,7 +3129,6 @@ country_event = {
     trigger = {
         is_culture_group = east_asian
         NOT = { tag = LAN }
-        NOT = { tag = MAO }
         war = yes
         ai = yes
         any_owned_province = {
@@ -3148,7 +3155,6 @@ country_event = {
         any_country = {
             limit = {
                 NOT = { tag = LAN }
-                NOT = { tag = MAO }
                 is_culture_group = east_asian
                 war_with = THIS
                 ai = yes
@@ -3228,7 +3234,6 @@ country_event = {
     trigger = {
         is_culture_group = east_asian
         NOT = { tag = LAN }
-        NOT = { tag = MAO }
         has_global_flag = warlord_era_has_begun
         war = yes
         ai = yes
@@ -3253,7 +3258,6 @@ country_event = {
             limit = {
                 is_culture_group = east_asian
                 NOT = { tag = LAN }
-                NOT = { tag = MAO }
                 war_with = THIS
                 ai = yes
                 NOT = { any_owned_province = { controlled_by = THIS } }

@@ -159,6 +159,10 @@ country_event = {
             limit = { region = CHI_1526 }
             CHI_1526 = { add_core = HNN }
         }
+        random_owned = {
+            limit = { region = CHI_1505 }
+            CHI_1505 = { add_core = MAO }
+        }
         any_country = {
             limit = {
                 exists = no
@@ -176,6 +180,7 @@ country_event = {
                     tag = XBI
                     tag = XIN
                     tag = YNN
+                    tag = MAO
                 }
             }
             civilized = yes
@@ -186,6 +191,18 @@ country_event = {
             political_reform = state_press
             political_reform = state_controlled
             political_reform = underground_parties
+        }
+
+        any_country = {
+            limit = {
+                exists = no
+                tag = MAO
+            }
+            primary_culture = nanfaren
+            add_accepted_culture = miao
+            religion = mahayana
+            clr_country_flag = animist_country
+            set_country_flag = mahayana_country
         }
     }
 }
@@ -993,6 +1010,14 @@ country_event = {
                 }
                 secede_province = KMT
             }
+        }
+
+
+        any_owned = {
+            limit = { 
+                is_core = MAO #Guizhou always revolts
+            }
+            secede_province = KMT
         }
 
 

@@ -1,7 +1,6 @@
 capital = 1505
 primary_culture = miao
 culture = yi
-culture = asian_minor
 culture = nanfaren
 religion = animist
 government = absolute_monarchy

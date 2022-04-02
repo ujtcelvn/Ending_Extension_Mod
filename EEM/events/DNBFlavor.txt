@@ -33,6 +33,17 @@ country_event = {
                 }
             }
         }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = HUN }
+                    average_militancy = 4
+                    average_consciousness = 6
+                }
+            }
+        }
+
     }
 
     option = {
@@ -224,6 +235,20 @@ country_event = {
                     average_militancy = 2
                 }
             }
+        }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = BOH }
+                    average_militancy = 4
+                    average_consciousness = 6
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            CZH = { exists = yes }
         }
     }
 
@@ -430,6 +455,16 @@ country_event = {
                 any_state = {
                     any_owned_province = { is_core = ROM }
                     average_militancy = 2
+                }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = ROM }
+                    average_militancy = 4
+                    average_consciousness = 6
                 }
             }
         }
@@ -641,6 +676,20 @@ country_event = {
                 }
             }
         }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = CRO }
+                    average_militancy = 4
+                    average_consciousness = 6
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            YUG = { exists = yes }
+        }
     }
 
     option = {
@@ -849,6 +898,20 @@ country_event = {
                 }
             }
         }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = SLO }
+                    average_militancy = 4
+                    average_consciousness = 6
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            YUG = { exists = yes }
+        }
     }
 
     option = {
@@ -1053,6 +1116,20 @@ country_event = {
                 }
             }
         }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = SLV }
+                    average_militancy = 4
+                    average_consciousness = 6
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            CZH = { exists = yes }
+        }
     }
 
     option = {
@@ -1255,6 +1332,26 @@ country_event = {
                     any_owned_province = { is_core = POL }
                     average_militancy = 2
                 }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                any_state = {
+                    any_owned_province = { is_core = POL }
+                    average_militancy = 4
+                    average_consciousness = 6
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            OR = {
+                KRA = { exists = yes }
+                GLM = { exists = yes }
+                CPL = { exists = yes }
+                POL = { exists = yes }
+                PLC = { exists = yes }
             }
         }
     }
@@ -2256,6 +2353,8 @@ country_event = {
             exists = yes
             NOT = { vassal_of = THIS }
         }
+        NOT = { owns = 641 } #Budapest, Central Hungary
+        NOT = { owns = 639 } #Zalaegerszeg, Transdanubia
         NOT = { has_global_flag = danubian_federation_ended }
     }
 
@@ -2433,6 +2532,7 @@ country_event = {
             government = democracy
             government = hms_government
             government = prussian_constitutionalism
+            government = proletarian_dictatorship
         }
         OR = {
             average_militancy = 4

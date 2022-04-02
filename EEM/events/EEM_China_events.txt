@@ -2264,7 +2264,7 @@ country_event = {
 country_event = {
     id = 166223
     title = "The Miao Rebellion" #The Miao Rebellion
-    desc = "The hill dwellers in Guizhou have been a hotbed of anti-government unrest ever since the Ming dynasty. Once again, the Miao people have risen in revolt."
+    desc = "Guizhou's rough terrain has let the area be a hotbed of anti-government unrest ever since the Ming dynasty. Once again, the locals have risen in revolt."
     picture = "miao_attack"
     fire_only_once = yes
     trigger = {
@@ -2309,18 +2309,18 @@ country_event = {
             }
             secede_province = MAO
         }
-        CHI_1578 = { add_core = MAO } #West Sichuan
-        CHI_1601 = { add_core = MAO } #Yunnan
-        1502 = { add_core = MAO } #Guangxi
-        1503 = { add_core = MAO } #Guangxi
-        1504 = { add_core = MAO } #Guangxi
-        3326 = { add_core = MAO } #Guangxi
-        CHI_1499 = { add_core = MAO } #West Canton
-        1493 = { add_core = MAO } #Canton
-        CHI_1524 = { add_core = MAO } #North Hunan
-        1371 = { add_core = MAO } #Cao Bang
-        1372 = { add_core = MAO } #Son La
-        1356 = { add_core = MAO } #Luang Prabang
+        #CHI_1578 = { add_core = MAO } #West Sichuan
+        #CHI_1601 = { add_core = MAO } #Yunnan
+        #1502 = { add_core = MAO } #Guangxi
+        #1503 = { add_core = MAO } #Guangxi
+        #1504 = { add_core = MAO } #Guangxi
+        #3326 = { add_core = MAO } #Guangxi
+        #CHI_1499 = { add_core = MAO } #West Canton
+        #1493 = { add_core = MAO } #Canton
+        #CHI_1524 = { add_core = MAO } #North Hunan
+        #1371 = { add_core = MAO } #Cao Bang
+        #1372 = { add_core = MAO } #Son La
+        #1356 = { add_core = MAO } #Luang Prabang
         any_pop = {
             limit = { OR = { culture = miao culture = yi culture = asian_minor } }
             consciousness = 2

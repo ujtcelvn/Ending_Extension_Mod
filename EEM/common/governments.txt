@@ -15,9 +15,10 @@ proletarian_dictatorship = {
 presidential_dictatorship = {
     #which ideology of parties.
     reactionary = yes
+    conservative = yes
 
     election = no
-    appoint_ruling_party = yes
+    appoint_ruling_party = no
     flagType = republic
 }
 

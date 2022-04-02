@@ -44,12 +44,61 @@ commerce = 17
 industry = 30 + 3
 
 ####################################################################################################
-Coming soon:
+Coming soon: 
 
-#TODO: Austria-Hungary only collapses into Austria if Austria-Hungary does NOT own both AUS_641 Central Hungary and AUS_639 Transdanubia and Hungary exists, a 1 state hungarian rump state is not enough
 #TODO: Healthcare
+
+#TODO: Maybe the bonuses to supply limit should be split between the Medicine tree and Military Science? It makes sense that just getting better at preventative medicine and treatment can improve survivability in harsh terrain, but logistics are part and parcel of that. Military Science is actually punishing to take too quickly because of the huge increase in cost for army supply, and if it gave some supply limit it would really push people to take it.
+
+#TODO: The Propaganda decisions seem to me to be VERY weak midgame. I was only able to shift my population’s opinions by about .4%, which is a very low amount for the price, and far below what I needed to be able to add another wargoal. I don’t dislike the system but I’d suggest keeping an eye on it, because to me it feels like there’s not enough agency on the player’s part. I think the player should be able to pay more plurality and infamy (perhaps militancy as well actually) to be able to really push their agenda on the people, perhaps even using some slightly extra-legal means to force their way. The costs long-term could just be more significant (perhaps even the possibility of a political scandal for their ruling party, to represent news of the issue getting out?).
+
+#TODO: On the subject of province unemployment, there should never be unemployment in a province that produces precious goods (not precious metals). It’s infuriating to build the Suez only to find by 1900 that 40% of your people in the province are unemployed due to RGO size. Any province with precious goods should get an RGO size modifier until the precious goods go away.
+
+#TODO: It seems strange that people will choose to migrate to a country with an ongoing revolution. In my game America has been dealing with a low-level population insurgency for almost four years, never quite being able to wipe them out, and has been hit with the Disunited States as well. Yet their immigration outstrips that of the CSA, which is independent, allied with a GP, and wealthy by comparison. I think there should be an immigration malus associated with having rebels on the map, to punish states which have collapsed enough to be incapable of maintaining the rule of law.
+
+#TODO: purchase battleship
+
 #TODO: make AI national value changing happen by event, because it's much easier to adjust AI weights in events than in decisions. AI national value choice also now depends on many factors instead of just 20% for each
 
+#TODO: make the Great Depression more likely because I have never seen it ever fire
+
+#TODO: more anti-war stuff
+
+#TODO: make pollution a country event, not a province event, to improve performance and made impactful
+
+#TODO: pogroms
+
+#TODO: Kamikaze
+
+#TODO: make Xinhai revolution less bordergory
+
+####################################################################################################
+v0.5.4
+
+Austria-Hungary and the Danubian Federation only collapses into Austria if they do NOT own both AUS_641 Budapest, Central Hungary and AUS_639 Zalaegerszeg, Transdanubia and Hungary exists, a 1 state hungarian rump state somewhere random is not enough
+Austria-Hungary and the Danubian Federation no longer collapses if communist
+Adjust DNB culture acceptance chances (more if low consciousness, less if its national union exists)
+DNB now needs NOT = { citizens_rights = primary_culture_only  citizenship_policy = residency } to accept czech, croat, and slovene by decision, and KUK also needs it to propose the DNB to begin with
+
+Removed southeast asian decolonization because it's a clusterfuck. Technically the militancy gain there irl was from Japan occupying it for super long anyways
+
+Several Miao governments renamed, flags adjusted
+Miao no longer gets asian_minor accepted and a bunch of free cores, but gets to use chinese reunification cb
+If Miao does not exist, it becomes the Guizhou Clique in the Warlord Era with south han primary and miao and yi accepted and mahayana religion
+Yunnan and Pingnan Guo gets Yi accepted
+AI China gets the cash from the self strengthening movement too
+KMT's accepted cultures reverted
+
+Conscript navy decision now also has a chance of getting clipper transports and can be used by civilized nations until they have a naval base (it makes no sense that the government suddenly is unable to conscript fishermen the moment they civilize)
+Clipper transports needs a level 1 naval base to be built again
+AI now builds more military overall, especially transport ships
+
+Fixed Karelia not having a Communist party in the late game
+Fixed Venezuela not having a reactionary party in the late game for real this time
+Fixed HPM bug where the warlords wouldn't westernize correctly
+Fixed conquest of the desert decision to solve HPM bug where 1807 and 2609 (the Saharan part of Timbuktu) sometimes not getting colonized
+Fixed HPM bug where 1192 Nukus often not having any cores
+Fixed HPM issue where upon reloading a save KMT-aligned warlords immediately switch to Beiyang-aligned but for real this time
 
 ####################################################################################################
 

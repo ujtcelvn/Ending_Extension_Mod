@@ -4111,7 +4111,7 @@ china_acquire_state = {
         }
         THIS = {
             NOT = { tag = LAN }
-            NOT = { tag = MAO }
+            #NOT = { tag = MAO }
             NOT = { tag = TZ1 }
             NOT = { tag = TZ2 }
             NOT = { tag = TZ3 }

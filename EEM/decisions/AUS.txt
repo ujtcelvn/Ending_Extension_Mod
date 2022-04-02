@@ -150,6 +150,8 @@ political_decisions = {
                     HUN = {
                         NOT = { vassal_of = KUK }
                     }
+                    NOT = { owns = 641 } #Budapest, Central Hungary
+                    NOT = { owns = 639 } #Zalaegerszeg, Transdanubia
                 }
                 NOT = {
                     any_owned_province = {
@@ -161,6 +163,7 @@ political_decisions = {
                     government = prussian_constitutionalism
                     government = hms_government
                     government = democracy
+                    government = proletarian_dictatorship
                 }
             }
         }
@@ -629,6 +632,10 @@ political_decisions = {
                 average_militancy = 4
                 num_of_revolts = 1
             }
+            NOT = {
+                citizens_rights = primary_culture_only
+                citizenship_policy = residency
+            }
         }
 
         effect = {
@@ -834,6 +841,10 @@ political_decisions = {
             prestige = 50
             nationalism_n_imperialism = 1
             experimental_psychology = 1
+            NOT = {
+                citizens_rights = primary_culture_only
+                citizenship_policy = residency
+            }
         }
 
         effect = {
@@ -880,6 +891,10 @@ political_decisions = {
             revolution_n_counterrevolution = 1
             psychoanalysis = 1
             social_science = 1
+            NOT = {
+                citizens_rights = primary_culture_only
+                citizenship_policy = residency
+            }
         }
         effect = {
             set_country_flag = embraced_slovenes
@@ -930,6 +945,10 @@ political_decisions = {
             prestige = 50
             revolution_n_counterrevolution = 1
             psychoanalysis = 1
+            NOT = {
+                citizens_rights = primary_culture_only
+                citizenship_policy = residency
+            }
         }
         effect = {
             set_country_flag = embraced_croats

@@ -491,3 +491,26 @@ country_event = {
         }
     }
 }
+
+
+
+country_event = {
+    id = 95217
+    title = "Khivan Claims on Nukus"
+    desc = "The organized occupation of Nukus has prompted Khiva to raise a claim on the area."
+    picture = "central_asian_tribes"
+
+    trigger = {
+        owns = 1192
+        NOT = { has_global_flag = uzbekistan_created }
+    }
+
+    fire_only_once = yes
+    mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = "Ok"
+        set_global_flag = Nukus_cored
+        1192 = { add_core = KHI }
+    }
+}
