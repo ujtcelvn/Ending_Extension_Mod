@@ -90,7 +90,7 @@ gun_and_bomb_sights = {
         plane = {
             attack = 0.5
             defence = 0.5
-            supply_consumption = 0.10
+            supply_consumption = 0.20
         }
     }
 }
@@ -118,7 +118,7 @@ guided_bomb = {
     effect = {
         plane = {
             attack = 0.1
-            supply_consumption = 0.10
+            supply_consumption = 0.20
         }
     }
 }
@@ -144,7 +144,8 @@ rocket_powered_aircraft = {
     effect = {
         plane = {
             defence = 0.5
-            supply_consumption = 0.10
+            maximum_speed = 1
+            supply_consumption = 0.25
         }
     }
 }
@@ -172,8 +173,8 @@ turbojet = {
     effect = {
         plane = {
             maximum_speed = 1
-            attack = 0.2
-            supply_consumption = 0.50
+            attack = 0.1
+            supply_consumption = 0.75
         }
     }
 }
@@ -217,7 +218,7 @@ helicopter = {
     effect = {
         plane = {
             reconnaissance = 1
-            supply_consumption = 0.10
+            supply_consumption = 0.25
         }
     }
 }

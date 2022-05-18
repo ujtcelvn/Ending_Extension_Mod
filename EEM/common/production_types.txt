@@ -324,8 +324,8 @@ fuel_refinery = {
             OR = {
                 trade_goods_in_state = oil
                 has_building = synthetic_oil_factory
-                }
             }
+        }
         value = 0.25
     }
 }

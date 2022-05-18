@@ -905,18 +905,27 @@ province_event = {
 }
 
 
-
-
+#Opium addiction spreads
 province_event = {
     id = 166822
-    trigger = {
-        trade_goods = opium
-        owner = { civilized = yes }
-        NOT = { has_province_modifier = local_drug_habit }
-    }
+    title = "Drug Addiction Spreads to $PROVINCENAME$"
+    desc = "Although opium has been safely used as medicine for centuries, more potent, addictive, and dangerous forms of this drug are being sold, causing a noticible rise in overdose and withdrawal rates."
 
-    title = "Drug Addiction in $PROVINCENAME$"
-    desc = "Many in $PROVINCENAME$ have begun to develop a dependence on the locally produced analgesic opium, causing overdose and withdrawal rates to climb precipitously."
+    trigger = {
+        OR = {
+            AND = {
+                owner = { produces = opium }
+                is_capital = yes
+            }
+            trade_goods = opium
+            any_neighbor_province = {
+                has_province_modifier = local_drug_habit
+            }
+        }
+        NOT = { has_province_modifier = local_drug_habit }
+        NOT = { has_province_modifier = local_opium_ban }
+        owner = { civilized = yes }
+    }
 
     mean_time_to_happen = {
         months = 600
@@ -929,95 +938,25 @@ province_event = {
             is_overseas = yes
         }
         modifier = {
+            factor = 0.5
+            trade_goods = opium
+        }
+
+        modifier = {
             factor = 2
             owner = { has_country_modifier = opium_ban }
         }
         modifier = {
             factor = 2
-            has_province_modifier = local_opium_ban
+            owner = { has_country_modifier = liquor_prohibition }
         }
         modifier = {
             factor = 1.25
             owner = { has_country_modifier = temperance_league }
         }
         modifier = {
-            factor = 0.8
-            owner = { invention = synthetic_opioids }
-        }
-    }
-
-    option = {
-        name = "Let them have their fun."
-        add_province_modifier = {
-            name = local_drug_habit
-            duration = 3650
-        }
-        any_neighbor_province = {
-            limit = { owned_by = THIS }
-            add_province_modifier = {
-                name = local_drug_habit
-                duration = 1825
-            }
-        }
-        NWO = { change_variable = { which = addicts_local value = 1 } }
-        ai_chance = {
-            factor = 50
-            modifier = {
-                factor = 0.5
-                religious_policy = pro_atheism
-            }
-        }
-    }
-
-    option = {
-        name = "Crack down on the addicts!"
-        
-        any_pop = {
-            militancy = 2
-            reduce_pop = 0.999
-        }
-        any_neighbor_province = {
-            limit = { owned_by = THIS }
-            any_pop = {
-                militancy = 1
-            }
-        }
-        NWO = { change_variable = { which = addict_crack_down value = 1 } }
-        ai_chance = {
-            factor = 50
-            modifier = {
-                factor = 0
-                religious_policy = moralism
-            }
-        }
-    }
-}
-
-
-#Opium addiction spreads
-province_event = {
-    id = 166823
-    title = "Drug Addiction Spreads to $PROVINCENAME$"
-    desc = "Although opium has been safely used as medicine for centuries, urbanization and global trade has begun to bring more and more refined, potent, and dangerous forms of this drug, creating a new underclass of addicts."
-
-    trigger = {
-        is_capital = yes
-        NOT = { has_province_modifier = local_drug_habit }
-        owner = {
-            civilized = yes
-            produces = opium
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 600
-        modifier = {
-            factor = 2
-            owner = { has_country_modifier = opium_ban }
-        }
-        modifier = {
             factor = 1.25
-            owner = { has_country_modifier = temperance_league }
+            owner = { penal_system = rehabilitation }
         }
         modifier = {
             factor = 0.8
@@ -1032,14 +971,7 @@ province_event = {
             name = local_drug_habit
             duration = 3650
         }
-        any_neighbor_province = {
-            limit = { owned_by = THIS }
-            add_province_modifier = {
-                name = local_drug_habit
-                duration = 1825
-            }
-        }
-        NWO = { change_variable = { which = addicts_capital value = 1 } }
+        NWO = { change_variable = { which = addict value = 1 } }
         ai_chance = {
             factor = 50
             modifier = {
@@ -1055,14 +987,7 @@ province_event = {
             militancy = 2
             reduce_pop = 0.999
         }
-        any_neighbor_province = {
-            limit = { owned_by = THIS }
-            any_pop = {
-                militancy = 1
-            }
-        }
-        NWO = { change_variable = { which = addict_crack_down_capital value = 1 } }
-
+        NWO = { change_variable = { which = addict_crackdown value = 1 } }
 
         ai_chance = {
             factor = 50

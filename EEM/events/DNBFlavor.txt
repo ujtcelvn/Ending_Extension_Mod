@@ -43,7 +43,6 @@ country_event = {
                 }
             }
         }
-
     }
 
     option = {
@@ -69,6 +68,13 @@ country_event = {
             has_global_flag = partial_hungarian_approval
             has_global_flag = no_hungarian_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = HUN }
+                average_militancy = 1
+            }
+            exists = HUN
         }
     }
 
@@ -143,6 +149,13 @@ country_event = {
             has_global_flag = partial_hungarian_approval
             has_global_flag = no_hungarian_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = HUN }
+                average_militancy = 1
+            }
+            exists = HUN
         }
     }
 
@@ -282,6 +295,14 @@ country_event = {
             has_global_flag = no_czech_approval
             num_of_revolts = 1
         }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = BOH }
+                average_militancy = 1
+            }
+            exists = BOH
+            exists = CZH
+        }
     }
 
     mean_time_to_happen = {
@@ -365,6 +386,14 @@ country_event = {
             has_global_flag = partial_czech_approval
             has_global_flag = no_czech_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = BOH }
+                average_militancy = 1
+            }
+            exists = BOH
+            exists = CZH
         }
     }
 
@@ -500,6 +529,16 @@ country_event = {
             has_global_flag = no_romanian_approval
             num_of_revolts = 1
         }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = SIE }
+                average_militancy = 1
+            }
+            exists = SIE
+            exists = MDV
+            exists = WAL
+            exists = ROM
+        }
     }
 
     mean_time_to_happen = {
@@ -583,6 +622,16 @@ country_event = {
             has_global_flag = partial_romanian_approval
             has_global_flag = no_romanian_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = ROM }
+                average_militancy = 1
+            }
+            exists = SIE
+            exists = MDV
+            exists = WAL
+            exists = ROM
         }
     }
 
@@ -722,6 +771,14 @@ country_event = {
             has_global_flag = no_croatian_approval
             num_of_revolts = 1
         }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = CRO }
+                average_militancy = 1
+            }
+            exists = CRO
+            exists = YUG
+        }
     }
 
     mean_time_to_happen = {
@@ -805,6 +862,14 @@ country_event = {
             has_global_flag = partial_croatian_approval
             has_global_flag = no_croatian_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = CRO }
+                average_militancy = 1
+            }
+            exists = CRO
+            exists = YUG
         }
     }
 
@@ -944,6 +1009,14 @@ country_event = {
             has_global_flag = no_slovene_approval
             num_of_revolts = 1
         }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = SLO }
+                average_militancy = 1
+            }
+            exists = SLO
+            exists = YUG
+        }
     }
 
     mean_time_to_happen = {
@@ -1027,6 +1100,14 @@ country_event = {
             has_global_flag = partial_slovene_approval
             has_global_flag = no_slovene_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = SLO }
+                average_militancy = 1
+            }
+            exists = SLO
+            exists = YUG
         }
     }
 
@@ -1162,6 +1243,14 @@ country_event = {
             has_global_flag = no_slovakian_approval
             num_of_revolts = 1
         }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = SLV }
+                average_militancy = 1
+            }
+            exists = SLV
+            exists = CZH
+        }
     }
 
     mean_time_to_happen = {
@@ -1241,6 +1330,14 @@ country_event = {
             has_global_flag = partial_slovakian_approval
             has_global_flag = no_slovakian_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = SLV }
+                average_militancy = 1
+            }
+            exists = SLV
+            exists = CZH
         }
     }
 
@@ -1387,6 +1484,17 @@ country_event = {
             has_global_flag = no_polish_approval
             num_of_revolts = 1
         }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = GLM }
+                average_militancy = 1
+            }
+            exists = KRA
+            exists = GLM
+            exists = CPL
+            exists = POL
+            exists = PLC
+        }
     }
 
     mean_time_to_happen = {
@@ -1470,6 +1578,17 @@ country_event = {
             has_global_flag = partial_polish_approval
             has_global_flag = no_polish_approval
             num_of_revolts = 1
+        }
+        OR = {
+            any_state = {
+                any_owned_province = { is_core = POL }
+                average_militancy = 1
+            }
+            exists = KRA
+            exists = GLM
+            exists = CPL
+            exists = POL
+            exists = PLC
         }
     }
 

@@ -170,7 +170,7 @@ air_to_air_radar = {
     effect = {
         plane = {
             defence = 1
-            supply_consumption = 0.20
+            supply_consumption = 0.25
         }
     }
 }

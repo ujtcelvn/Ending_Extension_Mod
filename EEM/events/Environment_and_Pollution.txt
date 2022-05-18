@@ -1,85 +1,130 @@
-province_event = {
+country_event = {
     id = 12300
-    title = "Pollution in $PROVINCENAME$!"
-    desc = "Pollution, pollution, we've got smog and sewage and mud,"
+    title = "Pollution, Pollution"
+    desc = "We've got smog and sewage and mud,"
+
+    picture = "air_pollution"
 
     trigger = {
-		is_colonial = no
-		total_pops = 400000 #London 1836
- 		has_pop_type = craftsmen
-        #owner = { NOT = { has_global_flag = workplace_events_disabled } }
+        industrial_score = 100 #UK 1836: 125
+
+        capital_scope = {
+            NOT = { has_province_modifier = local_pollution_problem }
+        }
+
+        any_owned_province = {
+            is_colonial = no
+            total_pops = 250000 #London 1836: 400000
+            has_pop_type = craftsmen
+        }
     }
 
     mean_time_to_happen = {
         months = 1200
 
         modifier = {
-            factor = 0.8
-		    total_pops = 800000
+            factor = 0.9
+            any_owned_province = {
+                is_colonial = no
+                total_pops = 500000
+                has_pop_type = craftsmen
+            }
         }
         modifier = {
-            factor = 0.8
-		    total_pops = 1600000
+            factor = 0.9
+            any_owned_province = {
+                is_colonial = no
+                total_pops = 1000000
+                has_pop_type = craftsmen
+            }
+        }
+        modifier = {
+            factor = 0.9
+            any_owned_province = {
+                is_colonial = no
+                total_pops = 2000000 #London 1950: 8 million / 4 = 2,000,000
+                has_pop_type = craftsmen
+            }
+        }
+        modifier = {
+            factor = 0.9
+            any_owned_province = {
+                is_colonial = no
+                total_pops = 4000000
+                has_pop_type = craftsmen
+            }
         }
 
         modifier = {
-            factor = 0.8
-            has_province_modifier = local_modern_transportation
+            factor = 0.9
+            iron_railroad = 1 #1850
         }
+
         modifier = {
-            factor = 0.8
+            factor = 0.9 # local_tractors, local_nitroglycerin_and_machine_tools
+            invention = tractors #combustion_engine 1880
+            invention = machine_tools #semi_automatization 1836
+            invention = dynamite #regenerative_furnaces AND 1860
+        }
+
+        modifier = {
+            factor = 0.9 # local_conveyors_and_excavators
+            invention = electric_rolling_techniques #advanced_metallurgy 1890
+            combustion_engine = 1 #1880
+        }
+
+        modifier = {
+            factor = 0.9
+            invention = leaded_gasoline #synthetic_polymers 1900
+        }
+
+        modifier = {
+            factor = 0.9 #local_modern_transportation
+            invention = airliner #1926 
+            invention = fordism
+            invention = steamer_transports
+            tech_infrastructure_7 = 1 #1930
+        }
+
+        modifier = {
+            factor = 0.9 #local_intensive_agriculture 1936
+            invention = artificial_fertilizers
+            invention = artificial_herbicides
+            invention = improved_antibiotics
+            #invention = tractors
+        }
+
+
+        modifier = {
+            factor = 0.8 #raw goods
 			OR = {
-				trade_goods = oil
-				trade_goods = coal
-				trade_goods = sulphur
+				big_producer = oil
+				big_producer = coal
+				big_producer = sulphur
+				big_producer = iron
 			}
         }
+
         modifier = {
-            factor = 0.9
-			state_scope = {
-				OR = {
-					has_building = cement_factory
-					has_building = fertilizer_factory
-				}
+            factor = 0.8 #processed goods
+			OR = {
+				big_producer = fuel
+				big_producer = cement
+				big_producer = fertilizer
+				big_producer = steel
 			}
         }
+
         modifier = {
-            factor = 0.9
-			state_scope = {
-				OR = {
-					has_building = steel_factory
-					has_building = machine_parts_factory
-				}
+            factor = 0.8 #advanced goods ( 0.8^3 ~= 0.5 )
+			OR = {
+				big_producer = steamer_convoy
+				big_producer = automobiles
+				big_producer = aeroplanes
+				big_producer = barrels
 			}
         }
-        modifier = {
-            factor = 0.9
-			state_scope = {
-				OR = {
-					has_building = synthetic_oil_factory
-					has_building = fuel_refinery
-				}
-			}
-        }
-        modifier = {
-            factor = 0.9
-			state_scope = {
-				OR = {
-					has_building = automobile_factory
-					has_building = steamer_shipyard
-				}
-			}
-        }
-        modifier = {
-            factor = 0.9
-			state_scope = {
-				OR = {
-					has_building = synthetic_rubber_factory
-					has_building = hydrodesulphurization_plant
-				}
-			}
-        }
-		
+
         modifier = {
             factor = 1.2
             safety_regulations = low_safety
@@ -94,24 +139,110 @@ province_event = {
         }
         modifier = {
             factor = 2
-            owner = { has_country_modifier = clean_air_act }
+            has_country_modifier = clean_air_act 
         }
-		
-        modifier = {
-            factor = 0.8
-            owner = { invention = leaded_gasoline }
-        }
-    }
+   }
 
     option = {
         name = "Turn on your tap and get hot and cold running crud."
-        add_province_modifier = { name = local_pollution_problem duration = 365 }
-        any_pop = { reduce_pop = 0.9995 }
 
         NWO = {
             change_variable = {
                 which = pollution_counter
                 value = 1
+            }
+        }
+
+        capital_scope = {
+            add_province_modifier = { name = local_pollution_problem duration = 365 }
+            random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+        }
+
+        any_owned = {
+            limit = {
+                is_colonial = no
+                total_pops = 250000 #London 1836: 400000
+                has_pop_type = craftsmen
+                NOT = { has_province_modifier = local_pollution_problem }
+                OR = {
+                    trade_goods = oil
+                    trade_goods = coal
+                    trade_goods = sulphur
+                    trade_goods = iron
+                }
+            }
+            random = {
+                chance = 10
+                add_province_modifier = { name = local_pollution_problem duration = 365 }
+                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_colonial = no
+                total_pops = 500000
+                has_pop_type = craftsmen
+                NOT = { has_province_modifier = local_pollution_problem }
+            }
+            random = {
+                chance = 10
+                add_province_modifier = { name = local_pollution_problem duration = 365 }
+                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_colonial = no
+                total_pops = 1000000
+                has_pop_type = craftsmen
+                NOT = { has_province_modifier = local_pollution_problem }
+                OR = {
+                    trade_goods = oil
+                    trade_goods = coal
+                    trade_goods = sulphur
+                    trade_goods = iron
+                }
+            }
+            random = {
+                chance = 10
+                add_province_modifier = { name = local_pollution_problem duration = 365 }
+                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_colonial = no
+                total_pops = 2000000
+                has_pop_type = craftsmen
+                NOT = { has_province_modifier = local_pollution_problem }
+            }
+            random = {
+                chance = 10
+                add_province_modifier = { name = local_pollution_problem duration = 365 }
+                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_colonial = no
+                total_pops = 4000000
+                has_pop_type = craftsmen
+                NOT = { has_province_modifier = local_pollution_problem }
+                OR = {
+                    trade_goods = oil
+                    trade_goods = coal
+                    trade_goods = sulphur
+                    trade_goods = iron
+                }
+            }
+            random = {
+                chance = 10
+                add_province_modifier = { name = local_pollution_problem duration = 365 }
+                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
             }
         }
 
@@ -127,10 +258,11 @@ country_event = {
     picture = "air_pollution"
 
     trigger = {
-		any_owned_province = { has_province_modifier = local_pollution_problem }
+		capital_scope = { has_province_modifier = local_pollution_problem }
         safety_regulations = good_safety
         NOT = { has_country_modifier = clean_air_act }
         NOT = { government = bourgeois_dictatorship }
+        NOT = { ruling_party_ideology = anarcho_liberal }
         NOT = { has_country_flag = government_busy_with_something }
     }
 
@@ -234,7 +366,7 @@ country_event = {
 country_event = {
     id = 12302
     title = "Repeal Clean Air Act?"
-    desc = "Business and industry representatives claim that current air quality laws unecessarily restrict their operations and strangle their competitiveness. Should we listen to their complaints and repeal the Clean Air Act?"
+    desc = "Business and industry representatives claim that current air quality laws unecessarily restrict their operations and strangle their competitiveness, and are petitioning for a repeal the Clean Air Act."
     picture = "air_pollution"
 
     trigger = {
@@ -262,7 +394,7 @@ country_event = {
     }
 
     option = {
-        name = "Of course! Finally the economy can thrive again!"
+        name = "For the sake of the economy, repeal the act!"
 
         remove_country_modifier = clean_air_act
         clr_country_flag = clean_air_act_not_repealed
@@ -290,7 +422,7 @@ country_event = {
 
 
     option = {
-        name = "No, air quality is too important to sacrifice."
+        name = "Air quality is too important to sacrifice."
 
         set_country_flag = clean_air_act_not_repealed
         any_pop = {

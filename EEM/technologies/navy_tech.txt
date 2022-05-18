@@ -636,7 +636,7 @@ naval_doctrine_7 = {
         }
         # Only research this after you have carriers
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = { invention = purpose_built_air_carriers }
         }
     }
@@ -1325,9 +1325,9 @@ ship_construction_7 = {
             factor = 1.1
             total_num_of_ports = 40
         }
-        # Only research this after you have carriers
+        # research this after you have carriers
         modifier = {
-            factor = 0
+            factor = 0.5
             NOT = { invention = purpose_built_air_carriers }
         }
     }

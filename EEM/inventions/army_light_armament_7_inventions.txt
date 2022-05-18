@@ -97,7 +97,7 @@ assault_rifle_experiments = {
         guard = {
             attack = 2
             defence = 3
-            supply_consumption = 0.25
+            supply_consumption = 0.20
         }
         engineer = {
             attack = 2

@@ -18,7 +18,7 @@ saturation_bombing_doctrine = {
     effect = {
         plane = {
             attack = 0.1
-            supply_consumption = 0.10
+            supply_consumption = 0.20
         }
     }
 }
@@ -79,26 +79,56 @@ mechanized_assault_doctrine = {
 }
 
 
-civil_defense = {
-    limit = {
-        army_doctrine_7 = 1
-        has_country_flag = existing_country
-    }
+paratrooper_doctrine = {
+    limit = { army_doctrine_7 = 1 }
     chance = {
         base = 2
         modifier = {
-            factor = 1
-            psychology_7 = 1
+            factor = 2
+            invention = portable_radio
         }
         modifier = {
             factor = 2
-            army_leadership_7 = 1
+            war = yes
+            war_countries = { invention = paratrooper_doctrine }
+        }
+        modifier = {
+            factor = -6
+            not = { invention = late_interwar_bombers }
         }
     }
     effect = {
-        mobilisation_size = 0.01
+        guard = {
+            attack = 1
+            supply_consumption = 0.05
+        }
+        plane = {
+            attack = 0.1
+            supply_consumption = 0.10
+        }
     }
 }
+
+#civil_defense = {
+#    limit = {
+#        army_doctrine_7 = 1
+#        has_country_flag = existing_country
+#    }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 1
+#            psychology_7 = 1
+#        }
+#        modifier = {
+#            factor = 2
+#            army_leadership_7 = 1
+#        }
+#    }
+#    effect = {
+#        mobilisation_size = 0.01
+#    }
+#}
 
 ceremonial_cavalry = {
     limit = { army_doctrine_7 = 1 }
@@ -139,12 +169,22 @@ combined_arms_offensive = {
     chance = {
         base = 2
         modifier = {
-            factor = 2
-            invention = motorized_infantry_activation
+            factor = -6
+            NOT = { invention = motorized_infantry_activation }
+            NOT = { invention = military_aviation }
         }
         modifier = {
             factor = 2
-            invention = military_aviation
+            invention = self_propelled_artillery
+        }
+        modifier = {
+            factor = 1
+            invention = paratrooper_doctrine
+        }
+        modifier = {
+            factor = 1
+            war = yes
+            war_countries = { invention = combined_arms_offensive }
         }
     }
     effect = {

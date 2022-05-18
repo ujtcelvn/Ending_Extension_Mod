@@ -144,6 +144,9 @@ country_migration_target = {
             government = hms_government
 			government = prussian_constitutionalism
         }
+
+        war = no #replaces new_world_war global_immigrant_attract = -1.3
+        NOT = { num_of_revolts = 1 } #rebels mean the nation is unstable
     }
 
     modifier = {
@@ -162,6 +165,9 @@ country_migration_target = {
             government = hms_government
 			government = prussian_constitutionalism
         }
+
+        war = no #replaces new_world_war global_immigrant_attract = -1.3
+        NOT = { num_of_revolts = 1 } #rebels mean the nation is unstable
     }
 }
 
@@ -382,105 +388,7 @@ migration_target = {
 	###End of random rules###
 	
 	###Pops terrain preferences###
-    modifier = {
-        factor = 0.8
-        terrain = steppe
-    }
-
-    modifier = {
-        factor = 0.7
-        terrain = savanna
-    }
-
-    modifier = {
-        factor = 0.8
-        terrain = dryhills
-    }
-
-    modifier = {
-        factor = 0.4
-		OR = {
-			terrain = jungle
-			terrain = new_world_jungle
-		}
-    }
-
-    modifier = {
-        factor = 0.6
-		OR = {
-			terrain = mountain
-			terrain = new_world_mountain
-		}
-    }
-
-    modifier = {
-        factor = 0.6
-        terrain = montane_forest
-    }
-
-    modifier = {
-        factor = 0.5
-        terrain = marsh
-    }
-
-    modifier = {
-        factor = 0.5
-		OR = {
-			terrain = semidesert
-			terrain = new_world_semidesert
-		}
-    }
-
-    modifier = {
-        factor = 0.5
-		OR = {
-			terrain = boreal
-			terrain = new_world_boreal
-		}
-    }
-
-    modifier = {
-        factor = 0.1
-		OR = {
-			terrain = small_island
-			terrain = new_world_small_island
-		}
-    }
-
-    modifier = {
-        factor = 0.01
-        terrain = coral_island
-    }
-
-    modifier = {
-        factor = 0.05
-		OR = {
-			terrain = desert
-			terrain = new_world_desert
-		}
-    }
-
-    modifier = {
-        factor = 0.01
-        terrain = desert
-        continent = africa
-    }
-
-    modifier = {
-        factor = 0.05
-		OR = {
-			terrain = arctic
-			terrain = new_world_arctic
-		}
-    }
-
-    modifier = {
-        factor = 0.05
-		OR = {
-			terrain = montane_tundra
-			terrain = new_world_montane_tundra
-		}
-    }
+    # terrain preferences removed, now immigrant attractiveness is intrinsic to each terrain type
 	###End of pops terrain preferences###
 	
 	###Pop in a country that has no colonies but has colonial transportation will instead move to inhospitable provinces###

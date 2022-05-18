@@ -1038,7 +1038,6 @@ country_event = {
             }
         }
         RTR = { all_core = { remove_core = RTR } }
-        years_of_research = 1
     }
 }
 

@@ -1,12 +1,12 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
 start_strategic_bombardment_title;Begin Strategic Bombardment;;;;;;;;;;;;;
-start_strategic_bombardment_desc;Perhaps bombing the enemy's cities will help us win the war?;;;;;;;;;;;;;
+start_strategic_bombardment_desc;Perhaps bombing the enemy's cities will help win the war?;;;;;;;;;;;;;
 end_strategic_bombardment_title;End Strategic Bombardment;;;;;;;;;;;;;
-end_strategic_bombardment_desc;We no longer can or want to maintain our strategic bombers.;;;;;;;;;;;;;
+end_strategic_bombardment_desc;Strategic bombing is either unnecessary or impossible.;;;;;;;;;;;;;
 blow_yellow_river_dikes_title;Blow the Yellow River Dikes!;;;;;;;;;;;;;
-blow_yellow_river_dikes_desc;If we were to destroy the dikes along the Yellow River and cause an artifical flood, perhaps we can slow down the Japanese advance.;;;;;;;;;;;;;
+blow_yellow_river_dikes_desc;If the dikes along the Yellow River were to be destroyed, it would cause an artifical flood that perhaps can slow down the Japanese advance.;;;;;;;;;;;;;
 move_capital_to_nanking_ming_title;Move Capital to Nanjing;;;;;;;;;;;;;
-move_capital_to_nanking_ming_desc;We can move our capital to its rightful place in Nanjing.;;;;;;;;;;;;;
+move_capital_to_nanking_ming_desc;The capital can be moved to its rightful place in Nanjing.;;;;;;;;;;;;;
 revoke_sino_portuguese_treaty_ming_title;Revoke the $CAPITAL$ Treaty over Macao;;;;;;;;;;;;;
 revoke_sino_portuguese_treaty_ming_desc;The $CAPITAL$ Treaty of Friendship and Commerce, signed years ago over Macao, is no longer valid. Not only the country that proposed it breached its terms, their interpretation of the treaty is completely wrong. They argue that we agreed to "perpetual occupation and government" by them were no such thing would ever be done for chinese territory by the Chinese.;;;;;;;;;;;;;
 inherit_ryukyu_china_title;Inherit Ryukyu;;;;;;;;;;;;;
@@ -14,7 +14,7 @@ inherit_ryukyu_china_desc;The islands of Ryukyu have always had blood ties to bo
 become_qing_title;Restore the Qing Empire;;;;;;;;;;;;;
 become_qing_desc;We have reconquered enough of China to declare ourselves the Qing Empire once again.;;;;;;;;;;;;;
 move_capital_to_beijing_qing_title;Move Capital to Beijing;;;;;;;;;;;;;
-move_capital_to_beijing_qing_desc;We can move our capital to its rightful place in Beijing.;;;;;;;;;;;;;
+move_capital_to_beijing_qing_desc;The capital can be moved to its rightful place in Beijing.;;;;;;;;;;;;;
 become_china_ming_title;Become China;;;;;;;;;;;;;
 become_china_ming_desc;We should reform our government to better administer the vast lands of China. I mean, it is literally the current year.;;;;;;;;;;;;;
 prevent_warlord_era_title;Bring Generals Under Control;;;;;;;;;;;;;

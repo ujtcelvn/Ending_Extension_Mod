@@ -46,35 +46,93 @@ industry = 30 + 3
 ####################################################################################################
 Coming soon: 
 
-#TODO: Healthcare
+#TODO: Healthcare, pop growth adjustments
 
 #TODO: Maybe the bonuses to supply limit should be split between the Medicine tree and Military Science? It makes sense that just getting better at preventative medicine and treatment can improve survivability in harsh terrain, but logistics are part and parcel of that. Military Science is actually punishing to take too quickly because of the huge increase in cost for army supply, and if it gave some supply limit it would really push people to take it.
 
 #TODO: The Propaganda decisions seem to me to be VERY weak midgame. I was only able to shift my population’s opinions by about .4%, which is a very low amount for the price, and far below what I needed to be able to add another wargoal. I don’t dislike the system but I’d suggest keeping an eye on it, because to me it feels like there’s not enough agency on the player’s part. I think the player should be able to pay more plurality and infamy (perhaps militancy as well actually) to be able to really push their agenda on the people, perhaps even using some slightly extra-legal means to force their way. The costs long-term could just be more significant (perhaps even the possibility of a political scandal for their ruling party, to represent news of the issue getting out?).
 
-#TODO: On the subject of province unemployment, there should never be unemployment in a province that produces precious goods (not precious metals). It’s infuriating to build the Suez only to find by 1900 that 40% of your people in the province are unemployed due to RGO size. Any province with precious goods should get an RGO size modifier until the precious goods go away.
-
-#TODO: It seems strange that people will choose to migrate to a country with an ongoing revolution. In my game America has been dealing with a low-level population insurgency for almost four years, never quite being able to wipe them out, and has been hit with the Disunited States as well. Yet their immigration outstrips that of the CSA, which is independent, allied with a GP, and wealthy by comparison. I think there should be an immigration malus associated with having rebels on the map, to punish states which have collapsed enough to be incapable of maintaining the rule of law.
-
 #TODO: purchase battleship
-
-#TODO: make AI national value changing happen by event, because it's much easier to adjust AI weights in events than in decisions. AI national value choice also now depends on many factors instead of just 20% for each
 
 #TODO: make the Great Depression more likely because I have never seen it ever fire
 
-#TODO: more anti-war stuff
+#TODO: anti-war stuff, international organizations
 
-#TODO: make pollution a country event, not a province event, to improve performance and made impactful
+#TODO: nukes
+
+#TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships get to purge in different ideologies
+#TODO: ancap memes
+
+#TODO: reduce profitability of synthetic goods even more
+#TODO: increase oil production inventions
 
 #TODO: pogroms
+#TODO: Special Attack Units
+#TODO: unethical experiments, leak
 
-#TODO: Kamikaze
+#TODO: reduce assimilation between different races, especially in the New World
+#TODO: let assimilation increase via other methods
+#TODO: anti-immigrant riots in the New World
+#TODO: fix accepting black pops in the New World
+#TODO: Why is it that the most open societies (Secularized/Full Citizenship) are the ones that are most efficient at assimilation? It seems like those are the societies where there’s the least pressure to assimilate. Residency clearly implies that there are limited openings for assimilation, so I understand why that slows assimilation down, but shouldn’t the most efficient for assimilation actually be limited citizenship, since there’s still pressure on minority groups to assimilate?
 
-#TODO: make Xinhai revolution less bordergory
+#TODO: invention localizations
+####################################################################################################
+#TODO: v0.5.6
+
+#TODO: End the manchu dominance occurs DURING the Taiping rebellion
+     During [the Taiping Rebellion] event, the Qing government ran out of funds for its antirebel efforts. To defeat the rebels, the emperor asked local gentry for financial help. In exchange, public school quotas were adjusted in the gentry’s favor, increasing the odds that their sons would later be admitted to the imperial civil service. Wang (2017) finds that gentry located in zones nearer to the so-called Taiping Heavenly Kingdom—the revolutionary regime established by the Taiping—contributed significantly more to the emperor’s military efforts. This evidence suggests that, rather than exploit the ruler’s need for quick funds to bargain over local political freedoms, as was common in Europe, the gentry agreed to remain loyal in exchange for a greater chance for their offspring to gain entrance to the imperial civil service. [10]
+#TODO: Remove trade zones, replace with Viceorys (if the qing wins. if qing didn't win, no viceroys OR trade zones!) (remember to give free influence to the treaty port owners)
+#TODO: Gunboat Patrol (militancy -0.05, consciousness +0.1) ?
+#TODO: buff Qing so they can actually beat Russia and France on land, like they did irl.
+#TODO: boxer rebellion rework. I have literally never seen it happen.
+    #TODO: rebalance chinese reactionary and boxer rebel chance
+#TODO: mutual protection of southeast china
+	each clique has chance of joining? Cliques bordering Qing less likely to join? neutrality modifier?
+	#TODO: shandong clique defects to mutual protection of southeast china ( if high consciousness? has chinese floods?)
+#TODO: adjust accepted pops for possible Chinas
+	Tag		primary		accepted		added if they win
+	Xinjiang north		uighur			south
+#TODO: Qing Mongol acceptance later, if they win the xinhai rebellion and warlord era?
+	Its notable that the only dynasty that managed to fully nullify the barbarian threat was a dynasty that began as a group of barbarians itself. Long before the Manchus conquered China they began to form marriages alliances with Mongolia’s noble houses and incorporate Mongol units into its armed forces. Steppe politics was built into the Qing’s DNA, and they played the game masterfully. [10] Ethnic Chinese dynasties had a much tougher job coming to terms with their enemies on the steppe.
+#TODO: make Xinhai revolution less bordergory, using the viceroys
+
+####################################################################################################
+v0.5.5
+
+Removed terrain preference calculations from pop file, now immigrant attractiveness of terrain is inherent in the terrain itself
+    immigrant_attract = multiplier from poptype * (1 - new world ver of terrain modifier) - 1
+Removed the new_world_war triggered modifier, instead, new world immigration boost no longer applies if nation is at war or has any revolts
+War exhaustion now reduces global_immigrant_attract by -0.01 per percentage
+
+Geneva Convention currently reduces land organisation by -0.05 and war_exhaustion by -0.02, no longer limits military spending, and the AI will only sign it after researching military_statistics 1850
+
+pollution event is now a country event, conditions adjusted
+Clean air act reduces core pop militancy but also reduces RGO and artisan efficiency, and uses administrative_multiplier instead of reducing administrative_efficiency_modifier again
+
+halved local artisan output boost from local distribution channels and local modern transportation
+local modern transportation now increases local immigration as much as 1 level of infrastructure, +0.05
+
+Tax Refund event amount of money that can be stored in treasury increases with techs and population
+
+liquor prohibition now increases factory_throughput so there is actually a reason to pick it
+Merged the 2 drug addiction events to improve performance
+opium demand adjustments, yet again
+
+Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
+adjust Chinese province uprising event to be less random, and choosing to appease_societies slightly changes the effects
+
+carrier range reduced from 2 to 1.6, carriers now start with 5 torpedo attack (carrier bombs are better vs large slow targets) (so AI builds them more)
+adjust AI research of 7th row of naval techs
+WW2 planes speed and supply cost increased.
+Paratrooper doctrine invention replaces civil defense invention
+high admin spending now reduces bombing risk (thresholds at 49%, 74%, and 99%)
+Commerce technologies' increase of precious goods RGO size quadrupled from 0.05 to 0.2 for vanilla techs to reduce precious goods RGO unemployment.
+
+Other bugfixes and adjustments
 
 ####################################################################################################
 v0.5.4
-
 Austria-Hungary and the Danubian Federation only collapses into Austria if they do NOT own both AUS_641 Budapest, Central Hungary and AUS_639 Zalaegerszeg, Transdanubia and Hungary exists, a 1 state hungarian rump state somewhere random is not enough
 Austria-Hungary and the Danubian Federation no longer collapses if communist
 Adjust DNB culture acceptance chances (more if low consciousness, less if its national union exists)
@@ -100,7 +158,6 @@ Fixed conquest of the desert decision to solve HPM bug where 1807 and 2609 (the 
 Fixed HPM bug where 1192 Nukus often not having any cores
 Fixed HPM issue where upon reloading a save KMT-aligned warlords immediately switch to Beiyang-aligned but for real this time
 
-####################################################################################################
 
 v0.5.3e
 Sped up north-south conference

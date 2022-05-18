@@ -56,7 +56,7 @@ aircraft_carrier = {
     #Naval Abilities
     hull = 20
     gun_power = 14 #4 + 11 = 15
-    fire_range = 2
+    fire_range = 1.6 #2
     evasion = 0
-    torpedo_attack = 0
+    torpedo_attack = 5 #0
 }
