@@ -1,6 +1,6 @@
 capital = 1495
 primary_culture = yue
-culture = hakka
+culture = zhuang
 culture = nanfaren
 religion = mahayana
 government = absolute_monarchy

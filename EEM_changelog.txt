@@ -80,24 +80,42 @@ Coming soon:
 ####################################################################################################
 #TODO: v0.5.6
 
-#TODO: End the manchu dominance occurs DURING the Taiping rebellion
-     During [the Taiping Rebellion] event, the Qing government ran out of funds for its antirebel efforts. To defeat the rebels, the emperor asked local gentry for financial help. In exchange, public school quotas were adjusted in the gentry’s favor, increasing the odds that their sons would later be admitted to the imperial civil service. Wang (2017) finds that gentry located in zones nearer to the so-called Taiping Heavenly Kingdom—the revolutionary regime established by the Taiping—contributed significantly more to the emperor’s military efforts. This evidence suggests that, rather than exploit the ruler’s need for quick funds to bargain over local political freedoms, as was common in Europe, the gentry agreed to remain loyal in exchange for a greater chance for their offspring to gain entrance to the imperial civil service. [10]
-#TODO: Remove trade zones, replace with Viceorys (if the qing wins. if qing didn't win, no viceroys OR trade zones!) (remember to give free influence to the treaty port owners)
-#TODO: Gunboat Patrol (militancy -0.05, consciousness +0.1) ?
-#TODO: buff Qing so they can actually beat Russia and France on land, like they did irl.
-#TODO: boxer rebellion rework. I have literally never seen it happen.
-    #TODO: rebalance chinese reactionary and boxer rebel chance
-#TODO: mutual protection of southeast china
-	each clique has chance of joining? Cliques bordering Qing less likely to join? neutrality modifier?
-	#TODO: shandong clique defects to mutual protection of southeast china ( if high consciousness? has chinese floods?)
-#TODO: adjust accepted pops for possible Chinas
-	Tag		primary		accepted		added if they win
-	Xinjiang north		uighur			south
-#TODO: Qing Mongol acceptance later, if they win the xinhai rebellion and warlord era?
-	Its notable that the only dynasty that managed to fully nullify the barbarian threat was a dynasty that began as a group of barbarians itself. Long before the Manchus conquered China they began to form marriages alliances with Mongolia’s noble houses and incorporate Mongol units into its armed forces. Steppe politics was built into the Qing’s DNA, and they played the game masterfully. [10] Ethnic Chinese dynasties had a much tougher job coming to terms with their enemies on the steppe.
-#TODO: make Xinhai revolution less bordergory, using the viceroys
+#TODO: China Rework 2
+    End the manchu dominance occurs DURING the Taiping rebellion
+         During [the Taiping Rebellion] event, the Qing government ran out of funds for its antirebel efforts. To defeat the rebels, the emperor asked local gentry for financial help. In exchange, public school quotas were adjusted in the gentry’s favor, increasing the odds that their sons would later be admitted to the imperial civil service. Wang (2017) finds that gentry located in zones nearer to the so-called Taiping Heavenly Kingdom—the revolutionary regime established by the Taiping—contributed significantly more to the emperor’s military efforts. This evidence suggests that, rather than exploit the ruler’s need for quick funds to bargain over local political freedoms, as was common in Europe, the gentry agreed to remain loyal in exchange for a greater chance for their offspring to gain entrance to the imperial civil service. [10]
+    Remove trade zones, replace with Viceorys (if the qing wins. if qing didn't win, no viceroys OR trade zones!) (remember to give free influence to the treaty port owners) (population too large, might not be able to sphere???)
+    Gunboat Patrol (militancy -0.05, consciousness +0.1) ?
+    buff Qing so they can actually beat Russia and France on land, like they did irl.
+    boxer rebellion rework. I have literally never seen it happen.
+    mutual protection of southeast china
+	    each clique has chance of joining? Cliques bordering Qing less likely to join? neutrality modifier?
+	    shandong clique to mutual protection of southeast china ( if high consciousness? has chinese floods?)
+    adjust accepted pops for possible Chinas
+        Tag		primary		accepted		added if they win
+		Xinjiang north		uighur			south
+	Qing Mongol acceptance later, if they win the xinhai rebellion and warlord era?
+		Its notable that the only dynasty that managed to fully nullify the barbarian threat was a dynasty that began as a group of barbarians itself. Long before the Manchus conquered China they began to form marriages alliances with Mongolia’s noble houses and incorporate Mongol units into its armed forces. Steppe politics was built into the Qing’s DNA, and they played the game masterfully. [10] Ethnic Chinese dynasties had a much tougher job coming to terms with their enemies on the steppe.
+	make Xinhai revolution less bordergory, using the viceroys
 
 ####################################################################################################
+v0.5.5a
+
+Electric gear factories get bonus from synthetic rubber factories too
+Halved bonus aeroplane factories get from machine parts factories and electric gear factories so it gets a maximum 25% total bonus like every other factory 
+Reverted soldier and officer liquor and wine consumption back to HPM levels
+Regular clothes no longer use wool (reverted to HPM). Wool is supposed to represent traditional clothing and stuff.
+Officers everyday lumber use halved (so it's the same as the amount of cement and steel they eat, like intellectuals), added a little bit of wool use to compensate (wool was often used as parts of military uniforms)
+
+tweak opium demand
+increase Boxer Rebel chance
+Simplified Chinese trade zones: now there is only 1 decision per zone (avaliable after the Taiping rebellion and/or with enough naval techs)
+Kochow now accepts zhuang instead of hakka
+Removed Guizhou from the warlord era, Yunnan taking it over is already modeled by the spread of warlord cores event
+
+War / Rebels reduce immigrant attractiveness in general, reverted new world immigration boost
+
+other misc adjustments
+
 v0.5.5
 
 Removed terrain preference calculations from pop file, now immigrant attractiveness of terrain is inherent in the terrain itself
@@ -132,6 +150,7 @@ Commerce technologies' increase of precious goods RGO size quadrupled from 0.05 
 Other bugfixes and adjustments
 
 ####################################################################################################
+
 v0.5.4
 Austria-Hungary and the Danubian Federation only collapses into Austria if they do NOT own both AUS_641 Budapest, Central Hungary and AUS_639 Zalaegerszeg, Transdanubia and Hungary exists, a 1 state hungarian rump state somewhere random is not enough
 Austria-Hungary and the Danubian Federation no longer collapses if communist

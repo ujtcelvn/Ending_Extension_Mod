@@ -133,11 +133,11 @@ aeroplane_factory = {
     value = 1.1                        #121 - profit =  28.36
     bonus = {
         trigger = { has_building = machine_parts_factory }
-        value = 0.25
+        value = 0.125 #0.25
     }
     bonus = {
         trigger = { has_building = electric_gear_factory }
-        value = 0.25
+        value = 0.125 #0.25
     }
 }
 
@@ -238,7 +238,12 @@ electric_gear_factory = {
     output_goods = electric_gear
     value = 5.6            #89.6 - profit = 16.6
     bonus = {
-        trigger = { trade_goods_in_state = rubber }
+        trigger = { 
+            OR = {
+                trade_goods_in_state = rubber
+                has_building = synthetic_rubber_factory
+            }
+        }
         value = 0.05
     }
     bonus = {
@@ -275,7 +280,7 @@ synthetic_oil_factory = {
         coal = 12        #27.6    total input+maint = 37.425
     }
     output_goods = oil
-    value = 2.8            #33.6 - profit = -3.825 (HPM: 3.4)
+    value = 2.8            #33.6 - profit = -3.825 (HPM: 3.4, 40.8 - profit = 3.375)
     bonus = {
         trigger = { trade_goods_in_state = coal }
         value = 0.25
@@ -507,19 +512,19 @@ paper_mill = {
 regular_clothes_factory = {
     template = factory_template
     input_goods = {
-        fabric = 39.125     #40        #72    total input+maint = 82
-        wool = 2.25       #0
+        fabric = 40 #39.125     #40        #72    total input+maint = 82
+        #wool = 2.25       #0
     }
     output_goods = regular_clothes
     value = 16            #92.8, from 87/15. Profit margin is 11.63% - total profit is 10.8
     bonus = {
         trigger = { has_building = fabric_factory }
-        value = 0.225     #0.25
+        value = 0.25 #0.225     #0.25
     }
-    bonus = {
-        trigger = { trade_goods_in_state = wool	}
-        value = 0.025
-    }
+    #bonus = {
+    #    trigger = { trade_goods_in_state = wool	}
+    #    value = 0.025
+    #}
 }
 
 explosives_factory = {
@@ -1308,8 +1313,8 @@ artisan_paper = {
 
 artisan_regular_clothes = {
     input_goods = {
-        fabric = 41.125    #42        #75.6
-        wool = 2.25   #0
+        fabric = 42 #41.125    #42        #75.6
+        #wool = 2.25   #0
     }
     output_goods = regular_clothes
     value = 15            #87 - profit = 11.4

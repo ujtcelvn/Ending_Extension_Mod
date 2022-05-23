@@ -546,41 +546,41 @@ country_event = {
         }
 
 
-        random = {
-            chance = 100
-            random_country = {
-                limit = { MAO = { OR = { exists = no vassal_of = THIS substate_of = THIS } have_core_in = THIS } }
-                MAO = {
-                    government = presidential_dictatorship
-                    ruling_party_ideology = reactionary
-                    political_reform = none_voting
-                    political_reform = party_appointed
-                    political_reform = no_meeting
-                    political_reform = state_press
-                    political_reform = no_trade_unions
-                    political_reform = underground_parties
-                    primary_culture = nanfaren
-                    add_accepted_culture = miao
-                    religion = mahayana
-                    clr_country_flag = animist_country
-                    set_country_flag = mahayana_country
-                }
-            }
-            random_country = {
-                limit = {
-                    tag = MAO
-                    OR = {
-                        vassal_of = THIS
-                        substate_of = THIS
-                    }
-                }
-                THIS = { release_vassal = MAO }
-            }
-            any_owned = {
-                limit = { is_core = MAO }
-                secede_province = MAO
-            }
-        }
+        #random = {
+        #    chance = 100
+        #    random_country = {
+        #        limit = { MAO = { OR = { exists = no vassal_of = THIS substate_of = THIS } have_core_in = THIS } }
+        #        MAO = {
+        #            government = presidential_dictatorship
+        #            ruling_party_ideology = reactionary
+        #            political_reform = none_voting
+        #            political_reform = party_appointed
+        #            political_reform = no_meeting
+        #            political_reform = state_press
+        #            political_reform = no_trade_unions
+        #            political_reform = underground_parties
+        #            primary_culture = nanfaren
+        #            add_accepted_culture = miao
+        #            religion = mahayana
+        #            clr_country_flag = animist_country
+        #            set_country_flag = mahayana_country
+        #        }
+        #    }
+        #    random_country = {
+        #        limit = {
+        #            tag = MAO
+        #            OR = {
+        #                vassal_of = THIS
+        #                substate_of = THIS
+        #            }
+        #        }
+        #        THIS = { release_vassal = MAO }
+        #    }
+        #    any_owned = {
+        #        limit = { is_core = MAO }
+        #        secede_province = MAO
+        #    }
+        #}
 
         any_pop = {
             militancy = -6
@@ -1284,20 +1284,20 @@ country_event = {
             limit = { is_core = FJN }
             secede_province = FJN
         }
-        random_country = {
-            limit = {
-                tag = MAO
-                OR = {
-                    vassal_of = THIS
-                    substate_of = THIS
-                }
-            }
-            THIS = { release_vassal = MAO }
-        }
-        any_owned = {
-            limit = { is_core = MAO }
-            secede_province = MAO
-        }
+        #random_country = {
+        #    limit = {
+        #        tag = MAO
+        #        OR = {
+        #            vassal_of = THIS
+        #            substate_of = THIS
+        #        }
+        #    }
+        #    THIS = { release_vassal = MAO }
+        #}
+        #any_owned = {
+        #    limit = { is_core = MAO }
+        #    secede_province = MAO
+        #}
 
         any_pop = {
             militancy = -6

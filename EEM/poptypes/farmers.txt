@@ -148,6 +148,14 @@ country_migration_target = {
 			government = prussian_constitutionalism
         }
     }
+
+    modifier = {
+        factor = 0.1
+        OR = {
+            war = yes
+            num_of_revolts = 1
+        }
+    }
 }
 
 migration_target = {

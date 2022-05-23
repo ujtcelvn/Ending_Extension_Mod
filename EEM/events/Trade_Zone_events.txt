@@ -154,7 +154,7 @@ country_event = {
 country_event = {
     id = 166703
     title = "$FROMCOUNTRY$ Dishonours Treaties"
-    desc = "The new regime in China has declared the treaties negotiated with the Qing null and void. It may soon become much more difficult for our merchants to access the Chinese market."
+    desc = "The new regime in China has declared the treaties negotiated with the Qing null and void. It may soon become much more difficult for merchants to access the Chinese market."
     picture = "arrow_incident"
 
     is_triggered_only = yes
@@ -371,7 +371,14 @@ country_event = {
 
     option = {
         name = "EVT166710OPTA"
-        1565 = { secede_province = TZ1 add_province_modifier = { name = local_opium_habit duration = 3650 } }
+        1565 = {
+            secede_province = TZ1
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1567 = { secede_province = TZ1 } 
+        1570 = { secede_province = TZ1 }
+
         create_vassal = TZ1
         create_alliance = TZ1
         TZ1 = {
@@ -402,46 +409,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ1 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ1 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ1
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166711
-    title = "EVTNAME166711"
-    desc = "EVTDESC166711"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166711OPTA"
-        1567 = { secede_province = TZ1 } 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ1
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166712
-    title = "EVTNAME166712"
-    desc = "EVTDESC166712"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166712OPTA"
-        1570 = { secede_province = TZ1 }
         FROM = {
             diplomatic_influence = {
                 who = TZ1
@@ -490,7 +457,14 @@ country_event = {
 
     option = {
         name = "EVT166720OPTA"
-        1571 = { secede_province = TZ2 add_province_modifier = { name = local_opium_habit duration = 3650 } }
+        1571 = {
+            secede_province = TZ2
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1568 = { secede_province = TZ2 } 
+        1564 = { secede_province = TZ2 }
+
         create_vassal = TZ2
         create_alliance = TZ2
         TZ2 = {
@@ -521,46 +495,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ2 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ2 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ2
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166721
-    title = "EVTNAME166721"
-    desc = "EVTDESC166721"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166721OPTA"
-        1568 = { secede_province = TZ2 } 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ2
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166722
-    title = "EVTNAME166722"
-    desc = "EVTDESC166722"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166722OPTA"
-        1564 = { secede_province = TZ2 }
         FROM = {
             diplomatic_influence = {
                 who = TZ2
@@ -611,7 +545,14 @@ country_event = {
 
     option = {
         name = "EVT166740OPTA"
-        1539 = { secede_province = TZ4 add_province_modifier = { name = local_opium_habit duration = 3650 } }
+        1539 = {
+            secede_province = TZ4
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1537 = { secede_province = TZ4 } 
+        1544 = { secede_province = TZ4 }
+
         create_vassal = TZ4
         create_alliance = TZ4
         TZ4 = {
@@ -642,46 +583,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ4 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ4 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ4
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166741
-    title = "EVTNAME166741"
-    desc = "EVTDESC166741"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166741OPTA"
-        1537 = { secede_province = TZ4 } 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ4
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166742
-    title = "EVTNAME166742"
-    desc = "EVTDESC166742"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166742OPTA"
-        1544 = { secede_province = TZ4 }
         FROM = {
             diplomatic_influence = {
                 who = TZ4
@@ -729,8 +630,15 @@ country_event = {
 
     option = {
         name = "EVT166750OPTA"
-        1605 = { secede_province = TZ5 add_province_modifier = { name = local_opium_habit duration = 3650 } }
-        1475 = { secede_province = TZ5 }
+        1605 = {
+            secede_province = TZ5
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1475 = { secede_province = TZ5 } 
+        1471 = { secede_province = TZ5 }
+        1470 = { secede_province = TZ5 }
+
         create_vassal = TZ5
         create_alliance = TZ5
         TZ5 = {
@@ -761,46 +669,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ5 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ5 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ5
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166751
-    title = "EVTNAME166751"
-    desc = "EVTDESC166751"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166751OPTA"
-        1471 = { secede_province = TZ5 } 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ5
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166752
-    title = "EVTNAME166752"
-    desc = "EVTDESC166752"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166752OPTA"
-        1470 = { secede_province = TZ5 }
         FROM = {
             diplomatic_influence = {
                 who = TZ5
@@ -848,8 +716,17 @@ country_event = {
 
     option = {
         name = "EVT166760OPTA"
-        1610 = { secede_province = TZ6 add_province_modifier = { name = local_opium_habit duration = 3650 } }
-        1611 = { secede_province = TZ6 }
+        1610 = {
+            secede_province = TZ6
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1611 = { secede_province = TZ6 } 
+        1609 = { secede_province = TZ6 }
+        1607 = { secede_province = TZ6 }
+        1604 = { secede_province = TZ6 }
+        1473 = { secede_province = TZ6 }
+
         create_vassal = TZ6
         create_alliance = TZ6
         TZ6 = {
@@ -880,48 +757,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ6 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ6 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ6
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166761
-    title = "EVTNAME166761"
-    desc = "EVTDESC166761"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166761OPTA"
-        1609 = { secede_province = TZ6 }
-        1607 = { secede_province = TZ6 }
-        1604 = { secede_province = TZ6 }
-        FROM = {
-            diplomatic_influence = {
-                who = TZ6
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166762
-    title = "EVTNAME166762"
-    desc = "EVTDESC166762"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166762OPTA"
-        1473 = { secede_province = TZ6 }
         FROM = {
             diplomatic_influence = {
                 who = TZ6
@@ -969,7 +804,15 @@ country_event = {
 
     option = {
         name = "EVT166770OPTA"
-        1493 = { secede_province = TZ7 add_province_modifier = { name = local_opium_habit duration = 3650 } }
+        1493 = {
+            secede_province = TZ7
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1497 = { secede_province = TZ7 }
+        1494 = { secede_province = TZ7 }
+        1500 = { secede_province = TZ7 }
+
         create_vassal = TZ7
         create_alliance = TZ7
         TZ7 = {
@@ -1000,47 +843,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ7 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ7 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ7
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166771
-    title = "EVTNAME166771"
-    desc = "EVTDESC166771"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166771OPTA"
-        1497 = { secede_province = TZ7 }
-        1494 = { secede_province = TZ7 }
-        FROM = {
-            diplomatic_influence = {
-                who = TZ7
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166772
-    title = "EVTNAME166772"
-    desc = "EVTDESC166772"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166772OPTA"
-        1500 = { secede_province = TZ7 }
         FROM = {
             diplomatic_influence = {
                 who = TZ7
@@ -1092,7 +894,14 @@ country_event = {
 
     option = {
         name = "EVT166780OPTA"
-        1495 = { secede_province = TZ8 add_province_modifier = { name = local_opium_habit duration = 3650 } }
+        1495 = {
+            secede_province = TZ8
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1501 = { secede_province = TZ8 }
+        3326 = { secede_province = TZ8 }
+
         create_vassal = TZ8
         create_alliance = TZ8
         TZ8 = {
@@ -1123,46 +932,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ8 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ8 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ8
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166781
-    title = "EVTNAME166781"
-    desc = "EVTDESC166781"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166781OPTA"
-        1501 = { secede_province = TZ8 }
-        FROM = {
-            diplomatic_influence = {
-                who = TZ8
-                value = 400
-            }
-        }
-    }
-}
-
-country_event = {
-    id = 166872
-    title = "EVTNAME166872"
-    desc = "EVTDESC166872"
-    picture = "china_trade_zone"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "EVT166872OPTA"
-        3326 = { secede_province = TZ8 }
         FROM = {
             diplomatic_influence = {
                 who = TZ8

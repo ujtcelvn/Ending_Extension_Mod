@@ -61,8 +61,8 @@ luxury_needs = {
     automobiles = 0.5
     radio = 1.0
     fuel = 0.1
-	small_arms = 3.5       #0        #HPM: 1 * 37    = 37
-    opium = 7          # 7 * 6 = 42         - 2 * 3     = 36
+	small_arms = 1 #3.5       #0        #HPM: 1 * 37    = 37
+    opium =  4  #7          # 7 * 6 = 42         - 2 * 3     = 36
 }
 
 promote_to = {

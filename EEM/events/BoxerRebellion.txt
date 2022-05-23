@@ -50,7 +50,7 @@ country_event = {
             has_country_modifier = western_influences
         }
         NOT = {
-            TPG = { exists = yes }
+            OR = { TPG = { exists = yes } RTR = { exists = yes } }
             num_of_revolts = 5
             has_country_flag = boxers_appeared
         }
