@@ -36,7 +36,7 @@ country_event = {
 		name = "Restore liquidity!"
 		money = -1000000
 
-        #apparently the game gets mad and money vanishes if a pop has > ~1.5k $ 
+        #if a pop has > ~1.5k $ , they deposit the money into the national bank
 		#counter
 		random_pop = {
 			limit = {
