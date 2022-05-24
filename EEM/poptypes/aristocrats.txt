@@ -52,7 +52,7 @@ luxury_needs = {
     canned_food = 1.5
     fruit = 5
     wool = 10
-    opium = 0.75 #1 #30
+    opium = 3 #0.75 #1 #30
     telephones = 10
     automobiles = 10
     aeroplanes = 5
@@ -181,12 +181,13 @@ country_migration_target = {
     }
 
     modifier = {
-        factor = 0.1
+        factor = 0.01
         OR = {
-            war = yes
-            num_of_revolts = 1
+            revolt_percentage = 0.1
+            national_provinces_occupied = 0.1
         }
     }
+
 }
 
 migration_target = {

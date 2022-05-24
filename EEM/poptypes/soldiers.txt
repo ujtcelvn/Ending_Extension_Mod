@@ -173,10 +173,10 @@ country_migration_target = {
     }
 
     modifier = {
-        factor = 0.1
+        factor = 0.01
         OR = {
-            war = yes
-            num_of_revolts = 1
+            revolt_percentage = 0.1
+            national_provinces_occupied = 0.1
         }
     }
 }

@@ -2207,26 +2207,6 @@ alphabetic_flag_signaling = {
             rank = 16
             invention = the_dark_continent
         }
-        # We want China trade!
-        modifier = {
-            factor = 50
-            rank = 16
-            NOT = { is_culture_group = east_asian }
-            OR = {
-                owns = 1498 #Macao
-                owns = 1538 #Shanghai
-                owns = 1496 #Hong Kong
-                owns = 1566 #Qingdao
-                owns = 1481 #Lushun - Port Arthur
-                owns = 1569 #Weihaiwei
-                owns = 1606 #Jiaxing
-                owns = 2681 #Taibei
-                owns = 2562 #Tainan
-                owns = 1499 #Hainan
-                owns = 2632 #Kwangchowan
-                owns = 1608 #Ningbo
-            }
-        }
     }
 }
 naval_plans = {
@@ -2295,26 +2275,6 @@ naval_plans = {
             factor = 1.25
             rank = 16
             invention = the_dark_continent
-        }
-        # We want China trade!
-        modifier = {
-            factor = 50
-            rank = 16
-            NOT = { is_culture_group = east_asian }
-            OR = {
-                owns = 1498 #Macao
-                owns = 1538 #Shanghai
-                owns = 1496 #Hong Kong
-                owns = 1566 #Qingdao
-                owns = 1481 #Lushun - Port Arthur
-                owns = 1569 #Weihaiwei
-                owns = 1606 #Jiaxing
-                owns = 2681 #Taibei
-                owns = 2562 #Tainan
-                owns = 1499 #Hainan
-                owns = 2632 #Kwangchowan
-                owns = 1608 #Ningbo
-            }
         }
     }
 }
@@ -2394,26 +2354,6 @@ naval_statistics = {
             rank = 16
             invention = the_dark_continent
         }
-        # We want China trade!
-        modifier = {
-            factor = 50
-            rank = 16
-            NOT = { is_culture_group = east_asian }
-            OR = {
-                owns = 1498 #Macao
-                owns = 1538 #Shanghai
-                owns = 1496 #Hong Kong
-                owns = 1566 #Qingdao
-                owns = 1481 #Lushun - Port Arthur
-                owns = 1569 #Weihaiwei
-                owns = 1606 #Jiaxing
-                owns = 2681 #Taibei
-                owns = 2562 #Tainan
-                owns = 1499 #Hainan
-                owns = 2632 #Kwangchowan
-                owns = 1608 #Ningbo
-            }
-        }
     }
 }
 naval_logistics = {
@@ -2483,26 +2423,6 @@ naval_logistics = {
             rank = 16
             invention = the_dark_continent
         }
-        # We want China trade!
-        modifier = {
-            factor = 50
-            rank = 16
-            NOT = { is_culture_group = east_asian }
-            OR = {
-                owns = 1498 #Macao
-                owns = 1538 #Shanghai
-                owns = 1496 #Hong Kong
-                owns = 1566 #Qingdao
-                owns = 1481 #Lushun - Port Arthur
-                owns = 1569 #Weihaiwei
-                owns = 1606 #Jiaxing
-                owns = 2681 #Taibei
-                owns = 2562 #Tainan
-                owns = 1499 #Hainan
-                owns = 2632 #Kwangchowan
-                owns = 1608 #Ningbo
-            }
-        }
     }
 }
 naval_directionism = {
@@ -2571,26 +2491,6 @@ naval_directionism = {
             factor = 1.25
             rank = 16
             invention = the_dark_continent
-        }
-        # We want China trade!
-        modifier = {
-            factor = 50
-            rank = 16
-            NOT = { is_culture_group = east_asian }
-            OR = {
-                owns = 1498 #Macao
-                owns = 1538 #Shanghai
-                owns = 1496 #Hong Kong
-                owns = 1566 #Qingdao
-                owns = 1481 #Lushun - Port Arthur
-                owns = 1569 #Weihaiwei
-                owns = 1606 #Jiaxing
-                owns = 2681 #Taibei
-                owns = 2562 #Tainan
-                owns = 1499 #Hainan
-                owns = 2632 #Kwangchowan
-                owns = 1608 #Ningbo
-            }
         }
     }
 }

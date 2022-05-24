@@ -16,7 +16,7 @@ political_decisions = {
                     NOT = { tag = TZ1 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -24,12 +24,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1565 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 
@@ -62,7 +63,7 @@ political_decisions = {
                     NOT = { tag = TZ2 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -70,12 +71,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1571 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 
@@ -110,7 +112,7 @@ political_decisions = {
                     NOT = { tag = TZ4 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -118,12 +120,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1539 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 
@@ -156,7 +159,7 @@ political_decisions = {
                     NOT = { tag = TZ5 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -164,12 +167,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1605 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 
@@ -202,7 +206,7 @@ political_decisions = {
                     NOT = { tag = TZ6 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -210,12 +214,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1610 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 
@@ -249,7 +254,7 @@ political_decisions = {
                     NOT = { tag = TZ7 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -257,12 +262,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1493 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 
@@ -296,7 +302,7 @@ political_decisions = {
                     NOT = { tag = TZ8 }
                 }
             }
-            invention = steamer_transports    #1836
+            steamers = 1 #1836
             num_of_ports = 2
         }
 
@@ -304,12 +310,13 @@ political_decisions = {
             is_greater_power = yes
             war = no
             1495 = { owner = { war = no } }
-            invention = monitors #1860
+            invention = steamer_transports    #1836
+            invention = commerce_raiders      #1836
             OR = {
-                invention = protected_cruisers #1880
+                invention = monitors #1855
                 has_global_flag = taiping_has_happened
             }
-            alphabetic_flag_signaling = 1    #1836
+            total_amount_of_ships = 10
             NOT = { has_country_modifier = international_negotiations }
         }
 

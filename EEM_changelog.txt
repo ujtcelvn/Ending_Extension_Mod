@@ -98,6 +98,13 @@ Coming soon:
 	make Xinhai revolution less bordergory, using the viceroys
 
 ####################################################################################################
+v0.5.5b
+
+reduce tech requirement to demand trade zones from China
+increase opium demand
+new_world_war modifier returned but it is less powerful (editing just the pop files isn't enough to reduce immigration while at war), other immigration tweaks
+
+####################################################################################################
 v0.5.5a
 
 Electric gear factories get bonus from synthetic rubber factories too
