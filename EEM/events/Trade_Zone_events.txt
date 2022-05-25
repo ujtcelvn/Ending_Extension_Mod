@@ -94,7 +94,9 @@ country_event = {
             1501 = { secede_province = TZ8 }
             3326 = { secede_province = TZ8 }
         }
-        ai_chance = { factor = 90 }
+        ai_chance = {
+            factor = 80
+        }
     }
 
 
@@ -104,10 +106,12 @@ country_event = {
         set_country_flag = tore_up_unequal_treaties
         any_pop = {
             limit = {
-                is_primary_culture = yes
-                is_accepted_culture = yes
+                OR = {
+                    is_primary_culture = yes
+                    is_accepted_culture = yes
+                }
             }
-            militancy = -6
+            militancy = -3
         }
 
         any_country = {
@@ -130,7 +134,25 @@ country_event = {
             }
             country_event = 166703
         }
-        ai_chance = { factor = 10 }
+
+
+        any_neighbor_country = {
+            limit = {
+                OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } 
+                exists = yes
+            }
+            neutrality = yes
+            annex_to = THIS
+        }
+
+
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 2
+                NOT = { owns = 1538 } #Shanghai is too close to Nanjing
+            }
+        }
     }
 }
 
