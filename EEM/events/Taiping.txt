@@ -875,6 +875,13 @@ country_event = {
             }
             militancy = -6
         }
+        any_pop = {
+            limit = {
+                is_accepted_culture = yes
+            }
+            militancy = -3
+        }
+
 
         any_pop = {
             limit = {
