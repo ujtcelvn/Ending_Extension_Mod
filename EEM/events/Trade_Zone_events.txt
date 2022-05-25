@@ -415,6 +415,14 @@ country_event = {
                 value = 400
             }
         }
+
+        1565 = {
+            secede_province = TZ1
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1567 = { secede_province = TZ1 } 
+        1570 = { secede_province = TZ1 }
     }
 }
 
@@ -501,6 +509,14 @@ country_event = {
                 value = 400
             }
         }
+
+        1571 = {
+            secede_province = TZ2
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1568 = { secede_province = TZ2 } 
+        1564 = { secede_province = TZ2 }
     }
 }
 
@@ -589,6 +605,14 @@ country_event = {
                 value = 400
             }
         }
+
+        1539 = {
+            secede_province = TZ4
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1537 = { secede_province = TZ4 } 
+        1544 = { secede_province = TZ4 }
     }
 }
 
@@ -635,7 +659,7 @@ country_event = {
             add_province_modifier = { name = local_opium_habit duration = 3650 }
             add_province_modifier = { name = foreign_trading_post duration = 3650 }
         }
-        1475 = { secede_province = TZ5 } 
+        1475 = { secede_province = TZ5 }
         1471 = { secede_province = TZ5 }
         1470 = { secede_province = TZ5 }
 
@@ -675,6 +699,15 @@ country_event = {
                 value = 400
             }
         }
+
+        1605 = {
+            secede_province = TZ5
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1475 = { secede_province = TZ5 }
+        1471 = { secede_province = TZ5 }
+        1470 = { secede_province = TZ5 }
     }
 }
 
@@ -763,6 +796,18 @@ country_event = {
                 value = 400
             }
         }
+
+
+        1610 = {
+            secede_province = TZ6
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1611 = { secede_province = TZ6 } 
+        1609 = { secede_province = TZ6 }
+        1607 = { secede_province = TZ6 }
+        1604 = { secede_province = TZ6 }
+        1473 = { secede_province = TZ6 }
     }
 }
 
@@ -849,6 +894,16 @@ country_event = {
                 value = 400
             }
         }
+
+        1493 = {
+            secede_province = TZ7
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1497 = { secede_province = TZ7 }
+        1494 = { secede_province = TZ7 }
+        1500 = { secede_province = TZ7 }
+
     }
 }
 
@@ -938,6 +993,14 @@ country_event = {
                 value = 400
             }
         }
+
+        1495 = {
+            secede_province = TZ8
+            add_province_modifier = { name = local_opium_habit duration = 3650 }
+            add_province_modifier = { name = foreign_trading_post duration = 3650 }
+        }
+        1501 = { secede_province = TZ8 }
+        3326 = { secede_province = TZ8 }
     }
 }
 

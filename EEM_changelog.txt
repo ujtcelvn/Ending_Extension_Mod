@@ -95,27 +95,30 @@ Coming soon:
 		Xinjiang north		uighur			south
 	Qing Mongol acceptance later, if they win the xinhai rebellion and warlord era?
 		Its notable that the only dynasty that managed to fully nullify the barbarian threat was a dynasty that began as a group of barbarians itself. Long before the Manchus conquered China they began to form marriages alliances with Mongolia’s noble houses and incorporate Mongol units into its armed forces. Steppe politics was built into the Qing’s DNA, and they played the game masterfully. [10] Ethnic Chinese dynasties had a much tougher job coming to terms with their enemies on the steppe.
+		Actually nevermind
+			The New Policies also resulted in drastic change of the Manchu policy toward Mongolia from a relatively conservative-protective one to an aggressive-colonial one.[21] 
 	make Xinhai revolution less bordergory, using the viceroys
 
 #TODO: rebalance military: army atk should x1.4 on average
 #TODO: increase support value of arty and planes
 
 ####################################################################################################
-v0.5.5c
 
+v0.5.5c
 Removed the Juye Incident event
 tweak trade zones
 adjust loc
+Anti-Taiping Red Turban rebellion cores now spread and fire faster if Taiping is overrun by reactionary rebels.
+Spaghetti code to fix weird bug with trade zones if the Taiping won
 
 ####################################################################################################
-v0.5.5b
 
+v0.5.5b
 reduce tech requirement to demand trade zones from China
 increase opium demand
 new_world_war modifier returned but it is less powerful (editing just the pop files isn't enough to reduce immigration while at war), other immigration tweaks
 
 v0.5.5a
-
 Electric gear factories get bonus from synthetic rubber factories too
 Halved bonus aeroplane factories get from machine parts factories and electric gear factories so it gets a maximum 25% total bonus like every other factory 
 Reverted soldier and officer liquor and wine consumption back to HPM levels
@@ -133,7 +136,6 @@ War / Rebels reduce immigrant attractiveness in general, reverted new world immi
 other misc adjustments
 
 v0.5.5
-
 Removed terrain preference calculations from pop file, now immigrant attractiveness of terrain is inherent in the terrain itself
     immigrant_attract = multiplier from poptype * (1 - new world ver of terrain modifier) - 1
 Removed the new_world_war triggered modifier, instead, new world immigration boost no longer applies if nation is at war or has any revolts

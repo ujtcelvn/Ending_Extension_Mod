@@ -2615,7 +2615,7 @@ country_event = {
         NOT = { has_global_flag = punti_hakka_war_happened }
     }
 
-    mean_time_to_happen = { months = 12 }
+    #mean_time_to_happen = { months = 12 }
 
     option = {
         name = "The fools bicker."
@@ -3116,7 +3116,7 @@ country_event = {
 country_event = {
     id = 166310
     title = "Anti-Christian Secret Societies"
-    desc = "Confucians, Taoists, and Buddhists who are displeased by our new Christain moralism are joining secret societies and protesting our rule!"
+    desc = "Confucians, Taoists, and Buddhists who are displeased by the Taiping missionaries and new Christain teachings are joining secret societies and causing trouble."
     fire_only_once = yes
     picture = "guanyin"
 
@@ -3196,6 +3196,14 @@ country_event = {
                 owns = 2632 #Kwangchowan
             }
         }
+        modifier = {
+            factor = 0.025
+            capital_scope = { controlled_by_rebels = yes }
+        }
+        modifier = {
+            factor = 0.05
+            revolt_percentage = 0.30
+        }
     }
 
     option = {
@@ -3203,13 +3211,19 @@ country_event = {
         set_country_flag = ming_larpers_2
         GNG = { all_core = { add_core = RTR } }
         GXI = { all_core = { add_core = RTR } }
+        TPG = {
+            change_variable = {
+                which = ming_provinces
+                value = 2
+            }
+        }
     }
 }
 
 country_event = {
     id = 166311
     title = "The Red Turban Rebellion"
-    desc = "Tiandihui and Gelaohui members sporting red turbans are rebelling against our Christian religion!"
+    desc = "Tiandihui and Gelaohui members sporting red turbans dissatisfied with the new Taiping Christainity have launched a rebellion."
     fire_only_once = yes
     picture = "red_turban_attack"
 
@@ -3226,7 +3240,7 @@ country_event = {
             }
         }
         average_militancy = 2
-        average_consciousness = 4
+        #average_consciousness = 4
     }
 
     mean_time_to_happen = {
@@ -4079,3 +4093,156 @@ country_event = {
 #166700 Trade Zones
 
 #166800 Opium 
+
+
+province_event = {
+    id = 165320
+    title = "Secret Societies Spread to $STATENAME$!"
+    desc = "The Tiandihui and Gelaohui have recruited many members in $STATENAME$"
+
+    trigger = {
+        owner = {
+            tag = TPG
+            has_country_flag = ming_larpers_2
+            NOT = { has_global_flag = ming_has_happened_2 }
+            civilized = no
+
+        }
+        NOT = {
+            is_core = RTR
+            is_core = TPG
+            is_core = TIB
+            is_core = XBI
+            is_core = MGL
+            region = CHI_1616
+            region = CHI_1612
+            region = CHI_1572
+            region = CHI_1559
+            region = CHI_2221
+
+            region = CHI_1508 #Nian Rebellion
+            region = CHI_1510
+            region = CHI_1563
+            region = CHI_1565
+        }
+        is_core = CHI
+        is_primary_culture = no
+        average_consciousness = 4
+        any_neighbor_province = { is_core = RTR }
+        OR = {
+            culture = nanfaren
+            culture = yue
+            culture = zhuang
+            culture = hakka
+            culture = min
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 50
+        modifier = {
+            factor = 4
+            region = CHI_1505 #Miao Rebellion
+        }
+        modifier = {
+            factor = 0.5
+            owner = {
+                NOT = {
+                    check_variable = {
+                        which = ming_provinces
+                        value = 5
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            owner = {
+                check_variable = {
+                    which = ming_provinces
+                    value = 6
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            owner = {
+                check_variable = {
+                    which = ming_provinces
+                    value = 9
+                }
+            }
+        }
+        modifier = {
+            factor = 2.5
+            owner = {
+                check_variable = {
+                    which = ming_provinces
+                    value = 12
+                }
+            }
+        }
+        modifier = {
+            factor = 0.7
+            average_consciousness = 6
+        }
+        modifier = {
+            factor = 0.7
+            average_consciousness = 8
+        }
+        modifier = {
+            factor = 0.7
+            has_province_modifier = western_presence
+        }
+        modifier = {
+            factor = 0.7
+            has_province_modifier = foreign_smugglers
+        }
+        modifier = {
+            factor = 0.7
+            has_province_modifier = foreign_trading_post
+        }
+        modifier = {
+            factor = 0.7
+            has_province_modifier = local_opium_habit
+        }
+        modifier = {
+            factor = 0.9
+            owner = { has_country_modifier = european_military_mission }
+        }
+        modifier = {
+            factor = 0.9
+            owner = { has_country_modifier = legation_quarter }
+        }
+        modifier = {
+            factor = 0.7
+            has_province_modifier = kettler_denkmal
+        }
+        modifier = {
+            factor = 3
+            NOT = {
+                culture = nanfaren
+            }
+        }
+        modifier = {
+            factor = 0.01
+            controlled_by_rebels = yes
+        }
+    }
+
+    option = {
+        name = "Hmm, that's worrying."
+        state_scope = {
+            any_owned = {
+                limit = { NOT = { is_core = RTR } }
+                add_core = RTR
+            }
+        }
+        owner = {
+            change_variable = {
+                which = ming_provinces
+                value = 1
+            }
+        }
+    }
+}
