@@ -97,6 +97,16 @@ Coming soon:
 		Its notable that the only dynasty that managed to fully nullify the barbarian threat was a dynasty that began as a group of barbarians itself. Long before the Manchus conquered China they began to form marriages alliances with Mongolia’s noble houses and incorporate Mongol units into its armed forces. Steppe politics was built into the Qing’s DNA, and they played the game masterfully. [10] Ethnic Chinese dynasties had a much tougher job coming to terms with their enemies on the steppe.
 	make Xinhai revolution less bordergory, using the viceroys
 
+#TODO: rebalance military: army atk should x1.4 on average
+#TODO: increase support value of arty and planes
+
+####################################################################################################
+v0.5.5c
+
+Removed the Juye Incident event
+tweak trade zones
+adjust loc
+
 ####################################################################################################
 v0.5.5b
 
@@ -104,7 +114,6 @@ reduce tech requirement to demand trade zones from China
 increase opium demand
 new_world_war modifier returned but it is less powerful (editing just the pop files isn't enough to reduce immigration while at war), other immigration tweaks
 
-####################################################################################################
 v0.5.5a
 
 Electric gear factories get bonus from synthetic rubber factories too
