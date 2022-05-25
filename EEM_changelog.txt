@@ -110,6 +110,7 @@ tweak trade zones
 adjust loc
 Anti-Taiping Red Turban rebellion cores now spread and fire faster if Taiping is overrun by reactionary rebels.
 Spaghetti code to fix weird bug with trade zones if the Taiping won
+Taiping / Red Turban victory reduces militancy
 
 ####################################################################################################
 

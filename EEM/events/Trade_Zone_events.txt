@@ -3,7 +3,7 @@
 country_event = {
     id = 166700
     title = "The Unequal Treaties"
-    desc = "Victory did not expel the Western barbarians welcomed by the Qing unequal treaties. We could declare the treaties void and expel the foreigners, at the risk of drawing the ire of their home countries."
+    desc = "Victory did not expel the Western barbarians welcomed by the unequal treaties. We could declare the treaties void and expel the foreigners, at the risk of drawing the ire of their home countries."
     picture = "asian_administration"
 
     is_triggered_only = yes
@@ -120,12 +120,12 @@ country_event = {
 
     option = {
         name = "They are our rightful rulers."
-        random_owned = {
-            limit = {
-                owner = { civilized = no }
-            }
-            owner = { civilized = yes }
-        }
+        #random_owned = {
+        #    limit = {
+        #        owner = { civilized = no }
+        #    }
+        #    owner = { civilized = yes }
+        #}
         FROM = { inherit = THIS }
 
         ai_chance = { factor = 100 }
@@ -133,12 +133,12 @@ country_event = {
 
     option = {
         name = "We should fight for our independence!"
-        random_owned = {
-            limit = {
-                owner = { civilized = no }
-            }
-            owner = { civilized = yes }
-        }
+        #random_owned = {
+        #    limit = {
+        #        owner = { civilized = no }
+        #    }
+        #    owner = { civilized = yes }
+        #}
         prestige = 10
         relation = {
             who = FROM
@@ -154,7 +154,7 @@ country_event = {
 country_event = {
     id = 166703
     title = "$FROMCOUNTRY$ Dishonours Treaties"
-    desc = "The new regime in China has declared the treaties negotiated with the Qing null and void. It may soon become much more difficult for merchants to access the Chinese market."
+    desc = "The new regime in China has declared the treaties negotiated previously null and void. It may soon become much more difficult for merchants to access the Chinese market."
     picture = "arrow_incident"
 
     is_triggered_only = yes

@@ -1352,6 +1352,12 @@ country_event = {
         }
         any_pop = {
             limit = {
+                is_primary_culture = yes
+            }
+            militancy = -6
+        }
+        any_pop = {
+            limit = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
@@ -3421,6 +3427,13 @@ country_event = {
         }
         any_pop = {
             limit = {
+                is_primary_culture = yes
+            }
+            militancy = -6
+        }
+
+        any_pop = {
+            limit = {
                 is_primary_culture = no
                 is_accepted_culture = no
             }
@@ -3491,6 +3504,8 @@ country_event = {
                 duration = 3650
             }
         }
+		
+        country_event = 166700 #puppet trade zones
     }
 }
 
@@ -3500,7 +3515,7 @@ country_event = {
 country_event = {
     id = 166314
     title = "Taiping Distracted"
-    desc = "The Taiping are being distracted by the Red Turban Rebels in the south, so we should take the chance to liberate our brothers in Inner Mongolia!"
+    desc = "The Taiping are being distracted by the Red Turban Rebels in the south. Perhaps this could be an opportunity to liberate Inner Mongolia?"
     picture = "taiping_defeated"
     fire_only_once = yes
 
