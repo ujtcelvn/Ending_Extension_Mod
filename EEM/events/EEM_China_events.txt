@@ -1451,7 +1451,7 @@ country_event = {
     trigger = {
         tag = RTR
         NOT = { exists = QNG }
-        NOT = { exists = RTR }
+        NOT = { exists = TPG }
         war = no
         civilized = no
     }

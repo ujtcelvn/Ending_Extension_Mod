@@ -118,6 +118,7 @@ province_event = {
         NOT = { trade_goods = coal }
         NOT = { trade_goods = iron }
         NOT = { trade_goods = sulphur }
+        NOT = { trade_goods = oil }
         NOT = { trade_goods = precious_metal }
         NOT = { trade_goods = precious_goods }
         NOT = { trade_goods = opium }
@@ -163,20 +164,18 @@ province_event = {
             name = switched_production
             duration = 1825
         }
-
-        random_owned = {
-            limit = {
-                owner = { civilized = no }
-				trade_goods = opium
-                NOT = { has_province_modifier = local_opium_habit }
-            }
-            add_province_modifier = {
+        add_province_modifier = {
                 name = local_opium_habit
                 duration = 1825
             }
-        }
-
+        ai_chance = { factor = 100 }
     }
+
+    option = {
+        name = "No, $PROVINCENAME$'s production is too useful."
+        ai_chance = { factor = 0 }
+    }
+	
 }
 
 

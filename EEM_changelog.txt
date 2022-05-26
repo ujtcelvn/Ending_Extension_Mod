@@ -58,8 +58,6 @@ Coming soon:
 
 #TODO: anti-war stuff, international organizations
 
-#TODO: nukes
-
 #TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships get to purge in different ideologies
 #TODO: ancap memes
 
@@ -78,7 +76,30 @@ Coming soon:
 
 #TODO: invention localizations
 ####################################################################################################
-#TODO: v0.5.6
+
+#TODO: nuclear research program
+
+#TODO: add symbol for nuke modifiers?
+
+#TODO: nuke tiers: set a country flag AND a global flag!
+	nuclear waste bomb: 			radiation damage only			1 province at a time
+	atomic bomb, hydrogen bomb: 	radiation and bomb damage		1 province at a time
+	Mass nuke manufacturing:		radiation and bomb damage on every province
+
+
+#TODO: First ever use of nuke special event: Start of the Atomic Age: set global flag: nukes_used_in_war, set country flag: first_country_to_nuke, country_has_used_nukes
+	victim gets hit more war exhaustion and confusion
+	nuke dropper gets cheering and celebratione event: reduce war exhaustion and militancy
+	all country except nuke dropper gets hit with reduced cb generation speed
+
+#TODO: was the nuke necessary event
+    if GP, country_has_used_nukes, not disarmed, has nukes, has not lost war recently, (owns all cores?)
+	They had it coming! pacifists mad, pacifist countries relationship decrease
+	It may have been overkill... -prestige, increase pacifists, jingoists mad
+
+#TODO: the higher the global nuke research level, the more anti-nuke protest events happen
+
+####################################################################################################
 
 #TODO: China Rework 2
     End the manchu dominance occurs DURING the Taiping rebellion
@@ -98,11 +119,19 @@ Coming soon:
 		Actually nevermind
 			The New Policies also resulted in drastic change of the Manchu policy toward Mongolia from a relatively conservative-protective one to an aggressive-colonial one.[21] 
 	make Xinhai revolution less bordergory, using the viceroys
-
+	
+#TODO: China gets decision to sieze trade zones. If they do, you get a free cb on them.
+#TODO: make China be able to refuse trade zone establishment. If they do, you get a free cb on them.
 #TODO: rebalance military: army atk should x1.4 on average
 #TODO: increase support value of arty and planes
-
+#TODO: wool
 ####################################################################################################
+v0.5.5d
+make trade zones be removed properly
+fixed Red Turban power struggle bug
+AI should now westernize properly
+You can now refuse opium spread
+Artisans eat like clerks now so they will eat more opium
 
 v0.5.5c
 Removed the Juye Incident event
@@ -111,8 +140,6 @@ adjust loc
 Anti-Taiping Red Turban rebellion cores now spread and fire faster if Taiping is overrun by reactionary rebels.
 Spaghetti code to fix weird bug with trade zones if the Taiping won
 Taiping / Red Turban victory reduces militancy
-
-####################################################################################################
 
 v0.5.5b
 reduce tech requirement to demand trade zones from China

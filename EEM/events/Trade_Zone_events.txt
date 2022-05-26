@@ -494,6 +494,7 @@ country_event = {
             owns = 1569
             has_country_flag = tore_up_unequal_treaties
             TZ1 = { part_of_sphere = no }
+            TZ1 = { sphere_owner = { NOT = { owns = 1569 } } }
         }
     }
 
@@ -588,6 +589,7 @@ country_event = {
             owns = 1566
             has_country_flag = tore_up_unequal_treaties
             TZ2 = { part_of_sphere = no }
+            TZ2 = { sphere_owner = { NOT = { owns = 1566 } } }
         }
     }
 
@@ -684,6 +686,7 @@ country_event = {
             owns = 1538
             has_country_flag = tore_up_unequal_treaties
             TZ4 = { part_of_sphere = no }
+            TZ4 = { sphere_owner = { NOT = { owns = 1538 } } }
         }
     }
 
@@ -779,6 +782,7 @@ country_event = {
             owns = 1606
             has_country_flag = tore_up_unequal_treaties
             TZ5 = { part_of_sphere = no }
+            TZ5 = { sphere_owner = { NOT = { owns = 1606 } } }
         }
     }
 
@@ -879,6 +883,7 @@ country_event = {
             owns = 1608
             has_country_flag = tore_up_unequal_treaties
             TZ6 = { part_of_sphere = no }
+            TZ6 = { sphere_owner = { NOT = { owns = 1608 } } }
         }
     }
 
@@ -978,6 +983,10 @@ country_event = {
             }
             has_country_flag = tore_up_unequal_treaties
             TZ7 = { part_of_sphere = no }
+            AND = {
+                TZ7 = { sphere_owner = { NOT = { owns = 1496 } } }
+                TZ7 = { sphere_owner = { NOT = { owns = 1498 } } }
+            }
         }
     }
 
@@ -1075,6 +1084,10 @@ country_event = {
             }
             has_country_flag = tore_up_unequal_treaties
             TZ8 = { part_of_sphere = no }
+            AND = {
+                TZ8 = { sphere_owner = { NOT = { owns = 2632 } } }
+                TZ8 = { sphere_owner = { NOT = { owns = 1499 } } }
+            }
         }
     }
 
