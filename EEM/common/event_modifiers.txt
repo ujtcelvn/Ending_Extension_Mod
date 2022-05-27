@@ -1844,7 +1844,8 @@ signed_the_geneva_convention = {
     #land_attrition = -0.02
 	#max_military_spending = -0.1
     #cb_generation_speed_modifier = -0.1
-    land_organisation = -0.05
+    #land_organisation = -0.05
+    supply_consumption = 0.2
     icon = 7
 }
 

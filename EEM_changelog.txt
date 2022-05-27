@@ -132,6 +132,7 @@ fixed Red Turban power struggle bug
 AI should now westernize properly
 You can now refuse opium spread
 Artisans eat like clerks now so they will eat more opium
+Geneva convention now increases supply consumption (due to increased training and supplies needed to not do war crimes and loot all the time) instead of reducing organisation
 
 v0.5.5c
 Removed the Juye Incident event
