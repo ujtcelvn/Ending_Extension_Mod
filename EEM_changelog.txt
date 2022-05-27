@@ -31,7 +31,7 @@ culture = 18
 1926 monetary system				 2
 1926 economic thought and critique	 6
 1926 market functionality			 4
-1926 organization					 4
+1926 organisation					 4
 
 commerce = 17
 
@@ -56,7 +56,7 @@ Coming soon:
 
 #TODO: make the Great Depression more likely because I have never seen it ever fire
 
-#TODO: anti-war stuff, international organizations
+#TODO: anti-war stuff, international organisations
 
 #TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships get to purge in different ideologies
 #TODO: ancap memes
@@ -124,7 +124,13 @@ Coming soon:
 #TODO: make China be able to refuse trade zone establishment. If they do, you get a free cb on them.
 #TODO: rebalance military: army atk should x1.4 on average
 #TODO: increase support value of arty and planes
-#TODO: wool
+
+#TODO: wool still ucks
+
+#TODO: rubber shortage? make synthetic rubber available earlier?
+
+#TODO: can probably remove some computer science inventions
+
 ####################################################################################################
 v0.5.5d
 make trade zones be removed properly
@@ -133,6 +139,7 @@ AI should now westernize properly
 You can now refuse opium spread
 Artisans eat like clerks now so they will eat more opium
 Geneva convention now increases supply consumption (due to increased training and supplies needed to not do war crimes and loot all the time) instead of reducing organisation
+Slowed down opium spread
 
 v0.5.5c
 Removed the Juye Incident event
@@ -999,13 +1006,13 @@ scoot_and_shoot replaced by armored_column_cover
 
 v0.3.5 2020-12-19
 removed vacuum_tube_computer, reduced invention chance of computerized_decryption and general_computer_programming
-added telex to tech_organization_7, this invention represents the teletype network as it existed in between the telegraph and the fax machine ages
+added telex to tech_organisation_7, this invention represents the teletype network as it existed in between the telegraph and the fax machine ages
 guerrilla_tactics removed because it belongs more in the 1950s, replaced with hedgehog_defence, and then replaced again by air_bridge, and then again by scoot_and_shoot
 tanks and planes now can only be manned by primary culture pops for balance reasons
 
 v0.3.4d 2020-12-13
 turned nukes to only 1 invention, the invention unlocks the nuclear weapons development decision
-added airliner to tech_organization_7
+added airliner to tech_organisation_7
 hedge_funds and quantative_easing now reduce factory cost
 
 v0.3.4c 2020-11-29
@@ -1014,7 +1021,7 @@ rocket_experiments moved to mechanization, and now depends on kraft_pulping and 
 added remote_control_mine to light armament
 
 v0.3.4b 2020-11-26
-removed individual ship organization boosts in naval doctrines
+removed individual ship organisation boosts in naval doctrines
 reworked aircraft carrier range increase inventions
 elektroboot invention chance decreased, now depends on rocket_experiments instead of oxygen_torpedos
 fleet_air_carriers invention chance -4 if fleet_auxiliary_carrier_doctrine not discovered

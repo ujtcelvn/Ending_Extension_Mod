@@ -128,20 +128,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = opium
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = opium
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = opium
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
                     }
                 }
             }
@@ -151,7 +151,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 36
+        months = 60 #36
     }
 
     title = "Opium Plantations in $PROVINCENAME$"
@@ -172,7 +172,7 @@ province_event = {
     }
 
     option = {
-        name = "No, $PROVINCENAME$'s production is too useful."
+        name = "No, $PROVINCENAME$'s original production is still useful."
         ai_chance = { factor = 0 }
     }
 	
