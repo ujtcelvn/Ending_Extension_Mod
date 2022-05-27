@@ -125,7 +125,7 @@ Coming soon:
 #TODO: rebalance military: army atk should x1.4 on average
 #TODO: increase support value of arty and planes
 
-#TODO: wool still ucks
+#TODO: wool still sucks
 
 #TODO: rubber shortage? make synthetic rubber available earlier?
 
@@ -140,6 +140,7 @@ You can now refuse opium spread
 Artisans eat like clerks now so they will eat more opium
 Geneva convention now increases supply consumption (due to increased training and supplies needed to not do war crimes and loot all the time) instead of reducing organisation
 Slowed down opium spread
+Fix Albania missing political parties past 1936
 
 v0.5.5c
 Removed the Juye Incident event
