@@ -214,7 +214,7 @@ the_british_raj = {
             owned_by = THIS
         }
     }
-    research_points = 0.5
+    #research_points = 0.5
     core_pop_militancy_modifier = -0.01
     prestige = 0.03
     icon = 19
@@ -296,6 +296,7 @@ own_kiel_canal = {
     trigger = {
         exists = yes
         owns = 369
+        controls = 369
         civilized = yes
         is_canal_enabled = 1
     }
@@ -307,6 +308,7 @@ own_suez_canal = {
     trigger = {
         exists = yes
         owns = 1755
+        controls = 1755
         civilized = yes
         is_canal_enabled = 2
     }
@@ -320,6 +322,7 @@ own_panama_canal = {
     trigger = {
         exists = yes
         owns = 1723
+        controls = 1723
         civilized = yes
         is_canal_enabled = 3
     }
@@ -333,6 +336,7 @@ own_nicaragua_canal = {
     trigger = {
         exists = yes
         owns = 2198
+        controls = 2198
         civilized = yes
         is_canal_enabled = 7
     }
@@ -340,6 +344,87 @@ own_nicaragua_canal = {
     tariff_efficiency_modifier = 0.2
     import_cost = -0.25
     prestige = 0.02
+}
+
+hormuz_strait = {
+    trigger = {
+        exists = yes
+        year = 1880
+        OR = { #previously AND
+            AND = {
+                owns = 1071 #Qeshm
+                controls = 1071
+            }
+            AND = {
+                owns = 2664 #Khasab
+                controls = 2664
+            }
+        }
+    }
+
+    #tax_efficiency = 0.01
+    tariff_efficiency_modifier = 0.05
+    icon = 16
+}
+
+strait_of_malacca = {
+    trigger = {
+        exists = yes
+        OR = {
+            AND = {
+                owns = 1384 #Singapore
+                controls = 1384
+            }
+            AND = {
+                owns = 1402 #Tanjungpinang
+                controls = 1402
+            }
+        }
+    }
+    tariff_efficiency_modifier = 0.1
+    icon = 16
+}
+
+bab-el-mandeb_strait = {
+    trigger = {
+        exists = yes
+        is_canal_enabled = 2
+        OR = {
+            AND = {
+                owns = 1412 #Aden
+                controls = 1412
+            }
+            AND = {
+                owns = 1875 #Djibuti
+                controls = 1875
+            }
+        }
+    }
+    tariff_efficiency_modifier = 0.1
+    icon = 16
+}
+
+sound_dues = {
+    trigger = {
+        capital_scope = { continent = europe }
+        exists = yes
+        civilized = yes
+        total_num_of_ports = 1
+        NOT = { has_global_flag = sound_dues_abolished }
+        NOT = { owns = 372 }
+        OR = {
+            is_culture_group = scandinavian
+            is_culture_group = british
+            is_culture_group = french
+            is_culture_group = beneluxian
+            primary_culture = north_german
+            primary_culture = russian
+        }
+    }
+
+    icon = 9
+    tariff_efficiency_modifier = -0.05
+    import_cost = 0.05
 }
 
 small_but_efficient = {
@@ -367,29 +452,6 @@ small_but_efficient = {
     administrative_efficiency_modifier = 0.4
     tariff_efficiency_modifier = 0.4
     supply_consumption = -0.95
-}
-
-sound_dues = {
-    trigger = {
-        capital_scope = { continent = europe }
-        exists = yes
-        civilized = yes
-        total_num_of_ports = 1
-        NOT = { has_global_flag = sound_dues_abolished }
-        NOT = { owns = 372 }
-        OR = {
-            is_culture_group = scandinavian
-            is_culture_group = british
-            is_culture_group = french
-            is_culture_group = beneluxian
-            primary_culture = north_german
-            primary_culture = russian
-        }
-    }
-
-    icon = 9
-    tariff_efficiency_modifier = -0.05
-    import_cost = 0.05
 }
 
 landlocked_nation = {
@@ -443,19 +505,6 @@ admin_spen = {
     icon = 16
 }
 
-hormuz_strait = {
-        trigger = {
-            exists = yes
-            is_canal_enabled = 2
-            #year = 1880
-            owns = 1071
-            owns = 2664
-        }
-
-    tax_efficiency = 0.01
-    tariff_efficiency_modifier = 0.05
-    icon = 16
-}
 
 
 new_world_war = {
@@ -556,39 +605,6 @@ ryotwari = {
     # icon = 16
 # }
 
-#small_refund = {
-#    trigger = {
-#        exists = yes
-#        war = no
-#        money = 6500000
-#    }
-#    min_social_spending = 0.5
-#    pension_level = 2.0
-#    icon = 16
-#}
-
-#medium_refund = {
-#    trigger = {
-#        exists = yes
-#        money = 6000000
-#    }
-#    tax_efficiency = -0.25
-#    tariff_efficiency_modifier = -0.25
-#    pension_level = 1.0
-#    icon = 16
-#}
-
-#large_refund = {
-#    trigger = {
-#        exists = yes
-#        money = 7000000
-#    }
-#    tax_efficiency = -1
-#    tariff_efficiency_modifier = -1
-#    pension_level = 1.0
-#    icon = 16
-#}
-
 literate_nation = {
 	trigger = {
 		literacy = 0.9
@@ -604,17 +620,3 @@ clerked_nation = {
 	global_population_growth = -0.001
     icon = 18
 }
-
-#large_commerce_protection_navy = {
-#	trigger = {
-#        invention = ironclads
-#        total_amount_of_ships = 80
-#        total_num_of_ports = 40
-#        is_greater_power = yes
-#        colonial_nation = yes
-#        war = no
-#	}
-#    tariff_efficiency_modifier = 0.05
-#    import_cost = -0.01
-#    icon = 16
-#}

@@ -18,26 +18,7 @@ seaplane_tenders = {
     }
 }
 
-experimental_air_carriers = {
-    limit = { oil_driven_ships = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = on_board_recon_aircraft 
-        }
-        modifier = {
-            factor = 2
-            invention = seaplane_tenders
-        }
-    }
-    effect = {
-        aircraft_carrier = {
-            gun_power = 2
-            hull = 1
-        }
-    }
-}
+#experimental_air_carriers 
 
 converted_hulk_air_carriers = {
     limit = { oil_driven_ships = 1 }
@@ -45,7 +26,7 @@ converted_hulk_air_carriers = {
         base = 0
         modifier = {
             factor = 2
-            invention = experimental_air_carriers
+            invention = on_board_recon_aircraft
         }
         modifier = {
             factor = 2
@@ -55,7 +36,7 @@ converted_hulk_air_carriers = {
     effect = {
         aircraft_carrier = {
             hull = 2
-            gun_power = 1
+            gun_power = 2 #1
         }
     }
 }
@@ -65,12 +46,12 @@ purpose_built_air_carriers = {
     chance = {
         base = 0
         modifier = {
-            factor = 1
+            factor = 2
             invention = seaplane_tenders
         }
 		modifier = {
-            factor = 2
-            invention = experimental_air_carriers
+            factor = 1
+            invention = on_board_recon_aircraft
         }
         modifier = {
             factor = 3

@@ -1,4 +1,4 @@
-Tech Unlock Dates		number of inventions (5 + 5 + 120 = 130)
+Tech Unlock Dates		number of inventions (5 + 5 + 115 = 125)
 1926 5 
 1930 10
 1936 10
@@ -12,20 +12,20 @@ Tech Unlock Dates		number of inventions (5 + 5 + 120 = 130)
 army = 30
 
 1936 naval doctrine					 4
-1930 ship construction				 5		1919 oil_driven_ships		5
-1930 naval engineering				10      1919 modern_naval_design    2
+1930 ship construction				 5		1919 oil_driven_ships		4
+1930 naval engineering				 9      1919 modern_naval_design    2
 1936 naval science					 3
 1936 naval leadership				 3
 
-navy = 25 + 7
+navy = 24 + 6
 
 1930 aesthetics						10
 1930 philosphy						 4
 1930 social thought					 1
 1936 political thought				 2
-1930 psychology						 1
+1930 psychology						 0
 
-culture = 18
+culture = 17
 
 1926 financial institutions			 1
 1926 monetary system				 2
@@ -35,13 +35,13 @@ culture = 18
 
 commerce = 17
 
-1930 power							10
+1930 power							 7
 1930 mechanization					 3      
 1930 metallurgy						 6		1850 regenerative_furnaces 	1			1900 electric_furnace	1
 1930 infrastructure					 0
-1936 chemistry and electricity		11		1900 synthetic_polymers 1
+1936 chemistry and electricity		11		1900 synthetic_polymers 2
 
-industry = 30 + 3
+industry = 27 + 4
 
 ####################################################################################################
 Coming soon: 
@@ -77,30 +77,6 @@ Coming soon:
 #TODO: invention localizations
 ####################################################################################################
 
-#TODO: nuclear research program
-
-#TODO: add symbol for nuke modifiers?
-
-#TODO: nuke tiers: set a country flag AND a global flag!
-	nuclear waste bomb: 			radiation damage only			1 province at a time
-	atomic bomb, hydrogen bomb: 	radiation and bomb damage		1 province at a time
-	Mass nuke manufacturing:		radiation and bomb damage on every province
-
-
-#TODO: First ever use of nuke special event: Start of the Atomic Age: set global flag: nukes_used_in_war, set country flag: first_country_to_nuke, country_has_used_nukes
-	victim gets hit more war exhaustion and confusion
-	nuke dropper gets cheering and celebratione event: reduce war exhaustion and militancy
-	all country except nuke dropper gets hit with reduced cb generation speed
-
-#TODO: was the nuke necessary event
-    if GP, country_has_used_nukes, not disarmed, has nukes, has not lost war recently, (owns all cores?)
-	They had it coming! pacifists mad, pacifist countries relationship decrease
-	It may have been overkill... -prestige, increase pacifists, jingoists mad
-
-#TODO: the higher the global nuke research level, the more anti-nuke protest events happen
-
-####################################################################################################
-
 #TODO: China Rework 2
     End the manchu dominance occurs DURING the Taiping rebellion
          During [the Taiping Rebellion] event, the Qing government ran out of funds for its antirebel efforts. To defeat the rebels, the emperor asked local gentry for financial help. In exchange, public school quotas were adjusted in the gentry’s favor, increasing the odds that their sons would later be admitted to the imperial civil service. Wang (2017) finds that gentry located in zones nearer to the so-called Taiping Heavenly Kingdom—the revolutionary regime established by the Taiping—contributed significantly more to the emperor’s military efforts. This evidence suggests that, rather than exploit the ruler’s need for quick funds to bargain over local political freedoms, as was common in Europe, the gentry agreed to remain loyal in exchange for a greater chance for their offspring to gain entrance to the imperial civil service. [10]
@@ -120,18 +96,63 @@ Coming soon:
 			The New Policies also resulted in drastic change of the Manchu policy toward Mongolia from a relatively conservative-protective one to an aggressive-colonial one.[21] 
 	make Xinhai revolution less bordergory, using the viceroys
 	
+#TODO: change color of RTR so it doesn't get confused with Kachin
 #TODO: China gets decision to sieze trade zones. If they do, you get a free cb on them.
 #TODO: make China be able to refuse trade zone establishment. If they do, you get a free cb on them.
+
+####################################################################################################
 #TODO: rebalance military: army atk should x1.4 on average
 #TODO: increase support value of arty and planes
 
 #TODO: wool still sucks
 
-#TODO: rubber shortage? make synthetic rubber available earlier?
+#TODO: Turkestan doesn't get any cores (is this intended?)
+####################################################################################################
+#TODO: nuclear research program
 
-#TODO: can probably remove some computer science inventions
+#TODO: nuke tiers
+
+#TODO: First ever use of nuke special event: Start of the Atomic Age: set global flag: nukes_used_in_war, set country flag: first_country_to_nuke, country_has_used_nukes
+	victim gets hit more war exhaustion and confusion
+	nuke dropper gets cheering and celebratione event: reduce war exhaustion and militancy
+	all country except nuke dropper gets hit with reduced cb generation speed
+
+#TODO: was the nuke necessary event
+    if GP, country_has_used_nukes, not disarmed, has nukes, has not lost war recently, (owns all cores?)
+	They had it coming! pacifists mad, pacifist countries relationship decrease
+	It may have been overkill... -prestige, increase pacifists, jingoists mad
+
+#TODO: the higher the global nuke research level, the more anti-nuke protest events happen
 
 ####################################################################################################
+v0.5.6
+
+Rebalancing, merge repetitive inventions
+    Adjust culture inventions, moved television networks from psychology to aesthetics
+    Adjust comp sci, experimental_radar removed, all references now use oscilloscope instead. TV removed. computerized_decryption removed, conditions split into army/naval computer intel.
+    merge 18 and 16 inch guns, renamed to super_heavy_main_armament
+    remove exp. CV, split into hulk CV and CVL
+    plastic_and_rubber_additives increase rubber rgo production (Carbon Black was added to Rubber in 1910, and Phthalates were invented in the 1920s)
+    other adjustments
+
+Strait of Malacca and Bab-el-Mandeb Strait triggered modifiers
+Hormuz Strait no longer gives tax efficiency
+The British Raj triggered modifier no longer gives extra research points
+
+Adjust pollution
+Disabled atrocities
+
+adjust strategic bomb mtth and damage, reduced event spam, your military spending % also protects you from bombs
+
+Add symbol for nuke modifiers
+	gfx/interface/modifiers.dds
+	interface/general_gfx.gfx
+	Country modifier:  19 = green nuke, 20 = red nuke
+	Province modifier: 21 = green nuke, 22 = red nuke
+
+
+####################################################################################################
+
 v0.5.5d
 make trade zones be removed properly
 fixed Red Turban power struggle bug
@@ -204,7 +225,6 @@ Commerce technologies' increase of precious goods RGO size quadrupled from 0.05 
 
 Other bugfixes and adjustments
 
-####################################################################################################
 
 v0.5.4
 Austria-Hungary and the Danubian Federation only collapses into Austria if they do NOT own both AUS_641 Budapest, Central Hungary and AUS_639 Zalaegerszeg, Transdanubia and Hungary exists, a 1 state hungarian rump state somewhere random is not enough

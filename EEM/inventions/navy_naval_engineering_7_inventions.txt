@@ -4,7 +4,7 @@ naval_radar = {
         base = 0
         modifier = {
             factor = 2
-            invention = experimental_radar
+            invention = oscilloscope
         }
         modifier = {
             factor = 2
@@ -22,10 +22,10 @@ naval_radar = {
     }
 }
 
-16_inch_main_armament = {
+super_heavy_main_armament = { #16_inch_main_armament
     limit = { naval_engineering_7 = 1 }
     chance = {
-        base = 2
+        base = 0
         modifier = {
             factor = -6
             NOT = {
@@ -38,28 +38,6 @@ naval_radar = {
         }
         modifier = {
             factor = 2
-            invention = shaped_charge
-        }
-    }
-    effect = {
-        dreadnought = {
-            gun_power = 2
-        }
-    }
-}
-
-18_inch_main_armament = {
-    limit = { naval_engineering_7 = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = -4
-            NOT = {
-                invention = 16_inch_main_armament
-            }
-        }
-        modifier = {
-            factor = 2
             metallurgy_7 = 1
         }
         modifier = {
@@ -69,10 +47,36 @@ naval_radar = {
     }
     effect = {
         dreadnought = {
-            gun_power = 1
+            gun_power = 3 #2
         }
     }
 }
+
+#18_inch_main_armament = {
+#    limit = { naval_engineering_7 = 1 }
+#    chance = {
+#        base = 0
+#        modifier = {
+#            factor = -4
+#            NOT = {
+#                invention = 16_inch_main_armament
+#            }
+#        }
+#        modifier = {
+#            factor = 2
+#            metallurgy_7 = 1
+#        }
+#        modifier = {
+#            factor = 2
+#            heavy_armament_7 = 1
+#        }
+#    }
+#    effect = {
+#        dreadnought = {
+#            gun_power = 1
+#        }
+#    }
+#}
 
 electronic_fire_control = {
     limit = { naval_engineering_7 = 1 }
@@ -228,9 +232,9 @@ acoustic_homing_torpedo = {
     limit = { naval_engineering_7 = 1 }
     chance = {
         base = -2
-		modifier = {
+        modifier = {
             factor = 2
-            invention = experimental_radar
+            invention = oscilloscope
         }
 		modifier = {
             factor = 2

@@ -23,7 +23,7 @@ country_event = {
         months = 1200
 
         modifier = {
-            factor = 0.9
+            factor = 0.8
             any_owned_province = {
                 is_colonial = no
                 total_pops = 500000
@@ -31,7 +31,7 @@ country_event = {
             }
         }
         modifier = {
-            factor = 0.9
+            factor = 0.8
             any_owned_province = {
                 is_colonial = no
                 total_pops = 1000000
@@ -39,7 +39,7 @@ country_event = {
             }
         }
         modifier = {
-            factor = 0.9
+            factor = 0.8
             any_owned_province = {
                 is_colonial = no
                 total_pops = 2000000 #London 1950: 8 million / 4 = 2,000,000
@@ -47,7 +47,7 @@ country_event = {
             }
         }
         modifier = {
-            factor = 0.9
+            factor = 0.8
             any_owned_province = {
                 is_colonial = no
                 total_pops = 4000000
@@ -116,7 +116,7 @@ country_event = {
         }
 
         modifier = {
-            factor = 0.8 #advanced goods ( 0.8^3 ~= 0.5 )
+            factor = 0.8 #advanced goods
 			OR = {
 				big_producer = steamer_convoy
 				big_producer = automobiles
@@ -138,7 +138,7 @@ country_event = {
             safety_regulations = good_safety
         }
         modifier = {
-            factor = 2
+            factor = 4
             has_country_modifier = clean_air_act 
         }
    }
@@ -152,6 +152,9 @@ country_event = {
                 value = 1
             }
         }
+
+        #https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(22)00090-0/fulltext
+        #pollution remains responsible for approximately 9 million deaths per year, corresponding to one in six deaths worldwide. 
 
         capital_scope = {
             add_province_modifier = { name = local_pollution_problem duration = 365 }
@@ -174,7 +177,7 @@ country_event = {
             random = {
                 chance = 10
                 add_province_modifier = { name = local_pollution_problem duration = 365 }
-                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+                any_pop = { reduce_pop = 0.999 }
             }
         }
 
@@ -188,7 +191,7 @@ country_event = {
             random = {
                 chance = 10
                 add_province_modifier = { name = local_pollution_problem duration = 365 }
-                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+                any_pop = { reduce_pop = 0.999 }
             }
         }
 
@@ -208,7 +211,7 @@ country_event = {
             random = {
                 chance = 10
                 add_province_modifier = { name = local_pollution_problem duration = 365 }
-                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+                any_pop = { reduce_pop = 0.999 }
             }
         }
 
@@ -222,7 +225,7 @@ country_event = {
             random = {
                 chance = 10
                 add_province_modifier = { name = local_pollution_problem duration = 365 }
-                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+                any_pop = { reduce_pop = 0.999 }
             }
         }
 
@@ -242,7 +245,7 @@ country_event = {
             random = {
                 chance = 10
                 add_province_modifier = { name = local_pollution_problem duration = 365 }
-                random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+                any_pop = { reduce_pop = 0.999 }
             }
         }
 

@@ -10,11 +10,7 @@ fleet_auxiliary_carrier_doctrine = {
             invention = seaplane_tenders 
         }
         modifier = {
-            factor = 1
-            invention = experimental_air_carriers
-        }
-        modifier = {
-            factor = 1
+            factor = 2
             invention = light_air_carriers
         }
         modifier = {

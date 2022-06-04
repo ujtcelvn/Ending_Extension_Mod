@@ -65,18 +65,18 @@ modern_music = {
     }
 }
 
-movies = {
+television_networks = { #previously "movies"
     limit = { aesthetics_7 = 1 }
     news = no
     chance = {
         base = 2
         modifier = {
             factor = 2
-            invention = television
+            invention = national_radio_networks 
         }
         modifier = {
-            factor = 2
-            invention = television_networks
+            factor = -6
+            NOT = { invention = the_talkies }
         }
      }
     effect = {
@@ -110,11 +110,14 @@ neoclassical_music = {
         base = 2
         modifier = {
             factor = 2
-            nationalvalue = nv_order
+            OR = {
+                nationalvalue = nv_order
+                nationalvalue = nv_autocracy
+            }
         }
         modifier = {
             factor = 2
-            nationalvalue = nv_autocracy
+            ruling_party_ideology = conservative
         }
     }
     effect = {
@@ -179,7 +182,7 @@ electronic_music = {
         }
         modifier = {
             factor = 2
-            invention = modern_tape_record
+            invention = general_computer_programming #modern_tape_record
         }
     }
     effect = {
@@ -317,7 +320,7 @@ mass_surveillance = {
         }
         modifier = {
             factor = 2
-            invention = modern_tape_record
+            invention = computerized_decryption
         }
     }
 
@@ -368,33 +371,33 @@ national_liberation = {
 #}
 
 ##########################################psychology_7
-television_networks = {
-    limit = { psychology_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            nationalvalue = nv_liberty
-        }
-        modifier = {
-            factor = 2
-            invention = movies
-        }
-        modifier = {
-            factor = -6
-            NOT = { invention = television }
-        }
-	modifier = {
-            factor = -1
-            NOT = { press_rights = free_press }
-        }
-    }
-    effect = {
-        suppression_points_modifier = -0.05
-        education_efficiency = 0.1
-    }
-}
+#television_networks = {
+#    limit = { psychology_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            nationalvalue = nv_liberty
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = movies
+#        }
+#        modifier = {
+#            factor = -6
+#            NOT = { invention = television }
+#        }
+#	modifier = {
+#            factor = -1
+#            NOT = { press_rights = free_press }
+#        }
+#    }
+#    effect = {
+#        suppression_points_modifier = -0.05
+#        education_efficiency = 0.1
+#    }
+#}
 
 ##########################################social_thought_7
 anticolonialism = {

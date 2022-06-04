@@ -23,11 +23,19 @@ computerized_naval_intelligence = {
     chance = {
         base = 0
         modifier = {
-            factor = 2
-            invention = computerized_decryption
+            factor = -6
+            NOT = { invention = telephone_switchboard }
         }
         modifier = {
-            factor = 4
+            factor = 2
+            psychology_7 = 1
+        }
+        modifier = {
+            factor = 2
+            invention = miniature_vacuum_tube
+        }
+        modifier = {
+            factor = 2
             invention = general_computer_programming
         }
     }

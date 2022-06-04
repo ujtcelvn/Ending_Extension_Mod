@@ -1,8 +1,8 @@
 #state bombardment event
 province_event = {
 	id = 23000
-	title = "Bombing of $PROVINCENAME$"
-	desc = "$PROVINCENAME$ has been bombed!"
+	title = "Bombing of $STATENAME$"
+	desc = "$STATENAME$ has been bombed!"
 
 	trigger = {
 
@@ -12,8 +12,8 @@ province_event = {
 		}
 
 		OR = { 
-			total_pops = 250000 
-			has_building = naval_base
+			#total_pops = 250000 
+			#has_building = naval_base
 			is_capital = yes
 			is_state_capital = yes
 		}
@@ -28,12 +28,12 @@ province_event = {
 		months = 24
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			owner = { NOT = { invention = machine_gun_armament } }
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			owner = { NOT = { invention = military_aviation } }
 		}
 
@@ -93,30 +93,55 @@ province_event = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.2
+			owner = { administration_spending = 0.24 }
+		}
+		modifier = {
+			factor = 1.2
 			owner = { administration_spending = 0.49 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.2
 			owner = { administration_spending = 0.74 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.2
 			owner = { administration_spending = 0.99 }
 		}
 
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.24 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.49 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.74 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.99 }
+		}
+
+		modifier = {
+			factor = 4
+			owner = { NOT = { war_countries = { brigades_compare = 0.5 } } } #you have much larger army
+		}
 		modifier = {
 			factor = 4
 			owner = { NOT = { war_countries = { brigades_compare = 1 } } } #you have larger army
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			owner = { war_countries = { brigades_compare = 2 } } #any enemy has larger army
 		}
 		modifier = {
 			factor = 0.5
-			owner = { war_countries = { brigades_compare = 3 } } #any enemy has larger army
+			owner = { war_countries = { brigades_compare = 4 } } #any enemy has larger army
 		}
 
 
@@ -182,56 +207,43 @@ province_event = {
                 value = 1
             }
         }
-        add_province_modifier = { name = bomb_damage duration = 365 }
-		any_pop = { reduce_pop = 0.99 }
 
-		infrastructure = -1
-		random = {
-			chance = 25
-			fort = -1
-		}
 		#random = {
 		#	chance = 25
-		#	naval_base = -1 #this deletes all naval base levels from the province for some reason. Yes, a level 6 naval base got reduced to level 0
+		#	fort = -1 #this deletes all fort levels from the province for some reason.
+		#}
+		#random = {
+		#	chance = 25
+		#	naval_base = -1 #this deletes all naval base levels from the province for some reason. 
 		#}
 
-        any_neighbor_province = {
-            limit = {
-				OR = { 
-					total_pops = 250000 
-					has_building = naval_base
-					is_capital = yes
-					is_state_capital = yes
-				}
-				is_colonial = no
-				owned_by = THIS
-				controlled_by = THIS
-				NOT = { has_province_modifier = bomb_damage }
-				NOT = { has_province_modifier = heavy_bomb_damage }
+        state_scope = {
+            any_owned = {
+                limit = {
+	    			controlled_by = THIS
+	    			NOT = { has_province_modifier = bomb_damage }
+	    			NOT = { has_province_modifier = heavy_bomb_damage }
+                }
+	    		any_pop = { reduce_pop = 0.995 }
+	    		infrastructure = -1
             }
-				
-            add_province_modifier = { name = bomb_damage duration = 365 }
-			any_pop = { reduce_pop = 0.99 }
-			
-			infrastructure = -1
-			random = {
-				chance = 25
-				fort = -1
-			}
-			#random = {
-			#	chance = 25
-			#	naval_base = -1
-			#}
+
+            any_owned = {
+                limit = {
+	    			NOT = { has_province_modifier = bomb_damage }
+	    			NOT = { has_province_modifier = heavy_bomb_damage }
+                }
+                add_province_modifier = { name = bomb_damage duration = 210 }
+            }
         }
 
 	}
-
 }
 
 province_event = {
 	id = 23001
-	title = "Heavy Bombing of $PROVINCENAME$"
-	desc = "$PROVINCENAME$ has been heavily bombed!"
+	title = "Heavy Bombing of $STATENAME$"
+	desc = "$STATENAME$ has been heavily bombed!"
 
 	trigger = {
 
@@ -244,9 +256,7 @@ province_event = {
             war_countries = { brigades_compare = 2 } #enemy has larger army
 		}
 
-		OR = { 
-			total_pops = 250000 
-			has_building = naval_base
+		OR = {
 			is_capital = yes
 			is_state_capital = yes
 		}
@@ -261,12 +271,12 @@ province_event = {
 		months = 24
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			owner = { NOT = { invention = machine_gun_armament } }
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			owner = { NOT = { invention = military_aviation } }
 		}
 
@@ -289,17 +299,39 @@ province_event = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.2
+			owner = { administration_spending = 0.24 }
+		}
+		modifier = {
+			factor = 1.2
 			owner = { administration_spending = 0.49 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.2
 			owner = { administration_spending = 0.74 }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.2
 			owner = { administration_spending = 0.99 }
 		}
+
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.24 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.49 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.74 }
+		}
+		modifier = {
+			factor = 1.2
+			owner = { military_spending = 0.99 }
+		}
+
 
 		modifier = {
 			factor = 0.8
@@ -379,41 +411,29 @@ province_event = {
                 value = 1
             }
         }
-        remove_province_modifier = bomb_damage
-        add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-		any_pop = { reduce_pop = 0.985 }
-
         #Dresden population in 1939: 642,000, 25,000 casulties = 0.04
 
-		infrastructure = -1
-		random = {
-			chance = 25
-			fort = -1
-		}
+        state_scope = {
 
-        any_neighbor_province = {
-            limit = {
-				OR = { 
-					total_pops = 250000 
-					has_building = naval_base
-					is_capital = yes
-					is_state_capital = yes
-				}
-				is_colonial = no
-				owned_by = THIS
-				controlled_by = THIS
-				NOT = { has_province_modifier = heavy_bomb_damage }
+            any_owned = {
+                limit = {
+	    			controlled_by = THIS
+	    			NOT = { has_province_modifier = heavy_bomb_damage }
+                }
+	    		any_pop = { reduce_pop = 0.99 }
+	    		infrastructure = -1
             }
-			remove_province_modifier = bomb_damage
-            add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-			any_pop = { reduce_pop = 0.985 }
-			
-			infrastructure = -1
-			random = {
-				chance = 25
-				fort = -1
-			}
+
+            any_owned = {
+                limit = {
+	    			NOT = { has_province_modifier = heavy_bomb_damage }
+                }
+                add_province_modifier = { name = heavy_bomb_damage duration = 210 }
+                add_province_modifier = { name = bomb_damage duration = 210 }
+            }
+
         }
+
 	}
 }
 
@@ -438,9 +458,9 @@ country_event = {
 		is_disarmed = yes
 	}
 
-	mean_time_to_happen = { 
-		months = 1
-	}
+	#mean_time_to_happen = { 
+	#	months = 1
+	#}
 
 	option = {
 		name = "End the bomber raids!"
@@ -459,9 +479,9 @@ country_event = {
 		has_country_modifier = strat_bombers
 	}
 
-	mean_time_to_happen = { 
-		months = 1
-	}
+	#mean_time_to_happen = { 
+	#	months = 1
+	#}
 
 	option = {
 		name = "End the bomber raids!"
@@ -475,45 +495,47 @@ country_event = {
     title = "Atrocities"
     desc = "EVTDESC23110"
     picture = "war_crimes"
-    trigger = {
-        war = yes
-        OR = {
-            war_policy = pro_military
-            war_policy = jingoism
-        }
-        civilized = yes
-        war_countries = {
-            any_owned_province = {
-                controlled_by = THIS
-                NOT = { province_control_days = 365 }
-                NOT = { has_province_modifier = the_massacre }
-            }
-        }
-    }
+    #trigger = {
+    #    war = yes
+    #    OR = {
+    #        war_policy = pro_military
+    #        war_policy = jingoism
+    #    }
+    #    civilized = yes
+    #    war_countries = {
+    #        any_owned_province = {
+    #            controlled_by = THIS
+    #            NOT = { province_control_days = 365 }
+    #            NOT = { has_province_modifier = the_massacre }
+    #        }
+    #    }
+    #}
 
-    mean_time_to_happen = {
-        months = 480
-		modifier = {
-			factor = 0.8
-			government = fascist_dictatorship
-		}
-		modifier = {
-			factor = 0.8
-			invention = rhetoric_of_hate
-		}
-		modifier = {
-			factor = 0.8
-			war_policy = jingoism
-		}
-		modifier = {
-			factor = 2
-			has_country_modifier = signed_the_geneva_convention
-		}
-		modifier = {
-			factor = 0.5
-			has_country_modifier = withdrew_from_geneva_convention
-		}
-    }
+    is_triggered_only = yes #War Crimes are currently disabled
+
+#    mean_time_to_happen = {
+#        months = 480
+#		modifier = {
+#			factor = 0.8
+#			government = fascist_dictatorship
+#		}
+#		modifier = {
+#			factor = 0.8
+#			invention = rhetoric_of_hate
+#		}
+#		modifier = {
+#			factor = 0.8
+#			war_policy = jingoism
+#		}
+#		modifier = {
+#			factor = 2
+#			has_country_modifier = signed_the_geneva_convention
+#		}
+#		modifier = {
+#			factor = 0.5
+#			has_country_modifier = withdrew_from_geneva_convention
+#		}
+#    }
 
     option = {
         name = "We must cover this up!"

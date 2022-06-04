@@ -171,6 +171,7 @@ synthetic_opioids = {
 
 #first modern herbicide, 2,4-D, was first discovered and synthesized by W. G. Templeman at Imperial Chemical Industries. In 1940
 #commercially released in 1946
+#It revolutionized weed control, as it was the first compound that, at low doses, could selectively control dicotyledons (broadleaf plants), but not most monocotyledons — narrowleaf crops, such as wheat, maize (corn), rice, and similar cereal grass crops.
 artificial_herbicides = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
@@ -185,14 +186,15 @@ artificial_herbicides = {
         }
     }
     effect = {
-        factory_goods_output = { fertilizer = 0.05 }
-        #farm_rgo_eff = 0.1
+        #factory_goods_output = { fertilizer = 0.05 }
+        rgo_goods_output = { grain = 0.2 }
     }
 }
 
 
 ############# plastics #############
 # converts a mixture of carbon monoxide and hydrogen into liquid hydrocarbons. Germany, in 1925
+#Fischer–Tropsch production accounted for an estimated 9% of German war production of fuels and 25% of the automobile fuel.
 fischer_tropsch_process = {
     limit = { metallurgy_7 = 1 }
     chance = {
@@ -215,6 +217,7 @@ fischer_tropsch_process = {
     }
 }
 
+#Studies published in 1930 written independently by Lebedev, the American Wallace Carothers and the German scientist Hermann Staudinger led in 1931 to one of the first successful synthetic rubbers, known as neoprene
 #in 1935, German chemists synthesized the first of a series of synthetic rubbers known as Buna rubbers.
 synthetic_rubber = {
     limit = { chemistry_and_electricity_7 = 1 }
@@ -282,6 +285,7 @@ nylon = {
 #The polymer separated from the glass as a clear plastic sheet, which Röhm gave the trademarked name Plexiglas in 1933.[citation needed]
 #Both Perspex and Plexiglas were commercialized in the late 1930s. In the United States, E.I. du Pont de Nemours & Company (now DuPont Company) subsequently introduced its own product under the trademark Lucite. 
 #In 1936 ICI Acrylics (now Lucite International) began the first commercially viable production of acrylic safety glass. 
+
 industrial_plastics_production = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
@@ -301,7 +305,7 @@ industrial_plastics_production = {
     effect = {
         factory_goods_output = { fabric = 0.02 }
         factory_goods_output = { glass  = 0.02 }
-        factory_goods_output = { rubber = 0.05 }
+        factory_goods_output = { rubber = 0.1 }
     }
 }
 
@@ -542,5 +546,26 @@ leaded_gasoline = {
             fuel = 0.02
         }
         education_efficiency = -0.2
+    }
+}
+
+
+#By 1910, The Goodrich Tire Company started replacing white pigments in automotive tires with carbon black, thus increasing road wear by 100X and tensile strength by as much as 1008 percent (4).
+#Phthalates were first introduced in the 1920s and quickly replaced earlier forms of additives that make plastics more flexible.
+plastic_and_rubber_additives = {
+    limit = { synthetic_polymers = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = rubber_vulcanization
+        }
+        modifier = {
+            factor = 2
+            invention = haber_process
+        }
+    }
+    effect = {
+        rgo_goods_output = { rubber = 0.5 }
     }
 }

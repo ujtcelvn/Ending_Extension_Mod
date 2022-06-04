@@ -2624,8 +2624,8 @@ local_modern_transportation = {
 }
 
 local_pollution_problem = {
-    farm_RGO_eff = -0.1
-    mine_RGO_eff = -0.1
+    farm_RGO_eff = -0.2 #-0.1
+    #mine_RGO_eff = -0.1
     icon = 14
 }
 
@@ -2639,7 +2639,6 @@ clean_air_act = {
     global_immigrant_attract = 0.01
     icon = 5
 }
-
 
 large_oil_field = {
     mine_RGO_eff = 4
@@ -2674,28 +2673,105 @@ strat_bombers = {
 }
 
 bomb_damage = {
-    immigrant_attract = -0.2
-    immigrant_push = 0.2
+    immigrant_attract = -0.25
+    immigrant_push = 0.1
     local_RGO_output = -0.1
-    local_artisan_output = -0.2
-    local_factory_throughput = -0.5
-    local_factory_output = -0.5
-    population_growth = -0.001
+    local_factory_throughput = -0.25
+    local_factory_output = -0.25
     icon = 18
 }
 
 heavy_bomb_damage = {
-    immigrant_attract = -0.5
-    immigrant_push = 0.5
-    local_RGO_output = -0.25
-    local_artisan_output = -0.5
-    local_factory_throughput = -0.75
-    local_factory_output = -0.75
-    population_growth = -0.002
-    local_repair = -0.5
-    local_ship_build = 0.5
+    immigrant_attract = -0.25
+    immigrant_push = 0.1
+    local_RGO_output = -0.1
+    local_factory_throughput = -0.25
+    local_factory_output = -0.25
+    population_growth = -0.005
     icon = 18
 }
+
+
+### Nukes ###
+#Province modifier: 21 = green nuke, 22 = red nuke
+
+hot_particles = {
+    immigrant_attract = -1
+    immigrant_push = 1
+    local_RGO_output = -0.2 #contaminated produce wasted
+
+    #factories no longer affected
+
+    population_growth = -0.005
+
+    farm_rgo_size = -0.2 #contaminated hot spots are fenced off
+    mine_rgo_size = -0.2
+    pop_consciousness_modifier = 0.1 #people annoyed at contamination
+    icon = 22
+}
+
+acute_radiation_syndrome = {
+    immigrant_attract = -1
+    immigrant_push = 1
+    local_RGO_output = -1
+    local_factory_throughput = -0.75
+    local_factory_output = -0.75
+
+    population_growth = -0.01
+    icon = 22
+}
+
+
+#Country modifier:  19 = green nuke, 20 = red nuke
+recently_got_nuked = {
+    global_immigrant_attract = -1
+    icon = 20
+}
+
+recently_used_nukes = {
+    badboy = 0.01
+    icon = 20
+}
+
+
+### Nuke research levels ###
+#nuclear_research_program
+
+nuclear_weapons_program = {
+    min_military_spending = 0.1
+    icon = 19
+}
+
+#nuclear_waste_bomb
+#semi_fission_bomb
+
+fission_bomb = { #able to make nukes, but slowly and no stockpile
+    prestige = 0.01
+    supply_consumption = 0.5
+    badboy = 0.01
+    icon = 19
+}
+
+mass_produced_bomb = { #has large stockpile
+    prestige = 0.01
+    supply_consumption = 0.5
+    badboy = 0.01
+    icon = 19
+}
+
+#hydrogen_bomb = { #Thermonuclear / fusion
+#    icon = 19
+#}
+
+#nuclear_icbm = {
+#    icon = 19
+#}
+
+#nuclear_slbm = { #Submarine-launched ballistic missile
+#    icon = 19
+#}
+
+
 
 ### Anti-war ###
 communist_peace_summit = {
