@@ -1364,7 +1364,7 @@ economic_reforms = {
         yes_firearms_production = {
             technology_cost = 12000
             civilization_progress_modifier = 0.15
-            allow = { NOT = { has_country_flag = lacking_writing_system money = 10000 }
+            allow = { NOT = { has_country_flag = lacking_writing_system money = 10000 } }
 
             on_execute = {
                 effect = {
