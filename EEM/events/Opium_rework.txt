@@ -155,7 +155,7 @@ province_event = {
     }
 
     title = "Opium Plantations in $PROVINCENAME$"
-    desc = "Poppies are beautiful ornamental plants whose seeds are nutritious and rich in oil and whose stems are filled with natural latex with many medicinal uses. No wonder farmers here are so interested in this flower."
+    desc = "Poppies are beautiful ornamental plants whose seeds are nutritious and rich in oil and whose stems are filled with natural latex with many medicinal uses. No wonder farmers here are so interested in this plant."
 
     option = {
         name = "Just growing some flowers, nothing to see here"
@@ -164,10 +164,6 @@ province_event = {
             name = switched_production
             duration = 1825
         }
-        add_province_modifier = {
-                name = local_opium_habit
-                duration = 1825
-            }
         ai_chance = { factor = 100 }
     }
 
