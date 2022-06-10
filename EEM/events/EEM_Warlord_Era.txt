@@ -15,7 +15,7 @@ country_event = {
          tag = QNG
         has_global_flag = taiping_has_happened
         has_country_flag = mandate
-        NOT = {    has_country_flag = has_lost_mandate }
+        NOT = { has_country_flag = has_lost_mandate }
     }
 
     mean_time_to_happen = {

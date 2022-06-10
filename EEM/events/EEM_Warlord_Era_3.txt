@@ -121,15 +121,15 @@ country_event = {
 country_event = {
     id = 166602
     title = "North South Conference"
-    desc = "The old regime has been replaced with a Beiyang Army-ruled government which is offering negotiations for us to join them in order to prevent the chaos of a revolution."
+    desc = "The old regime has been replaced by the Beiyang Army. Beiyang officials claim that in order to avoid the chaos and deaths of a civil war, we should join their government."
     picture = "xinhai"
 
     is_triggered_only = yes
 
     option = {
-        name = "We must try to avoid a civil war. WARNING: This is a game over for you!"
+        name = "We must avoid a civil war. WARNING: This is a game over!"
 
-        #TODO: set_country_flag = ghost_country #using HPM's cleanup system works, but it takes several years to fire
+        #set_country_flag = ghost_country #using HPM's cleanup system works, but it takes several years to fire
         CHI = { set_country_flag = north_south_conference_successful }
 
         neutrality = yes
@@ -680,7 +680,7 @@ country_event = {
 country_event = {
     id = 166605
     title = "End of the Qing"
-    desc = "The Qing Dynasty has been toppled. China is finally freed from Manchu oppression!"
+    desc = "The Qing Dynasty has been toppled. China is finally freed from Manchu oppression."
     picture = "puyi_abdicate"
     
     fire_only_once = yes
@@ -717,7 +717,7 @@ country_event = {
 country_event = {
     id = 166606
     title = "End of the Taiping"
-    desc = "The Taiping has been defeated. China is finally freed from these fanatics!"
+    desc = "The Taiping has been defeated. China is finally free of those fanatics."
     picture = "taiping_defeated"
     
     fire_only_once = yes
@@ -745,7 +745,7 @@ country_event = {
 country_event = {
     id = 166607
     title = "End of the Red Turbans"
-    desc = "The Red Turbans have been toppled. China is finally freed from these cabalists!"
+    desc = "The Red Turbans have been toppled. China is finally free of those criminals."
     picture = "taiping_defeated"
     
     fire_only_once = yes

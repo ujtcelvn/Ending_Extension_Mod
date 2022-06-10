@@ -224,7 +224,16 @@ province_event = {
 	    			NOT = { has_province_modifier = bomb_damage }
 	    			NOT = { has_province_modifier = heavy_bomb_damage }
                 }
-	    		any_pop = { reduce_pop = 0.995 }
+
+	    		any_pop = {
+                    limit = { OR = { strata = middle type = craftsmen } } #lives in cities
+                    reduce_pop = 0.99
+                }
+	    		any_pop = {
+                    limit = { NOT = { OR = { strata = middle type = craftsmen } } } #everyone else
+                    reduce_pop = 0.995
+                }
+
 	    		infrastructure = -1
             }
 
@@ -420,7 +429,16 @@ province_event = {
 	    			controlled_by = THIS
 	    			NOT = { has_province_modifier = heavy_bomb_damage }
                 }
-	    		any_pop = { reduce_pop = 0.99 }
+
+	    		any_pop = {
+                    limit = { OR = { strata = middle type = craftsmen } } #lives in cities
+                    reduce_pop = 0.98
+                }
+	    		any_pop = {
+                    limit = { NOT = { OR = { strata = middle type = craftsmen } } } #everyone else
+                    reduce_pop = 0.99
+                }
+
 	    		infrastructure = -1
             }
 

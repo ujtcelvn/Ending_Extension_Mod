@@ -34,7 +34,7 @@ country_event = {
                 tag = RTR
                 TPG = { exists = no }
                 QNG = { exists = no }
-                RTR = { exists = no }
+                CHI = { exists = no }
             }
         }
         war = no
@@ -672,7 +672,8 @@ province_event = {
 country_event = {
     id = 164599
     title = "EVTNAME164599"
-    desc = "Tongmenghui Rebels, mutinous troops of the New Army, and defecting governors have taken control of many provinces, declaring a Republic of China in defiance of $COUNTRYNAME$."
+    desc = "EVTDESC164599_NEW"
+
     #news = yes
     #news_desc_long = "EVTDESC164599"
     #news_desc_medium = "EVTDESC164599_NEWS_MEDIUM"
@@ -785,6 +786,10 @@ country_event = {
         modifier = {
             factor = 0.8
             year = 1910
+        }
+        modifier = {
+            factor = 2
+            government = democracy
         }
     }
 
@@ -904,6 +909,7 @@ country_event = {
             secede_province = KMT
         }
 
+
         any_owned = {
             limit = { 
                 is_core = GXI
@@ -991,12 +997,6 @@ country_event = {
         }
 
 
-        #any_owned = {
-        #    limit = { 
-        #        is_core = MAO #Guizhou always revolts
-        #    }
-        #    secede_province = KMT
-        #}
 
 
         KMT = {
@@ -1090,7 +1090,7 @@ country_event = {
     }
 
     option = {
-        name = "Long live Democracy!"
+        name = "Democracy will prevail!"
         diplomatic_influence = { who = KMT value = -400 }
         relation = { who = KMT value = -400 }
         war = {
@@ -1131,16 +1131,16 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 3
+        months = 36
         modifier = {
-            factor = 4
+            factor = 0.1
             tag = QNG
-            NOT = { has_country_flag = manchu_elite_cleared_out }
+            has_country_flag = manchu_elite_cleared_out
         }
     }
 
     option = {
-        name = "The Emperor must abdicate. The Beiyang Army shall take control."
+        name = "The Emperor must abdicate. The Beiyang Army will take control."
 
         presitge = -10
         QNG = { all_core = { remove_core = QNG } }
@@ -1293,6 +1293,14 @@ country_event = {
                         state_id = 2221 #Nanjing only rebels if not RTR or TPG
                     }
                 }
+
+                NOT = {
+                    AND = {
+                        owned_by = RTR
+                        is_core = GXI #Guangxi only rebels if not RTR
+                    }
+                }
+
                 NOT = {
                     AND = {
                         owned_by = QNG
@@ -1303,6 +1311,11 @@ country_event = {
             secede_province = CHI
         }
 
+        war = {
+            target = CHI
+            attacker_goal = { casus_belli = civil_war }
+            defender_goal = { casus_belli = civil_war }
+        }
 
         random_owned = {
             limit = {
@@ -1314,18 +1327,13 @@ country_event = {
 
         random_owned = {
             limit = {
-                owner = QNG
+                owned_by = QNG
                 province_id = 1479 #Qing retreats to Mukden
                 is_capital = no
             }
             owner = { capital = 1479 }
         }
 
-        war = {
-            target = CHI
-            attacker_goal = { casus_belli = civil_war }
-            defender_goal = { casus_belli = civil_war }
-        }
 
         ai_chance = {
             factor = 50

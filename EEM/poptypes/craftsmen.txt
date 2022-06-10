@@ -1267,6 +1267,12 @@ promote_to = {
                 }
             }
         }
+        modifier = {
+            factor = 100
+            location = {
+                is_colonial = yes
+            }
+        }
     }
 #    labourers =
 #    {

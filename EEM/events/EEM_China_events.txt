@@ -1444,7 +1444,7 @@ country_event = {
 country_event = {
     id = 165207
     title = "Secret Society Power Struggle"
-    desc = "After our successful rebellion, the secret societies are fighting among themselves over who gets to lead China."
+    desc = "After the successful rebellion, secret societies are fighting among themselves over who gets to lead China."
     picture = "tiandihui_statue"
     fire_only_once = yes
 
@@ -1461,7 +1461,7 @@ country_event = {
     }
 
     option = {
-        name = "The Tiandihui will declare the new Great Cheng Empire!"
+        name = "Chen Kai will be emperor of the Dacheng Empire!"
         government = absolute_monarchy
         ruling_party_ideology = conservative
         clr_country_flag = communist_gov
@@ -1599,7 +1599,47 @@ country_event = {
     }
 
     option = {
-        name = "Our current theocracy will keep any faction from getting uncontrollably strong."
+        name = "The age of emperors is over. China can only be revitalized under a democracy."
+
+        government = democracy
+        ruling_party_ideology = liberal
+        political_reform = universal_weighted_voting
+        political_reform = party_appointed
+        political_reform = yes_meeting
+        political_reform = state_press
+        political_reform = state_controlled
+        political_reform = harassment
+
+        random_owned = {
+            limit = { owner = { has_country_modifier = uncivilized_isolationism } }
+            owner = { remove_country_modifier = uncivilized_isolationism }
+        }
+        add_country_modifier = {
+            name = "western_influences"
+            duration = -1
+        }
+        random_owned = {
+            limit = { owner = { NOT = { border_policy = open_borders } } }
+            owner = { political_reform = open_borders }
+        }
+
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        clr_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        set_country_flag = democracy_gov
+        clr_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        clr_country_flag = anarcho_liberal_gov
+        clr_country_flag = theocratic_government
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        set_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
 
         any_pop = {
             limit = {
@@ -1608,33 +1648,71 @@ country_event = {
                     is_accepted_culture = yes
                 }
             }
-            ideology = {
-                value = reactionary
-                factor = 0.05
-            }
+            consciousness = 3
         }
         any_pop = {
             scaled_militancy = {
-                ideology = liberal
-                factor = 4
+                ideology = conservative
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
             }
         }
-        any_pop = {
-            limit = {
-                is_primary_culture = no
-                is_accepted_culture = no
-            }
-            militancy = 2
-            consciousness = 3
-        }
+
         add_country_modifier = {
             name = national_confusion
             duration = 1825
         }
+
+        random_owned = {
+            limit = { owner = { has_country_modifier = regency_government } }
+            owner = { remove_country_modifier = regency_government }
+        }
+
         ai_chance = {
             factor = 20
         }
     }
+
+#    option = {
+#        name = "There is nothing wrong with the current arrangement."
+#
+#        any_pop = {
+#            limit = {
+#                OR = {
+#                    is_primary_culture = yes
+#                    is_accepted_culture = yes
+#                }
+#            }
+#            ideology = {
+#                value = reactionary
+#                factor = 0.05
+#            }
+#        }
+#        any_pop = {
+#            scaled_militancy = {
+#                ideology = liberal
+#                factor = 4
+#            }
+#        }
+#        any_pop = {
+#            limit = {
+#                is_primary_culture = no
+#                is_accepted_culture = no
+#            }
+#            militancy = 2
+#            consciousness = 3
+#        }
+#        add_country_modifier = {
+#            name = national_confusion
+#            duration = 1825
+#        }
+#        ai_chance = {
+#            factor = 10
+#        }
+#    }
 
 }
 
@@ -1795,7 +1873,7 @@ country_event = {
         NOT = { war_with = RTR }
 
         has_global_flag = ming_victorious
-        NOT = { OR = { has_global_flag = eng_supports_mck has_global_flag = eng_does_not_support_mck } }
+        NOT = { OR = { has_global_flag = supports_mck has_global_flag = does_not_support_mck } }
         RTR = { civilized = no }
         exists = RTR
         exists = MCK
@@ -1823,7 +1901,7 @@ country_event = {
 
     option = {
         name = "EVT166302OPTA"
-        set_global_flag = eng_supports_mck
+        set_global_flag = supports_mck
 
         relation = {
             who = MCK
@@ -1851,7 +1929,7 @@ country_event = {
 
     option = {
         name = "EVT166302OPTB"
-        set_global_flag = eng_does_not_support_mck
+        set_global_flag = does_not_support_mck
         ai_chance = {
             factor = 20
         }
@@ -1950,7 +2028,7 @@ country_event = {
         OR = { tag = MCK tag = QNG }
         exists = ENG
 
-        has_global_flag = eng_supports_mck 
+        has_global_flag = supports_mck 
         NOT = { exists = RTR }
         war = no
         civilized = no
@@ -1962,7 +2040,7 @@ country_event = {
 
     option = {
         name = "We have no choice but to comply" #give them a treaty port
-        clr_global_flag = eng_supports_mck 
+        clr_global_flag = supports_mck 
         relation = { who = ENG value = 400 }
 
         remove_country_modifier = trade_restrictions
@@ -2752,7 +2830,7 @@ country_event = {
 
 country_event = {
     id = 166302
-    title = "EVTNAME166302" #UK reacts to taiping
+    title = "EVTNAME166302" #Support Manchuria to fight the Taiping?
     desc = "EVTDESC166302"
     fire_only_once = yes
     picture = "taiping"
@@ -2762,11 +2840,11 @@ country_event = {
         tag = ENG
         is_greater_power = yes
         NOT = { truce_with = TPG }
-        NOT = { casus_belli = TPG }
+        #NOT = { casus_belli = TPG }
         NOT = { war_with = TPG }
 
         has_global_flag = taiping_victorious
-        NOT = { OR = { has_global_flag = eng_supports_mck has_global_flag = eng_does_not_support_mck } }
+        NOT = { OR = { has_global_flag = supports_mck has_global_flag = does_not_support_mck } }
         TPG = { civilized = no }
         exists = TPG
         exists = MCK
@@ -2780,6 +2858,8 @@ country_event = {
                 is_vassal = no
                 is_substate = no
             }
+            war = no
+            NOT = { truce_with = TPG }
         }
         
 		OR = {
@@ -2794,7 +2874,7 @@ country_event = {
 
     option = {
         name = "EVT166302OPTA"
-        set_global_flag = eng_supports_mck
+        set_global_flag = supports_mck
 
         relation = {
             who = MCK
@@ -2822,7 +2902,7 @@ country_event = {
 
     option = {
         name = "EVT166302OPTB"
-        set_global_flag = eng_does_not_support_mck
+        set_global_flag = does_not_support_mck
         ai_chance = {
             factor = 20
         }
@@ -2863,7 +2943,7 @@ country_event = {
 country_event = {
     id = 166304
     title = "Fight the Taiping?"
-    desc = "Our British contancts claim that the British are ready to help us to restore the Qing Empire. However, they demand a treaty port if we succeed!"
+    desc = "Our $FROMCOUNTRY_ADJ$ contancts claim that the $FROMCOUNTRY_ADJ$ are ready to help us to restore the Qing Empire. However, they demand a treaty port if we succeed!"
     picture = "red_turban_attack"
 
     is_triggered_only = yes
@@ -2916,13 +2996,13 @@ country_event = {
     }
 
     option = {
-        name = "Refuse, the British are why they rebelled in the first place!"
-        any_pop = {
-            scaled_militancy = {
-                issue = pacifism
-                factor = -3
-            }
-        }
+        name = "Refuse, the $FROMCOUNTRY_ADJ$ are why they rebelled in the first place!"
+        #any_pop = {
+        #    scaled_militancy = {
+        #        issue = pacifism
+        #        factor = -3
+        #    }
+        #}
         ai_chance = {
             factor = 20
             modifier = {
@@ -2951,7 +3031,7 @@ country_event = {
         OR = { tag = MCK tag = QNG }
         exists = ENG
 
-        has_global_flag = eng_supports_mck 
+        has_global_flag = supports_mck 
         NOT = { exists = TPG }
         war = no
         civilized = no
@@ -2963,27 +3043,12 @@ country_event = {
 
     option = {
         name = "We have no choice but to comply" #give them a treaty port
-        clr_global_flag = eng_supports_mck 
+        clr_global_flag = supports_mck 
         relation = { who = ENG value = 400 }
 
         remove_country_modifier = trade_restrictions
-        random_owned = {
-            limit = {
-                OR = {
-                    province_id = 1498 #Macao
-                    province_id = 1538 #Shanghai
-                    province_id = 1496 #Hong Kong
-                    province_id = 1566 #Qingdao
-                    province_id = 1569 #Weihaiwei
-                    province_id = 1606 #Jiaxing
-                    #province_id = 2681 #Taibei
-                    #province_id = 2562 #Tainan
-                    province_id = 1499 #Hainan
-                    province_id = 2632 #Kwangchowan
-                }
-            }
-            secede_province = ENG
-        }
+        remove_country_modifier = tore_up_unequal_treaties
+
         add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {
             limit = {
@@ -3009,10 +3074,8 @@ country_event = {
             militancy = 3
         }
 
+
         ENG = { country_event = 166306 }
-        ai_chance = {
-            factor = 50
-        }
     }
 }
 
@@ -3021,12 +3084,32 @@ country_event = {
 country_event = {
     id = 166306
     title = "Manchu Victory"
-    desc = "With our support, the Manchu have crushed their southern rebels. As promised, they have given us a treaty port."
+    desc = "With our support, the Manchu have crushed their southern rebels. As promised, they have given us a treaty port if they have one."
     picture = "tea_weighing_station"
     is_triggered_only = yes
 
     option = {
         name = "Excellent"
+
+        FROM = {
+            random_owned = {
+                limit = {
+                    OR = {
+                        province_id = 1498 #Macao
+                        province_id = 1538 #Shanghai
+                        province_id = 1496 #Hong Kong
+                        province_id = 1566 #Qingdao
+                        province_id = 1569 #Weihaiwei
+                        province_id = 1606 #Jiaxing
+                        #province_id = 2681 #Taibei
+                        #province_id = 2562 #Tainan
+                        province_id = 1499 #Hainan
+                        province_id = 2632 #Kwangchowan
+                    }
+                }
+                secede_province = THIS
+            }
+        }
     }
 }
 
@@ -3060,6 +3143,7 @@ country_event = {
                 OR = {
                     war_policy = pacifism
                     colonial_nation = no
+                    NOT = { total_amount_of_ships = 10 }
                 }
             }
             modifier = {

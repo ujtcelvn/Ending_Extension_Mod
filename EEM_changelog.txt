@@ -54,15 +54,12 @@ Coming soon:
 
 #TODO: purchase battleship
 
-#TODO: make the Great Depression more likely because I have never seen it ever fire
-
 #TODO: anti-war stuff, international organisations
 
 #TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships get to purge in different ideologies
 #TODO: ancap memes
 
-#TODO: reduce profitability of synthetic goods even more
-#TODO: increase oil production inventions
+#TODO: The Congo has too many pops
 
 #TODO: pogroms
 #TODO: Special Attack Units
@@ -75,40 +72,23 @@ Coming soon:
 #TODO: Why is it that the most open societies (Secularized/Full Citizenship) are the ones that are most efficient at assimilation? It seems like those are the societies where there’s the least pressure to assimilate. Residency clearly implies that there are limited openings for assimilation, so I understand why that slows assimilation down, but shouldn’t the most efficient for assimilation actually be limited citizenship, since there’s still pressure on minority groups to assimilate?
 
 #TODO: invention localizations
-####################################################################################################
 
-#TODO: China Rework 2
-    End the manchu dominance occurs DURING the Taiping rebellion
-         During [the Taiping Rebellion] event, the Qing government ran out of funds for its antirebel efforts. To defeat the rebels, the emperor asked local gentry for financial help. In exchange, public school quotas were adjusted in the gentry’s favor, increasing the odds that their sons would later be admitted to the imperial civil service. Wang (2017) finds that gentry located in zones nearer to the so-called Taiping Heavenly Kingdom—the revolutionary regime established by the Taiping—contributed significantly more to the emperor’s military efforts. This evidence suggests that, rather than exploit the ruler’s need for quick funds to bargain over local political freedoms, as was common in Europe, the gentry agreed to remain loyal in exchange for a greater chance for their offspring to gain entrance to the imperial civil service. [10]
-    Remove trade zones, replace with Viceorys (if the qing wins. if qing didn't win, no viceroys OR trade zones!) (remember to give free influence to the treaty port owners) (population too large, might not be able to sphere???)
-    Gunboat Patrol (militancy -0.05, consciousness +0.1) ?
-    buff Qing so they can actually beat Russia and France on land, like they did irl.
-    boxer rebellion rework. I have literally never seen it happen.
-    mutual protection of southeast china
-	    each clique has chance of joining? Cliques bordering Qing less likely to join? neutrality modifier?
-	    shandong clique to mutual protection of southeast china ( if high consciousness? has chinese floods?)
-    adjust accepted pops for possible Chinas
-        Tag		primary		accepted		added if they win
-		Xinjiang north		uighur			south
-	Qing Mongol acceptance later, if they win the xinhai rebellion and warlord era?
-		Its notable that the only dynasty that managed to fully nullify the barbarian threat was a dynasty that began as a group of barbarians itself. Long before the Manchus conquered China they began to form marriages alliances with Mongolia’s noble houses and incorporate Mongol units into its armed forces. Steppe politics was built into the Qing’s DNA, and they played the game masterfully. [10] Ethnic Chinese dynasties had a much tougher job coming to terms with their enemies on the steppe.
-		Actually nevermind
-			The New Policies also resulted in drastic change of the Manchu policy toward Mongolia from a relatively conservative-protective one to an aggressive-colonial one.[21] 
-	make Xinhai revolution less bordergory, using the viceroys
-	
-#TODO: change color of RTR so it doesn't get confused with Kachin
-#TODO: China gets decision to sieze trade zones. If they do, you get a free cb on them.
-#TODO: make China be able to refuse trade zone establishment. If they do, you get a free cb on them.
-
-####################################################################################################
-#TODO: rebalance military: army atk should x1.4 on average
+#TODO: rebalance military: army atk should x1.4 previous tier
 #TODO: increase support value of arty and planes
 
 #TODO: wool still sucks
+#TODO: slightly reduce factory output in late game b/c too many overproduced goods?
 
-#TODO: Turkestan doesn't get any cores (is this intended?)
+#TODO: remove random British cores in Alberta
+#TODO: Turkestan doesn't get any cores if formed externally (is this intended?)
+
+#TODO: adjust terrain migration again
+
+#TODO: China rework 2
 ####################################################################################################
 #TODO: nuclear research program
+
+#TODO: localizations for the nuke modifiers
 
 #TODO: nuke tiers
 
@@ -124,9 +104,30 @@ Coming soon:
 
 #TODO: the higher the global nuke research level, the more anti-nuke protest events happen
 
-####################################################################################################
-v0.5.6
+#TODO: nuclear accident event
 
+####################################################################################################
+v0.5.6c
+
+craftsmen exploit decision (need to enable it in Options within the 1st year of the game, afterwards, the decision will become available in Government Decisions)
+craftsmen and clerks demote quickly if they are in a colony for some reason (happens after dismantlement)
+strategic bombing preferably kills the middle class and craftsmen because they live in cities
+
+Imperial japan can forcibly kill Emperor Komei after researching state and government tech (just like how the Shogunate can make peace with the emperor)
+
+Red Turbans are now actually Red, made flags look better, adjust localizations, can become a democracy and no longer flips to China if democracy, and can purge warlords (like the other Chinas)
+Foreign-led Qing restoration adjustment
+Xinhai Revolution and Beiyang coup adjustment
+Purging warlords kills more officers
+
+####################################################################################################
+v0.5.6b
+opium rgo spread now no longer gives local_opium_habit to prevent unciv events from happening to civilized countries
+
+v0.5.6a
+adjust ai westernization
+
+v0.5.6
 Rebalancing, merge repetitive inventions
     Adjust culture inventions, moved television networks from psychology to aesthetics
     Adjust comp sci, experimental_radar removed, all references now use oscilloscope instead. TV removed. computerized_decryption removed, conditions split into army/naval computer intel.
@@ -134,24 +135,18 @@ Rebalancing, merge repetitive inventions
     remove exp. CV, split into hulk CV and CVL
     plastic_and_rubber_additives increase rubber rgo production (Carbon Black was added to Rubber in 1910, and Phthalates were invented in the 1920s)
     other adjustments
-
 Strait of Malacca and Bab-el-Mandeb Strait triggered modifiers
 Hormuz Strait no longer gives tax efficiency
 The British Raj triggered modifier no longer gives extra research points
-
 Adjust pollution
 Disabled atrocities
-
 adjust strategic bomb mtth and damage, reduced event spam, your military spending % also protects you from bombs
-
 Add symbol for nuke modifiers
 	gfx/interface/modifiers.dds
 	interface/general_gfx.gfx
 	Country modifier:  19 = green nuke, 20 = red nuke
 	Province modifier: 21 = green nuke, 22 = red nuke
 
-
-####################################################################################################
 
 v0.5.5d
 make trade zones be removed properly

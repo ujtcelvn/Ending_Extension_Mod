@@ -2678,6 +2678,7 @@ bomb_damage = {
     local_RGO_output = -0.1
     local_factory_throughput = -0.25
     local_factory_output = -0.25
+    population_growth = -0.002
     icon = 18
 }
 
@@ -2687,7 +2688,7 @@ heavy_bomb_damage = {
     local_RGO_output = -0.1
     local_factory_throughput = -0.25
     local_factory_output = -0.25
-    population_growth = -0.005
+    population_growth = -0.002
     icon = 18
 }
 
@@ -2706,7 +2707,7 @@ hot_particles = {
 
     farm_rgo_size = -0.2 #contaminated hot spots are fenced off
     mine_rgo_size = -0.2
-    pop_consciousness_modifier = 0.1 #people annoyed at contamination
+    pop_consciousness_modifier = 0.01 #people annoyed at contamination
     icon = 22
 }
 
@@ -2729,16 +2730,23 @@ recently_got_nuked = {
 }
 
 recently_used_nukes = {
-    badboy = 0.01
     icon = 20
 }
 
 
 ### Nuke research levels ###
-#nuclear_research_program
 
-nuclear_weapons_program = {
+nukes_banned = {
+    badboy = -0.01
+    icon = 20
+}
+
+#nuclear_research_program #peaceful nukes?
+
+nuclear_weapons_program = { #have this only be active if you are improving your nukes
     min_military_spending = 0.1
+    supply_consumption = 0.2
+    badboy = 0.01
     icon = 19
 }
 
@@ -2747,21 +2755,26 @@ nuclear_weapons_program = {
 
 fission_bomb = { #able to make nukes, but slowly and no stockpile
     prestige = 0.01
-    supply_consumption = 0.5
+    supply_consumption = 0.2
     badboy = 0.01
     icon = 19
 }
 
 mass_produced_bomb = { #has large stockpile
     prestige = 0.01
-    supply_consumption = 0.5
+    supply_consumption = 0.4
+    min_military_spending = 0.1
     badboy = 0.01
     icon = 19
 }
 
-#hydrogen_bomb = { #Thermonuclear / fusion
-#    icon = 19
-#}
+hydrogen_bomb = { #Thermonuclear / fusion
+    prestige = 0.01
+    supply_consumption = 0.4
+    min_military_spending = 0.1
+    badboy = 0.01
+    icon = 19
+}
 
 #nuclear_icbm = {
 #    icon = 19

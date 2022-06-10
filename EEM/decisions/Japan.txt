@@ -236,6 +236,58 @@ political_decisions = {
         }
     }
 
+    kill_emperor_komei = {
+        picture = the_meiji_restoration
+        potential = {
+            ai = no #if AI only, Komei will die naturally by event
+
+            primary_culture = japanese
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+            }
+            NOT = {
+                has_country_flag = emperor_meiji
+                has_global_flag = killed_emperor_komei
+
+                has_global_flag = boshin_war
+                has_global_flag = boshin_war_has_happened
+                TKG = { has_country_flag = made_peace_with_emperor }
+                tag = TKG
+                has_country_flag = made_peace_with_emperor
+                has_country_flag = peaceful_transition_to_japan
+            }
+        }
+
+        allow = {
+            war = no
+
+            civilized = yes
+            state_n_government = 1
+            idealism = 1
+
+            NOT = { has_country_modifier = kobu_gattai }
+            OR = {
+                is_vassal = no
+                has_country_flag = supports_imperial_edict
+                has_country_flag = angered_by_bakufu
+                ai = no
+            }
+        }
+
+        effect = {
+            set_global_flag = killed_emperor_komei
+            prestige = -20
+            TKG = { country_event = 97630 }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+    }
+
     overthrow_the_bakufu = {
         picture = the_meiji_restoration
         potential = {
