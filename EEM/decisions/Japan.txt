@@ -240,7 +240,7 @@ political_decisions = {
         picture = the_meiji_restoration
         potential = {
             ai = no #if AI only, Komei will die naturally by event
-
+            
             primary_culture = japanese
             OR = {
                 government = absolute_monarchy
@@ -267,13 +267,13 @@ political_decisions = {
             state_n_government = 1
             idealism = 1
 
-            NOT = { has_country_modifier = kobu_gattai }
-            OR = {
-                is_vassal = no
-                has_country_flag = supports_imperial_edict
-                has_country_flag = angered_by_bakufu
-                ai = no
-            }
+            #NOT = { has_country_modifier = kobu_gattai }
+            #OR = {
+            #    is_vassal = no
+            #    has_country_flag = supports_imperial_edict
+            #    has_country_flag = angered_by_bakufu
+            #    ai = no
+            #}
         }
 
         effect = {
