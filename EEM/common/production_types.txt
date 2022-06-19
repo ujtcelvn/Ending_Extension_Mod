@@ -348,15 +348,15 @@ steamer_shipyard = {
     value = 3.5            #227.5 - profit = 26.15
     bonus = {
         trigger = { has_building = lumber_mill }
-        value = 0.125
+        value = 0.05
     }
     bonus = {
         trigger = { has_building = steel_factory }
-        value = 0.125
+        value = 0.1
     }
     bonus = {
         trigger = { has_building = machine_parts_factory }
-        value = 0.125
+        value = 0.1
     }
 }
 
@@ -843,7 +843,7 @@ cattle_ranch = {
 coal_mine = {
     template = RGO_template_mines
     output_goods = coal
-    value = 2.6 #2.4
+    value = 2.6 #HPM: 2.4
     mine = yes
 }
 
@@ -885,7 +885,7 @@ grain_farm = {
 iron_mine = {
     template = RGO_template_labourers
     output_goods = iron
-    value = 2 #1.8
+    value = 2 #HPM: 1.8
     mine = yes
 }
 
@@ -899,7 +899,7 @@ oil_rig = {
 opium_plantation = {
     template = RGO_template_farmers
     output_goods = opium
-    value = 1 #0.7
+    value = 1 #HPM: 0.7
     farm = yes
 }
 
