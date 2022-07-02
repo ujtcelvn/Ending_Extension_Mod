@@ -63,11 +63,7 @@ constitutional_crisis = {
     icon = 6
 }
 
-democratic_peace_summit = {
-	#badboy = -0.01
-	#diplomatic_points_modifier = -0.05
-	icon = 5
-}
+#democratic_peace_summit
 
 ####
 
@@ -2614,8 +2610,7 @@ local_intensive_agriculture = {
 }
 
 local_modern_transportation = {
-    farm_RGO_eff = 0.25
-    mine_RGO_eff = 0.25
+    local_RGO_output = 0.1
     local_factory_throughput = 0.1
     local_artisan_output = 0.1
     movement_cost = -0.05
@@ -2624,8 +2619,7 @@ local_modern_transportation = {
 }
 
 local_pollution_problem = {
-    farm_RGO_eff = -0.2 #-0.1
-    #mine_RGO_eff = -0.1
+    farm_RGO_eff = -0.2
     icon = 14
 }
 
@@ -2787,9 +2781,6 @@ hydrogen_bomb = { #Thermonuclear / fusion
 
 
 ### Anti-war ###
-communist_peace_summit = {
-    icon = 5
-}
 
 anti_war_movement = {
     war_exhaustion = 0.1

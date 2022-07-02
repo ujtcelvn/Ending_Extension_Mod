@@ -349,10 +349,6 @@ country_event = {
                 factor = 0.12
             }
         }
-        add_country_modifier = {
-            name = global_liberal_agitation
-            duration = 10950
-        }
     }
 
     option = {
@@ -364,6 +360,7 @@ country_event = {
             }
             militancy = 3
         }
+
         random_state = {
             limit = {
                 OR = {
@@ -384,10 +381,6 @@ country_event = {
                     duration = 365
                 }
             }
-        }
-        add_country_modifier = {
-            name = global_liberal_agitation
-            duration = 21900
         }
     }
 }
@@ -505,10 +498,6 @@ province_event = {
         modifier = {
             factor = 0.8
             year = 1910
-        }
-        modifier = {
-            factor = 2 #1
-            has_country_flag = appease_societies
         }
     }
 

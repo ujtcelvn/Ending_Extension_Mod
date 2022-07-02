@@ -85,6 +85,9 @@ Coming soon:
 #TODO: adjust terrain migration again
 
 #TODO: China rework 2
+
+#TODO: nicer CSA borders
+
 ####################################################################################################
 #TODO: nuclear research program
 
@@ -107,8 +110,24 @@ Coming soon:
 #TODO: nuclear accident event
 
 ####################################################################################################
-v0.5.6c
+v0.5.6e
+colonial migration bonus now split between education and navy symmetrical, 2.5% each
+pollution tweaks
+nerfed local modern transportation
+Removed democratic and communist summit decisions because democratic peace theory isn't real and it's bloat
+Democratic summit events mtth decreased
+Adjust opoid addiction, opoid crackdown now works like the unciv version
+Ranchos now also apply to San Francisco
+Reverted Tongmenghui founding event effect back to what it was in HPM
+pro-Kuomingtang warlords start with controlled upper house instead of ruling party only
+Reverted conditions for changing national value back to what it was in HPM
 
+####################################################################################################
+v0.5.6d
+make steamer shipyard's bonus total consistent with every other factory, +0.25
+fix China uprising crash bug
+
+v0.5.6c
 craftsmen exploit decision (need to enable it in Options within the 1st year of the game, afterwards, the decision will become available in Government Decisions)
 craftsmen and clerks demote quickly if they are in a colony for some reason (happens after dismantlement)
 strategic bombing preferably kills the middle class and craftsmen because they live in cities
@@ -120,7 +139,6 @@ Foreign-led Qing restoration adjustment
 Xinhai Revolution and Beiyang coup adjustment
 Purging warlords kills more officers
 
-####################################################################################################
 v0.5.6b
 opium rgo spread now no longer gives local_opium_habit to prevent unciv events from happening to civilized countries
 

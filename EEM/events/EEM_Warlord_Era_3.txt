@@ -1,122 +1,13 @@
 
 
 #End of The Liberal Revolution
-country_event = {
-    id = 166601
-    title = "Tongmenghui Support Fades"
-    desc = "Although there are still active Tongmenghui cells, governmental reforms have reached a point where popular support for a democratic revolution has declined significantly."
-    picture = "Riot"
+#    id = 166601
+#    title = "Tongmenghui Support Fades"
+#    desc = "Although there are still active Tongmenghui cells, governmental reforms have reached a point where popular support for a democratic revolution has declined significantly."
+#    picture = "Riot"
+#disabled because tongmenghui no longer gives global_liberal_agitation
 
-    trigger = {
-        has_country_flag = tongmenghui 
-        OR = {
-            vote_franschise = universal_voting
-            vote_franschise = universal_weighted_voting
-        }
-        citizens_rights = all_voting_pops
-        NOT = { political_parties = underground_parties }
-        NOT = { num_of_revolts = 1 }
-        NOT = { militancy = 5 }
-        has_country_modifier = global_liberal_agitation
-        war = no
-        is_greater_power = yes
-        OR = {
-            AND = {
-                tag = QNG
-                NOT = { exists = TPG }
-                NOT = { exists = CHI }
-                NOT = { exists = RTR }
-            }
-            AND = {
-                tag = TPG
-                NOT = { exists = QNG }
-                NOT = { exists = CHI }
-                NOT = { exists = RTR }
-            }
-            AND = {
-                tag = CHI
-                NOT = { exists = TPG }
-                NOT = { exists = QNG }
-                NOT = { exists = RTR }
-            }
-            AND = {
-                tag = RTR
-                NOT = { exists = TPG }
-                NOT = { exists = QNG }
-                NOT = { exists = CHI }
-            }
-        }
-    }
 
-    mean_time_to_happen = {
-        months = 12
-        modifier = {
-            factor = 100
-            tag = QNG
-        }
-        modifier = {
-            factor = 1.5
-            vote_franschise = universal_weighted_voting
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { public_meetings = yes_meeting }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { press_rights = free_press }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = {
-                OR = {
-                    political_parties = gerrymandering
-                    political_parties = non_secret_ballots
-                    political_parties = secret_ballots
-                }
-            }
-        }
-        modifier = {
-            factor = 0.1
-            vote_franschise = universal_voting
-            public_meetings = yes_meeting
-            press_rights = free_press
-            OR = {
-                political_parties = gerrymandering
-                political_parties = non_secret_ballots
-                political_parties = secret_ballots
-            }
-        }
-    }
-
-    option = {
-        name = "Good Riddance."
-        any_owned = {
-            limit = { is_colonial = no }
-            any_pop = {
-                scaled_militancy = {
-                    ideology = liberal
-                    factor = -2
-                }
-                scaled_consciousness = {
-                    ideology = liberal
-                    factor = -1
-                }
-                scaled_militancy = {
-                    ideology = conservative
-                    factor = -4
-                }
-                scaled_consciousness = {
-                    ideology = conservative
-                    factor = -2
-                }
-            }
-            remove_province_modifier = liberal_agitation
-        }
-        remove_country_modifier = global_liberal_agitation
-        prestige = 5
-    }
-}
 
 country_event = {
     id = 166602

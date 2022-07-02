@@ -1065,6 +1065,7 @@ country_event = {
             relation = { who = THIS value = 50 }
         }
         ruling_party_ideology = conservative
+        political_reform = appointed 
         random_country = {
             limit = { tag = KMT }
             relation = { who = THIS value = -100 }
@@ -1373,6 +1374,7 @@ country_event = {
             }
         }
         ruling_party_ideology = conservative
+        political_reform = appointed 
         random_country = {
             limit = { tag = KMT }
             relation = { who = THIS value = -100 }
@@ -1775,6 +1777,7 @@ country_event = {
             }
         }
         ruling_party_ideology = conservative
+        political_reform = appointed 
         random_country = {
             limit = { tag = KMT }
             relation = { who = THIS value = -100 }
@@ -2320,15 +2323,18 @@ country_event = {
                 }
             }
         }
-        random = {
-            chance = 50
-            GMJ = { ruling_party_ideology = conservative }
-        }
+
         random_owned = {
             limit = {
-                owner = { tag = KMT }
+                NOT = { owner = { tag = KMT } }
             }
-            GMJ = { ruling_party_ideology = reactionary }
+            random = {
+                chance = 50
+                GMJ = {
+                    ruling_party_ideology = conservative
+                    political_reform = appointed 
+                }
+            }
         }
     }
 }

@@ -904,7 +904,7 @@ province_event = {
 province_event = {
     id = 166822
     title = "Drug Addiction Spreads to $PROVINCENAME$"
-    desc = "Although opium has been safely used as medicine for centuries, more potent, addictive, and dangerous forms of this drug are being sold, causing a noticible rise in overdose and withdrawal rates."
+    desc = "Although opium has been safely used as medicine for centuries, more potent, addictive, and dangerous forms of this drug are being sold, causing a noticible rise in overdose and withdrawal rates in this location."
 
     trigger = {
         OR = {
@@ -915,6 +915,10 @@ province_event = {
             trade_goods = opium
             any_neighbor_province = {
                 has_province_modifier = local_drug_habit
+            }
+            AND = {
+                owner = { produces = opium }
+                port = yes
             }
         }
         NOT = { has_province_modifier = local_drug_habit }
@@ -960,7 +964,7 @@ province_event = {
     }
 
     option = {
-        name = "Let them have their fun."
+        name = "Turn a blind eye."
 
         add_province_modifier = {
             name = local_drug_habit
@@ -980,7 +984,6 @@ province_event = {
         name = "Crack down on the addicts!"
         any_pop = {
             militancy = 2
-            reduce_pop = 0.999
         }
         NWO = { change_variable = { which = addict_crackdown value = 1 } }
 

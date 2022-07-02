@@ -125,8 +125,39 @@ country_event = {
 			}
         }
 
+		modifier = {
+			factor = 0.8
+			economic_policy = laissez_faire 
+		}
+
+		modifier = {
+			factor = 0.9
+			NOT = { administration_spending = 0.09 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { administration_spending = 0.19 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { administration_spending = 0.29 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { administration_spending = 0.39 }
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { administration_spending = 0.49 }
+		}
+
+
         modifier = {
-            factor = 1.2
+            factor = 1.1
+            safety_regulations = trinket_safety
+        }
+        modifier = {
+            factor = 1.25
             safety_regulations = low_safety
         }
         modifier = {
@@ -137,8 +168,9 @@ country_event = {
             factor = 2
             safety_regulations = good_safety
         }
+
         modifier = {
-            factor = 4
+            factor = 2
             has_country_modifier = clean_air_act 
         }
    }
@@ -158,7 +190,7 @@ country_event = {
 
         capital_scope = {
             add_province_modifier = { name = local_pollution_problem duration = 365 }
-            random = { chance = 10 any_pop = { reduce_pop = 0.999 } }
+            any_pop = { reduce_pop = 0.999 }
         }
 
         any_owned = {
@@ -276,8 +308,8 @@ country_event = {
             literacy = 0.8
         }
         modifier = {
-            factor = 0.5
-            capital_scope = { has_province_modifier = local_pollution_problem }
+            factor = 4
+            economic_policy = laissez_faire
         }
     }
 
@@ -286,7 +318,7 @@ country_event = {
 
         any_pop = {
             limit = {
-                strata = middle
+                literacy = 0.8
             }
             consciousness = 0.5
         }
@@ -325,7 +357,7 @@ country_event = {
     }
 
     option = {
-        name = "This is necessary to improve air quality."
+        name = "This is a necessary measure to improve air quality."
         add_country_modifier = { name = clean_air_act duration = -1 }
 
         any_pop = {
@@ -378,6 +410,7 @@ country_event = {
             ruling_party_ideology = reactionary
             ruling_party_ideology = anarcho_liberal
             ruling_party_ideology = fascist
+            NOT = { safety_regulations = good_safety }
         }
     }
 
