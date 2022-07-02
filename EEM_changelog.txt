@@ -116,11 +116,17 @@ pollution tweaks
 nerfed local modern transportation
 Removed democratic and communist summit decisions because democratic peace theory isn't real and it's bloat
 Democratic summit events mtth decreased
-Adjust opoid addiction, opoid crackdown now works like the unciv version
+Adjust opioid addiction, opioid crackdown now works like the unciv version
 Ranchos now also apply to San Francisco
 Reverted Tongmenghui founding event effect back to what it was in HPM
 pro-Kuomingtang warlords start with controlled upper house instead of ruling party only
 Reverted conditions for changing national value back to what it was in HPM
+1568 Taian wool -> silk
+1479 Mudken silk -> grain
+1480 Jinzhou cattle -> timber
+1576 Datong timber -> wool
+1572 Taiyuan grain -> cattle
+Reverted serf needs to HPM
 
 ####################################################################################################
 v0.5.6d
