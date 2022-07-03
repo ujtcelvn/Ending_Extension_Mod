@@ -111,7 +111,7 @@ Coming soon:
 
 ####################################################################################################
 v0.5.6e
-colonial migration bonus now split between education and navy symmetrical, 2.5% each
+colonial migration bonus now split between education and navy symmetrically, 2.5% each
 pollution tweaks
 nerfed local modern transportation
 Removed democratic and communist summit decisions because democratic peace theory isn't real and it's bloat
@@ -120,13 +120,18 @@ Adjust opioid addiction, opioid crackdown now works like the unciv version
 Ranchos now also apply to San Francisco
 Reverted Tongmenghui founding event effect back to what it was in HPM
 pro-Kuomingtang warlords start with controlled upper house instead of ruling party only
+tweak warlord faction picking
 Reverted conditions for changing national value back to what it was in HPM
 1568 Taian wool -> silk
 1479 Mudken silk -> grain
 1480 Jinzhou cattle -> timber
 1576 Datong timber -> wool
 1572 Taiyuan grain -> cattle
-Reverted serf needs to HPM
+Reverted serf needs back to what it was in HPM
+Nerf tech_power_7 to be like the rest of the power technologies
+opium ban now only reduces luxury good need for poor pops
+reduce immigration to poor terrain
+clean up unciv modifiers from forcibly civilized nations
 
 ####################################################################################################
 v0.5.6d

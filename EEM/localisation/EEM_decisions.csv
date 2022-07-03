@@ -95,3 +95,5 @@ option_enable_craftsmen_exploit_title;Option: Enable Unaccepted Craftsmen and Cl
 option_enable_craftsmen_exploit_desc;Enables decision to demote unaccepted craftsmen and clerks in your cores. The decision will become available in Government Decisions.;;;;;;;;;;;;;
 kill_emperor_komei_title;Assassinate Emperor Komei;;;;;;;;;;;;;
 kill_emperor_komei_desc;Emperor Komei has consistently opposed anti-bakufu forces despite disagreements between him and the Shogun. However, the crown prince is still young and can be manipulated to agree to plans to overthrow the Shogunate. Assassinating Emperor Komei would thus be most opportune in preventing reconcilation between Emperor and Shogun.;;;;;;;;;;;;;
+remove_unciv_modifiers_from_civs_title;Civilization Cleanup;;;;;;;;;;;;;
+remove_unciv_modifiers_from_civs_desc;There is a civlized nation that has uncivilized modifiers which should be removed.;;;;;;;;;;;;;

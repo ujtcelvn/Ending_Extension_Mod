@@ -3892,4 +3892,111 @@ political_decisions = {
         }
     }
 
+
+    remove_unciv_modifiers_from_civs = {
+        potential = {
+            ai = yes
+            OR = {
+                AND = {
+                    civilized = yes
+                    OR = {
+                        has_country_modifier = uncivilized_isolationism
+                        has_country_modifier = western_influences
+                    }
+                }
+                AND = {
+                    any_neighbor_country = {
+                        civilized = yes
+                        OR = {
+                            has_country_modifier = uncivilized_isolationism
+                            has_country_modifier = western_influences
+                        }
+                    }
+                }
+            }
+        }
+
+        allow = { }
+
+        effect = {
+            any_country = {
+                limit = {
+                    civilized = yes
+                    OR = {
+                        has_country_modifier = uncivilized_isolationism
+                        has_country_modifier = western_influences
+                    }
+                }
+
+                clr_country_flag = lacking_writing_system
+                remove_country_modifier = lacks_writing_system
+                random_owned = { limit = { owner = { ai = yes } } owner = { add_country_modifier = { name = law_changed_by_force duration = 3 } } }
+                random_owned = {
+                    limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
+                    owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
+                }
+                random_list = {
+                    34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
+                    33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
+                    33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            has_country_modifier = uncivilized_isolationism
+                            NOT = { border_policy = closed_borders } }
+                        }
+                    owner = { political_reform = closed_borders }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            has_country_modifier = western_influences
+                            NOT = { border_policy = open_borders } }
+                        }
+                    owner = { political_reform = open_borders }
+                }
+                remove_country_modifier = assegai
+                remove_country_modifier = educational_reform
+                remove_country_modifier = military_reform
+                remove_country_modifier = western_influences
+                remove_country_modifier = shastar_vidya
+                remove_country_modifier = uncivilized_isolationism
+                remove_country_modifier = trade_restrictions
+                remove_country_modifier = sayings_of_the_dutch
+                remove_country_modifier = rangaku
+                remove_country_modifier = sakoku
+                clr_country_flag = using_foreign_weapons
+                clr_country_flag = using_foreign_artillery
+                clr_country_flag = using_foreign_ships
+                clr_country_flag = using_foreign_shipyards
+                random_owned = {
+                    limit = { owner = { has_country_modifier = western_presence_research } }
+                    owner = { remove_country_modifier = western_presence_research }
+                }
+                random_owned = {
+                    limit = { owner = { has_country_modifier = european_military_mission } }
+                    owner = { remove_country_modifier = european_military_mission }
+                }
+                random_owned = {
+                    limit = { owner = { has_country_modifier = legation_quarter } }
+                    owner = { remove_country_modifier = legation_quarter }
+                }
+                any_owned = {
+                    remove_province_modifier = western_presence
+                    remove_province_modifier = foreign_smugglers
+                    remove_province_modifier = foreign_trading_post
+                    remove_province_modifier = local_opium_habit
+                    remove_province_modifier = kettler_denkmal
+                    remove_province_modifier = extraterritoriality_granted
+                    remove_province_modifier = boxer_presence
+                    remove_province_modifier = boxer_agitation
+                }
+
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
 }
