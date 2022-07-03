@@ -1099,6 +1099,11 @@ country_event = {
                 tag = HUI
             }
             modifier = {
+                factor = 4
+                OR = { tag = GMJ tag = GNG }
+                NOT = { exists = KMT }
+            }
+            modifier = {
                 factor = 0.25
                 exists = KMT
             }
@@ -1421,6 +1426,7 @@ country_event = {
             modifier = {
                 factor = 4
                 OR = { tag = GMJ tag = GNG }
+                NOT = { exists = KMT }
             }
             modifier = {
                 factor = 0.25
@@ -1822,6 +1828,11 @@ country_event = {
                 tag = HUI
             }
             modifier = {
+                factor = 4
+                OR = { tag = GMJ tag = GNG }
+                NOT = { exists = KMT }
+            }
+            modifier = {
                 factor = 0.25
                 exists = KMT
             }
@@ -1909,7 +1920,7 @@ country_event = {
             factor = 25
             modifier = {
                 factor = 0
-                tag = GNG
+                OR = { tag = GNG tag = GMJ }
                 NOT = { exists = KMT }
             }
             modifier = {
@@ -2336,6 +2347,17 @@ country_event = {
                 }
             }
         }
+
+        random_owned = {
+            limit = {
+                owner = { tag = KMT }
+            }
+            GMJ = {
+                ruling_party_ideology = reactionary
+                political_reform = party_appointed
+            }
+        }
+
     }
 }
 
