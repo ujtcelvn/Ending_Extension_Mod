@@ -132,6 +132,7 @@ Nerf tech_power_7 to be like the rest of the power technologies
 opium ban now only reduces luxury good need for poor pops
 reduce immigration to poor terrain
 clean up unciv modifiers from forcibly civilized nations
+returned opium production to 0.7
 
 ####################################################################################################
 v0.5.6d
