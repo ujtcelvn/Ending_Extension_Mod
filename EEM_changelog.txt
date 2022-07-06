@@ -133,13 +133,13 @@ v0.5.6f
 1519 Anlu silk -> grain
 1520 Jingzhou silk -> tea  Some tea is grown on the hills in the southeast.
 
-Reduce the starting population of the Congo from 18 million to 6.8 million.
+Reduce the starting population of the Congo from 18 million to 5.85 million.
 Choosing the Leopold Option for the Congo kills 10% of pops immediately
 Congo exploitation now modifies pop growth by -0.005 instead of -0.01. 
 Running the Congo as an philanthropic endeavor no longer gets the congo exploitation modifier and no longer kills anyone.
 Exploiting the Congo kills much fewer pops in Kinshasa than before
 Philanthropic work no longer gets the congo exploitation modifier and doesn't kill anyone, but instead gets local_economic_downturn for a year, representing the confusion from changing policy from exploitation to philanthropy.
-
+You now only need 3 consciousness to switch to the culture tech school
 
 ####################################################################################################
 v0.5.6e
