@@ -86,7 +86,7 @@ Coming soon:
 
 #TODO: China rework 2
 
-#TODO: nicer CSA borders
+#TODO: wtf why do silk farmers so much poorer than normal farmers
 
 ####################################################################################################
 #TODO: nuclear research program
@@ -110,6 +110,38 @@ Coming soon:
 #TODO: nuclear accident event
 
 ####################################################################################################
+v0.5.6f
+1534 Ulaan Chab Chuulghan timber -> wool       Zhangbei plateau north of the Great Wall is a pastoral area, well known for its horses (raised around Kalgan [Zhangjiakou]) and lambskin.
+1613 Chengde silk -> grain
+1484 Qianzhou fish -> tea       the East India Company was exporting an estimated £150,000 a year in black tea from Quanzhou
+1486 Tingzhou grain -> timber   Forests cover more than two-fifths of the province and contain an enormous timber reserve.
+1510 Luoyang silk -> grain
+1511 Zhengzhou grain -> silk
+1530 Yongzhou grain -> tea     Red and black tea are grown on the foothills of the Xuefeng Mountains
+1503 Guilin silk -> fruit   Guangxi is 2nd most fruit producing province in China, after Shandong. Local agricultural products: Shatian Pomelo, summer orange, Fructus Momordicae, ginkgo, moon persimmon, 
+1581 Kuizhou timber -> silk
+1559 Xian timber -> grain       Shaanxi makes very little wood, it's just farmland
+1565 Laizhou fruit -> fish        Shandong makes 3rd most of China's fish
+
+1611 Wenzhou silk -> tea    Zhejiang tea:   Hangzhou, Pingshui (Shaoxing), Jiande, Wenzhou tea
+1509 Guide silk -> grain
+1493 Canton silk -> fish    Guangdong, with its long coastline, produces about one-fifth of China’s fish. 
+1490 Lanzhou dryhills -> hills
+1491 Ningxia dryhills -> hills
+1535 Yeke Juu Chuulghan grain -> wool   The pillars of its economy are textiles (wool)   https://www.tandfonline.com/doi/pdf/10.1080/19447014608662023
+1516 Hanyang silk -> tea    Tianmen is the hometown of Lu Yu, the writer of The Classic of Tea, who is respected as "the Sage of Tea" for his contribution to the tea culture. 
+1519 Anlu silk -> grain
+1520 Jingzhou silk -> tea  Some tea is grown on the hills in the southeast.
+
+Reduce the starting population of the Congo from 18 million to 6.8 million.
+Choosing the Leopold Option for the Congo kills 10% of pops immediately
+Congo exploitation now modifies pop growth by -0.005 instead of -0.01. 
+Running the Congo as an philanthropic endeavor no longer gets the congo exploitation modifier and no longer kills anyone.
+Exploiting the Congo kills much fewer pops in Kinshasa than before
+Philanthropic work no longer gets the congo exploitation modifier and doesn't kill anyone, but instead gets local_economic_downturn for a year, representing the confusion from changing policy from exploitation to philanthropy.
+
+
+####################################################################################################
 v0.5.6e
 colonial migration bonus now split between education and navy symmetrically, 2.5% each
 pollution tweaks
@@ -129,12 +161,11 @@ Reverted conditions for changing national value back to what it was in HPM
 1572 Taiyuan grain -> cattle
 Reverted serf needs back to what it was in HPM
 Nerf tech_power_7 to be like the rest of the power technologies
-opium ban now only reduces luxury good need for poor pops
+opium ban now only reduces luxury good need for poor and middle class pops
 reduce immigration to poor terrain
 clean up unciv modifiers from forcibly civilized nations
 returned opium production to 0.7
 
-####################################################################################################
 v0.5.6d
 make steamer shipyard's bonus total consistent with every other factory, +0.25
 fix China uprising crash bug

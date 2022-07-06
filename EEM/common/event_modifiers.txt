@@ -1580,7 +1580,7 @@ congo_company = {
 
 congo_exploitation = {
     immigrant_push = -1
-    population_growth = -0.01
+    population_growth = -0.005 #-0.01
     farm_rgo_eff = 0.2
     farm_rgo_size = 1
     mine_rgo_eff = 0.2
@@ -2650,8 +2650,7 @@ local_drug_habit = {
 
 opium_ban = {
     poor_luxury_needs = -0.05
-    #middle_luxury_needs = -0.05
-    #rich_luxury_needs = -0.05
+    middle_luxury_needs = -0.025
     icon = 18
 }
 
@@ -2692,35 +2691,16 @@ heavy_bomb_damage = {
 #Province modifier: 21 = green nuke, 22 = red nuke
 
 hot_particles = {
-    immigrant_attract = -1
-    immigrant_push = 1
-    local_RGO_output = -0.2 #contaminated produce wasted
-
-    #factories no longer affected
-
-    population_growth = -0.005
-
-    farm_rgo_size = -0.2 #contaminated hot spots are fenced off
-    mine_rgo_size = -0.2
-    pop_consciousness_modifier = 0.01 #people annoyed at contamination
     icon = 22
 }
 
 acute_radiation_syndrome = {
-    immigrant_attract = -1
-    immigrant_push = 1
-    local_RGO_output = -1
-    local_factory_throughput = -0.75
-    local_factory_output = -0.75
-
-    population_growth = -0.01
     icon = 22
 }
 
 
 #Country modifier:  19 = green nuke, 20 = red nuke
 recently_got_nuked = {
-    global_immigrant_attract = -1
     icon = 20
 }
 

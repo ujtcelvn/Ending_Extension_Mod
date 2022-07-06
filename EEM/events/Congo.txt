@@ -252,6 +252,7 @@ country_event = {
             set_country_flag = post_colonial_country
             primary_culture = THIS
             add_accepted_culture = bakongo
+            any_pop = { limit = { NOT = { is_primary_culture = yes } } reduce_pop = 0.9 }
             1983 = { state_scope = { any_pop = { limit = { OR = { type = officers type = aristocrats } } pop_type = labourers } } }
             random_owned = { limit = { is_capital = yes NOT = { has_building = fort } } fort = 1 }
         }
@@ -332,8 +333,8 @@ country_event = {
         CNG = {
             clr_country_flag = congo_free_state_born
             add_country_modifier = { name = philantropic_work duration = 1095 }
-            any_owned = { limit = { is_capital = no } add_province_modifier = { name = congo_exploitation duration = 2555 } }
-            any_pop = { limit = { NOT = { is_primary_culture = yes } } reduce_pop = 0.5 }
+            #any_owned = { limit = { is_capital = no } add_province_modifier = { name = congo_exploitation duration = 2555 } }
+            #any_pop = { limit = { NOT = { is_primary_culture = yes } } reduce_pop = 0.5 }
             political_reform = no_slavery
             government = hms_government
             political_reform = non_secret_ballots
@@ -487,12 +488,13 @@ country_event = {
         CNG = {
             any_owned = { limit = { is_capital = no } add_province_modifier = { name = congo_exploitation duration = 1460 } }
             capital_scope = {
-                    add_province_modifier = { name = congo_company duration = 1095 }
-                    any_pop = { limit = { NOT = { OR = { type = aristocrats type = officers } is_primary_culture = yes } } reduce_pop = 0.5 }
-                }
-                any_owned = { any_pop = { limit = { is_primary_culture = yes type = aristocrats } money = 100 militancy = -2 } }
-                any_owned = { any_pop = { limit = { is_primary_culture = yes type = officers } money = 50 militancy = -2 } }
+                add_province_modifier = { name = congo_company duration = 1095 }
+                any_pop = { limit = { NOT = { OR = { type = aristocrats type = officers } is_primary_culture = yes } } reduce_pop = 0.8 } #0.5
             }
+
+            any_owned = { any_pop = { limit = { is_primary_culture = yes type = aristocrats } money = 100 militancy = -2 } }
+            any_owned = { any_pop = { limit = { is_primary_culture = yes type = officers } money = 50 militancy = -2 } }
+        }
         random_list = {
             30 = {change_variable = { which = exploited_congo value = 3 } }
             55 = {change_variable = { which = exploited_congo value = 2 } }
@@ -545,7 +547,7 @@ country_event = {
             any_owned = { limit = { is_capital = no } add_province_modifier = { name = congo_exploitation duration = 1095 } }
             capital_scope = {
                 add_province_modifier = { name = congo_company duration = 365 }
-                any_pop = { limit = { NOT = { OR = { type = aristocrats type = officers } is_primary_culture = yes } } reduce_pop = 0.7 }
+                any_pop = { limit = { NOT = { OR = { type = aristocrats type = officers } is_primary_culture = yes } } reduce_pop = 0.95 } #0.7
             }
         }
         random_list = {
@@ -591,8 +593,9 @@ country_event = {
         }
         CNG = {
             add_country_modifier = { name = philantropic_work duration = 1095 }
-            any_owned = { limit = { is_capital = no } add_province_modifier = { name = congo_exploitation duration = 730 } }
-            any_pop = { limit = { NOT = { OR = { type = aristocrats type = officers } is_primary_culture = yes } } reduce_pop = 0.8 }
+            #any_owned = { limit = { is_capital = no } add_province_modifier = { name = congo_exploitation duration = 730 } }
+            any_owned = { limit = { is_capital = no } add_province_modifier = { name = local_economic_downturn duration = 365 } }
+            #any_pop = { limit = { NOT = { OR = { type = aristocrats type = officers } is_primary_culture = yes } } reduce_pop = 0.8 }
             any_pop = { limit = { is_primary_culture = yes } militancy = 3 }
         }
         random_list = {
