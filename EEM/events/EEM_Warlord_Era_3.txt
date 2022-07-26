@@ -945,6 +945,13 @@ country_event = {
         set_global_flag = warlord_era_has_begun
         prestige = -25
 
+        any_owned = {
+            limit = {
+               state_scope = { any_owned_province = { is_capital = yes } }  #Make super sure capital doesn't get defect to warlords
+            }
+            add_core = TZ3
+        }
+
         random_country = {
             limit = {
                 tag = KOR
@@ -964,7 +971,7 @@ country_event = {
             THIS = { release_vassal = GNG }
         }
         any_owned = {
-            limit = { is_core = GNG }
+            limit = { is_core = GNG NOT = { is_core = TZ3 } }
             secede_province = GNG
         }
         random_country = {
@@ -978,7 +985,7 @@ country_event = {
             THIS = { release_vassal = GXI }
         }
         any_owned = {
-            limit = { is_core = GXI }
+            limit = { is_core = GXI NOT = { is_core = TZ3 } }
             secede_province = GXI
         }
         random_country = {
@@ -992,7 +999,7 @@ country_event = {
             THIS = { release_vassal = HNN }
         }
         any_owned = {
-            limit = { is_core = HNN }
+            limit = { is_core = HNN NOT = { is_core = TZ3 } }
             secede_province = HNN
         }
         random_country = {
@@ -1006,7 +1013,7 @@ country_event = {
             THIS = { release_vassal = HUI }
         }
         any_owned = {
-            limit = { is_core = HUI }
+            limit = { is_core = HUI NOT = { is_core = TZ3 } }
             secede_province = HUI
         }
         random_country = {
@@ -1028,7 +1035,7 @@ country_event = {
             THIS = { release_vassal = MCK }
         }
         any_owned = {
-            limit = { is_core = MCK }
+            limit = { is_core = MCK NOT = { is_core = TZ3 } }
             secede_province = MCK
         }
 
@@ -1050,7 +1057,7 @@ country_event = {
             THIS = { release_vassal = SXI }
         }
         any_owned = {
-            limit = { is_core = SXI }
+            limit = { is_core = SXI NOT = { is_core = TZ3 } }
             secede_province = SXI
         }
         random_country = {
@@ -1064,7 +1071,7 @@ country_event = {
             THIS = { release_vassal = SZC }
         }
         any_owned = {
-            limit = { is_core = SZC }
+            limit = { is_core = SZC NOT = { is_core = TZ3 } }
             secede_province = SZC
         }
         random_country = {
@@ -1093,7 +1100,7 @@ country_event = {
             THIS = { release_vassal = XBI }
         }
         any_owned = {
-            limit = { is_core = XBI }
+            limit = { is_core = XBI NOT = { is_core = TZ3 } }
             secede_province = XBI
         }
 
@@ -1116,7 +1123,7 @@ country_event = {
             THIS = { release_vassal = XIN }
         }
         any_owned = {
-            limit = { is_core = XIN }
+            limit = { is_core = XIN NOT = { is_core = TZ3 } }
             secede_province = XIN
         }
         random_country = {
@@ -1130,7 +1137,7 @@ country_event = {
             THIS = { release_vassal = YNN }
         }
         any_owned = {
-            limit = { is_core = YNN }
+            limit = { is_core = YNN NOT = { is_core = TZ3 } }
             secede_province = YNN
         }
         random_owned = {
@@ -1172,23 +1179,54 @@ country_event = {
             THIS = { release_vassal = FJN }
         }
         any_owned = {
-            limit = { is_core = FJN }
+            limit = { is_core = FJN NOT = { is_core = TZ3 } }
             secede_province = FJN
         }
-        #random_country = {
-        #    limit = {
-        #        tag = MAO
-        #        OR = {
-        #            vassal_of = THIS
-        #            substate_of = THIS
-        #        }
-        #    }
-        #    THIS = { release_vassal = MAO }
-        #}
-        #any_owned = {
-        #    limit = { is_core = MAO }
-        #    secede_province = MAO
-        #}
+
+
+        random_country = { #release Beiyang China if you're TPG/RTR/TPG
+            limit = {
+                NOT = { THIS = { tag = CHI } }
+                NOT = { THIS = { tag = QNG } }
+                tag = CHI
+                OR = {
+                    vassal_of = THIS
+                    substate_of = THIS
+                }
+            }
+            government = presidential_dictatorship
+            ruling_party_ideology = reactionary
+            political_reform = none_voting
+            political_reform = party_appointed
+            political_reform = no_meeting
+            political_reform = state_press
+            political_reform = no_trade_unions
+            political_reform = underground_parties
+            THIS = { release_vassal = CHI }
+        }
+        any_owned = {
+            limit = { is_core = CHI  OR = { region = CHI_1612 region = CHI_1616 } NOT = { is_core = TZ3 } NOT = { THIS = { tag = CHI } }  NOT = { THIS = { tag = QNG } } }
+
+            secede_province = CHI
+            CHI = {
+                government = presidential_dictatorship
+                ruling_party_ideology = reactionary
+                political_reform = none_voting
+                political_reform = party_appointed
+                political_reform = no_meeting
+                political_reform = state_press
+                political_reform = no_trade_unions
+                political_reform = underground_parties
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_core = TZ3
+            }
+            remove_core = TZ3
+        }
+
 
         any_pop = {
             militancy = -6

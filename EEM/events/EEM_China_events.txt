@@ -1599,47 +1599,7 @@ country_event = {
     }
 
     option = {
-        name = "The age of emperors is over. China can only be revitalized under a democracy."
-
-        government = democracy
-        ruling_party_ideology = liberal
-        political_reform = universal_weighted_voting
-        political_reform = party_appointed
-        political_reform = yes_meeting
-        political_reform = state_press
-        political_reform = state_controlled
-        political_reform = harassment
-
-        random_owned = {
-            limit = { owner = { has_country_modifier = uncivilized_isolationism } }
-            owner = { remove_country_modifier = uncivilized_isolationism }
-        }
-        add_country_modifier = {
-            name = "western_influences"
-            duration = -1
-        }
-        random_owned = {
-            limit = { owner = { NOT = { border_policy = open_borders } } }
-            owner = { political_reform = open_borders }
-        }
-
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        set_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        clr_country_flag = anarcho_liberal_gov
-        clr_country_flag = theocratic_government
-        clr_country_flag = election_started
-        clr_country_flag = conservative_party_in_power
-        set_country_flag = liberal_party_in_power
-        clr_country_flag = reactionary_party_in_power
-        clr_country_flag = socialist_party_in_power
-        clr_country_flag = communist_party_in_power
-        clr_country_flag = fascist_party_in_power
-        clr_country_flag = anarcho_liberal_party_in_power
+        name = "There is nothing wrong with the current arrangement."
 
         any_pop = {
             limit = {
@@ -1648,71 +1608,33 @@ country_event = {
                     is_accepted_culture = yes
                 }
             }
-            consciousness = 3
+            ideology = {
+                value = reactionary
+                factor = 0.05
+            }
         }
         any_pop = {
             scaled_militancy = {
-                ideology = conservative
-                factor = 1
-            }
-            scaled_militancy = {
-                ideology = reactionary
-                factor = 3
+                ideology = liberal
+                factor = 4
             }
         }
-
+        any_pop = {
+            limit = {
+                is_primary_culture = no
+                is_accepted_culture = no
+            }
+            militancy = 2
+            consciousness = 3
+        }
         add_country_modifier = {
             name = national_confusion
             duration = 1825
         }
-
-        random_owned = {
-            limit = { owner = { has_country_modifier = regency_government } }
-            owner = { remove_country_modifier = regency_government }
-        }
-
         ai_chance = {
             factor = 20
         }
     }
-
-#    option = {
-#        name = "There is nothing wrong with the current arrangement."
-#
-#        any_pop = {
-#            limit = {
-#                OR = {
-#                    is_primary_culture = yes
-#                    is_accepted_culture = yes
-#                }
-#            }
-#            ideology = {
-#                value = reactionary
-#                factor = 0.05
-#            }
-#        }
-#        any_pop = {
-#            scaled_militancy = {
-#                ideology = liberal
-#                factor = 4
-#            }
-#        }
-#        any_pop = {
-#            limit = {
-#                is_primary_culture = no
-#                is_accepted_culture = no
-#            }
-#            militancy = 2
-#            consciousness = 3
-#        }
-#        add_country_modifier = {
-#            name = national_confusion
-#            duration = 1825
-#        }
-#        ai_chance = {
-#            factor = 10
-#        }
-#    }
 
 }
 

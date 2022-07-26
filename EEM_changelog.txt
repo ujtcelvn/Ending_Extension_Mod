@@ -59,8 +59,6 @@ Coming soon:
 #TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships get to purge in different ideologies
 #TODO: ancap memes
 
-#TODO: The Congo has too many pops
-
 #TODO: pogroms
 #TODO: Special Attack Units
 #TODO: unethical experiments, leak
@@ -73,21 +71,17 @@ Coming soon:
 
 #TODO: invention localizations
 
-#TODO: rebalance military: army atk should x1.4 previous tier
-#TODO: increase support value of arty and planes
-
-#TODO: wool still sucks
-#TODO: slightly reduce factory output in late game b/c too many overproduced goods?
+#TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
 
 #TODO: remove random British cores in Alberta
 #TODO: Turkestan doesn't get any cores if formed externally (is this intended?)
 
-#TODO: adjust terrain migration again
+#TODO: China viceroys?
 
-#TODO: China rework 2
+#TODO: make sure goods aren't overproduced in late game
+#TODO: wool (and perhaps tobacco / tea / coffee / opium) still suck, esp. in late game
 
-#TODO: wtf why do silk farmers so much poorer than normal farmers
-
+#TODO: Note that horses typically got 5 to 10 kg of fodder per day, so the 10,000+ horses in a 3,000-man cavalry brigade should consume 2.5 to 5 Grain per day, or 100 per month! Compare to the Grain supply cost in vanilla Victoria 2, which is precisely zero. Granted, some of that fodder was hay, not grain, and some could be scavenged from the countryside, but it still seems absurd that they cost almost nothing to maintain.
 ####################################################################################################
 #TODO: nuclear research program
 
@@ -108,6 +102,23 @@ Coming soon:
 #TODO: the higher the global nuke research level, the more anti-nuke protest events happen
 
 #TODO: nuclear accident event
+
+####################################################################################################
+v0.5.6g
+
+Swapped price of grain with cattle because shitty staple crops being cheaper than meat is annoying, normalized food RGO productivity
+Increased silk RGO production from 0.25 to 0.35 because silk the one of the worst RGOs in money made, even when accounting for normal silk price increases due to shortages
+slightly reduced coal and iron production (still higher than in HPM)
+
+2678 Bulgan timber -> grain  Only roughly 1 percent of Mongolia’s land area is used to grow crops. Production is concentrated in the wetter northern parts of the country, particularly in the broad lower valleys of the Orkhon and Selenge rivers.
+1466 Dalandzadgad timber -> wool
+1468 Uliastai grain -> cattle
+1465 Urga cattle -> timber
+2207 Sainshand grain -> wool
+
+Reverted Red Turban power struggle event
+Reverted KMT national value back to order
+Every China's capital is now immune to warlords, even if warlord cores have already spread there. A Beiyang China warlord appears in Beijing if you're not CHI or QNG.
 
 ####################################################################################################
 v0.5.6f
@@ -141,7 +152,6 @@ Exploiting the Congo kills much fewer pops in Kinshasa than before
 Philanthropic work no longer gets the congo exploitation modifier and doesn't kill anyone, but instead gets local_economic_downturn for a year, representing the confusion from changing policy from exploitation to philanthropy.
 You now only need 3 consciousness to switch to the culture tech school
 
-####################################################################################################
 v0.5.6e
 colonial migration bonus now split between education and navy symmetrically, 2.5% each
 pollution tweaks
