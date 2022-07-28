@@ -78,10 +78,18 @@ Coming soon:
 
 #TODO: China viceroys?
 
+
 #TODO: make sure goods aren't overproduced in late game
 #TODO: wool (and perhaps tobacco / tea / coffee / opium) still suck, esp. in late game
 
-#TODO: Note that horses typically got 5 to 10 kg of fodder per day, so the 10,000+ horses in a 3,000-man cavalry brigade should consume 2.5 to 5 Grain per day, or 100 per month! Compare to the Grain supply cost in vanilla Victoria 2, which is precisely zero. Granted, some of that fodder was hay, not grain, and some could be scavenged from the countryside, but it still seems absurd that they cost almost nothing to maintain.
+#TODO: remove clipper factories, clippers are only built by artisans now
+	https://penobscotmarinemuseum.org/pbho-1/ships-shipbuilding/maine-shipyards
+	Wooden shipbuilding in Maine in the nineteenth century required little capital expense for a physical plant. It needed only space to build and store materials, the right slope to the shore for the inclined ways to launch the ship, and enough deep water at high tide to float the vessel.
+	The 1880 census of manufactures showed that the average wood shipyard had $6,200 of capital investment.
+	On the other hand, steel shipyards in 1880 had an average of almost $470,000 expended to build all of the facilities necessary to work with steel
+	Workers typically earned $1.50 to $2.50 per ten-hour day. Shipbuilding was seasonal, especially in smaller communities: most work went on between fall and spring. By the end of the nineteenth century, reduced demand for ships and consolidation of wooden shipyards meant that shipbuilders might find work only 8 or 9 months of the year.
+
+#TODO: soldiers in state capitals only
 ####################################################################################################
 #TODO: nuclear research program
 
@@ -92,12 +100,6 @@ Coming soon:
 #TODO: First ever use of nuke special event: Start of the Atomic Age: set global flag: nukes_used_in_war, set country flag: first_country_to_nuke, country_has_used_nukes
 	victim gets hit more war exhaustion and confusion
 	nuke dropper gets cheering and celebratione event: reduce war exhaustion and militancy
-	all country except nuke dropper gets hit with reduced cb generation speed
-
-#TODO: was the nuke necessary event
-    if GP, country_has_used_nukes, not disarmed, has nukes, has not lost war recently, (owns all cores?)
-	They had it coming! pacifists mad, pacifist countries relationship decrease
-	It may have been overkill... -prestige, increase pacifists, jingoists mad
 
 #TODO: the higher the global nuke research level, the more anti-nuke protest events happen
 
@@ -105,22 +107,21 @@ Coming soon:
 
 ####################################################################################################
 v0.5.6g
-
 Swapped price of grain with cattle because shitty staple crops being cheaper than meat is annoying, normalized food RGO productivity
 Increased silk RGO production from 0.25 to 0.35 because silk the one of the worst RGOs in money made, even when accounting for normal silk price increases due to shortages
 slightly reduced coal and iron production (still higher than in HPM)
-
 2678 Bulgan timber -> grain  Only roughly 1 percent of Mongolia’s land area is used to grow crops. Production is concentrated in the wetter northern parts of the country, particularly in the broad lower valleys of the Orkhon and Selenge rivers.
 1466 Dalandzadgad timber -> wool
 1468 Uliastai grain -> cattle
 1465 Urga cattle -> timber
 2207 Sainshand grain -> wool
-
 Reverted Red Turban power struggle event
 Reverted KMT national value back to order
-Every China's capital is now immune to warlords, even if warlord cores have already spread there. A Beiyang China warlord appears in Beijing if you're not CHI or QNG.
+Every China's capital is now immune to warlords, even if warlord cores have already spread there. A Beiyang China warlord appears in Beijing if you're not CHI or QNG (and if another warlord didn't already claim the area
+Opium ban now flips RGOs instantly. (Newly aquired opium provinces still use the old system)
+cleaned up some files
 
-####################################################################################################
+
 v0.5.6f
 1534 Ulaan Chab Chuulghan timber -> wool       Zhangbei plateau north of the Great Wall is a pastoral area, well known for its horses (raised around Kalgan [Zhangjiakou]) and lambskin.
 1613 Chengde silk -> grain
@@ -133,7 +134,6 @@ v0.5.6f
 1581 Kuizhou timber -> silk
 1559 Xian timber -> grain       Shaanxi makes very little wood, it's just farmland
 1565 Laizhou fruit -> fish        Shandong makes 3rd most of China's fish
-
 1611 Wenzhou silk -> tea    Zhejiang tea:   Hangzhou, Pingshui (Shaoxing), Jiande, Wenzhou tea
 1509 Guide silk -> grain
 1493 Canton silk -> fish    Guangdong, with its long coastline, produces about one-fifth of China’s fish. 
@@ -143,7 +143,6 @@ v0.5.6f
 1516 Hanyang silk -> tea    Tianmen is the hometown of Lu Yu, the writer of The Classic of Tea, who is respected as "the Sage of Tea" for his contribution to the tea culture. 
 1519 Anlu silk -> grain
 1520 Jingzhou silk -> tea  Some tea is grown on the hills in the southeast.
-
 Reduce the starting population of the Congo from 18 million to 5.85 million.
 Choosing the Leopold Option for the Congo kills 10% of pops immediately
 Congo exploitation now modifies pop growth by -0.005 instead of -0.01. 

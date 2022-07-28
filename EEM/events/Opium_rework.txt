@@ -790,7 +790,6 @@ province_event = {
             province_id = 1210	#Kunduz
             province_id = 1215	#Kandahar
             province_id = 2248	#Ibague
-
         }
     }
 

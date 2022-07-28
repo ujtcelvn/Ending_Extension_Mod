@@ -871,7 +871,7 @@ dye_plantation = {
 fishing_wharf = {
     template = RGO_template_farmers
     output_goods = fish
-    value = 2.2 #HPM: 2.1 #2.2
+    value = 2.1 #2.2
     farm = yes
 }
 
@@ -906,7 +906,7 @@ opium_plantation = {
 orchard = {
     template = RGO_template_farmers
     output_goods = fruit
-    value = 2.2 #HPM: 2.7 #2.8
+    value = 2.1 #HPM: 2.7 #2.8
     farm = yes
 }
 

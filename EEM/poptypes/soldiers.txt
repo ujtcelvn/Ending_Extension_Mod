@@ -42,16 +42,13 @@ life_needs = {
 everyday_needs = {
     tea = 4
     coal = 1
-    liquor = 2  #EEM 0.9, 3.96 (HPM: 2, 8.8)
-    #wine = 0 #EEM 0.5, 4.85 (HPM: 0)
-    regular_clothes = 2 #1.95      #base: 2 * 5.8
-    furniture = 2 #1.6            #base: 2 * 4.9
+    liquor = 2  #2 * 4.4
+    regular_clothes = 2 #2 * 5.8
+    furniture = 2 #2 * 4.9
     coffee = 2
     tobacco = 1
     ammunition = 0.5 #0
     small_arms = 0.35 #0
-
-    #opium = 0.1   #0
 }
 
 #Total cash needed: 136.78 - Vanilla value: 125.995

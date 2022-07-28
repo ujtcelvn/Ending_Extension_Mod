@@ -8,7 +8,7 @@ blow_yellow_river_dikes_desc;If the dikes along the Yellow River were to be dest
 move_capital_to_nanking_ming_title;Move Capital to Nanjing;;;;;;;;;;;;;
 move_capital_to_nanking_ming_desc;The capital can be moved to its rightful place in Nanjing.;;;;;;;;;;;;;
 revoke_sino_portuguese_treaty_ming_title;Revoke the $CAPITAL$ Treaty over Macao;;;;;;;;;;;;;
-revoke_sino_portuguese_treaty_ming_desc;The $CAPITAL$ Treaty of Friendship and Commerce, signed years ago over Macao, is no longer valid. Not only the country that proposed it breached its terms, their interpretation of the treaty is completely wrong. They argue that we agreed to "perpetual occupation and government" by them were no such thing would ever be done for chinese territory by the Chinese.;;;;;;;;;;;;;
+revoke_sino_portuguese_treaty_ming_desc;The $CAPITAL$ Treaty of Friendship and Commerce, signed years ago over Macao, is no longer valid. Not only the country that proposed it breached its terms, their interpretation of the treaty is completely wrong. They argue that we agreed to "perpetual occupation and government" by them, but no such thing would have ever be done for Chinese territory by the Chinese.;;;;;;;;;;;;;
 inherit_ryukyu_china_title;Inherit Ryukyu;;;;;;;;;;;;;
 inherit_ryukyu_china_desc;The islands of Ryukyu have always had blood ties to both China and Japan. They must be brought into the fold with the rest of our nation.;;;;;;;;;;;;;
 become_qing_title;Restore the Qing Empire;;;;;;;;;;;;;
@@ -16,15 +16,15 @@ become_qing_desc;We have reconquered enough of China to declare ourselves the Qi
 move_capital_to_beijing_qing_title;Move Capital to Beijing;;;;;;;;;;;;;
 move_capital_to_beijing_qing_desc;The capital can be moved to its rightful place in Beijing.;;;;;;;;;;;;;
 become_china_ming_title;Become China;;;;;;;;;;;;;
-become_china_ming_desc;We should reform our government to better administer the vast lands of China. I mean, it is literally the current year.;;;;;;;;;;;;;
+become_china_ming_desc;The government should be reorganized to better administrate China.;;;;;;;;;;;;;
 prevent_warlord_era_title;Bring Generals Under Control;;;;;;;;;;;;;
 prevent_warlord_era_desc;By dismissing disloyal governors and generals who are gathering too much power, we can prevent potential revolts and better centralize our nation. It will take a few years before our administration can find replacements for everyone, however. Our current puppets will remain as puppets, they won't be annexed even if we were to centralize further.;;;;;;;;;;;;;
-kongsi_ming_title;Expand Branch Offices;;;;;;;;;;;;;
+kongsi_ming_title;Extend Branch Offices;;;;;;;;;;;;;
 kongsi_ming_desc;Singapore and Lanfang historically have had heavy Chinese Kongsi and Triad influence, we should expand our business (crime) empire to encompass them.;;;;;;;;;;;;;
 peking_convention_RTR_title;The Peking Convention;;;;;;;;;;;;;
 peking_convention_RTR_desc;Since the Treaty of Nerchinsk (1689), the Russian Empire has recognized the Argun river and the Stanovoy mountains as the natural frontiers between Russia and China.  In the mid 19th century the Russians would expand beyond this border to seize the vast lands between the Stanovoy Mountains and the Amur River. The Western Allies would later bring the Second Opium War to a conclusion by burning the Chinese Emperor's summer palaces, and entering Beijing. A cunning major general named Nikolay Ignatiev was able to convinced the Chinese that only Russian support would cause the allies to evacuate Peking. The price for this support was the Convention of Peking, which confirmed Muravyov's gains and, additionally, ceded territory between the Ussuri River and the Pacific to Russia. Thus, Russia had gained some 350,000 square miles of territory without firing a single shot.;;;;;;;;;;;;;
 xiu_captial_title;A Fragrant Capital;;;;;;;;;;;;;
-xiu_capital_desc;Xunzhou, near Pingle, is a city in a safe location that we should use as our captial until we can reunify China. It is a fragrant place - so we should name it Xiujing, literally meaning "fragrant capital"  ;;;;;;;;;;;;;
+xiu_capital_desc;Xunzhou, near Pingle, is a city in a safe location that we should use as our captial until we can reunify China. It is a fragrant place - so we should name it Xiujing, literally meaning "fragrant capital".;;;;;;;;;;;;;
 abolish_xiu_capital_title;Pingle Recaptured;;;;;;;;;;;;;
 abolish_xiu_capital_desc;We have captured Xunzhou, which the Red Turbans rebels used as their capital and renamed to Xiujing. With the end of their rebellion, Xiujing should be returned back to its original name and demoted back to an insignificant local city.;;;;;;;;;;;;;
 empire_of_china_title;Become the Empire of China;;;;;;;;;;;;;
@@ -36,9 +36,9 @@ expand_oil_fields_baku_desc;"Baku is a city founded upon oil, for to its inexhau
 expand_oil_fields_maracaibo_title;Maracaibo Oil Fields;;;;;;;;;;;;;
 expand_oil_fields_maracaibo_desc;"No event in Venezuela can be separated from oil … It is the fundamental force that shapes national life. All aspects of the Venezuelan economy are the legitimate or bastard children of that substance" Maracaibo is home to one of the largest oil fields in the world. Invest here, and watch its oil industry bloom.;;;;;;;;;;;;;
 enact_opium_ban_title;Narcotics Control Act;;;;;;;;;;;;;
-enact_opium_ban_desc;Although opium has been used as an analgesic since antiquity, the addictive effects of the drug has been a blight to society. Therfore, this vile substance should be banned, at least according to the law's proponents. Passing the law will make opium production illegal and hopefully stop the addicts prowling the streets, but it will take some time before the police can catch all of the opium growers and distributors. ;;;;;;;;;;;;;
+enact_opium_ban_desc;Although opium has been used as an analgesic since antiquity, the addictive effects of the drug has been a blight to society. Therfore, this vile substance should be banned, at least according to the law's proponents. Passing the law will make opium production illegal, but it will take some time before all of the opium growers and distributors, especially in newly aquired areas.;;;;;;;;;;;;;
 end_opium_ban_title;End the Drug Ban;;;;;;;;;;;;;
-end_opium_ban_desc;Despite the ban, smugglers and black market dealers are still able to sell narcotics. Legalizing the narcotics would not only end the monopoly criminals have on the drug trade, it would also allow the government to tax this lucrative business.;;;;;;;;;;;;;
+end_opium_ban_desc;Despite the ban, smugglers and black market dealers are still able to sell narcotics. Legalizing the narcotics would not only end the monopoly criminals have on the drug trade, it would also allow the government to better cash in on this lucrative business.;;;;;;;;;;;;;
 trade_zone_1_0_title;East Shandong Trade;;;;;;;;;;;;;
 trade_zone_1_0_desc;The treaty port in East Shandong provides an opportunity for $COUNTRY_ADJ$ merchants to enter the large Chinese market. Seeing how weak and ineffective the Chinese government is, it should be easy demanding favored trade access to the interior of China.;;;;;;;;;;;;;
 trade_zone_1_1_title;Extend East Shandong Trade;;;;;;;;;;;;;
@@ -96,4 +96,4 @@ option_enable_craftsmen_exploit_desc;Enables decision to demote unaccepted craft
 kill_emperor_komei_title;Assassinate Emperor Komei;;;;;;;;;;;;;
 kill_emperor_komei_desc;Emperor Komei has consistently opposed anti-bakufu forces despite disagreements between him and the Shogun. However, the crown prince is still young and can be manipulated to agree to plans to overthrow the Shogunate. Assassinating Emperor Komei would thus be most opportune in preventing reconcilation between Emperor and Shogun.;;;;;;;;;;;;;
 remove_unciv_modifiers_from_civs_title;Civilization Cleanup;;;;;;;;;;;;;
-remove_unciv_modifiers_from_civs_desc;There is a civlized nation that has uncivilized modifiers which should be removed.;;;;;;;;;;;;;
+remove_unciv_modifiers_from_civs_desc;There is a civlized nation that has uncivilized modifiers which need to be removed.;;;;;;;;;;;;;
