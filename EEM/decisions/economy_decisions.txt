@@ -1,57 +1,71 @@
 political_decisions = {
-    expand_oil_fields_baku = {
+    expand_oil_fields = {
         picture = baku_oil
         potential = {
-            1102 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = large_oil_field } } #Baku
-            invention = oil_pumping_machinery
+            OR = {
+                1102 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = highly_productive_mine } } #Baku
+                2270 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = highly_productive_mine } } #Maracaibo
+            }
         }
 
         allow = {
             war = no
-            money = 100000
+            money = 500000
+            invention = oil_pumping_machinery
         }
 
         effect = {
-            treasury = -50000
             any_owned = {
                 limit = {
-                    province_id = 1102
+                    OR = { 
+                        province_id = 1102
+                        province_id = 2270
+                    }
                     trade_goods = oil
+                    NOT = { has_province_modifier = highly_productive_mine }
                 }
-                add_province_modifier = { name = large_oil_field duration = -1 }
+                add_province_modifier = { name = highly_productive_mine duration = -1 }
                 add_province_modifier = { name = province_small_immigration_boom duration = 365 }
+                treasury = -50000
             }
         }
 
         ai_will_do = { factor = 1 }
     }
 
-    expand_oil_fields_maracaibo = {
-        picture = baku_oil
+
+    expand_mines = {
+        picture = mining_union_upper_katanga
         potential = {
-            2270 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = large_oil_field } } #Maracaibo
-            invention = oil_pumping_machinery
+            OR = {
+                321 = { owner = { tag = THIS } trade_goods = iron NOT = { has_province_modifier = highly_productive_mine } } #Lulea, Sweden, after 1886 (Malmberget) or 1898 (Kiruna)
+            }
         }
 
         allow = {
             war = no
-            money = 100000
+            money = 500000
+            integral_rail_system = 1
         }
 
         effect = {
-            treasury = -50000
             any_owned = {
                 limit = {
-                    province_id = 2270
+                    OR = { 
+                        province_id = 1102
+                    }
                     trade_goods = oil
+                    NOT = { has_province_modifier = highly_productive_mine }
                 }
-                add_province_modifier = { name = large_oil_field duration = -1 }
+                add_province_modifier = { name = highly_productive_mine duration = -1 }
                 add_province_modifier = { name = province_small_immigration_boom duration = 365 }
+                treasury = -50000
             }
         }
 
         ai_will_do = { factor = 1 }
     }
+
 
     enact_opium_ban = {
         picture = opium_crates

@@ -488,10 +488,56 @@ country_event = {
 
 
 
-########################## Peak Oil ########################## 
+########################## Resource Depletion ########################## 
+
+province_event = {
+    id = 12310
+    title = "$PROVINCENAME$ Not Highly Productive"
+    desc = "As $PROVINCENAME$ no longer produces oil, it is no longer highly productive in it."
+    picture = "abandoned_oil_well"
+
+    trigger = {
+        has_province_modifier = highly_productive_mine
+        NOT = { trade_goods = oil }
+        OR = {
+            province_id = 1102
+            province_id = 2270
+        }
+    }
+
+    option = {
+        name = "Unfortunate."
+        remove_province_modifier = highly_productive_mine
+    }
+}
+
+province_event = {
+    id = 12311
+    title = "$PROVINCENAME$ Not Highly Productive"
+    desc = "As $PROVINCENAME$ no longer produces iron, it is no longer highly productive in it."
+    picture = "abandoned_oil_well"
+
+    trigger = {
+        has_province_modifier = highly_productive_mine
+        NOT = { trade_goods = iron }
+        OR = {
+            province_id = 321 #Lulea, Sweden
+        }
+    }
+
+    option = {
+        name = "Unfortunate."
+        remove_province_modifier = highly_productive_mine
+    }
+}
+
+
+
+
+########## by country ##########
 
 country_event = {
-    id = 12310
+    id = 12320
     title = "Oil Runs Dry in Queretaro"
     desc = "The oil field in Queretaro has run out of oil."
     picture = "abandoned_oil_well"
@@ -520,7 +566,7 @@ country_event = {
         set_global_flag = queretaro_peak_oil
         2173 = {
             trade_goods = fruit
+            remove_province_modifier = highly_productive_mine
         }
     }
-
 }

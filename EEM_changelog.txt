@@ -81,6 +81,9 @@ Coming soon:
 
 #TODO: make sure goods aren't overproduced in late game
 #TODO: wool (and perhaps tobacco / tea / coffee / opium) still suck, esp. in late game
+#TODO: sometimes iron is more expensive than steel! 20 iron + 5 coal = 23 steel for some reason, so maybe 1 steel is smaller than 1 iron??? How much steel is made from 1 iron irl?
+    https://www.nature.com/articles/s41467-021-22245-6/figures/3
+
 
 #TODO: remove clipper factories, clippers are only built by artisans now
 	https://penobscotmarinemuseum.org/pbho-1/ships-shipbuilding/maine-shipyards
@@ -106,6 +109,18 @@ Coming soon:
 #TODO: nuclear accident event
 
 ####################################################################################################
+v0.5.6h
+Zaranj, South Afghanistan no longer touches Zahedan, Kerman, in order to avoid stupid AI Afghanistan borders.
+Slightly increased grain production
+Increased iron production back to 2
+321 Lulea Sweden flips to iron after 1882
+rename large_oil_field to highly_productive_mine
+Expand oil fields decisions are now generic.
+Expand mines decision for historically highly productive mines with few pops. (Currently just Lulea, Sweden)
+Event to remove highly_productive_mine if the province is no longer a mine of the right type.
+Change the icon for banning opium to the same icon as temperance league
+
+####################################################################################################
 v0.5.6g
 Swapped price of grain with cattle because shitty staple crops being cheaper than meat is annoying, normalized food RGO productivity
 Increased silk RGO production from 0.25 to 0.35 because silk the one of the worst RGOs in money made, even when accounting for normal silk price increases due to shortages
@@ -120,7 +135,6 @@ Reverted KMT national value back to order
 Every China's capital is now immune to warlords, even if warlord cores have already spread there. A Beiyang China warlord appears in Beijing if you're not CHI or QNG (and if another warlord didn't already claim the area
 Opium ban now flips RGOs instantly. (Newly aquired opium provinces still use the old system)
 cleaned up some files
-
 
 v0.5.6f
 1534 Ulaan Chab Chuulghan timber -> wool       Zhangbei plateau north of the Great Wall is a pastoral area, well known for its horses (raised around Kalgan [Zhangjiakou]) and lambskin.
@@ -183,9 +197,7 @@ v0.5.6c
 craftsmen exploit decision (need to enable it in Options within the 1st year of the game, afterwards, the decision will become available in Government Decisions)
 craftsmen and clerks demote quickly if they are in a colony for some reason (happens after dismantlement)
 strategic bombing preferably kills the middle class and craftsmen because they live in cities
-
 Imperial japan can forcibly kill Emperor Komei after researching state and government tech (just like how the Shogunate can make peace with the emperor)
-
 Red Turbans are now actually Red, made flags look better, adjust localizations, can become a democracy and no longer flips to China if democracy, and can purge warlords (like the other Chinas)
 Foreign-led Qing restoration adjustment
 Xinhai Revolution and Beiyang coup adjustment
@@ -217,7 +229,6 @@ Add symbol for nuke modifiers
 	Country modifier:  19 = green nuke, 20 = red nuke
 	Province modifier: 21 = green nuke, 22 = red nuke
 
-
 v0.5.5d
 make trade zones be removed properly
 fixed Red Turban power struggle bug
@@ -247,15 +258,12 @@ Halved bonus aeroplane factories get from machine parts factories and electric g
 Reverted soldier and officer liquor and wine consumption back to HPM levels
 Regular clothes no longer use wool (reverted to HPM). Wool is supposed to represent traditional clothing and stuff.
 Officers everyday lumber use halved (so it's the same as the amount of cement and steel they eat, like intellectuals), added a little bit of wool use to compensate (wool was often used as parts of military uniforms)
-
 tweak opium demand
 increase Boxer Rebel chance
 Simplified Chinese trade zones: now there is only 1 decision per zone (avaliable after the Taiping rebellion and/or with enough naval techs)
 Kochow now accepts zhuang instead of hakka
 Removed Guizhou from the warlord era, Yunnan taking it over is already modeled by the spread of warlord cores event
-
 War / Rebels reduce immigrant attractiveness in general, reverted new world immigration boost
-
 other misc adjustments
 
 v0.5.5
@@ -263,31 +271,23 @@ Removed terrain preference calculations from pop file, now immigrant attractiven
     immigrant_attract = multiplier from poptype * (1 - new world ver of terrain modifier) - 1
 Removed the new_world_war triggered modifier, instead, new world immigration boost no longer applies if nation is at war or has any revolts
 War exhaustion now reduces global_immigrant_attract by -0.01 per percentage
-
 Geneva Convention currently reduces land organisation by -0.05 and war_exhaustion by -0.02, no longer limits military spending, and the AI will only sign it after researching military_statistics 1850
-
 pollution event is now a country event, conditions adjusted
 Clean air act reduces core pop militancy but also reduces RGO and artisan efficiency, and uses administrative_multiplier instead of reducing administrative_efficiency_modifier again
-
 halved local artisan output boost from local distribution channels and local modern transportation
 local modern transportation now increases local immigration as much as 1 level of infrastructure, +0.05
-
 Tax Refund event amount of money that can be stored in treasury increases with techs and population
-
 liquor prohibition now increases factory_throughput so there is actually a reason to pick it
 Merged the 2 drug addiction events to improve performance
 opium demand adjustments, yet again
-
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
 adjust Chinese province uprising event to be less random, and choosing to appease_societies slightly changes the effects
-
 carrier range reduced from 2 to 1.6, carriers now start with 5 torpedo attack (carrier bombs are better vs large slow targets) (so AI builds them more)
 adjust AI research of 7th row of naval techs
 WW2 planes speed and supply cost increased.
 Paratrooper doctrine invention replaces civil defense invention
 high admin spending now reduces bombing risk (thresholds at 49%, 74%, and 99%)
 Commerce technologies' increase of precious goods RGO size quadrupled from 0.05 to 0.2 for vanilla techs to reduce precious goods RGO unemployment.
-
 Other bugfixes and adjustments
 
 

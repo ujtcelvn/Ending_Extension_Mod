@@ -2635,7 +2635,7 @@ clean_air_act = {
     icon = 5
 }
 
-large_oil_field = {
+highly_productive_mine = {
     mine_RGO_eff = 4
     mine_rgo_size = 4
     icon = 13
@@ -2651,7 +2651,7 @@ local_drug_habit = {
 opium_ban = {
     poor_luxury_needs = -0.05
     middle_luxury_needs = -0.025
-    icon = 18
+    icon = 2
 }
 
 local_opium_ban = {

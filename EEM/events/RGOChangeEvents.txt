@@ -1853,6 +1853,7 @@ province_event = {
                     province_id = 411
                     #Madagascar
                     province_id = 2115
+                    province_id = 321 #Lulea, Sweden, after 1886 (Malmberget) or 1898 (Kiruna)
                 }
                 year = 1882
             }
