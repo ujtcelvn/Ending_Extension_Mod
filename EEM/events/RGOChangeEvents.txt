@@ -1624,6 +1624,7 @@ province_event = {
                 tag = QNG
                 tag = TPG
                 tag = CHI
+                tag = RTR
             }
         }
         OR = {
@@ -1815,6 +1816,7 @@ province_event = {
                         tag = CHI
                         tag = TPG
                         tag = KOR
+                        tag = RTR
                     }
                 }
                 year = 1920
