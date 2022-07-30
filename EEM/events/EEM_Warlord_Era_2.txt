@@ -515,13 +515,6 @@ province_event = {
             limit = {
                 is_culture_group = east_asian
                 is_primary_culture = no
-                OR = {
-                    liberal = 10
-                    socialist = 10
-                    communist = 10
-                    fascist = 10
-                    militancy = 4
-                }
             }
             reduce_pop = 0.99
             militancy = 6
@@ -529,47 +522,41 @@ province_event = {
         }
 
         state_scope = {
-            any_pop = {
-                limit = {
-                    is_culture_group = east_asian
-                    OR = {
-                        liberal = 10
-                        socialist = 10
-                        communist = 10
-                        fascist = 10
-                        militancy = 4
-                    }
-                    country = { NOT = { has_country_flag = appease_societies } }
-                }
-                reduce_pop = 0.99
-                militancy = 3
-            }
-
-            any_pop = {
-                limit = {
-                    is_culture_group = east_asian
-                    OR = {
-                        liberal = 10
-                        socialist = 10
-                        communist = 10
-                        fascist = 10
-                        militancy = 4
-                    }
-                    country = {  has_country_flag = appease_societies }
-                }
-                consciousness = 2
-                ideology = {
-                    value = liberal
-                    factor = 0.1
-                }
-            }
-
             any_owned = {
+                limit = {
+                    NOT = { owner = { has_country_flag = appease_societies } }
+                }
                 add_province_modifier = {
                     name = peasant_revolt
                     duration = 365
                 }
+                any_pop = {
+                    limit = {
+                        is_culture_group = east_asian
+                        is_primary_culture = no
+                    }
+                    reduce_pop = 0.99
+                    militancy = 3
+                }
             }
+
+            any_owned = {
+                limit = {
+                   owner = { has_country_flag = appease_societies } 
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = east_asian
+                        is_primary_culture = no
+                    }
+                    consciousness = 2
+                    ideology = {
+                        value = liberal
+                        factor = 0.1
+                    }
+                }
+            }
+
             any_pop = {
                 limit = { is_culture_group = east_asian strata = poor }
                 consciousness = 2
@@ -588,7 +575,7 @@ province_event = {
             }
             scaled_militancy = {
                 ideology = liberal
-                factor = 9
+                factor = 3
             }
         }
 
