@@ -109,6 +109,15 @@ Coming soon:
 #TODO: nuclear accident event
 
 ####################################################################################################
+v0.5.6i
+
+#TODO: send cash to sphere member decision
+#TODO: Make it much more difficult to request military access: China didn't attrition all their troops to death in Burma during the Opium War
+
+#TODO: there's still an iron shortage in early game?
+
+
+####################################################################################################
 v0.5.6h
 Zaranj, South Afghanistan no longer touches Zahedan, Kerman, in order to avoid stupid AI Afghanistan borders.
 Slightly increased grain production
@@ -119,8 +128,8 @@ Expand oil fields decisions are now generic.
 Expand mines decision for historically highly productive mines with few pops. (Currently just Lulea, Sweden)
 Event to remove highly_productive_mine if the province is no longer a mine of the right type.
 Change the icon for banning opium to the same icon as temperance league
+Made coal and iron RGO change events occur properly
 
-####################################################################################################
 v0.5.6g
 Swapped price of grain with cattle because shitty staple crops being cheaper than meat is annoying, normalized food RGO productivity
 Increased silk RGO production from 0.25 to 0.35 because silk the one of the worst RGOs in money made, even when accounting for normal silk price increases due to shortages

@@ -52,9 +52,9 @@ political_decisions = {
             any_owned = {
                 limit = {
                     OR = { 
-                        province_id = 1102
+                        province_id = 321
                     }
-                    trade_goods = oil
+                    trade_goods = iron
                     NOT = { has_province_modifier = highly_productive_mine }
                 }
                 add_province_modifier = { name = highly_productive_mine duration = -1 }
