@@ -256,7 +256,7 @@ categories =  {
         min_build_fort = 1
         attrition = 2
 
-        immigrant_attract = -0.995 #actually -0.995 #-0.5 #0.05x, 0.01x if africa (old world)
+        immigrant_attract = -0.997 #actually -0.995 #-0.5 #0.05x, 0.01x if africa (old world)
     }
 
     semidesert = {
@@ -315,7 +315,7 @@ categories =  {
         min_build_railroad = 7
         min_build_fort = 6
 
-        immigrant_attract = -0.995 #actually -0.9975 #-0.75 #0.01x
+        immigrant_attract = -0.998 #actually -0.9975 #-0.75 #0.01x
     }
 
     new_world_boreal = {
