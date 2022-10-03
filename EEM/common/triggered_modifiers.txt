@@ -605,18 +605,45 @@ ryotwari = {
     # icon = 16
 # }
 
-literate_nation = {
+#literate_nation = {
+#	trigger = {
+#        exists = yes
+#		literacy = 0.80
+#		NOT = { literacy = 0.80 }
+#	}
+#	global_population_growth = -0.001
+#    education_efficiency_modifier = -0.05
+#    icon = 18
+#}
+
+literate_nation_2 = {
 	trigger = {
-		literacy = 0.9
+        exists = yes
+		literacy = 0.90
+		NOT = { literacy = 0.95 }
 	}
-	global_population_growth = -0.001
+	global_population_growth = -0.002
+    education_efficiency_modifier = -0.1
     icon = 18
 }
 
-clerked_nation = {
+literate_nation_3 = {
 	trigger = {
-        clerks = 0.04
+        exists = yes
+		literacy = 0.95
+		#NOT = { literacy = 0.99 }
 	}
-	global_population_growth = -0.001
+	global_population_growth = -0.003
+    education_efficiency_modifier = -0.15
     icon = 18
 }
+
+#literate_nation_4 = {
+#	trigger = {
+#        exists = yes
+#		literacy = 0.99
+#	}
+#	global_population_growth = -0.004
+#    education_efficiency_modifier = -0.2
+#    icon = 18
+#}

@@ -1,15 +1,15 @@
-################### nukes ##### chemistry_and_electricity_7 #################
-
-#condition: quantum_mechanics from asthetics 6
-#result: some shared prestige, unlocks the_bomb_decision
 nuclear_theory = {
-    limit = { chemistry_and_electricity_7 = 1 }
+    limit = { philosophy_7 = 1 }
     news = no
     chance = {
         base = 2
         modifier = {
             factor = -6
             NOT = { invention = quantum_theory }
+        }
+        modifier = {
+            factor = -6
+            NOT = { chemistry_and_electricity_7 = 1 }
         }
         modifier = {
             factor = 2
@@ -24,9 +24,3 @@ nuclear_theory = {
         shared_prestige = 30
     }
 }
-
-
-#the_bomb_decision NOT an invention, it's a decision!
-#condition: nuclear_theory
-#condition: strategic bombing invention
-#result: lets you drop begin research on The Bomb, when it's completed, you can drop The Bomb!

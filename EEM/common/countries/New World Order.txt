@@ -1,5 +1,5 @@
+color = { 91  146  229 }
 graphical_culture = UsGC
-color = { 0 158 291 }
 
 party = {
     name = "NWO_conservative"

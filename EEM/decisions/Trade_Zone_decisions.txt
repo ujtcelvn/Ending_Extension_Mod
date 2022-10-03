@@ -15,6 +15,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ1 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836
@@ -63,6 +64,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ2 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836
@@ -113,6 +115,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ4 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836
@@ -161,6 +164,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ5 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836
@@ -209,6 +213,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ6 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836
@@ -258,6 +263,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ7 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836
@@ -307,6 +313,7 @@ political_decisions = {
                     part_of_sphere = no
                     NOT = { has_country_flag = tore_up_unequal_treaties }
                     NOT = { tag = TZ8 }
+                    number_of_states = 5
                 }
             }
             steamers = 1 #1836

@@ -37,24 +37,42 @@ political_decisions = {
             add_accepted_culture = beifaren
             any_pop = {
                 limit = { has_pop_culture = manchu }
+                militancy = 2
                 consciousness = 1
             }
             any_pop = {
                 limit = {
                     NOT = { has_pop_culture = manchu }
                 }
-                militancy = -3
-                consciousness = -1
-            }
-            any_pop = {
-                limit = {
-                    has_pop_culture = beifaren
-                }
-                militancy = -3
+                militancy = -2
                 consciousness = -1
             }
             set_country_flag = manchu_elite_cleared_out
+
+            random_owned = {
+                limit = {
+                    owner = { ai = yes }
+                }
+                owner = {
+                    years_of_research = 10
+                }
+            }
+
+            add_country_modifier = {
+                name = yong_ying
+                duration = -1
+            }
+
         }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                ruling_party_ideology = reactionary
+            }
+        }
+
     }
 
     form_china = {
@@ -74,6 +92,9 @@ political_decisions = {
             }
             NOT = { has_country_flag = mandate }
             TPG = { exists = no }
+            RTR = { exists = no }
+            CHI = { exists = no }
+            KMT = { exists = no }
         }
 
         effect = {
@@ -131,6 +152,15 @@ political_decisions = {
             CHI_1479 = { add_core = MCK }
             CHI_1552 = { add_core = MCK }
             1533 = { add_core = MCK }
+
+            random_owned = {
+                limit = { owner = { has_country_modifier = yong_ying } }
+                owner = { remove_country_modifier = yong_ying }
+            }
+            random_country = {
+                limit = { OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } exists = yes }
+                THIS = { country_event = 166700 }
+            }
         }
 
         ai_will_do = { factor = 1 }
@@ -417,6 +447,7 @@ political_decisions = {
     }
 
     become_leader_of_kuomintang = {
+        picture = become_leader_of_kuomintang
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
@@ -477,7 +508,7 @@ political_decisions = {
     }
 
     become_leader_of_beiyang = {
-    picture = become_leader_of_beiyang
+        picture = become_leader_of_beiyang
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
@@ -518,6 +549,7 @@ political_decisions = {
     }
 
     become_leader_of_communists = {
+        picture = become_leader_of_communists
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
@@ -559,6 +591,7 @@ political_decisions = {
     }
 
     join_the_KMT = {
+        picture = become_leader_of_kuomintang
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
@@ -1147,12 +1180,6 @@ political_decisions = {
                 NOT = { has_country_flag = beiyang_faction }
             }
             has_global_flag = warlord_era_has_begun
-            
-            OR = {
-                NOT = { has_country_flag = CHI_KMT_negotiations_fail }
-                has_global_flag = CHI_victorious_over_KMT
-                NOT = { tag = CHI }
-            }
         }
 
         allow = {
@@ -1511,6 +1538,13 @@ political_decisions = {
                 name = self_strengthening_movement
                 duration = 1825
             }
+            random_owned = {
+                limit = {
+                    owner = { ai = yes }
+                    owner = { NOT = { ruling_party_ideology = reactionary } }
+                }
+                owner = { years_of_research = 1 }
+            }
         }
 
         ai_will_do = {
@@ -1713,6 +1747,7 @@ political_decisions = {
                 2681 = { is_core = KMT }
                 2681 = { is_core = QNG }
                 2681 = { is_core = TPG }
+                2681 = { is_core = RTR }
             }
             has_global_flag = retreated_to_taiwan
         }
@@ -1725,11 +1760,12 @@ political_decisions = {
                 truce_with = CHI
                 truce_with = QNG
                 truce_with = TPG
+                truce_with = RTR
             }
         }
 
         effect = {
-            TAI = { all_core = { remove_core = QNG remove_core = CHI remove_core = TPG remove_core = FJN } }
+            TAI = { all_core = { remove_core = QNG remove_core = CHI remove_core = TPG remove_core = FJN remove_core = RTR } }
         }
 
         ai_will_do = { factor = 1 }
@@ -1739,14 +1775,16 @@ political_decisions = {
         picture = macao_city
         potential = {
             OR = {
-                QNG = { exists = yes owns = 1616 NOT = { TPG = { exists = yes } CHI = { exists = yes } } }
-                TPG = { exists = yes owns = 1616 NOT = { QNG = { exists = yes } CHI = { exists = yes } } }
-                CHI = { exists = yes owns = 1616 NOT = { TPG = { exists = yes } QNG = { exists = yes } } }
+                QNG = { exists = yes owns = 1616 NOT = { TPG = { exists = yes } CHI = { exists = yes } RTR = { exists = yes } } }
+                TPG = { exists = yes owns = 1616 NOT = { QNG = { exists = yes } CHI = { exists = yes } RTR = { exists = yes } } }
+                CHI = { exists = yes owns = 1616 NOT = { TPG = { exists = yes } QNG = { exists = yes } RTR = { exists = yes } } }
+                RTR = { exists = yes owns = 1616 NOT = { TPG = { exists = yes } QNG = { exists = yes } CHI = { exists = yes } } }
             }
             OR = {
                 tag = QNG
                 tag = TPG
                 tag = CHI
+                tag = RTR
             }
             has_global_flag = sino_portuguese_treaty_of_peking_signed
             1498 = { NOT = { is_core = CHI } }

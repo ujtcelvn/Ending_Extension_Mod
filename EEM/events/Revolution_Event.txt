@@ -727,7 +727,7 @@ country_event = {
                 value = -25
             }
         }
-        any_country = {
+        REB = {
             change_variable = {
                 which = successful_fascist_rebellions
                 value = 1
@@ -1145,7 +1145,7 @@ country_event = {
                 value = -100
             }
         }
-        any_country = {
+        REB = {
             change_variable = {
                 which = successful_communist_rebellions
                 value = 1
@@ -3403,6 +3403,12 @@ country_event = {
             limit = { owner = { has_country_modifier = european_military_mission } }
             owner = { remove_country_modifier = european_military_mission }
         }
+
+        random_owned = {
+            limit = { owner = { has_country_modifier = yong_ying } }
+            owner = { remove_country_modifier = yong_ying }
+        }
+
         random_country = {
             limit = {
                 is_sphere_leader_of = THIS

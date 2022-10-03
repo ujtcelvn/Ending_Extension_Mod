@@ -1280,11 +1280,13 @@ nationalist_rebels = {
         modifier = {
             factor = 0.25
             is_culture_group = east_asian
+            has_global_flag = taiping_has_happened
             TPG = { exists = yes }
         }
         modifier = {
-            factor = 0.5
+            factor = 0.25
             is_culture_group = east_asian
+            has_global_flag = ming_has_happened
             RTR = { exists = yes }
         }
     }
@@ -1793,6 +1795,7 @@ pan_nationalist_rebels = {
             factor = 1.015
             political_reform_want = 0.15
         }
+
     }
 
      #This is checked for EACH province in the Area of Operations
@@ -2485,10 +2488,6 @@ boxer_rebels = {
             factor = 0.8
         }
         modifier = {
-            war_exhaustion = 20
-            factor = 0.95
-        }
-        modifier = {
             war_exhaustion = 40
             factor = 0.95
         }
@@ -2600,11 +2599,6 @@ boxer_rebels = {
             country = {
                 NOT = { prestige = 25 }
             }
-        }
-
-        modifier = {
-            factor = 2
-            culture = beifaren
         }
     }
 
@@ -4054,13 +4048,6 @@ unciv_reactionary_rebels = {
             country = { civilization_progress = 0.75 }
         }
         modifier = {
-            factor = 0.75
-            country = {
-                tag = QNG
-                civilization_progress = 0.25
-            }
-        }
-        modifier = {
             factor = 0.01
             country = {
                 tag = QNG
@@ -4073,6 +4060,27 @@ unciv_reactionary_rebels = {
                 civilization_progress = 0.1
                 part_of_sphere = yes
             }
+        }
+
+        modifier = {
+            factor = 0.01
+            country = {
+                tag = QNG
+            }
+            #OR = {
+            #    exists = TPG
+            #    exists = RTR
+            #    exists = CHI
+            #    exists = KMT
+            #    location = { is_core = TPG }
+            #    location = { is_core = RTR }
+            #    location = { has_province_modifier = anti_manchu_sentiment }
+            #    location = { has_province_modifier = christian_repression }
+            #    location = { has_province_modifier = christian_pamphlets }
+            #    location = { has_province_modifier = chinese_floods }
+            #}
+            is_culture_group = east_asian 
+            NOT = { culture = manchu }
         }
     }
 
@@ -4949,7 +4957,7 @@ independence_rebels = {
     reinforcing = yes                # Receives reinforcements
     general = yes                    # Uses generals
     smart = yes                        # Assault forts, tactically withdraw from battle, etc.
-    unit_transfer = yes #no                # Units do not remain after enforcing demands.
+    unit_transfer = no                # Units do not remain after enforcing demands.
 
     occupation_mult = 1.0            # The amount of strength this rebel gains from taking provinces
 
@@ -6163,5 +6171,292 @@ partisan_rebels = {
     }
 
     demands_enforced_effect = {
+    }
+}
+
+###################################
+# Anti-Qing Rebels
+###################################
+anti_qing_rebels = {
+    icon = 17
+
+    area = nation
+    break_alliance_on_win = no
+
+    # <this is the government in the country> = <this is what the rebels want>
+    government = {
+        proletarian_dictatorship = proletarian_dictatorship
+        presidential_dictatorship = presidential_dictatorship
+        bourgeois_dictatorship = bourgeois_dictatorship
+        fascist_dictatorship = fascist_dictatorship
+        absolute_monarchy = absolute_monarchy
+        prussian_constitutionalism = prussian_constitutionalism
+        hms_government = hms_government
+        democracy = democracy
+        theocracy = theocracy
+    }
+
+    defection = none
+    independence = none                # Does not strive for independence
+    defect_delay = 18
+
+    ideology = reactionary
+
+    allow_all_cultures = yes
+    allow_all_religions = yes
+    allow_all_ideologies = yes
+
+    resilient = yes
+    reinforcing = yes
+    general = yes
+    smart = yes
+    unit_transfer = no                # Units do not remain after enforcing demands.
+
+    occupation_mult = 1.0            # The amount of strength this rebel gains from taking provinces
+
+    # triggers a general rising, modifier will be multiplied with the countrys army strength and compared to the factions strenght
+    will_rise = {
+        factor = 0.5
+
+        modifier = {
+            war_exhaustion = 40
+            factor = 0.95
+        }
+        modifier = {
+            war_exhaustion = 60
+            factor = 0.95
+        }
+        modifier = {
+            war_exhaustion = 80
+            factor = 0.95
+        }
+        modifier = {
+            part_of_sphere = yes
+            factor = 0.8
+        }
+        modifier = {
+            civilization_progress = 0.25
+            factor = 0.8
+        }
+        modifier = {
+            civilization_progress = 0.5
+            factor = 0.8
+        }
+        modifier = {
+            civilization_progress = 0.75
+            factor = 0.8
+        }
+    }
+
+    # The rebel type with the highest modifier for this pop gets picked
+    spawn_chance = {
+        factor = 3
+
+        modifier = {
+            factor = 0
+            country = { NOT = { tag = QNG } }
+        }
+        modifier = {
+            factor = 0
+            country = { civilization_progress = 0.75 }
+        }
+
+
+        modifier = {
+            factor = 0
+            type = slaves
+        }
+
+        modifier = {
+            factor = 0
+            country = { civilized = yes }
+        }
+
+        modifier = {
+            factor = 0
+            NOT = {
+                location = {
+                    controlled_by = THIS
+                }
+            }
+        }
+
+        modifier = {
+            factor = 0.5
+            NOT = { exists = CHI }
+            NOT = { exists = TPG }
+            NOT = { exists = RTR }
+            NOT = { exists = KMT }
+        }
+        modifier = {
+            factor = 0
+            NOT = { is_culture_group = east_asian }
+        }
+        modifier = {
+            factor = 0
+            culture = manchu
+        }
+        modifier = {
+            factor = 0
+            location = { NOT = { is_core = CHI } }
+        }
+        modifier = {
+            factor = 0.01 #prefer nationalist rebels
+            location = {
+                any_core = {
+                    is_cultural_union = no
+                    is_primary_culture = THIS
+                    exists = no
+                }
+            }
+
+        }
+        modifier = {
+            factor = 0.01 #prefer patriot rebels
+            country = { any_neighbor_country = { any_core = { owned_by = THIS } } }
+            location = {
+                any_core = {
+                    is_primary_culture = THIS
+                    exists = yes
+                }
+            }
+        }
+
+
+        modifier = {
+            factor = 1.05
+            location = {
+                OR = {
+                    has_province_modifier = western_presence
+                    has_province_modifier = foreign_smugglers
+                    has_province_modifier = foreign_trading_post
+                    has_province_modifier = local_opium_habit
+                    has_province_modifier = european_military_mission
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            country = {
+                has_country_modifier = western_influences
+            }
+        }
+        modifier = {
+            factor = 1.15
+            pop_majority_ideology = reactionary
+        }
+        modifier = {
+            factor = 1.02
+            country = { civilization_progress = 0.1 }
+        }
+        modifier = {
+            factor = 1.02
+            country = { civilization_progress = 0.25 }
+        }
+        modifier = {
+            factor = 1.02
+            country = { civilization_progress = 0.5 }
+        }
+        modifier = {
+            factor = 1.02
+            country = { civilization_progress = 0.75 }
+        }
+        modifier = {
+            factor = 1.02
+            country = {
+                civilization_progress = 0.1
+                part_of_sphere = yes
+            }
+        }
+    }
+
+     #This is checked for EACH province in the Area of Operations
+    movement_evaluation = {
+        factor = 1
+        modifier = {
+            factor = 0.1
+            units_in_province = 1
+        }
+        modifier = {
+            factor = 20
+            OR = {
+                has_province_modifier = western_presence
+                has_province_modifier = foreign_smugglers
+                has_province_modifier = foreign_trading_post
+                has_province_modifier = local_opium_habit
+                has_province_modifier = european_military_mission
+            }
+        }
+        modifier = {
+            factor = 0.001
+            controlled_by = REB
+        }
+        modifier = {
+            factor = 1.5
+            average_militancy = 4
+        }
+        modifier = {
+            factor = 1.5
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 1.5
+            average_militancy = 8
+        }
+        modifier = {
+            factor = 2.0
+            is_capital = yes
+        }
+    }
+
+     # Province Scope
+     siege_won_trigger = {
+        OR = {
+            NOT = { has_province_modifier = war_torn }
+            has_province_modifier = western_presence
+            has_province_modifier = foreign_smugglers
+            has_province_modifier = foreign_trading_post
+            has_province_modifier = local_opium_habit
+            has_province_modifier = european_military_mission
+            has_province_modifier = extraterritoriality_granted
+        }
+     }
+
+    siege_won_effect = {
+        add_province_modifier = {
+            name = war_torn
+            duration = 30
+        }
+        remove_province_modifier = western_presence
+        remove_province_modifier = foreign_smugglers
+        remove_province_modifier = foreign_trading_post
+        remove_province_modifier = local_opium_habit
+        remove_province_modifier = european_military_mission
+        remove_province_modifier = extraterritoriality_granted
+        any_pop = {
+            limit = { culture = manchu }
+            reduce_pop = 0.90
+        }
+        #any_pop = {
+        #    limit = {
+        #        is_cultural_group = east_asian
+        #        NOT = { culture = manchu }
+        #    }
+        #    militancy = -3
+        #}
+    }
+
+    # Country scope
+    demands_enforced_trigger = {
+        capital_scope = {
+            owned_by = QNG
+            controlled_by = REB
+            province_control_days = 90
+        }
+    }
+
+    demands_enforced_effect = {
+        #war_exhaustion = 50
+        country_event = 166504
     }
 }

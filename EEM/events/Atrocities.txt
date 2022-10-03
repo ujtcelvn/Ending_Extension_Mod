@@ -11,7 +11,7 @@ province_event = {
 			war_countries = { has_country_modifier = strat_bombers } 	
 		}
 
-		OR = { 
+		OR = {
 			#total_pops = 250000 
 			#has_building = naval_base
 			is_capital = yes
@@ -75,10 +75,10 @@ province_event = {
 			factor = 0.5
 			owner = { war_countries = { invention = saturation_bombing_doctrine } }
 		}
-		modifier = {
-			factor = 0.5
-			owner = { war_countries = { invention = operations_research } }
-		}
+		#modifier = {
+		#	factor = 0.5
+		#	owner = { war_countries = { invention = operations_research } }
+		#}
 		modifier = {
 			factor = 0.8
 			owner = { war_countries = { invention = gun_and_bomb_sights } }
@@ -93,37 +93,20 @@ province_event = {
 		}
 
 		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.24 }
+			factor = 1.5
+			owner = { administration_spending = 0.5 }
 		}
 		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.49 }
+			factor = 1.5
+			owner = { administration_spending = 0.75 }
 		}
 		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.74 }
+			factor = 1.5
+			owner = { military_spending = 0.5 }
 		}
 		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.99 }
-		}
-
-		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.24 }
-		}
-		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.49 }
-		}
-		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.74 }
-		}
-		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.99 }
+			factor = 1.5
+			owner = { military_spending = 0.75 }
 		}
 
 		modifier = {
@@ -235,13 +218,6 @@ province_event = {
                 }
 
 	    		infrastructure = -1
-            }
-
-            any_owned = {
-                limit = {
-	    			NOT = { has_province_modifier = bomb_damage }
-	    			NOT = { has_province_modifier = heavy_bomb_damage }
-                }
                 add_province_modifier = { name = bomb_damage duration = 210 }
             }
         }
@@ -260,7 +236,7 @@ province_event = {
 			war = yes
 			war_countries = { has_country_modifier = strat_bombers } 	
             war_countries = { invention = saturation_bombing_doctrine }
-            war_countries = { invention = operations_research }
+            #war_countries = { invention = operations_research }
             war_countries = { invention = gun_and_bomb_sights }
             war_countries = { brigades_compare = 2 } #enemy has larger army
 		}
@@ -307,38 +283,22 @@ province_event = {
 			owner = { invention = rocket_powered_aircraft }
 		}
 
-		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.24 }
-		}
-		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.49 }
-		}
-		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.74 }
-		}
-		modifier = {
-			factor = 1.2
-			owner = { administration_spending = 0.99 }
-		}
 
 		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.24 }
+			factor = 1.5
+			owner = { administration_spending = 0.5 }
 		}
 		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.49 }
+			factor = 1.5
+			owner = { administration_spending = 0.75 }
 		}
 		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.74 }
+			factor = 1.5
+			owner = { military_spending = 0.5 }
 		}
 		modifier = {
-			factor = 1.2
-			owner = { military_spending = 0.99 }
+			factor = 1.5
+			owner = { military_spending = 0.75 }
 		}
 
 
@@ -440,12 +400,6 @@ province_event = {
                 }
 
 	    		infrastructure = -1
-            }
-
-            any_owned = {
-                limit = {
-	    			NOT = { has_province_modifier = heavy_bomb_damage }
-                }
                 add_province_modifier = { name = heavy_bomb_damage duration = 210 }
                 add_province_modifier = { name = bomb_damage duration = 210 }
             }

@@ -1233,10 +1233,13 @@ metallurgy_7 = {
     cost = 25200
 
     rgo_goods_output = {
-        iron = 0.5
+        iron = 0.1 #0.4
     }
     rgo_goods_output = {
-        coal = 0.5
+        coal = 0.1 #0.5
+    }
+    rgo_goods_output = {
+        oil = 0.5
     }
 
     ai_chance = {
@@ -1519,7 +1522,7 @@ tech_infrastructure_7 = {
     cost = 25200
 	
     #max_railroad = 1
-    rgo_output = 0.025
+    rgo_output = 0.05 #0.025
     factory_throughput = 0.05
 
     ai_chance = {

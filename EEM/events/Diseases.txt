@@ -270,7 +270,7 @@ country_event = {
         }
 
         modifier = {
-            factor = 0.1
+            factor = 0.05
             NOT = { has_country_flag = spanish_flu_happened }
             any_neighbor_country = { has_country_modifier = pandemic_influenza }
             NOT = { AND = { continent = oceania civilized = no } }
@@ -406,7 +406,7 @@ country_event = {
             NOT = { poor_strata_life_needs = 0.85 }
             NOT = { AND = { continent = oceania civilized = no } }
         }
-        modifier = {
+        modifier = { 
             factor = 0.9
             NOT = { poor_strata_everyday_needs = 0.3 }
             NOT = { AND = { continent = oceania civilized = no } }
@@ -535,7 +535,7 @@ province_event = {
         }
         modifier = {
             factor = 2
-            invention = improved_antibiotics
+            owner = { invention = improved_antibiotics }
         }
     }
 

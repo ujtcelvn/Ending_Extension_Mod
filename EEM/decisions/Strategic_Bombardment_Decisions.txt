@@ -7,26 +7,12 @@ political_decisions = {
 		
 		potential = {
 			war = yes
+			invention = strategic_destruction_doctrine
 			NOT = { has_country_modifier = strat_bombers }
 			money = 1000000
 			military_score = 500
 			is_disarmed = no
 			NOT = { war_policy = pacifism }
-			
-			#Must have allies near the war country
-			war_countries = {
-				OR = {
-					neighbour = THIS
-					any_neighbor_country = {
-						OR = {
-							in_sphere = THIS 
-							alliance_with = THIS
-							military_access = THIS
-						}
-					}
-				}
-			}
-			invention = strategic_destruction_doctrine
 		}
 		
 		allow = {

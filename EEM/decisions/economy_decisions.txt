@@ -1,95 +1,24 @@
 political_decisions = {
-    expand_oil_fields = {
-        picture = baku_oil
-        potential = {
-            OR = {
-                1102 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = highly_productive_mine } } #Baku
-                2270 = { owner = { tag = THIS } trade_goods = oil NOT = { has_province_modifier = highly_productive_mine } } #Maracaibo
-            }
-        }
-
-        allow = {
-            war = no
-            money = 500000
-            invention = oil_pumping_machinery
-        }
-
-        effect = {
-            any_owned = {
-                limit = {
-                    OR = { 
-                        province_id = 1102
-                        province_id = 2270
-                    }
-                    trade_goods = oil
-                    NOT = { has_province_modifier = highly_productive_mine }
-                }
-                add_province_modifier = { name = highly_productive_mine duration = -1 }
-                add_province_modifier = { name = province_small_immigration_boom duration = 365 }
-                treasury = -50000
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-
-    expand_mines = {
-        picture = mining_union_upper_katanga
-        potential = {
-            OR = {
-                321 = { owner = { tag = THIS } trade_goods = iron NOT = { has_province_modifier = highly_productive_mine } } #Lulea, Sweden, after 1886 (Malmberget) or 1898 (Kiruna)
-            }
-        }
-
-        allow = {
-            war = no
-            money = 500000
-            integral_rail_system = 1
-        }
-
-        effect = {
-            any_owned = {
-                limit = {
-                    OR = { 
-                        province_id = 321
-                    }
-                    trade_goods = iron
-                    NOT = { has_province_modifier = highly_productive_mine }
-                }
-                add_province_modifier = { name = highly_productive_mine duration = -1 }
-                add_province_modifier = { name = province_small_immigration_boom duration = 365 }
-                treasury = -50000
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-
     enact_opium_ban = {
         picture = opium_crates
 
         potential = {
             mass_politics = 1 #1900
-            NOT = { has_country_modifier = opium_ban }
+            NOT = { has_country_flag = opium_ban }
         }
 
         allow = {
             OR = {
-                moralism = 1.5
+                moralism = 2
                 government = proletarian_dictatorship
                 government = fascist_dictatorship
                 government = presidential_dictatorship
+                government = absolute_monarchy
             }
         }
 
         effect = {
-            add_country_modifier = {
-                name = opium_ban
-                duration = -1
-            }
-
+            set_country_flag = opium_ban
 
             any_owned = {
                 limit = {
@@ -341,36 +270,24 @@ political_decisions = {
 
             modifier = {
                 factor = 0
-                is_vassal = yes
-            }
-            modifier = {
-                factor = 0
-                debt_law = serfdom 
-            }
-            modifier = {
-                factor = 0
-                war = yes
-            }
-            modifier = {
-                factor = 0
-                NOT = { moralism = 1.5 }
-            }
-            modifier = {
-                factor = 0
                 OR = {
-                        government = presidential_dictatorship
+                    government = presidential_dictatorship
+                    is_vassal = yes
+                    debt_law = serfdom
+                    war = yes
+                    NOT = { moralism = 2 }
 
-                        has_country_flag = orthodox_country
-                        has_country_flag = coptic_country
-                        has_country_flag = sunni_country
-                        has_country_flag = shiite_country
-                        has_country_flag = ibadi_country
-                        has_country_flag = druze_country
-                        has_country_flag = jewish_country
-                        has_country_flag = yazidi_country
-                        has_country_flag = theravada_country
-                        has_country_flag = sikh_country
-                        has_country_flag = animist_country
+                    has_country_flag = orthodox_country
+                    has_country_flag = coptic_country
+                    has_country_flag = sunni_country
+                    has_country_flag = shiite_country
+                    has_country_flag = ibadi_country
+                    has_country_flag = druze_country
+                    has_country_flag = jewish_country
+                    has_country_flag = yazidi_country
+                    has_country_flag = theravada_country
+                    has_country_flag = sikh_country
+                    has_country_flag = animist_country
                 }
             }
         }
@@ -380,7 +297,7 @@ political_decisions = {
         picture = opium_crates
 
         potential = {
-            has_country_modifier = opium_ban
+            has_country_flag = opium_ban
         }
 
         allow = {
@@ -398,7 +315,7 @@ political_decisions = {
         }
 
         effect = {
-            remove_country_modifier = opium_ban
+            clr_country_flag = opium_ban
             any_owned = {
                 limit = {
                     has_province_modifier = local_opium_ban
@@ -409,6 +326,12 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
+
+            modifier = {
+                factor = 0
+                is_vassal = yes
+                overlord = { has_country_flag = opium_ban }
+            }
 
             modifier = {
                 factor = 0

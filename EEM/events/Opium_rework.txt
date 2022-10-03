@@ -3,7 +3,7 @@ province_event = {
     id = 166800
 
     trigger = {
-        NOT = { owner = { has_country_modifier = opium_ban } }
+        NOT = { owner = { has_country_flag = opium_ban } }
         NOT = { has_province_modifier = switched_production }
         NOT = { has_province_modifier = pearl_season }
         OR = {
@@ -180,7 +180,7 @@ province_event = {
     id = 166801
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -233,7 +233,7 @@ province_event = {
     id = 166802
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -284,7 +284,7 @@ province_event = {
     id = 166803
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -336,7 +336,7 @@ province_event = {
     id = 166804
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -388,7 +388,7 @@ province_event = {
     id = 166805
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -442,7 +442,7 @@ province_event = {
     id = 166806
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -504,7 +504,7 @@ province_event = {
     id = 166807
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -554,7 +554,7 @@ province_event = {
     id = 166808
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -607,7 +607,7 @@ province_event = {
     id = 166809
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -659,7 +659,7 @@ province_event = {
     id = 166810
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -709,7 +709,7 @@ province_event = {
     id = 166811
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -760,7 +760,7 @@ province_event = {
     id = 166812
     trigger = {
         trade_goods = opium
-        owner = { has_country_modifier = opium_ban }
+        owner = { has_country_flag = opium_ban }
         has_province_modifier = local_opium_ban
         owner = {
             war = no
@@ -822,7 +822,7 @@ province_event = {
         NOT = { has_province_modifier = war_torn }
         controlled_by = THIS
         owner = {
-            has_country_modifier = opium_ban
+            has_country_flag = opium_ban
             war = no
             administration_spending = 0.25
             NOT = { has_country_modifier = national_confusion }
@@ -873,7 +873,7 @@ province_event = {
         has_province_modifier = local_opium_ban
         OR = {
             NOT = { trade_goods = opium }
-            owner = { NOT = { has_country_modifier = opium_ban } }
+            owner = { NOT = { has_country_flag = opium_ban } }
         }
     }
 
@@ -889,7 +889,7 @@ province_event = {
                     has_province_modifier = local_opium_ban
                     OR = {
                         NOT = { trade_goods = opium }
-                        owner = { NOT = { has_country_modifier = opium_ban } }
+                        owner = { NOT = { has_country_flag = opium_ban } }
                     }
                 }
                 remove_province_modifier = local_opium_ban
@@ -942,7 +942,7 @@ province_event = {
 
         modifier = {
             factor = 2
-            owner = { has_country_modifier = opium_ban }
+            owner = { has_country_flag = opium_ban }
         }
         modifier = {
             factor = 2

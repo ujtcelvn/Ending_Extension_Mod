@@ -1,15 +1,15 @@
-Tech Unlock Dates		number of inventions (5 + 5 + 115 = 125)
+Tech Unlock Dates		number of inventions (10 + 110 = 120)
 1926 5 
 1930 10
 1936 10
 
 1936 army doctrine					 6
 1936 light armament					 3
-1936 heavy armament					 7
+1936 heavy armament					 5
 1936 military science				 8
 1936 army leadership				 6
 
-army = 30
+army = 28
 
 1936 naval doctrine					 4
 1930 ship construction				 5		1919 oil_driven_ships		4
@@ -37,31 +37,18 @@ commerce = 17
 
 1930 power							 7
 1930 mechanization					 3      
-1930 metallurgy						 6		1850 regenerative_furnaces 	1			1900 electric_furnace	1
+1930 metallurgy						 4		1900 electric_furnace	1
 1930 infrastructure					 0
-1936 chemistry and electricity		11		1900 synthetic_polymers 2
+1936 chemistry and electricity		10		1900 synthetic_polymers 3
 
-industry = 27 + 4
+industry = 24 + 4
 
 ####################################################################################################
 Coming soon: 
 
-#TODO: Healthcare, pop growth adjustments
-
-#TODO: Maybe the bonuses to supply limit should be split between the Medicine tree and Military Science? It makes sense that just getting better at preventative medicine and treatment can improve survivability in harsh terrain, but logistics are part and parcel of that. Military Science is actually punishing to take too quickly because of the huge increase in cost for army supply, and if it gave some supply limit it would really push people to take it.
-
-#TODO: The Propaganda decisions seem to me to be VERY weak midgame. I was only able to shift my population’s opinions by about .4%, which is a very low amount for the price, and far below what I needed to be able to add another wargoal. I don’t dislike the system but I’d suggest keeping an eye on it, because to me it feels like there’s not enough agency on the player’s part. I think the player should be able to pay more plurality and infamy (perhaps militancy as well actually) to be able to really push their agenda on the people, perhaps even using some slightly extra-legal means to force their way. The costs long-term could just be more significant (perhaps even the possibility of a political scandal for their ruling party, to represent news of the issue getting out?).
-
 #TODO: purchase battleship
 
-#TODO: anti-war stuff, international organisations
-
-#TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships get to purge in different ideologies
-#TODO: ancap memes
-
-#TODO: pogroms
-#TODO: Special Attack Units
-#TODO: unethical experiments, leak
+#TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships of different ideologies get to purge too
 
 #TODO: reduce assimilation between different races, especially in the New World
 #TODO: let assimilation increase via other methods
@@ -69,53 +56,86 @@ Coming soon:
 #TODO: fix accepting black pops in the New World
 #TODO: Why is it that the most open societies (Secularized/Full Citizenship) are the ones that are most efficient at assimilation? It seems like those are the societies where there’s the least pressure to assimilate. Residency clearly implies that there are limited openings for assimilation, so I understand why that slows assimilation down, but shouldn’t the most efficient for assimilation actually be limited citizenship, since there’s still pressure on minority groups to assimilate?
 
-#TODO: invention localizations
-
-#TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
+#TODO: soldiers in state capitals only?
 
 #TODO: remove random British cores in Alberta
 #TODO: Turkestan doesn't get any cores if formed externally (is this intended?)
+#TODO: the CSA is really ugly without Arkansas 
 
-#TODO: China viceroys?
+#TODO: redo all the unit graphics dds in GIMP to prevent compression issues
+#TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
 
+#TODO: Western governments have crippled [insert country here] with sanctions, and then sent in friendly NGOs to pick up the slack.
 
-#TODO: make sure goods aren't overproduced in late game
-#TODO: wool (and perhaps tobacco / tea / coffee / opium) still suck, esp. in late game
-#TODO: sometimes iron is more expensive than steel! 20 iron + 5 coal = 23 steel for some reason, so maybe 1 steel is smaller than 1 iron??? How much steel is made from 1 iron irl?
-    https://www.nature.com/articles/s41467-021-22245-6/figures/3
+#TODO: let China claim 1593 Tawang (the bit of Tibet that gets siezed by British India)
 
-
-#TODO: remove clipper factories, clippers are only built by artisans now
-	https://penobscotmarinemuseum.org/pbho-1/ships-shipbuilding/maine-shipyards
-	Wooden shipbuilding in Maine in the nineteenth century required little capital expense for a physical plant. It needed only space to build and store materials, the right slope to the shore for the inclined ways to launch the ship, and enough deep water at high tide to float the vessel.
-	The 1880 census of manufactures showed that the average wood shipyard had $6,200 of capital investment.
-	On the other hand, steel shipyards in 1880 had an average of almost $470,000 expended to build all of the facilities necessary to work with steel
-	Workers typically earned $1.50 to $2.50 per ten-hour day. Shipbuilding was seasonal, especially in smaller communities: most work went on between fall and spring. By the end of the nineteenth century, reduced demand for ships and consolidation of wooden shipyards meant that shipbuilders might find work only 8 or 9 months of the year.
-
-#TODO: soldiers in state capitals only
 ####################################################################################################
 #TODO: nuclear research program
-
 #TODO: localizations for the nuke modifiers
-
 #TODO: nuke tiers
-
 #TODO: First ever use of nuke special event: Start of the Atomic Age: set global flag: nukes_used_in_war, set country flag: first_country_to_nuke, country_has_used_nukes
 	victim gets hit more war exhaustion and confusion
-	nuke dropper gets cheering and celebratione event: reduce war exhaustion and militancy
-
-#TODO: the higher the global nuke research level, the more anti-nuke protest events happen
-
+	nuke dropper gets cheering and celebratione event: reduce war exhaustion
+#TODO: the higher the global nuke research level and if your country has dropped nukes, the more anti-nuke protest events happen
 #TODO: nuclear accident event
 
 ####################################################################################################
-v0.5.6i
+v0.5.7
 
-#TODO: send cash to sphere member decision
-#TODO: Make it much more difficult to request military access: China didn't attrition all their troops to death in Burma during the Opium War
+3323 Muzaffapur merged back into 1247 Patna
+Southern half of Chengde split to become 3323 Tangshan, Chengde is now purely the extent of Rehe province
+Tianjin extended northwards to where it actually is
+Tangshan flips to coal (Kaiping Mines, 1881)
+Mine/oil field expansion decisions are now events, deleted unused baku_oil.dds. Split highly productive mine into rich deposits and very rich deposits. Added 323 Falun, 326 Vasteras, and 319 Ostersund to list of rich iron deposits
 
-#TODO: there's still an iron shortage in early game?
+INVENTION_IMPACT_ON_DEMAND reduced from HPM's 0.012 to 0.010
+Stricter tax refund tiers
+slightly increased base cattle, grain, and iron production, reverted coal production
+removed rocker_shovel_loader
+removed hydrodesulphurization
+Buffed haber process a lot
+nerfed direct_current's factory boost from 0.05 to 0.02 to be in line with the other electricity inventions
+air preheater now increases factory_throughput by 0.02
+metallurgy_7 increases oil production, much less iron and coal
+moved nuclear_theory to philosphy_7
+removed deconstrutionism (it was actually invented in 1967)
+buffed industrial_plastics_production
+remove magnetic_separation
+split rubber and plastic additives
+slightly nerfed rail
+tech_infrastructure_7 increase in RGO output increased from 0.025 to 0.05
+merged assault gun into self propelled artillery
+merged tracked mine and guided bomb into remote control
+tweaked cruiser, dreadnaught, and carrier balance
+Tier 7 of the financial institutions tech now increases admin efficiency instead of tax efficiency
+Turned opium ban from a country modifier to a country flag to clear up UI clutter
+tweak pollution
+Trade policy no longer gives research bonuses
+minimum military/construction spending retuned to 10%
+Reverted pop migration terrain preferences back to HPM
+High literacy reduces education effectiveness (diminishing returns)
+Fixed modifiers.dds file quality issue
 
+Qing is no longer flooded by millions of reactionary rebels during the Taiping Rebellion. Now, rebellious Chinese pops prefer nationalist or anti-Qing rebellions.
+disabled Nian Rebellion
+Red Turban Monarchy flag is no longer an ahistorical flag I made up, instead, it's now a historical pro-Red Turban pirate flag https://warontherocks.com/2018/01/prebles-flag-emerging-navy-fights-chinese-pirates/
+American Missionaries in the Taiping event edited to make more sense
+Trade zones start with open borders, a legation quarter, and western presence. They still start with uncivilized isolationism
+Western Support for Manchuria event streamlined to work for many situations
+Foreigner Attacked event for China was limited to AI GPs ranked lower than 5. Adjusted mtth and the cb can now be given to all Western GPs, so hopefully the AI takes more treaty ports from China.
+China national value adjustments
+The New Army clears you of the alternative chinese rebellion cores if you're Qing and beat a rebellion already
+The Xinhai Revolution is now actually dynamic, mostly based on local militancy, and allies are not called in. If instead China's capital is occupied by rebels, the HPM version of the Xinhai Revolution occurs.
+The Beiyang coup occurs AFTER negotiations with the KMT
+Fixed Yunnan parties, Yunnan more likely to be pro KMT
+Lanfang accepts Hakka again
+Cleaned up many China decisions and events and localization
+
+African verison of organize colonies now has localization
+Variables successful_communist_rebellions and successful_fascist_rebellions (found in Socialism_Fascism, Revolution_Event, GreatWar_Events ) moved to the REB tag instead of being on every single country to improve performance
+Wars with non-existent countries (eg: FRCA if it decides to fight on without owning guatemala) now end
+changed some AI behavior 
+gfx adjustments
 
 ####################################################################################################
 v0.5.6h

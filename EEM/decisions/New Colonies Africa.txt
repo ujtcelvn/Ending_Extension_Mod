@@ -1272,7 +1272,7 @@ political_decisions = {
         }
     }
 
-    reorganize_chad_afica = {
+    reorganize_chad_africa = {
         picture = map_chad
         potential = {
             OR = {

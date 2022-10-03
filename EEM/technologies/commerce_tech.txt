@@ -187,7 +187,9 @@ financial_institutions_7 = {
     year = 1926
     cost = 25200
 
-    tax_eff = 5
+    #tax_eff = 5
+    administrative_efficiency = 0.05
+
     ai_chance = {
         factor = 1.5
         modifier = {

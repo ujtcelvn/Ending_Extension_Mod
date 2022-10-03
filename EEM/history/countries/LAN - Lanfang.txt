@@ -1,5 +1,6 @@
 capital = 1426
 primary_culture = yue
+culture = hakka
 religion = mahayana
 government = presidential_dictatorship
 plurality = 0.0

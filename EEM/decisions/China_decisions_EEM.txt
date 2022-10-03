@@ -1,336 +1,18 @@
 political_decisions = {
-	blow_yellow_river_dikes = {
-		picture = yellow_river_dikes
-		potential = {
-			OR = {
-				tag = TPG
-				tag = CHI
-				tag = KMT
-			}
-			has_global_flag = huang5 #past 1931
-			civilized = yes
-			NOT = { has_global_flag = yellow_river_dikes_blown }
-
-			owns = 1511
-		}
-		
-		allow = {
-			OR = {
-				war_with = JAP
-				war_with = TKG
-			}
-			#Pingyang, Luan, Weihui, Jinan, Wuding occupied
-			OR = {
-				1575 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1574 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1515 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1515 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1570 = { controller = { OR = { tag = JAP tag = TKG } } }
-			}
-			OR = {
-				1511 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1508 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1512 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1509 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1478 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1472 = { controller = { OR = { tag = JAP tag = TKG } } }
-				1476 = { controller = { OR = { tag = JAP tag = TKG } } }
-			}
-		}
-		
-		effect = {
-			set_global_flag = yellow_river_dikes_blown
-			1511 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-			1508 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-			1512 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-			1509 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-			1478 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-			1472 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-			1476 = {
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
-			}
-		}
-		
-        ai_will_do = { 
-			factor = 1
-            modifier = {
-                factor = 0
-                OR = {
-					government = proletarian_dictatorship
-					government = bourgeois_dictatorship
-					war_policy = pacifism
-				}
-            }
-		}
-	}
-
-    move_capital_to_nanking_ming = {
-        picture = nanking
-        alert = yes
-        potential = {
-            OR = { tag = RTR tag = KMT }
-            NOT = { capital = 2221 }
-        }
-
-        allow = {
-            war = no
-            owns = 2221
-        }
-
-        effect = {
-            prestige = 10
-            capital = 2221
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-
-    revoke_sino_portuguese_treaty_ming = {
-        picture = macao_city
-        alert = yes
-        potential = {
-            tag = RTR
-			civilized = yes
-            owns = 1502
-            owns = 1616
-            owns = 1601
-            owns = 1554
-            owns = 1493
-            owns = 1553
-            owns = 1556
-            owns = 1594
-            owns = 1600
-            owns = 1599
-            owns = 1532
-            owns = 1519
-            owns = 1483
-            owns = 2221
-            owns = 1509
-            has_global_flag = sino_portuguese_treaty_of_peking_signed
-            1498 = { NOT = { is_core = CHI } }
-            NOT = { has_global_flag = sino_portuguese_treaty_of_peking_revoked }
-        }
-
-        allow = {
-            any_owned_province = { any_neighbor_province = { province_id = 1498 } }
-            OR = {
-                government = fascist_dictatorship
-                government = proletarian_dictatorship
-                government = bourgeois_dictatorship
-                1498 = { owner = { NOT = { has_country_flag = sino_portuguese_treaty_of_peking_signataire } } }
-            }
-        }
-
-        effect = {
-            set_global_flag = sino_portuguese_treaty_of_peking_revoked
-            clr_global_flag = sino_portuguese_treaty_of_peking_signed
-            any_country = { clr_country_flag = sino_portuguese_treaty_of_peking_signataire }
-            1498 = { add_core = CHI }
-            random_country = { limit = { owns = 1498 NOT = { tag = THIS } } country_event = 90908 }
-            random_owned = {
-                limit = {
-                    owner = {
-                    NOT = { owns = 1498 }
-                    OR = {
-                        government = fascist_dictatorship
-                        government = proletarian_dictatorship
-                        government = bourgeois_dictatorship
-                        }
-                    }
-                }
-                owner = { badboy = 4 }
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-
-    inherit_ryukyu_china = {
-        alert = yes
-        potential = {
-            OR = {
-                tag = RTR
-                tag = TPG
-                tag = CHI
-                tag = KMT
-            }
-            exists = RYU
-            NOT = { has_global_flag = ryukyu_inherited }
-            RYU = { ai = yes }
-        }
-
-        allow = {
-            civilized = yes
-            war = no
-            RYU = { war = no }
-            OR = {
-                RYU = { part_of_sphere = no }
-                RYU = { in_sphere = THIS }
-            }
-        }
-
-        effect = {
-            set_global_flag = ryukyu_inherited
-            1678 = { add_core = THIS }
-            1679 = { add_core = THIS }
-            random_owned = { limit = { owner = { tag = THIS } } 1678 = { add_core = CHI } 1679 = { add_core = CHI } 1678 = { add_core = THIS } 1679 = { add_core = THIS } }
-            inherit = RYU
-        }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
-
-    become_china_ming = {
-        alert = yes
-        potential = {
-            tag = RTR
-            civilized = yes
-            TPG = { exists = no }
-            QNG = { exists = no }
-        }
-
-        allow = {
-            war = no
-            owns = 2221
-            NOT = {
-                government = absolute_monarchy
-                government = prussian_constitutionalism
-                government = hms_government
-                government = bourgeois_dictatorship
-                government = fascist_dictatorship
-                government = presidential_dictatorship
-                government = democracy
-            }
-        }
-
-        effect = {
-            prestige = 20
-            all_core = { remove_core = RTR }
-            change_tag = CHI
-
-            random_country = {
-                limit = {
-                    tag = TIB
-                    vassal_of = THIS
-                }
-                THIS = { release_vassal = TIB }
-            }
-            #random_owned = {
-            #    limit = {
-            #        province_id = 1587
-            #        NOT = { exists = TIB }
-            #    }
-            #    owner = {
-            #        any_owned = {
-            #            limit = {
-            #                region = TIB_1591
-            #            }
-            #            secede_province = TIB
-            #        }
-            #    }
-            #}
-            random_country = {
-                limit = {
-                    tag = MGL
-                    vassal_of = THIS
-                }
-                THIS = { release_vassal = MGL }
-            }
-            #random_owned = {
-            #    limit = {
-            #        province_id = 1465
-            #        NOT = { exists = MGL }
-            #    }
-            #    owner = {
-            #        any_owned = {
-            #            limit = {
-            #                is_core = MGL
-            #                NOT = { region = CHI_1532 }
-            #            }
-            #            secede_province = MGL
-            #        }
-            #    }
-            #}
-            CHI_1468 = { remove_core = CHI }
-            CHI_1465 = { remove_core = CHI }
-            random_owned = { limit = { region = CHI_1082 } CHI_1082 = { add_core = MCK } }
-            CHI_1479 = { add_core = MCK }
-            CHI_1552 = { add_core = MCK }
-            1533 = { add_core = MCK }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
+    #move_capital_to_nanking_ming  #merged into move_capital_to_historical_capital
+    #revoke_sino_portuguese_treaty_ming #removed because the normal revoke_sino_portuguese_treaty decision now works for RTR too
+    #inherit_ryukyu_china #removed because the normal inherit_ryukyu decision only allowed for QNG and Japan, so the other Chinas don't get to claim Ryukyu
+    #become_china_ming = { #removed because like TPG, RTR is already a Chinese dynasty, no need to become CHI if it gets overthrown, unlike QNG. The Xinhai Revolution works for it too.
+    #kongsi_ming #removed for being dumb
+    #move_capital_to_beijing_qing #merged into move_capital_to_historical_capital
 
     prevent_warlord_era = {
         picture = ww2_chinese_arty
         alert = yes
         potential = {
+            has_global_flag = the_new_army
+            has_global_flag = spread_warlord_influence
+            NOT = { has_global_flag = warlord_era_has_begun }
             OR = {
                 #AND = {
                 #    tag = QNG
@@ -368,16 +50,18 @@ political_decisions = {
                     KMT = { exists = no }
                 }
             }
-            has_global_flag = the_new_army
-            has_global_flag = spread_warlord_influence
-            NOT = { has_global_flag = warlord_era_has_begun }
         }
 
         allow = {
+            is_greater_power = yes
             war = no
             psychology_7 = 1
             army_professionalism = 1
             invention = secret_police
+            NOT = {
+                average_militancy = 4
+                num_of_revolts = 1
+            }
             QNG = {
                 OR = {
                     exists = no
@@ -517,7 +201,6 @@ political_decisions = {
         }
 
         effect = {
-            prestige = 20
             add_country_modifier = {
                 name = national_confusion
                 duration = 1825
@@ -530,51 +213,23 @@ political_decisions = {
                 name = disunited_country 
                 duration = 1825
             }
-            clr_global_flag = spread_warlord_influence
-            set_global_flag = warlord_era_has_begun #take the reunification_of_china decision to remove warlord cores
-
             any_pop = {
                 limit = { type = officers }
                 militancy = 5
                 consciousness = -2
-                reduce_pop = 0.8
+                reduce_pop = 0.75
             }
+            any_pop = {
+                limit = { type = soldiers }
+                militancy = 5
+                consciousness = -2
+                reduce_pop = 0.9
+            }
+            clr_global_flag = spread_warlord_influence
+            set_global_flag = warlord_era_has_begun #take the reunification_of_china decision to remove warlord cores
         }
 
         ai_will_do = { factor = 1 }
-    }
-
-
-    kongsi_ming = {
-        picture = singapore_1900
-        alert = yes
-        potential = {
-            tag = RTR
-            civilized = yes
-            government = bourgeois_dictatorship
-        }
-
-        allow = {
-            war = no
-            is_greater_power = yes
-            nationalism_n_imperialism = 1 #1850
-            owns = 1496 #Hong Kong
-        }
-
-        effect = {
-            prestige = 20
-            badboy = 5
-            1384 = { add_core = RTR } #Singapore
-            1426 = { add_core = RTR } #Lanfang
-        }
-
-        ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                badboy = 0.8
-            }
-        }
     }
 
     become_qing = {
@@ -582,8 +237,8 @@ political_decisions = {
         alert = yes
         potential = {
             tag = MCK
-            TPG = { exists = no }
             QNG = { exists = no }
+            TPG = { exists = no }
 	        RTR = { exists = no }
 	        CHI = { exists = no }
 	        KMT = { exists = no }
@@ -591,6 +246,8 @@ political_decisions = {
 
         allow = {
             war = no
+            is_vassal = no
+            is_substate = no
             owns = 2221
             owns = 1612
             owns = 1552
@@ -627,38 +284,16 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    move_capital_to_beijing_qing = {
-        picture = qing_emperor
-        alert = yes
-        potential = {
-            tag = QNG
-            NOT = { capital = 1616 }
-        }
-
-        allow = {
-            war = no
-            owns = 1616
-        }
-
-        effect = {
-            prestige = 10
-            capital = 1616
-        }
-
-        ai_will_do = { factor = 1 }
-    }
-
-
     xiu_capital = {
     picture = tiandihui_seal
         potential = {
+            owns = 1504
             tag = RTR
             NOT = { has_global_flag = xiu_capital_decreted }
             NOT = { capital = 2221 }
         }
 
         allow = {
-            owns = 1504
         }
 
         effect = {
@@ -674,6 +309,7 @@ political_decisions = {
     abolish_xiu_capital = {
     picture = tiandihui_seal
         potential = {
+            owns = 1504
             NOT = { tag = RTR }
             #NOT = { tag = LAN }
             is_culture_group = east_asian
@@ -681,7 +317,6 @@ political_decisions = {
         }
 
         allow = {
-            owns = 1504
         }
 
         effect = {
@@ -692,8 +327,6 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-#Increased militancy for Yuan Shikai making himself emperor (Second Revolution)
-#Warlord Era starts much faster when China is not a presidental dicatorship (Warlord Era starts with the National Protection War)
     empire_of_china = {
         picture = yuan_shikai_emperor
         alert = yes
@@ -727,24 +360,36 @@ political_decisions = {
                 }
             }
 
-            middle_strata = {
-                limit = { is_culture_group = east_asian }
-                consciousness = 4
-                ideology = {
-                    value = liberal
-                    factor = 0.1
-                }
-            }
+            #middle_strata = {
+            #    limit = { is_culture_group = east_asian }
+            #    consciousness = 4
+            #    ideology = {
+            #        value = liberal
+            #        factor = 0.1
+            #    }
+            #}
 
             any_pop = {
                 limit = { is_culture_group = east_asian }
+                scaled_militancy = {
+                    ideology = reactionary
+                    factor = -4
+                }
                 scaled_militancy = {
                     ideology = liberal
                     factor = 4
                 }
                 scaled_militancy = {
-                    ideology = reactionary
-                    factor = -2
+                    ideology = socialist
+                    factor = 4
+                }
+                scaled_militancy = {
+                    ideology = communist
+                    factor = 4
+                }
+                scaled_militancy = {
+                    ideology = anarcho_liberal
+                    factor = 4
                 }
             }
             add_country_modifier = {
@@ -776,4 +421,88 @@ political_decisions = {
 
         ai_will_do = { factor = 1 }
     }
+
+	blow_yellow_river_dikes = {
+		#title = "Destroy the Yellow River Dikes?"
+		#desc = "If the dikes, levees, and dams along the Yellow River were to be destroyed, it would create an artifical flood across Henan, Anhui, and Jiangsu that could slow the Japanese advance."
+		picture = yellow_river_dikes
+        alert = yes
+		potential = {
+			owns = 1511
+			controls = 1511
+    		OR = {
+    			tag = TPG
+				tag = CHI
+				tag = KMT
+			}
+			has_global_flag = huang5 #past 1931
+			NOT = { has_global_flag = yellow_river_dikes_blown }
+			civilized = yes
+			OR = {
+				war_with = JAP
+				war_with = TKG
+			}
+			OR = {
+				has_country_modifier = great_war
+				has_country_modifier = great_war2
+				has_country_modifier = great_war3
+			}
+			national_provinces_occupied = 0.2
+			1616 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+			OR = {
+				1511 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+				1575 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+			}
+			OR = {
+				1542 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+				1536 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+			}
+		}
+
+		allow = {
+		}
+
+		effect = {
+			set_global_flag = yellow_river_dikes_blown
+            any_owned = {
+				limit = {
+					OR = {
+						province_id = 1511
+						province_id = 1508
+						province_id = 1512
+						province_id = 1509
+						province_id = 1478
+						province_id = 1472
+						province_id = 1476
+					}
+				}
+				any_pop = {
+					reduce_pop = 0.90
+				}
+				add_province_modifier = {
+					name = chinese_floods
+					duration = 1800
+				}
+				infrastructure = -6
+            }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					government = proletarian_dictatorship
+					government = bourgeois_dictatorship
+					government = absolute_monarchy
+					government = prussian_constitutionalism
+					government = hms_government
+					war_policy = pacifism
+					war_policy = anti_military
+				}
+			}
+		}
+	}
+
+
 }

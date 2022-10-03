@@ -10671,7 +10671,7 @@ country_event = {
                 factor = 4
             }
         }
-        any_country = {
+        REB = {
             change_variable = {
                 which = successful_fascist_rebellions
                 value = 1
@@ -10779,7 +10779,7 @@ country_event = {
             remove_province_modifier = province_strike
             remove_province_modifier = may_day
         }
-        any_country = {
+        REB = {
             change_variable = {
                 which = successful_communist_rebellions
                 value = 1

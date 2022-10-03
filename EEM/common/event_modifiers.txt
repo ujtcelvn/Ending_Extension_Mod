@@ -217,9 +217,9 @@ french_liberal_school = {
     max_tariff = -0.2
     administrative_efficiency_modifier = 0.1
     tariff_efficiency_modifier = 0.1
-    industry_tech_research_bonus = 0.05
-    commerce_tech_research_bonus = 0.05
-    culture_tech_research_bonus = 0.05
+    #industry_tech_research_bonus = 0.05
+    #commerce_tech_research_bonus = 0.05
+    #culture_tech_research_bonus = 0.05
     #influence_modifier = 0.1
     icon = 9
 }
@@ -250,7 +250,7 @@ mercantilism = {
 economic_nationalism = {
     min_tariff = 0.75
     tariff_efficiency_modifier = 0.3
-    industry_tech_research_bonus = 0.05
+    #industry_tech_research_bonus = 0.05
     #influence_modifier = -0.1
     icon = 9
 }
@@ -2160,6 +2160,13 @@ taiping_draft = {
     icon = 18
 }
 
+yong_ying = {
+    land_unit_start_experience = 5
+    war_exhaustion = -1
+    global_pop_consciousness_modifier = 0.1
+    icon = 15
+}
+
 ### Panjab ###
 shastar_vidya = {
     org_regain = 0.1
@@ -2602,7 +2609,7 @@ emergency_tax_measures2 = {
     icon = 10
 }
 
-### EEM ###
+### EEM economy ###
 
 local_intensive_agriculture = {
     farm_RGO_eff = 0.5
@@ -2635,9 +2642,15 @@ clean_air_act = {
     icon = 5
 }
 
-highly_productive_mine = {
+productive_mine_2 = {
     mine_RGO_eff = 4
     mine_rgo_size = 4
+    icon = 13
+}
+
+productive_mine_1 = {
+    mine_RGO_eff = 1.5
+    mine_rgo_size = 1.5
     icon = 13
 }
 
@@ -2648,11 +2661,11 @@ local_drug_habit = {
     icon = 20
 }
 
-opium_ban = {
-    poor_luxury_needs = -0.05
-    middle_luxury_needs = -0.025
-    icon = 2
-}
+#opium_ban = {
+#    poor_luxury_needs = -0.05
+#    middle_luxury_needs = -0.025
+#    icon = 2
+#}
 
 local_opium_ban = {
     farm_RGO_eff = -0.75

@@ -110,19 +110,19 @@ direct_current = {
     }
     effect = {
         rgo_output = 0.05
-        factory_throughput = 0.05
+        factory_throughput = 0.02 #0.05
     }
 }
 alternating_current = {
     limit = { electrical_power_generation = 1 }
     chance = {
-        base = 3
+        base = 2 #3
         modifier = {
             factor = 2
             invention = edison_light_bulb
         }
         modifier = {
-            factor = 3
+            factor = 2 #3
             invention = direct_current
         }
     }

@@ -49,8 +49,9 @@ country_event = {
             is_disarmed = yes
             has_country_modifier = western_influences
         }
+        TPG = { exists = no }
+        RTR = { exists = no }
         NOT = {
-            OR = { TPG = { exists = yes } RTR = { exists = yes } }
             num_of_revolts = 5
             has_country_flag = boxers_appeared
         }

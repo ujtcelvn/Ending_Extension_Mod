@@ -2,7 +2,7 @@
 province_event = {
     id = 29905
     title = "Intensive Agriculture"
-    desc = "Agriculture more industrialized and intensive than ever before"
+    desc = "Extensive use of artifical fertilizers and pesticides and antibiotics allow crops and livestock to grow faster than ever before."
 
     trigger = {
         NOT = { has_province_modifier = local_intensive_agriculture }

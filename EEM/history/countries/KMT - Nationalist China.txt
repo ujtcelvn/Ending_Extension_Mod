@@ -48,6 +48,13 @@ upper_house = {
     communist = 25
 }
 
+
+foreign_weapons = yes_foreign_weapons
+admin_reform = yes_admin_reform
+
+# Technologies
+flintlock_rifles = 1
+
 # Inventions
 #bottling_process = yes
 modern_winemaking = yes
@@ -55,7 +62,3 @@ modern_winemaking = yes
 #sail_ships_transport = yes
 #big_sail_support = yes
 
-foreign_weapons = yes_foreign_weapons
-
-# Technologies
-flintlock_rifles = 1

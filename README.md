@@ -1,7 +1,7 @@
 ## Ending_Extension_Mod
 This is a fork of the HPM mod of Victoria 2, that extends the end date to 1956 (so far) and adds many new features to flesh out the end game. 
 
-This mod is now standalone, and should be run by itself. It no longer needs to be run with HPM or the Square Shaded Map Frame mod, it comes with all those 2 mods' files.
+This mod is now standalone, and should be run by itself. It no longer needs to be run with HPM or the Square Shaded Map Frame mod, the files are now built-in.
 
 My name and trip is: Extender-anon !2RLc/0ninY 
 
@@ -11,13 +11,13 @@ Extended play to 1956
 
 1 new technology for each technology group
 
-125 new inventions (115 in the new techs, 10 earlier)
+120 new inventions (110 in the new techs, 10 earlier)
 
-Motorized infantry
+Motorized Infantry
 
 Aircraft Carriers
 
-Economic tweaks
+Economic adjustments and rebalance
 
 Tax refund event to prevent the Liquidity Crisis
 

@@ -51,7 +51,11 @@ upper_house = {
     communist = 0
 }
 
+foreign_weapons = yes_foreign_weapons
+admin_reform = yes_admin_reform
+
 # Technologies
+flintlock_rifles = 1
 
 # Inventions
 #bottling_process = yes

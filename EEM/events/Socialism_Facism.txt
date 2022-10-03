@@ -1757,16 +1757,20 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 10
+                }
             }
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 20
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 20
+                }
             }
         }
     }
@@ -1941,16 +1945,20 @@ country_event = {
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 10
+                }
             }
         }
     }
@@ -2270,16 +2278,20 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 10
+                }
             }
         }
     }
@@ -2479,16 +2491,20 @@ country_event = {
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 10
+                }
             }
         }
     }
@@ -2968,16 +2984,20 @@ country_event = {
 
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 10
+                }
             }
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 20
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 20
+                }
             }
         }
     }
@@ -3149,16 +3169,20 @@ country_event = {
 
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 2
-            check_variable = {
-                which = successful_fascist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_fascist_rebellions
+                    value = 10
+                }
             }
         }
     }
@@ -3685,16 +3709,20 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_communist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_communist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_communist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_communist_rebellions
+                    value = 10
+                }
             }
         }
         modifier = {
@@ -3899,16 +3927,20 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_communist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_communist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_communist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_communist_rebellions
+                    value = 10
+                }
             }
         }
         modifier = {
@@ -4093,16 +4125,20 @@ country_event = {
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_communist_rebellions
-                value = 5
+            REB = {
+                check_variable = {
+                    which = successful_communist_rebellions
+                    value = 5
+                }
             }
         }
         modifier = {
             factor = 1.5
-            check_variable = {
-                which = successful_communist_rebellions
-                value = 10
+            REB = {
+                check_variable = {
+                    which = successful_communist_rebellions
+                    value = 10
+                }
             }
         }
         modifier = {
@@ -4286,7 +4322,7 @@ province_event = {
         }
         modifier = {
             factor = 1.5
-            owner = {
+            REB = {
                 check_variable = {
                     which = successful_communist_rebellions
                     value = 10

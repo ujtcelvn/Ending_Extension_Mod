@@ -1678,6 +1678,7 @@ province_event = {
                     province_id = 1253  #Bardwan - India
                     province_id = 1573  #Fenzhou - China - 800k
                     province_id = 1575  #Pingyang - China - 800k
+                    province_id = 3323  #Tangshan - China - 650k - (Kaiping Mines 1881)
                 }
             }
             AND = {

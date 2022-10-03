@@ -4954,3 +4954,37 @@ province_event = {
     }
 }
 
+#End war with non-existent nations
+country_event = {
+    id = 6016829
+    title = "End War with non-existent nations"
+    desc = "As a country you are at war with no longer exists, the war has ended."
+    picture = "deliberation"
+
+    trigger = {
+        war = yes
+        war_countries = { exists = no }
+    }
+
+    mean_time_to_happen = { months = 1 }
+
+    option = {
+        name = "Good"
+        any_country = { limit = { exists = no war = yes } country_event = 6016830 }
+    }
+}
+
+#End war with non-existent nations
+country_event = {
+    id = 6016830
+    title = "End War with non-existent nation"
+    desc = "As this country no longer exists, the war has ended."
+    picture = "deliberation"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "Good"
+        end_war = FROM
+    }
+}

@@ -1,177 +1,140 @@
-country_event = {
+province_event = {
     id = 12300
     title = "Pollution, Pollution"
     desc = "We've got smog and sewage and mud,"
 
-    picture = "air_pollution"
+    #picture = "air_pollution"
 
     trigger = {
-        industrial_score = 100 #UK 1836: 125
-
-        capital_scope = {
-            NOT = { has_province_modifier = local_pollution_problem }
-        }
-
-        any_owned_province = {
-            is_colonial = no
-            total_pops = 250000 #London 1836: 400000
-            has_pop_type = craftsmen
-        }
+        owner = { industrial_score = 100 } #UK 1836: 125
+        capital_scope = { NOT = { has_province_modifier = local_pollution_problem } }
+		has_pop_type = craftsmen
+		total_pops = 250000 #London 1836: 400000
+		is_colonial = no
     }
 
     mean_time_to_happen = {
-        months = 1200
+        months = 2400 #1200
 
         modifier = {
             factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                total_pops = 500000
-                has_pop_type = craftsmen
-            }
+			is_colonial = no
+			total_pops = 500000
+			has_pop_type = craftsmen
         }
         modifier = {
             factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                total_pops = 1000000
-                has_pop_type = craftsmen
-            }
+			is_colonial = no
+			total_pops = 1000000
+			has_pop_type = craftsmen
         }
         modifier = {
             factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                total_pops = 2000000 #London 1950: 8 million / 4 = 2,000,000
-                has_pop_type = craftsmen
-            }
+			is_colonial = no
+			total_pops = 2000000
+			has_pop_type = craftsmen
         }
         modifier = {
             factor = 0.8
-            any_owned_province = {
-                is_colonial = no
-                total_pops = 4000000
-                has_pop_type = craftsmen
-            }
+			is_colonial = no
+			total_pops = 4000000
+			has_pop_type = craftsmen
         }
-
         modifier = {
             factor = 0.9
-            iron_railroad = 1 #1850
+            owner = { iron_railroad = 1 } #1850
         }
 
         modifier = {
             factor = 0.9 # local_tractors, local_nitroglycerin_and_machine_tools
-            invention = tractors #combustion_engine 1880
-            invention = machine_tools #semi_automatization 1836
-            invention = dynamite #regenerative_furnaces AND 1860
+            owner = {
+				invention = tractors #combustion_engine 1880
+				invention = machine_tools #semi_automatization 1836
+				invention = dynamite #regenerative_furnaces AND 1860
+            }
         }
 
         modifier = {
             factor = 0.9 # local_conveyors_and_excavators
+            owner = {
             invention = electric_rolling_techniques #advanced_metallurgy 1890
             combustion_engine = 1 #1880
+            }
         }
 
         modifier = {
             factor = 0.9
-            invention = leaded_gasoline #synthetic_polymers 1900
+            owner = { invention = leaded_gasoline } #synthetic_polymers 1900
         }
 
         modifier = {
             factor = 0.9 #local_modern_transportation
-            invention = airliner #1926 
-            invention = fordism
-            invention = steamer_transports
-            tech_infrastructure_7 = 1 #1930
+			owner = {
+				invention = airliner #1926 
+				invention = fordism
+				invention = steamer_transports
+				tech_infrastructure_7 = 1 #1930
+            }
         }
 
         modifier = {
             factor = 0.9 #local_intensive_agriculture 1936
-            invention = artificial_fertilizers
-            invention = artificial_herbicides
-            invention = improved_antibiotics
-            #invention = tractors
-        }
-
-
-        modifier = {
-            factor = 0.8 #raw goods
-			OR = {
-				big_producer = oil
-				big_producer = coal
-				big_producer = sulphur
-				big_producer = iron
-			}
+            owner = {
+				invention = artificial_fertilizers
+				invention = artificial_herbicides
+				invention = improved_antibiotics
+				#invention = tractors
+            }
         }
 
         modifier = {
-            factor = 0.8 #processed goods
+            factor = 0.75
 			OR = {
-				big_producer = fuel
-				big_producer = cement
-				big_producer = fertilizer
-				big_producer = steel
-			}
-        }
-
-        modifier = {
-            factor = 0.8 #advanced goods
-			OR = {
-				big_producer = steamer_convoy
-				big_producer = automobiles
-				big_producer = aeroplanes
-				big_producer = barrels
+				trade_goods = oil
+				trade_goods = coal
+				trade_goods = sulphur
+				trade_goods = iron
+				trade_goods = fuel
+				trade_goods = cement
+				trade_goods = fertilizer
+				trade_goods = steel
+				trade_goods = steamer_convoy
+				trade_goods = automobiles
+				trade_goods = aeroplanes
+				trade_goods = barrels
 			}
         }
 
 		modifier = {
-			factor = 0.8
-			economic_policy = laissez_faire 
-		}
-
-		modifier = {
-			factor = 0.9
-			NOT = { administration_spending = 0.09 }
+			factor = 0.75
+			owner = { NOT = { administration_spending = 0.24 } }
 		}
 		modifier = {
-			factor = 0.9
-			NOT = { administration_spending = 0.19 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { administration_spending = 0.29 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { administration_spending = 0.39 }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { administration_spending = 0.49 }
+			factor = 0.75
+			owner = { NOT = { administration_spending = 0.49 } }
 		}
 
 
         modifier = {
             factor = 1.1
-            safety_regulations = trinket_safety
+            owner = { safety_regulations = trinket_safety }
         }
         modifier = {
             factor = 1.25
-            safety_regulations = low_safety
+            owner = { safety_regulations = low_safety }
         }
         modifier = {
             factor = 1.5
-            safety_regulations = acceptable_safety
+            owne = { safety_regulations = acceptable_safety }
         }
         modifier = {
             factor = 2
-            safety_regulations = good_safety
+            owner = { safety_regulations = good_safety }
         }
 
         modifier = {
             factor = 2
-            has_country_modifier = clean_air_act 
+            owner = { has_country_modifier = clean_air_act }
         }
    }
 
@@ -185,102 +148,112 @@ country_event = {
             }
         }
 
-        #https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(22)00090-0/fulltext
         #pollution remains responsible for approximately 9 million deaths per year, corresponding to one in six deaths worldwide. 
 
-        capital_scope = {
-            add_province_modifier = { name = local_pollution_problem duration = 365 }
-            any_pop = { reduce_pop = 0.999 }
-        }
+		add_province_modifier = { name = local_pollution_problem duration = 365 }
+		any_pop = { reduce_pop = 0.999 }
 
-        any_owned = {
-            limit = {
-                is_colonial = no
-                total_pops = 250000 #London 1836: 400000
-                has_pop_type = craftsmen
-                NOT = { has_province_modifier = local_pollution_problem }
-                OR = {
-                    trade_goods = oil
-                    trade_goods = coal
-                    trade_goods = sulphur
-                    trade_goods = iron
-                }
-            }
-            random = {
-                chance = 10
-                add_province_modifier = { name = local_pollution_problem duration = 365 }
-                any_pop = { reduce_pop = 0.999 }
-            }
-        }
-
-        any_owned = {
-            limit = {
-                is_colonial = no
-                total_pops = 500000
-                has_pop_type = craftsmen
-                NOT = { has_province_modifier = local_pollution_problem }
-            }
-            random = {
-                chance = 10
-                add_province_modifier = { name = local_pollution_problem duration = 365 }
-                any_pop = { reduce_pop = 0.999 }
-            }
-        }
-
-        any_owned = {
-            limit = {
-                is_colonial = no
-                total_pops = 1000000
-                has_pop_type = craftsmen
-                NOT = { has_province_modifier = local_pollution_problem }
-                OR = {
-                    trade_goods = oil
-                    trade_goods = coal
-                    trade_goods = sulphur
-                    trade_goods = iron
-                }
-            }
-            random = {
-                chance = 10
-                add_province_modifier = { name = local_pollution_problem duration = 365 }
-                any_pop = { reduce_pop = 0.999 }
-            }
-        }
-
-        any_owned = {
-            limit = {
-                is_colonial = no
-                total_pops = 2000000
-                has_pop_type = craftsmen
-                NOT = { has_province_modifier = local_pollution_problem }
-            }
-            random = {
-                chance = 10
-                add_province_modifier = { name = local_pollution_problem duration = 365 }
-                any_pop = { reduce_pop = 0.999 }
-            }
-        }
-
-        any_owned = {
-            limit = {
-                is_colonial = no
-                total_pops = 4000000
-                has_pop_type = craftsmen
-                NOT = { has_province_modifier = local_pollution_problem }
-                OR = {
-                    trade_goods = oil
-                    trade_goods = coal
-                    trade_goods = sulphur
-                    trade_goods = iron
-                }
-            }
-            random = {
-                chance = 10
-                add_province_modifier = { name = local_pollution_problem duration = 365 }
-                any_pop = { reduce_pop = 0.999 }
-            }
-        }
-
+        owner = {
+			capital_scope = {
+				add_province_modifier = { name = local_pollution_problem duration = 365 }
+				any_pop = { reduce_pop = 0.999 }
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 250000 #London 1836: 400000
+					has_pop_type = craftsmen
+					NOT = { has_province_modifier = local_pollution_problem }
+					OR = {
+						trade_goods = oil
+						trade_goods = coal
+						trade_goods = sulphur
+						trade_goods = iron
+					}
+				}
+				random = {
+					chance = 10
+					add_province_modifier = { name = local_pollution_problem duration = 365 }
+					any_pop = { reduce_pop = 0.999 }
+				}
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 500000
+					has_pop_type = craftsmen
+					NOT = { has_province_modifier = local_pollution_problem }
+					OR = {
+						trade_goods = oil
+						trade_goods = coal
+						trade_goods = sulphur
+						trade_goods = iron
+					}
+				}
+				random = {
+					chance = 10
+					add_province_modifier = { name = local_pollution_problem duration = 365 }
+					any_pop = { reduce_pop = 0.999 }
+				}
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 1000000
+					has_pop_type = craftsmen
+					NOT = { has_province_modifier = local_pollution_problem }
+					OR = {
+						trade_goods = oil
+						trade_goods = coal
+						trade_goods = sulphur
+						trade_goods = iron
+					}
+				}
+				random = {
+					chance = 10
+					add_province_modifier = { name = local_pollution_problem duration = 365 }
+					any_pop = { reduce_pop = 0.999 }
+				}
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 2000000
+					has_pop_type = craftsmen
+					NOT = { has_province_modifier = local_pollution_problem }
+					OR = {
+						trade_goods = oil
+						trade_goods = coal
+						trade_goods = sulphur
+						trade_goods = iron
+					}
+				}
+				random = {
+					chance = 10
+					add_province_modifier = { name = local_pollution_problem duration = 365 }
+					any_pop = { reduce_pop = 0.999 }
+				}
+			}
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 4000000
+					has_pop_type = craftsmen
+					NOT = { has_province_modifier = local_pollution_problem }
+					OR = {
+						trade_goods = oil
+						trade_goods = coal
+						trade_goods = sulphur
+						trade_goods = iron
+					}
+				}
+				random = {
+					chance = 10
+					add_province_modifier = { name = local_pollution_problem duration = 365 }
+					any_pop = { reduce_pop = 0.999 }
+				}
+			}
+		}
     }
 }
 
@@ -486,48 +459,197 @@ country_event = {
 }
 
 
-
-
-########################## Resource Depletion ########################## 
+########################## Highly Productive RGOs ########################## 
 
 province_event = {
     id = 12310
-    title = "$PROVINCENAME$ Not Highly Productive"
-    desc = "As $PROVINCENAME$ no longer produces oil, it is no longer highly productive in it."
-    picture = "abandoned_oil_well"
+    title = "Large Oil Fields in $PROVINCENAME$"
+    desc = "EVTDESC12310"
 
     trigger = {
-        has_province_modifier = highly_productive_mine
-        NOT = { trade_goods = oil }
+        owner = {
+            war = no
+            invention = oil_pumping_machinery
+        }
+        NOT = { has_province_modifier = productive_mine_2 }
+        trade_goods = oil
         OR = {
-            province_id = 1102
-            province_id = 2270
+            province_id = 1102 #Baku
+            province_id = 2270 #Maracaibo
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 0.75
+            state_scope = {
+                any_pop = {
+                    type = capitalists
+                    cash_reserves = 1000
+                }
+            }
         }
     }
 
     option = {
-        name = "Unfortunate."
-        remove_province_modifier = highly_productive_mine
+        name = "Great!"
+        add_province_modifier = {
+            name = productive_mine_2
+            duration = -1
+        }
+        add_province_modifier = {
+            name = province_small_immigration_boom
+            duration = 730
+        }
+    }
+}
+
+
+province_event = {
+    id = 12311
+    title = "Rich Mineral Deposits in $PROVINCENAME$"
+    desc = "$PROVINCENAME$ is known for its mineral resources, but much of its potential remained untapped until now."
+
+    trigger = {
+        owner = {
+            war = no
+            integral_rail_system = 1
+        }
+        NOT = { has_province_modifier = productive_mine_1 }
+        trade_goods = iron
+        OR = {
+            province_id = 323 #Falun, Sweden
+            province_id = 326 #Vasteras, Sweden
+            province_id = 319 #Ostersund, Sweden
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 0.75
+            state_scope = {
+                any_pop = {
+                    type = capitalists
+                    cash_reserves = 1000
+                }
+            }
+        }
+
+    }
+
+    option = {
+        name = "Great!"
+        add_province_modifier = {
+            name = productive_mine_1
+            duration = -1
+        }
     }
 }
 
 province_event = {
-    id = 12311
-    title = "$PROVINCENAME$ Not Highly Productive"
-    desc = "As $PROVINCENAME$ no longer produces iron, it is no longer highly productive in it."
-    picture = "abandoned_oil_well"
+    id = 12313
+    title = "Very Rich Mineral Deposits in $PROVINCENAME$"
+    desc = "$PROVINCENAME$ is well known for its mineral resources, but much of its potential remained untapped until now."
 
     trigger = {
-        has_province_modifier = highly_productive_mine
-        NOT = { trade_goods = iron }
+        owner = {
+            war = no
+            integral_rail_system = 1
+        }
+        NOT = { has_province_modifier = productive_mine_2 }
+        trade_goods = iron
         OR = {
             province_id = 321 #Lulea, Sweden
         }
     }
 
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 0.75
+            state_scope = {
+                any_pop = {
+                    type = capitalists
+                    cash_reserves = 1000
+                }
+            }
+        }
+
+    }
+
+    option = {
+        name = "Great!"
+        add_province_modifier = {
+            name = productive_mine_2
+            duration = -1
+        }
+        add_province_modifier = {
+            name = province_small_immigration_boom
+            duration = 730
+        }
+    }
+}
+
+########################## Resource Depletion ########################## 
+
+province_event = {
+    id = 12320
+    title = "$PROVINCENAME$ No Longer Productive"
+    desc = "As $PROVINCENAME$ no longer produces oil, it is no longer highly productive in it."
+    #picture = "abandoned_oil_well"
+
+    trigger = {
+        OR = {
+           has_province_modifier = productive_mine_1
+           has_province_modifier = productive_mine_2
+        }
+        NOT = { trade_goods = oil }
+        OR = {
+            province_id = 1102 #Baku
+            province_id = 2270 #Maracaibo
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
     option = {
         name = "Unfortunate."
-        remove_province_modifier = highly_productive_mine
+        remove_province_modifier = productive_mine_1
+        remove_province_modifier = productive_mine_2
+    }
+}
+
+province_event = {
+    id = 12321
+    title = "$PROVINCENAME$ Not Highly Productive"
+    desc = "As $PROVINCENAME$ no longer produces iron, it is no longer highly productive in it."
+    #picture = "abandoned_oil_well"
+
+    trigger = {
+        OR = {
+           has_province_modifier = productive_mine_1
+           has_province_modifier = productive_mine_2
+        }        NOT = { trade_goods = iron }
+        OR = {
+            province_id = 321 #Lulea, Sweden
+            province_id = 323 #Falun, Sweden
+            province_id = 326 #Vasteras, Sweden
+            province_id = 319 #Ostersund, Sweden
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "Unfortunate."
+        remove_province_modifier = productive_mine_1
+        remove_province_modifier = productive_mine_2
     }
 }
 
@@ -537,7 +659,7 @@ province_event = {
 ########## by country ##########
 
 country_event = {
-    id = 12320
+    id = 12330
     title = "Oil Runs Dry in Queretaro"
     desc = "The oil field in Queretaro has run out of oil."
     picture = "abandoned_oil_well"
@@ -566,7 +688,6 @@ country_event = {
         set_global_flag = queretaro_peak_oil
         2173 = {
             trade_goods = fruit
-            remove_province_modifier = highly_productive_mine
         }
     }
 }

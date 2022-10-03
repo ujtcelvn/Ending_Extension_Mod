@@ -112,7 +112,7 @@ political_decisions = {
             }
             prestige = 100
             literacy = 0.7
-            average_consciousness = 3 #7
+            average_consciousness = 4 #7
         }
         effect = {
             clr_country_flag = picking_up_a_tech_school

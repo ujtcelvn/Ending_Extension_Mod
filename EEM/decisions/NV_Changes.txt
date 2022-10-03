@@ -20,15 +20,33 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
+            #modifier = {
+            #    factor = 0
+            #    OR = {
+            #        is_culture_group = east_asian
+            #        substate_of = QNG
+            #    }
+            #    NOT = { civilization_progress = 0.65 }
+            #}
 
             modifier = {
                 factor = 0
                 OR = {
-                    is_culture_group = east_asian
-                    substate_of = QNG
+                    tag = XBI #Qinghai
+                    tag = XIN #Xinjiang
+                    tag = TIB #Tibet
+                    tag = KML #Kumul
+                    tag = MCK
+                    tag = CHI
+                    tag = QNG
                 }
-                NOT = { civilization_progress = 0.7 }
+                OR = {
+                    substate_of = QNG
+                    government = absolute_monarchy
+                    government = theocracy
+                }
             }
+
         }
     }
 
@@ -70,7 +88,7 @@ political_decisions = {
     # The following table summarises the desired random weights & probabilities, as well as some of
     # the computation details leading to the final practical factor:
     #
-    # National value | Weight | Probability | CRD | Factor     if chinese:   P         CRD        Factor    modifier
+    # National value | Weight | Probability | CRD | Factor                  P         CRD        Factor    modifier
     # ---------------+--------+-------------+-----+-------                                                          
     # Order          |      1 |         20% |   1 | 0.200                   0.4        1          0.400     2
     # Productivity   |      1 |         20% | 0.8 | 0.250                   0.2        0.6        0.333     1.333
@@ -121,6 +139,48 @@ political_decisions = {
                     factor = -2
                 }
             }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ4 }
+                        owner = { tag = TZ5 }
+                        owner = { tag = TZ6 }
+                    }
+                    NOT = { exists = HUI }
+                    HUI = { nationalvalue = nv_tradition }
+                }
+                HUI = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_order
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ7 }
+                        owner = { tag = TZ8 }
+                    }
+                    NOT = { exists = GNG }
+                    GNG = { nationalvalue = nv_tradition }
+                }
+                GNG = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_order
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
         }
 
         ai_will_do = {
@@ -132,7 +192,14 @@ political_decisions = {
                     is_culture_group = east_asian
                     substate_of = QNG
                 }
-                NOT = { civilization_progress = 0.7 }
+                NOT = { tag = QNG }
+            }
+            modifier = {
+                factor = 0
+                tag = TPG
+                NOT = { government = absolute_monarchy }
+                NOT = { government = prussian_constitutionalism }
+                NOT = { government = hms_government }
             }
         }
     }
@@ -173,6 +240,48 @@ political_decisions = {
                     factor = -2
                 }
             }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ4 }
+                        owner = { tag = TZ5 }
+                        owner = { tag = TZ6 }
+                    }
+                    NOT = { exists = HUI }
+                    HUI = { nationalvalue = nv_tradition }
+                }
+                HUI = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_productivity
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ7 }
+                        owner = { tag = TZ8 }
+                    }
+                    NOT = { exists = GNG }
+                    GNG = { nationalvalue = nv_tradition }
+                }
+                GNG = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_productivity
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
         }
 
         ai_will_do = {
@@ -184,8 +293,37 @@ political_decisions = {
                     is_culture_group = east_asian
                     substate_of = QNG
                 }
-                NOT = { civilization_progress = 0.7 }
+                NOT = { tag = QNG }
             }
+            modifier = {
+                factor = 0
+                tag = TPG
+                NOT = { government = absolute_monarchy }
+                NOT = { government = prussian_constitutionalism }
+                NOT = { government = hms_government }
+            }
+            modifier = {
+                factor = 0
+                tag = QNG
+            }
+
+            modifier = {
+                factor = 0
+                OR = {
+                    tag = TIB #Tibet
+                    tag = XBI #Qinghai
+                    tag = KML #Kumul
+                    tag = XIN #Xinjiang
+                    tag = MGL #Mongolia
+                    tag = TNT #Tuva
+                    tag = MCK #Manchuria
+                }
+                OR = {
+                    government = absolute_monarchy
+                    government = theocracy
+                }
+            }
+
         }
     }
 
@@ -225,6 +363,47 @@ political_decisions = {
                     factor = -2
                 }
             }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ4 }
+                        owner = { tag = TZ5 }
+                        owner = { tag = TZ6 }
+                    }
+                    NOT = { exists = HUI }
+                    HUI = { nationalvalue = nv_tradition }
+                }
+                HUI = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_autocracy
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ7 }
+                        owner = { tag = TZ8 }
+                    }
+                    NOT = { exists = GNG }
+                    GNG = { nationalvalue = nv_tradition }
+                }
+                GNG = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_autocracy
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
         }
 
         ai_will_do = {
@@ -236,7 +415,29 @@ political_decisions = {
                     is_culture_group = east_asian
                     substate_of = QNG
                 }
-                NOT = { civilization_progress = 0.7 }
+                NOT = { tag = GNG }
+                NOT = { tag = TZ7 }
+                NOT = { tag = TZ8 }
+                NOT = { tag = TPG }
+                NOT = { tag = RTR }
+            }
+            modifier = {
+                factor = 30
+                tag = QNG
+            }
+            modifier = {
+                factor = 0
+                tag = RTR
+                NOT = { government = absolute_monarchy }
+                NOT = { government = prussian_constitutionalism }
+                NOT = { government = hms_government }
+            }
+            modifier = {
+                factor = 0
+                tag = TPG
+                NOT = { government = absolute_monarchy }
+                NOT = { government = prussian_constitutionalism }
+                NOT = { government = hms_government }
             }
         }
     }
@@ -277,12 +478,62 @@ political_decisions = {
                     factor = -2
                 }
             }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ4 }
+                        owner = { tag = TZ5 }
+                        owner = { tag = TZ6 }
+                    }
+                    NOT = { exists = HUI }
+                    HUI = { nationalvalue = nv_tradition }
+                }
+                HUI = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_equality
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ7 }
+                        owner = { tag = TZ8 }
+                    }
+                    NOT = { exists = GNG }
+                    GNG = { nationalvalue = nv_tradition }
+                }
+                GNG = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_equality
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
         }
 
         ai_will_do = {
             factor = 0.5
-
-
+            modifier = {
+                factor = 2
+                tag = TPG
+                NOT = { government = absolute_monarchy }
+                NOT = { government = prussian_constitutionalism }
+                NOT = { government = hms_government }
+            }
+            modifier = {
+                factor = 0
+                OR = { tag = QNG tag = RTR }
+            }
         }
     }
 
@@ -322,12 +573,51 @@ political_decisions = {
                     factor = -2
                 }
             }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ4 }
+                        owner = { tag = TZ5 }
+                        owner = { tag = TZ6 }
+                    }
+                    NOT = { exists = HUI }
+                    HUI = { nationalvalue = nv_tradition }
+                }
+                HUI = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_liberty
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { tag = TZ7 }
+                        owner = { tag = TZ8 }
+                    }
+                    NOT = { exists = GNG }
+                    GNG = { nationalvalue = nv_tradition }
+                }
+                GNG = {
+                    clr_country_flag = nv_change
+                    set_country_flag = switched_nv
+                    nationalvalue = nv_liberty
+                    add_country_modifier = {
+                        name = national_confusion
+                        duration = 3650
+                    }
+                }
+            }
         }
 
         ai_will_do = {
             factor = 1
-
-
         }
     }
 }
