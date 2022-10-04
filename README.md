@@ -27,6 +27,8 @@ More China flavor and suffering. Trade access (sphering) of parts of China after
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
 
+The new inventions don't have any localizations yet because they are still being rebalanced but they'll come out with the Nuke update.
+
 Please read the changelog.txt for more details.
 
 ## Acknowledgements:
