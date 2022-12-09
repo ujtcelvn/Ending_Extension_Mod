@@ -17,17 +17,17 @@ Motorized Infantry
 
 Aircraft Carriers
 
-Economic adjustments and rebalance
+Economic rebalance
 
 Tax refund event to prevent the Liquidity Crisis
 
+Smarter AI
+
 A bunch of bugfixes compared to HPM
 
-More China flavor and suffering. Trade access (sphering) of parts of China after the Taiping rebellion if you own treaty ports.
+More China flavor and suffering. Trade access (sphering) of parts of China after the Taiping or alternative rebellions if you own treaty ports.
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
-
-The new inventions don't have any localizations yet because they are still being rebalanced but they'll come out with the Nuke update.
 
 Please read the changelog.txt for more details.
 
