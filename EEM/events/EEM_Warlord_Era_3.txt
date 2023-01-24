@@ -7,7 +7,7 @@
 
 #The Xinhai Revolution (alternative version used if capital occupied by rebels or if China is so small no center of revolution can be set)
 country_event = {
-    id = 166601
+    id = 164599
     title = "EVTNAME164599"
     desc = "EVTDESC164599"
     news = yes
@@ -22,8 +22,8 @@ country_event = {
     trigger = {
         has_global_flag = the_new_army
         NOT = { has_global_flag = warlord_era_has_begun }
-        NOT = { has_country_flag = xinhai_revolution }
-        NOT = { has_global_flag = xinhai_revolution_global }
+        #NOT = { has_country_flag = xinhai_revolution }
+        #NOT = { has_global_flag = xinhai_revolution_global }
         civilized = yes
         OR = {
             AND = {
@@ -53,7 +53,22 @@ country_event = {
         }
         KMT = { exists = no }
 
+
+        ####
+        capital_scope = {
+            OR = {
+                controlled_by = THIS
+                controlled_by_rebels = yes
+            }
+        }
+        ####
+
         OR = {
+            ####
+            revolt_percentage = 0.30
+            average_militancy = 5
+            ####
+
             capital_scope = { controlled_by_rebels = yes }
             AND = {
                 has_recently_lost_war = yes
@@ -68,32 +83,79 @@ country_event = {
             AND = { ruling_party_ideology = communist average_militancy = 2 }
             AND = { ruling_party_ideology = anarcho_liberal average_militancy = 2 }
 
-            AND = {
-                NOT = { owns = 1522 } #Wuchang, East Hubei
-                NOT = { owns = 1601 } #Kunming, Yunnan
-                NOT = { owns = 1578 } #Chengdu, West Sichuan
-                NOT = { owns = 1524 } #Changsha, West Hunan
-                NOT = { owns = 1572 } #Taiyuan, Shanxi
-                NOT = { owns = 1559 } #Xian, Shaanxi
-                NOT = { owns = 1493 } #Canton, East Canton
-                NOT = { owns = 1545 } #Nanchang, North Jiangxi
-                OR = {
-                    revolt_percentage = 0.30
-                    average_militancy = 5
-                }
-            }
+            #AND = {
+            #    NOT = { owns = 1522 } #Wuchang, East Hubei
+            #    NOT = { owns = 1601 } #Kunming, Yunnan
+            #    NOT = { owns = 1578 } #Chengdu, West Sichuan
+            #    NOT = { owns = 1524 } #Changsha, West Hunan
+            #    NOT = { owns = 1572 } #Taiyuan, Shanxi
+            #    NOT = { owns = 1559 } #Xian, Shaanxi
+            #    NOT = { owns = 1493 } #Canton, East Canton
+            #    NOT = { owns = 1545 } #Nanchang, North Jiangxi
+            #    OR = {
+            #        revolt_percentage = 0.30
+            #        average_militancy = 5
+            #    }
+            #}
         }
 
     }
 
+    #mean_time_to_happen = {
+    #    months = 6
+    #}
+
     mean_time_to_happen = {
-        months = 6
+        months = 30
+        modifier = {
+            factor = 0.025
+            capital_scope = { controlled_by_rebels = yes }
+        }
+        modifier = {
+            factor = 0.05
+            NOT = { capital_scope = { controlled_by_rebels = yes } }
+            revolt_percentage = 0.30
+        }
+        modifier = {
+            factor = 0.8
+            average_militancy = 6
+        }
+        modifier = {
+            factor = 0.85
+            average_militancy = 7
+        }
+        modifier = {
+            factor = 0.9
+            average_militancy = 8
+        }
+        modifier = {
+            factor = 0.95
+            average_militancy = 9
+        }
+        modifier = {
+            factor = 0.7
+            year = 1890
+        }
+
+        modifier = {
+            factor = 0.8
+            year = 1900
+        }
+        modifier = {
+            factor = 0.8
+            year = 1905
+        }
+        modifier = {
+            factor = 0.8
+            year = 1910
+        }
     }
+
 
     immediate = {
         set_country_flag = xinhai_revolution
-        set_global_flag = xinhai_revolution_global
-        set_country_flag = beiyang_army_coup
+        #set_global_flag = xinhai_revolution_global
+        #set_country_flag = beiyang_army_coup
     }
 
     option = {
@@ -372,266 +434,6 @@ country_event = {
     }
 }
 
-
-country_event = {
-    id = 166602
-    title = "Negotiations with the Beiyang"
-    desc = "EVTDESC166602"
-
-    picture = "xinhai"
-
-    #is_triggered_only = yes
-
-    fire_only_once = yes
-    trigger = {
-        tag = KMT
-        CHI = { exists = no }
-        NOT = { has_country_flag = beiyang_negotiations }
-        national_provinces_occupied = 0.01
-        OR = {
-            QNG = {
-                exists = yes
-                war_with = THIS
-                has_country_flag = xinhai_revolution
-                NOT = { has_country_flag = beiyang_army_coup }
-            }
-            TPG = {
-                exists = yes
-                war_with = THIS
-                has_country_flag = xinhai_revolution
-                NOT = { has_country_flag = beiyang_army_coup }
-            }
-            RTR = {
-                exists = yes
-                war_with = THIS
-                has_country_flag = xinhai_revolution
-                NOT = { has_country_flag = beiyang_army_coup }
-            }
-        }	
-    }
-
-    #mean_time_to_happen = {
-    #    months = 36
-    #    modifier = {
-    #        factor = 0.1
-    #        QNG = { has_country_flag = manchu_elite_cleared_out }
-    #    }
-    #    modifier = {
-    #        factor = 0.8
-    #        national_provinces_occupied = 0.1
-    #    }
-    #    modifier = {
-    #        factor = 0.8
-    #        national_provinces_occupied = 0.25
-    #    }
-    #}
-
-    immediate = {
-        set_country_flag = beiyang_negotiations
-    }
-
-    option = {
-		name = "The Emperor must be overthrown, no matter the cost. §R(Game Over for player)§W"
-        any_country = {
-            limit = {
-                OR = {
-                    tag = QNG
-                    tag = TPG
-                    tag = RTR
-                }
-                war_with = KMT
-                exists = yes
-                has_country_flag = xinhai_revolution
-                NOT = { has_country_flag = beiyang_army_coup }
-            }
-            country_event = 166600 #The Beiyang Coup
-        }
-
-        ai_chance = {
-            factor = 50
-            modifier = {
-                factor = 0.5
-                OR = { 
-                    NOT = { QNG = { brigades_compare = 0.5 } }
-                    NOT = { TPG = { brigades_compare = 0.5 } }
-                    NOT = { RTR = { brigades_compare = 0.5 } }
-                }
-            }
-            modifier = {
-                factor = 2
-                national_provinces_occupied = 0.05
-            }
-        }
-    }
-
-    option = {
-        name = "The Beiyang cannot be trusted!"
-        any_pop = {
-            limit = { type = officers }
-            consciousness = 4
-        }
-
-        any_country = {
-            limit = { 
-                is_greater_power = yes
-            }
-            relation = {
-                who = THIS
-                value = -100
-            }
-        }
-
-
-        #set_global_flag = beiyang_negotiations_failed 
-        #trigger foreign intervention?
-
-        ai_chance = {
-            factor = 50
-            modifier = {
-                factor = 0
-                national_provinces_occupied = 0.1
-            }
-            modifier = {
-                factor = 0.5
-                OR = {
-                    QNG = { brigades_compare = 1 }
-                    TPG = { brigades_compare = 1 }
-                    RTR = { brigades_compare = 1 }
-                }
-            }
-            modifier = {
-                factor = 0
-                OR = {
-                    QNG = { brigades_compare = 2 }
-                    TPG = { brigades_compare = 2 }
-                    RTR = { brigades_compare = 2 }
-                }
-            }
-        }
-    }
-}
-
-#If the Qing somehow win the xinhai revolution, they normal xinhai revolution events don't fire, so they will only descend into the Warlord Era if the Qing becomes NOT a monarchy and becomes CHI via decision
-
-
-#country_event = {
-#    id = 166603
-#    title = "The Beiyang Presidency" #event currently disabled
-#    desc = "EVTDESC166603"
-#    picture = "warlords"
-#    
-#    is_triggered_only = yes
-#
-#    option = {
-#        name = "We pray for China's future. §R(Game Over for player)§W"
-#        #set_country_flag = ghost_country #using HPM's cleanup system works, but it takes several years to fire
-#        CHI = { set_country_flag = north_south_conference_successful }
-#        any_country = {
-#            limit = { war_with = THIS }
-#            end_war = THIS
-#        }
-#        neutrality = yes
-#        all_core = { remove_core = THIS }
-#        any_owned = { secede_province = CHI } 
-#        annex_to = CHI
-#        set_global_flag = cleaning_up_ghosts
-#        set_country_flag = cleaning_up_ghosts_country
-#        add_country_modifier = { name = law_changed_by_force duration = 30 }
-#        3319 = { secede_province = THIS }
-#        3320 = { secede_province = THIS }
-#        3321 = { secede_province = THIS }
-#        3322 = { secede_province = THIS }
-#        TMT = { country_event = 6016821 }
-#
-#        ai_chance = {
-#            factor = 100
-#        }
-#    }
-#}
-
-#166604 KMT cores removed by accepting Beiyang negotiations or by reunification of china decision
-
-province_event = {
-    id = 166605
-    title = "End of the Qing"
-    desc = "The Qing Dynasty has been toppled."
-    
-    trigger = {
-        is_core = QNG
-        NOT = { exists = QNG }
-        owner = {
-            has_global_flag = xinhai_revolution_global
-            is_culture_group = east_asian
-            war = no
-            NOT = { tag = MCK }
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "Good Riddance."
-        set_global_flag = QNG_crushed
-        prestige = 10
-        QNG = { all_core = { remove_core = QNG } }
-    }
-}
-
-province_event = {
-    id = 166606
-    title = "End of the Taiping"
-    desc = "The Taiping has been defeated."
-    
-    trigger = {
-        is_core = TPG
-        NOT = { exists = TPG }
-        owner = {
-            has_global_flag = xinhai_revolution_global
-            is_culture_group = east_asian
-            war = no
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "Good Riddance."
-        set_global_flag = TPG_crushed
-        prestige = 10
-        TPG = { all_core = { remove_core = TPG } }
-    }
-}
-
-province_event = {
-    id = 166607
-    title = "End of the Red Turbans"
-    desc = "The Red Turbans are no more."
-
-    trigger = {
-        is_core = RTR
-        NOT = { exists = RTR }
-        owner = {
-            has_global_flag = xinhai_revolution_global
-            is_culture_group = east_asian
-            war = no
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "Good Riddance."
-        set_global_flag = RTR_crushed
-        prestige = 10
-        RTR = { all_core = { remove_core = RTR } }
-    }
-}
 
 
 

@@ -1,31 +1,31 @@
-Tech Unlock Dates		number of inventions (10 + 110 = 120)
+Tech Unlock Dates		number of inventions (10 + 100 = 110)
 1926 5 
 1930 10
 1936 10
 
-1936 army doctrine					 6
+1936 army doctrine					 5
 1936 light armament					 3
 1936 heavy armament					 5
-1936 military science				 8
+1936 military science				 7
 1936 army leadership				 6
 
-army = 28
+army = 26
 
-1936 naval doctrine					 4
-1930 ship construction				 5		1919 oil_driven_ships		4
+1936 naval doctrine					 3
+1930 ship construction				 4		1919 oil_driven_ships		4
 1930 naval engineering				 9      1919 modern_naval_design    2
 1936 naval science					 3
 1936 naval leadership				 3
 
-navy = 24 + 6
+navy = 22 + 6
 
-1930 aesthetics						10
+1930 aesthetics						 5
 1930 philosphy						 4
 1930 social thought					 1
 1936 political thought				 2
 1930 psychology						 0
 
-culture = 17
+culture = 12
 
 1926 financial institutions			 1
 1926 monetary system				 2
@@ -37,24 +37,18 @@ commerce = 17
 
 1930 power							 7
 1930 mechanization					 3      
-1930 metallurgy						 4		1900 electric_furnace	1
+1930 metallurgy						 4		1905 electric_furnace		1 	1850 regenerative_furnaces 1
 1930 infrastructure					 0
-1936 chemistry and electricity		10		1900 synthetic_polymers 3
+1936 chemistry and electricity		 9		1900 synthetic_polymers		2
 
-industry = 24 + 4
+industry = 23 + 4
 
 ####################################################################################################
 Coming soon: 
 
 #TODO: purchase battleship
 
-#TODO: revolutions / coups / government type changes clear the purge / cult of personality modifiers, so new dictatorships of different ideologies get to purge too
-
-#TODO: reduce assimilation between different races, especially in the New World
-#TODO: let assimilation increase via other methods
-#TODO: anti-immigrant riots in the New World
 #TODO: fix accepting black pops in the New World
-#TODO: Why is it that the most open societies (Secularized/Full Citizenship) are the ones that are most efficient at assimilation? It seems like those are the societies where there’s the least pressure to assimilate. Residency clearly implies that there are limited openings for assimilation, so I understand why that slows assimilation down, but shouldn’t the most efficient for assimilation actually be limited citizenship, since there’s still pressure on minority groups to assimilate?
 
 #TODO: soldiers in state capitals only?
 
@@ -78,6 +72,48 @@ Coming soon:
 	nuke dropper gets cheering and celebratione event: reduce war exhaustion
 #TODO: the higher the global nuke research level and if your country has dropped nukes, the more anti-nuke protest events happen
 #TODO: nuclear accident event
+#TODO: nuclear research stolen
+#TODO: dismantle nukes
+#TODO: nuclear bomb stolen
+
+####################################################################################################
+#TODO: v0.5.8
+
+#TODO: invention localizations
+	00_early_inventions complete
+	00_nuke_inventions complete
+	7_army_army_doctrine_inventions complete
+	7_army_army_leadership_inventions complete
+	7_army_army_heavy_armament_inventions complete
+
+####################################################################################################
+v0.5.8 alpha
+
+Increase coal base production from 2.4 to 2.5 (HPM: 2.4)
+Reduce iron base production from 2.2 to 2 (HPM: 1.8)
+re-added magnetic_separation
+removed fischer_tropsch_process
+merged rubber and plastic additives
+doubled opium production for synthetic_opioids
+reenabled hydrodesulphurization plant
+renamed bassinger_tool to improved_hydraulic_drills, also slightly increases coal, iron, precious_metal production
+Air Preheater no longer boosts factory_throughput, now increases fuel production far more and also increases coal production
+merged catalytic_reforming into fluid_catalytic_cracking, now just called catalytic_cracking
+merged escort_air_carriers into CVLs
+merged blind_fire_radar_fire_control into electronic_fire_control
+renamed literate_navy_recruits to improved_damage_control_training
+renamed the_war_at_sea to improved_commerce_warfare
+reenabled naval fighters, removed indirect_strike_doctrine, renamed naval torpedo bombers to improved_naval_aircraft
+merged ceremonial_cavalry into army_motorization
+removed direct_petrol_injection
+halved new aesthetics inventions
+other misc invention adjustments
+custom war names for the Red Turban Rebellion and Miao Rebellion 
+Disabled new Xinhai Rebellion system because it's too complex
+Adjusted the conditions for preventing the warlord era
+Disabled become_qing decision
+improved performance of some new clean up decisions
+Reworded some locs
 
 ####################################################################################################
 v0.5.7

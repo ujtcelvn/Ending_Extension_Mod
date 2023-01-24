@@ -3866,53 +3866,56 @@ political_decisions = {
     # }
 
 
-    force_presidential_dictatorships_be_reactionary = {
-        alert = no
-        potential = {
-            ai = yes
-            NOT = { is_culture_group = east_asian }
-            government = presidential_dictatorship
-            NOT = { ruling_party_ideology = reactionary }
-        }
-
-        allow = {
-
-        }
-
-        effect = {
-            ruling_party_ideology = reactionary
-            any_country = {
-                limit = {
-                    NOT = { is_culture_group = east_asian }
-                    government = presidential_dictatorship
-                    NOT = { ruling_party_ideology = reactionary }
-                }
-                ruling_party_ideology = reactionary
-            }
-        }
-    }
+#    force_presidential_dictatorships_be_reactionary = {
+#        alert = no
+#        potential = {
+#            ai = yes
+#            NOT = { is_culture_group = east_asian }
+#            government = presidential_dictatorship
+#            NOT = { ruling_party_ideology = reactionary }
+#        }
+#
+#        allow = {
+#
+#        }
+#
+#        effect = {
+#            ruling_party_ideology = reactionary
+#            any_country = {
+#                limit = {
+#                    NOT = { is_culture_group = east_asian }
+#                    government = presidential_dictatorship
+#                    NOT = { ruling_party_ideology = reactionary }
+#                }
+#                ruling_party_ideology = reactionary
+#            }
+#        }
+#    }
 
 
     remove_unciv_modifiers_from_civs = {
         potential = {
+			civilized = yes
+			OR = {
+                has_country_modifier = uncivilized_isolationism
+                has_country_modifier = western_influences
+            }
             ai = yes
-            OR = {
-                AND = {
-                    civilized = yes
-                    OR = {
-                        has_country_modifier = uncivilized_isolationism
-                        has_country_modifier = western_influences
-                    }
-                }
-                AND = {
-                    any_neighbor_country = {
-                        civilized = yes
-                        OR = {
-                            has_country_modifier = uncivilized_isolationism
-                            has_country_modifier = western_influences
-                        }
-                    }
-                }
+            any_neighbor_country = {
+                ai = no
+				civilized = yes
+				OR = {
+					has_country_modifier = uncivilized_isolationism
+					has_country_modifier = western_influences
+				}
+            }
+            any_greater_power = {
+                ai = no
+				civilized = yes
+				OR = {
+					has_country_modifier = uncivilized_isolationism
+					has_country_modifier = western_influences
+				}
             }
         }
 

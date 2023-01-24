@@ -7,15 +7,15 @@ fleet_auxiliary_carrier_doctrine = {
         base = 0
         modifier = {
             factor = 1
-            invention = seaplane_tenders 
-        }
-        modifier = {
-            factor = 2
-            invention = light_air_carriers
+            invention = light_air_carriers 
         }
         modifier = {
             factor = 1
-            invention = escort_air_carriers
+            invention = converted_hulk_air_carriers
+        }
+        modifier = {
+            factor = 2
+            invention = fleet_air_carriers
         }
     }
     effect = {
@@ -26,43 +26,42 @@ fleet_auxiliary_carrier_doctrine = {
 }
 
 #1940
-indirect_strike_doctrine = {
-    limit = { naval_doctrine_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = -6
-            NOT = {
-                invention = fleet_auxiliary_carrier_doctrine
-            }
-        }
-        modifier = {
-            factor = 2
-            invention = fleet_air_carriers
-        }
-        modifier = {
-            factor = 2
-            invention = naval_bombers
-        }
-    }
-
-    effect = {
-        aircraft_carrier = {
-            gun_power = 2
-            torpedo_attack = 5
-        }
-    }
-}
+#indirect_strike_doctrine = {
+#    limit = { naval_doctrine_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = -6
+#            NOT = {
+#                invention = fleet_auxiliary_carrier_doctrine
+#            }
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = fleet_air_carriers
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = naval_bombers
+#        }
+#    }
+#    effect = {
+#        aircraft_carrier = {
+#            gun_power = 2
+#            torpedo_attack = 5
+#        }
+#    }
+#}
 
 #1942
 carrier_task_force_doctrine = {
     limit = { naval_doctrine_7 = 1 }
     chance = {
-        base = 2
+        base = 1
         modifier = {
-            factor = -6
+            factor = -5
             NOT = {
-                invention = indirect_strike_doctrine
+                invention = fleet_auxiliary_carrier_doctrine #indirect_strike_doctrine
             }
         }
         modifier = {
@@ -77,9 +76,9 @@ carrier_task_force_doctrine = {
 
     effect = {
         aircraft_carrier = {
-            hull = 2
             maximum_speed = 2
-            gun_power = 2
+            torpedo_attack = 2
+            gun_power = 4
         }
     }
 }
@@ -88,9 +87,9 @@ carrier_task_force_doctrine = {
 coordinated_strike_doctrine = {
     limit = { naval_doctrine_7 = 1 }
     chance = {
-        base = 2
+        base = 1
         modifier = {
-            factor = -6
+            factor = -5
             NOT = {
                 invention = carrier_task_force_doctrine
             }

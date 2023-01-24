@@ -62,6 +62,12 @@ political_decisions = {
                 average_militancy = 4
                 num_of_revolts = 1
             }
+            NOT = { has_country_modifier = national_confusion }
+            NOT = { has_country_modifier = law_changed_by_force }
+            NOT = { government = democracy }
+            NOT = { government = prussian_constitutionalism }
+            NOT = { government = hms_government }
+            NOT = { government = presidential_dictatorship }
             QNG = {
                 OR = {
                     exists = no
@@ -225,6 +231,12 @@ political_decisions = {
                 consciousness = -2
                 reduce_pop = 0.9
             }
+            any_pop = {
+                limit = { type = bureaucrats }
+                militancy = 5
+                consciousness = -2
+                reduce_pop = 0.9
+            }
             clr_global_flag = spread_warlord_influence
             set_global_flag = warlord_era_has_begun #take the reunification_of_china decision to remove warlord cores
         }
@@ -232,57 +244,56 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-    become_qing = {
-        picture = qing_emperor
-        alert = yes
-        potential = {
-            tag = MCK
-            QNG = { exists = no }
-            TPG = { exists = no }
-	        RTR = { exists = no }
-	        CHI = { exists = no }
-	        KMT = { exists = no }
-        }
-
-        allow = {
-            war = no
-            is_vassal = no
-            is_substate = no
-            owns = 2221
-            owns = 1612
-            owns = 1552
-            owns = 1524
-            owns = 1577
-            owns = 1493
-            owns = 1555
-            OR = {
-                government = absolute_monarchy
-                government = prussian_constitutionalism
-                government = hms_government
-            }
-        }
-
-        effect = {
-            prestige = 25
-            all_core = { add_core = QNG }
-            1616 = { state_scope = { add_core = QNG } }
-            1612 = { state_scope = { add_core = QNG } } #Baoding
-
-
-            change_tag = QNG
-            any_owned_province = {
-                limit = {
-                    NOT = { is_core = QNG }
-                }
-                add_province_modifier = {
-                    name = anti_manchu_sentiment
-                    duration = 1825
-                }
-            }
-        }
-
-        ai_will_do = { factor = 1 }
-    }
+    #become_qing_title;Restore the Qing Empire;;;;;;;;;;;;;
+    #become_qing_desc;We have reconquered enough of China to declare ourselves the Qing Empire once again.;;;;;;;;;;;;;
+    #become_qing = {
+    #    picture = qing_emperor
+    #    alert = yes
+    #    potential = {
+    #        tag = MCK
+    #        QNG = { exists = no }
+    #        TPG = { exists = no }
+	#        RTR = { exists = no }
+	#        CHI = { exists = no }
+	#        KMT = { exists = no }
+    #    }
+    #
+    #    allow = {
+    #        war = no
+    #        is_vassal = no
+    #        is_substate = no
+    #        owns = 2221
+    #        owns = 1612
+    #        owns = 1552
+    #        owns = 1524
+    #        owns = 1577
+    #        owns = 1493
+    #        owns = 1555
+    #        OR = {
+    #            government = absolute_monarchy
+    #            government = prussian_constitutionalism
+    #            government = hms_government
+    #        }
+    #    }
+    #
+    #    effect = {
+    #        prestige = 25
+    #        all_core = { add_core = QNG }
+    #        1616 = { state_scope = { add_core = QNG } }
+    #        1612 = { state_scope = { add_core = QNG } } #Baoding
+    #        change_tag = QNG
+    #        any_owned_province = {
+    #            limit = {
+    #                NOT = { is_core = QNG }
+    #            }
+    #            add_province_modifier = {
+    #                name = anti_manchu_sentiment
+    #                duration = 1825
+    #            }
+    #        }
+    #    }
+    #    ai_will_do = { factor = 1 }
+    #}
 
     xiu_capital = {
     picture = tiandihui_seal

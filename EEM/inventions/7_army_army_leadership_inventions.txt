@@ -182,3 +182,5 @@ air_to_air_radar = {
         }
     }
 }
+
+#Identification, friend or foe (IFF) #for aircraft, after radar in ww2

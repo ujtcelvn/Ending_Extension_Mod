@@ -12,8 +12,8 @@ seaplane_tenders = {
         }
     }
     effect = {
-        aircraft_carrier = {
-            gun_power = 2
+        cruiser = {
+            gun_power = 1
         }
     }
 }
@@ -23,39 +23,10 @@ seaplane_tenders = {
 converted_hulk_air_carriers = {
     limit = { oil_driven_ships = 1 }
     chance = {
-        base = 0
+        base = 2
         modifier = {
-            factor = 2
-            invention = on_board_recon_aircraft
-        }
-        modifier = {
-            factor = 2
-            invention = seaplane_tenders
-        }
-    }
-    effect = {
-        aircraft_carrier = {
-            hull = 2
-            #gun_power = 2 #1
-        }
-    }
-}
-
-purpose_built_air_carriers = {
-    limit = { oil_driven_ships = 1  }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = seaplane_tenders
-        }
-		modifier = {
-            factor = 1
-            invention = on_board_recon_aircraft
-        }
-        modifier = {
-            factor = 3
-            invention = converted_hulk_air_carriers
+            factor = -5
+            NOT = { invention = seaplane_tenders }
         }
         modifier = {
             factor = 1
@@ -72,7 +43,33 @@ purpose_built_air_carriers = {
     }
 }
 
-light_air_carriers = {
+purpose_built_air_carriers = {
+    limit = { oil_driven_ships = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -6
+            NOT = { invention = converted_hulk_air_carriers }
+        }
+        modifier = {
+            factor = 2
+            invention = early_interwar_bombers
+        }
+        modifier = {
+            factor = 2
+            invention = early_interwar_fighters
+        }
+    }
+    effect = {
+        aircraft_carrier = {
+            maximum_speed = 1
+            hull = 2
+            gun_power = 2
+        }
+    }
+}
+
+light_air_carriers = { #and escort_air_carriers
     limit = { oil_driven_ships = 1  }
     chance = {
         base = 0
@@ -82,7 +79,7 @@ light_air_carriers = {
         }
         modifier = {
             factor = 2
-            invention = escort_air_carriers
+            invention = converted_hulk_air_carriers
         }
         modifier = {
             factor = 2
@@ -92,7 +89,7 @@ light_air_carriers = {
     effect = {
         aircraft_carrier = {
             maximum_speed = 2
-            gun_power = 1
+            gun_power = 2
         }
     }
 }
@@ -100,22 +97,18 @@ light_air_carriers = {
 fleet_air_carriers = {
     limit = { ship_construction_7 = 1 }
     chance = {
-        base = 0
+        base = 2
         modifier = {
-            factor = 2
-            invention = purpose_built_air_carriers
-        }
-        modifier = {
-            factor = 2
-            invention = escort_air_carriers
+            factor = -6
+            NOT = { invention = purpose_built_air_carriers }
         }
         modifier = {
             factor = 2
             invention = light_air_carriers
         }
         modifier = {
-            factor = -4
-            NOT = { invention = fleet_auxiliary_carrier_doctrine }
+            factor = 2
+            invention = fleet_auxiliary_carrier_doctrine2
         }
     }
     effect = {
@@ -123,30 +116,6 @@ fleet_air_carriers = {
             maximum_speed = 2
             hull = 2
 			gun_power = 2
-        }
-    }
-}
-
-escort_air_carriers = {
-    limit = { ship_construction_7 = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = purpose_built_air_carriers
-        }
-        modifier = {
-            factor = 2
-            invention = light_air_carriers
-        }
-		modifier = {
-            factor = 2
-            invention = fleet_air_carriers
-        }
-    }
-    effect = {
-        aircraft_carrier = {
-            maximum_speed = 2
         }
     }
 }
@@ -177,7 +146,7 @@ large_air_carriers = {
     effect = {
         aircraft_carrier = {
             maximum_speed = 1
-            hull = 1 #2
+            hull = 2
             torpedo_attack = 2
 			gun_power = 2
         }
@@ -203,9 +172,9 @@ large_cruisers = {
     }
     effect = {
         cruiser = {
-            gun_power = 2
-            hull = 3
-            torpedo_attack = 2
+            gun_power = 1
+            torpedo_attack = 1
+            hull = 2
         }
     }
 }

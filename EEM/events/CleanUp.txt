@@ -4958,7 +4958,7 @@ province_event = {
 country_event = {
     id = 6016829
     title = "End War with non-existent nations"
-    desc = "As a country you are at war with no longer exists, the war has ended."
+    desc = "As the country $COUNTRY$ is at war with no longer exists, the war has ended."
     picture = "deliberation"
 
     trigger = {

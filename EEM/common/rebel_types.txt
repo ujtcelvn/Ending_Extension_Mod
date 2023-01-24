@@ -6281,13 +6281,13 @@ anti_qing_rebels = {
             }
         }
 
-        modifier = {
-            factor = 0.5
-            NOT = { exists = CHI }
-            NOT = { exists = TPG }
-            NOT = { exists = RTR }
-            NOT = { exists = KMT }
-        }
+        #modifier = {
+        #    factor = 0.5
+        #    NOT = { exists = CHI }
+        #    NOT = { exists = TPG }
+        #    NOT = { exists = RTR }
+        #    NOT = { exists = KMT }
+        #}
         modifier = {
             factor = 0
             NOT = { is_culture_group = east_asian }
@@ -6438,12 +6438,16 @@ anti_qing_rebels = {
             reduce_pop = 0.90
         }
         #any_pop = {
+        #    reduce_pop = 0.99
+        #}
+        #any_pop = {
         #    limit = {
         #        is_cultural_group = east_asian
         #        NOT = { culture = manchu }
         #    }
         #    militancy = -3
         #}
+		#change_controller = QNG
     }
 
     # Country scope

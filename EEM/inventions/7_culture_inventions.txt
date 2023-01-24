@@ -17,7 +17,7 @@ modern_literature = {
         }
     }
     effect = {
-        shared_prestige = 30
+        shared_prestige = 60
     }
 }
 
@@ -39,7 +39,7 @@ modern_art = {
         }
     }
     effect = {
-        shared_prestige = 30
+        shared_prestige = 60
     }
 }
 
@@ -61,7 +61,27 @@ modern_music = {
         }
     }
     effect = {
-        shared_prestige = 30
+        shared_prestige = 60
+    }
+}
+
+#international_architecture 
+modern_architecture = {
+    limit = { aesthetics_7 = 1 }
+    news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            social_science = 1
+        }
+        modifier = {
+            factor = 2
+            invention = sociology
+        }
+    }
+    effect = {
+        shared_prestige = 60
     }
 }
 
@@ -80,134 +100,115 @@ television_networks = { #previously "movies"
         }
      }
     effect = {
-        shared_prestige = 30
+        shared_prestige = 60
     }
 }
 
-international_architecture = {
-    limit = { aesthetics_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            social_science = 1
-        }
-        modifier = {
-            factor = 2
-            invention = sociology
-        }
-    }
-    effect = {
-        shared_prestige = 30
-    }
-}
+#neoclassical_music = {
+#    limit = { aesthetics_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            OR = {
+#                nationalvalue = nv_order
+#                nationalvalue = nv_autocracy
+#            }
+#        }
+#        modifier = {
+#            factor = 2
+#            ruling_party_ideology = conservative
+#        }
+#    }
+#    effect = {
+#        shared_prestige = 30
+#    }
+#}
 
-neoclassical_music = {
-    limit = { aesthetics_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            OR = {
-                nationalvalue = nv_order
-                nationalvalue = nv_autocracy
-            }
-        }
-        modifier = {
-            factor = 2
-            ruling_party_ideology = conservative
-        }
-    }
-    effect = {
-        shared_prestige = 30
-    }
-}
+#brutalism = {
+#    limit = { aesthetics_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 3
+#            government = proletarian_dictatorship
+#        }
+#        modifier = {
+#            factor = 2
+#            ruling_party_ideology = socialist
+#        }
+#        modifier = {
+#            factor = 1
+#            invention = mass_surveillance
+#        }
+#    }
+#    effect = {
+#        shared_prestige = 30
+#    }
+#}
 
-brutalism = {
-    limit = { aesthetics_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 3
-            government = proletarian_dictatorship
-        }
-        modifier = {
-            factor = 2
-            ruling_party_ideology = socialist
-        }
-        modifier = {
-            factor = 1
-            invention = mass_surveillance
-        }
-    }
-    effect = {
-        shared_prestige = 30
-    }
-}
+#graphic_design = {
+#    limit = { aesthetics_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            behaviorism = 1
+#        }
+#        modifier = {
+#            factor = 2
+#            psychology_7 = 1
+#        }
+#    }
+#    effect = {
+#        shared_prestige = 30
+#    }
+#}
 
-graphic_design = {
-    limit = { aesthetics_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            behaviorism = 1
-        }
-        modifier = {
-            factor = 2
-            psychology_7 = 1
-        }
-    }
-    effect = {
-        shared_prestige = 30
-    }
-}
+#electronic_music = {
+#    limit = { aesthetics_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 0
+#        modifier = {
+#            factor = 2
+#            invention = oscilloscope
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = vacuum_tube
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = general_computer_programming #modern_tape_record
+#        }
+#    }
+#    effect = {
+#        shared_prestige = 30
+#    }
+#}
 
-electronic_music = {
-    limit = { aesthetics_7 = 1 }
-    news = no
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = oscilloscope
-        }
-        modifier = {
-            factor = 2
-            invention = vacuum_tube
-        }
-        modifier = {
-            factor = 2
-            invention = general_computer_programming #modern_tape_record
-        }
-    }
-    effect = {
-        shared_prestige = 30
-    }
-}
-
-neo_romanticism = {
-    limit = { aesthetics_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            psychology_7 = 1
-        }
-        modifier = {
-            factor = 2
-            ruling_party_ideology = liberal
-        }
-    }
-    effect = {
-        shared_prestige = 30
-    }
-}
+#neo_romanticism = {
+#    limit = { aesthetics_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            psychology_7 = 1
+#        }
+#        modifier = {
+#            factor = 2
+#            ruling_party_ideology = liberal
+#        }
+#    }
+#    effect = {
+#        shared_prestige = 30
+#    }
+#}
 
 ##################################################philosophy_7 
 logical_empiricism = {

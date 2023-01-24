@@ -45,6 +45,25 @@ army_motorization = {
             maximum_speed = 1
             supply_consumption = 0.20
         }
+     
+        #ceremonial_cavalry
+        cuirassier = {
+            attack = 1
+            defence = 2
+            supply_consumption = -0.20
+        }
+        dragoon = {
+            defence = 2
+        }
+        hussar = {
+            defence = 2
+            supply_consumption = 0.10
+        }
+        cavalry = {
+            attack = 1
+            defence = 2
+            supply_consumption = 0.10
+        }
     }
 }
 
@@ -69,11 +88,17 @@ mechanized_assault_doctrine = {
     effect = {
         tank = {
             attack = 4
-            supply_consumption = 0.10
+            maximum_speed = 1
+            supply_consumption = 0.30
         }
         motorized_infantry = {
             attack = 2
-            supply_consumption = 0.10
+            maximum_speed = 1
+            supply_consumption = 0.30
+        }
+        engineer = {
+            maximum_speed = 1
+            supply_consumption = 0.20
         }
     }
 }
@@ -104,7 +129,8 @@ paratrooper_doctrine = {
         }
         plane = {
             attack = 0.1
-            supply_consumption = 0.10
+            maximum_speed = 1
+            supply_consumption = 0.30
         }
     }
 }
@@ -130,39 +156,6 @@ paratrooper_doctrine = {
 #    }
 #}
 
-ceremonial_cavalry = {
-    limit = { army_doctrine_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = interwar_cavalry
-        }
-        modifier = {
-            factor = 2
-            invention = army_motorization
-        }
-    }
-    effect = {
-        cuirassier = {
-            attack = 1
-            defence = 2
-            supply_consumption = -0.20
-        }
-        dragoon = {
-            defence = 2
-        }
-        hussar = {
-            defence = 2
-            supply_consumption = 0.10
-        }
-        cavalry = {
-            attack = 1
-            defence = 2
-            supply_consumption = 0.10
-        }
-    }
-}
 
 combined_arms_offensive = {
     limit = { army_doctrine_7 = 1 }

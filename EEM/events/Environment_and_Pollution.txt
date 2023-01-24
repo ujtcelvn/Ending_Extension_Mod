@@ -658,6 +658,7 @@ province_event = {
 
 ########## by country ##########
 
+#make it a province event instead?
 country_event = {
     id = 12330
     title = "Oil Runs Dry in Queretaro"
@@ -668,7 +669,7 @@ country_event = {
         year = 1922
         owns = 2173
         2173 = { trade_goods = oil }
-        NOT = { has_global_flag = queretaro_peak_oil }
+        #NOT = { has_global_flag = queretaro_peak_oil }
     }
 
     mean_time_to_happen = {
@@ -685,9 +686,10 @@ country_event = {
 
     option = {
         name = "Unfortunate."
-        set_global_flag = queretaro_peak_oil
+        #set_global_flag = queretaro_peak_oil
         2173 = {
             trade_goods = fruit
+            add_province_modifier = { name = switched_production duration = 365 }
         }
     }
 }

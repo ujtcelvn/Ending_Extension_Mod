@@ -46,7 +46,7 @@ computerized_naval_intelligence = {
     }
 }
 
-literate_navy_recruits = {
+improved_damage_control_training = { #literate_navy_recruits
     limit = { naval_leadership_7 = 1 }
     chance = {
         base = -1

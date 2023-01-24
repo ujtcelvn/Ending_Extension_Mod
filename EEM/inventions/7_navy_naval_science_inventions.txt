@@ -18,19 +18,18 @@ modern_naval_operations = {
     }
 }
 
-the_war_at_sea = {
+improved_commerce_warfare = {
     limit = { naval_science_7 = 1 }
     chance = {
         base = 2
         modifier = {
             factor = 2
-            modern_army_doctrine = 1
+            invention = computerized_naval_intelligence
         }
         modifier = {
             factor = 2
             modern_naval_training = 1
         }
-
     }
     effect = {
         navy_base = {
@@ -51,7 +50,6 @@ sea_air_integration = {
             factor = 2
             invention = naval_radar
         }
-
     }
     effect = {
         navy_base = {

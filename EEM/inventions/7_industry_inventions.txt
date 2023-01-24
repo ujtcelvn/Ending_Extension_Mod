@@ -22,6 +22,7 @@ gas_turbine = {
 
 #Ljungström air preheater is an air preheater invented by the Swedish engineer Fredrik Ljungström (1875-1964). The patent was achieved in 1930.[1] 
 #With Fredrik Ljungström's technology of the air preheater implemented in a vast amount of modern power stations around the world until this day with total attributed worldwide fuel savings estimated to 4,960,000,000 tons of oil, "few inventions have been as successful in saving fuel as the Ljungström Air Preheater". 
+#"The first installation in a commercial boiler saved as much as 25% of the fuel consumption. In a modern utility boiler the Ljungström Air Preheater provides up to 20% of the total heat transfer in the boiler process, but the Ljungström Air Preheater only represents 2% of the investment." https://www.asme.org/wwwasmeorg/media/resourcefiles/aboutasme/who%20we%20are/engineering%20history/landmarks/185-ljungstrom-air-preheater.pdf
 air_preheater = {
     limit = { tech_power_7 = 1 }
     chance = {
@@ -36,42 +37,25 @@ air_preheater = {
         }
     }
     effect = {
-        factory_throughput = 0.02
-        factory_goods_output = {
-            fuel = 0.02
-        }
+        #factory_throughput = 0.02
+        factory_goods_output = { fuel = 0.1 } #0.02
+        rgo_goods_output = { coal = 0.2 } #0
     }
 }
 
-#in 1936, Socony-Vacuum converted an older thermal cracking unit to the Houdry process to catalytically crack 2,000 barrels per day (320 m3/d) of petroleum oil. 
-fluid_catalytic_cracking = {
+#fluid_catalytic_cracking: in 1936, Socony-Vacuum converted an older thermal cracking unit to the Houdry process to catalytically crack 2,000 barrels per day (320 m3/d) of petroleum oil. 
+#catalytic_reforming: Haensel's process was subsequently commercialized by UOP in 1949 for producing a high octane gasoline from low octane naphthas and the UOP process become known as the Platforming process.[2] The first Platforming unit was built in 1949 at the refinery of the Old Dutch Refining Company in Muskegon, Michigan. 
+catalytic_cracking = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
-        base = 3
+        base = 2
         modifier = {
             factor = -6
             NOT = { invention = cracking }
         }
         modifier = {
-            factor = 3
+            factor = 2
             invention = gas_turbine
-        }
-    }
-    effect = {
-        factory_goods_output = {
-            fuel = 0.02
-        }
-    }
-}
-
-#Haensel's process was subsequently commercialized by UOP in 1949 for producing a high octane gasoline from low octane naphthas and the UOP process become known as the Platforming process.[2] The first Platforming unit was built in 1949 at the refinery of the Old Dutch Refining Company in Muskegon, Michigan. 
-catalytic_reforming = {
-    limit = { chemistry_and_electricity_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = -4
-            NOT = { invention = fluid_catalytic_cracking }
         }
         modifier = {
             factor = 2
@@ -132,23 +116,23 @@ kraft_pulping = {
 #In the mid-1950s, the first noble metal catalytic reforming process (the Platformer process) was commercialized.
 #starting in the 1970s, byproduct sulfur recovery from oil and natural gas lowered the price of sulfur and drove many Frasch-process mines out of business.
 #The vast majority of the 64,000,000 tonnes of sulfur produced worldwide in 2005 was byproduct sulfur from refineries and other hydrocarbon processing plants
-#hydrodesulphurization = {
-#    limit = { metallurgy_7 = 1 }
-#    chance = {
-#        base = 2
-#        modifier = {
-#            factor = 2
-#            invention = fischer_tropsch_process
-#        }
-#        modifier = {
-#            factor = 2
-#            chemistry_and_electricity_7 = 1
-#        }
-#    }
-#    effect = {
-#        activate_building = hydrodesulphurization_plant
-#    }
-#}
+hydrodesulphurization = {
+    limit = { metallurgy_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = fischer_tropsch_process
+        }
+        modifier = {
+            factor = 2
+            chemistry_and_electricity_7 = 1
+        }
+    }
+    effect = {
+        activate_building = hydrodesulphurization_plant
+    }
+}
 
 ####################agriculture
 #The first fully synthetic opioid was meperidine (later demerol), found serendipitously by German chemist Otto Eisleb (or Eislib) at IG Farben in 1932.[219] Meperidine was the first opiate to have a structure unrelated to morphine, but with opiate-like properties.
@@ -166,7 +150,7 @@ synthetic_opioids = {
         }
     }
     effect = {
-        rgo_goods_output = { opium = 0.1 }
+        rgo_goods_output = { opium = 0.2 }
     }
 }
 
@@ -196,27 +180,27 @@ artificial_herbicides = {
 ############# plastics #############
 # converts a mixture of carbon monoxide and hydrogen into liquid hydrocarbons. Germany, in 1925
 #Fischer–Tropsch production accounted for an estimated 9% of German war production of fuels and 25% of the automobile fuel.
-fischer_tropsch_process = {
-    limit = { metallurgy_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = -6
-            NOT = { invention = import_substitution_industrialization }
-        }
-        modifier = {
-            factor = 2
-            invention = cracking
-        }
-        modifier = {
-            factor = 2
-            chemistry_and_electricity_7 = 1
-        }
-    }
-    effect = {
-        factory_goods_output = { oil = 0.1 }
-    }
-}
+#fischer_tropsch_process = {
+#    limit = { metallurgy_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = -6
+#            NOT = { invention = import_substitution_industrialization }
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = cracking
+#        }
+#        modifier = {
+#            factor = 2
+#            chemistry_and_electricity_7 = 1
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { oil = 0.1 }
+#    }
+#}
 
 #Studies published in 1930 written independently by Lebedev, the American Wallace Carothers and the German scientist Hermann Staudinger led in 1931 to one of the first successful synthetic rubbers, known as neoprene
 synthetic_rubber = {
@@ -303,7 +287,7 @@ industrial_plastics_production = {
     effect = {
         factory_goods_output = { fabric = 0.05 }
         factory_goods_output = { glass  = 0.05 }
-        factory_goods_output = { rubber = 0.1 }
+        #factory_goods_output = { rubber = 0.1 }
     }
 }
 
@@ -348,7 +332,7 @@ diesel_excavator = {
     chance = {
         base = 6
         modifier = {
-            factor = -10
+            factor = -2
             any_owned_province = {
                 controlled_by = THIS
                 trade_goods = iron
@@ -357,7 +341,7 @@ diesel_excavator = {
             }
         }
         modifier = {
-            factor = -2
+            factor = -1
             any_owned_province = {
                 controlled_by = THIS
                 trade_goods = iron
@@ -370,27 +354,6 @@ diesel_excavator = {
                 controlled_by = THIS
                 trade_goods = iron
                 unemployment_by_type = { value = 0.03 type = labourers }
-            }
-        }
-        modifier = {
-            factor = -1
-            any_neighbor_country = {
-                is_greater_power = no
-                any_owned_province = {
-                    trade_goods = iron
-                    unemployment_by_type = { value = 0.01 type = labourers }
-                    province_control_days = 365
-                }
-            }
-        }
-        modifier = {
-            factor = -1
-            any_greater_power = {
-                any_owned_province = {
-                    trade_goods = iron
-                    unemployment_by_type = { value = 0.01 type = labourers }
-                    province_control_days = 365
-                }
             }
         }
     }
@@ -406,7 +369,7 @@ diesel_excavator = {
 #    chance = {
 #        base = 6
 #        modifier = {
-#            factor = -10
+#            factor = -2
 #            any_owned_province = {
 #                controlled_by = THIS
 #                trade_goods = coal
@@ -415,7 +378,7 @@ diesel_excavator = {
 #            }
 #        }
 #        modifier = {
-#            factor = -2
+#            factor = -1
 #            any_owned_province = {
 #                controlled_by = THIS
 #                trade_goods = coal
@@ -430,27 +393,6 @@ diesel_excavator = {
 #                unemployment_by_type = { value = 0.03 type = labourers }
 #            }
 #        }
-#        modifier = {
-#            factor = -1
-#            any_neighbor_country = {
-#                is_greater_power = no
-#                any_owned_province = {
-#                    trade_goods = coal
-#                    unemployment_by_type = { value = 0.01 type = labourers }
-#                    province_control_days = 365
-#                }
-#            }
-#        }
-#        modifier = {
-#            factor = -1
-#            any_greater_power = {
-#                any_owned_province = {
-#                    trade_goods = coal
-#                    unemployment_by_type = { value = 0.01 type = labourers }
-#                    province_control_days = 365
-#                }
-#            }
-#        }
 #    }
 #    effect = {
 #        rgo_goods_output = { coal = 0.5 }
@@ -461,12 +403,12 @@ diesel_excavator = {
 #The valve was placed around the hammer piston instead of being a valve head.
 #1946: Bassinger Tool
 #The rate of penetration was about 30 % higher while drilling in Oklahoma
-bassinger_tool = {
+improved_hydraulic_drills = {
     limit = { metallurgy_7 = 1 }
     chance = {
         base = 6
         modifier = {
-            factor = -10
+            factor = -2
             any_owned_province = {
                 controlled_by = THIS
                 trade_goods = oil
@@ -475,7 +417,7 @@ bassinger_tool = {
             }
         }
         modifier = {
-            factor = -2
+            factor = -1
             any_owned_province = {
                 controlled_by = THIS
                 trade_goods = oil
@@ -490,32 +432,25 @@ bassinger_tool = {
                 unemployment_by_type = { value = 0.03 type = labourers }
             }
         }
-        modifier = {
-            factor = -1
-            any_neighbor_country = {
-                is_greater_power = no
-                any_owned_province = {
-                    trade_goods = oil
-                    unemployment_by_type = { value = 0.01 type = labourers }
-                    province_control_days = 365
-                }
-            }
-        }
-        modifier = {
-            factor = -1
-            any_greater_power = {
-                any_owned_province = {
-                    trade_goods = oil
-                    unemployment_by_type = { value = 0.01 type = labourers }
-                    province_control_days = 365
-                }
-            }
-        }
     }
     effect = {
         rgo_goods_output = { oil = 0.5 }
+        rgo_goods_output = { coal = 0.1 }
+        rgo_goods_output = { iron = 0.1 }
+        rgo_goods_output = { precious_metal = 0.1 }
+        #rgo_goods_output = { sulphur = 0.1 }
     }
 }
+
+#Hydraulic fracturing began as an experiment in 1947,[2] and the first commercially successful application followed in 1950.
+#Directional drilling 1934
+#Shale gas: first economical shale fracture in 1998
+
+#Room and pillar mining: original form
+#Longwall mining: Starting around 1900, mechanization was applied to this method. By 1940, some referred to longwall mining as "the conveyor method" of mining
+#Retreat mining: 
+    #Tunnels only make up about 15% of the reserve, so during advance mining, only about 15% of the coal or ore is removed. During retreat mining, an additional 75% of coal or ore may be removed because pillars make up much more of the reserve, bringing the total recovery of the resource to as much as 90%. 
+    #introduced in the 1960’s https://www.illawarracoal.com/images/resources/MINING_HISTORY_OF_THE_ILLAWARRA-Mould_Cairns.pdf
 
 ############ Computer Science ##################
 # In 1938 a technique was developed to use an all-glass construction with the pins fused in the glass base of the envelope.

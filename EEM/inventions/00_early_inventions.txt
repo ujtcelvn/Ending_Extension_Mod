@@ -108,73 +108,53 @@ haber_process = {
 }
 
 #In the 1860s, magnetic separation started to become commercialized. It was used to separate iron from brass.[3]
-#After the 1880s, ferromagnetic materials started to be magnetically separated. In the 1900s, high intensity magnetic separation was inaugurated which allowed the separation of pragmatic materials.[3] 
+#After the 1880s, ferromagnetic materials started to be magnetically separated. 
+#In the 1900s, high intensity magnetic separation was inaugurated which allowed the separation of pragmatic materials.[3] 
 #After the Second World War, systems that were the most common were electromagnets. The technique was used in scrap yards. 
 #Magnetic separation was developed again in the late 1970s with new technologies being inaugurated.[2] The new forms of magnetic separation included magnetic pulleys, overhead magnets and magnetic drums. 
-#magnetic_separation = {
-#    limit = { regenerative_furnaces = 1 }
-#    chance = {
-#        base = 2
-#        modifier = {
-#            factor = 2
-#            invention = electrical_lighting #electromagnet
-#        }
-#        modifier = {
-#            factor = 2
-#            assembly_line = 1 #1870
-#        }
-#        modifier = {
-#            factor = -10
-#            any_owned_province = {
-#                controlled_by = THIS
-#                trade_goods = iron
-#                unemployment_by_type = { value = 0.05 type = labourers }
-#                province_control_days = 1825
-#            }
-#        }
-#        modifier = {
-#            factor = -1
-#            any_owned_province = {
-#                controlled_by = THIS
-#                trade_goods = iron
-#                unemployment_by_type = { value = 0.01 type = labourers }
-#            }
-#        }
-#        modifier = {
-#            factor = -1
-#            any_owned_province = {
-#                controlled_by = THIS
-#                trade_goods = iron
-#                unemployment_by_type = { value = 0.03 type = labourers }
-#            }
-#        }
-#        modifier = {
-#            factor = -1
-#            any_neighbor_country = {
-#                is_greater_power = no
-#                any_owned_province = {
-#                    trade_goods = iron
-#                    unemployment_by_type = { value = 0.01 type = labourers }
-#                    province_control_days = 365
-#                }
-#            }
-#        }
-#        modifier = {
-#            factor = -1
-#            any_greater_power = {
-#                any_owned_province = {
-#                    trade_goods = iron
-#                    unemployment_by_type = { value = 0.01 type = labourers }
-#                    province_control_days = 365
-#                }
-#            }
-#        }
-#    effect = {
-#        rgo_goods_output = {
-#            iron = 0.25
-#        }
-#    }
-#}
+magnetic_separation = {
+    limit = { regenerative_furnaces = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = electrical_lighting #electromagnet
+        }
+        modifier = {
+            factor = 2
+            assembly_line = 1 #1870
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.05 type = labourers }
+                province_control_days = 1825
+            }
+       }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.01 type = labourers }
+            }
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.03 type = labourers }
+            }
+        }
+    }
+    effect = {
+        rgo_goods_output = { iron = 0.20 }
+        rgo_goods_output = { coal = 0.05 }
+    }
+}
 
 #Tetraethyllead (commonly styled tetraethyl lead), abbreviated TEL, is an organolead compound with the formula (CH3CH2)4Pb. It is a petro-fuel additive, first being mixed with gasoline beginning in the 1920s as a patented octane rating booster that allowed engine compression to be raised substantially. This in turn caused increased vehicle performance and fuel economy.[3][4] TEL had been identified chemically in the mid-19th century, but its antiknock effectiveness was discovered in 1921 by the General Motors research laboratory, which had spent several years attempting to find an additive that was both highly effective and inexpensive.
 #Concerns were later raised over the toxic effects of lead, especially on children. Lead also poisons catalytic converters and is a major cause of spark plug fouling.[5] From the 1970s many countries began phasing out and eventually banning TEL in automotive fuel. In 2011, a study backed by the United Nations estimated that the removal of TEL had resulted in $2.4 trillion in annual benefits, and 1.2 million fewer premature deaths.[6] 
@@ -206,13 +186,16 @@ leaded_gasoline = {
 
 #By 1910, The Goodrich Tire Company started replacing white pigments in automotive tires with carbon black, thus increasing road wear by 100X and tensile strength by as much as 1008 percent (4).
 #Phthalates were first introduced in the 1920s and quickly replaced earlier forms of additives that make plastics more flexible.
-rubber_additives = {
+rubber_n_plastic_additives = {
     limit = { synthetic_polymers = 1 }
     chance = {
         base = 2
         modifier = {
-            factor = 2
-            invention = rubber_vulcanization
+            factor = -6
+            OR = {
+                NOT = { invention = rubber_vulcanization }
+                NOT = { invention = rayon }
+            }
         }
         modifier = {
             factor = 2
@@ -220,34 +203,40 @@ rubber_additives = {
         }
         modifier = {
             factor = 2
-            invention = plastic_additives
+            invention = bakelite
         }
     }
     effect = {
         rgo_goods_output = { rubber = 0.5 }
+        factory_goods_output = { glass = 0.01 }
+        factory_goods_output = { fabric = 0.01 }
+        factory_goods_output = { cement = 0.01 }
     }
 }
 
-plastic_additives = {
-    limit = { synthetic_polymers = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = -6
-            NOT = { invention = rayon }
-        }
-        modifier = {
-            factor = 2
-            invention = bakelite
-        }
-        modifier = {
-            factor = 2
-            invention = rubber_additives
-        }
-    }
-    effect = {
-        rgo_goods_output = { rubber = 0.1 }
-        factory_goods_output = { glass = 0.01 }
-        factory_goods_output = { fabric = 0.01 }
-    }
-}
+#1903: first low-grade copper porhypry
+#1913: Development of Bucket Wheel Excavator
+#1920s: Concept of continuous and mass mining systems for coal/ore mining 
+    # continuous mining machine cuts or rips coal from the face and loads it onto conveyors or into shuttle cars in a continuous operation. Thus, the drilling and shooting operations are eliminated, along with the necessity for working several headings in order to have available a heading in which loading can be in progress at all times.
+    # = local_conveyors_and_excavators
+
+
+#in 1884, his firm, Wayss & Freytag, made the first commercial use of reinforced concrete. 
+#One of the first skyscrapers made with reinforced concrete was the 16-story Ingalls Building in Cincinnati, constructed in 1904.
+#reinforced_concrete = {
+#    limit = { advanced_metallurgy = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = electric_rolling_techniques
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = modern_design
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { cement = 0.05 }
+#    }
+#}

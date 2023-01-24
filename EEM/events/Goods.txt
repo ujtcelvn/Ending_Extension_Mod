@@ -624,7 +624,8 @@ province_event = {
                 OR = {
                     province_id = 2173        # Queretaro 1894
                 }
-                NOT = { has_global_flag = queretaro_peak_oil }
+                NOT = { year = 1922 }
+                #NOT = { has_global_flag = queretaro_peak_oil }
             }
 
             AND = {
