@@ -9,13 +9,15 @@ political_decisions = {
 			war = yes
 			invention = strategic_destruction_doctrine
 			NOT = { has_country_modifier = strat_bombers }
-			money = 1000000
-			military_score = 500
 			is_disarmed = no
-			NOT = { war_policy = pacifism }
 		}
 		
 		allow = {
+			money = 1000000
+			military_score = 500
+			NOT = { war_policy = pacifism }
+			NOT = { national_provinces_occupied = 0.5 }
+			is_vassal = no
 		}
 
 		effect = {
@@ -36,13 +38,13 @@ political_decisions = {
 		potential = {
 			has_country_modifier = strat_bombers
 			OR = {
-				war_policy = pacifism 
+				ai = no
+				war_policy = pacifism
 				is_vassal = yes 
-				NOT = { money = 500000 }
+				NOT = { money = 5000 }
 				NOT = { military_score = 250 } 
 				war = no 
 				is_disarmed = yes
-				ai = no
 			}
 		}
 		

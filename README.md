@@ -13,6 +13,8 @@ Extended play to 1956
 
 110 new inventions (100 in the new techs, 10 earlier)
 
+Nukes!
+
 Motorized Infantry
 
 Aircraft Carriers

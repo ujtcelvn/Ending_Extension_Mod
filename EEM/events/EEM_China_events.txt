@@ -2781,7 +2781,7 @@ country_event = {
         }
 
         remove_country_modifier = trade_restrictions
-        remove_country_modifier = tore_up_unequal_treaties
+        clr_country_flag = tore_up_unequal_treaties
 
         add_country_modifier = { name = legation_quarter duration = 3650 }
         random_owned = {

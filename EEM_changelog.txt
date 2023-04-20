@@ -61,23 +61,22 @@ Coming soon:
 
 #TODO: Western governments have crippled [insert country here] with sanctions, and then sent in friendly NGOs to pick up the slack.
 
-#TODO: let China claim 1593 Tawang (the bit of Tibet that gets siezed by British India)
-
-####################################################################################################
-#TODO: nuclear research program
-#TODO: localizations for the nuke modifiers
-#TODO: nuke tiers
-#TODO: First ever use of nuke special event: Start of the Atomic Age: set global flag: nukes_used_in_war, set country flag: first_country_to_nuke, country_has_used_nukes
-	victim gets hit more war exhaustion and confusion
-	nuke dropper gets cheering and celebratione event: reduce war exhaustion
-#TODO: the higher the global nuke research level and if your country has dropped nukes, the more anti-nuke protest events happen
-#TODO: nuclear accident event
-#TODO: nuclear research stolen
-#TODO: dismantle nukes
-#TODO: nuclear bomb stolen
+#TODO: let China (and Tibet) reclaim 1593 Tawang (the bit of Tibet that gets siezed by British India)
 
 ####################################################################################################
 #TODO: v0.5.8
+
+You can now research and launch nukes
+Adjusted requirements to invent nuclear weapon theory
+Nuclear accident 
+Treaty on the Non-Proliferation of Nuclear Weapons (after 1968)
+
+Disarmed nations can no longer start strategic bombing
+The way the strategic bombed area spreads is now be more realistic and less performance intensive
+Simplified pollution event
+Removed some cheats HPM gives to the AI
+Fixed some bugs
+Removed a few unused fles
 
 #TODO: invention localizations
 	00_early_inventions complete

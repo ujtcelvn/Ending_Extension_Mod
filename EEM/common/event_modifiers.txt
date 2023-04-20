@@ -2704,94 +2704,91 @@ heavy_bomb_damage = {
 ### Nukes ###
 #Province modifier: 21 = green nuke, 22 = red nuke
 
-hot_particles = {
+province_nuked = {
+    immigrant_attract = -1
+    immigrant_push = 1
+    local_RGO_output = -1
+    local_factory_throughput = -0.75
+    local_factory_output = -0.75
+
+    population_growth = -0.1 #10% of pops die of radiation in a month
     icon = 22
 }
 
-acute_radiation_syndrome = {
+hot_particles = {
+    immigrant_attract = -1
+    immigrant_push = 1
+    local_RGO_output = -0.25 #contaminated produce wasted
+    #factories not affected
+    farm_rgo_size = -0.25 #contaminated hot spots are fenced off
+    mine_rgo_size = -0.25
+    pop_consciousness_modifier = 0.01 #people annoyed at contamination
+    population_growth = -0.001
+    icon = 22
+}
+
+
+nuke_target = { #this province is the target for a nuclear strike
     icon = 22
 }
 
 
 #Country modifier:  19 = green nuke, 20 = red nuke
-recently_got_nuked = {
+
+nuclear_system_down = {
     icon = 20
 }
 
-recently_used_nukes = {
+wmd_removed = {
+    prestige = -0.01
     icon = 20
 }
 
+non_proliferation_treaty = {
+    prestige = 0.001
+    icon = 7
+}
 
-### Nuke research levels ###
-
-nukes_banned = {
-    badboy = -0.01
+nukes_used_recently = {
     icon = 20
 }
 
-#nuclear_research_program #peaceful nukes?
+recently_attacked_nuke = { #Second Strike Opportunity duration = 31
+    icon = 20
+}
 
-nuclear_weapons_program = { #have this only be active if you are improving your nukes
-    min_military_spending = 0.1
-    supply_consumption = 0.2
-    badboy = 0.01
+recently_attacked_limited_nuke = { #Escalation Opportunity for AI duration = 31
+    icon = 20
+}
+
+recently_consulted_nuclear_plans = {
+    icon = 20
+}
+
+#nuclear_program flag represents peaceful nuclear research and energy
+
+nuke_tier_0 = { #nuclear_weapons_program
+    supply_consumption = 0.25
     icon = 19
 }
 
-#nuclear_waste_bomb
-#semi_fission_bomb
-
-fission_bomb = { #able to make nukes, but slowly and no stockpile
-    prestige = 0.01
-    supply_consumption = 0.2
-    badboy = 0.01
+nuke_tier_1 = { #has_f_bomb
+    prestige = 0.001
+    supply_consumption = 0.5
     icon = 19
 }
 
-mass_produced_bomb = { #has large stockpile
-    prestige = 0.01
-    supply_consumption = 0.4
-    min_military_spending = 0.1
-    badboy = 0.01
+nuke_tier_2 = { #has_lotsa_bomb
+    prestige = 0.001
+    supply_consumption = 0.75
     icon = 19
 }
 
-hydrogen_bomb = { #Thermonuclear / fusion
-    prestige = 0.01
-    supply_consumption = 0.4
-    min_military_spending = 0.1
-    badboy = 0.01
-    icon = 19
-}
+#has_h_bomb
+#ICBM
+#SBM
 
-#nuclear_icbm = {
-#    icon = 19
-#}
-
-#nuclear_slbm = { #Submarine-launched ballistic missile
-#    icon = 19
-#}
-
+#further levels of nuclear are based purely on inventions
 
 
 ### Anti-war ###
-
-anti_war_movement = {
-    war_exhaustion = 0.1
-    icon = 16
-}
-
-naval_limitation_treaty = {
-    #badboy = -0.01
-    war_exhaustion = -0.01
-    max_military_spending = -0.10
-    leadership_modifier = -0.25
-    icon = 5
-}
-
-naval_limitation_treaty_province = {
-    local_repair = -0.5
-    local_ship_build = 1
-    icon = 18
-}

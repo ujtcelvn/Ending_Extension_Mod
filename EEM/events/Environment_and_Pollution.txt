@@ -9,7 +9,7 @@ province_event = {
         owner = { industrial_score = 100 } #UK 1836: 125
         capital_scope = { NOT = { has_province_modifier = local_pollution_problem } }
 		has_pop_type = craftsmen
-		total_pops = 250000 #London 1836: 400000
+		total_pops = 500000 #250000 #London 1836: 400000
 		is_colonial = no
     }
 
@@ -18,27 +18,15 @@ province_event = {
 
         modifier = {
             factor = 0.8
-			is_colonial = no
-			total_pops = 500000
-			has_pop_type = craftsmen
-        }
-        modifier = {
-            factor = 0.8
-			is_colonial = no
 			total_pops = 1000000
-			has_pop_type = craftsmen
         }
         modifier = {
             factor = 0.8
-			is_colonial = no
 			total_pops = 2000000
-			has_pop_type = craftsmen
         }
         modifier = {
             factor = 0.8
-			is_colonial = no
 			total_pops = 4000000
-			has_pop_type = craftsmen
         }
         modifier = {
             factor = 0.9
@@ -87,23 +75,23 @@ province_event = {
             }
         }
 
-        modifier = {
-            factor = 0.75
-			OR = {
-				trade_goods = oil
-				trade_goods = coal
-				trade_goods = sulphur
-				trade_goods = iron
-				trade_goods = fuel
-				trade_goods = cement
-				trade_goods = fertilizer
-				trade_goods = steel
-				trade_goods = steamer_convoy
-				trade_goods = automobiles
-				trade_goods = aeroplanes
-				trade_goods = barrels
-			}
-        }
+        #modifier = {
+        #	factor = 0.75
+		#	OR = {
+		#		trade_goods = oil
+		#		trade_goods = coal
+		#		trade_goods = sulphur
+		#		trade_goods = iron
+		#		trade_goods = fuel
+		#		trade_goods = cement
+		#		trade_goods = fertilizer
+		#		trade_goods = steel
+		#		trade_goods = steamer_convoy
+		#		trade_goods = automobiles
+		#		trade_goods = aeroplanes
+		#		trade_goods = barrels
+		#	}
+        #}
 
 		modifier = {
 			factor = 0.75
@@ -116,16 +104,12 @@ province_event = {
 
 
         modifier = {
-            factor = 1.1
-            owner = { safety_regulations = trinket_safety }
-        }
-        modifier = {
-            factor = 1.25
+            factor = 1.2
             owner = { safety_regulations = low_safety }
         }
         modifier = {
             factor = 1.5
-            owne = { safety_regulations = acceptable_safety }
+            owner = { safety_regulations = acceptable_safety }
         }
         modifier = {
             factor = 2
@@ -140,119 +124,35 @@ province_event = {
 
     option = {
         name = "Turn on your tap and get hot and cold running crud."
-
-        NWO = {
-            change_variable = {
-                which = pollution_counter
-                value = 1
-            }
-        }
+        
+        NWO = { change_variable = { which = pollution_counter value = 1 } }
 
         #pollution remains responsible for approximately 9 million deaths per year, corresponding to one in six deaths worldwide. 
 
-		add_province_modifier = { name = local_pollution_problem duration = 365 }
-		any_pop = { reduce_pop = 0.999 }
-
         owner = {
-			capital_scope = {
+
+			any_owned = {
+				limit = {
+					is_colonial = no
+					total_pops = 500000 #250000 #London 1836: 400000
+					has_pop_type = craftsmen
+					NOT = { has_province_modifier = local_pollution_problem }
+				}
+
 				add_province_modifier = { name = local_pollution_problem duration = 365 }
-				any_pop = { reduce_pop = 0.999 }
-			}
-			any_owned = {
-				limit = {
-					is_colonial = no
-					total_pops = 250000 #London 1836: 400000
-					has_pop_type = craftsmen
-					NOT = { has_province_modifier = local_pollution_problem }
-					OR = {
-						trade_goods = oil
-						trade_goods = coal
-						trade_goods = sulphur
-						trade_goods = iron
+
+				any_pop = {
+					limit = {
+						OR = {
+							type = craftsmen
+							type = labourers
+						}
 					}
+					reduce_pop = 0.999
 				}
-				random = {
-					chance = 10
-					add_province_modifier = { name = local_pollution_problem duration = 365 }
-					any_pop = { reduce_pop = 0.999 }
-				}
+
 			}
-			any_owned = {
-				limit = {
-					is_colonial = no
-					total_pops = 500000
-					has_pop_type = craftsmen
-					NOT = { has_province_modifier = local_pollution_problem }
-					OR = {
-						trade_goods = oil
-						trade_goods = coal
-						trade_goods = sulphur
-						trade_goods = iron
-					}
-				}
-				random = {
-					chance = 10
-					add_province_modifier = { name = local_pollution_problem duration = 365 }
-					any_pop = { reduce_pop = 0.999 }
-				}
-			}
-			any_owned = {
-				limit = {
-					is_colonial = no
-					total_pops = 1000000
-					has_pop_type = craftsmen
-					NOT = { has_province_modifier = local_pollution_problem }
-					OR = {
-						trade_goods = oil
-						trade_goods = coal
-						trade_goods = sulphur
-						trade_goods = iron
-					}
-				}
-				random = {
-					chance = 10
-					add_province_modifier = { name = local_pollution_problem duration = 365 }
-					any_pop = { reduce_pop = 0.999 }
-				}
-			}
-			any_owned = {
-				limit = {
-					is_colonial = no
-					total_pops = 2000000
-					has_pop_type = craftsmen
-					NOT = { has_province_modifier = local_pollution_problem }
-					OR = {
-						trade_goods = oil
-						trade_goods = coal
-						trade_goods = sulphur
-						trade_goods = iron
-					}
-				}
-				random = {
-					chance = 10
-					add_province_modifier = { name = local_pollution_problem duration = 365 }
-					any_pop = { reduce_pop = 0.999 }
-				}
-			}
-			any_owned = {
-				limit = {
-					is_colonial = no
-					total_pops = 4000000
-					has_pop_type = craftsmen
-					NOT = { has_province_modifier = local_pollution_problem }
-					OR = {
-						trade_goods = oil
-						trade_goods = coal
-						trade_goods = sulphur
-						trade_goods = iron
-					}
-				}
-				random = {
-					chance = 10
-					add_province_modifier = { name = local_pollution_problem duration = 365 }
-					any_pop = { reduce_pop = 0.999 }
-				}
-			}
+
 		}
     }
 }
@@ -300,24 +200,14 @@ country_event = {
             factor = 50
             modifier = {
                 factor = 2
-                economic_policy = laissez_faire
-            }
-
-            modifier = {
-                factor = 2
                 OR = {
+                    economic_policy = laissez_faire
                     ruling_party_ideology = reactionary
                     ruling_party_ideology = anarcho_liberal
-                }
-            }
-            modifier = {
-                factor = 1.5
-                OR = {
                     ruling_party_ideology = conservative
                     ruling_party_ideology = liberal
                 }
             }
-
             modifier = {
                 factor = 0.8
                 militancy = 3
@@ -393,7 +283,7 @@ country_event = {
             factor = 0.1
             OR = {
                 government = bourgeois_dictatorship
-                government = presidental_dictatorship
+                government = presidential_dictatorship 
             }
         }
         modifier = {
@@ -447,7 +337,7 @@ country_event = {
                 factor = 0
                 OR = {
                     government = bourgeois_dictatorship
-                    government = presidental_dictatorship
+                    government = presidential_dictatorship 
                 }
             }
             modifier = {
@@ -481,15 +371,6 @@ province_event = {
 
     mean_time_to_happen = {
         months = 60
-        modifier = {
-            factor = 0.75
-            state_scope = {
-                any_pop = {
-                    type = capitalists
-                    cash_reserves = 1000
-                }
-            }
-        }
     }
 
     option = {
@@ -527,16 +408,6 @@ province_event = {
 
     mean_time_to_happen = {
         months = 60
-        modifier = {
-            factor = 0.75
-            state_scope = {
-                any_pop = {
-                    type = capitalists
-                    cash_reserves = 1000
-                }
-            }
-        }
-
     }
 
     option = {
@@ -567,16 +438,6 @@ province_event = {
 
     mean_time_to_happen = {
         months = 60
-        modifier = {
-            factor = 0.75
-            state_scope = {
-                any_pop = {
-                    type = capitalists
-                    cash_reserves = 1000
-                }
-            }
-        }
-
     }
 
     option = {
