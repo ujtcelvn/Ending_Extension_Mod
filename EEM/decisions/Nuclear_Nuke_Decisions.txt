@@ -159,6 +159,7 @@ political_decisions = {
 
 		effect = {
 			money = -2000000
+            badboy = 5
 			set_country_flag = nuclear_program
 			set_country_flag = nuclear_weapons_program
 			add_country_modifier = { name = nuke_tier_0 duration = -1 }
@@ -200,7 +201,7 @@ political_decisions = {
 			any_greater_power = { relation = { who = THIS value = 100 } }
 			prestige_factor = -0.10
 			add_country_modifier = { name = non_proliferation_treaty duration = -1 }
-            badboy = -10
+            badboy = -5
 
 			clr_country_flag = disarm_wmds
 			clr_country_flag = nuclear_program
