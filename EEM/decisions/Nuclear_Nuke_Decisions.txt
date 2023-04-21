@@ -271,7 +271,7 @@ political_decisions = {
 				has_country_modifier = recently_attacked_limited_nuke #escalation
 				AND = {
 					OR = {
-						has_country_modifier = great_war
+						#has_country_modifier = great_war
 						has_country_modifier = great_war2
 						has_country_modifier = great_war3
 					}
@@ -282,7 +282,11 @@ political_decisions = {
 				}
 
 				AND = {
-					has_country_modifier = great_war
+					OR = {
+						has_country_modifier = great_war
+						has_country_modifier = great_war2
+						has_country_modifier = great_war3
+					}
 					NOT = { has_global_flag = nukes_used_global }
 					NOT = { war_policy = anti_military }
 				}
