@@ -62,9 +62,10 @@ Coming soon:
 #TODO: Western governments have crippled [insert country here] with sanctions, and then sent in friendly NGOs to pick up the slack.
 
 #TODO: let China (and Tibet) reclaim 1593 Tawang (the bit of Tibet that gets siezed by British India)
+#TODO: more AI bullying for treaty ports
 
 ####################################################################################################
-#TODO: v0.5.8
+v0.5.8
 
 You can now research and launch nukes
 Adjusted requirements to invent nuclear weapon theory
@@ -78,7 +79,7 @@ Removed some cheats HPM gives to the AI
 Fixed some bugs
 Removed a few unused fles
 
-#TODO: invention localizations
+invention localizations
 	00_early_inventions complete
 	00_nuke_inventions complete
 	7_army_army_doctrine_inventions complete

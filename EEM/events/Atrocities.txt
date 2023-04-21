@@ -375,12 +375,6 @@ country_event = {
 
     mean_time_to_happen = {
         months = 60
-
-        modifier = {
-            factor = 0.01
-            tag = USA
-        }
-
         modifier = {
             factor = 0.8
             military_spending = 0.99
