@@ -3594,7 +3594,7 @@ country_event = {
         war = {
             target = TPG
             attacker_goal = { casus_belli = acquire_any_state  state_province_id = 1532 }
-            defender_goal = { }
+            #defender_goal = { }
         }
         ai_chance = { factor = 100 }
     }
@@ -3643,7 +3643,7 @@ country_event = {
         war = {
             target = TPG
             attacker_goal = { casus_belli = china_acquire_state  state_province_id = 1616 }
-            defender_goal = { }
+            #defender_goal = { }
         }
         ai_chance = { factor = 100 }
     }
@@ -3691,7 +3691,7 @@ country_event = {
         war = {
             target = TPG
             attacker_goal = { casus_belli = china_acquire_state  state_province_id = 1490 }
-            defender_goal = { }
+            #defender_goal = { }
         }
         ai_chance = { factor = 100 }
     }
@@ -3739,7 +3739,7 @@ country_event = {
         war = {
             target = TPG
             attacker_goal = { casus_belli = acquire_core_state state_province_id = 1601 } #1601 kunming 1585 Yibin 1586 yazhou 1582 longan
-            defender_goal = { }
+            #defender_goal = { }
         }
         ai_chance = { factor = 100 }
     }
@@ -5314,7 +5314,3 @@ country_event = {
 #166700 Trade Zones
 
 #166800 Opium 
-
-
-
-

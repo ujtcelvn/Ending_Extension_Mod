@@ -53,6 +53,7 @@ political_decisions = {
 
 		effect = {
 			remove_country_modifier = strat_bombers
+			clr_country_flag = first_nuclear_bombing_campaign
 		}
 		
 		ai_will_do = {

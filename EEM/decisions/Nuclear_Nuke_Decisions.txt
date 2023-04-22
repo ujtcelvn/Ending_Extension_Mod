@@ -203,6 +203,7 @@ political_decisions = {
 			add_country_modifier = { name = non_proliferation_treaty duration = -1 }
             badboy = -5
 
+			clr_country_flag = first_nuclear_bombing_campaign
 			clr_country_flag = disarm_wmds
 			clr_country_flag = nuclear_program
 			clr_country_flag = nuclear_weapons_program
@@ -288,7 +289,11 @@ political_decisions = {
 						has_country_modifier = great_war2
 						has_country_modifier = great_war3
 					}
-					NOT = { has_global_flag = nukes_used_global }
+					OR = {
+						NOT = { has_global_flag = nukes_used_global }
+						has_country_flag = first_nuclear_bombing_campaign
+						national_provinces_occupied = 0.40
+					}
 					NOT = { war_policy = anti_military }
 				}
 

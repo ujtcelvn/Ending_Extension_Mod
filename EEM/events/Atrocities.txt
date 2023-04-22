@@ -7,27 +7,35 @@ province_event = {
 	trigger = {
 		owner = {
 			war = yes
-			war_countries = { has_country_modifier = strat_bombers } 	
+			war_countries = { has_country_modifier = strat_bombers }
+			NOT = {
+				war_countries = {
+					has_country_modifier = strat_bombers
+					invention = saturation_bombing_doctrine
+					invention = gun_and_bomb_sights
+					brigades_compare = 2 #enemy has larger army
+				}
+			}
 		}
 		is_colonial = no
 		NOT = { has_province_modifier = bomb_damage }
 		NOT = { has_province_modifier = heavy_bomb_damage }
 		controlled_by = THIS
-        OR = {
-            is_capital = yes
-            port = yes
-            any_neighbor_province = {
-                OR = {
-                    AND = {
-                        owned_by = THIS
-                        has_province_modifier = bomb_damage
-                    }
-                    controller = {
-                        war_with = THIS
-                    }
-                }
-            }
-        }
+		OR = {
+			is_capital = yes
+			port = yes
+			any_neighbor_province = {
+				OR = {
+					AND = {
+						owned_by = THIS
+						has_province_modifier = bomb_damage
+					}
+					controller = {
+						war_with = THIS
+					}
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -114,7 +122,7 @@ province_event = {
 
 	option = {
 		name = "Oh no!"
-        NWO = { change_variable = { which = bombing_counter value = 1 } }
+		NWO = { change_variable = { which = bombing_counter value = 1 } }
 
 		#random = {
 		#	chance = 25
@@ -125,15 +133,15 @@ province_event = {
 		#	naval_base = -1 #this deletes all naval base levels from the province for some reason. 
 		#}
 
-        state_scope = {
-            any_owned = {
-                limit = {
-	    			controlled_by = THIS
-	    			NOT = { has_province_modifier = bomb_damage }
-	    			NOT = { has_province_modifier = heavy_bomb_damage }
-                }
+		state_scope = {
+			any_owned = {
+				limit = {
+					controlled_by = THIS
+					NOT = { has_province_modifier = bomb_damage }
+					NOT = { has_province_modifier = heavy_bomb_damage }
+				}
 
-		    	any_pop = {
+				any_pop = {
 					limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
 					reduce_pop = 0.99
 				}
@@ -142,10 +150,10 @@ province_event = {
 					reduce_pop = 0.995
 				}
 
-	    		infrastructure = -1
-                add_province_modifier = { name = bomb_damage duration = 365 }
-            }
-        }
+				infrastructure = -1
+				add_province_modifier = { name = bomb_damage duration = 365 }
+			}
+		}
 
 	}
 }
@@ -168,21 +176,21 @@ province_event = {
 		is_colonial = no
 		NOT = { has_province_modifier = heavy_bomb_damage }
 		controlled_by = THIS
-        OR = {
-            is_capital = yes
-            port = yes
-            any_neighbor_province = {
-                OR = {
-                    AND = {
-                        owned_by = THIS
-                        has_province_modifier = bomb_damage
-                    }
-                    controller = {
-                        war_with = THIS
-                    }
-                }
-            }
-        }
+		OR = {
+			is_capital = yes
+			port = yes
+			any_neighbor_province = {
+				OR = {
+					AND = {
+						owned_by = THIS
+						has_province_modifier = bomb_damage
+					}
+					controller = {
+						war_with = THIS
+					}
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -237,33 +245,33 @@ province_event = {
 
 	option = {
 		name = "Oh no!"
-        NWO = { change_variable = { which = heavy_bombing_counter value = 1 } }
+		NWO = { change_variable = { which = heavy_bombing_counter value = 1 } }
 		
-        #Dresden population in 1939: 642,000, 25,000 casulties = 0.04
+		#Dresden population in 1939: 642,000, 25,000 casulties = 0.04
 
-        state_scope = {
+		state_scope = {
 
-            any_owned = {
-                limit = {
-	    			controlled_by = THIS
-	    			NOT = { has_province_modifier = heavy_bomb_damage }
-                }
+			any_owned = {
+				limit = {
+					controlled_by = THIS
+					NOT = { has_province_modifier = heavy_bomb_damage }
+				}
 
-		    	any_pop = {
+				any_pop = {
 					limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
-					reduce_pop = 0.98
+					reduce_pop = 0.97 #0.98
 				}
 				any_pop = {
 					limit = { NOT = { strata = middle } NOT = { type = craftsmen } NOT = { type = soldiers } }
-					reduce_pop = 0.99
+					reduce_pop = 0.985 #0.99
 				}
 
-	    		infrastructure = -1
-                add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-                add_province_modifier = { name = bomb_damage duration = 365 }
-            }
+				infrastructure = -1
+				add_province_modifier = { name = heavy_bomb_damage duration = 365 }
+				add_province_modifier = { name = bomb_damage duration = 730 }
+			}
 
-        }
+		}
 
 	}
 }
@@ -281,18 +289,19 @@ country_event = {
 			NOT = { military_score = 250 }
 			is_disarmed = yes
 			national_provinces_occupied = 0.5
-            has_country_modifier = in_bankrupcy
-            has_country_modifier = generalised_debt_default
+			has_country_modifier = in_bankrupcy
+			has_country_modifier = generalised_debt_default
 		}
 	}
 
-    mean_time_to_happen = {
-        months = 1
-    }
+	mean_time_to_happen = {
+		months = 1
+	}
 
 	option = {
 		name = "End the bomber raids!"
 		remove_country_modifier = strat_bombers
+		clr_country_flag = first_nuclear_bombing_campaign
 	}
 }
 
@@ -307,13 +316,14 @@ country_event = {
 		has_country_modifier = strat_bombers
 	}
 
-    mean_time_to_happen = {
-        months = 1
-    }
+	mean_time_to_happen = {
+		months = 1
+	}
 	
 	option = {
 		name = "End the bomber raids!"
 		remove_country_modifier = strat_bombers
+		clr_country_flag = first_nuclear_bombing_campaign
 	}
 }
 
@@ -322,152 +332,153 @@ country_event = {
 
 #### Nuke Development ####
 country_event = {
-    id = 6001000
-    title = "$COUNTRY_ADJ$ Nuclear Program Dismantled"
-    desc = "The $COUNTRY_ADJ$ has been forced to end its nuclear program and destroy its nuclear weapons, reactors, and delivery systems."
-    picture = "greatpowers"
+	id = 6001000
+	title = "$COUNTRY_ADJ$ Nuclear Program Dismantled"
+	desc = "The $COUNTRY_ADJ$ has been forced to end its nuclear program and destroy its nuclear weapons, reactors, and delivery systems."
+	picture = "greatpowers"
 
-    trigger = {
-        has_country_flag = nuclear_weapons_program
-        OR = {
-            is_disarmed = yes
-            is_vassal = yes
-        }
-    }
+	trigger = {
+		has_country_flag = nuclear_weapons_program
+		OR = {
+			is_disarmed = yes
+			is_vassal = yes
+		}
+	}
 
-    mean_time_to_happen = {
-        months = 1
-    }
+	mean_time_to_happen = {
+		months = 1
+	}
 
-    option = {
-        name = "This is a dark day."
-        prestige_factor = -0.1
-        add_country_modifier = { name = wmd_removed duration = 7300 }
-        badboy = -10
+	option = {
+		name = "This is a dark day."
+		prestige_factor = -0.1
+		add_country_modifier = { name = wmd_removed duration = 7300 }
+		badboy = -10
+	
+		clr_country_flag = first_nuclear_bombing_campaign
+		clr_country_flag = disarm_wmds
+		clr_country_flag = nuclear_program
+		clr_country_flag = nuclear_weapons_program
+		clr_country_flag = has_f_bomb
+		clr_country_flag = has_lotsa_bomb
 
-        clr_country_flag = disarm_wmds
-        clr_country_flag = nuclear_program
-        clr_country_flag = nuclear_weapons_program
-        clr_country_flag = has_f_bomb
-        clr_country_flag = has_lotsa_bomb
-
-        remove_country_modifier = nuclear_system_down
-        remove_country_modifier = nuke_tier_0
-        remove_country_modifier = nuke_tier_1
-        remove_country_modifier = nuke_tier_2
-    }
+		remove_country_modifier = nuclear_system_down
+		remove_country_modifier = nuke_tier_0
+		remove_country_modifier = nuke_tier_1
+		remove_country_modifier = nuke_tier_2
+	}
 }
 
 country_event = {
-    id = 6001001
-    title = "$COUNTRY_ADJ$ Atomic Bomb"
-    desc = EVTDESC6001001
-    picture = "nuke_t1"
+	id = 6001001
+	title = "$COUNTRY_ADJ$ Atomic Bomb"
+	desc = EVTDESC6001001
+	picture = "nuke_t1"
 
-    trigger = {
-        has_country_flag = nuclear_weapons_program
-        has_country_modifier = nuke_tier_0
-        NOT = { has_country_modifier = academic_confusion }
+	trigger = {
+		has_country_flag = nuclear_weapons_program
+		has_country_modifier = nuke_tier_0
+		NOT = { has_country_modifier = academic_confusion }
 		NOT = { has_country_modifier = nuclear_system_down }
 		NOT = { has_country_modifier = nukes_used_recently }
-        military_spending = 0.41 #pacifism max spending is 0.4
-    }
+		military_spending = 0.41 #pacifism max spending is 0.4
+	}
 
-    mean_time_to_happen = {
-        months = 60
-        modifier = {
-            factor = 0.8
-            military_spending = 0.99
-        }
-        modifier = {
-            factor = 1.5
-            is_greater_power = no 
-        }
-        modifier = {
-            factor = 0.8
-            rank = 2
-        }
-        modifier = {
-            factor = 0.8
-            war = no
-        }
-        modifier = {
-            factor = 1.2
-            national_provinces_occupied = 0.1
-        }
-        modifier = {
-            factor = 1.5
-            has_country_modifier = international_pariah
-        }
-        modifier = {
-            factor = 1.2
-            capital_scope = { has_province_modifier = bomb_damage }
-        }
-    }
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.8
+			military_spending = 0.99
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = no 
+		}
+		modifier = {
+			factor = 0.8
+			rank = 2
+		}
+		modifier = {
+			factor = 0.8
+			war = no
+		}
+		modifier = {
+			factor = 1.2
+			national_provinces_occupied = 0.1
+		}
+		modifier = {
+			factor = 1.5
+			has_country_modifier = international_pariah
+		}
+		modifier = {
+			factor = 1.2
+			capital_scope = { has_province_modifier = bomb_damage }
+		}
+	}
 
-    option = {
-        name = "Excellent"
-        prestige = 50
-        remove_country_modifier = nuke_tier_0
-        add_country_modifier = { name = nuke_tier_1 duration = -1 }
-        set_country_flag = has_f_bomb
-    }
+	option = {
+		name = "Excellent"
+		prestige = 50
+		remove_country_modifier = nuke_tier_0
+		add_country_modifier = { name = nuke_tier_1 duration = -1 }
+		set_country_flag = has_f_bomb
+	}
 }
 
 country_event = {
-    id = 6001002
-    title = "$COUNTRY_ADJ$ Mass Produced Bomb"
-    desc = EVTDESC6001002
+	id = 6001002
+	title = "$COUNTRY_ADJ$ Mass Produced Bomb"
+	desc = EVTDESC6001002
 
-    picture = "nuke_t2"
+	picture = "nuke_t2"
 
-    trigger = {
-        has_country_flag = nuclear_weapons_program
-        has_country_modifier = nuke_tier_1
-        NOT = { has_country_modifier = academic_confusion }
+	trigger = {
+		has_country_flag = nuclear_weapons_program
+		has_country_modifier = nuke_tier_1
+		NOT = { has_country_modifier = academic_confusion }
 		NOT = { has_country_modifier = nuclear_system_down }
 		NOT = { has_country_modifier = nukes_used_recently }
-        military_spending = 0.41 #pacifism max spending is 0.4
-    }
+		military_spending = 0.41 #pacifism max spending is 0.4
+	}
 
-    mean_time_to_happen = {
-        months = 60
-        modifier = {
-            factor = 0.8
-            military_spending = 0.99
-        }
-        modifier = {
-            factor = 1.5
-            is_greater_power = no 
-        }
-        modifier = {
-            factor = 0.8
-            rank = 2
-        }
-        modifier = {
-            factor = 0.8
-            war = no
-        }
-        modifier = {
-            factor = 1.2
-            national_provinces_occupied = 0.1
-        }
-        modifier = {
-            factor = 1.5
-            has_country_modifier = international_pariah
-        }
-        modifier = {
-            factor = 1.2
-            capital_scope = { has_province_modifier = bomb_damage }
-        }
-    }
+	mean_time_to_happen = {
+		months = 60
+		modifier = {
+			factor = 0.8
+			military_spending = 0.99
+		}
+		modifier = {
+			factor = 1.5
+			is_greater_power = no 
+		}
+		modifier = {
+			factor = 0.8
+			rank = 2
+		}
+		modifier = {
+			factor = 0.8
+			war = no
+		}
+		modifier = {
+			factor = 1.2
+			national_provinces_occupied = 0.1
+		}
+		modifier = {
+			factor = 1.5
+			has_country_modifier = international_pariah
+		}
+		modifier = {
+			factor = 1.2
+			capital_scope = { has_province_modifier = bomb_damage }
+		}
+	}
 
-    option = {
-        name = "Excellent"
-        remove_country_modifier = nuke_tier_1
-        add_country_modifier = { name = nuke_tier_2 duration = -1 }
-        set_country_flag = has_lotsa_bomb
-    }
+	option = {
+		name = "Excellent"
+		remove_country_modifier = nuke_tier_1
+		add_country_modifier = { name = nuke_tier_2 duration = -1 }
+		set_country_flag = has_lotsa_bomb
+	}
 }
 
 #### Nuke Hit ####
@@ -492,15 +503,15 @@ country_event = {
 		any_owned = {
 			limit = { has_province_modifier = nuke_target }
 			remove_province_modifier = nuke_target
-			add_province_modifier = { name = province_nuked duration = 30 }
-			add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-			add_province_modifier = { name = bomb_damage duration = 1470 }
-			add_province_modifier = { name = hot_particles duration = 10950 }
+			add_province_modifier = { name = province_nuked duration = 14 }
+			add_province_modifier = { name = hot_particles duration = 100 }
+			add_province_modifier = { name = heavy_bomb_damage duration = 730 }
+			add_province_modifier = { name = bomb_damage duration = 1825 }
 			infrastructure = -2
 			naval_base = -2
 			fort = -2
 
-	    	any_pop = {
+			any_pop = {
 				limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
 				reduce_pop = 0.875
 			}
@@ -535,10 +546,10 @@ country_event = {
 
 		any_owned = {
 			limit = { is_capital = yes }
-			add_province_modifier = { name = province_nuked duration = 30 }
-			add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-			add_province_modifier = { name = bomb_damage duration = 1470 }
-			add_province_modifier = { name = hot_particles duration = 10950 }
+			add_province_modifier = { name = province_nuked duration = 14 }
+			add_province_modifier = { name = hot_particles duration = 100 }
+			add_province_modifier = { name = heavy_bomb_damage duration = 730 }
+			add_province_modifier = { name = bomb_damage duration = 1825 }
 			infrastructure = -2
 			naval_base = -2
 			fort = -2
@@ -548,7 +559,7 @@ country_event = {
 					add_province_modifier = { name = hot_particles duration = 3650 }
 				}
 			}
-	    	any_pop = {
+			any_pop = {
 				limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
 				reduce_pop = 0.875
 			}
@@ -560,20 +571,20 @@ country_event = {
 
 		any_owned = {
 			limit = { total_pops = 1000000 }
-			add_province_modifier = { name = province_nuked duration = 30 }
-			add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-			add_province_modifier = { name = bomb_damage duration = 1470 }
-			add_province_modifier = { name = hot_particles duration = 10950 }
+			add_province_modifier = { name = province_nuked duration = 14 }
+			add_province_modifier = { name = hot_particles duration = 100 }
+			add_province_modifier = { name = heavy_bomb_damage duration = 730 }
+			add_province_modifier = { name = bomb_damage duration = 1825 }
 			infrastructure = -2
 			naval_base = -2
 			fort = -2
 			state_scope = {
 				any_owned = {
 					limit = { NOT = { has_province_modifier = hot_particles } }
-					add_province_modifier = { name = hot_particles duration = 3650 }
+					add_province_modifier = { name = hot_particles duration = 100 }
 				}
 			}
-	    	any_pop = {
+			any_pop = {
 				limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
 				reduce_pop = 0.875
 			}
@@ -604,20 +615,20 @@ country_event = {
 
 		any_owned = {
 			limit = { is_capital = yes }
-			add_province_modifier = { name = province_nuked duration = 30 }
-			add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-			add_province_modifier = { name = bomb_damage duration = 1470 }
-			add_province_modifier = { name = hot_particles duration = 10950 }
+			add_province_modifier = { name = province_nuked duration = 14 }
+			add_province_modifier = { name = hot_particles duration = 100 }
+			add_province_modifier = { name = heavy_bomb_damage duration = 730 }
+			add_province_modifier = { name = bomb_damage duration = 1825 }
 			infrastructure = -2
 			naval_base = -2
 			fort = -2
 			state_scope = {
 				any_owned = {
 					limit = { NOT = { has_province_modifier = hot_particles } }
-					add_province_modifier = { name = hot_particles duration = 3650 }
+					add_province_modifier = { name = hot_particles duration = 100 }
 				}
 			}
-	    	any_pop = {
+			any_pop = {
 				limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
 				reduce_pop = 0.875
 			}
@@ -629,20 +640,20 @@ country_event = {
 
 		any_owned = {
 			limit = { total_pops = 500000 }
-			add_province_modifier = { name = province_nuked duration = 30 }
-			add_province_modifier = { name = heavy_bomb_damage duration = 365 }
-			add_province_modifier = { name = bomb_damage duration = 1470 }
-			add_province_modifier = { name = hot_particles duration = 10950 }
+			add_province_modifier = { name = province_nuked duration = 14 }
+			add_province_modifier = { name = hot_particles duration = 100 }
+			add_province_modifier = { name = heavy_bomb_damage duration = 730 }
+			add_province_modifier = { name = bomb_damage duration = 1825 }
 			infrastructure = -2
 			naval_base = -2
 			fort = -2
 			state_scope = {
 				any_owned = {
 					limit = { NOT = { has_province_modifier = hot_particles } }
-					add_province_modifier = { name = hot_particles duration = 3650 }
+					add_province_modifier = { name = hot_particles duration = 100 }
 				}
 			}
-	    	any_pop = {
+			any_pop = {
 				limit = { OR = { strata = middle type = craftsmen type = soldiers } } #lives in cities
 				reduce_pop = 0.875
 			}
@@ -674,7 +685,12 @@ country_event = {
 
 	option = {
 		name = "Demand that our enemies capitulate!"
-		set_global_flag = nukes_used_global
+		random_owned = {
+			limit = { NOT = { has_global_flag = nukes_used_global } }
+			owner = { set_global_flag = nukes_used_global }
+			owner = { set_country_flag = first_nuclear_bombing_campaign }
+		}
+
 		add_country_modifier = { name = nukes_used_recently duration = 365 }
 		badboy = 20
 		any_pop = { limit = { NOT = { type = clergymen } } dominant_issue = { value = pacifism factor = 0.1 } }
@@ -692,13 +708,19 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = { factor = 0 war_exhaustion = 50 }
-			modifier = { factor = 0 national_provinces_occupied = 0.50 } 
+			modifier = { factor = 0 national_provinces_occupied = 0.50 }
+			modifier = { factor = 0.1 NOT = { has_global_flag = nukes_used_global } }
 		}
 	}
 
 	option = {
 		name = "Demand a white peace!"
-		set_global_flag = nukes_used_global
+		random_owned = {
+			limit = { NOT = { has_global_flag = nukes_used_global } }
+			owner = { set_global_flag = nukes_used_global }
+			owner = { set_country_flag = first_nuclear_bombing_campaign }
+		}
+
 		add_country_modifier = { name = nukes_used_recently duration = 365 }
 		badboy = 10
 		any_pop = { limit = { NOT = { type = clergymen } } dominant_issue = { value = pacifism factor = 0.05 } }
@@ -718,9 +740,14 @@ country_event = {
 
 	option = {
 		name = "Launch a limited attack on strategic targets!"
-		set_global_flag = nukes_used_global
+		random_owned = {
+			limit = { NOT = { has_global_flag = nukes_used_global } }
+			owner = { set_global_flag = nukes_used_global }
+			owner = { set_country_flag = first_nuclear_bombing_campaign }
+		}
+
 		add_country_modifier = { name = nukes_used_recently duration = 14 }
-		badboy = 5
+		badboy = 2.5
 
 		random_country = {
 			limit = { war_with = THIS total_num_of_ports = 1 }
@@ -810,14 +837,21 @@ country_event = {
 			modifier = { factor = 0 war_exhaustion = 50 }
 			modifier = { factor = 0 national_provinces_occupied = 0.50 }
 			modifier = { factor = 0 badboy = 0.8 }
+			modifier = { factor = 0.1 NOT = { has_global_flag = nukes_used_global } }
 		}
 	}
 
 	option = {
 		name = "Launch a limited attack on tactical targets!"
-		set_global_flag = nukes_used_global
+
+		random_owned = {
+			limit = { NOT = { has_global_flag = nukes_used_global } }
+			owner = { set_global_flag = nukes_used_global }
+			owner = { set_country_flag = first_nuclear_bombing_campaign }
+		}
+
 		add_country_modifier = { name = nukes_used_recently duration = 14 }
-		badboy = 5
+		badboy = 2.5
 
 		random_country = {
 			limit = { war_with = THIS }
@@ -1098,29 +1132,29 @@ country_event = {
 #### misc nuke stuff ####
 
 country_event = {
-    id = 6001300
-    title = "$COUNTRY_ADJ$ Nuclear System Disabled"
-    desc = "The $COUNTRY_ADJ$ nuclear launch and control system has been heavily damaged and will need time for repairs."
-    picture = "nuclear_system_down"
-    is_triggered_only = yes
-    option = {
-        name = "We will be unable to launch nuclear strikes for some time"
-        add_country_modifier = { name = nuclear_system_down duration = 60 }
-    }
+	id = 6001300
+	title = "$COUNTRY_ADJ$ Nuclear System Disabled"
+	desc = "The $COUNTRY_ADJ$ nuclear launch and control system has been heavily damaged and will need time for repairs."
+	picture = "nuclear_system_down"
+	is_triggered_only = yes
+	option = {
+		name = "We will be unable to launch nuclear strikes for some time"
+		add_country_modifier = { name = nuclear_system_down duration = 60 }
+	}
 }
 
 country_event = {
-    id = 6001301
-    title = "Nuclear Accident"
-    desc = EVTDESC6001301
-    picture = "nuclear_accident"
+	id = 6001301
+	title = "Nuclear Accident"
+	desc = EVTDESC6001301
+	picture = "nuclear_accident"
 
-    trigger = {
-        has_country_flag = nuclear_program
-    }
+	trigger = {
+		has_country_flag = nuclear_program
+	}
 
-    mean_time_to_happen = {
-        months = 900
+	mean_time_to_happen = {
+		months = 900
 		modifier = {
 			factor = 0.9
 			NOT = { administration_spending = 0.49 }
@@ -1129,24 +1163,24 @@ country_event = {
 			factor = 0.9
 			NOT = { administration_spending = 0.24 }
 		}
-        modifier = {
-            factor = 1.5
-            safety_regulations = acceptable_safety
-        }
-        modifier = {
-            factor = 2
-            safety_regulations = good_safety
-        }
-    }
+		modifier = {
+			factor = 1.5
+			safety_regulations = acceptable_safety
+		}
+		modifier = {
+			factor = 2
+			safety_regulations = good_safety
+		}
+	}
 
-    option = {
-        name = "Begin evacuation and cleanup immediately!"
+	option = {
+		name = "Begin evacuation and cleanup immediately!"
 
-        NWO = { change_variable = { which = nuclear_accident_counter value = 1 } }
+		NWO = { change_variable = { which = nuclear_accident_counter value = 1 } }
 
-        prestige = -50
-        random_state = {
-			any_owned = { add_province_modifier = { name = hot_particles duration = 395 } }
+		prestige = -50
+		random_state = {
+			any_owned = { add_province_modifier = { name = hot_particles duration = 100 } }
 			any_pop = {
 				consciousness = 1
 				dominant_issue = { value = pacifism factor = 0.1 }
@@ -1155,49 +1189,49 @@ country_event = {
 		any_pop = {
 			dominant_issue = { value = pacifism factor = 0.01 }
 		}
-    }
+	}
 }
 
-province_event = {
-    id = 6001302
-    title = "Fallout Spreads to $STATENAME$"
-    desc = EVTDESC6001302
-
-    trigger = {
-        any_neighbor_province = { has_province_modifier = hot_particles }
-    }
-
-    mean_time_to_happen = {
-        months = 900
-		modifier = {
-			factor = 0.9
-			NOT = { owner = { administration_spending = 0.24 } }
-		}
-		modifier = {
-			factor = 0.9
-			NOT = { owner = { administration_spending = 0.49 } }
-		}
-        modifier = {
-            factor = 1.5
-            safety_regulations = acceptable_safety
-        }
-        modifier = {
-            factor = 2
-            safety_regulations = good_safety
-        }
-    }
-
-    option = {
-        name = "This is concerning."
-
-        NWO = { change_variable = { which = fallout_spreads_counter value = 1 } }
-
-        state_scope = {
-			any_owned = { add_province_modifier = { name = hot_particles duration = 395 } }
-			any_pop = {
-				consciousness = 1
-				dominant_issue = { value = pacifism factor = 0.1 }
-			}
-		}
-    }
-}
+#province_event = {
+#	id = 6001302
+#	title = "Fallout Spreads to $STATENAME$"
+#	desc = EVTDESC6001302
+#
+#	trigger = {
+#		any_neighbor_province = { has_province_modifier = hot_particles }
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 900
+#		modifier = {
+#			factor = 0.9
+#			NOT = { owner = { administration_spending = 0.24 } }
+#		}
+#		modifier = {
+#			factor = 0.9
+#			NOT = { owner = { administration_spending = 0.49 } }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			safety_regulations = acceptable_safety
+#		}
+#		modifier = {
+#			factor = 2
+#			safety_regulations = good_safety
+#		}
+#	}
+#
+#	option = {
+#		name = "This is concerning."
+#
+#		NWO = { change_variable = { which = fallout_spreads_counter value = 1 } }
+#
+#		state_scope = {
+#			any_owned = { add_province_modifier = { name = hot_particles duration = 395 } }
+#			any_pop = {
+#				consciousness = 1
+#				dominant_issue = { value = pacifism factor = 0.1 }
+#			}
+#		}
+#	}
+#}

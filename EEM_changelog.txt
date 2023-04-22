@@ -46,23 +46,48 @@ industry = 23 + 4
 ####################################################################################################
 Coming soon: 
 
-#TODO: purchase battleship
-
-#TODO: fix accepting black pops in the New World
-
 #TODO: soldiers in state capitals only?
 
 #TODO: remove random British cores in Alberta
 #TODO: Turkestan doesn't get any cores if formed externally (is this intended?)
 #TODO: the CSA is really ugly without Arkansas 
+#TODO: purchase battleship
+#TODO: fix accepting black pops in the New World
 
 #TODO: redo all the unit graphics dds in GIMP to prevent compression issues
 #TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
 
-#TODO: Western governments have crippled [insert country here] with sanctions, and then sent in friendly NGOs to pick up the slack.
+#TODO: Western governments have crippled ____ with sanctions, and then sent in friendly NGOs to pick up the slack.
 
-#TODO: let China (and Tibet) reclaim 1593 Tawang (the bit of Tibet that gets siezed by British India)
-#TODO: more AI bullying for treaty ports
+#TODO: remove Yong Ying modifier?
+#TODO: Dogra-Tibetan War
+#TODO: Third Nepal-Tibet War
+#TODO: Treaty of Saint Petersburg (1881)
+#TODO: Sino-French War
+
+#TODO: Great Power Rivary
+#TODO: Democratic convention: As the leader of the free world, ...
+#TODO: Communist convention:
+	Of course we will attend!
+	Of course we will engage in typical petty infighting! Denounce ___ as revisionists
+
+
+#TODO: trade zones get Manchu accepted if created from Qing, and lose it if destroyed / independent / transferred
+
+####################################################################################################
+v0.5.8a
+
+Much reduced the duration of the nuclear fallout modifiers, increased the duration of strategic bomb damage to compensate. The duration of dangerous radioactivity and concerning radioactivity (0.01 R/h) in Nagasaki-type bombs only would last a few days and ~100 days respectively.
+Removed fallout spreads event
+Adjusted AI use of nukes
+Reduced infamy gain from limited nuclear strikes
+Strategic bombing damage no longer reduces local population growth and has increased economic effects and now uses the red factory icon
+Heavy strategic bombing and normal strategic bombing damage events are now mutually exclusive
+Heavy strategic bombing immediate pop deaths increased, adjusted damage modifier duration
+
+China and Tibet can reclaim 1593 Tawang (the bit of Tibet that gets siezed by British India during the Simla convention)
+The AI actually uses the CBs they get from the trade restrictions - generic opium war event chain now
+MAO renamed to Guizhou, starts with south han primary and miao (and yi) accepted instead of the other way around
 
 ####################################################################################################
 v0.5.8
@@ -85,9 +110,6 @@ invention localizations
 	7_army_army_doctrine_inventions complete
 	7_army_army_leadership_inventions complete
 	7_army_army_heavy_armament_inventions complete
-
-####################################################################################################
-v0.5.8 alpha
 
 Increase coal base production from 2.4 to 2.5 (HPM: 2.4)
 Reduce iron base production from 2.2 to 2 (HPM: 1.8)
@@ -115,7 +137,6 @@ Disabled become_qing decision
 improved performance of some new clean up decisions
 Reworded some locs
 
-####################################################################################################
 v0.5.7
 
 3323 Muzaffapur merged back into 1247 Patna
@@ -173,7 +194,6 @@ Wars with non-existent countries (eg: FRCA if it decides to fight on without own
 changed some AI behavior 
 gfx adjustments
 
-####################################################################################################
 v0.5.6h
 Zaranj, South Afghanistan no longer touches Zahedan, Kerman, in order to avoid stupid AI Afghanistan borders.
 Slightly increased grain production

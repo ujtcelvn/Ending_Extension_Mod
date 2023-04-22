@@ -1,7 +1,7 @@
 capital = 1505
-primary_culture = miao
+primary_culture = nanfaren
+culture = miao
 culture = yi
-culture = nanfaren
 religion = animist
 government = absolute_monarchy
 plurality = 0.0
