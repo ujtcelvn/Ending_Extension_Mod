@@ -26,7 +26,7 @@ EVTDESC96015;The defeat of $FROMCOUNTRY$ in their war has forced them to the neg
 EVTOPTA96015;$COUNTRY$ shall be free;$COUNTRY$ sera libre;$COUNTRY$ ist frei;;;;;;;;;;;
 EVTOPTB96015;$FROMCOUNTRY$ is our ally;$FROMCOUNTRY$ est notre allié;$FROMCOUNTRY$ ist unser Verbündetes;;;;;;;;;;;
 EVTNAME96016;The $FROMCOUNTRY_ADJ$ Colonies;Les Colonies $FROMCOUNTRY_ADJ$;Das $FROMCOUNTRY_ADJ$ Kolonien;;;;;;;;;;;
-EVTDESC96016;One of the matters discussed at the treaty talks is what to do with $FROMCOUNTRY$'s colonial holdings. They should not be allowed to keep these lands, but determinining how they should be disposed of is no simple matter. For now, agreement has been reached determining some of the territory, and any remaining will have to be negotiated over in the coming year.;;;;;;;;;;;;;
+EVTDESC96016;One of the matters discussed at the treaty talks is what to do with $FROMCOUNTRY$'s colonial holdings. They should not be allowed to keep these lands, but determining how they should be disposed of is no simple matter. For now, agreement has been reached determining some of the territory, and any remaining will have to be negotiated over in the coming year.;;;;;;;;;;;;;
 EVTOPTA96016;We will take what we can;Nous voulons autant que possible;Wir wünschen so viel wie möglich;;;;;;;;;;;
 EVTOPTB96016;Our only interest is limiting $FROMCOUNTRY_ADJ$ power;Nous voulons seulement;Wir wünschen nur wenig;;;;;;;;;;;
 EVTOPTC96016;We have no interest in their colonies;Nous ne voulons pas les colonies;Wir wünschen nicht die Kolonien;;;;;;;;;;;
