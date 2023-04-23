@@ -521,8 +521,9 @@ political_decisions = {
         picture = tibet_capital
         potential = {
             owns = 1587
-            NOT = { 1593 = { is_core = CHI } }
+            NOT = { 1593 = { is_core = THIS } }
             NOT = { is_our_vassal = TIB }
+            NOT = { has_country_flag = claimed_tawang }
             OR = {
                 tag = CHI
                 tag = KMT
@@ -553,6 +554,7 @@ political_decisions = {
                 owner = { relation = { who = THIS value = -200 } }
             }
             badboy = 2
+            set_country_flag = claimed_tawang
         }
         ai_will_do = { factor = 1 }
     }
