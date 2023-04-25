@@ -85,7 +85,7 @@ EVTDESC95316;A delegate from $FROMCOUNTRY$ has quietly approached the Canadian g
 EVTNAME96090;End of the $COUNTRY_ADJ$ Monarchy;;;;;;;;;;;;;
 EVTDESC96090;With the loss of $COUNTRY$ in the recent war, the $COUNTRY_ADJ$ monarchy has received much of the blame-- there have already been several assassination attempts, and calls within the government for the monarchy to step down. Sentiment in the public has turned to the notion of $COUNTRY$ becoming a democracy... though some fear this will plunge the nation into even further chaos.;;;;;;;;;;;;;
 EVTNAME96215;Indian Nationalists Victorious!;;;;;;;;;;;;;
-EVTDESC96215;Nationalists have succeedeed in taking over $COUNTRY_ADJ$ colonies in India. Our governors have been driven out and our territory lost.;;;;;;;;;;;;;
+EVTDESC96215;Nationalists have succeeded in taking over $COUNTRY_ADJ$ colonies in India. Our governors have been driven out and our territory lost.;;;;;;;;;;;;;
 EVTNAME97571;The Final Straw;;;;;;;;;;;;;
 EVTDESC97571;We have received reports from the Cape Colony that there has been yet another outbreak of violence between the Xhosa natives and the colonials. This time it is evidently caused by natives returning from the diamond mines, attempting to take back control of their lands without any consideration for due process. Many within the Cape Colony believe it is time that the military moved in and took over their lands completely.;;;;;;;;;;;;;
 EVTNAME98000;Border Dispute with the Zulu;;;;;;;;;;;;;
@@ -93,7 +93,7 @@ EVTDESC98000;The Zulus have slaughtered a $COUNTRY_ADJ$ regiment that entered th
 EVTNAME98001;The South African Union ;;;;;;;;;;;;;
 EVTDESC98001;The time has come to consider joining the South African union. ;;;;;;;;;;;;;
 EVTNAME98002;Annexation of the Transvaal;;;;;;;;;;;;;
-EVTDESC98002;Our colonial governor in South Africa declared an annexation of the Transvaal via special warrant several years ago, one that the Boers have stubbornly resisted. Both Transvaal and the Oranje Free State have considerable resources which would be of value to $COUNTRY$, and we must consider the idea that keeping them out of the hands of competitors for African dominance is just as much reason to annex them as using those resources for our ourselves. The Boer resistance has proven embarrasing. If we do not answer this with force, it will make the $COUNTRY_ADJ$ look weak to the world.;;;;;;;;;;;;;
+EVTDESC98002;Our colonial governor in South Africa declared an annexation of the Transvaal via special warrant several years ago, one that the Boers have stubbornly resisted. Both Transvaal and the Oranje Free State have considerable resources which would be of value to $COUNTRY$, and we must consider the idea that keeping them out of the hands of competitors for African dominance is just as much reason to annex them as using those resources for our ourselves. The Boer resistance has proven embarrassing. If we do not answer this with force, it will make the $COUNTRY_ADJ$ look weak to the world.;;;;;;;;;;;;;
 EVTNAME98003;The Anglo-Boer War;;;;;;;;;;;;;
 EVTDESC98003;The $FROMCOUNTRY_ADJ$ have gone to war with the Transvaal, and many Boers are fearful that $COUNTRY$ will surely be next. They are crying out to our government to ally with the Transvaalis and stop the $FROMCOUNTRY_ADJ$ from taking away their lands and their rights.;;;;;;;;;;;;;
 EVTNAME98004;South Africa is Ours!;;;;;;;;;;;;;
