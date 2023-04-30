@@ -72,7 +72,29 @@ Coming soon:
 	Of course we will engage in typical petty infighting! Denounce ___ as revisionists
 
 
+
+#TODO: 1st industrial revolution: coal and iron as limiter
+#TODO: 2nd industrial revolution makes coal and iron super cheap, shift to oil as limiter?
+
 #TODO: trade zones get Manchu accepted if created from Qing, and lose it if destroyed / independent / transferred
+
+####################################################################################################
+v0.5.8b
+
+Moved some South Han pops from Qinzhou to Nanning
+The Taiping / Red Turban leaders captured events are now merged
+If the Taiping / Red Turban rebellion is prevented, the Qing removes The Female Shortage modifier by westernizing, falling to anti-Qing rebels, or becoming China
+China explodes more prettily if anti-Qing rebels win
+Adjusted Punti-Hakka Clan War
+Disabled support Manchuria event chain
+Yuan Shikai can only become emperor after Mass Politics, also simplified its militancy gain
+
+The AI now is more likely to use the cb gained in Missionaries Executed event chain
+
+light and heavy strategic bombing no longer mutually exclusive, light bombing no longer damages infrastructure
+Craftsman exploit decision now has no cooldown but gives 1 infamy per use
+
+fixed some localizations
 
 ####################################################################################################
 v0.5.8a
@@ -85,12 +107,9 @@ Strategic bombing damage no longer reduces local population growth and has incre
 Heavy strategic bombing and normal strategic bombing damage events are now mutually exclusive
 Heavy strategic bombing immediate pop deaths increased, adjusted damage modifier duration
 
-China and Tibet can reclaim 1593 Tawang (the bit of Tibet that gets siezed by British India during the Simla convention)
+China and Tibet can reclaim 1593 Tawang (the bit of Tibet that gets seized by British India during the Simla convention)
 The AI actually uses the CBs they get from the trade restrictions - generic opium war event chain now
 MAO renamed to Guizhou, starts with south han primary and miao (and yi) accepted instead of the other way around
-
-####################################################################################################
-v0.5.8
 
 You can now research and launch nukes
 Adjusted requirements to invent nuclear weapon theory

@@ -186,6 +186,10 @@ country_event = {
             limit = { owner = { has_country_modifier = yong_ying } }
             owner = { remove_country_modifier = yong_ying }
         }
+        random_owned = {
+            limit = { owner = { has_country_modifier = the_female_shortage } }
+            owner = { remove_country_modifier = the_female_shortage }
+        }
 
         any_country = {
             limit = {

@@ -48,7 +48,7 @@ country_event = {
     }
 
     option = {
-        name = "At least it's not the Huang He this time..."
+        name = "At least it's not the Huang He again..."
         set_global_flag = huang5
         2221 = {
             any_pop = {
@@ -263,8 +263,9 @@ country_event = {
 #Memories of the Ming
 country_event = {
     id = 165100
-    title = "White Lotus Society"
-    desc = "Secret societies such as the White Lotus Society have been formenting resistance against non-Han rule ever since the Yuan dynasty. After the fall of the Ming, secret societies are once again plotting rebellion."
+    title = "EVTNAME165100" #White Lotus Society
+    desc = "EVTDESC165100"
+
     picture = "white_lotus"
 	
     fire_only_once = yes
@@ -280,7 +281,7 @@ country_event = {
     }
 
     option = {
-        name = "Rebels will be punished"
+        name = "EVT165100OPTA"
         set_country_flag = ming_larpers
         set_variable = {
             which = ming_provinces
@@ -299,7 +300,7 @@ country_event = {
 country_event = {
     id = 165101
     title = "The Tiandihui"
-    desc = "The Heaven and Earth Society was founded as a mutual aid society in 1761 but was forced into its anti-Qing activity after the Qing decreed membership in secret societies illegal."
+    desc = "The Heaven and Earth Society was founded as a mutual aid society in 1761 but was forced into anti-Qing activity after the Qing decreed membership in secret societies illegal."
     picture = "tiandihui"
 	
     fire_only_once = yes
@@ -386,7 +387,7 @@ country_event = {
 country_event = {
     id = 165102
     title = "The Gelaohui"
-    desc = "The Elder Brother Society, also known as the Hatchet Gang for the small hatchet every member carried, is a fraternal society that foreigners - both Manchu and Western."
+    desc = "The Elder Brother Society, also known as the Hatchet Gang for the small hatchet every member carried, is a fraternal society that despises foreigners - both Manchu and Western."
     picture = "gelaohui"
 	
     fire_only_once = yes
@@ -505,6 +506,7 @@ province_event = {
             #has_country_flag = gelaohui
             NOT = { has_global_flag = ming_has_happened }
             NOT = { has_global_flag = taiping_has_happened }
+            NOT = { has_global_flag = ming_has_been_prevented }
 
         }
         NOT = {
@@ -664,7 +666,7 @@ province_event = {
 country_event = {
     id = 165200
     title = "The Red Turban Rebellion"
-    desc = "Tiandihui and Gelaohui members, inspired by the Red Turban Rebellion that overthrew the Mongloian Yuan Dynasty, are sporting red turbans and rebelling against Qing rule!"
+    desc = "Tiandihui and Gelaohui members, inspired by the Red Turban Rebellion that overthrew the Yuan Dynasty, are sporting red turbans and rebelling against Qing rule."
     picture = "red_turban_attack"
     #news = yes
     #news_desc_long = "Secret society members have revolted in the Qing Empire!"
@@ -676,6 +678,7 @@ country_event = {
         tag = QNG
         NOT = { has_global_flag = taiping_has_happened }
         NOT = { has_global_flag = ming_has_happened }
+        NOT = { has_global_flag = ming_has_been_prevented }
         has_country_flag = ming_larpers
         has_country_flag = tiandihui
         has_country_flag = gelaohui
@@ -1688,7 +1691,7 @@ country_event = {
     }
 
     option = {
-        name = "The Gelaohui and will exterminate the barbarians!"
+        name = "The Gelaohui will exterminate the barbarians!"
         add_country_modifier = {
             name = national_confusion
             duration = 1095
@@ -1781,7 +1784,7 @@ country_event = {
     }
 
     option = {
-        name = "Keep the current balance."
+        name = "The current arrangement is fine."
 
         any_pop = {
             limit = {
@@ -1832,6 +1835,7 @@ country_event = {
     
     trigger = {
         tag = RTR
+        war = no
         OR = { 
             has_global_flag = ming_victorious
             has_global_flag = ming_victorious_2
@@ -1864,7 +1868,7 @@ country_event = {
     }
 
     option = {
-        name = "The Triads will rule China!"
+        name = "Let the Triads take control."
         set_country_flag = triad_ming
 
         government = bourgeois_dictatorship
@@ -1941,13 +1945,13 @@ country_event = {
     }
 
     option = {
-        name = "Criminal organizations have no place in China!"
+        name = "Stop the criminal organizations at any cost!"
         set_country_flag = triad_ming
         any_pop = {
-            limit = {
-                is_primary_culture = yes
-                is_accepted_culture = yes
-            }
+            #limit = {
+            #    is_primary_culture = yes
+            #    is_accepted_culture = yes
+            #}
             scaled_militancy = { 
                 factor = 9 
                 ideology = anarcho_liberal
@@ -2327,29 +2331,36 @@ country_event = {
 country_event = {
     id = 166225
     title = "Punti-Hakka Clan Wars"
-    desc = "The Cantonese and the Hakka are feuding once again, this time due to accusations of collaboration and treason after the southern rebellions."
+    desc = "The Cantonese and the Hakka are feuding once again!"
     picture = "punti_hakka"
     fire_only_once = yes
 
     trigger = {
+        tag = QNG
         owns = 1493 #Canton
         has_global_flag = taiping_has_been_defeated
         has_global_flag = ming_has_been_defeated
         NOT = { has_global_flag = punti_hakka_war_happened }
     }
 
-    #mean_time_to_happen = { months = 12 }
+    mean_time_to_happen = { months = 12 }
 
     option = {
         name = "The fools bicker."
         set_global_flag = punti_hakka_war_happened
         CHI_1493 = {
-            #limit = { owned_by = QNG }
+			#12.72 million population * 0.05 = ~636,000 casulties
             any_pop = {
-                limit = { OR = { culture = yue culture = hakka } }
+                limit = { culture = hakka }
                 militancy = 2
                 consciousness = 5
-                reduce_pop = 0.95 #12.72 million population * 0.05 = ~636,000 casulties
+                reduce_pop = 0.9
+            }
+            any_pop = {
+                limit = { culture = yue }
+                militancy = 2
+                consciousness = 5
+                reduce_pop = 0.975
             }
             add_province_modifier = {
                 name = war_torn
@@ -2463,118 +2474,15 @@ country_event = {
 #    }
 #}
 
-country_event = {
-    id = 166302
-    title = "EVTNAME166302" #Support Qing Manchuria to fight the Taiping / Red Turbans / China
-    desc = "EVTDESC166302"
-    picture = "taiping"
-
-    fire_only_once = yes
-
-    trigger = {
-        OR = {
-            AND = {
-                is_sphere_leader_of = MCK
-                OR = { 
-                    capital_scope = { continent = europe }
-                    tag = JAP
-                    tag = TKG
-                }
-            }
-            AND = {
-                tag = ENG
-                is_greater_power = yes
-                MCK = { part_of_sphere = no }
-            }
-        }
-        war = no
-
-        NOT = { exists = QNG }
-
-        MCK = {
-            total_amount_of_divisions = 1
-            war = no
-            NOT = { truce_with = TPG }
-            NOT = { truce_with = RTR }
-            NOT = { truce_with = CHI }
-            NOT = { truce_with = KMT }
-            OR = {
-                government = absolute_monarchy
-                government = prussian_constitutionalism
-                government = hms_government
-            }
-            OR = {
-                is_vassal = no
-                is_substate = no
-            }
-        }
-
-        OR = {
-            AND = {
-                exists = TPG
-                #TPG = { civilized = no }
-                NOT = { truce_with = TPG }
-                NOT = { war_with = TPG }
-                has_global_flag = taiping_victorious
-            }
-            AND = {
-                exists = RTR
-                #RTR = { civilized = no }
-                NOT = { truce_with = RTR }
-                NOT = { war_with = RTR }
-                OR = { 
-                    has_global_flag = ming_victorious
-                    has_global_flag = ming_victorious_2
-                }
-            }
-            AND = {
-                exists = CHI
-                #CHI = { civilized = no }
-                NOT = { truce_with = CHI }
-                NOT = { war_with = CHI }
-                has_global_flag = china_formed
-            }
-        }
-
-    }
-
-    mean_time_to_happen = {
-        months = 12
-    }
-
-    option = {
-        name = "EVT166302OPTA"
-        badboy = 5
-
-        MCK = { country_event = 166304 }
-
-        ai_chance = {
-            factor = 80
-            modifier = {
-                factor = 0
-                war_policy = pacifism
-            }
-            modifier = {
-                factor = 0
-                badboy = 0.9
-            }
-            modifier = {
-                factor = 0.5
-                OR = {
-                    any_greater_power = { war_with = THIS }
-                    war_policy = anti_military
-                }
-            }
-        }
-    }
-
-    option = {
-        name = "EVT166302OPTB"
-        ai_chance = {
-            factor = 20
-        }
-    }
-}
+#country_event = {
+#    id = 166302
+#    title = "EVTNAME166302" #Support Qing Manchuria to fight the Taiping / Red Turbans / China
+#    desc = "EVTDESC166302"
+#    picture = "taiping"
+#        name = "EVT166302OPTA"
+#        MCK = { country_event = 166304 }
+#        name = "EVT166302OPTB"
+#}
 
 
 country_event = {
@@ -2620,233 +2528,30 @@ country_event = {
     }
 }
 
-country_event = {
-    id = 166304
-    title = "$FROMCOUNTRY_ADJ$ Support"
-    desc = "$FROMCOUNTRY_ADJ$ officials claim that the $FROMCOUNTRY$ is ready to help us restore the Qing Empire. However, if we succeed, they demand a treaty port as compensation."
-    picture = "red_turban_attack"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "We must crush the rebels, no matter the cost."
-        set_country_flag = mck_promised_treaty_port
-
-        prestige = -5
-        leadership = 20
-        war_exhaustion = -20
-        years_of_research = 0.1
-        add_country_modifier = { name = european_military_mission duration = 1825 }
-
-        any_pop = {
-            ideology = {
-                factor = 0.05
-                value = reactionary
-            }
-        }
-
-        relation = { who = FROM value = 400 }
-        FROM = { set_country_flag = supports_mck }
-        set_global_flag = supports_mck_global
-
-        random_country = {
-            limit = {
-                tag = TPG
-                exists = yes
-            }
-            MCK = {
-                war = {
-                    target = TPG
-                    attacker_goal = { casus_belli = civil_war }
-                    defender_goal = { casus_belli = civil_war }
-                    call_ally = yes
-                }
-            }
-		    FROM = {
-                war = {
-                    target = TPG
-                    attacker_goal = { casus_belli = cut_down_to_size }
-                    call_ally = yes
-                }
-            }
-        }
-
-        random_country = {
-            limit = {
-                tag = RTR
-                exists = yes
-            }
-            MCK = {
-                war = {
-                    target = RTR
-                    attacker_goal = { casus_belli = civil_war }
-                    defender_goal = { casus_belli = civil_war }
-                    call_ally = yes
-                }
-            }
-		    FROM = {
-                war = {
-                    target = RTR
-                    attacker_goal = { casus_belli = cut_down_to_size }
-                    call_ally = yes
-                }
-            }
-        }
-
-        random_country = {
-            limit = {
-                tag = CHI
-                exists = yes
-            }
-            MCK = {
-                war = {
-                    target = CHI
-                    attacker_goal = { casus_belli = civil_war }
-                    defender_goal = { casus_belli = civil_war }
-                    call_ally = yes
-                }
-            }
-		    FROM = {
-                war = {
-                    target = CHI
-                    attacker_goal = { casus_belli = cut_down_to_size }
-                    call_ally = yes
-                }
-            }
-        }
-
-        small_arms = 20
-        ammunition = 20
-        canned_food = 20
-
-        ai_chance = {
-            factor = 80
-        }
-    }
-
-    option = {
-        name = "Refuse the offer."
-
-        relation = { who = FROM value = -25 }
-
-        ai_chance = {
-            factor = 20
-            modifier = {
-                factor = 2
-                NOT = { total_amount_of_divisions = 2 }
-            }
-            modifier = {
-                factor = 2
-                NOT = { total_amount_of_divisions = 3 }
-            }
-        }
-    }
-}
+#country_event = {
+#    id = 166304
+#    title = "$FROMCOUNTRY_ADJ$ Support"
+#    desc = "$FROMCOUNTRY_ADJ$ officials claim that $FROMCOUNTRY$ is ready to help us restore the Qing Empire. However, if we succeed, they demand a treaty port as compensation."
+#    picture = "red_turban_attack"
+#}
 
 
-country_event = {
-    id = 166305
-    title = "Anti-Qing Rebels Crushed with Western Support"
-    desc = "With western support, we have crushed the anti-Qing rebels. It is time for us to give up a treaty port as compensation, as we promised."
-    fire_only_once = yes
-    picture = "bazaar"
-
-    trigger = {
-        OR = { tag = MCK tag = QNG }
-        has_country_flag = mck_promised_treaty_port
-        NOT = { exists = TPG }
-        NOT = { exists = RTR }
-        NOT = { exists = CHI }
-        war = no
-        civilized = no
-        has_global_flag = supports_mck_global
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        name = "We have no choice but to comply" #give them a treaty port
-        clr_global_flag = supports_mck_global
-        clr_country_flag = mck_promised_treaty_port
-
-        random_country = {
-            limit = {
-                has_country_flag = supports_mck
-            }
-            clr_country_flag = supports_mck
-            relation = { who = THIS value = 400 }
-            country_event = 166306
-        }
-
-        remove_country_modifier = trade_restrictions
-        clr_country_flag = tore_up_unequal_treaties
-
-        add_country_modifier = { name = legation_quarter duration = 3650 }
-        random_owned = {
-            limit = {
-                port = yes
-                NOT = { has_province_modifier = foreign_smugglers }
-            }
-            add_province_modifier = {
-                name = foreign_smugglers
-                duration = 3650
-            }
-            state_scope = {
-                any_owned = {
-                    add_province_modifier = {
-                        name = local_opium_habit
-                        duration = 3650
-                    }
-                }
-            }
-        }
-
-        any_pop = {
-            limit = { is_primary_culture = no }
-            militancy = 3
-        }
-    }
-}
+#country_event = {
+#    id = 166305
+#    title = "Anti-Qing Rebels Crushed with Western Support"
+#    desc = "With western support, we have crushed the anti-Qing rebels. It is time for us to give up a treaty port as compensation, as we promised."
+#    fire_only_once = yes
+#    picture = "bazaar"
+#            country_event = 166306
+#}
 
 
-
-country_event = {
-    id = 166306
-    title = "Manchu Victory"
-    desc = "With our support, the Manchu have crushed the Chinese rebellion. As promised, they have given us a treaty port, if they had one available."
-    picture = "tea_weighing_station"
-    is_triggered_only = yes
-
-    option = {
-        name = "Excellent"
-        prestige = 10
-
-        FROM = {
-            random_owned = {
-                limit = {
-                    OR = {
-                        province_id = 1498 #Macao
-                        province_id = 1538 #Shanghai
-                        province_id = 1496 #Hong Kong
-                        province_id = 1566 #Qingdao
-                        province_id = 1569 #Weihaiwei
-                        province_id = 1606 #Jiaxing
-                        #province_id = 2681 #Taibei
-                        #province_id = 2562 #Tainan
-                        province_id = 1499 #Hainan
-                        province_id = 2632 #Kwangchowan
-                    }
-                }
-                secede_province = THIS
-            }
-        }
-    }
-}
-
-
-
+#country_event = {
+#    id = 166306
+#    title = "$FROMCOUNTRY_ADJ$ Treaty Port Transfer"
+#    desc = "As promised, $FROMCOUNTRY$ has ceded a treaty port, if they had one available."
+#    picture = "tea_weighing_station"
+#}
 
 #166307
 
@@ -2945,7 +2650,7 @@ country_event = {
 country_event = {
     id = 166310
     title = "Anti-Taiping Secret Societies"
-    desc = "Following an incident where Taiping troops clashed with villagers over our destruction of a local temple honoring their ancestors, the Tiandihui have begun organizing militas defending their temples and shrines."
+    desc = "A mob has attacked our troops who were trying to demolish a non-Taiping temple. It appears the Tiandihui is still active and is organizing militas to oppose our Christianization efforts."
 
     fire_only_once = yes
     picture = "black_flag_army"
@@ -3942,7 +3647,7 @@ country_event = {
 province_event = {
     id = 165320
     title = "Secret Societies Spread to $STATENAME$!"
-    desc = "The Tiandihui and Gelaohui have recruited many members in $STATENAME$"
+    desc = "Anti-Taiping secret societies have spread to $STATENAME$."
 
     trigger = {
         owner = {
@@ -3964,10 +3669,10 @@ province_event = {
             region = CHI_1559
             region = CHI_2221
 
-            region = CHI_1508 #Nian Rebellion
-            region = CHI_1510
-            region = CHI_1563
-            region = CHI_1565
+            #region = CHI_1508 #Nian Rebellion
+            #region = CHI_1510
+            #region = CHI_1563
+            #region = CHI_1565
         }
         is_core = CHI
         is_primary_culture = no
@@ -4125,7 +3830,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        days = 7 #1
+        months = 1 #days = 7 #1
     }
 
     option = {
@@ -4169,7 +3874,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        days = 7 #1
+        months = 1 #days = 7 #1
     }
 
     option = {
@@ -4183,14 +3888,37 @@ country_event = {
 
 country_event = {
     id = 166502
-    title = "Chen Kai and Li Wenmao Captured!"
-    desc = "Local troops report that Chen Kai and Li Wenmao were captured after a raids of secret society meetings. The loss of their Alliance Masters will definitely cripple the Tiandihui's ability to organize."
+    title = "The Qing Stands Strong"
+    desc = "The successful Qing resistance to Western aggression has led to a decline of enthusiasm for revolutionary activity, at least for now."
     fire_only_once = yes
     picture = "peking_police"
 
     trigger = {
         tag = QNG
+        has_global_flag = qing_won_opium_war
+        civilized = no
+        has_country_modifier = uncivilized_isolationism
+        NOT = { has_country_modifier = legation_quarter }
+
+        NOT = { has_global_flag = taiping_has_happened }
+        NOT = { has_global_flag = taiping_has_been_defeated }
+        has_global_flag = hong
+        has_global_flag = yang
+        has_country_modifier = the_female_shortage
+        NOT = { has_global_flag = taiping_has_been_prevented }
+
+        NOT = { has_global_flag = ming_has_happened }
+        NOT = { has_global_flag = ming_has_been_defeated }
+        has_country_flag = ming_larpers
+        has_country_flag = tiandihui
+        has_country_flag = gelaohui
+        NOT = { has_global_flag = ming_has_been_prevented }
+
         war = no
+        has_recently_lost_war = no
+        is_disarmed = no
+        NOT = { num_of_revolts = 1 }
+        NOT = { average_militancy = 6 }
 
         owns = 1538 #Shanghai
         owns = 1496 #Hong Kong
@@ -4201,107 +3929,120 @@ country_event = {
         owns = 2562 #Tainan
         owns = 1499 #Hainan
         owns = 2632 #Kwangchowan
+        1593 = { is_core = CHI } #Tawang
+        1082 = { is_core = CHI } #Haishenwai
+
+        TPG = { exists = no }
+        RTR = { exists = no }
+        CHI = { exists = no }
+        FJN = { exists = no }
+        GNG = { exists = no }
+        GXI = { exists = no }
+        TAI = { exists = no }
 
         NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
-        has_recently_lost_war = no
-        NOT = { has_global_flag = ming_has_happened }
-        has_global_flag = qing_won_opium_war
-        NOT = { num_of_revolts = 1 }
     }
 
     mean_time_to_happen = {
-        months = 120
-        modifier = {
-            factor = 2
-            any_owned_province = { has_province_modifier = western_presence_research }
-        }
+        months = 180 #120
+        #modifier = {
+        #    factor = 2
+        #    any_owned_province = { has_province_modifier = western_presence_research }
+        #}
         modifier = {
             factor = 2
             has_country_modifier = european_military_mission 
         }
         modifier = {
-            factor = 2
-            has_country_modifier = legation_quarter 
+            factor = 1.2
+            average_militancy = 3
         }
         modifier = {
-            factor = 0.1
-            has_global_flag = qing_won_second_opium_war
+            factor = 1.2
+            average_militancy = 4
         }
+        modifier = {
+            factor = 1.2
+            average_militancy = 5
+        }
+        #modifier = {
+        #    factor = 0.1
+        #    has_global_flag = qing_won_second_opium_war #Arrow incident only occurs after taiping_has_happened
+        #}
     }
 
     option = {
         name = "Excellent!"
         any_owned = {
-            limit = { is_core = RTR }
-            add_province_modifier = {
-                name = anti_manchu_sentiment
-                duration = 1825
+            limit = { OR = { is_core = RTR is_core = TPG } }
+            any_pop = {
+                limit = { is_culture_group = east_asian NOT = { culture = manchu } }
+                consciousness = -1
             }
         }
-        set_global_flag = ming_has_happened
-        set_global_flag = ming_has_been_defeated
+        #set_global_flag = ming_has_happened
+        #set_global_flag = ming_has_been_defeated
+        set_global_flag = ming_has_been_prevented
+        #set_global_flag = taiping_has_happened
+        #set_global_flag = taiping_has_been_defeated
+        set_global_flag = taiping_has_been_prevented
     }
 }
 
 country_event = {
     id = 166503
-    title = "Hong Xiuquan Captured!"
-    desc = "Qing patrols have ambushed a Taiping mass outdoor sermon, capturing thousands including their leader, Hong Xiuquan."
+    title = "$COUNTRY_ADJ$ Weakness"
+    desc = "The weakness of $COUNTRY$ to foreign pressure has emboldened those opposed to Qing rule."
     fire_only_once = yes
     picture = "peking_police"
 
     trigger = {
         tag = QNG
-        war = no
+        civilized = no
+        has_global_flag = taiping_has_been_prevented
+        has_global_flag = ming_has_been_prevented
 
-        owns = 1538 #Shanghai
-        owns = 1496 #Hong Kong
-        owns = 1566 #Qingdao
-        owns = 1569 #Weihaiwei
-        owns = 1606 #Jiaxing
-        owns = 2681 #Taibei
-        owns = 2562 #Tainan
-        owns = 1499 #Hainan
-        owns = 2632 #Kwangchowan
-
-        NOT = { any_owned_province = { has_province_modifier = foreign_smugglers } }
-        has_recently_lost_war = no
-        NOT = { has_global_flag = taiping_has_happened }
-        has_global_flag = qing_won_opium_war
-        NOT = { num_of_revolts = 1 }
+        OR = {
+            has_recently_lost_war = yes
+            is_disarmed = yes
+            NOT = { owns = 1538 } #Shanghai
+            NOT = { owns = 1496 } #Hong Kong
+            NOT = { owns = 1566 } #Qingdao
+            NOT = { owns = 1569 } #Weihaiwei
+            NOT = { owns = 1606 } #Jiaxing
+            NOT = { owns = 2681 } #Taibei
+            NOT = { owns = 2562 } #Tainan
+            NOT = { owns = 1499 } #Hainan
+            NOT = { owns = 2632 } #Kwangchowan
+            NOT = { 1593 = { is_core = CHI } } #Tawang
+            NOT = { 1082 = { is_core = CHI } } #Haishenwai
+            TPG = { exists = yes }
+            RTR = { exists = yes }
+            CHI = { exists = yes }
+            FJN = { exists = yes }
+            GNG = { exists = yes }
+            GXI = { exists = yes }
+            TAI = { exists = yes }
+            MAO = { exists = yes }
+        }
     }
 
     mean_time_to_happen = {
-        months = 120
-        modifier = {
-            factor = 2
-            any_owned_province = { has_province_modifier = western_presence_research }
-        }
-        modifier = {
-            factor = 2
-            has_country_modifier = european_military_mission 
-        }
-        modifier = {
-            factor = 2
-            has_country_modifier = legation_quarter 
-        }
-        modifier = {
-            factor = 0.1
-            has_global_flag = qing_won_second_opium_war
-        }
+        months = 1
     }
 
     option = {
-        name = "A crippling blow to the Taiping movement"
+        name = "This is bad."
         any_owned = {
-            limit = { is_core = TPG }
-            add_province_modifier = {
-                name = anti_manchu_sentiment
-                duration = 1825
+            limit = { OR = { is_core = RTR is_core = TPG } }
+            any_pop = {
+                limit = { is_culture_group = east_asian NOT = { culture = manchu } }
+                militancy = 1
+                consciousness = 1
             }
         }
-        set_global_flag = taiping_has_happened
-        set_global_flag = taiping_has_been_defeated
+        clr_global_flag = ming_has_been_prevented
+        clr_global_flag = taiping_has_been_prevented
     }
 }
 
@@ -4309,7 +4050,7 @@ country_event = {
 country_event = {
     id = 166504
     title = "Anti-Qing Rebels Victorious"
-    desc = "Resistance to the Qing Dynasty has cumulated in a bloody storming of the Forbidden City. As the last defenders are overwhelmed and the chaos in $CAPITAL$ fades, it is clear to the reminants of the Qing court that the Empire is over."
+    desc = "Resistance to the Qing Dynasty has cumulated in a bloody storming of the Forbidden City. As the last defenders are overwhelmed and the chaos in $CAPITAL$ fades, it is clear to the reminants of the imperial court that $COUNTRY$ has fallen."
 
     picture = "nian_rebellion"
     is_triggered_only = yes
@@ -4320,12 +4061,10 @@ country_event = {
         set_global_flag = ming_has_happened
 
         any_pop = {
-           limit = { is_culture_group = east_asian NOT = { culture = manchu } }
+            limit = { is_culture_group = east_asian NOT = { culture = manchu } }
             ideology = { factor = 0.1 value = conservative }
             militancy = -8
         }
-
-
 
         CHI_1468 = { remove_core = CHI }
         CHI_1465 = { remove_core = CHI }
@@ -4334,36 +4073,32 @@ country_event = {
         CHI_1552 = { add_core = MCK }
         1533 = { add_core = MCK }
 
-
-        any_owned = {
-            limit = {
-                is_state_capital = yes
-                controlled_by = RTR
-            }
-            state_scope = {
-                any_owned = {
-                    secede_province = RTR
-                }
-            }
-        }
-
-        any_owned = {
-            limit = {
-                is_state_capital = yes
-                controlled_by = TPG
-            }
-            state_scope = {
-                any_owned = {
-                    secede_province = TPG
-                }
-            }
-        }
-
-        any_country = {
-            limit = { war_with = THIS }
-            end_war = THIS
-        }
-
+        #any_owned = {
+        #    limit = {
+        #        is_state_capital = yes
+        #        controlled_by = RTR
+        #    }
+        #    state_scope = {
+        #        any_owned = {
+        #            secede_province = RTR
+        #        }
+        #    }
+        #}
+        #any_owned = {
+        #    limit = {
+        #        is_state_capital = yes
+        #        controlled_by = TPG
+        #    }
+        #    state_scope = {
+        #        any_owned = {
+        #            secede_province = TPG
+        #        }
+        #    }
+        #}
+        #any_country = {
+        #    limit = { war_with = THIS }
+        #    end_war = THIS
+        #}
 
         random_country = {
             limit = {
@@ -4469,7 +4204,6 @@ country_event = {
 			annex_to = THIS
         }
 
-
         any_country = {
             limit = {
                 #civilized = yes
@@ -4478,7 +4212,6 @@ country_event = {
             relation = { who = THIS value = -100 }
             leave_alliance = THIS
         }
-
 
         random_country = {
             limit = {
@@ -4798,17 +4531,17 @@ country_event = {
         #    }
         #}
 
-        any_owned = {
-            limit = {
-                any_neighbor_province = { owned_by = TPG }
-                NOT = { is_core = QNG }
-            }
-            state_scope = {
-                any_owned = {
-                    secede_province = TPG
-                }
-            }
-        }
+        #any_owned = {
+        #    limit = {
+        #        any_neighbor_province = { owned_by = TPG }
+        #        NOT = { is_core = QNG }
+        #    }
+        #    state_scope = {
+        #        any_owned = {
+        #            secede_province = TPG
+        #        }
+        #    }
+        #}
 
         #random_owned = {
         #    limit = {
@@ -4827,6 +4560,10 @@ country_event = {
         random_owned = {
             limit = { owner = { has_country_modifier = yong_ying } }
             owner = { remove_country_modifier = yong_ying }
+        }
+        random_owned = {
+            limit = { owner = { has_country_modifier = the_female_shortage } }
+            owner = { remove_country_modifier = the_female_shortage }
         }
 
         all_core = { remove_core = QNG }
@@ -5012,7 +4749,7 @@ country_event = {
         has_global_flag = anti_qing_rebels_won
         NOT = { has_global_flag = chi_tpg_rtr_union_proposed }
         NOT = { has_global_flag = warlord_era_has_begun }
-        NOT = { has_global_flag = china_formed }
+        #NOT = { has_global_flag = china_formed }
         NOT = { exists = QNG }
         exists = TPG
         NOT = { exists = RTR }
@@ -5100,7 +4837,7 @@ country_event = {
         has_global_flag = anti_qing_rebels_won
         NOT = { has_global_flag = chi_tpg_rtr_union_proposed }
         NOT = { has_global_flag = warlord_era_has_begun }
-        NOT = { has_global_flag = china_formed }
+        #NOT = { has_global_flag = china_formed }
         NOT = { exists = QNG }
         NOT = { exists = TPG }
         exists = RTR
@@ -5188,7 +4925,7 @@ country_event = {
         has_global_flag = anti_qing_rebels_won
         NOT = { has_global_flag = chi_tpg_rtr_union_proposed }
         NOT = { has_global_flag = warlord_era_has_begun }
-        NOT = { has_global_flag = china_formed }
+        #NOT = { has_global_flag = china_formed }
         NOT = { exists = QNG }
         exists = TPG
         exists = RTR

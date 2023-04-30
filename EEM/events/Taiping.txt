@@ -29,6 +29,7 @@ country_event = {
             value = 2
         }
         NOT = { has_global_flag = ming_has_happened }
+        NOT = { has_global_flag = taiping_has_been_prevented }
     }
 
     mean_time_to_happen = {
@@ -1040,6 +1041,7 @@ province_event = {
             has_province_modifier = christian_pamphlets
             has_province_modifier = christian_repression
             has_global_flag = taiping_has_happened
+            has_global_flag = taiping_has_been_prevented
         }
     }
 
@@ -1152,6 +1154,7 @@ province_event = {
             is_core = TPG
             has_province_modifier = anti_manchu_sentiment
             has_global_flag = taiping_has_happened
+            has_global_flag = taiping_has_been_prevented
         }
     }
 
@@ -1357,6 +1360,7 @@ province_event = {
         is_core = TPG
         NOT = {
             has_global_flag = taiping_has_happened
+            has_global_flag = taiping_has_been_prevented
             average_militancy = 6
         }
     }
@@ -1430,6 +1434,7 @@ province_event = {
             tag = QNG
             has_country_flag = heavenly_kingdom
             NOT = { has_global_flag = taiping_has_happened }
+            NOT = { has_global_flag = taiping_has_been_prevented }
         }
         NOT = {
             is_core = TPG

@@ -256,6 +256,7 @@ political_decisions = {
 	#        RTR = { exists = no }
 	#        CHI = { exists = no }
 	#        KMT = { exists = no }
+	#        NOT = { has_global_flag = qing_restored }
     #    }
     #
     #    allow = {
@@ -277,6 +278,7 @@ political_decisions = {
     #    }
     #
     #    effect = {
+    #        set_global_flag = qing_restored
     #        prestige = 25
     #        all_core = { add_core = QNG }
     #        1616 = { state_scope = { add_core = QNG } }
@@ -344,13 +346,14 @@ political_decisions = {
         potential = {
             tag = CHI
             government = presidential_dictatorship
+            ruling_party_ideology = reactionary
             NOT = { has_global_flag = yuan_shikai_declared_emperor }
         }
 
         allow = {
             NOT = { has_country_modifier = law_changed_by_force }
             owns = 1616
-            revolution_n_counterrevolution = 1
+            mass_politics = 1
             war = no
             KMT = { exists = no }
             TPG = { exists = no }
@@ -388,19 +391,7 @@ political_decisions = {
                 }
                 scaled_militancy = {
                     ideology = liberal
-                    factor = 4
-                }
-                scaled_militancy = {
-                    ideology = socialist
-                    factor = 4
-                }
-                scaled_militancy = {
-                    ideology = communist
-                    factor = 4
-                }
-                scaled_militancy = {
-                    ideology = anarcho_liberal
-                    factor = 4
+                    factor = 9
                 }
             }
             add_country_modifier = {
@@ -445,6 +436,7 @@ political_decisions = {
     			tag = TPG
 				tag = CHI
 				tag = KMT
+				tag = RTR
 			}
 			has_global_flag = huang5 #past 1931
 			NOT = { has_global_flag = yellow_river_dikes_blown }

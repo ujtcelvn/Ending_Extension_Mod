@@ -3223,7 +3223,7 @@
     aristocrats = {
         culture = nanfaren
         religion = mahayana
-        size = 1575
+        size = 1825
     }
 
     bureaucrats = {
@@ -3235,37 +3235,37 @@
     officers = {
         culture = nanfaren
         religion = mahayana
-        size = 1870
+        size = 2150
     }
 
     clergymen = {
         culture = nanfaren
         religion = mahayana
-        size = 805
+        size = 825
     }
 
     artisans = {
         culture = nanfaren
         religion = mahayana
-        size = 4000
+        size = 4050
     }
 
     soldiers = {
         culture = nanfaren
         religion = mahayana
-        size = 805
+        size = 825
     }
 
     farmers = {
         culture = nanfaren
         religion = mahayana
-        size = 67850
+        size = 69850
     }
 
     aristocrats = {
         culture = zhuang
         religion = animist
-        size = 6850
+        size = 7850
     }
 
     clergymen = {
@@ -3307,7 +3307,7 @@
     aristocrats = {
         culture = yue
         religion = mahayana
-        size = 805
+        size = 2450
     }
 
     clergymen = {
@@ -3681,48 +3681,31 @@
     }
 }
 
-#Qinzhou (155050 POPS) EEM
+#Qinzhou (??? POPS) EEM
 3326 = {
-    aristocrats = {
-        culture = nanfaren
-        religion = mahayana
-        size = 250
-    }
-
-    officers = {
-        culture = nanfaren
-        religion = mahayana
-        size = 280
-    }
 
     clergymen = {
         culture = nanfaren
         religion = mahayana
-        size = 120
+        size = 100
     }
 
     artisans = {
         culture = nanfaren
         religion = mahayana
-        size = 600
+        size = 550
     }
 
     soldiers = {
         culture = nanfaren
         religion = mahayana
-        size = 120
+        size = 100
     }
 
     farmers = {
         culture = nanfaren
         religion = mahayana
-        size = 12000
-    }
-
-    aristocrats = {
-        culture = zhuang
-        religion = animist
-        size = 1000
+        size = 10000
     }
 
     clergymen = {
@@ -3763,12 +3746,6 @@
 
 
     #70% of yue in Nanning: 84,630 30% stay in Nanning
-    aristocrats = {
-        culture = yue
-        religion = mahayana
-        size = 1645
-    }
-
     clergymen = {
         culture = yue
         religion = mahayana

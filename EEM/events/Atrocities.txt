@@ -149,8 +149,7 @@ province_event = {
 					limit = { NOT = { strata = middle } NOT = { type = craftsmen } NOT = { type = soldiers } }
 					reduce_pop = 0.995
 				}
-
-				infrastructure = -1
+				#infrastructure = -1
 				add_province_modifier = { name = bomb_damage duration = 365 }
 			}
 		}
@@ -174,6 +173,7 @@ province_event = {
 			}
 		}
 		is_colonial = no
+		NOT = { has_province_modifier = bomb_damage }
 		NOT = { has_province_modifier = heavy_bomb_damage }
 		controlled_by = THIS
 		OR = {

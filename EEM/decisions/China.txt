@@ -78,7 +78,7 @@ political_decisions = {
     form_china = {
         potential = {
             tag = QNG
-            NOT = { has_global_flag = china_formed }
+            NOT = { has_global_flag = china_formed } #this flag is never set
             NOT = { has_country_flag = post_colonial_country }
         }
 
@@ -157,6 +157,11 @@ political_decisions = {
                 limit = { owner = { has_country_modifier = yong_ying } }
                 owner = { remove_country_modifier = yong_ying }
             }
+            random_owned = {
+                limit = { owner = { has_country_modifier = the_female_shortage } }
+                owner = { remove_country_modifier = the_female_shortage }
+            }
+
             random_country = {
                 limit = { OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 } exists = yes }
                 THIS = { country_event = 166700 }
