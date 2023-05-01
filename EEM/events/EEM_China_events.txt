@@ -4498,18 +4498,18 @@ country_event = {
         }
 
 
-        any_owned = {
-            limit = {
-                exists = RTR
-                is_state_capital = yes
-                culture = nanfaren
-            }
-            state_scope = {
-                any_owned = {
-                    secede_province = RTR
-                }
-            }
-        }
+        #any_owned = {
+        #    limit = {
+        #        exists = RTR
+        #        is_state_capital = yes
+        #        culture = nanfaren
+        #    }
+        #    state_scope = {
+        #        any_owned = {
+        #            secede_province = RTR
+        #        }
+        #    }
+        #}
 
         random_owned = {
             limit = {
@@ -4519,29 +4519,47 @@ country_event = {
             GNG = { all_core = { add_core = RTR } }
         }
 
-        #any_owned = {
-        #    limit = {
-        #        any_neighbor_province = { owned_by = RTR }
-        #        NOT = { is_core = QNG }
-        #    }
-        #    state_scope = {
-        #        any_owned = {
-        #            secede_province = RTR
-        #        }
-        #    }
-        #}
+        any_owned = {
+            limit = {
+			    owner = {
+                    NOT = {
+                        check_variable = {
+                            which = ming_provinces
+                            value = 5
+                        }
+                    }
+			    }
+                any_neighbor_province = { owned_by = RTR }
+                NOT = { is_core = QNG }
+                culture = nanfaren
+            }
+            state_scope = {
+                any_owned = {
+                    secede_province = RTR
+                }
+            }
+        }
 
-        #any_owned = {
-        #    limit = {
-        #        any_neighbor_province = { owned_by = TPG }
-        #        NOT = { is_core = QNG }
-        #    }
-        #    state_scope = {
-        #        any_owned = {
-        #            secede_province = TPG
-        #        }
-        #    }
-        #}
+        any_owned = {
+            limit = {
+			    owner = {
+                    NOT = {
+                        check_variable = {
+                            which = taiping_provinces
+                            value = 5
+                        }
+                    }
+			    }
+                any_neighbor_province = { owned_by = TPG }
+                NOT = { is_core = QNG }
+                NOT = { is_core = RTR }
+            }
+            state_scope = {
+                any_owned = {
+                    secede_province = TPG
+                }
+            }
+        }
 
         #random_owned = {
         #    limit = {
