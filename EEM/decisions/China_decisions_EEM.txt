@@ -512,6 +512,7 @@ political_decisions = {
         alert = yes
         picture = tibet_capital
         potential = {
+            1587 = { is_core = CHI }
             owns = 1587
             NOT = { 1593 = { is_core = THIS } }
             NOT = { is_our_vassal = TIB }

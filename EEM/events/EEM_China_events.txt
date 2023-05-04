@@ -3929,7 +3929,6 @@ country_event = {
         owns = 2562 #Tainan
         owns = 1499 #Hainan
         owns = 2632 #Kwangchowan
-        1593 = { is_core = CHI } #Tawang
         1082 = { is_core = CHI } #Haishenwai
 
         TPG = { exists = no }
@@ -4014,7 +4013,6 @@ country_event = {
             NOT = { owns = 2562 } #Tainan
             NOT = { owns = 1499 } #Hainan
             NOT = { owns = 2632 } #Kwangchowan
-            NOT = { 1593 = { is_core = CHI } } #Tawang
             NOT = { 1082 = { is_core = CHI } } #Haishenwai
             TPG = { exists = yes }
             RTR = { exists = yes }
