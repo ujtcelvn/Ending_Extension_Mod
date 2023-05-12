@@ -74,6 +74,7 @@ political_decisions = {
                 consciousness = 5
             }
             add_accepted_culture = hungarian
+            remove_accepted_culture = north_german
             change_tag = KUK
             set_country_flag = dual_monarchy
             random_country = {
@@ -251,7 +252,7 @@ political_decisions = {
             regular_clothes = 10
             leadership = 40
             define_general = {
-                name = "Józef Bem"
+                name = "JÃ³zef Bem"
                 personality = intelligent
                 background = natural_born_leader
             }
