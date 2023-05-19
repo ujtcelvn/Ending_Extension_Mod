@@ -106,6 +106,30 @@ country_event = {
             1501 = { secede_province = TZ8 }
             3326 = { secede_province = TZ8 }
         }
+
+
+
+        any_neighbor_country = {
+            limit = {
+                is_vassal = yes
+                overlord = { tag = QNG }
+                THIS = { tag = QNG }
+                OR = {
+                    tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    tag = TZ5
+                    tag = TZ6
+                    tag = TZ7
+                    tag = TZ8
+                }
+            }
+            add_accepted_culture = manchu
+        }
+
+
+
         ai_chance = {
             factor = 80
             modifier = {
@@ -154,6 +178,7 @@ country_event = {
                 exists = yes
             }
             #neutrality = yes
+            remove_accepted_culture = manchu
             annex_to = THIS
         }
 
@@ -209,6 +234,10 @@ country_event = {
         #    }
         #    owner = { civilized = yes }
         #}
+        random_owned = {
+            limit = { owner = { accepted_culture = manchu } }
+            owner = { remove_accepted_culture = manchu }
+        }
         FROM = { inherit = THIS }
 
         ai_chance = { factor = 100 }
@@ -229,6 +258,10 @@ country_event = {
         }
         release_vassal = THIS
         leave_alliance = FROM
+        random_owned = {
+            limit = { owner = { accepted_culture = manchu } }
+            owner = { remove_accepted_culture = manchu }
+        }
         ai_chance = { factor = 0 }
     }
 
@@ -317,6 +350,10 @@ country_event = {
         #    }
         #    owner = { remove_country_modifier = negotiating_treaty }
         #}
+        random_owned = {
+            limit = { owner = { accepted_culture = manchu } }
+            owner = { remove_accepted_culture = manchu }
+        }
         random_country = {
             limit = { is_our_vassal = THIS }
             country_event = 166705
@@ -395,6 +432,12 @@ country_event = {
         relation = { who = FROM value = 100 }
         diplomatic_influence = { who = FROM value = 400 }
         create_vassal = FROM
+
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            FROM = { add_accepted_culture = manchu }
+        }
+
         ai_chance = {
             factor = 100
         }
@@ -426,6 +469,10 @@ country_event = {
 #
 #    option = {
 #        name = "Excellent"
+#        random_owned = {
+#            limit = { owner = { accepted_culture = manchu } }
+#            owner = { remove_accepted_culture = manchu }
+#        }
 #        change_tag = CHI
 #    }
 #}
@@ -457,6 +504,10 @@ country_event = {
 
     option = {
         name = "Excellent"
+        random_owned = {
+            limit = { owner = { accepted_culture = manchu } }
+            owner = { remove_accepted_culture = manchu }
+        }
         any_owned = {
             limit = { is_core = CHI }
             add_core = HUI
@@ -485,6 +536,10 @@ country_event = {
 
     option = {
         name = "Ok"
+        random_owned = {
+            limit = { owner = { accepted_culture = manchu } }
+            owner = { remove_accepted_culture = manchu }
+        }
         change_tag = GNG
     }
 }
@@ -529,6 +584,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ1 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ1 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ1 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ1 = { economic_reform = yes_finance_reform } }
@@ -639,6 +698,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ2 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ2 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ2 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ2 = { economic_reform = yes_finance_reform } }
@@ -751,6 +814,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ4 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ4 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ4 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ4 = { economic_reform = yes_finance_reform } }
@@ -861,6 +928,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ5 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ5 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ5 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ5 = { economic_reform = yes_finance_reform } }
@@ -974,6 +1045,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ6 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ6 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ6 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ6 = { economic_reform = yes_finance_reform } }
@@ -1088,6 +1163,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ7 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ7 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ7 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ7 = { economic_reform = yes_finance_reform } }
@@ -1206,6 +1285,10 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        random_owned = {
+            limit = { owner = { tag = QNG } }
+            TZ8 = { add_accepted_culture  = manchu }
+        }
         random_owned = { limit = { owner = { land_reform = yes_land_reform } }                       TZ8 = { economic_reform = yes_land_reform } }
         random_owned = { limit = { owner = { admin_reform = yes_admin_reform } }                     TZ8 = { economic_reform = yes_admin_reform } }
         random_owned = { limit = { owner = { finance_reform = yes_finance_reform } }                 TZ8 = { economic_reform = yes_finance_reform } }

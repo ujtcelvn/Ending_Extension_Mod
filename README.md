@@ -37,4 +37,5 @@ Please read the changelog.txt for more details.
 
 * Thanks to arkhometha and everyone else who contributed to HPM for making HPM so this mod could be based on it
 * Thanks to Anon who made the Square Shaded Map Frame mod for pretty square shaded map frames
+* Thanks to the author of the HPM Politics & Economy Patch for the more realistic government reforms, events, and decisions https://www.moddb.com/mods/hpm-politics-economy-patch
 * Thanks to Anons for suggestions and playtesting!

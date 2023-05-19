@@ -11,8 +11,8 @@ prestige = 3
 
 # Political reforms
 slavery = no_slavery
-upper_house_composition = appointed
-vote_franschise = landed_voting
+upper_house_composition = state_equal_weight
+vote_franschise = wealth_weighted_voting
 public_meetings = yes_meeting
 press_rights = state_press
 trade_unions = no_trade_unions

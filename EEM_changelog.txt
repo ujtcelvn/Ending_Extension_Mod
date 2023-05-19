@@ -46,7 +46,7 @@ industry = 23 + 4
 ####################################################################################################
 Coming soon: 
 
-#TODO: soldiers in state capitals only?
+#TODO: soldiers in state capitals only? (can be done by modifying the poptypes file, state_capital_only = yes teleports pops to the capital automatically (may still need to change immigration weights) )
 
 #TODO: remove random British cores in Alberta
 #TODO: Turkestan doesn't get any cores if formed externally (is this intended?)
@@ -66,17 +66,25 @@ Coming soon:
 #TODO: Sino-French War
 
 #TODO: Great Power Rivary
-#TODO: Democratic convention: As the leader of the free world, ...
-#TODO: Communist convention:
-	Of course we will attend!
-	Of course we will engage in typical petty infighting! Denounce ___ as revisionists
-
-
+#TODO: Democratic convention: (leader of the free world)
+#TODO: Communist convention
 
 #TODO: 1st industrial revolution: coal and iron as limiter
 #TODO: 2nd industrial revolution makes coal and iron super cheap, shift to oil as limiter?
 
-#TODO: trade zones get Manchu accepted if created from Qing, and lose it if destroyed / independent / transferred
+#TODO: healthcare -> public health? Safety already includes no dumping waste, but more stuff can be included?
+	Give pensions and unemployment benefits in later tiers, to model government health insurance?
+
+#TODO: invention localizations
+
+####################################################################################################
+v0.5.8c
+
+trade zones get Manchu accepted if created from Qing, and lose it if destroyed / independent / transferred
+Disabled pollution events until I rework them because they're boring and kind of spammy
+Integrated the 1836 Government reforms from the HPM Politics & Economy Patch. I will determine which modules to integrate later. https://www.moddb.com/mods/hpm-politics-economy-patch
+Some more invention localizations
+
 
 ####################################################################################################
 v0.5.8b
