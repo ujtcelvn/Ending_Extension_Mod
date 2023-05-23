@@ -6509,6 +6509,14 @@ province_event = {
                     province_id = 1482 #Fuzhou
                 }
             }
+
+            AND = {
+                year = 1970
+                OR = {
+                    province_id = 2562 #Taitung
+                }
+            }
+
         }
     }
 
