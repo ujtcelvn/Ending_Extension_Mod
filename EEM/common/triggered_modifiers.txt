@@ -17,16 +17,16 @@ low_health_care_fully_funded = {
     trigger = {
         exists = yes
         health_care = low_health_care
-        #OR = {
-        #    AND = {
-        #        ai = yes
-        #        administration_spending = 0.25
-        #    }
-        #    AND = {
-        #        ai = no
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.25
+            }
+            AND = {
+                ai = no
                 administration_spending = 0.3
-        #    }
-        #}
+            }
+        }
     }
     global_population_growth = 0.002
     icon = 19
@@ -36,16 +36,16 @@ acceptable_health_care_fully_funded = {
     trigger = {
         exists = yes
         health_care = acceptable_health_care
-        #OR = {
-        #    AND = {
-        #        ai = yes
-        #        administration_spending = 0.3
-        #    }
-        #    AND = {
-        #        ai = no
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.3
+            }
+            AND = {
+                ai = no
                 administration_spending = 0.4
-        #    }
-        #}
+            }
+        }
     }
     global_population_growth = 0.003
     icon = 19
@@ -55,16 +55,16 @@ good_health_care_fully_funded = {
     trigger = {
         exists = yes
         health_care = good_health_care
-        #OR = {
-        #    AND = {
-        #        ai = yes
-        #        administration_spending = 0.3
-        #    }
-        #    AND = {
-        #        ai = no
-                administration_spending = 0.5
-        #    }
-        #}
+        OR = {
+            AND = {
+                ai = yes
+                administration_spending = 0.3
+            }
+            AND = {
+                ai = no
+               administration_spending = 0.5
+            }
+        }
     }
     global_population_growth = 0.004
     icon = 19
@@ -483,27 +483,27 @@ social_reformed_nation = {
     icon = 13
 }
 
-#educational_spen = {
-#        trigger = {
-#            ai = yes
-#            exists = yes
-#            administration_spending = 0.74
-#        }
-#
-#    education_efficiency_modifier = 0.3
-#    icon = 16
-#}
+educational_spen = {
+        trigger = {
+            ai = yes
+            exists = yes
+            administration_spending = 0.74
+        }
 
-#admin_spen = {
-#        trigger = {
-#            ai = yes
-#            exists = yes
-#            administration_spending = 0.74
-#        }
-#
-#    administrative_efficiency_modifier = 0.3
-#    icon = 16
-#}
+    education_efficiency_modifier = 0.3
+    icon = 16
+}
+
+admin_spen = {
+        trigger = {
+            ai = yes
+            exists = yes
+            administration_spending = 0.74
+        }
+
+    administrative_efficiency_modifier = 0.3
+    icon = 16
+}
 
 
 
