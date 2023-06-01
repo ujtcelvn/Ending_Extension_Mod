@@ -270,14 +270,51 @@ country_event = {
 country_event = {
     id = 166703
     title = "$FROMCOUNTRY$ Dishonours Treaties"
-    desc = "The new regime in China has declared the treaties negotiated previously void. It may soon become much more difficult for merchants to access the Chinese market."
+    desc = "The new regime in China has declared the treaties negotiated previously void. It may soon become much more difficult for merchants to access the Chinese market, unless we force China open again."
     picture = "arrow_incident"
 
     is_triggered_only = yes
 
     option = {
-        name = "China should be opened up, by force if necessary."
+        name = "Launch a punitive expedition immediately!"
+        prestige = -2
+        leave_alliance = FROM
+        relation = { who = FROM value = -400 }
+        diplomatic_influence = { who = FROM value = -400 }
 
+        war = {
+            target = FROM
+            attacker_goal = { casus_belli = treaty_port_casus_belli }
+            #defender_goal = { casus_belli = status_quo }
+            call_ally = no
+        }
+
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0.5
+                war = yes
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    any_greater_power = { war_with = THIS }
+                    NOT = { total_amount_of_divisions = 2 }
+                    NOT = { total_amount_of_ships = 5 }
+                    war_policy = pacifism
+                }
+            }
+            modifier = {
+                factor = 2
+                war_policy = jingism
+            }
+
+        }
+    }
+
+
+    option = {
+        name = "Our forces are not ready at this time"
         prestige = -2
         leave_alliance = FROM
         relation = { who = FROM value = -400 }
@@ -287,6 +324,7 @@ country_event = {
             type = treaty_port_casus_belli
             months = 80
         }
+        ai_chance = { factor = 50 }
     }
 }
 
@@ -555,6 +593,17 @@ country_event = {
 
     option = {
         name = "EVT166710OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ1_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ1_research
+            }
+        }
+
+
         1565 = {
             secede_province = TZ1
             add_province_modifier = { name = local_opium_habit duration = 3650 }
@@ -669,6 +718,17 @@ country_event = {
 
     option = {
         name = "EVT166720OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ2_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ2_research
+            }
+        }
+
+
         1571 = {
             secede_province = TZ2
             add_province_modifier = { name = local_opium_habit duration = 3650 }
@@ -785,6 +845,17 @@ country_event = {
 
     option = {
         name = "EVT166740OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ4_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ4_research
+            }
+        }
+
+
         1539 = {
             secede_province = TZ4
             add_province_modifier = { name = local_opium_habit duration = 3650 }
@@ -898,6 +969,17 @@ country_event = {
 
     option = {
         name = "EVT166750OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ5_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ5_research
+            }
+        }
+
+
         1605 = {
             secede_province = TZ5
             add_province_modifier = { name = local_opium_habit duration = 3650 }
@@ -1013,6 +1095,17 @@ country_event = {
 
     option = {
         name = "EVT166760OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ6_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ6_research
+            }
+        }
+
+
         1610 = {
             secede_province = TZ6
             add_province_modifier = { name = local_opium_habit duration = 3650 }
@@ -1133,6 +1226,17 @@ country_event = {
 
     option = {
         name = "EVT166770OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ7_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ7_research
+            }
+        }
+
+
         1493 = {
             secede_province = TZ7
             add_province_modifier = { name = local_opium_habit duration = 3650 }
@@ -1256,6 +1360,16 @@ country_event = {
 
     option = {
         name = "EVT166780OPTA"
+        random_owned = {
+            limit = {
+                owner = { NOT = { has_country_flag = TZ8_research } }
+            }
+            owner = {
+                years_of_research = 1
+                set_country_flag = TZ8_research
+            }
+        }
+
         1495 = {
             secede_province = TZ8
             add_province_modifier = { name = local_opium_habit duration = 3650 }

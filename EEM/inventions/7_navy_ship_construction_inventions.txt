@@ -108,7 +108,7 @@ fleet_air_carriers = {
         }
         modifier = {
             factor = 2
-            invention = fleet_auxiliary_carrier_doctrine2
+            invention = fleet_auxiliary_carrier_doctrine
         }
     }
     effect = {

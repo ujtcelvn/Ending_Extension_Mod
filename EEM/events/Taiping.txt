@@ -82,6 +82,11 @@ country_event = {
                 value = 10
             }
         }
+
+        modifier = {
+            factor = 1.5
+            has_global_flag = kowloon_incident_cucked
+        }
     }
 
     option = {
@@ -1446,6 +1451,10 @@ province_event = {
             region = CHI_1612
             region = CHI_1572
             region = CHI_1559
+            is_core = GNG
+            is_core = GXI
+            region = CHI_1505 #Guizhou
+            is_core = YNN
 
             #region = CHI_1508 #Nian Rebellion
             #region = CHI_1510
@@ -1460,10 +1469,6 @@ province_event = {
 
     mean_time_to_happen = {
         months = 50
-        modifier = {
-            factor = 4
-            region = CHI_1505 #Miao Rebellion
-        }
         modifier = {
             factor = 0.5
             owner = {

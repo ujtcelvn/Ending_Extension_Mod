@@ -889,7 +889,7 @@ social_reforms = {
         }
         acceptable_health_care = {
             global_population_growth = 0.003
-            administrative_multiplier = 4
+            administrative_multiplier = 3
             global_immigrant_attract = 0.03
             allow = {
                 has_country_flag = gaslights_invented
@@ -898,7 +898,7 @@ social_reforms = {
         }
         good_health_care = {
             global_population_growth = 0.004
-            administrative_multiplier = 6
+            administrative_multiplier = 4
             global_immigrant_attract = 0.04
             allow = {
                 has_country_flag = electricity_invented

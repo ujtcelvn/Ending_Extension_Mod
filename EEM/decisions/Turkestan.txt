@@ -428,6 +428,79 @@ political_decisions = {
                 }
             }
 
+            random_owned = {
+                limit = { OR = { UZB = { land_reform = yes_land_reform } BUK = { land_reform = yes_land_reform } KOK = { land_reform = yes_land_reform } } }
+                TKS = { economic_reform = yes_land_reform }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { admin_reform = yes_admin_reform } BUK = { admin_reform = yes_admin_reform } KOK = { admin_reform = yes_admin_reform } } }
+                TKS = { economic_reform = yes_admin_reform }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { finance_reform = yes_finance_reform } BUK = { finance_reform = yes_finance_reform } KOK = { finance_reform = yes_finance_reform } } }
+                TKS = { economic_reform = yes_finance_reform }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { finance_reform = finance_reform_two } BUK = { finance_reform = finance_reform_two } KOK = { finance_reform = finance_reform_two } } }
+                TKS = { economic_reform = finance_reform_two }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { monetary_reform = yes_monetary_reform } BUK = { monetary_reform = yes_monetary_reform } KOK = { monetary_reform = yes_monetary_reform } } }
+                TKS = { economic_reform = yes_monetary_reform }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { monetary_reform = monetary_reform_two } BUK = { monetary_reform = monetary_reform_two } KOK = { monetary_reform = monetary_reform_two } } }
+                TKS = { economic_reform = monetary_reform_two activate_technology = no_standard }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { education_reform = yes_education_reform } BUK = { education_reform = yes_education_reform } KOK = { education_reform = yes_education_reform } } }
+                TKS = { economic_reform = yes_education_reform }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { research_reform = yes_research_reform } BUK = { research_reform = yes_research_reform } KOK = { research_reform = yes_research_reform } } }
+                TKS = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { foreign_training = yes_foreign_training } BUK = { foreign_training = yes_foreign_training } KOK = { foreign_training = yes_foreign_training } } }
+                TKS = { military_reform = yes_foreign_training }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { foreign_weapons = yes_foreign_weapons } BUK = { foreign_weapons = yes_foreign_weapons } KOK = { foreign_weapons = yes_foreign_weapons } } }
+                TKS = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { foreign_officers = yes_foreign_officers } BUK = { foreign_officers = yes_foreign_officers } KOK = { foreign_officers = yes_foreign_officers } } }
+                TKS = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { army_schools = yes_army_schools } BUK = { army_schools = yes_army_schools } KOK = { army_schools = yes_army_schools } } }
+                TKS = { military_reform = yes_army_schools }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { foreign_naval_officers = yes_foreign_naval_officers } BUK = { foreign_naval_officers = yes_foreign_naval_officers } KOK = { foreign_naval_officers = yes_foreign_naval_officers } } }
+                TKS = { military_reform = yes_foreign_naval_officers }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { naval_schools = yes_naval_schools } BUK = { naval_schools = yes_naval_schools } KOK = { naval_schools = yes_naval_schools } } }
+                TKS = { military_reform = yes_naval_schools }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { foreign_navies = yes_foreign_navies } BUK = { foreign_navies = yes_foreign_navies } KOK = { foreign_navies = yes_foreign_navies } } }
+                TKS = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { western_shipyards = yes_western_shipyards } BUK = { western_shipyards = yes_western_shipyards } KOK = { western_shipyards = yes_western_shipyards } } }
+                TKS = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { foreign_artillery = yes_foreign_artillery } BUK = { foreign_artillery = yes_foreign_artillery } KOK = { foreign_artillery = yes_foreign_artillery } } }
+                TKS = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+            }
+            random_owned = {
+                limit = { OR = { UZB = { civilized = yes } BUK = { civilized = yes } KOK = { civilized = yes } } }
+                TKS = { civilized = yes }
+            }
+
             RUS_1196 = { add_core = TKM secede_province = TKS }
             KHI_1191 = { add_core = UZB secede_province = TKS }
             1201 = { add_core = TAJ secede_province = TKS }
@@ -485,6 +558,13 @@ political_decisions = {
             KAZ = { tech_school = developing_tech_school }
             KYR = { tech_school = developing_tech_school }
             UZB = { tech_school = developing_tech_school }
+
+            TKS = {
+                any_owned = {
+                    add_core = TKS
+                }
+            }
+
         }
 
         ai_will_do = {

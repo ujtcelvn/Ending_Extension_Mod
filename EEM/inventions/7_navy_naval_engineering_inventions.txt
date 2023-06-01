@@ -216,7 +216,7 @@ hydraulic_aircraft_catapult = {
         aircraft_carrier = {
             torpedo_attack = 2
             gun_power = 2
-            speed = 1 #because the ship no longer needs to be pointed with the wind to launch planes
+            maximum_speed = 1 #because the ship no longer needs to be pointed with the wind to launch planes
         }
     }
 }

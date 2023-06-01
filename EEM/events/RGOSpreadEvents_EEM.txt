@@ -1,8 +1,8 @@
 #Intensive agriculture
 province_event = {
     id = 29905
-    title = "Intensive Agriculture"
-    desc = "Extensive use of artifical fertilizers and pesticides and antibiotics allow crops and livestock to grow faster than ever before."
+    title = "EVTNAME29905"
+    desc = "EVTDESC29905"
 
     trigger = {
         NOT = { has_province_modifier = local_intensive_agriculture }
@@ -167,7 +167,7 @@ province_event = {
     }
 
     option = {
-        name = "EVTOPTA29900"
+        name = "EVTOPTA29905"
         state_scope = {
             any_owned = {
                 limit = {
@@ -667,22 +667,22 @@ province_event = {
 # Modern Transportation
 province_event = {
     id = 29906
-    title = "Modern Transportation"
-    desc = "Local controlled-access highways and airports allow transportation at an unprecedented pace."
+    title = "EVTNAME29906"
+    desc = "EVTDESC29906"
 
     trigger = {
         NOT = { has_province_modifier = local_modern_transportation }
         owner = {
             invention = airliner 
             invention = fordism
-			invention = steamer_transports
+			iron_steamers = 1
             tech_infrastructure_7 = 1
         }
         NOT = {
             unemployment_by_type = { value = 0.03 type = labourers }
             unemployment_by_type = { value = 0.03 type = farmers }
             state_scope = {
-                is_slave = yes
+                #is_slave = yes
                 any_owned_province = { NOT = { controlled_by = THIS } }
             }
         }
@@ -810,10 +810,15 @@ province_event = {
             factor = 4
             is_overseas = yes
         }
+
+        modifier = {
+            factor = 2
+            state_scope = { is_slave = yes }
+        }
     }
 
     option = {
-        name = "EVTOPTA29903"
+        name = "EVTOPTA29906"
         state_scope = {
             any_owned = {
                 add_province_modifier = { name = local_modern_transportation duration = -1 }

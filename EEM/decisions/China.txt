@@ -49,14 +49,14 @@ political_decisions = {
             }
             set_country_flag = manchu_elite_cleared_out
 
-            random_owned = {
-                limit = {
-                    owner = { ai = yes }
-                }
-                owner = {
-                    years_of_research = 10
-                }
-            }
+            #random_owned = {
+            #    limit = {
+            #        owner = { ai = yes }
+            #    }
+            #    owner = {
+            #        years_of_research = 10
+            #    }
+            #}
 
             add_country_modifier = {
                 name = yong_ying

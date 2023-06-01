@@ -1,7 +1,7 @@
 country_event = {
     id = 165000
-    title = "The Huang He bursts its banks yet again!"
-    desc = "The enormous Yellow River has caused yet another flood!"
+    title = "EVTNAME165000" #The Huang He bursts its banks yet again!
+    desc = "EVTDESC165000"
     fire_only_once = yes
     picture = "destroyed_forest"
 
@@ -16,7 +16,7 @@ country_event = {
     }
 
     option = {
-        name = "It just keeps happening!"
+        name = "EVTOPTA165000"
         set_global_flag = huang4
         1563 = {
             any_pop = {
@@ -32,8 +32,8 @@ country_event = {
 
 country_event = {
     id = 165001
-    title = "The Yangtze River bursts its banks!"
-    desc = "The enormous Yangtze River has flooded!"
+    title = "EVTNAME165001" #The Yangtze River bursts its banks!
+    desc = "EVTDESC165001"
     fire_only_once = yes
     picture = "destroyed_forest"
 
@@ -48,7 +48,7 @@ country_event = {
     }
 
     option = {
-        name = "At least it's not the Huang He again..."
+        name = "EVTOPTA165001"
         set_global_flag = huang5
         2221 = {
             any_pop = {
@@ -95,8 +95,8 @@ country_event = {
 
 country_event = {
     id = 165002
-    title = "The Yangtze River bursts its banks again!"
-    desc = "The enormous Yangtze River has flooded once again!"
+    title = "EVTNAME165002" #The Yangtze River bursts its banks again!
+    desc = "EVTDESC165002"
     fire_only_once = yes
     picture = "destroyed_forest"
 
@@ -111,7 +111,7 @@ country_event = {
     }
 
     option = {
-        name = "Will these floods ever end?"
+        name = "EVTOPTA165002"
         set_global_flag = huang6
         1522 = { #Wuchang
             any_pop = {
@@ -139,8 +139,8 @@ country_event = {
 
 country_event = {
     id = 165003
-    title = "Haiyuan Great Earthquake"
-    desc = "The Haiyuan Earthquake was assigned the maximum intensity on the Mercalli intensity scale (XII Extreme). Aftershocks continued for 3 years."
+    title = "EVTNAME165003" #Haiyuan Great Earthquake
+    desc = "EVTDESC165003"
     picture = "haiyuan_earthquake"
 
     fire_only_once = yes
@@ -148,6 +148,7 @@ country_event = {
     trigger = {
         year = 1920
         owns = 1491
+        NOT = { has_global_flag = haiyuan_earthquake }
     }
 
     mean_time_to_happen = {
@@ -155,7 +156,8 @@ country_event = {
     }
 
     option = {
-        name = "Eep!"
+        name = "EVTOPTA165003"
+        set_global_flag = haiyuan_earthquake
         1491 = { infrastructure = -6 fort = -6 any_pop = { reduce_pop = 0.8 } add_province_modifier = { name = earthquake_devastation duration = 1095 } }
         1561 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
         1490 = { infrastructure = -3 fort = -3 any_pop = { reduce_pop = 0.9 } add_province_modifier = { name = earthquake_devastation duration = 365 } }
@@ -168,8 +170,8 @@ country_event = {
 
 country_event = {
     id = 165004
-    title = "Nanking Massacre"
-    desc = "Our troops, frustrated from Chinese resistance to our advance, have decided to sack and pillage the Chinese capital, Nanjing."
+    title = "EVTNAME165004" #Nanking Massacre
+    desc = "EVTDESC165004"
     picture = "nanking_destruction"
     fire_only_once = yes
 	
@@ -213,7 +215,7 @@ country_event = {
     }
 
     option = {
-        name = "The international community would not like this..."
+        name = "EVTOPTA165004"
         badboy = 5
         any_country = {
             limit = {
@@ -228,18 +230,18 @@ country_event = {
 
 country_event = {
     id = 165005
-    title = "The Nanking Massacre"
-    desc = "$FROMCOUNTRY_ADJ$ troops, frustrated from our resistance to their advance, have decided to sack and pillage our capital, Nanjing."
-    news = yes
-    news_desc_long = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
-    news_desc_medium = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
-    news_desc_short = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
+    title = "EVTNAME165005" #The Nanking Massacre
+    desc = "EVTDESC165005"
+    #news = yes
+    #news_desc_long = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
+    #news_desc_medium = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
+    #news_desc_short = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
     picture = "nanking_destruction"
     fire_only_once = yes
     is_triggered_only = yes
 
     option = {
-        name = "How DARE they!"
+        name = "EVTOPTA165005"
         add_country_modifier = {
             name = drive_to_reunify 
             duration = 1825
@@ -299,8 +301,8 @@ country_event = {
 
 country_event = {
     id = 165101
-    title = "The Tiandihui"
-    desc = "The Heaven and Earth Society was founded as a mutual aid society in 1761 but was forced into anti-Qing activity after the Qing decreed membership in secret societies illegal."
+    title = "EVTNAME165101" #The Tiandihui
+    desc = "EVTDESC165101"
     picture = "tiandihui"
 	
     fire_only_once = yes
@@ -373,7 +375,7 @@ country_event = {
     }
 
     option = {
-        name = "Secret societies are forbidden by law!"
+        name = "EVTOPTA165101"
         set_country_flag = tiandihui
         GXI = { all_core = { add_core = RTR } }
         GNG = { all_core = { add_core = RTR } }
@@ -386,8 +388,8 @@ country_event = {
 
 country_event = {
     id = 165102
-    title = "The Gelaohui"
-    desc = "The Elder Brother Society, also known as the Hatchet Gang for the small hatchet every member carried, is a fraternal society that despises foreigners - both Manchu and Western."
+    title = "EVTNAME165102" #The Gelaohui
+    desc = "EVTDESC165102"
     picture = "gelaohui"
 	
     fire_only_once = yes
@@ -445,8 +447,12 @@ country_event = {
         }
 
         modifier = {
-            factor = 0.8
+            factor = 0.5
             has_global_flag = kowloon_incident_cucked
+            check_variable = {
+                which = ming_provinces
+                value = 4
+            }
         }
 
         modifier = {
@@ -479,7 +485,7 @@ country_event = {
     }
 
     option = {
-        name = "What can a hatchet do against the Qing army?"
+        name = "EVTOPTA165102"
         set_country_flag = gelaohui
         any_owned = {
             limit = {
@@ -495,8 +501,8 @@ country_event = {
 
 province_event = {
     id = 165103
-    title = "Secret Societies Spread to $STATENAME$!"
-    desc = "Anti-Qing secret societies have recruited many members in $STATENAME$."
+    title = "EVTNAME165103" #Secret Societies Spread to $STATENAME$!
+    desc = "EVTDESC165103"
 
     trigger = {
         owner = {
@@ -530,21 +536,23 @@ province_event = {
         is_primary_culture = no
         average_consciousness = 4
         any_neighbor_province = { is_core = RTR }
-        OR = {
-            culture = nanfaren
-            culture = yue
-            culture = zhuang
-            culture = hakka
-            culture = min
-        }
+        #OR = {
+        #    culture = nanfaren
+        #    culture = yue
+        #    culture = zhuang
+        #    culture = hakka
+        #    culture = min
+        #}
     }
 
     mean_time_to_happen = {
-        months = 50
+        months = 60 #50
         modifier = {
-            factor = 4
-            region = CHI_1505 #Miao Rebellion
+            factor = 0.7
+            has_global_flag = kowloon_incident_cucked
         }
+        #Red Turbans do spread into Guizhou, unlike the Taiping, this is intended
+
         modifier = {
             factor = 0.5
             owner = {
@@ -621,9 +629,11 @@ province_event = {
         }
         modifier = {
             factor = 3
-            NOT = {
-                culture = nanfaren
-            }
+            NOT = { culture = nanfaren }
+            NOT = { culture = yue }
+            NOT = { culture = zhuang }
+            NOT = { culture = hakka }
+            NOT = { culture = min }
         }
         modifier = {
             factor = 1.5
@@ -644,7 +654,7 @@ province_event = {
     }
 
     option = {
-        name = "Hmm, that's worrying."
+        name = "EVTOPTA165103"
         state_scope = {
             any_owned = {
                 limit = { NOT = { is_core = RTR } }
@@ -665,8 +675,8 @@ province_event = {
 #Main Rebellion Event
 country_event = {
     id = 165200
-    title = "The Red Turban Rebellion"
-    desc = "Tiandihui and Gelaohui members, inspired by the Red Turban Rebellion that overthrew the Yuan Dynasty, are sporting red turbans and rebelling against Qing rule."
+    title = "EVTNAME165200" #The Red Turban Rebellion
+    desc = "EVTDESC165200"
     picture = "red_turban_attack"
     #news = yes
     #news_desc_long = "Secret society members have revolted in the Qing Empire!"
@@ -739,10 +749,14 @@ country_event = {
                 value = 10
             }
         }
+        modifier = {
+            factor = 0.75
+            has_global_flag = kowloon_incident_cucked
+        }
     }
 
     option = {
-        name = "Crush them!"
+        name = "EVTOPTA165200"
 
         #TPG = { all_core = { remove_core = TPG } }
         set_global_flag = taiping_has_happened
@@ -945,7 +959,7 @@ country_event = {
 
 
     option = {
-        name = "Out with the Qing!"
+        name = "EVTOPTB165200"
 
         #TPG = { all_core = { remove_core = TPG } }
         set_global_flag = taiping_has_happened
@@ -1151,8 +1165,8 @@ country_event = {
 #If the Red Turban Rebellion is Defeated
 country_event = {
     id = 165201
-    title = "Red Turban Rebellion Defeated"
-    desc = "We have defeated the Red Turban rebels!"
+    title = "EVTNAME165201" #Red Turban Rebellion Defeated
+    desc = "EVTDESC165201"
     picture = "taiping_defeated"
 
     trigger = {
@@ -1194,7 +1208,7 @@ country_event = {
     }
 
     option = {
-        name = "Root out the Rebels!"
+        name = "EVTOPTA165201"
         set_global_flag = ming_has_been_defeated
         prestige = 10
         any_owned = {
@@ -1489,12 +1503,12 @@ country_event = {
 #Ming Victory event
 country_event = {
     id = 165206
-    title = "The Red Turbans are Victorious!"
-    desc = "We have toppled the Qing oppressors!"
-    news = yes
-    news_desc_long = "The Red Turban rebels have defeated the Qing."
-    news_desc_medium = "The Red Turban rebels have defeated the Qing."
-    news_desc_short = "The Red Turban rebels have defeated the Qing."
+    title = "EVTNAME165206" #The Red Turbans are Victorious!
+    desc = "EVTDESC165206"
+    #news = yes
+    #news_desc_long = "The Red Turban rebels have defeated the Qing."
+    #news_desc_medium = "The Red Turban rebels have defeated the Qing."
+    #news_desc_short = "The Red Turban rebels have defeated the Qing."
     picture = "black_flag_army"
 
     trigger = {
@@ -1510,7 +1524,7 @@ country_event = {
     }
 
     option = {
-        name = "Hooray!"
+        name = "EVTOPTA165206"
         set_global_flag = ming_victorious
         prestige = 10
         any_pop = {
@@ -1610,8 +1624,8 @@ country_event = {
 
 country_event = {
     id = 165207
-    title = "Red Turban Power Struggle"
-    desc = "The disparate organizations that compose the Red Turbans, although united in opposition against the Qing, diverge in their vision of China's future. Peace has exposed these cracks, and each secret society is making moves to sieze power."
+    title = "EVTNAME165207" #Red Turban Power Struggle
+    desc = "EVTDESC165207"
     picture = "tiandihui_statue"
     fire_only_once = yes
 
@@ -1628,7 +1642,7 @@ country_event = {
     }
 
     option = {
-        name = "The Tiandihui backs Chen Kai as Emperor!"
+        name = "EVTOPTA165207"
         government = absolute_monarchy
         ruling_party_ideology = conservative
         clr_country_flag = communist_gov
@@ -1691,7 +1705,7 @@ country_event = {
     }
 
     option = {
-        name = "The Gelaohui will exterminate the barbarians!"
+        name = "EVTOPTB165207"
         add_country_modifier = {
             name = national_confusion
             duration = 1095
@@ -1784,7 +1798,7 @@ country_event = {
     }
 
     option = {
-        name = "The current arrangement is fine."
+        name = "EVTOPTC165207"
 
         any_pop = {
             limit = {
@@ -1828,7 +1842,7 @@ country_event = {
 
 country_event = {
     id = 165209
-    title = "The Sanhehui"
+    title = "EVTNAME165209" # The Sanhehui
     desc = "EVTDESC165209"
     picture = "sanhehui"
     fire_only_once = yes
@@ -1844,8 +1858,10 @@ country_event = {
         is_ideology_enabled = anarcho_liberal
         NOT = { has_country_flag = triad_ming }
         OR = {
-            government = absolute_monarchy
+            #government = absolute_monarchy
             government = prussian_constitutionalism
+            government = hms_government
+            government = democracy
             government = theocracy
         }
         upper_house = { ideology = anarcho_liberal value = 0.025 }
@@ -1868,7 +1884,7 @@ country_event = {
     }
 
     option = {
-        name = "Let the Triads take control."
+        name = "EVTOPTA165209"
         set_country_flag = triad_ming
 
         government = bourgeois_dictatorship
@@ -1940,12 +1956,12 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 20
+            factor = 50
         }
     }
 
     option = {
-        name = "Stop the criminal organizations at any cost!"
+        name = "EVTOPTB165209"
         set_country_flag = triad_ming
         any_pop = {
             #limit = {
@@ -1958,7 +1974,7 @@ country_event = {
             }
         }
         ai_chance = {
-            factor = 80
+            factor = 50
         }
     }
 }
@@ -1989,8 +2005,8 @@ country_event = {
 #166223 Miao Rebellion
 country_event = {
     id = 166223
-    title = "The Miao Rebellion" #The Miao Rebellion
-    desc = "Guizhou has been hotbed of anti-government unrest ever since the Ming dynasty. Once again, the locals have risen in revolt."
+    title = "EVTNAME165223" #The Miao Rebellion
+    desc = "EVTDESC165223"
     picture = "miao_attack"
     fire_only_once = yes
     trigger = {
@@ -2026,7 +2042,7 @@ country_event = {
     }
 
     option = {
-        name = "Crush the rebels!"
+        name = "EVTOPTA165223"
 
         CHI_1505 = { add_core = MAO } #Guizhou
         any_owned = {
@@ -2164,7 +2180,7 @@ country_event = {
     }
 
     option = {
-        name = "Throw off the Manchu Yoke!"
+        name = "EVTOPTB165223"
 
         CHI_1505 = { add_core = MAO } #Guizhou
         any_owned = {
@@ -2306,8 +2322,8 @@ country_event = {
 
 country_event = {
     id = 166224
-    title = "Miao Rebellion Defeated"
-    desc = "We have defeated the Miao rebels!"
+    title = "EVTNAME165224" #Miao Rebellion Defeated
+    desc = "EVTDESC165224"
     picture = "miao_defeated"
     fire_only_once = yes
 
@@ -2322,7 +2338,7 @@ country_event = {
     mean_time_to_happen = { days = 1 }
 
     option = {
-        name = "Excellent"
+        name = "EVTOPTA165224"
         prestige = 5
         MAO = { all_core = { remove_core = MAO } }
     }
@@ -2330,14 +2346,15 @@ country_event = {
 
 country_event = {
     id = 166225
-    title = "Punti-Hakka Clan Wars"
-    desc = "The Cantonese and the Hakka are feuding once again!"
+    title = "EVTNAME165225"
+    desc = "EVTDESC165225"
     picture = "punti_hakka"
     fire_only_once = yes
 
     trigger = {
         tag = QNG
         owns = 1493 #Canton
+        war = no
         has_global_flag = taiping_has_been_defeated
         has_global_flag = ming_has_been_defeated
         NOT = { has_global_flag = punti_hakka_war_happened }
@@ -2346,7 +2363,7 @@ country_event = {
     mean_time_to_happen = { months = 12 }
 
     option = {
-        name = "The fools bicker."
+        name = "EVTOPTA165225"
         set_global_flag = punti_hakka_war_happened
         CHI_1493 = {
 			#12.72 million population * 0.05 = ~636,000 casulties
@@ -2411,7 +2428,7 @@ country_event = {
             relation = { who = TPG value = -400 }
         }
         country_event = 166308 #because the above doesn't give this country the event, even if you're the GP
-        TPG = { country_event = 166400 }
+        TPG = { country_event = 166307 }
         ai_chance = {
             factor = 80
             modifier = {
@@ -2553,8 +2570,20 @@ country_event = {
 #    picture = "tea_weighing_station"
 #}
 
-#166307
+country_event = {
+    id = 166307
+    title = "EVTNAME166307" #Pope hates Taiping
+    desc = "EVTDESC166307"
+    picture = "god"
 
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA166307"
+        prestige = -10
+        #relation = { who = FROM value = -400 }
+    }
+}
 
 country_event = {
     id = 166308
@@ -2628,29 +2657,15 @@ country_event = {
     }
 }
 
-country_event = {
-    id = 166400
-    title = "Pope Denounces Taiping!" #Pope hates Taiping
-    desc = "In his latest address to the Holy See, the Pope has denounced the Taiping religion, encouraging Catholic nations to attack us."
-    picture = "god"
-
-    is_triggered_only = yes
-
-    option = {
-        name = "Papist scum!"
-        prestige = -10
-        relation = { who = FROM value = -400 }
-    }
-}
-
-#id = 166401 = debug event, gives RTR generals and tech from TPG (no longer used)
+#166400 formerly pope denounces taiping for TPG, moved to 166307
+#166401 = debug event, gives RTR generals and tech from TPG (no longer used)
 
 
 ########## Anti-Christian Taiping Civil War 166310 ##########
 country_event = {
     id = 166310
-    title = "Anti-Taiping Secret Societies"
-    desc = "A mob has attacked our troops who were trying to demolish a non-Taiping temple. It appears the Tiandihui is still active and is organizing militas to oppose our Christianization efforts."
+    title = "EVTNAME166310" #Anti-Taiping Secret Societies
+    desc = "EVTDESC166310"
 
     fire_only_once = yes
     picture = "black_flag_army"
@@ -2733,7 +2748,7 @@ country_event = {
     }
 
     option = {
-        name = "Idoltry will not be tolerated!"
+        name = "EVT166310OPTA"
         set_country_flag = ming_larpers_2
         GNG = { all_core = { add_core = RTR } }
         GXI = { all_core = { add_core = RTR } }
@@ -2754,8 +2769,8 @@ country_event = {
 
 country_event = {
     id = 166311
-    title = "The Red Turban Rebellion"
-    desc = "Resistance to Taiping Christanization efforts have increased to the point that secret societies across China are calling for open revolt against the Taiping."
+    title = "EVTNAME166311" #The Red Turban Rebellion - TPG
+    desc = "EVTDESC166311"
     fire_only_once = yes
     picture = "red_turban_attack"
 
@@ -2838,7 +2853,7 @@ country_event = {
     }
 
     option = {
-        name = "Crush the rebels!"
+        name = "EVT166311OPTA"
         any_owned = {
             limit = {
                 is_core = RTR
@@ -2977,7 +2992,7 @@ country_event = {
 
 
     option = {
-        name = "Out with the Taiping!"
+        name = "EVT166311OPTB"
         any_owned = {
             limit = {
                 is_core = RTR
@@ -3120,8 +3135,8 @@ country_event = {
 #If the Red Turban Rebellion is Defeated by the Taiping
 country_event = {
     id = 166312
-    title = "Red Turban Rebellion Defeated"
-    desc = "The last of the Red Turban armies have been defeated and their sympathizers captured."
+    title = "EVTNAME166312" #Red Turban Rebellion Defeated
+    desc = "EVTDESC166312"
     picture = "taiping_defeated"
 
     trigger = {
@@ -3134,7 +3149,7 @@ country_event = {
     mean_time_to_happen = { months = 1 }
 
     option = {
-        name = "Demon worshippers must be destroyed!"
+        name = "EVT166312OPTA"
         set_global_flag = ming_has_been_defeated_2
         prestige = 10
         any_owned = {
@@ -3154,8 +3169,8 @@ country_event = {
 #Ming Victory event
 country_event = {
     id = 166313
-    title = "The Red Turbans are Victorious!"
-    desc = "The last of the Taiping armies have been defeated and their heterodox cult discredited."
+    title = "EVTNAME166313" #The Red Turbans are Victorious!
+    desc = "EVTDESC166313"
 
     picture = "black_flag_army"
 
@@ -3171,7 +3186,7 @@ country_event = {
     }
 
     option = {
-        name = "Hooray!"
+        name = "EVT166313OPTA"
         set_global_flag = ming_victorious_2
         prestige = 10
         any_pop = {
@@ -4022,6 +4037,8 @@ country_event = {
             GXI = { exists = yes }
             TAI = { exists = yes }
             MAO = { exists = yes }
+            has_country_modifier = western_influences
+            has_country_modifier = legation_quarter
         }
     }
 
@@ -4034,7 +4051,7 @@ country_event = {
         any_owned = {
             limit = { OR = { is_core = RTR is_core = TPG } }
             any_pop = {
-                limit = { is_culture_group = east_asian NOT = { culture = manchu } }
+                limit = { is_culture_group = east_asian NOT = { culture = manchu } NOT = { culture = beifaren } }
                 militancy = 1
                 consciousness = 1
             }

@@ -44,10 +44,6 @@ post_nelsonian_thought = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -123,10 +119,6 @@ battleship_column_doctrine = {
         modifier = {
             factor = 1.05
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -235,10 +227,6 @@ raider_group_doctrine = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -346,10 +334,6 @@ blue_and_brown_water_schools = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -446,10 +430,6 @@ high_sea_battle_fleet = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -527,10 +507,6 @@ modern_naval_doctrine = {
         modifier = {
             factor = 1.05
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -610,10 +586,6 @@ naval_doctrine_7 = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -636,7 +608,7 @@ naval_doctrine_7 = {
         }
         # Only research this after you have carriers
         modifier = {
-            factor = 0.5
+            factor = 0
             NOT = { invention = purpose_built_air_carriers }
         }
     }
@@ -702,10 +674,6 @@ clipper_design = {
         modifier = {
             factor = 1.05
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -807,10 +775,6 @@ steamers = {
         modifier = {
             factor = 1.05
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -922,10 +886,6 @@ iron_steamers = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -1019,10 +979,6 @@ steel_steamers = {
         modifier = {
             factor = 1.05
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -1119,10 +1075,6 @@ steam_turbine_ships = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -1213,10 +1165,6 @@ oil_driven_ships = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -1301,10 +1249,6 @@ ship_construction_7 = {
             factor = 1.05
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.05
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.1
@@ -1327,7 +1271,7 @@ ship_construction_7 = {
         }
         # research this after you have carriers
         modifier = {
-            factor = 0.5
+            factor = 0
             NOT = { invention = purpose_built_air_carriers }
         }
     }
@@ -1401,10 +1345,6 @@ naval_design_bureaus = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -1506,10 +1446,6 @@ fire_control_systems = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -1615,10 +1551,6 @@ weapon_platforms = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -1734,7 +1666,7 @@ main_armament = {
             invention = modern_cruisers
         }
         modifier = {
-            factor = 2
+            factor = 1.25
             invention = purpose_built_air_carriers
         }
         # Bigger navy, more weight
@@ -1757,10 +1689,6 @@ main_armament = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -1864,10 +1792,6 @@ advanced_naval_design = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -1970,10 +1894,6 @@ modern_naval_design = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -2013,7 +1933,7 @@ modern_naval_design = {
         }
         #Our carriers need better planes!
         modifier = {
-            factor = 4
+            factor = 1.25
             invention = purpose_built_air_carriers
         }
         # We're late with this!
@@ -2091,10 +2011,6 @@ naval_engineering_7 = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -2125,7 +2041,7 @@ naval_engineering_7 = {
         }
         #Our carriers need better planes!
         modifier = {
-            factor = 4
+            factor = 1.25
             invention = purpose_built_air_carriers
         }
         # We're late with this!
@@ -2693,10 +2609,6 @@ the_command_principle = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -2783,10 +2695,6 @@ naval_professionalism = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -2879,10 +2787,6 @@ naval_decision_making = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -2973,10 +2877,6 @@ naval_risk_management = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -3069,10 +2969,6 @@ naval_nco_training = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -3163,10 +3059,6 @@ modern_naval_training = {
         modifier = {
             factor = 1.1
             total_amount_of_ships = 80
-        }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
         }
         # Big country with more than 1/4 coastal provinces
         modifier = {
@@ -3260,10 +3152,6 @@ naval_leadership_7 = {
             factor = 1.1
             total_amount_of_ships = 80
         }
-        modifier = {
-            factor = 1.1
-            total_amount_of_ships = 100
-        }
         # Big country with more than 1/4 coastal provinces
         modifier = {
             factor = 1.05
@@ -3286,7 +3174,7 @@ naval_leadership_7 = {
         }
         modifier = {
             factor = 0
-            NOT = { oil_driven_ships = 1 }
+            NOT = { ship_construction_7 = 1 }
         }
         modifier = {
             factor = 0.25

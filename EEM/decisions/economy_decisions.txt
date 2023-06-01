@@ -5,6 +5,36 @@ political_decisions = {
         potential = {
             mass_politics = 1 #1900
             NOT = { has_country_flag = opium_ban }
+
+            OR = {
+                ai = no
+                AND = {
+                    NOT = { government = presidential_dictatorship }
+                    is_vassal = no
+                    NOT = { debt_law = serfdom }
+                    war = no
+                    moralism = 2
+
+                    NOT = { has_country_flag = orthodox_country }
+                    NOT = { has_country_flag = coptic_country }
+                    NOT = { has_country_flag = sunni_country }
+                    NOT = { has_country_flag = shiite_country }
+                    NOT = { has_country_flag = ibadi_country }
+                    NOT = { has_country_flag = druze_country }
+                    NOT = { has_country_flag = jewish_country }
+                    NOT = { has_country_flag = yazidi_country }
+                    NOT = { has_country_flag = theravada_country }
+                    NOT = { has_country_flag = sikh_country }
+                    NOT = { has_country_flag = animist_country }
+                    OR = {
+                        government = democracy
+                        AND = {
+                            NOT = { has_country_flag = shinto_country }
+                            NOT = { has_country_flag = mahayana_country }
+                        }
+                    }
+                }
+            }
         }
 
         allow = {
@@ -265,32 +295,7 @@ political_decisions = {
 
         }
 
-        ai_will_do = {
-            factor = 1
-
-            modifier = {
-                factor = 0
-                OR = {
-                    government = presidential_dictatorship
-                    is_vassal = yes
-                    debt_law = serfdom
-                    war = yes
-                    NOT = { moralism = 2 }
-
-                    has_country_flag = orthodox_country
-                    has_country_flag = coptic_country
-                    has_country_flag = sunni_country
-                    has_country_flag = shiite_country
-                    has_country_flag = ibadi_country
-                    has_country_flag = druze_country
-                    has_country_flag = jewish_country
-                    has_country_flag = yazidi_country
-                    has_country_flag = theravada_country
-                    has_country_flag = sikh_country
-                    has_country_flag = animist_country
-                }
-            }
-        }
+        ai_will_do = { factor = 1 }
     }
 
     end_opium_ban = {
@@ -298,6 +303,23 @@ political_decisions = {
 
         potential = {
             has_country_flag = opium_ban
+
+            OR = {
+                ai = no
+                AND = {
+                    NOT = { has_country_flag = catholic_country }
+                    NOT = { has_country_flag = protestant_country }
+                    NOT = { has_country_flag = mormon_country }
+                    NOT = { has_country_flag = coptic_country }
+                    NOT = { has_country_flag = mahayana_country }
+                    NOT = { has_country_flag = gelugpa_country }
+                    NOT = { has_country_flag = hindu_country }
+                    NOT = { has_country_flag = shinto_country }
+                    NOT = { has_country_flag = animist_country }
+                }
+                government = bourgeois_dictatorship
+            }
+
         }
 
         allow = {
@@ -326,35 +348,6 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
-
-            modifier = {
-                factor = 0
-                is_vassal = yes
-                overlord = { has_country_flag = opium_ban }
-            }
-
-            modifier = {
-                factor = 0
-                NOT = { pro_atheism = 5 }
-                moralism = 1
-                NOT = { government = bourgeois_dictatorship }
-            }
-
-            modifier = {
-                factor = 0
-                OR = {
-                    has_country_flag = catholic_country
-                    has_country_flag = protestant_country
-                    has_country_flag = mormon_country
-                    has_country_flag = coptic_country
-                    has_country_flag = mahayana_country
-                    has_country_flag = gelugpa_country
-                    has_country_flag = hindu_country
-                    has_country_flag = shinto_country
-                    has_country_flag = animist_country
-                }
-            }
-
         }
     }
 

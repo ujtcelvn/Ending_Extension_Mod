@@ -639,9 +639,19 @@ political_decisions = {
                     is_greater_power = yes
                     revolution_n_counterrevolution = 1
                 }
+				AND = {
+					is_greater_power = yes
+					nationalism_n_imperialism = 1
+					invention = national_fraternity
+					invention = manifest_destiny
+					invention = expansionism
+				}
                 mass_politics = 1
             }
-            war_policy = jingoism
+			OR = {
+				ruling_party_ideology = reactionary
+				war_policy = jingoism
+			}
             OR = {
                 government = absolute_monarchy
                 government = fascist_dictatorship
@@ -665,8 +675,24 @@ political_decisions = {
         }
 
         allow = {
-            mass_politics = 1
-            war_policy = jingoism
+			OR = {
+				AND = {
+					is_greater_power = yes
+					revolution_n_counterrevolution = 1
+					machine_guns = 1
+					invention = biased_multiculturalism
+					invention = national_fraternity
+					invention = manifest_destiny
+					invention = expansionism
+					invention = nostalgic_romanticism
+					invention = rhetoric_of_hate
+				}
+				mass_politics = 1
+			}
+			OR = {
+				ruling_party_ideology = reactionary
+				war_policy = jingoism
+			}
             OR = {
                 government = absolute_monarchy
                 government = fascist_dictatorship
@@ -1410,7 +1436,10 @@ political_decisions = {
     appoint_camillo_cavour = {
         picture = SAR_appoint_camillo_cavour
         potential = {
-            tag = SAR
+			OR = {
+				tag = SAR
+				tag = ITA
+			}
             year = 1850
             OR = {
                 government = hms_government

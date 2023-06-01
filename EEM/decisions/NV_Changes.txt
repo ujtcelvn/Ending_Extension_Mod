@@ -20,14 +20,6 @@ political_decisions = {
 
         ai_will_do = {
             factor = 1
-            #modifier = {
-            #    factor = 0
-            #    OR = {
-            #        is_culture_group = east_asian
-            #        substate_of = QNG
-            #    }
-            #    NOT = { civilization_progress = 0.65 }
-            #}
 
             modifier = {
                 factor = 0
@@ -45,6 +37,12 @@ political_decisions = {
                     government = absolute_monarchy
                     government = theocracy
                 }
+            }
+
+            modifier = {
+                factor = 0
+                is_culture_group = east_asian
+                ruling_party_ideology = reactionary
             }
 
         }

@@ -223,164 +223,77 @@ political_decisions = {
             HDJ_1151 = { add_core = ARA } #Hedjaz
             1163 = { add_core = ARA }
             1164 = { add_core = ARA }
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    land_reform = yes_land_reform
-                }
+
+            random_owned = {
+                limit = { OR = { NEJ = { land_reform = yes_land_reform } HDJ = { land_reform = yes_land_reform } HAL = { land_reform = yes_land_reform } } }
                 ARA = { economic_reform = yes_land_reform }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    admin_reform = yes_admin_reform
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { admin_reform = yes_admin_reform } HDJ = { admin_reform = yes_admin_reform } HAL = { admin_reform = yes_admin_reform } } }
                 ARA = { economic_reform = yes_admin_reform }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    finance_reform = yes_finance_reform
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { finance_reform = yes_finance_reform } HDJ = { finance_reform = yes_finance_reform } HAL = { finance_reform = yes_finance_reform } } }
                 ARA = { economic_reform = yes_finance_reform }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    finance_reform = finance_reform_two
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { finance_reform = finance_reform_two } HDJ = { finance_reform = finance_reform_two } HAL = { finance_reform = finance_reform_two } } }
                 ARA = { economic_reform = finance_reform_two }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    monetary_reform = yes_monetary_reform
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { monetary_reform = yes_monetary_reform } HDJ = { monetary_reform = yes_monetary_reform } HAL = { monetary_reform = yes_monetary_reform } } }
                 ARA = { economic_reform = yes_monetary_reform }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    monetary_reform = yes_monetary_reform
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { monetary_reform = monetary_reform_two } HDJ = { monetary_reform = monetary_reform_two } HAL = { monetary_reform = monetary_reform_two } } }
                 ARA = { economic_reform = monetary_reform_two activate_technology = no_standard }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    education_reform = yes_education_reform
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { education_reform = yes_education_reform } HDJ = { education_reform = yes_education_reform } HAL = { education_reform = yes_education_reform } } }
                 ARA = { economic_reform = yes_education_reform }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    research_reform = yes_research_reform
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { research_reform = yes_research_reform } HDJ = { research_reform = yes_research_reform } HAL = { research_reform = yes_research_reform } } }
                 ARA = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    foreign_training = yes_foreign_training
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { foreign_training = yes_foreign_training } HDJ = { foreign_training = yes_foreign_training } HAL = { foreign_training = yes_foreign_training } } }
                 ARA = { military_reform = yes_foreign_training }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    foreign_weapons = yes_foreign_weapons
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { foreign_weapons = yes_foreign_weapons } HDJ = { foreign_weapons = yes_foreign_weapons } HAL = { foreign_weapons = yes_foreign_weapons } } }
                 ARA = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    foreign_officers = yes_foreign_officers
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { foreign_officers = yes_foreign_officers } HDJ = { foreign_officers = yes_foreign_officers } HAL = { foreign_officers = yes_foreign_officers } } }
                 ARA = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    army_schools = yes_army_schools
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { army_schools = yes_army_schools } HDJ = { army_schools = yes_army_schools } HAL = { army_schools = yes_army_schools } } }
                 ARA = { military_reform = yes_army_schools }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    foreign_naval_officers = yes_foreign_naval_officers
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { foreign_naval_officers = yes_foreign_naval_officers } HDJ = { foreign_naval_officers = yes_foreign_naval_officers } HAL = { foreign_naval_officers = yes_foreign_naval_officers } } }
                 ARA = { military_reform = yes_foreign_naval_officers }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    naval_schools = yes_naval_schools
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { naval_schools = yes_naval_schools } HDJ = { naval_schools = yes_naval_schools } HAL = { naval_schools = yes_naval_schools } } }
                 ARA = { military_reform = yes_naval_schools }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    foreign_navies = yes_foreign_navies
-                }
-                ARA = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers set_country_flag = using_foreign_ships }
+            random_owned = {
+                limit = { OR = { NEJ = { foreign_navies = yes_foreign_navies } HDJ = { foreign_navies = yes_foreign_navies } HAL = { foreign_navies = yes_foreign_navies } } }
+                ARA = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    western_shipyards = yes_western_shipyards
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { western_shipyards = yes_western_shipyards } HDJ = { western_shipyards = yes_western_shipyards } HAL = { western_shipyards = yes_western_shipyards } } }
                 ARA = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = no
-                    foreign_artillery = yes_foreign_artillery
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { foreign_artillery = yes_foreign_artillery } HDJ = { foreign_artillery = yes_foreign_artillery } HAL = { foreign_artillery = yes_foreign_artillery } } }
                 ARA = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
             }
-
-            random_country = {
-                limit = {
-                    tag = NEJ
-                    civilized = yes
-                }
+            random_owned = {
+                limit = { OR = { NEJ = { civilized = yes } HDJ = { civilized = yes } HAL = { civilized = yes } } }
                 ARA = { civilized = yes }
             }
 

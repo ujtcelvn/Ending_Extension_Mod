@@ -19,6 +19,27 @@ political_decisions = {
         ai_will_do = { factor = 0 }
     }
 
+    enable_splendid_isolation = {
+        picture = starting_options
+        alert = no
+        potential = {
+            ai = no
+            has_country_flag = country_looking_through_options
+            NOT = { has_global_flag = permanently_hide_options }
+            NOT = { has_global_flag = splendid_isolation }
+            NOT = { year = 1837 }
+        }
+
+        allow = {
+        }
+
+        effect = {
+        set_global_flag = splendid_isolation
+        }
+
+        ai_will_do = { factor = 0 }
+    }
+
     unlock_crisis_in_1870 = {
         picture = starting_options
         alert = no

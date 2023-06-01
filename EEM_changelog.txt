@@ -45,50 +45,95 @@ industry = 23 + 4
 
 ####################################################################################################
 Coming soon: 
-
-#TODO: soldiers in state capitals only? (can be done by modifying the poptypes file, state_capital_only = yes teleports pops to the capital automatically (may still need to change immigration weights) )
-
-#TODO: remove random British cores in Alberta
-#TODO: Turkestan doesn't get any cores if formed externally (is this intended?)
+#TODO: Why are there sometimes random British cores in Alberta?
 #TODO: the CSA is really ugly without Arkansas 
-#TODO: purchase battleship
 #TODO: fix accepting black pops in the New World
 
-#TODO: redo all the unit graphics dds in GIMP to prevent compression issues
+#TODO: purchase battleship
+
+#TODO: all dds graphics should be done in GIMP to prevent compression issues
 #TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
 
-#TODO: Western governments have crippled ____ with sanctions, and then sent in friendly NGOs to pick up the slack.
-
-#TODO: remove Yong Ying modifier?
 #TODO: Dogra-Tibetan War
 #TODO: Third Nepal-Tibet War
 #TODO: Treaty of Saint Petersburg (1881)
 #TODO: Sino-French War
+#TODO: Red Turbans can pick a new capital
 
 #TODO: Great Power Rivary
 #TODO: Democratic convention: (leader of the free world)
 #TODO: Communist convention
-
-#TODO: 1st industrial revolution: coal and iron as limiter
-#TODO: 2nd industrial revolution makes coal and iron super cheap, shift to oil as limiter?
+#TODO: Western governments have crippled ____ with sanctions, and then sent in friendly NGOs to pick up the slack.
 
 #TODO: healthcare -> public health? Safety already includes no dumping waste, but more stuff can be included?
 	Give pensions and unemployment benefits in later tiers, to model government health insurance?
+#TODO: 3rd Plague Pandemic: starts in Yunnan in 1855 (after the Panthay Rebellion), after it spreads to Hong Kong, spreads to rest of the world's ports (esp. British India)
+#TODO: Hindus don't poo in loo -> more cholera
 
-#TODO: invention localizations
+#TODO: coastal provinces and provinces next to major rivers get supply / infrastructure / production-eqsue boost?
+	The ease of transport along rivertine and maritime routes contributed significantly to economic development, but this is not modeled in Victoria 2.
+	local_steamboats, modifier gets replaced by local_modern_transportation
+	Mary had a steamboat
+	The steamboat had a bell
+	Mary went to Heaven
+	And the steamboat went Toot Toot!
+#TODO: local_steamboats and local_modern_transportation don't spread when at war and get removed if you're poor / occupied / blockaded
+#TODO: yangtze river patrol decision, giving China free local_steamboats, but also local western_presence? What benefit does the Western power get?
+
+#TODO: integrate East Turkestan into Turkestan
+#TODO: Turkestan turns into Uzbekistan if it explodes
+
+#TODO: integrate Bahrain, Qatar, Trucial States, and Oman into Arabia
+
+#TODO: finish invention localizations
+
+####################################################################################################
+v0.5.8d
+
+put the AI crutches in the triggered modifiers back in
+Tainan (1485) no longer grows tea: tea is grown in the mountains of northern and central Taiwan, not on the fields of western Taiwan. Instead, it now grows fruit, which would also make pops in an independent Taiwan less likely to starve.
+Taitung (2562) grows normal (instead of tropical) wood again, as in HPM. After the 1970s, it should flip to tea because of deforestation (currently disabled because the end date doesn't reach that far yet). 
+	The Taiwan tea boom—a financial glut https://doi.org/10.1111/ehr.12657
+	The Financial Effects of the Taiwan Tea Boom https://econ.ntu.edu.tw/uploads/asset/data/584a235b48b8a17a8b049ea8/hist_1051215.pdf
+	Security Assessment of Taiwan Solid Wood Product Supply https://doi.org/10.3390/su13095292
+
+Increased the impact of giving up Hong Kong without a fight in the Kowloon Incident has on support for the Red Turbans
+Taiping cores don't spread into Guangdong and Guangxi (Red Turbans), Guizhou (Miao), and Yunnan
+Red Turban cores can now spread into Central and Northern China
+The Red Turban fascist party is renamed to Lìxíng Shè, the Blue Shirts Society, so all the Red Turban parties can be secret societies
+Made AI more likely to force China to open trade zones if China tears up the unequal treaties
+Renamed Red Turban Chinas because the old names sounded really awkward
+Reactionary unciv China no longer changes national value away from Tradition
+Clearing out the manchu elite no longer gives AI Qing extra research points
+Having a trade zone carved out of you gives you some research points
+Trade zone decision now requires protected cruisers instead of just ironclads if the Taiping / Red Turban rebellion didn't happen
+
+Prussia no longer accepts South German because none of the other North German states accept South German and none of the South German states accept the North German and Bismark tried to Kulturkampf Catholic South Germans really hard but the Kulturkampf event only fires for non-accepted pops!
+
+Local Modern Transportation now requires screw-propelled steamers and can now spread in slave states
+Halved the tariff efficiency modifier of the Hormuz Strait, the Strait of Malacca, and the Bab-el-Maneb Strait. Just owning the land next should the strait shouldn't be nearly as effective for laying tariffs as owning the Suez Canal.
+
+returned administrative_multiplier for health care back its original value
+poor AIs want to research tax efficiency and admin efficiency more
+improved AI in defines.lua
+adjusted conditions for AI banning of opium
+
+Splendid Isolation option taken from HPMP. This option removes Britain's ability to ally GPs until they are no longer the #1 Great Power; Ireland exists; Germany exists; or it is 1880.
+Turkestan finally gets cores and the westernization reforms of Uzbekistan, Kokland, and Bukhara if formed externally.
+Arabia starts with the best westernization reforms of Nejd, Hedjaz, and Ha'il if formed externally.
+Implemented the easier conditions for the Italian irredentism decisions and being able to appoint Camillo Cavour as Italy from the HPM Politics & Economy Patch because the AI managed to get all Italian cores and blob into Friuli and Istria by 1873
+
+Moved a bunch of event localizations into the localizations file
+Some bugfixes, localizations, and gfx
 
 ####################################################################################################
 v0.5.8c
-
 trade zones get Manchu accepted if created from Qing, and lose it if destroyed / independent / transferred
 Disabled pollution events until I rework them because they're boring and kind of spammy
 Integrated the 1836 Government reforms from the HPM Politics & Economy Patch. I will determine which modules to integrate later. https://www.moddb.com/mods/hpm-politics-economy-patch
 Some more invention localizations
 
-
-####################################################################################################
 v0.5.8b
-
 Moved some South Han pops from Qinzhou to Nanning
 The Taiping / Red Turban leaders captured events are now merged
 If the Taiping / Red Turban rebellion is prevented, the Qing removes The Female Shortage modifier by westernizing, falling to anti-Qing rebels, or becoming China
@@ -96,15 +141,11 @@ China explodes more prettily if anti-Qing rebels win
 Adjusted Punti-Hakka Clan War
 Disabled support Manchuria event chain
 Yuan Shikai can only become emperor after Mass Politics, also simplified its militancy gain
-
 The AI now is more likely to use the cb gained in Missionaries Executed event chain
-
 light and heavy strategic bombing no longer mutually exclusive, light bombing no longer damages infrastructure
 Craftsman exploit decision now has no cooldown but gives 1 infamy per use
-
 fixed some localizations
 
-####################################################################################################
 v0.5.8a
 
 Much reduced the duration of the nuclear fallout modifiers, increased the duration of strategic bomb damage to compensate. The duration of dangerous radioactivity and concerning radioactivity (0.01 R/h) in Nagasaki-type bombs only would last a few days and ~100 days respectively.

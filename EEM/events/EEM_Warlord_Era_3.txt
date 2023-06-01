@@ -482,7 +482,7 @@ country_event = {
         NOT = { exists = QNG }
         has_global_flag = the_new_army
         has_global_flag = spread_warlord_influence
-        NOT = { as_global_flag = warlord_era_has_begun }
+        NOT = { has_global_flag = warlord_era_has_begun }
         civilized = yes
         OR = {
             is_disarmed = yes

@@ -362,8 +362,7 @@ hormuz_strait = {
         }
     }
 
-    #tax_efficiency = 0.01
-    tariff_efficiency_modifier = 0.05
+    tariff_efficiency_modifier = 0.025
     icon = 16
 }
 
@@ -381,7 +380,7 @@ strait_of_malacca = {
             }
         }
     }
-    tariff_efficiency_modifier = 0.1
+    tariff_efficiency_modifier = 0.05
     icon = 16
 }
 
@@ -400,7 +399,7 @@ bab-el-mandeb_strait = {
             }
         }
     }
-    tariff_efficiency_modifier = 0.1
+    tariff_efficiency_modifier = 0.05
     icon = 16
 }
 

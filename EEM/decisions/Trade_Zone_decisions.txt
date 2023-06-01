@@ -29,7 +29,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10
@@ -78,7 +78,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10
@@ -129,7 +129,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10
@@ -178,7 +178,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10
@@ -227,7 +227,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10
@@ -277,7 +277,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10
@@ -327,7 +327,7 @@ political_decisions = {
             invention = steamer_transports    #1836
             invention = commerce_raiders      #1836
             OR = {
-                invention = monitors #1855
+                invention = protected_cruisers
                 has_global_flag = taiping_has_happened
             }
             total_amount_of_ships = 10

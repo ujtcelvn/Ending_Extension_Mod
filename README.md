@@ -21,7 +21,9 @@ Aircraft Carriers
 
 Economic adjustments and rebalance
 
-Tax refund event to prevent the Liquidity Crisis
+Improved AI
+
+Tax refund event to prevent the liquidity crisis
 
 A bunch of bugfixes compared to HPM
 
@@ -29,7 +31,9 @@ More China flavor and suffering. Trade access (sphering) of parts of China after
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
 
-The new inventions don't have any localizations yet because they are still being rebalanced but they'll come out with the Nuke update.
+Some of the new inventions don't have any localizations yet because they are still being rebalanced.
+
+Splendid Isolation option for the UK, taken from HPMP
 
 Please read the changelog.txt for more details.
 
@@ -37,5 +41,6 @@ Please read the changelog.txt for more details.
 
 * Thanks to arkhometha and everyone else who contributed to HPM for making HPM so this mod could be based on it
 * Thanks to Anon who made the Square Shaded Map Frame mod for pretty square shaded map frames
-* Thanks to the author of the HPM Politics & Economy Patch for the more realistic government reforms, events, and decisions https://www.moddb.com/mods/hpm-politics-economy-patch
-* Thanks to Anons for suggestions and playtesting!
+* Thanks to Xylephone for the HPM Politics & Economy Patch for the more realistic government reforms, events, and decisions https://www.moddb.com/mods/hpm-politics-economy-patch
+* Thanks to the MarshawnBM of HPMP https://github.com/MarshawnBM/Historical-Project-Mod-Plus--HPMP-
+* and thanks to (YOU) for suggestions and playtesting!
