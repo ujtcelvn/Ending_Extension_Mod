@@ -7280,6 +7280,7 @@ political_decisions = {
         potential = {
             civilized = yes
             owns = 2074
+            controls = 2074
             ai = yes
             NOT = { exists = TSW }
             exists = SAF
@@ -7287,10 +7288,38 @@ political_decisions = {
                 exists = RHO
                 exists = ZBW
             }
+            war = no
+			OR = {
+			    AND = {
+                    owns = 2075
+                    controls = 2075
+                }
+                NOT = { owns = 2075 }
+            }
+			OR = {
+			    AND = {
+                    owns = 2076
+                    controls = 2076
+                }
+                NOT = { owns = 2076 }
+            }
+			OR = {
+			    AND = {
+                    owns = 2077
+                    controls = 2077
+                }
+                NOT = { owns = 2077 }
+            }
+			OR = {
+			    AND = {
+                    owns = 2574
+                    controls = 2574
+                }
+                NOT = { owns = 2574 }
+            }
         }
 
         allow = {
-            war = no
         }
 
         effect = {
