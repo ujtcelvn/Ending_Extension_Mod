@@ -150,3 +150,51 @@ country_event = {
         ai_chance = { factor = 20 }
     }
 }
+
+
+
+#Pontus - Greece picks what to do
+country_event = {
+    id = 5000002
+    title = "EVTNAME5000002"
+    desc = "EVTDESC5000002"
+    picture = "deputation_to_milos"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT5000002OPTA" #Pontus only
+        badboy = 2
+        882 = { add_core = GRE }
+        883 = { add_core = GRE }
+        884 = { add_core = GRE }
+        random_country = {
+            limit = {
+                tag = PNT
+                in_sphere = THIS
+                ai = yes
+            }
+            inherit = THIS
+        }
+        ai_chance = { factor = 40 }
+    }
+
+    option = {
+        name = "EVT5000002OPTB" #The entire Black Sea Coast
+        badboy = 5
+        880 = { add_core = GRE }
+        881 = { add_core = GRE }
+        882 = { add_core = GRE }
+        883 = { add_core = GRE }
+        884 = { add_core = GRE }
+        random_country = {
+            limit = {
+                tag = PNT
+                in_sphere = THIS
+                ai = yes
+            }
+            inherit = THIS
+        }
+        ai_chance = { factor = 60 }
+    }
+}

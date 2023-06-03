@@ -107,6 +107,64 @@ political_decisions = {
         }
     }
 
+
+    claim_pontus = {
+        picture = unite_with_greece
+        potential = {
+            tag = GRE
+            has_country_flag = greece_has_got_a_brand_new_bag
+            NOT = { has_country_flag = greece_has_got_a_brand_new_bag_2 }
+            NOT = { has_country_flag = population_exchange_with_turkey }
+        }
+
+        allow = {
+            NOT = { has_country_flag = population_exchange_with_turkey }
+            mass_politics = 1
+            owns = 860 #Istanbul
+            owns = 863 #Bursa
+            has_unclaimed_cores = no
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            OR = {
+                is_greater_power = yes
+                AND = {
+                    is_secondary_power = yes
+                    great_wars_enabled = yes
+                    has_country_flag = in_great_war
+                    war_countries = {
+                        tag = TUR
+                        has_country_flag = in_great_war
+                    }
+                }
+                AND = {
+                    is_secondary_power = yes
+                    NOT = { any_greater_power = { alliance_with = TUR } }
+                    TUR = {
+                        is_greater_power = no
+                        part_of_sphere = no
+                    }
+					has_unclaimed_cores = no
+                }
+                AND = {
+                    is_secondary_power = yes
+                    owns = 882
+                    owns = 883
+                    owns = 884
+                }
+            }
+        }
+
+        effect = {
+            prestige = 10
+            country_event = 5000002
+            set_country_flag = greece_has_got_a_brand_new_bag_2
+        }
+    }
+
+
+
     unite_with_greece = {
     picture = unite_with_greece
         potential = {
