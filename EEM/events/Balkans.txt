@@ -168,14 +168,6 @@ country_event = {
         882 = { add_core = GRE }
         883 = { add_core = GRE }
         884 = { add_core = GRE }
-        random_country = {
-            limit = {
-                tag = PNT
-                in_sphere = THIS
-                ai = yes
-            }
-            inherit = THIS
-        }
         ai_chance = { factor = 40 }
     }
 
@@ -187,14 +179,6 @@ country_event = {
         882 = { add_core = GRE }
         883 = { add_core = GRE }
         884 = { add_core = GRE }
-        random_country = {
-            limit = {
-                tag = PNT
-                in_sphere = THIS
-                ai = yes
-            }
-            inherit = THIS
-        }
         ai_chance = { factor = 60 }
     }
 }
