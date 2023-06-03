@@ -131,24 +131,6 @@ political_decisions = {
                 is_greater_power = yes
                 AND = {
                     is_secondary_power = yes
-                    great_wars_enabled = yes
-                    has_country_flag = in_great_war
-                    war_countries = {
-                        tag = TUR
-                        has_country_flag = in_great_war
-                    }
-                }
-                AND = {
-                    is_secondary_power = yes
-                    NOT = { any_greater_power = { alliance_with = TUR } }
-                    TUR = {
-                        is_greater_power = no
-                        part_of_sphere = no
-                    }
-					has_unclaimed_cores = no
-                }
-                AND = {
-                    is_secondary_power = yes
                     owns = 882
                     owns = 883
                     owns = 884
