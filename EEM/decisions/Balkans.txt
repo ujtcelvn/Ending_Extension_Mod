@@ -1857,6 +1857,7 @@ political_decisions = {
             OR = {
                 BUL = { vassal_of = THIS }
                 BUL = { in_sphere = THIS }
+                BUL = { exists = no }
             }
             NOT = { has_global_flag = bulgaria_in_yugoslavia }
         }
