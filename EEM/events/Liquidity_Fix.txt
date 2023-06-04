@@ -122,6028 +122,7015 @@ country_event = {
         }
     }
 
-    #mean_time_to_happen = {
-    #    days = 7
-    #}
+    mean_time_to_happen = {
+        days = 7
+    }
 
 	option = {
 		name = "Restore liquidity!"
 		money = -1000000
 
         #if a pop has > ~1.5k $ , they deposit the money into the national bank
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-		#counter
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
 		random_pop = {
 			limit = {
 				NOT = { cash_reserves = 500 }
+				NOT = { type = slaves }
 			}
 			money = 1000
 		}
-
-
-
 
 	}
 }
