@@ -12,12 +12,12 @@ Tech Unlock Dates		number of inventions (10 + 100 = 110)
 army = 26
 
 1936 naval doctrine					 3
-1930 ship construction				 4		1919 oil_driven_ships		4
+1930 ship construction				 4		1919 oil_driven_ships		3
 1930 naval engineering				 9      1919 modern_naval_design    2
 1936 naval science					 3
 1936 naval leadership				 3
 
-navy = 22 + 6
+navy = 22 + 5
 
 1930 aesthetics						 5
 1930 philosphy						 4
@@ -39,7 +39,7 @@ commerce = 17
 1930 mechanization					 3      
 1930 metallurgy						 4		1905 electric_furnace		1 	1850 regenerative_furnaces 1
 1930 infrastructure					 0
-1936 chemistry and electricity		 9		1900 synthetic_polymers		2
+1936 chemistry and electricity		 9		1900 synthetic_polymers		2	1850 organic_chemistry 1
 
 industry = 23 + 4
 
@@ -67,10 +67,14 @@ Coming soon:
 
 #TODO: healthcare -> public health? Safety already includes no dumping waste, but more stuff can be included?
 	Give pensions and unemployment benefits in later tiers, to model government health insurance?
-#TODO: 3rd Plague Pandemic: starts in Yunnan in 1855 (after the Panthay Rebellion), after it spreads to Hong Kong, spreads to rest of the world's ports (esp. British India)
+#TODO: 3rd Plague Pandemic: starts in Yunnan in 1855 (after the Panthay Rebellion) trigger: neither Yunnan nor Panthay doesn't exist, after it spreads to Hong Kong, spreads to rest of the world's ports (esp. British India)
 #TODO: Hindus don't poo in loo -> more cholera
 
-#TODO: coastal provinces and provinces next to major rivers get supply / infrastructure / production-eqsue boost?
+
+#TODO: finish invention localizations
+
+
+#TODO: coastal provinces and provinces next to major rivers get boosted RGO production (so there's no factory overproduction issues)
 	The ease of transport along rivertine and maritime routes contributed significantly to economic development, but this is not modeled in Victoria 2.
 	local_steamboats, modifier gets replaced by local_modern_transportation
 	Mary had a steamboat
@@ -83,9 +87,59 @@ Coming soon:
 #TODO: integrate East Turkestan into Turkestan
 #TODO: Turkestan turns into Uzbekistan if it explodes
 
-#TODO: integrate Bahrain, Qatar, Trucial States, and Oman into Arabia
+#TODO: integrate Bahrain, Qatar, Trucial States, Oman, and Kuwait into Arabia
 
-#TODO: finish invention localizations
+#TODO: Japanese Korea is immediately flooded with rebels after Japan annexes it but before Japan can ship over any garrisons, making Japan lose Korea nearly every game. Reduce the militancy of Koreans in the annex war chain?
+
+#TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully though
+
+
+####################################################################################################
+v0.5.8e
+
+fixed HPM bug where the UK gets stuck on an infinite loop of trying to free_botswana if Botswana is covered by rebels
+
+local_distribution_channels_und_electricity and local_modern_transportation no longer increase local_artisan_output because it may be causing the midgame overproduction issue
+Returned INVENTION_IMPACT_ON_DEMAND from 0.010 to HPM's 0.012 because this is for sure causing the midgame overproduction issue
+
+Made the tooltip for the Megali Idea more clear. The original event didn't show that Greece doesn't gain cores on Kutahya and Denizli if the 2nd option is picked.
+Greece can how claim Pontus after researching Mass Politics
+bulgaria_in_yugoslavia can now be done even if Bulgaria does not exist
+
+Made AI research some naval techs without having discovered carriers yet
+Tax refund no longer gives money to slaves
+Disabled literate nation triggered modifiers
+
+doubled oil production boost of improved_hydraulic_drills from 0.5 to 1 because now it's a combination of the Bassinger tool, Seismic exploration, High Speed Steel, and Submersible oil pumps
+Restored effect of railroads from 0.15 back to 0.16
+removed seaplane_tenders invention because it's already covered by on_board_recon_aircraft, moved the 1 gun power cruisers get from it to improved_naval_aircraft, to represent the better recon planes mounted on cruisers too
+miniature_vacuum_tube now boosts electric_gear production instead of radio and telephobes
+Returned base coal and iron production to the HPM values
+Re-enabled lubrication_oil, which also increases coal, iron, and sulphur by 0.05, representing how it protects mining equipment from dust.
+air_preheater increases factory throughput instead of increasing fuel factory production again
+Reduced industrial_plastics_production fabric and glass from 0.05 to 0.02, re-enabled its synthetic rubber boost
+
+Several North German minors faught on Austria's side in the Austro-Prussian War:
+	Hanover, Hesse-Kassel, Hesse-Darmstadt, and Frankfurt (as well as Saxony) are much less likely to turn to Prussia when they win the Second Schleswig War.
+	Sphere changes of pro-Austrian North German minors:
+		Hanover HAN				King Ernest Augustus was Pro-Austrian, had a trade war with Brunswick when Brunswick joined the Zollverein, and didn't join the Zollverein until 1851, starts in UK's sphere as usual, but Austria starts with much more inflence and Prussia much less
+		Hesse-Kassel HEK		Pro-Austrian minister of justice and of the interior Hans Hassenpflug was in office in 1836, so starts in Austria's sphere
+		Hesse-Darmstadt	HES	Interior minister von Dalwigk was very pro-Austrian, so starts in Austria's sphere
+		Nassau NAS				used to be Pro-Austria but joined the Zollverein in 1835, so increased Austrian influence
+		Frankfurt FRM			very anti-Prussian, and the Central Federal Bureau of Investigations was founded there by Prince Metternich after 1833 rebellion, so starts in Austria's sphere
+		Saxe-Meiningen		in the Zollverein, not enough information to really decide so kept in Prussia's sphere
+
+make Red Turbans no longer spread into North Han again
+Generic anti-qing rebels winning also makes you lose research points like a normal unciv reactionary rebellion (but does not roll back reforms)
+absolute monarchies can also unban drugs freely, unban drugs no longer starts with the checkmark ticked
+
+Changed tiandihui.tga to a painting of the Battle of Jijipu during the Tiandihui-affiliated Lin Shuangwen rebellion
+Changed red_turban_attack.tga to a painting of the Conquest of Dali during the Tiandihui-affiliated Lin Shuangwen rebellion
+The Red Turbans can now pick to move their capital to Nanjing, Luoyang, Xi'an (renamed to Chang'an), or Chengdu if they win, instead of just Nanjing. The event picture is An illustration of the Porcelain Tower of Nanjing, Fischer von Erlach's A Plan of Civil and Historical Architecture (1721)
+Returned Anhui to its darker orange color because it was too difficult to tell it apart from Nationalist China's orange
+
+Buffed the Skoda Works tech school so it gets 5% better commerce research so its total research bonus isn't worse than the other tech schools.
+
 
 ####################################################################################################
 v0.5.8d

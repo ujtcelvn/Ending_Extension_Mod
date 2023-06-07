@@ -37,9 +37,7 @@ COB = {
     military_access = yes
 }
 FRM = {
-    value = 200
-    level = 5
-    influence_value = 0
+    value = 125
     military_access = yes
 }
 HAM = {
@@ -50,20 +48,16 @@ HAM = {
 }
 HAN = {
     value = 125
-    level = 3
-    influence_value = 0
     military_access = yes
 }
 HEK = {
-    value = 200
-    level = 5
-    influence_value = 0
+    value = 125
+    level = 3
     military_access = yes
 }
 HES = {
-    value = 200
-    level = 5
-    influence_value = 0
+    value = 125
+    level = 3
     military_access = yes
 }
 LIP = {

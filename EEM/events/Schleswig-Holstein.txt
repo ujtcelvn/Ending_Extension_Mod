@@ -572,7 +572,13 @@ country_event = {
             factor = 75
             modifier = {
                 factor = 0.1
-                tag = SAX
+                OR = {
+                    tag = SAX
+                    tag = HAN
+                    tag = HEK
+                    tag = HES
+                    tag = FRM
+                }
             }
             modifier = {
                 factor = 0.5
