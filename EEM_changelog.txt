@@ -58,7 +58,6 @@ Coming soon:
 #TODO: Third Nepal-Tibet War
 #TODO: Treaty of Saint Petersburg (1881)
 #TODO: Sino-French War
-#TODO: Red Turbans can pick a new capital
 
 #TODO: Great Power Rivary
 #TODO: Democratic convention: (leader of the free world)
@@ -70,9 +69,7 @@ Coming soon:
 #TODO: 3rd Plague Pandemic: starts in Yunnan in 1855 (after the Panthay Rebellion) trigger: neither Yunnan nor Panthay doesn't exist, after it spreads to Hong Kong, spreads to rest of the world's ports (esp. British India)
 #TODO: Hindus don't poo in loo -> more cholera
 
-
 #TODO: finish invention localizations
-
 
 #TODO: coastal provinces and provinces next to major rivers get boosted RGO production (so there's no factory overproduction issues)
 	The ease of transport along rivertine and maritime routes contributed significantly to economic development, but this is not modeled in Victoria 2.
@@ -93,6 +90,13 @@ Coming soon:
 
 #TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully though
 
+####################################################################################################
+v0.5.8f
+
+Integrated the reforms and national values of HPM Politics & Economy Patch 2.0
+San Francisco's terrain is now hills.
+Made tax refund event less likely to have money vanish
+returned infrastructure value back to 0.15 to reduce factory overproduction 
 
 ####################################################################################################
 v0.5.8e
@@ -141,7 +145,6 @@ Returned Anhui to its darker orange color because it was too difficult to tell i
 Buffed the Skoda Works tech school so it gets 5% better commerce research so its total research bonus isn't worse than the other tech schools.
 
 
-####################################################################################################
 v0.5.8d
 
 put the AI crutches in the triggered modifiers back in
@@ -180,7 +183,6 @@ Implemented the easier conditions for the Italian irredentism decisions and bein
 Moved a bunch of event localizations into the localizations file
 Some bugfixes, localizations, and gfx
 
-####################################################################################################
 v0.5.8c
 trade zones get Manchu accepted if created from Qing, and lose it if destroyed / independent / transferred
 Disabled pollution events until I rework them because they're boring and kind of spammy
