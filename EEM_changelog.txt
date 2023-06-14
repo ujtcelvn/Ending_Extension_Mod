@@ -96,16 +96,6 @@ Coming soon:
 #TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
 
 #TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully though
-
-####################################################################################################
-#TODO: v0.5.8h
-
-Starting party loyalty has been reduced by 10x, so election victories can overpower them over the course of the game. Since party loyalty changes by +0.1 if a party wins by 100% of the vote and there are elections every 4 years, it would take 1200 years of consecutive landslides to overpower that a starting party loyalty of 30, which is clearly too long. 30 years of consecutive landslides will only add 0.75 party loyalty to a province! The power of the national focus is reduced to 0.001 per day, which is the power of nearly FOUR total 100% landslide victories per year. Now it would take about 5 years to overpower the most common starting loyalty of 20 (reduced to 2), because party loyalty shifts seem to do actually take a generation and your national value propaganda shouldn't be able to move things THAT quickly. The amount of party loyalty that is lost in scandals has also been divided by 4 so scandals don't immediately annihilate all local party loyalty. 
-	#TODO: upload history/provinces to github too!
-
-The chemical industry national focus now also promotes rubber and sulphur factories
-removed Hazarajat cores because it's bloat that never appears
-
 ####################################################################################################
 v0.5.8g
 
@@ -116,6 +106,13 @@ Intercontinental bombing is now much less likely
 Czechoslovakia is now now longer a releasable vassal so Bohemia and Slovakia can no longer release it from themselves. Dismantling a country still makes Czechoslovakia appear as normal though.
 slightly nerfed lubrication oil to reduce machine part overproduction
 moved the fort of Chengde to the right position
+
+Starting party loyalty has been reduced by 1/5, so election victories can overpower them over the course of the game. Since party loyalty changes by +0.1 if a party wins by 100% of the vote and there are elections every 4 years, it would take 1200 years of consecutive landslides to overpower a starting party loyalty of 30, which is clearly too long. 30 years of consecutive landslides will only add 0.75 party loyalty to a province! 
+The power of the national focus has been divided by 3 to 0.001 per day, which is the power of nearly FOUR total 100% landslide victories per year. Now it would take about 10 years instead of 20 years to overpower the most common starting loyalty of 20 (reduced to 4).
+The amount of party loyalty that is lost in scandals has also been divided by 4 so scandals don't immediately annihilate all local party loyalty. 
+	
+The chemical industry national focus now also promotes rubber and sulphur factories
+removed Hazarajat cores because it's bloat that never appears
 
 ####################################################################################################
 v0.5.8f
