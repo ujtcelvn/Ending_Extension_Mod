@@ -81,6 +81,10 @@ Coming soon:
 #TODO: local_steamboats and local_modern_transportation don't spread when at war and get removed if you're poor / occupied / blockaded
 #TODO: yangtze river patrol decision, giving China free local_steamboats, but also local western_presence? What benefit does the Western power get?
 
+
+#TODO: make several RGO production increase inventions be slowed down a bit by RGO unemployment, like the HPM iron inventions, to prevent RGO overproduction. Grain production per capita only doubled in 1840-1940 in real life but it increases ~6x in EEM (but so does demand)
+
+
 #TODO: integrate East Turkestan into Turkestan
 #TODO: Turkestan turns into Uzbekistan if it explodes
 
@@ -88,7 +92,30 @@ Coming soon:
 
 #TODO: Japanese Korea is immediately flooded with rebels after Japan annexes it but before Japan can ship over any garrisons, making Japan lose Korea nearly every game. Reduce the militancy of Koreans in the annex war chain?
 
+#TODO: 946 Polotsk nearly always turns Jewish
+#TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
+
 #TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully though
+
+####################################################################################################
+#TODO: v0.5.8h
+
+Starting party loyalty has been reduced by 10x, so election victories can overpower them over the course of the game. Since party loyalty changes by +0.1 if a party wins by 100% of the vote and there are elections every 4 years, it would take 1200 years of consecutive landslides to overpower that a starting party loyalty of 30, which is clearly too long. 30 years of consecutive landslides will only add 0.75 party loyalty to a province! The power of the national focus is reduced to 0.001 per day, which is the power of nearly FOUR total 100% landslide victories per year. Now it would take about 5 years to overpower the most common starting loyalty of 20 (reduced to 2), because party loyalty shifts seem to do actually take a generation and your national value propaganda shouldn't be able to move things THAT quickly. The amount of party loyalty that is lost in scandals has also been divided by 4 so scandals don't immediately annihilate all local party loyalty. 
+	#TODO: upload history/provinces to github too!
+
+The chemical industry national focus now also promotes rubber and sulphur factories
+removed Hazarajat cores because it's bloat that never appears
+
+####################################################################################################
+v0.5.8g
+
+Strategic bombing now needs the late_interwar_bombers invention as well as strategic_destruction_doctrine. You need to have invented planes with big payloads in order to bomb with them!
+slowed down strategic bombing by 25%, made tech more important in speeding it up
+Added a check for the year so the event doesn't gum up game performance way before bombers are invented
+Intercontinental bombing is now much less likely
+Czechoslovakia is now now longer a releasable vassal so Bohemia and Slovakia can no longer release it from themselves. Dismantling a country still makes Czechoslovakia appear as normal though.
+slightly nerfed lubrication oil to reduce machine part overproduction
+moved the fort of Chengde to the right position
 
 ####################################################################################################
 v0.5.8f
@@ -98,7 +125,6 @@ San Francisco's terrain is now hills.
 Made tax refund event less likely to have money vanish
 returned infrastructure value back to 0.15 to reduce factory overproduction 
 
-####################################################################################################
 v0.5.8e
 
 fixed HPM bug where the UK gets stuck on an infinite loop of trying to free_botswana if Botswana is covered by rebels
