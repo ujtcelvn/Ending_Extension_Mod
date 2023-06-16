@@ -81,13 +81,11 @@ Coming soon:
 #TODO: local_steamboats and local_modern_transportation don't spread when at war and get removed if you're poor / occupied / blockaded
 #TODO: yangtze river patrol decision, giving China free local_steamboats, but also local western_presence? What benefit does the Western power get?
 
-
 #TODO: make several RGO production increase inventions be slowed down a bit by RGO unemployment, like the HPM iron inventions, to prevent RGO overproduction. Grain production per capita only doubled in 1840-1940 in real life but it increases ~6x in EEM (but so does demand)
 
 
 #TODO: integrate East Turkestan into Turkestan
 #TODO: Turkestan turns into Uzbekistan if it explodes
-
 #TODO: integrate Bahrain, Qatar, Trucial States, Oman, and Kuwait into Arabia
 
 #TODO: Japanese Korea is immediately flooded with rebels after Japan annexes it but before Japan can ship over any garrisons, making Japan lose Korea nearly every game. Reduce the militancy of Koreans in the annex war chain?
@@ -95,7 +93,22 @@ Coming soon:
 #TODO: 946 Polotsk nearly always turns Jewish
 #TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
 
-#TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully though
+#TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully
+
+#TODO: Give Australia, New Zealand, South Africa, and maybe the Boer Republics the New World immigration modifier
+
+
+####################################################################################################
+v0.5.8h
+
+Simplified banning opium decisions and events by removing the local_opium_ban modifier. RGOs now change away from opium after 1 event, not after 2 convoluted events.
+Made sure Hong Kong 1469 and Macau 1498 successfully transition away from opium if opium is banned 
+Slowed down spread of opium RGOs but now you can no longer refuse
+Capital punishment, not rehabilitation, now slows down the spread of drug addicts. Wtf was I thinking when I made this event?
+Made sure trade zones become civilized when they get annexed when China civilizes so they don't become colonies
+Made Guangdong not become KMT every single time - it should now be more random
+If the Qing falls to the generic anti-Qing rebels, reforms are removed as per normal unciv reactionary rebels
+
 ####################################################################################################
 v0.5.8g
 
@@ -114,7 +127,6 @@ The amount of party loyalty that is lost in scandals has also been divided by 4 
 The chemical industry national focus now also promotes rubber and sulphur factories
 removed Hazarajat cores because it's bloat that never appears
 
-####################################################################################################
 v0.5.8f
 
 Integrated the reforms and national values of HPM Politics & Economy Patch 2.0

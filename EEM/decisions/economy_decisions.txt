@@ -204,6 +204,8 @@ political_decisions = {
                     OR = {
                         province_id = 1258	#Gauhati
                         province_id = 1338	#Taunggye
+                        province_id = 1498	#Macau
+                        province_id = 1469	#Hong Kong
                     }
                 }
                 trade_goods = tea
@@ -339,12 +341,6 @@ political_decisions = {
 
         effect = {
             clr_country_flag = opium_ban
-            any_owned = {
-                limit = {
-                    has_province_modifier = local_opium_ban
-                }
-                remove_province_modifier = local_opium_ban
-            }
         }
 
         ai_will_do = {
