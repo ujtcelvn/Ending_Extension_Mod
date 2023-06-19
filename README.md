@@ -11,7 +11,7 @@ Extended play to 1956
 
 1 new technology for each technology group
 
-110 new inventions (100 in the new techs, 10 earlier)
+Over 100 new inventions
 
 Nukes!
 
@@ -31,9 +31,9 @@ More China flavor and suffering. Trade access (sphering) of parts of China after
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
 
-Some of the new inventions don't have any localizations yet because they are still being rebalanced.
-
 Splendid Isolation option for the UK, taken from HPMP
+
+Some of the new inventions don't have any localizations yet because they are still being rebalanced.
 
 Please read the changelog.txt for more details.
 

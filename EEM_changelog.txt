@@ -1,6 +1,5 @@
 Tech Unlock Dates		number of inventions (10 + 100 = 110)
-1926 5 
-1930 10
+1930 15
 1936 10
 
 1936 army doctrine					 5
@@ -20,28 +19,28 @@ army = 26
 navy = 22 + 5
 
 1930 aesthetics						 5
-1930 philosphy						 4
+1930 philosphy						 5
 1930 social thought					 1
-1936 political thought				 2
+1936 political thought				 4
 1930 psychology						 0
 
-culture = 12
+culture = 15
 
-1926 financial institutions			 1
-1926 monetary system				 2
-1926 economic thought and critique	 6
-1926 market functionality			 4
-1926 organisation					 4
+1930 financial institutions			 1
+1930 monetary system				 2
+1930 economic thought and critique	 6
+1930 market functionality			 3
+1930 organisation					 3
 
-commerce = 17
+commerce = 15
 
-1930 power							 7
+1930 power							 6
 1930 mechanization					 3      
 1930 metallurgy						 4		1905 electric_furnace		1 	1850 regenerative_furnaces 1
 1930 infrastructure					 0
 1936 chemistry and electricity		 9		1900 synthetic_polymers		2	1850 organic_chemistry 1
 
-industry = 23 + 4
+industry = 22 + 4
 
 ####################################################################################################
 Coming soon: 
@@ -81,8 +80,7 @@ Coming soon:
 #TODO: local_steamboats and local_modern_transportation don't spread when at war and get removed if you're poor / occupied / blockaded
 #TODO: yangtze river patrol decision, giving China free local_steamboats, but also local western_presence? What benefit does the Western power get?
 
-#TODO: make several RGO production increase inventions be slowed down a bit by RGO unemployment, like the HPM iron inventions, to prevent RGO overproduction. Grain production per capita only doubled in 1840-1940 in real life but it increases ~6x in EEM (but so does demand)
-
+#TODO: weather and climate
 
 #TODO: integrate East Turkestan into Turkestan
 #TODO: Turkestan turns into Uzbekistan if it explodes
@@ -94,13 +92,45 @@ Coming soon:
 #TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
 
 #TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully
+#TODO: check if Australia, New Zealand, South Africa, and the Boer Republics have the New World immigration modifier
 
-#TODO: Give Australia, New Zealand, South Africa, and maybe the Boer Republics the New World immigration modifier
+#TODO: split up Asian Minor
+#TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia) with Mongol accepted only
 
+####################################################################################################
+v0.5.8i
+increased AI army and navy spending from 0.15 to 0.2 in defines again
+Made sure localization of acquire pacific islands CB actually shows which islands you are claiming 
+craftsmen and clerks stranded in colonies should demote more properly
+
+Russia no longer gets to eat Tannu Tuva if they don't border each other
+make China get less research points when a trade zone is created so they don't westernize as fast
+Chinese uprising event is now more powerful
+Beiyang China no longer gets bonus cultures if you chose to be Nationalist China during the Xinhai Rebellion
+Vassals can now ban opium if their overlord has banned opium too, also fixed a silly bug in banning opium
+
+Removed the Hawthorne Study invention because it is already covered by Human Resource Development
+Removed the closed economy invention because it is already covered by Autarky
+rocket_experiments now give prestige instead of increasing paper production
+general_computer_programming moved to Structuralism, now gives 0.05 education_efficiency instead of increasing electric gear production
+miniature_vacuum_tube now adds 0.03 electric gear, like the regular vacuum tube invention
+Returned improved_hydraulic_drills oil production back to 0.5 because with the old value of 1, oil started getting overproduced in the 1940s. Reduced coal, iron, and precious metal production of the invention to 0.05 as well
+leaded_gasoline now reduces education_efficiency even further
+mass_surveillance now also reduces rebel organization, like secret police and the police state 
+national_liberation now also increases nationalist_rebels by 0.17 (the separatism gave them 0.33 organization, 0.33+0.17 = 0.5, which makes rebel organization easier to calculate and compare)
+moved anticolonialism from social thought to political thought, no longer gives consciousness and plurality, instead now gives independence and native rebels 0.5 organization
+added on_guerrilla_warfare invention which increases partisan rebel organization by 0.75
+Delayed all tier 7 commerce techs to 1930
+renamed philosophy_7 from Existentialism to Logical Empiricism because existentialism is already an invention
+renamed logical_empiricism to Neopositivism
+Renamed political_thought_7 from Postpositivism to Totalitarianism and Separatism
+added a Deductive-nomological model invention to philosophy_7
+
+Hotfix: Improved performance of strategic bombing - nested loops are too demanding
 
 ####################################################################################################
 v0.5.8h
-
+Communists governments now love you and non-capitalists now hate you if you eat the rich
 Simplified banning opium decisions and events by removing the local_opium_ban modifier. RGOs now change away from opium after 1 event, not after 2 convoluted events.
 Made sure Hong Kong 1469 and Macau 1498 successfully transition away from opium if opium is banned 
 Slowed down spread of opium RGOs but now you can no longer refuse
@@ -109,9 +139,7 @@ Made sure trade zones become civilized when they get annexed when China civilize
 Made Guangdong not become KMT every single time - it should now be more random
 If the Qing falls to the generic anti-Qing rebels, reforms are removed as per normal unciv reactionary rebels
 
-####################################################################################################
 v0.5.8g
-
 Strategic bombing now needs the late_interwar_bombers invention as well as strategic_destruction_doctrine. You need to have invented planes with big payloads in order to bomb with them!
 slowed down strategic bombing by 25%, made tech more important in speeding it up
 Added a check for the year so the event doesn't gum up game performance way before bombers are invented
@@ -128,14 +156,12 @@ The chemical industry national focus now also promotes rubber and sulphur factor
 removed Hazarajat cores because it's bloat that never appears
 
 v0.5.8f
-
 Integrated the reforms and national values of HPM Politics & Economy Patch 2.0
 San Francisco's terrain is now hills.
 Made tax refund event less likely to have money vanish
 returned infrastructure value back to 0.15 to reduce factory overproduction 
 
 v0.5.8e
-
 fixed HPM bug where the UK gets stuck on an infinite loop of trying to free_botswana if Botswana is covered by rebels
 
 local_distribution_channels_und_electricity and local_modern_transportation no longer increase local_artisan_output because it may be causing the midgame overproduction issue
@@ -179,9 +205,7 @@ Returned Anhui to its darker orange color because it was too difficult to tell i
 
 Buffed the Skoda Works tech school so it gets 5% better commerce research so its total research bonus isn't worse than the other tech schools.
 
-
 v0.5.8d
-
 put the AI crutches in the triggered modifiers back in
 Tainan (1485) no longer grows tea: tea is grown in the mountains of northern and central Taiwan, not on the fields of western Taiwan. Instead, it now grows fruit, which would also make pops in an independent Taiwan less likely to starve.
 Taitung (2562) grows normal (instead of tropical) wood again, as in HPM. After the 1970s, it should flip to tea because of deforestation (currently disabled because the end date doesn't reach that far yet). 
@@ -238,7 +262,6 @@ Craftsman exploit decision now has no cooldown but gives 1 infamy per use
 fixed some localizations
 
 v0.5.8a
-
 Much reduced the duration of the nuclear fallout modifiers, increased the duration of strategic bomb damage to compensate. The duration of dangerous radioactivity and concerning radioactivity (0.01 R/h) in Nagasaki-type bombs only would last a few days and ~100 days respectively.
 Removed fallout spreads event
 Adjusted AI use of nukes
@@ -297,7 +320,6 @@ improved performance of some new clean up decisions
 Reworded some locs
 
 v0.5.7
-
 3323 Muzaffapur merged back into 1247 Patna
 Southern half of Chengde split to become 3323 Tangshan, Chengde is now purely the extent of Rehe province
 Tianjin extended northwards to where it actually is
@@ -561,7 +583,6 @@ Fixed conquest of the desert decision to solve HPM bug where 1807 and 2609 (the 
 Fixed HPM bug where 1192 Nukus often not having any cores
 Fixed HPM issue where upon reloading a save KMT-aligned warlords immediately switch to Beiyang-aligned but for real this time
 
-
 v0.5.3e
 Sped up north-south conference
 made sure KMT ghost units are cleaned up
@@ -589,7 +610,6 @@ Event to remove global_liberal_agitation if the Xinhai Revolution hasn't happene
 Refusing the North South conference made more punishing for KMT
 
 v0.5.3c
-
 Fixed HPM's AI personality modifiers being backwards (coward_ai speeds up cb generation in HPM, and vice versa)
 Made drug addiction event not so performance impacting
 slightly increase aristocrat everyday opium want
@@ -605,7 +625,6 @@ Prevent the Warlord Era decision now makes officers mad and kills some of them (
 Qing can return their capital to Beijing if they ever flee from there
 
 v0.5.3b
-
 clipper transports now buildable without ports.
 remove unciv conscript fishermen event
 AI adjustments
@@ -625,20 +644,17 @@ made sure AI China changes national value
 Guominjun more likely to align with the KMT and not with the Beiyang
 
 v0.5.3a
-
 adjust foreigner killed in China event conditions
 added level 1 forts to 1508 Kaifeng, 1559 Xian, (1612 Baoding already has a fort), 1616 Peking, and 2221 Nanjing because Chinese city walls are super thick and resistant to artillery (should also make Taiping / Red Turban rebellions last longer)
 CHI_1505 Guizhou is no longer guarenteed to not join the Taiping / Red Turban rebellions, the Miao rebellion is no longer almost guarenteed
 drug addiction for civilized countries now spreads, to make you more likely to want to ban opium, also increased local_drug_habit effect from 0.2 to 0.25
 
 v0.5.3
-
 Reduced AI decolonization chance
 EEM is now standalone, do NOT click on HPM when running it
 Square Shaded Flag Frame mod is now built in to EEM, so do not click on it separately
 
 v0.5.2a
-
 end date extended to 1956
 Decolonization now gives the country much more influence over the former colony
 The CSA begins with 15 years of the slavery debate so they don't ban slavery so soon
@@ -665,7 +681,6 @@ sulfa and improved antibiotics pop_growth increased from 0.0001 to 0.0002, reduc
 New tag: HAZ Hazarajat
 
 v0.5.2
-
 opium base production increased to 1, price reduced back to 3
 serf other good consumption increased to balance opium price
 farmers and craftsmen and labourers no longer want opium
@@ -760,7 +775,6 @@ tax refund threshold adjusted to >$6 million and only active if not at war
 Split Dinka and Nuer back up
 
 v0.5.1
-
 Fixed HPM Bug #198 where rivers.bmp was offset by one pixel
 Fixed HPM Bug #241 so now capitalists do want to move to laissez_faire countries. (adjusted modifier from 0.5 to 1.5)
 Fixed HPM Bug #243 where an infamy war flag gets stuck by changing badboy threshold for firing event 96135 from 1.8 to 2
@@ -814,7 +828,6 @@ Africa cultures reduced: 5
     Fang merged into forest_bantu (Northwest Bantu, Zone A)
     Kilombero merged into lacustrine_bantu (Northeast Bantu)
     rename Maures to Hassaniya
-
 
 v0.5.0
 Shortened localization file names
@@ -1072,7 +1085,6 @@ decisions/RUS.txt
     RTR can now rename chinese_outer_manchuria
     RTR also gets mad if RUS integrates TNT
 
-
 v0.4.7a
 adjust blow_yellow_river_dikes conditions and desc
 Nanking massacre now occurs if China dominates central China, instead of if warlord era is over, because irl it happened during the warlord era
@@ -1154,7 +1166,6 @@ added Modern Transportation event and modifier
 decolonization adjustments
 added lao, khmer, thai, and burmese decolonization
 anticolonialism invention increases non_accepted_pop_consciousness_modifier instead of that of core pops now
-
 
 v0.4.3
 removed clerked_nation tiers 3 and 4
