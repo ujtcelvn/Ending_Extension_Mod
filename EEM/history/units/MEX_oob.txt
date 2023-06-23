@@ -1,8 +1,11 @@
 USA = {
-    value = 100
+    value = 25
 }
 SPA = {
-    value = 75
+    value = 25
+}
+ENG = {
+	value = 50
 }
 
 leader = {

@@ -1,3 +1,10 @@
+AUS = {
+	value = 100
+}
+SAR = {
+	value = 125
+}
+
 leader = {
     name = "Wilhelm Albrecht"
     date = 1836.1.1

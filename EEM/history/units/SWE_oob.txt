@@ -1,3 +1,10 @@
+ENG = {
+	value = 25
+}
+RUS = {
+	value = 25
+}
+
 leader = {
     name = "Carl Nordenskjöld"
     date = 1834.1.1

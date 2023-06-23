@@ -1,9 +1,14 @@
 ENG = {
-    value = 0
-}
-
+    value = -25
+}=
 PRU = {
     value = 49
+}
+USA = {
+	value = -100
+}
+RUS = {
+	value = 25
 }
 
 leader = {

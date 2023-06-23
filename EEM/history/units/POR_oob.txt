@@ -1,7 +1,7 @@
 PER = { value = 200 }
 GAZ = {
     truce_until = 1841.1.1
-    value = 125
+    value = -100
 }
 AGC = {
     value = -400
@@ -30,9 +30,6 @@ BEN = {
 ZUL = {
     value = 50
 }
-SUA = {
-    value = 100
-}
 DAH = {
     value = 40
 }
@@ -49,7 +46,7 @@ WRI = {
     value = 40
 }
 KON = {
-    value = 25
+    value = 125
 }
 LOA = {
     value = 75
@@ -68,6 +65,21 @@ MOR = {
 }
 NET = {
     value = 120
+}
+USA = {
+	value = 20
+}
+PAP = {
+	value = -50
+}
+AUS = {
+	value = 5
+}
+RGS = {
+	value = -100
+}
+HAI = {
+	value = -50
 }
 
 army = {

@@ -345,7 +345,15 @@ national_liberation = {
         seperatism = 0.5
         rebel_org_gain = {
             faction = nationalist_rebels
-            value = 0.17
+            value = 0.67
+        }
+        rebel_org_gain = {
+            faction = pan_nationalist_rebels
+            value = 0.25
+        }
+        rebel_org_gain = {
+            faction = separatist_rebels
+            value = 0.25
         }
     }
 }

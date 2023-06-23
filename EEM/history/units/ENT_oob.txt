@@ -4,9 +4,17 @@ USA = {
 URU = {
     value = 200
 }
-
 BRZ = {
     value = 200
+}
+SPA = {
+	value = -1
+}
+ENT = {
+	value = 150
+}
+PRG = {
+	value = -200
 }
 
 army = {

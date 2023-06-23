@@ -98,6 +98,14 @@ Coming soon:
 #TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia) with Mongol accepted only
 
 ####################################################################################################
+v0.5.8j
+Integrated HPM Politics & Economy Patch 3.0 Political & National Value Changes and Setup Only
+National liberation now increase nationalist_rebels organization by 0.67 and separatist_rebels and pan_nationalist_rebels organization by 0.25
+
+rename Totalitarianism and Separatism to Modern Political Thought
+Kolovart's faction is now anti-military
+
+####################################################################################################
 v0.5.8i
 increased AI army and navy spending from 0.15 to 0.2 in defines again
 Made sure localization of acquire pacific islands CB actually shows which islands you are claiming 
@@ -128,7 +136,6 @@ added a Deductive-nomological model invention to philosophy_7
 
 Hotfix: Improved performance of strategic bombing - nested loops are too demanding
 
-####################################################################################################
 v0.5.8h
 Communists governments now love you and non-capitalists now hate you if you eat the rich
 Simplified banning opium decisions and events by removing the local_opium_ban modifier. RGOs now change away from opium after 1 event, not after 2 convoluted events.

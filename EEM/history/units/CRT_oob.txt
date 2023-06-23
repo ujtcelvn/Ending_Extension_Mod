@@ -1,6 +1,18 @@
 USA = {
     value = -200
 }
+SPA = {
+	value = -1
+}
+URU = {
+	value = 100
+}
+PRG = {
+	value = -200
+}
+HAI = {
+	value = -50
+}
 
 army = {
     name = "Ejército de Corrientes"

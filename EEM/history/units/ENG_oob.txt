@@ -3,10 +3,10 @@
 FRA = { value = 25 }
 RUS = { value = -100 }
 AUS = { value = -75 }
-USA = { value = 50 }
+USA = { value = 15 }
 PRU = { value = 25 }
-TUR = { value = 125 }
-SPA = { value = -75 }
+TUR = { value = 30 }
+SPA = { value = 25 }
 
 #Africa
 BSH = { value = 75 }
@@ -91,8 +91,8 @@ NYE ={
 
 ARC = {
     value = -50
-    level = 1
-    influence_value = 0
+    level = 3
+    influence_value = 25
 }
 
 SBA = {
@@ -160,6 +160,10 @@ MHR = {
     influence_value = 0
 }
 
+EGY = {
+	value = 10
+}
+
 
 #Europe
 POR = {
@@ -174,15 +178,15 @@ NET = {
 
 }
 DEN = {
-    value = 125        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
+    value = -25        #relation
+    level = 2        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
 
 }
 SWE = {
-    value = 125        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    value = 25        #relation
+    level = 2        #3=cordial, 4 = friendly, 5 sphere
+    influence_value = 25
 }
 GRE = {
     value = 75
@@ -190,8 +194,8 @@ GRE = {
     influence_value = 0
 }
 BEL = {
-    value = 200
-    level = 5
+    value = 25
+    level = 4
     influence_value = 0
 }
 HAN = {
@@ -204,11 +208,16 @@ ION = {
     level = 5
     influence_value = 0
 }
+PAP = {
+	value = -50
+	level = 1
+	influence_value = 0
+}
 
 #South America
 VNZ = {
-    value = 125        #relation
-    level = 3        #3=cordial, 4 = friendly, 5 sphere
+    value = -15        #relation
+    level = 2        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
 }
 URU = {
@@ -216,13 +225,47 @@ URU = {
     level = 4        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
 }
-
+CHL = {
+	value = 50
+	level = 4
+	influence_value = 0
+}
+MEX = {
+	value = 50
+	level = 2
+	influence_value = 25
+}
+NIC = {					#Nicaragua and Guatemala represented with negatives to represent disputes over Bluefields and Belize, to reduce British influence despite sharing a land border
+	value = -50
+	level = 0
+	influence_value = 0
+}
+GUA = {
+	value = -25
+	level = 1
+	influence_value = 0
+}
+CLM = {
+	value = 25
+	level = 2
+	influence_value = 25
+}
+PRG = {
+	value = -200
+	level = 0
+	influence_value = 0
+}
 
 #Other
 COL = {                #Columbia if released
     value = 150        #relation
     level = 4        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 5
+}
+WRL = {
+	value = -20
+	level = 3
+	influence_value = 25
 }
 
 #India
@@ -460,8 +503,6 @@ leader = {
     background = engineer
     prestige = 0.0
 }
-
-
 
 leader = {
     name = "Sir George Brown"

@@ -55,6 +55,7 @@ upper_house = {
 schools = developing_tech_school
 
 # Technologies
+enlightenment_thought = 1
 
 # Inventions
 #bottling_process = yes

@@ -3,7 +3,11 @@ KOK = {
 }
 
 PER = {
-    value = 50
+    value = -50
+}
+
+AFG = {
+	value = 25
 }
 
 

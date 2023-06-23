@@ -5,13 +5,17 @@ CLM = {
 USA = {
     value = -25
 }
-
 PEU = {
     value = -100
 }
-
 PBC = {
     value = -25
+}
+SPA = {
+	value = 20
+}
+HAI = {
+	value = -50
 }
 
 leader = {

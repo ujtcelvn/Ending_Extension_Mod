@@ -1,3 +1,10 @@
+USA = {
+	value = 50
+}
+SPA = {
+	value = -1
+}
+
 leader = {
     name = "Francisco Morazán"
     type = land

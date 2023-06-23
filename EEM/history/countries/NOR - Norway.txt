@@ -49,6 +49,7 @@ upper_house = {
     communist = 0
 }
 
+oob = "NOR_oob.txt"
 
 #Technologies
 post_napoleonic_thought = 1

@@ -33,6 +33,8 @@ Danubian Federation cultures now guaranteed if militancy < 1 and its home countr
 
 Splendid Isolation option for the UK, taken from HPMP
 
+Integrated Xylephone's HPM Politics & Economy Patch 3.0's Political & National Value Changes and Setup Changes (so far).
+
 Some of the new inventions don't have any localizations yet because they are still being rebalanced.
 
 Please read the changelog.txt for more details.

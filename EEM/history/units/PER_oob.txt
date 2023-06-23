@@ -1,10 +1,16 @@
 BUK = {
-    value = 50
+    value = -50
 }
 
-KHI = { value = 300 }
+KHI = { value = -50 }
 
 POR = { value = 200 }
+
+RUS = { value = -50 }
+
+TUR = { value = -25 }
+
+AFG = { value = -50 }
 
 leader = {
     name = "Muhammad Shah"

@@ -3,6 +3,27 @@
 SWI = {
     value = 125
 }
+FRA = {
+	value = -25
+}
+AUS = {
+	value = 100
+}
+PAR = {
+	value = 125
+}
+MOD = {
+	value = 125
+}
+LUC = {
+	value = 125
+}
+TUS = {
+	value = 125
+}
+SIC = {
+	value = 125
+}
 
 leader = {
     name = "Carlo Alberto"
