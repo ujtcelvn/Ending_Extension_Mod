@@ -4669,6 +4669,11 @@ country_event = {
         add_accepted_culture = nanfaren
         set_global_flag = anti_qing_rebels_won
 
+        clr_country_flag = wants_to_unify
+        clr_country_flag = does_not_want_to_unify
+        clr_country_flag = rebels_in_capital
+        set_country_flag = angry_rioters_victorious
+        ruling_party_ideology = reactionary
 
         random = {
             chance = 50
@@ -4688,6 +4693,21 @@ country_event = {
         random = {
             chance = 10
             years_of_research = -3
+        }
+
+        random = {
+            chance = 30
+            remove_random_economic_reforms = 1
+        }
+
+        random = {
+            chance = 20
+            remove_random_economic_reforms = 1
+        }
+
+        random = {
+            chance = 10
+            remove_random_economic_reforms = 1
         }
 
         random_list = {
