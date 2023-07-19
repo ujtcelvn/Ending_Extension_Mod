@@ -16,6 +16,7 @@ country_event = {
         #monetary_system_7					258			 8 mil ¤ 
         #
         #at war											+1 mil ¤ 
+        NOT = { has_global_flag = tax_refund_disabled }
 
         OR = {
             AND = {

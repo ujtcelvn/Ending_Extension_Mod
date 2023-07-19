@@ -155,7 +155,10 @@ camouflage_uniforms = {
 young_school_doctrine = {
     limit = {
         battleship_column_doctrine = 1
-        tech_school = naval_tech_school
+        OR = {
+            tech_school = naval_tech_school
+            tech_school = japanese_tech_school
+        }
     }
     #news = no
     chance = {
@@ -163,6 +166,7 @@ young_school_doctrine = {
         modifier = {
             factor = -10
             NOT = { tech_school = naval_tech_school }
+            NOT = { tech_school = japanese_tech_school }
         }
         modifier = {
             factor = -10
@@ -177,7 +181,10 @@ young_school_doctrine = {
 fleet_in_being_doctrine = {
     limit = {
         raider_group_doctrine = 1
-        tech_school = naval_tech_school
+        OR = {
+            tech_school = naval_tech_school
+            tech_school = japanese_tech_school
+        }
     }
     #news = no
     chance = {
@@ -185,6 +192,7 @@ fleet_in_being_doctrine = {
         modifier = {
             factor = -25
             NOT = { tech_school = naval_tech_school }
+            NOT = { tech_school = japanese_tech_school }
         }
         modifier = {
             factor = -25
@@ -199,7 +207,10 @@ fleet_in_being_doctrine = {
 sea_power_doctrine = {
     limit = {
         blue_and_brown_water_schools = 1
-        tech_school = naval_tech_school
+        OR = {
+            tech_school = naval_tech_school
+            tech_school = japanese_tech_school
+        }
     }
     #news = no
     chance = {
@@ -207,6 +218,7 @@ sea_power_doctrine = {
         modifier = {
             factor = -50
             NOT = { tech_school = naval_tech_school }
+            NOT = { tech_school = japanese_tech_school }
         }
         modifier = {
             factor = -50
@@ -221,7 +233,10 @@ sea_power_doctrine = {
 neocolonialism_doctrine = {
     limit = {
         steel_steamers = 1
-        tech_school = naval_tech_school
+        OR = {
+            tech_school = naval_tech_school
+            tech_school = japanese_tech_school
+        }
     }
     #news = no
     chance = {
@@ -229,6 +244,7 @@ neocolonialism_doctrine = {
         modifier = {
             factor = -80
             NOT = { tech_school = naval_tech_school }
+            NOT = { tech_school = japanese_tech_school }
         }
         modifier = {
             factor = -80

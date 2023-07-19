@@ -121,9 +121,9 @@ economy = {
     RGO_SUPPLY_DEMAND_FACTOR_FIRE = 0.2,        -- how fast pops are Fired when there is a low demand
     EMPLOYMENT_HIRE_LOWEST = 0.01,                -- we Hire pops no slower then x% of total required per day
     EMPLOYMENT_FIRE_LOWEST = 0.01,                -- we Fire pops no slower then x% of total required per day
-    TRADE_CAP_LOW_LIMIT_LAND = 0.1,                 -- the lowest % the slider can go for land units
+    TRADE_CAP_LOW_LIMIT_LAND = 0.05,                 -- the lowest % the slider can go for land units
     TRADE_CAP_LOW_LIMIT_NAVAL = 0.1,             -- the lowest % the slider can go for naval units
-    TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS = 0.1,         -- the lowest % the slider can go for constructions
+    TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS = 0.05,         -- the lowest % the slider can go for constructions
     FACTORY_PURCHASE_MIN_FACTOR = 1.0,            -- the lowest % of its daily needs a factory will purchase
     FACTORY_PURCHASE_DRAWDOWN_FACTOR = 0.025,    -- the % a factory will reduce its input purchases each day if it did not sell all its goods (also used for scaling up production if all goods are sold)
 },
@@ -695,10 +695,10 @@ pops = {
 ai =
 {
     COLONY_WEIGHT = 4.0, -- ai weight for colonising
-    ADMINISTRATOR_WEIGHT = 5.0, -- ai weight for new bureaucrat
-    INDUSTRYWORKER_WEIGHT = 5.0, -- ai weight for new industry workers
-    EDUCATOR_WEIGHT = 45.0, -- ai weigth for new clergy
-    SOLDIER_WEIGHT = 45.0, -- ai weight for soldiers
+    ADMINISTRATOR_WEIGHT = 10.0, -- ai weight for new bureaucrat
+    INDUSTRYWORKER_WEIGHT = 15.0, -- ai weight for new industry workers
+    EDUCATOR_WEIGHT = 25.0, -- ai weigth for new clergy
+    SOLDIER_WEIGHT = 35.0, -- ai weight for soldiers
     SOLDIER_FRACTION = 0.045, -- max amount of population AI wants to be soldiers
     CAPITALIST_FRACTION = 0.007, -- max amount of population AI wants to be capis
     PRODUCTION_WEIGHT = 0.05, -- ai weight for new production
@@ -706,7 +706,7 @@ ai =
     ONE_SIDE_MAX_WARSCORE = 150, -- don't add too many wargoals to one side in a war
     POP_PROJECT_INVESTMENT_MAX_BUDGET_FACTOR = 0.35, -- how much % of our current budget can be spend on the pop project investments.
     RELATION_LIMIT_NO_ALLIANCE_OFFER = 0, -- if relation lower then this value, AI will not ally
-    NAVAL_SUPPLY_PENALTY_LIMIT = 0.1, -- AI will allow to have max X% of supply penalty (when too little naval bases)
+    NAVAL_SUPPLY_PENALTY_LIMIT = 0.2, -- AI will allow to have max X% of supply penalty (when too little naval bases)
     CHANCE_BUILD_RAILROAD = 0.5, -- chances in % of AI decisions (max value 1.0)
     CHANCE_BUILD_NAVAL_BASE = 0.75,
     CHANCE_BUILD_FORT = 0.5,
@@ -729,9 +729,9 @@ ai =
     PEACE_ALLY_FORCE_BALANCE_MULT = 0, -- Multiplies PEACE_FORCE_BALANCE_FACTOR for allies in a war
     AGGRESSION_BASE = 5, -- general AI aggression
     AGGRESSION_UNCIV_BONUS = 10, -- additional AI civ aggression against uncivs
-    FLEET_SIZE = 100, -- AI will attempt to keep fleets of roughly this size (fewer fleets generally results in more competent naval AI)
+    FLEET_SIZE = 30, -- AI will attempt to keep fleets of roughly this size (fewer fleets generally results in more competent naval AI)
     MIN_FLEETS = 1, -- Minimum amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
-    MAX_FLEETS = 4, -- Maximal amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
+    MAX_FLEETS = 20, -- Maximal amount of main fleets the AI will divide its navy into (does not include specialized fleets such as blockades and naval invasions)
     MONTHS_BEFORE_DISBAND = 9, -- Months from start date before AI will disband armies/navies (to avoid disbands because of early economic turmoil)
 },
 

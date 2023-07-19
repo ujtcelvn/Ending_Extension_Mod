@@ -86,7 +86,6 @@ Coming soon:
 #TODO: Turkestan turns into Uzbekistan if it explodes
 #TODO: integrate Bahrain, Qatar, Trucial States, Oman, and Kuwait into Arabia
 
-#TODO: Japanese Korea is immediately flooded with rebels after Japan annexes it but before Japan can ship over any garrisons, making Japan lose Korea nearly every game. Reduce the militancy of Koreans in the annex war chain?
 
 #TODO: 946 Polotsk nearly always turns Jewish
 #TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
@@ -97,7 +96,23 @@ Coming soon:
 #TODO: split up Asian Minor
 #TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia) with Mongol accepted only
 
+#TODO: let immigrants of the same primary culture move further than just neighbor countries
+#TODO: reactivate high literacy / high clerk ratio population debuffs, but make it local
 ####################################################################################################
+v0.5.8k
+Replaced party scandal events with HPM version
+Returned trade caps, pop weights, NAVAL_SUPPLY_PENALTY_LIMIT, MAX_FLEETS, and FLEET_SIZE back to HPM values
+Returned the infrastructure value of railroads back to 0.16
+Rebalanced tech schools so being sphered by them always reduces the total amount of research points needed for westernization reforms by 0.2
+The Japanese Shukensen-Riekensen tech school can now invent the Naval tech school’s colonial point boost techs
+You can now disable the tax refund event in the starting options
+There is now an option to give the counties designated in the HPM Politics & Economy mod their starting infamy
+
+Sikh conservatives are now pluralist and liberals secularized because they were extremely religiously tolerant
+Moved the fort icon for 1946 Kebbi
+Returned farm RGO production back to HPM values
+####################################################################################################
+
 v0.5.8j
 Integrated HPM Politics & Economy Patch 3.0 Political & National Value Changes and Setup Only
 National liberation now increase nationalist_rebels organization by 0.67 and separatist_rebels and pan_nationalist_rebels organization by 0.25
@@ -105,7 +120,6 @@ National liberation now increase nationalist_rebels organization by 0.67 and sep
 rename Totalitarianism and Separatism to Modern Political Thought
 Kolovart's faction is now anti-military
 
-####################################################################################################
 v0.5.8i
 increased AI army and navy spending from 0.15 to 0.2 in defines again
 Made sure localization of acquire pacific islands CB actually shows which islands you are claiming 

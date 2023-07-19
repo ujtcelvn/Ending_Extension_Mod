@@ -522,7 +522,7 @@ regular_clothes_factory = {
         value = 0.25 #0.225     #0.25
     }
     #bonus = {
-    #    trigger = { trade_goods_in_state = wool	}
+    #    trigger = { trade_goods_in_state = wool    }
     #    value = 0.025
     #}
 }
@@ -557,11 +557,11 @@ ammunition_factory = {
     value = 2.5            #45 - profit = 14.9
     bonus = {
         trigger = { 
-			OR = { 
-				trade_goods_in_state = sulphur 
-				has_building = hydrodesulphurization_plant 
-			} 
-		}
+            OR = { 
+                trade_goods_in_state = sulphur 
+                has_building = hydrodesulphurization_plant 
+            } 
+        }
         value = 0.1
     }
     bonus = {
@@ -727,11 +727,11 @@ fertilizer_factory = {
     value = 5                #50 - profit = 14
     bonus = {
         trigger = { 
-			OR = { 
-				trade_goods_in_state = sulphur 
-				has_building = hydrodesulphurization_plant 
-			} 
-		}
+            OR = { 
+                trade_goods_in_state = sulphur 
+                has_building = hydrodesulphurization_plant 
+            } 
+        }
         value = 0.25
     }
 }

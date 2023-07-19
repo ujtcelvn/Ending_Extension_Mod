@@ -358,6 +358,57 @@ political_decisions = {
         ai_will_do = { factor = 0 }
     }
 
+
+    option_disable_tax_refund = {
+        picture = starting_options
+        alert = no
+        potential = {
+            ai = no
+            has_country_flag = country_looking_through_options
+            NOT = { year = 1837 }
+            NOT = { has_global_flag = tax_refund_disabled }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_global_flag = tax_refund_disabled
+        }
+        ai_will_do = { factor = 0 }
+    }
+
+    option_starting_infamy = {
+        picture = starting_options
+        alert = no
+        potential = {
+            ai = no
+            has_country_flag = country_looking_through_options
+            NOT = { year = 1837 }
+            NOT = { has_global_flag = starting_infamy }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_global_flag = starting_infamy
+            EGY = { badboy = 21.49 }
+            FRA = { badboy = 7.1 }
+            GAZ = { badboy = 10.1 }
+            MAS = { badboy = 2.9 }
+            RUS = { badboy = 13.89 }
+            SOK = { badboy = 24.1 }
+            SPA = { badboy = 10.1 }
+            XHO = { badboy = 5.03 }
+            ZUL = { badboy = 10.1 }
+        }
+        ai_will_do = { factor = 0 }
+    }
+
+
+
+
 ###Setup Decisions
     literacy_SPA = {
         potential = {
