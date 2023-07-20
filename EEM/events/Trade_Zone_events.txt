@@ -262,6 +262,7 @@ country_event = {
             limit = { owner = { accepted_culture = manchu } }
             owner = { remove_accepted_culture = manchu }
         }
+        remove_country_modifier = trade_zone_modifier
         ai_chance = { factor = 0 }
     }
 
@@ -550,6 +551,7 @@ country_event = {
             limit = { is_core = CHI }
             add_core = HUI
         }
+        remove_country_modifier = trade_zone_modifier
         change_tag = HUI
     }
 }
@@ -578,6 +580,7 @@ country_event = {
             limit = { owner = { accepted_culture = manchu } }
             owner = { remove_accepted_culture = manchu }
         }
+        remove_country_modifier = trade_zone_modifier
         change_tag = GNG
     }
 }
@@ -660,7 +663,24 @@ country_event = {
                 who = TZ1
                 value = 400
             }
+            relation = {
+                who = TZ1
+                value = 400
+            }
         }
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ1 } }
+            diplomatic_influence = {
+                who = TZ1
+                value = -400
+            }
+            relation = {
+                who = TZ1
+                value = -400
+            }
+        }
+        TZ1 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
+
 
         1565 = {
             secede_province = TZ1
@@ -785,7 +805,23 @@ country_event = {
                 who = TZ2
                 value = 400
             }
+            relation = {
+                who = TZ2
+                value = 400
+            }
         }
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ2 } }
+            diplomatic_influence = {
+                who = TZ2
+                value = -400
+            }
+            relation = {
+                who = TZ2
+                value = -400
+            }
+        }
+        TZ2 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1571 = {
             secede_province = TZ2
@@ -912,7 +948,23 @@ country_event = {
                 who = TZ4
                 value = 400
             }
+            relation = {
+                who = TZ4
+                value = 400
+            }
         }
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ4 } }
+            diplomatic_influence = {
+                who = TZ4
+                value = -400
+            }
+            relation = {
+                who = TZ4
+                value = -400
+            }
+        }
+        TZ4 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1539 = {
             secede_province = TZ4
@@ -1037,7 +1089,23 @@ country_event = {
                 who = TZ5
                 value = 400
             }
+            relation = {
+                who = TZ5
+                value = 400
+            }
         }
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ5 } }
+            diplomatic_influence = {
+                who = TZ5
+                value = -400
+            }
+            relation = {
+                who = TZ5
+                value = -400
+            }
+        }
+        TZ5 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1605 = {
             secede_province = TZ5
@@ -1165,8 +1233,23 @@ country_event = {
                 who = TZ6
                 value = 400
             }
+            relation = {
+                who = TZ6
+                value = 400
+            }
         }
-
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ6 } }
+            diplomatic_influence = {
+                who = TZ6
+                value = -400
+            }
+            relation = {
+                who = TZ6
+                value = -400
+            }
+        }
+        TZ6 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1610 = {
             secede_province = TZ6
@@ -1294,7 +1377,23 @@ country_event = {
                 who = TZ7
                 value = 400
             }
+            relation = {
+                who = TZ7
+                value = 400
+            }
         }
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ7 } }
+            diplomatic_influence = {
+                who = TZ7
+                value = -400
+            }
+            relation = {
+                who = TZ7
+                value = -400
+            }
+        }
+        TZ7 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1493 = {
             secede_province = TZ7
@@ -1426,7 +1525,23 @@ country_event = {
                 who = TZ8
                 value = 400
             }
+            relation = {
+                who = TZ8
+                value = 400
+            }
         }
+        any_greater_power = {
+            limit = { NOT = { neighbour = TZ8 } }
+            diplomatic_influence = {
+                who = TZ8
+                value = -400
+            }
+            relation = {
+                who = TZ8
+                value = -400
+            }
+        }
+        TZ8 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1495 = {
             secede_province = TZ8

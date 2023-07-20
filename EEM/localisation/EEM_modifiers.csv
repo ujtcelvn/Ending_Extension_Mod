@@ -16,6 +16,8 @@ communist_peace_summit_desc;We have recently held a Communist International.;;;;
 productive_mine_1;Rich Deposits;;;;;;;;;;;;;
 productive_mine_2;Very Rich Deposits;;;;;;;;;;;;;
 local_drug_habit;Local Narcotic Habit;;;;;;;;;;;;;
+trade_zone_modifier;Trade Region;;;;;;;;;;;;;
+trade_zone_modifier_desc;This is not an independent nation but is merely a region where great powers have privileged trading rights. It does not have independent diplomatic relations.;;;;;;;;;;;;;
 opium_ban;Narcotics Control Act;;;;;;;;;;;;;
 opium_ban_desc;The manufacture and sale of narcotics and opioids are heavily regulated in this country.;;;;;;;;;;;;;
 local_opium_ban;Narcotic Ban;;;;;;;;;;;;;

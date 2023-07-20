@@ -2673,6 +2673,12 @@ local_drug_habit = {
 #    icon = 14
 #}
 
+
+trade_zone_modifier = {
+    diplomatic_points_modifier = -1
+    icon = 7
+}
+
 ### Strategic Bombardment ###
 
 strat_bombers = {
