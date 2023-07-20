@@ -3,6 +3,9 @@ PBC = { value = -100 }
 ENG = { value = 50 }
 SPA = { value = 20 }
 PRG = { value = -200 }
+SPC = {
+	value = -200
+}
 
 army = {
     name = "Ejército de Chile"

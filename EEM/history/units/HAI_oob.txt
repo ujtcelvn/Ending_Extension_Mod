@@ -52,6 +52,9 @@ PAP = {
 PRG = {
 	value = -50
 }
+SPC = {
+	value = -200
+}
 
 leader = {
     name = "Jean-Pierre Boyer"

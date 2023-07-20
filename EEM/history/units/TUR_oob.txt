@@ -95,7 +95,7 @@ GRE = {
 SER = {
     value = -150        #relation
     level = 5        #3=cordial, 4 = friendly, 5 sphere
-    influence_value = 0
+    influence_value = 100
 }
 MOL = {
     value = 50

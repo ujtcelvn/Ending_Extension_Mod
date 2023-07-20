@@ -16,6 +16,9 @@ ENT = {
 PRG = {
 	value = -200
 }
+SPC = {
+	value = -200
+}
 
 army = {
     name = "Ejército de Entre Ríos"

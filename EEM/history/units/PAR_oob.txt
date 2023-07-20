@@ -4,6 +4,9 @@ AUS = {
 SAR = {
 	value = 125
 }
+SPC = {
+	value = -200
+}
 
 leader = {
     name = "Wilhelm Albrecht"

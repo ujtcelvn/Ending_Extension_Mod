@@ -25,6 +25,9 @@ SPA = {
 PRG = {
 	value = -200
 }
+SPC = {
+	value = -200
+}
 
 
 leader = {

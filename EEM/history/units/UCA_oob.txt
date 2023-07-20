@@ -4,6 +4,9 @@ USA = {
 SPA = {
 	value = -1
 }
+SPC = {
+	value = -200
+}
 
 leader = {
     name = "Francisco Morazán"

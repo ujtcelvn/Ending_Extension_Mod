@@ -28,6 +28,9 @@ SPA = {
 HAI = {
 	value = -50
 }
+SPC = {
+	value = -200
+}
 
 leader = {
     name = "Juan Lavalle"

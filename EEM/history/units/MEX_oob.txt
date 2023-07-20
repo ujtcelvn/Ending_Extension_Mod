@@ -7,6 +7,9 @@ SPA = {
 ENG = {
 	value = 50
 }
+SPC = {
+	value = -200
+}
 
 leader = {
     name = "D. Francisco López "
