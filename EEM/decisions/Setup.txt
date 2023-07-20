@@ -393,15 +393,15 @@ political_decisions = {
 
         effect = {
             set_global_flag = starting_infamy
-            EGY = { badboy = 21.49 }
-            FRA = { badboy = 7.1 }
-            GAZ = { badboy = 10.1 }
-            MAS = { badboy = 2.9 }
-            RUS = { badboy = 13.89 }
-            SOK = { badboy = 24.1 }
-            SPA = { badboy = 10.1 }
-            XHO = { badboy = 5.03 }
-            ZUL = { badboy = 10.1 }
+            EGY = { badboy = 21.39 }
+            FRA = { badboy = 7 }
+            GAZ = { badboy = 10 }
+            MAS = { badboy = 2.8 }
+            RUS = { badboy = 13.86 }
+            SOK = { badboy = 24 }
+            SPA = { badboy = 10 }
+            XHO = { badboy = 5 }
+            ZUL = { badboy = 10 }
         }
         ai_will_do = { factor = 0 }
     }
