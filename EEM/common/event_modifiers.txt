@@ -1453,6 +1453,11 @@ the_slavery_debate = {
     icon = 4
 }
 
+slavery_protected = {
+    non_accepted_pop_consciousness_modifier = 0.05
+    icon = 4
+}
+
 the_bonnie_blue_flag = {
     leadership = 1
     land_organisation = 0.2

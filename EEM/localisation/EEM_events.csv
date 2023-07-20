@@ -1,4 +1,7 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
+EVTNAME16002;$COUNTRY_ADJ$ Victorious;;;;;;;;;;;;;
+EVTDESC16002;We have driven off the hated Yankee invader, at least for now. Victory has further cemented the role of slavery in $COUNTRY$ and it will take at least another generation before any serious suggestions to outlaw slavery will be heard in the $COUNTRY_ADJ$ legislature.;;;;;;;;;;;;;
+EVTOPTA16002;We can expect this issue to linger for some time.;;;;;;;;;;;;;
 EVTNAME29905;Intensive Agriculture;;;;;;;;;;;;;
 EVTDESC29905;Extensive use of artifical fertilizers and pesticides and antibiotics allow crops and livestock to grow faster than ever before.;;;;;;;;;;;;;
 EVTOPTA29905;Excellent;;;;;;;;;;;;;

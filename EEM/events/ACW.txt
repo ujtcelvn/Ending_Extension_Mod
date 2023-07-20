@@ -59,8 +59,8 @@ country_event = {
             set_country_flag = unreleasable_country
             set_country_flag = exempt_from_vassal_contribution
             add_country_modifier = {
-                name = the_slavery_debate
-                duration = 5475
+                name = slavery_protected
+                duration = 14600
             }
         }
     }
@@ -74,7 +74,7 @@ country_event = {
             leadership = 80
             treasury = 80000
 
-            any_pop = { limit = { has_pop_culture = dixie } militancy = -9 }
+            any_pop = { limit = { OR = { has_pop_culture = dixie has_pop_culture = texan } } militancy = -9 }
             random_list = {
                 25 = { add_country_modifier = { name = preparing_for_war duration = 210 } }
                 25 = { add_country_modifier = { name = preparing_for_war duration = 180 } }
@@ -267,6 +267,50 @@ country_event = {
             name = the_slavery_debate
             duration = 10950
         }
+    }
+}
+
+# CSA victory
+country_event = {
+    id = 16002
+    title = "EVTNAME16002"
+    desc = "EVTDESC16002"
+    fire_only_once = yes
+    picture = "CSA_flags"
+
+    trigger = {
+        tag = CSA
+        NOT = { has_global_flag = csa_victorious }
+        has_global_flag = american_civil_war_has_happened
+        has_recently_lost_war = no
+        war = no
+        NOT = { slavery = no_slavery }
+        is_substate = no
+        is_vassal = no
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+    option = {
+        name = "EVTOPTA16002"
+        set_global_flag = csa_victorious
+        prestige = 10
+        war_exhaustion = -5
+        any_pop = {
+            limit = { OR = { has_pop_culture = dixie has_pop_culture = texan } }
+            militancy = -2
+            dominant_issue = { value = yes_slavery factor = 0.2 }
+        }
+        any_pop = {
+            limit = { has_pop_culture = afro_american THIS = { slavery = yes_slavery } }
+            dominant_issue = { value = freedom_of_womb factor = 0.2 }
+        }
+        any_pop = {
+            limit = { has_pop_culture = afro_american THIS = { slavery = freedom_of_womb } }
+            dominant_issue = { value = no_slavery factor = 0.2 }
+        }
+
     }
 }
 
