@@ -788,7 +788,7 @@ country_event = {
             }
             scaled_consciousness = {
                 ideology = liberal
-                factor = 5
+                factor = -2 #5
             }
         }
 
@@ -1412,7 +1412,7 @@ country_event = {
             }
             scaled_consciousness = {
                 ideology = socialist
-                factor = 5
+                factor = -2 #5
             }
         }
 
