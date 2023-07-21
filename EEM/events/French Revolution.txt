@@ -18,7 +18,10 @@ country_event = {
 
     trigger = {
         tag = FRA
-        government = hms_government
+        OR = {
+            government = hms_government
+            government = prussian_constitutionalism
+        }
         OR = {
             has_country_modifier = springtime_of_nations
             has_country_flag = liberal_revolution_in_progress
@@ -27,10 +30,22 @@ country_event = {
             AND = {
                 average_militancy = 4
                 has_country_modifier = springtime_of_nations
+                government = prussian_constitutionalism
+            }
+            AND = {
+                average_militancy = 5
+                has_country_modifier = springtime_of_nations
+                government = hms_government
             }
             AND = {
                 average_militancy = 6
                 NOT = { has_country_modifier = springtime_of_nations }
+                government = prussian_constitutionalism
+            }
+            AND = {
+                average_militancy = 7
+                NOT = { has_country_modifier = springtime_of_nations }
+                government = hms_government
             }
             any_owned_province = {
                 is_capital = yes
