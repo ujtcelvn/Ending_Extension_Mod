@@ -3301,6 +3301,8 @@ country_event = {
         owns = 1908
         nationalism_n_imperialism = 1
         ASH = { civilized = no exists = yes neighbour = THIS owns = 1907 ai = yes }
+        NOT = { war_with = ASH }
+        NOT = { truce_with = ASH }
     }
 
     fire_only_once = yes
