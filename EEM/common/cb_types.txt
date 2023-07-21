@@ -7212,6 +7212,14 @@ establish_protectorate_BC_casus_belli = {
                 tag = KOR
                 THIS = { tag = JAP }
             }
+            AND = {
+                tag = EGY
+                THIS = {
+                    has_country_flag = suez_egypt_intervention
+                    is_canal_enabled = 2
+                    owns = 1755
+                }
+            }
         }
         NOT = {
             civilized = yes
