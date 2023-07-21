@@ -6,120 +6,66 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
-        #No other conditions met						 1 mil ¤
-        #no_standard						  4			 2 mil ¤ 
-        #ad_hoc_money_bill_printing			  8			 3 mil ¤ 
-        #private_bank_money_bill_printing	 16			 4 mil ¤ 
-        #central_bank_money_bill_printing 	 32			 5 mil ¤ 
-        #modern_central_bank_system			 64			 6 mil ¤ 
-        #market_determined_exchange_rates 	128			 7 mil ¤
-        #monetary_system_7					258			 8 mil ¤ 
+        #No other conditions met						 1 mil ¤	1
+        #no_standard						  4			 2 mil ¤ 	1
+        #ad_hoc_money_bill_printing			  8			 4 mil ¤ 	2
+        #private_bank_money_bill_printing	 16			 6 mil ¤ 	2
+        #central_bank_money_bill_printing 	 32			 8 mil ¤ 	2
+        #modern_central_bank_system			 64			 10 mil ¤ 	2
+        #market_determined_exchange_rates 	128			 15 mil ¤	5
+        #monetary_system_7					258			 20 mil ¤ 	5
         #
-        #at war											+1 mil ¤ 
+        #AI at war											+infinite mil ¤ 
+
         NOT = { has_global_flag = tax_refund_disabled }
 
         OR = {
+            ai = no
             AND = {
-                OR = {
-                    AND = {
-                        money = 1100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 2100000 
-                        war = yes
-                    }
-                }
+                ai = yes
+                war = no
+            }
+        }
+
+        OR = {
+            AND = {
+                money =  1100000 
                 NOT = { total_pops = 4000000 }
                 NOT = { no_standard = 1 }
             }
             AND = {
-                OR = {
-                    AND = {
-                        money = 2100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 3100000 
-                        war = yes
-                    }
-                }
+                money =  2100000 
                 NOT = { total_pops = 8000000 }
                 NOT = { ad_hoc_money_bill_printing = 1 }
             }
             AND = {
-                OR = {
-                    AND = {
-                        money = 3100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 4100000 
-                        war = yes
-                    }
-                }
+                money =  4100000 
                 NOT = { total_pops = 16000000 }
                 NOT = { private_bank_money_bill_printing = 1 }
             }
             AND = {
-                OR = {
-                    AND = {
-                        money = 4100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 5100000 
-                        war = yes
-                    }
-                }
+                money =  6100000 
                 NOT = { total_pops = 32000000 }
                 NOT = { central_bank_money_bill_printing = 1 }
             }
             AND = {
-                OR = {
-                    AND = {
-                        money = 5100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 6100000 
-                        war = yes
-                    }
-                }
+                money =  8100000 
                 NOT = { total_pops = 64000000 }
                 NOT = { modern_central_bank_system = 1 }
             }
             AND = {
-                OR = {
-                    AND = {
-                        money = 7100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 8100000 
-                        war = yes
-                    }
-                }
+                money = 10100000 
                 NOT = { total_pops = 128000000 }
                 NOT = { monetary_system_7 = 1 }
             }
             AND = {
-                OR = {
-                    AND = {
-                        money = 8100000 
-                        war = no
-                    }
-                    AND = {
-                        money = 9100000 
-                        war = yes
-                    }
-                }
+                money = 15010000 
                 OR = {
                     total_pops = 258000000
                     monetary_system_7 = 1
                 }
             }
-            money = 9100000
+            money =     20010000
         }
     }
 
