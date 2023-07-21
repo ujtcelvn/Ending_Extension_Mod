@@ -7216,8 +7216,10 @@ establish_protectorate_BC_casus_belli = {
                 tag = EGY
                 THIS = {
                     has_country_flag = suez_egypt_intervention
+                    is_greater_power = yes
                     is_canal_enabled = 2
                     owns = 1755
+                    NOT = { war_policy = pacifism }
                 }
             }
         }
