@@ -2020,6 +2020,7 @@ country_event = {
         #owns = 1493 #can't pick Canton because it'll mess with the trade zones
         owns = 1578 #Chengdu
         owns = 1504 #Xiujing
+        war = no
     }
 
     fire_only_once = yes
