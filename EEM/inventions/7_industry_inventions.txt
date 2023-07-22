@@ -1,24 +1,24 @@
 ######### electricity ##########
 ##The initial patent for a closed-cycle gas turbine (CCGT) was issued in 1935 and they were first used commercially in 1939.
 #1939 The World’s First Industrial Gas Turbine Starts Commercial Operation in Switzerland
-gas_turbine = {
-    limit = { tech_power_7 = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = air_preheater
-        }
-        modifier = {
-            factor = 2
-            invention = basic_oxygen_steelmaking
-        }
-    }
-    effect = {
-        rgo_output = 0.05
-        factory_throughput = 0.02
-    }
-}
+#gas_turbine = {
+#    limit = { tech_power_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = air_preheater
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = basic_oxygen_steelmaking
+#        }
+#    }
+#    effect = {
+#        rgo_output = 0.05
+#        factory_throughput = 0.02
+#    }
+#}
 
 #Ljungström air preheater is an air preheater invented by the Swedish engineer Fredrik Ljungström (1875-1964). The patent was achieved in 1930.[1] 
 #With Fredrik Ljungström's technology of the air preheater implemented in a vast amount of modern power stations around the world until this day with total attributed worldwide fuel savings estimated to 4,960,000,000 tons of oil, "few inventions have been as successful in saving fuel as the Ljungström Air Preheater". 
@@ -54,7 +54,7 @@ catalytic_cracking = {
         }
         modifier = {
             factor = 2
-            invention = gas_turbine
+            tech_power_7 = 1 #invention = gas_turbine
         }
         modifier = {
             factor = 2

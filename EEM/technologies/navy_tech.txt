@@ -1829,6 +1829,12 @@ advanced_naval_design = {
             factor = 1.25
             year = 1940
         }
+        # We need to invent on board recon aircraft in order to invent aircraft carriers!
+        modifier = {
+            factor = 1.25
+            ship_construction_7 = 1
+            rank = 16
+        }
     }
 }
 modern_naval_design = {

@@ -342,7 +342,7 @@ national_liberation = {
         }
     }
     effect = {
-        seperatism = 0.5
+        #seperatism = 0.5
         rebel_org_gain = {
             faction = nationalist_rebels
             value = 0.67
@@ -460,6 +460,29 @@ on_guerrilla_warfare = {
 #        education_efficiency = 0.1
 #    }
 #}
+
+
+limited_media_effects = {
+    limit = { psychology_7 = 1 }
+    news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = -6
+            NOT = { invention = the_talkies }
+        }
+        modifier = {
+            factor = 2
+            average_consciousness = 3
+        }
+        modifier = {
+            factor = 2
+            invention = television_networks
+        }
+    }
+    effect = { }
+    core_pop_consciousness_modifier = -0.01
+}
 
 
 ##########################################social_thought_7

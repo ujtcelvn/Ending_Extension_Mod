@@ -141,19 +141,19 @@ rocket_powered_aircraft = {
 turbojet = {
     limit = { military_science_7 = 1 }
     chance = {
-        base = 0
+        base = 2
         modifier = {
-            factor = 2
-            invention = rocket_experiments
+            factor = -4
+            NOT = { invention = rocket_experiments }
         }
         modifier = {
             factor = 2
             invention = rocket_powered_aircraft
         }
-        modifier = {
-            factor = -4
-            NOT = { invention = gas_turbine }
-        }
+        #modifier = {
+        #    factor = -4
+        #    NOT = { invention = gas_turbine }
+        #}
     }
     effect = {
         plane = {

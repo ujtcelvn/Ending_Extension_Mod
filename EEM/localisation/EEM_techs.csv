@@ -183,6 +183,8 @@ on_guerrilla_warfare;On Guerrilla Warfare;;;;;;;;;;;;;
 on_guerrilla_warfare_desc;On Guerrilla Warfare;;;;;;;;;;;;;
 anticolonialism;Anticolonialism;;;;;;;;;;;;;
 anticolonialism_desc;Anticolonialism;;;;;;;;;;;;;
+limited_media_effects;Limited Media Effects;;;;;;;;;;;;;
+limited_media_effects_desc;In the 1930's, empirical research into the effects of mass media started being conducted and audiences were no longer assumed to be passive and homogeneous. The results of this research is best summarized by Bernard Berelson: "Some kinds of communication on some kinds of issues have brought to the attention of some kinds of people under some kinds of conditions have some kinds of effect." The Two-step flow of communication model, stating that media first reaches opinion leaders who then influence their followers, and Klapper's selective exposure theory, which refers to individuals' tendency to favor information which reinforces their pre-existing views, were also developed during this time.;;;;;;;;;;;;;
 gas_turbine;Gas Turbine;;;;;;;;;;;;;
 gas_turbine_desc;A gas turbine operates via the Brayton Cycle. Air first enters a rotating gas compressor, then fuel is added to the compressed air and combusted, the high pressure exhaust then driving a turbine. The excess heat from the exhaust can be used to drive more power turbines, improving efficiency.;;;;;;;;;;;;;
 air_preheater;Air Preheater;;;;;;;;;;;;;
