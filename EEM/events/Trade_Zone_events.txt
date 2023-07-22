@@ -658,16 +658,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ1 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ1 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ1
-                value = 400
-            }
-            relation = {
-                who = TZ1
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ1 } }
             diplomatic_influence = {
@@ -677,6 +667,16 @@ country_event = {
             relation = {
                 who = TZ1
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ1
+                value = 400
+            }
+            relation = {
+                who = TZ1
+                value = 400
             }
         }
         any_country = {
@@ -817,16 +817,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ2 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ2 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ2
-                value = 400
-            }
-            relation = {
-                who = TZ2
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ2 } }
             diplomatic_influence = {
@@ -836,6 +826,16 @@ country_event = {
             relation = {
                 who = TZ2
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ2
+                value = 400
+            }
+            relation = {
+                who = TZ2
+                value = 400
             }
         }
         any_country = {
@@ -978,16 +978,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ4 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ4 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ4
-                value = 400
-            }
-            relation = {
-                who = TZ4
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ4 } }
             diplomatic_influence = {
@@ -997,6 +987,16 @@ country_event = {
             relation = {
                 who = TZ4
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ4
+                value = 400
+            }
+            relation = {
+                who = TZ4
+                value = 400
             }
         }
         any_country = {
@@ -1137,16 +1137,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ5 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ5 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ5
-                value = 400
-            }
-            relation = {
-                who = TZ5
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ5 } }
             diplomatic_influence = {
@@ -1156,6 +1146,16 @@ country_event = {
             relation = {
                 who = TZ5
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ5
+                value = 400
+            }
+            relation = {
+                who = TZ5
+                value = 400
             }
         }
         any_country = {
@@ -1299,16 +1299,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ6 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ6 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ6
-                value = 400
-            }
-            relation = {
-                who = TZ6
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ6 } }
             diplomatic_influence = {
@@ -1318,6 +1308,16 @@ country_event = {
             relation = {
                 who = TZ6
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ6
+                value = 400
+            }
+            relation = {
+                who = TZ6
+                value = 400
             }
         }
         any_country = {
@@ -1461,16 +1461,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ7 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ7 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ7
-                value = 400
-            }
-            relation = {
-                who = TZ7
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ7 } }
             diplomatic_influence = {
@@ -1480,6 +1470,16 @@ country_event = {
             relation = {
                 who = TZ7
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ7
+                value = 400
+            }
+            relation = {
+                who = TZ7
+                value = 400
             }
         }
         any_country = {
@@ -1627,16 +1627,6 @@ country_event = {
         random_owned = { limit = { owner = { western_shipyards = yes_western_shipyards } }           TZ8 = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought } }
         random_owned = { limit = { owner = { foreign_artillery = yes_foreign_artillery } }           TZ8 = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery } }
 
-        FROM = {
-            diplomatic_influence = {
-                who = TZ8
-                value = 400
-            }
-            relation = {
-                who = TZ8
-                value = 400
-            }
-        }
         any_country = {
             limit = { NOT = { neighbour = TZ8 } }
             diplomatic_influence = {
@@ -1646,6 +1636,16 @@ country_event = {
             relation = {
                 who = TZ8
                 value = -400
+            }
+        }
+        FROM = {
+            diplomatic_influence = {
+                who = TZ8
+                value = 400
+            }
+            relation = {
+                who = TZ8
+                value = 400
             }
         }
         any_country = {
