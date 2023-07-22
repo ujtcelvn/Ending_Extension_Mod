@@ -482,6 +482,7 @@ fanatic_army = {
     org_regain = 0.1
     mobilisation_size = 0.15
     prestige = -0.02
+    war_exhaustion = -0.2 #0
     icon = 15
 }
 
