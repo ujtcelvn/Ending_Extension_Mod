@@ -679,8 +679,25 @@ country_event = {
                 value = -400
             }
         }
+        any_country = {
+            limit = {
+                OR = {
+                    #tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    tag = TZ5
+                    tag = TZ6
+                    tag = TZ7
+                    tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ1
+                value = 300
+            }
+        }
         TZ1 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
-
 
         1565 = {
             secede_province = TZ1
@@ -819,6 +836,24 @@ country_event = {
             relation = {
                 who = TZ2
                 value = -400
+            }
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = TZ1
+                    #tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    tag = TZ5
+                    tag = TZ6
+                    tag = TZ7
+                    tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ2
+                value = 300
             }
         }
         TZ2 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
@@ -964,6 +999,24 @@ country_event = {
                 value = -400
             }
         }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    #tag = TZ4
+                    tag = TZ5
+                    tag = TZ6
+                    tag = TZ7
+                    tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ4
+                value = 300
+            }
+        }
         TZ4 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1539 = {
@@ -1103,6 +1156,24 @@ country_event = {
             relation = {
                 who = TZ5
                 value = -400
+            }
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    #tag = TZ5
+                    tag = TZ6
+                    tag = TZ7
+                    tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ5
+                value = 300
             }
         }
         TZ5 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
@@ -1249,6 +1320,24 @@ country_event = {
                 value = -400
             }
         }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    tag = TZ5
+                    #tag = TZ6
+                    tag = TZ7
+                    tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ6
+                value = 300
+            }
+        }
         TZ6 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
         1610 = {
@@ -1391,6 +1480,24 @@ country_event = {
             relation = {
                 who = TZ7
                 value = -400
+            }
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    tag = TZ5
+                    tag = TZ6
+                    #tag = TZ7
+                    tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ7
+                value = 300
             }
         }
         TZ7 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
@@ -1539,6 +1646,24 @@ country_event = {
             relation = {
                 who = TZ8
                 value = -400
+            }
+        }
+        any_country = {
+            limit = {
+                OR = {
+                    tag = TZ1
+                    tag = TZ2
+                    #tag = TZ3
+                    tag = TZ4
+                    tag = TZ5
+                    tag = TZ6
+                    tag = TZ7
+                    #tag = TZ8
+                }
+            }
+            relation = {
+                who = TZ8
+                value = 300
             }
         }
         TZ8 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
