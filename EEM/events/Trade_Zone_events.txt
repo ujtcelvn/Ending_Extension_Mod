@@ -668,7 +668,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ1 } }
             diplomatic_influence = {
                 who = TZ1
@@ -810,7 +810,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ2 } }
             diplomatic_influence = {
                 who = TZ2
@@ -953,7 +953,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ4 } }
             diplomatic_influence = {
                 who = TZ4
@@ -1094,7 +1094,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ5 } }
             diplomatic_influence = {
                 who = TZ5
@@ -1238,7 +1238,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ6 } }
             diplomatic_influence = {
                 who = TZ6
@@ -1382,7 +1382,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ7 } }
             diplomatic_influence = {
                 who = TZ7
@@ -1530,7 +1530,7 @@ country_event = {
                 value = 400
             }
         }
-        any_greater_power = {
+        any_country = {
             limit = { NOT = { neighbour = TZ8 } }
             diplomatic_influence = {
                 who = TZ8
