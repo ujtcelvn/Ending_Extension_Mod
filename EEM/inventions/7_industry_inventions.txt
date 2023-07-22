@@ -221,13 +221,56 @@ synthetic_rubber = {
 }
 
 #1930s Polystyrene first produced by BASF
-polystyrene = {
+#polystyrene = {
+#    limit = { chemistry_and_electricity_7 = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = bakelite
+#        }
+#        modifier = {
+#            factor = 2
+#            time_saving_measures = 1
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { glass = 0.05 }
+#    }
+#}
+
+
+#1935 Nylon is invented and patented by DuPont
+#1938 Nylon is first used for bristles in toothbrushes. It features at the 1939 worlds fair and is famously used in stockings in 1940
+#nylon = {
+#    limit = { chemistry_and_electricity_7 = 1 }
+#    chance = {
+#        base = 1
+#        modifier = {
+#            factor = 2
+#            invention = polystyrene
+#        }
+#        modifier = {
+#            factor = 3
+#            invention = rayon
+#        }
+#    }
+#    effect = {
+#        factory_goods_output = { fabric = 0.05 }
+#    }
+#}
+
+early_plastics = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
-        base = 2
+        base = 0
         modifier = {
             factor = 2
             invention = bakelite
+        }
+        modifier = {
+            factor = 2
+            invention = rayon
         }
         modifier = {
             factor = 2
@@ -235,28 +278,8 @@ polystyrene = {
         }
     }
     effect = {
-        factory_goods_output = { glass = 0.05 }
-    }
-}
-
-
-#1935 Nylon is invented and patented by DuPont
-#1938 Nylon is first used for bristles in toothbrushes. It features at the 1939 worlds fair and is famously used in stockings in 1940
-nylon = {
-    limit = { chemistry_and_electricity_7 = 1 }
-    chance = {
-        base = 1
-        modifier = {
-            factor = 2
-            invention = polystyrene
-        }
-        modifier = {
-            factor = 3
-            invention = rayon
-        }
-    }
-    effect = {
-        factory_goods_output = { fabric = 0.05 }
+        factory_goods_output = { glass = 0.02 }
+        factory_goods_output = { fabric = 0.02 }
     }
 }
 
@@ -275,8 +298,9 @@ industrial_plastics_production = {
         base = -2
         modifier = {
             factor = 4
-            invention = polystyrene
-            invention = nylon
+            invention = early_plastics
+            #invention = polystyrene
+            #invention = nylon
         }
         modifier = {
             factor = 2

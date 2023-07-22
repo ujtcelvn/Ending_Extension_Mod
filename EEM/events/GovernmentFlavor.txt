@@ -354,6 +354,35 @@ country_event = {
                     }
                 }
             }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        has_country_flag = propaganda_program
+                        invention = engineering_consent
+                    }
+                }
+                owner = {
+                    any_pop = {
+                        limit = {
+                            literacy = 0.2
+                            OR = {
+                                is_primary_culture = yes
+                                is_accepted_culture = yes
+                            }
+                        }
+                        random = {
+                            chance = 50
+                            dominant_issue = { value = jingoism factor = 0.01 }
+                        }
+                        random = {
+                            chance = 25
+                            dominant_issue = { value = jingoism factor = 0.01 }
+                        }
+                    }
+                }
+            }
+
             clr_country_flag = propaganda_program
         ai_chance = { factor = 100 }
     }
@@ -408,6 +437,16 @@ country_event = {
                             }
                         }
                     }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
+                        owner = {
+                            upper_house = { ideology = conservative value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = conservative }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -447,6 +486,16 @@ country_event = {
                             }
                         }
                     }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
+                        owner = {
+                            upper_house = { ideology = liberal value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = liberal }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -478,6 +527,16 @@ country_event = {
                     }
                     random_owned = {
                         limit = { owner = { press_rights = state_press } }
+                        owner = {
+                            upper_house = { ideology = liberal value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = liberal }
+                            }
+                        }
+                    }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
                         owner = {
                             upper_house = { ideology = liberal value = 0.05 }
                             any_pop = {
@@ -525,6 +584,16 @@ country_event = {
                             }
                         }
                     }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
+                        owner = {
+                            upper_house = { ideology = socialist value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = socialist }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -556,6 +625,16 @@ country_event = {
                     }
                     random_owned = {
                         limit = { owner = { press_rights = state_press } }
+                        owner = {
+                            upper_house = { ideology = anarcho_liberal value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = anarcho_liberal }
+                            }
+                        }
+                    }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
                         owner = {
                             upper_house = { ideology = anarcho_liberal value = 0.05 }
                             any_pop = {
@@ -603,6 +682,16 @@ country_event = {
                             }
                         }
                     }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
+                        owner = {
+                            upper_house = { ideology = communist value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = communist }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -634,6 +723,16 @@ country_event = {
                     }
                     random_owned = {
                         limit = { owner = { press_rights = state_press } }
+                        owner = {
+                            upper_house = { ideology = fascist value = 0.05 }
+                            any_pop = {
+                                limit = { literacy = 0.3 }
+                                ideology = { factor = 0.05 value = fascist }
+                            }
+                        }
+                    }
+                    random_owned = {
+                        limit = { owner = { invention = engineering_consent } }
                         owner = {
                             upper_house = { ideology = fascist value = 0.05 }
                             any_pop = {

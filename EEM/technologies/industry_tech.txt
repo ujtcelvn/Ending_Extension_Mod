@@ -629,7 +629,7 @@ mechanization_7 = {
     cost = 25200
 
     rgo_output = 0.05
-    factory_throughput = 0.1
+    factory_throughput = 0.05 #0.1
     ai_chance = {
         factor = 1.1
         modifier = {

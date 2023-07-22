@@ -85,7 +85,7 @@ modern_architecture = {
     }
 }
 
-television_networks = { #previously "movies"
+tv_first_golden_age = { #previously "movies" but movies are actually "the talkies"
     limit = { aesthetics_7 = 1 }
     news = no
     chance = {
@@ -96,7 +96,7 @@ television_networks = { #previously "movies"
         }
         modifier = {
             factor = -6
-            NOT = { invention = the_talkies }
+            NOT = { invention = tv_broadcasting }
         }
      }
     effect = {
@@ -355,6 +355,10 @@ national_liberation = {
             faction = separatist_rebels
             value = 0.25
         }
+        rebel_org_gain = {
+            faction = partisan_rebels
+            value = 0.75
+        }
     }
 }
 
@@ -410,56 +414,52 @@ anticolonialism = {
     }
 }
 
-on_guerrilla_warfare = {
-    limit = { political_thought_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            average_militancy = 2
-        }
-        modifier = {
-            factor = 2
-            average_consciousness = 4
-        }
-    }
-    effect = {
-        rebel_org_gain = {
-            faction = partisan_rebels
-            value = 0.75
-        }
-    }
-}
-
-##########################################psychology_7
-#television_networks = {
-#    limit = { psychology_7 = 1 }
+#on_guerrilla_warfare = {
+#    limit = { political_thought_7 = 1 }
 #    news = no
 #    chance = {
 #        base = 2
 #        modifier = {
 #            factor = 2
-#            nationalvalue = nv_liberty
+#            average_militancy = 2
 #        }
 #        modifier = {
 #            factor = 2
-#            invention = movies
-#        }
-#        modifier = {
-#            factor = -6
-#            NOT = { invention = television }
-#        }
-#	modifier = {
-#            factor = -1
-#            NOT = { press_rights = free_press }
+#            average_consciousness = 4
 #        }
 #    }
 #    effect = {
-#        suppression_points_modifier = -0.05
-#        education_efficiency = 0.1
+#        rebel_org_gain = {
+#            faction = partisan_rebels
+#            value = 0.75
+#        }
 #    }
 #}
+
+##########################################psychology_7
+tv_broadcasting = {
+    limit = { psychology_7 = 1 }
+    news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            nationalvalue = nv_liberty
+        }
+        modifier = {
+            factor = -6
+            NOT = { invention = the_talkies }
+        }
+	modifier = {
+            factor = -1
+            NOT = { press_rights = free_press }
+        }
+    }
+    effect = {
+        suppression_points_modifier = -0.05
+    }
+    core_pop_consciousness_modifier = 0.01
+}
 
 
 limited_media_effects = {
@@ -477,11 +477,11 @@ limited_media_effects = {
         }
         modifier = {
             factor = 2
-            invention = television_networks
+            invention = tv_broadcasting
         }
     }
     effect = { }
-    core_pop_consciousness_modifier = -0.01
+    core_pop_consciousness_modifier = -0.02
 }
 
 
@@ -517,3 +517,41 @@ general_computer_programming = {
         education_efficiency = 0.05
     }
 }
+
+#Edward Bernays, a nephew of Sigmund Freud, is also sometimes referred to as the father of PR and the profession's first theorist for his work in the 1920s
+#Crystallizing Public Opinion (1923), Propaganda (1928), and The Engineering of Consent (1947)
+engineering_consent = {
+    limit = { social_thought_7 = 1 }
+    chance = {
+        base = 0
+        modifier = {
+            factor = -6
+            NOT = { invention = mass_advertising }
+        }
+        modifier = {
+            factor = 2
+            invention = tv_broadcasting
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                ruling_party_ideology = fascist
+                ruling_party_ideology = communist
+            }
+        }
+        modifier = {
+            factor = 2
+            nationalvalue = nv_order
+        }
+    }
+    effect = {
+    }
+    core_pop_consciousness_modifier = -0.03
+}
+
+
+#Noam Chomsky
+#structuralist: modern linguistics, analytic philosophy, cognitive science
+#anarcho-syndicalism and libertarian socialism.  
+#Manufacturing Consent: The Political Economy of the Mass Media is a 1988 book by Edward S. Herman and Noam Chomsky.
+#The book introduced the propaganda model of communication, which is still developing today.  
