@@ -167,7 +167,7 @@ consumer_goods = {
         color = { 216 185 77 }
     }
     cattle = {
-        cost = 2.2 #HPM: 2.0
+        cost = 2.0
         color = { 84 227 40 }
     }
     fish = {
@@ -179,7 +179,7 @@ consumer_goods = {
         color = { 255 0 0 }
     }
     grain = {
-        cost = 2.0 #HPM: 2.2
+        cost = 2.2
         color = { 219 157 36 }
     }
     tobacco = {

@@ -124,8 +124,8 @@ economy = {
     TRADE_CAP_LOW_LIMIT_LAND = 0.05,                 -- the lowest % the slider can go for land units
     TRADE_CAP_LOW_LIMIT_NAVAL = 0.1,             -- the lowest % the slider can go for naval units
     TRADE_CAP_LOW_LIMIT_CONSTRUCTIONS = 0.05,         -- the lowest % the slider can go for constructions
-    FACTORY_PURCHASE_MIN_FACTOR = 1.0,            -- the lowest % of its daily needs a factory will purchase
-    FACTORY_PURCHASE_DRAWDOWN_FACTOR = 0.025,    -- the % a factory will reduce its input purchases each day if it did not sell all its goods (also used for scaling up production if all goods are sold)
+    FACTORY_PURCHASE_MIN_FACTOR = 0.5,            -- the lowest % of its daily needs a factory will purchase
+    FACTORY_PURCHASE_DRAWDOWN_FACTOR = 0.025    -- the % a factory will reduce its input purchases each day if it did not sell all its goods (also used for scaling up production if all goods are sold)
 },
 
 military = {
@@ -707,7 +707,7 @@ ai =
     POP_PROJECT_INVESTMENT_MAX_BUDGET_FACTOR = 0.35, -- how much % of our current budget can be spend on the pop project investments.
     RELATION_LIMIT_NO_ALLIANCE_OFFER = 0, -- if relation lower then this value, AI will not ally
     NAVAL_SUPPLY_PENALTY_LIMIT = 0.2, -- AI will allow to have max X% of supply penalty (when too little naval bases)
-    CHANCE_BUILD_RAILROAD = 0.5, -- chances in % of AI decisions (max value 1.0)
+    CHANCE_BUILD_RAILROAD = 0.3, -- chances in % of AI decisions (max value 1.0)
     CHANCE_BUILD_NAVAL_BASE = 0.75,
     CHANCE_BUILD_FORT = 0.5,
     CHANCE_INVEST_POP_PROJ = 0.4,
