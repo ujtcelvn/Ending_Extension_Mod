@@ -542,13 +542,13 @@ ryotwari = {
 unciv_puppet = {
     trigger = {
         exists = yes
-        has_country_modifier = western_influences
-        NOT = { has_country_modifier = muhammad_alis_reforms }
         is_vassal = yes
-        is_substate = no
-		civilized = no
+        civilized = no
+        NOT = { is_culture_group = east_asian }
+        NOT = { is_culture_group = far_east_asian }
     }
-    research_points_modifier = -0.3
+
+    research_points_modifier = -0.20
     icon = 10
 }
 

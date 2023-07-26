@@ -79,6 +79,7 @@ carrier_task_force_doctrine = {
             maximum_speed = 2
             torpedo_attack = 2
             gun_power = 4
+            hull = 1
         }
     }
 }

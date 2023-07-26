@@ -1372,7 +1372,7 @@ naval_design_bureaus = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.25
+            factor = 1.5
             oil_driven_ships = 1
             is_greater_power = yes
         }
@@ -1483,7 +1483,7 @@ fire_control_systems = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.25
+            factor = 1.5
             oil_driven_ships = 1
             is_greater_power = yes
         }
@@ -1611,7 +1611,7 @@ weapon_platforms = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.25
+            factor = 1.5
             oil_driven_ships = 1
             is_greater_power = yes
         }
@@ -1730,7 +1730,7 @@ main_armament = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.25
+            factor = 1.5
             oil_driven_ships = 1
             is_greater_power = yes
         }
@@ -1847,7 +1847,7 @@ advanced_naval_design = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.25
+            factor = 1.5
             oil_driven_ships = 1
             is_greater_power = yes
         }

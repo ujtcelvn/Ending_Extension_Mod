@@ -11,12 +11,12 @@ converted_hulk_air_carriers = {
         }
         modifier = {
             factor = 1
-            any_neighbor_country = { invention = purpose_built_air_carriers }
+            any_neighbor_country = { invention = converted_hulk_air_carriers }
         }
         modifier = {
             factor = 2
             war = yes
-            war_countries = { invention = purpose_built_air_carriers }
+            war_countries = { invention = converted_hulk_air_carriers }
         }
     }
     effect = {
@@ -96,7 +96,7 @@ fleet_air_carriers = {
         aircraft_carrier = {
             maximum_speed = 2
             hull = 2
-			gun_power = 2
+			gun_power = 4 #2
         }
     }
 }
@@ -153,9 +153,9 @@ large_cruisers = {
     }
     effect = {
         cruiser = {
-            gun_power = 1
+            gun_power = 2
             torpedo_attack = 1
-            hull = 2
+            hull = 3
         }
     }
 }

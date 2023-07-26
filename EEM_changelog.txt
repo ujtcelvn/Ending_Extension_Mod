@@ -99,8 +99,21 @@ Coming soon:
 #TODO: non-Europeans can't form the United Baltic Dutchy puppet
 
 ####################################################################################################
-v0.5.8l
+v0.5.8la
+fixed wrong invention chance for converted_hulk_air_carriers
+Increase AI research of naval engineering up to Advanced Naval Design even more so they can invent carriers
+Increase poor country AI research of industry and commerce techs even more 
+fixed bug that made mass_produced_penicillin not able to be invented
 
+added 2 CV attack to each of fleet_air_carriers, naval_bombers, and improved_naval_aircraft.
+added 1 CV hull to carrier_task_force_doctrine
+added 1 CL attack and 1 CL hull to large_cruisers
+
+Made the unciv puppet research debuff work properly.
+Chinese, Japanese, and Koreans are now immune to the unciv puppet research debuff
+
+####################################################################################################
+v0.5.8l
 Red Turban cores can now spread into the Huang He flood zone
 clearing out the manchu elite reduces north han militancy and consciousness further
 event 166502 decreases militancy and consciousness further
@@ -153,7 +166,7 @@ late game culture adjustments
  television_networks removed and replaced by tv_broadcasting and moved to psychology
  added engineering_consent invention that modifies consciousness by -0.03 and increases effectiveness of propaganda and genocide
 
-####################################################################################################
+
 v0.5.8k
 Replaced party scandal events with HPM version
 Returned trade caps, pop weights, NAVAL_SUPPLY_PENALTY_LIMIT, MAX_FLEETS, and FLEET_SIZE back to HPM values

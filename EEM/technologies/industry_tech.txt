@@ -51,7 +51,7 @@ piston_steam_engine = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -110,7 +110,7 @@ high_pressure_steam_engine = {
             industrial_score = 150
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -169,7 +169,7 @@ compound_steam_engines = {
             industrial_score = 250
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -232,7 +232,7 @@ steam_turbine = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -291,7 +291,7 @@ combustion_engine = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -347,7 +347,7 @@ electrical_power_generation = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -404,7 +404,7 @@ tech_power_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -452,7 +452,7 @@ mechanical_production = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -509,7 +509,7 @@ interchangeable_parts = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -577,7 +577,7 @@ semi_automatization = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -629,7 +629,7 @@ pneumatic_and_hydraulics = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -666,7 +666,7 @@ assembly_line = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -704,7 +704,7 @@ shift_work = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -743,7 +743,7 @@ mechanization_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -829,7 +829,7 @@ hot_blast = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -953,7 +953,7 @@ mechanized_mining = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1056,7 +1056,7 @@ regenerative_furnaces = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1167,7 +1167,7 @@ drilling_and_blasting = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1271,7 +1271,7 @@ advanced_metallurgy = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1358,7 +1358,7 @@ electric_furnace = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1429,7 +1429,7 @@ metallurgy_7 = {
             }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1714,7 +1714,7 @@ basic_chemistry = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1748,7 +1748,7 @@ medicine = {
             tech_school = army_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1818,7 +1818,7 @@ inorganic_chemistry = {
             tech_school = prussian_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1869,7 +1869,7 @@ organic_chemistry = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1914,7 +1914,7 @@ electricity = {
             tech_school = prussian_tech_school
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1952,7 +1952,7 @@ synthetic_polymers = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no
@@ -1989,7 +1989,7 @@ chemistry_and_electricity_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.2
+            factor = 1.5
             NOT = { money = 100000 }
             is_vassal = no
             is_substate = no

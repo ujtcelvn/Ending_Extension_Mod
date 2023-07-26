@@ -703,7 +703,7 @@ sulfa_antibiotics = {
 mass_produced_penicillin = {
     limit = { chemistry_and_electricity_7 = 1 }
     chance = {
-        base = -6
+        base = 2
         modifier = {
             factor = 2
             organizational_development = 1
@@ -713,8 +713,8 @@ mass_produced_penicillin = {
             market_functionality_7 = 1
         }
         modifier = {
-            factor = 2
-            invention = sulfa_antibiotics
+            factor = -6
+            NOT = { invention = sulfa_antibiotics }
         }
     }
     effect = {
