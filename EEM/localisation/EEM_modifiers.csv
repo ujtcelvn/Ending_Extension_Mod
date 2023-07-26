@@ -11,6 +11,7 @@ strat_bombers_desc;Our country is maintaining a strategic bomber force.;;;;;;;;;
 bomb_damage;Strategic Bomb Damage;;;;;;;;;;;;;
 heavy_bomb_damage;Heavy Strategic Bomb Damage;;;;;;;;;;;;;
 small_refund; tax refund;;;;;;;;;;;;;
+unciv_substate;Uncivilized Puppet;;;;;;;;;;;;;
 literate_nation;Literate Nation;;;;;;;;;;;;;
 clerked_nation;Clerked Nation 1;;;;;;;;;;;;;
 communist_peace_summit;Communist Summit;;;;;;;;;;;;;

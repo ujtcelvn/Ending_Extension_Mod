@@ -526,17 +526,18 @@ province_event = {
             region = CHI_1572
             region = CHI_1559
             region = CHI_2221
-
-            #region = CHI_1508 #Nian Rebellion
-            #region = CHI_1510
-            #region = CHI_1563
-            #region = CHI_1565
         }
         is_core = CHI
         is_primary_culture = no
         average_consciousness = 4
         any_neighbor_province = { is_core = RTR }
-        NOT = { culture = beifaren }
+        OR = {
+            NOT = { culture = beifaren }
+            region = CHI_1508 #Nian Rebellion
+            region = CHI_1510
+            region = CHI_1563
+            region = CHI_1565
+        }
         NOT = { culture = manchu }
         #OR = {
         #    culture = nanfaren
@@ -2003,7 +2004,6 @@ country_event = {
 #    title = "EVTNAME166222" #Nian Rebellion notification
 #    desc = "EVTDESC166222"
 #    picture = "nian_rebellion"
-
 
 #RTR picks a Capital
 country_event = {
@@ -4031,18 +4031,18 @@ country_event = {
             factor = 2
             has_country_modifier = european_military_mission 
         }
-        modifier = {
-            factor = 1.2
-            average_militancy = 3
-        }
-        modifier = {
-            factor = 1.2
-            average_militancy = 4
-        }
-        modifier = {
-            factor = 1.2
-            average_militancy = 5
-        }
+        #modifier = {
+        #    factor = 1.2
+        #    average_militancy = 3
+        #}
+        #modifier = {
+        #    factor = 1.2
+        #    average_militancy = 4
+        #}
+        #modifier = {
+        #    factor = 1.2
+        #    average_militancy = 5
+        #}
         #modifier = {
         #    factor = 0.1
         #    has_global_flag = qing_won_second_opium_war #Arrow incident only occurs after taiping_has_happened
@@ -4054,7 +4054,8 @@ country_event = {
         any_owned = {
             limit = { OR = { is_core = RTR is_core = TPG } }
             any_pop = {
-                limit = { is_culture_group = east_asian NOT = { culture = manchu } }
+                limit = { is_culture_group = east_asian } #NOT = { culture = manchu }
+                militancy = -2
                 consciousness = -1
             }
         }

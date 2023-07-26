@@ -1339,19 +1339,9 @@ economic_reforms = {
                     #    limit = {
                     #        owner = {
                     #            NOT = { money = 2000 }
-                    #            check_variable = { which = owed_cash_money value = 1 }
                     #        }
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 2 } }
-                    #}
-                    #random_owned = {
-                    #    limit = {
-                    #        owner = {
-                    #            NOT = { money = 2000 }
-                    #            NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                    #        }
-                    #    }
-                    #    owner = { set_variable = { which = owed_cash_money value = 2 } }
                     #}
                     random_owned = {
                         limit = { owner = { money = 2000 } }
@@ -1404,19 +1394,9 @@ economic_reforms = {
                     #    limit = {
                     #        owner = {
                     #            NOT = { money = 10000 }
-                    #            check_variable = { which = owed_cash_money value = 1 }
                     #        }
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 10 } }
-                    #}
-                    #random_owned = {
-                    #    limit = {
-                    #        owner = {
-                    #            NOT = { money = 10000 }
-                    #            NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                    #        }
-                    #    }
-                    #    owner = { set_variable = { which = owed_cash_money value = 10 } }
                     #}
                     random_owned = {
                         limit = { owner = { money = 10000 } }
@@ -1469,19 +1449,9 @@ economic_reforms = {
                     #    limit = {
                     #        owner = {
                     #            NOT = { money = 2000 }
-                    #            check_variable = { which = owed_cash_money value = 1 }
                     #        }
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 2 } }
-                    #}
-                    #random_owned = {
-                    #    limit = {
-                    #        owner = {
-                    #            NOT = { money = 2000 }
-                    #            NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                    #        }
-                    #    }
-                    #    owner = { set_variable = { which = owed_cash_money value = 2 } }
                     #}
                     random_owned = {
                         limit = { owner = { money = 2000 } }
@@ -1527,19 +1497,9 @@ economic_reforms = {
                     #    limit = {
                     #        owner = {
                     #            NOT = { money = 7000 }
-                    #            check_variable = { which = owed_cash_money value = 1 }
                     #        }
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 7 } }
-                    #}
-                    #random_owned = {
-                    #    limit = {
-                    #        owner = {
-                    #            NOT = { money = 7000 }
-                    #            NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                    #        }
-                    #    }
-                    #    owner = { set_variable = { which = owed_cash_money value = 7 } }
                     #}
                     random_owned = {
                         limit = { owner = { money = 7000 } }
@@ -1678,19 +1638,9 @@ military_reforms = {
                     #    limit = {
                     #        owner = {
                     #            NOT = { money = 2000 }
-                    #            check_variable = { which = owed_cash_money value = 1 }
                     #        }
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 2 } }
-                    #}
-                    #random_owned = {
-                    #    limit = {
-                    #        owner = {
-                    #            NOT = { money = 2000 }
-                    #            NOT = { check_variable = { which = owed_cash_money value = 1 } }
-                    #        }
-                    #    }
-                    #    owner = { set_variable = { which = owed_cash_money value = 2 } }
                     #}
                     random_owned = {
                         limit = { owner = { money = 2000 } }

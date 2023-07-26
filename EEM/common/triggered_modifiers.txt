@@ -539,6 +539,19 @@ ryotwari = {
     icon = 16
 }
 
+unciv_puppet = {
+    trigger = {
+        exists = yes
+        has_country_modifier = western_influences
+        NOT = { has_country_modifier = muhammad_alis_reforms }
+        is_vassal = yes
+        is_substate = no
+		civilized = no
+    }
+    research_points_modifier = -0.3
+    icon = 10
+}
+
 # atlantic_only_nation = {
     # trigger = {
         # exists = yes

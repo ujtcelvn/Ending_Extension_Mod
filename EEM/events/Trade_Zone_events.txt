@@ -186,18 +186,33 @@ country_event = {
             limit = {
                 is_greater_power = yes
                 OR = {
-                    owns = 1498 #Macao
-                    owns = 1538 #Shanghai
-                    owns = 1496 #Hong Kong
-                    owns = 1566 #Qingdao
-                    owns = 1481 #Lushun - Port Arthur
-                    owns = 1569 #Weihaiwei
-                    owns = 1606 #Jiaxing
-                    owns = 2681 #Taibei
-                    owns = 2562 #Tainan
-                    owns = 1499 #Hainan
-                    owns = 2632 #Kwangchowan
-                    owns = 1608 #Ningbo
+                    #owns = 1498 #Macao
+                    #owns = 1538 #Shanghai
+                    #owns = 1496 #Hong Kong
+                    #owns = 1566 #Qingdao
+                    #owns = 1481 #Lushun - Port Arthur
+                    #owns = 1569 #Weihaiwei
+                    #owns = 1606 #Jiaxing
+                    #owns = 2681 #Taibei
+                    #owns = 2562 #Tainan
+                    #owns = 1499 #Hainan
+                    #owns = 2632 #Kwangchowan
+                    #owns = 1608 #Ningbo
+                    owns = 1348 #Singapore
+                    neighbour = THIS
+                    any_owned_province = {
+                        OR = {
+                            is_core = CHI
+                            is_core = PHL
+                            is_core = KAM
+                            is_core = DAI
+                            is_core = KOR
+                            is_core = JAP
+                            is_core = TKG
+                            is_core = HAW
+                            is_core = CAL
+                        }
+                    }
                 }
             }
             country_event = 166703
@@ -271,7 +286,7 @@ country_event = {
 country_event = {
     id = 166703
     title = "$FROMCOUNTRY$ Dishonours Treaties"
-    desc = "The new regime in China has declared the treaties negotiated previously void. It may soon become much more difficult for merchants to access the Chinese market, unless we force China open again."
+    desc = "The new regime in China has once again banned Western merchants from access to the interior of the Chinese market. Action must be taken to reopen the market!"
     picture = "arrow_incident"
 
     is_triggered_only = yes
@@ -323,7 +338,7 @@ country_event = {
         casus_belli = {
             target = FROM
             type = treaty_port_casus_belli
-            months = 80
+            months = 120
         }
         ai_chance = { factor = 50 }
     }
@@ -585,7 +600,7 @@ country_event = {
     }
 }
 
-########## TZ1 ##########
+########## TZ1 East Shantung ##########
 country_event = {
     id = 166710
     title = "EVTNAME166710"
@@ -744,7 +759,7 @@ country_event = {
 }
 
 
-########## TZ2 ##########
+########## TZ2 West Shantung ##########
 country_event = {
     id = 166720
     title = "EVTNAME166720"
@@ -902,10 +917,10 @@ country_event = {
     }
 }
 
-########## TZ3 Nantong isn't a treaty port ##########
+########## TZ3 North Kiangsu - Nantong isn't a treaty port ##########
 
 
-########## TZ4 ##########
+########## TZ4 South Kiangsu ##########
 country_event = {
     id = 166740
     title = "EVTNAME166740"
@@ -1063,7 +1078,7 @@ country_event = {
     }
 }
 
-########## TZ5 ##########
+########## TZ5 South Anhwei ##########
 country_event = {
     id = 166750
     title = "EVTNAME166750"
@@ -1223,7 +1238,7 @@ country_event = {
     }
 }
 
-########## TZ6 ##########
+########## TZ6 Chekiang ##########
 country_event = {
     id = 166760
     title = "EVTNAME166760"
@@ -1387,7 +1402,7 @@ country_event = {
     }
 }
 
-########## TZ7 ##########
+########## TZ7 East Kwangtung ##########
 country_event = {
     id = 166770
     title = "EVTNAME166770"
@@ -1555,7 +1570,7 @@ country_event = {
 }
 
 
-########## TZ8 ##########
+########## TZ8 West Kwangtung ##########
 country_event = {
     id = 166780
     title = "EVTNAME166780"

@@ -50,6 +50,13 @@ piston_steam_engine = {
             factor = 2
             tech_school = industrial_tech_school
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 high_pressure_steam_engine = {
@@ -102,6 +109,13 @@ high_pressure_steam_engine = {
             factor = 1.5
             industrial_score = 150
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 compound_steam_engines = {
@@ -153,6 +167,13 @@ compound_steam_engines = {
         modifier = {
             factor = 2
             industrial_score = 250
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -210,6 +231,13 @@ steam_turbine = {
             factor = 0.75
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 combustion_engine = {
@@ -262,6 +290,13 @@ combustion_engine = {
             factor = 0.75
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 electrical_power_generation = {
@@ -310,6 +345,13 @@ electrical_power_generation = {
         modifier = {
             factor = 0.75
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -361,6 +403,13 @@ tech_power_7 = {
             factor = 0.75
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 
@@ -402,8 +451,14 @@ mechanical_production = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
-
 }
 interchangeable_parts = {
     area = mechanization
@@ -452,6 +507,13 @@ interchangeable_parts = {
         modifier = {
             factor = 1.02
             tech_school = industrial_tech_school
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -514,6 +576,13 @@ semi_automatization = {
             factor = 1.02
             tech_school = industrial_tech_school
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 pneumatic_and_hydraulics = {
@@ -559,6 +628,13 @@ pneumatic_and_hydraulics = {
                 owns = 2270
             }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 assembly_line = {
@@ -588,6 +664,13 @@ assembly_line = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -620,6 +703,13 @@ shift_work = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 
@@ -651,6 +741,13 @@ mechanization_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -730,6 +827,13 @@ hot_blast = {
                     big_producer = iron
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 
@@ -848,6 +952,13 @@ mechanized_mining = {
                 }
             }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 
@@ -943,6 +1054,13 @@ regenerative_furnaces = {
                     big_producer = iron
                 }
             }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -1048,6 +1166,13 @@ drilling_and_blasting = {
                 }
             }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 advanced_metallurgy = {
@@ -1145,6 +1270,13 @@ advanced_metallurgy = {
                 }
             }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 electric_furnace = {
@@ -1225,6 +1357,13 @@ electric_furnace = {
                 big_producer = coal
             }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 metallurgy_7 = {
@@ -1288,6 +1427,13 @@ metallurgy_7 = {
                 literacy = 0.4
                 big_producer = coal
             }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -1523,7 +1669,7 @@ tech_infrastructure_7 = {
 	
     #max_railroad = 1
     rgo_output = 0.05 #0.025
-    #factory_throughput = 0.05
+    factory_throughput = 0.05
 
     ai_chance = {
         factor = 3
@@ -1567,6 +1713,13 @@ basic_chemistry = {
             factor = 2
             tech_school = industrial_tech_school
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 medicine = {
@@ -1593,6 +1746,13 @@ medicine = {
         modifier = {
             factor = 1.03
             tech_school = army_tech_school
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }
@@ -1657,6 +1817,13 @@ inorganic_chemistry = {
             factor = 5
             tech_school = prussian_tech_school
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 organic_chemistry = {
@@ -1701,6 +1868,13 @@ organic_chemistry = {
             is_greater_power = no
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 electricity = {
@@ -1739,6 +1913,13 @@ electricity = {
             factor = 5
             tech_school = prussian_tech_school
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 
 }
@@ -1770,6 +1951,13 @@ synthetic_polymers = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
+        }
     }
 }
 chemistry_and_electricity_7 = {
@@ -1799,6 +1987,13 @@ chemistry_and_electricity_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
+        }
+        modifier = {
+            factor = 1.2
+            NOT = { money = 100000 }
+            is_vassal = no
+            is_substate = no
+            war = no
         }
     }
 }

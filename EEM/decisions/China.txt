@@ -47,6 +47,11 @@ political_decisions = {
                 militancy = -2
                 consciousness = -1
             }
+            any_pop = {
+                limit = { has_pop_culture = beifaren }
+                militancy = -2
+                consciousness = -1
+            }
             set_country_flag = manchu_elite_cleared_out
 
             #random_owned = {

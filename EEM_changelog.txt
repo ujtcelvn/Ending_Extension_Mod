@@ -20,11 +20,11 @@ navy = 22 + 5
 
 1930 aesthetics						 5
 1930 philosphy						 5
-1930 social thought					 1
-1936 political thought				 4
-1930 psychology						 0
+1930 social thought					 2
+1936 political thought				 3
+1930 psychology						 2
 
-culture = 15
+culture = 17
 
 1930 financial institutions			 1
 1930 monetary system				 2
@@ -34,13 +34,13 @@ culture = 15
 
 commerce = 15
 
-1930 power							 6
+1930 power							 5
 1930 mechanization					 3      
 1930 metallurgy						 4		1905 electric_furnace		1 	1850 regenerative_furnaces 1
 1930 infrastructure					 0
-1936 chemistry and electricity		 9		1900 synthetic_polymers		2	1850 organic_chemistry 1
+1936 chemistry and electricity		 8		1900 synthetic_polymers		2	1850 organic_chemistry 1
 
-industry = 22 + 4
+industry = 20 + 4
 
 ####################################################################################################
 Coming soon: 
@@ -52,11 +52,6 @@ Coming soon:
 
 #TODO: all dds graphics should be done in GIMP to prevent compression issues
 #TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
-
-#TODO: Dogra-Tibetan War
-#TODO: Third Nepal-Tibet War
-#TODO: Treaty of Saint Petersburg (1881)
-#TODO: Sino-French War
 
 #TODO: Great Power Rivary
 #TODO: Democratic convention: (leader of the free world)
@@ -73,10 +68,6 @@ Coming soon:
 #TODO: coastal provinces and provinces next to major rivers get boosted RGO production (so there's no factory overproduction issues)
 	The ease of transport along rivertine and maritime routes contributed significantly to economic development, but this is not modeled in Victoria 2.
 	local_steamboats, modifier gets replaced by local_modern_transportation
-	Mary had a steamboat
-	The steamboat had a bell
-	Mary went to Heaven
-	And the steamboat went Toot Toot!
 #TODO: local_steamboats and local_modern_transportation don't spread when at war and get removed if you're poor / occupied / blockaded
 #TODO: yangtze river patrol decision, giving China free local_steamboats, but also local western_presence? What benefit does the Western power get?
 
@@ -86,7 +77,6 @@ Coming soon:
 #TODO: Turkestan turns into Uzbekistan if it explodes
 #TODO: integrate Bahrain, Qatar, Trucial States, Oman, and Kuwait into Arabia
 
-
 #TODO: 946 Polotsk nearly always turns Jewish
 #TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
 
@@ -94,10 +84,75 @@ Coming soon:
 #TODO: check if Australia, New Zealand, South Africa, and the Boer Republics have the New World immigration modifier
 
 #TODO: split up Asian Minor
+
+#TODO: let immigrants of the same primary culture move further than just neighbor countries (eg: between puppets and overlords)
+#TODO: reactivate high literacy / high clerk ratio population debuffs, but make it local
+
+#TODO: make the nobel prizes use variables for which years have been issued instead of global flags
+
+#TODO: move 1488 Jiayuguan to from Inner Mongolia to Gansu? 
+	but keeping it in Inner Mongolia makes better Warlord Era borders...
+	remember to check relevant events such as the Greater Mongolia event
 #TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia) with Mongol accepted only
 
-#TODO: let immigrants of the same primary culture move further than just neighbor countries
-#TODO: reactivate high literacy / high clerk ratio population debuffs, but make it local
+#TODO: AI Austria will only form the SGF puppet if they have an army (to stomp on any sudden rebellions)
+#TODO: non-Europeans can't form the United Baltic Dutchy puppet
+
+####################################################################################################
+v0.5.8l
+
+Red Turban cores can now spread into the Huang He flood zone
+clearing out the manchu elite reduces north han militancy and consciousness further
+event 166502 decreases militancy and consciousness further
+Indonesia starts as unciv but can westernize immediately so they no longer start with a bunch of tech.
+added the militancy reduction of yong ying back in
+fanatic_army now reduces war exhaustion the same amount as yong ying does so the Taiping Rebellion lasts longer
+Anhui is now slightly more desaturated so it better matches the colors of the rest of the world
+More countries are warned if China tears up unequal treaties and cb now lasts 10 years
+
+The AI researches more naval engineering, up to Advanced Naval Design, if they have oil-driven ships, so they can invent carriers
+poor countries are now more likely to research commerce and industry techs
+better tax refund localization
+increased FLEET_SIZE to 60
+buffed lubrication_oil back to 0.2 coal, 0.1 iron
+tech_infrastructure_7 increases factory_throughput again
+reduced AI_ARMY_TAXBASE_FRACTION back to 0.15
+Unciv puppets with western influences (but not substates or Egypt with Muhammad Ali's Reforms) get a research debuff because they're westernizing too quickly
+
+When a Chinese trade zone is formed, it gets -200 relations and Hostile attitude with all GPs except their sphere leader, gives their sphere leader 100 influence in them, and blocks the concession from ever gaining diplo points so other GPs don't waste influence trying to steal them
+Fixed sound dues toll event text to properly show how much paying it all costs, doubled prestige involved in the events
+Integrated HPM Politics & Economy Patch 3.1
+Texans also lose militancy when the CSA is spawned
+Changed the slavery debate modifier for the CSA to a new slavery_protected modifier, which lasts 40 years
+Added an event that makes CSA pops more pro-slavery
+Made really sure that AI uncivs don't get stuck trying to westernize
+The French Revolution of 1848 can now occur in a semi-constitutional monarchy too
+fixed Establish Protectorate CB not working during the Suez Intervention event if Egypt is >60% westernized
+Adjusted tax refund brackets
+The Second Ashanti War no longer fires if you're already at war with or have a truce with Ashanti.
+Liberal and Socialist scandals now reduce scaled consciousness by 2 since increasing consciousness actually makes pops even more liberal and socialist
+nerfed yong ying
+Fanatic Army now also modifies war exhaustion by -0.2
+
+reduced FACTORY_PURCHASE_MIN_FACTOR back to 0.5
+deleted comma after FACTORY_PURCHASE_DRAWDOWN_FACTOR
+CHANCE_BUILD_RAILROAD returned to HPM's 0.3
+reset grain and cattle price
+put the westernization reform money gating back in because the AI is westernizing too quickly
+
+reduce late game overproduction
+ Removed gas_turbine invention because tech_power_7 is already called Gas Turbine
+ merged polystyrene and nylon into early_plastics
+ mass production now only +5% factory_throughput (from 10%)
+
+late game culture adjustments
+ added a limited_media_effects invention which modifies consciousness by -0.02
+ national_liberation no longer increases separatism
+ merge on_guerrilla_warfare into national_liberation
+ the tv invention that gives prestige is now the tv_first_golden_age
+ television_networks removed and replaced by tv_broadcasting and moved to psychology
+ added engineering_consent invention that modifies consciousness by -0.03 and increases effectiveness of propaganda and genocide
+
 ####################################################################################################
 v0.5.8k
 Replaced party scandal events with HPM version
@@ -111,7 +166,6 @@ There is now an option to give the counties designated in the HPM Politics & Eco
 Sikh conservatives are now pluralist and liberals secularized because they were extremely religiously tolerant
 Moved the fort icon for 1946 Kebbi
 Returned farm RGO production back to HPM values
-####################################################################################################
 
 v0.5.8j
 Integrated HPM Politics & Economy Patch 3.0 Political & National Value Changes and Setup Only

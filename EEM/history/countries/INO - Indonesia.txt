@@ -5,7 +5,8 @@ government = democracy
 plurality = 0.0
 nationalvalue = nv_equality
 literacy = 0.03
-civilized = yes
+#civilized = yes
+civilized = no
 
 # Political reforms
 slavery = no_slavery
@@ -47,3 +48,26 @@ upper_house = {
     socialist = 0
     communist = 0
 }
+
+
+foreign_weapons = yes_foreign_weapons
+foreign_training = yes_foreign_training
+western_shipyards = yes_western_shipyards
+foreign_artillery = yes_foreign_artillery
+foreign_officers = yes_foreign_officers
+military_constructions = yes_military_constructions
+army_schools = yes_army_schools
+land_reform = yes_land_reform
+admin_reform = yes_admin_reform
+
+# Technologies
+flintlock_rifles = 1
+
+# Inventions
+modern_winemaking = yes
+small_arms_production = yes
+ammunition_production = yes
+post_napoleonic_thought = yes
+military_staff_system = yes
+post_nelsonian_thought = yes
+set_country_flag = using_foreign_shipyards

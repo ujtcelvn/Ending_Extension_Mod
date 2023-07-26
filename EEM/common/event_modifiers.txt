@@ -482,7 +482,7 @@ fanatic_army = {
     org_regain = 0.1
     mobilisation_size = 0.15
     prestige = -0.02
-    war_exhaustion = -0.2 #0
+    war_exhaustion = -0.5 #0
     icon = 15
 }
 
@@ -2169,7 +2169,7 @@ taiping_draft = {
 yong_ying = {
     land_unit_start_experience = 5
     war_exhaustion = -0.5 #-1
-    #global_pop_militancy_modifier = -0.01
+    global_pop_militancy_modifier = -0.01
     global_pop_consciousness_modifier = 0.05
     icon = 15
 }
