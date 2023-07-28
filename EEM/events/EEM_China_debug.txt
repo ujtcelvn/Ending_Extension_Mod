@@ -9,7 +9,7 @@ country_event = {
         OR = {
             AND = {
                 civilization_progress = 0.5
-                any_owned_province = { port = no }
+                NOT = { num_of_ports = 1 }
             }
             civilization_progress = 0.9
         }
@@ -24,7 +24,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 60
+        months = 120
         modifier = {
             factor = 1.2
             ruling_party_ideology = reactionary
@@ -84,7 +84,7 @@ country_event = {
         OR = {
             AND = {
                 civilization_progress = 0.5
-                any_owned_province = { port = no }
+                NOT = { num_of_ports = 1 }
             }
             civilization_progress = 0.9
         }
@@ -99,7 +99,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 60
+        months = 120
         modifier = {
             factor = 1.2
             ruling_party_ideology = reactionary
@@ -159,7 +159,7 @@ country_event = {
         OR = {
             AND = {
                 civilization_progress = 0.5
-                any_owned_province = { port = no }
+                NOT = { num_of_ports = 1 }
             }
             civilization_progress = 0.9
         }
@@ -174,7 +174,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 60
+        months = 120
         modifier = {
             factor = 1.2
             ruling_party_ideology = reactionary
@@ -233,7 +233,7 @@ country_event = {
         OR = {
             AND = {
                 civilization_progress = 0.5
-                any_owned_province = { port = no }
+                NOT = { num_of_ports = 1 }
             }
             civilization_progress = 0.9
         }
@@ -248,7 +248,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 60
+        months = 120
         modifier = {
             factor = 1.2
             ruling_party_ideology = reactionary
