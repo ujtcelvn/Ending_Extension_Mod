@@ -38,9 +38,26 @@ country_event = {
     option = {
         name = "EVTOPTA166510"
         set_country_flag = unciv_forced_land_reform
-        add_country_modifier = { name = academic_confusion duration = 2000 }
         economic_reform = yes_land_reform #15%
         research_points = -10000
+        random_owned = {
+            limit = {
+                OR = {
+                    NOT = { owner = { clergymen = 0.02 } }
+                    NOT = { owner = { literacy = 0.1 } }
+                    owner = { has_country_modifier = uncivilized_isolationism }
+                }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 2000 } }
+        }
+        random_owned = {
+            limit = {
+                owner = { clergymen = 0.02 }
+                owner = { literacy = 0.1 }
+                NOT = { owner = { has_country_modifier = uncivilized_isolationism } }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 3000 } }
+        }
         any_pop = {
             scaled_militancy = {
                 ideology = liberal
@@ -113,9 +130,26 @@ country_event = {
     option = {
         name = "EVTOPTA166510"
         set_country_flag = unciv_forced_admin_reform
-        add_country_modifier = { name = academic_confusion duration = 2400 }
         economic_reform = yes_admin_reform #15%
         research_points = -12000
+        random_owned = {
+            limit = {
+                OR = {
+                    NOT = { owner = { clergymen = 0.02 } }
+                    NOT = { owner = { literacy = 0.1 } }
+                    owner = { has_country_modifier = uncivilized_isolationism }
+                }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 2400 } }
+        }
+        random_owned = {
+            limit = {
+                owner = { clergymen = 0.02 }
+                owner = { literacy = 0.1 }
+                NOT = { owner = { has_country_modifier = uncivilized_isolationism } }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 3600 } }
+        }
         any_pop = {
             scaled_militancy = {
                 ideology = liberal
@@ -170,6 +204,8 @@ country_event = {
         NOT = { has_country_modifier = law_changed_by_force }
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = national_confusion }
+        land_reform = yes_land_reform
+        admin_reform = yes_admin_reform
         education_reform = no_education_reform
     }
 
@@ -188,9 +224,26 @@ country_event = {
     option = {
         name = "EVTOPTA166510"
         set_country_flag = unciv_forced_education_reform
-        add_country_modifier = { name = academic_confusion duration = 2500 }
         economic_reform = yes_education_reform #15%
         research_points = -12500
+        random_owned = {
+            limit = {
+                OR = {
+                    NOT = { owner = { clergymen = 0.02 } }
+                    NOT = { owner = { literacy = 0.1 } }
+                    owner = { has_country_modifier = uncivilized_isolationism }
+                }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 2500 } }
+        }
+        random_owned = {
+            limit = {
+                owner = { clergymen = 0.02 }
+                owner = { literacy = 0.1 }
+                NOT = { owner = { has_country_modifier = uncivilized_isolationism } }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 3750 } }
+        }
         any_pop = {
             scaled_militancy = {
                 ideology = liberal
@@ -244,6 +297,9 @@ country_event = {
         NOT = { has_country_modifier = law_changed_by_force }
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = national_confusion }
+        land_reform = yes_land_reform
+        admin_reform = yes_admin_reform
+        education_reform = yes_education_reform
         research_reform = no_research_reform
     }
 
@@ -261,11 +317,30 @@ country_event = {
 
     option = {
         name = "EVTOPTA166510"
-        add_country_modifier = { name = academic_confusion duration = 4400 }
         set_country_flag = unciv_forced_research_reform
         economic_reform = yes_research_reform #25%
         activate_technology = late_enlightenment_philosophy
         research_points = -22000
+        random_owned = {
+            limit = {
+                OR = {
+                    NOT = { owner = { clergymen = 0.02 } }
+                    NOT = { owner = { literacy = 0.1 } }
+                    owner = { has_country_modifier = uncivilized_isolationism }
+                }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 6600 } }
+        }
+        random_owned = {
+            limit = {
+                owner = { clergymen = 0.02 }
+                owner = { literacy = 0.1 }
+                NOT = { owner = { has_country_modifier = uncivilized_isolationism } }
+            }
+            owner = { add_country_modifier = { name = academic_confusion duration = 4400 } }
+        }
+
+
         any_pop = {
             scaled_militancy = {
                 ideology = liberal
