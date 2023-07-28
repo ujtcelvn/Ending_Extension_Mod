@@ -472,7 +472,7 @@ country_event = {
 			military_spending = 0.99
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			is_greater_power = no 
 		}
 		modifier = {
@@ -494,6 +494,10 @@ country_event = {
 		modifier = {
 			factor = 1.2
 			capital_scope = { has_province_modifier = bomb_damage }
+		}
+		modifier = {
+			factor = 0.8
+			has_global_flag = nukes_used_global
 		}
 	}
 
@@ -529,7 +533,7 @@ country_event = {
 			military_spending = 0.99
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			is_greater_power = no 
 		}
 		modifier = {
@@ -551,6 +555,10 @@ country_event = {
 		modifier = {
 			factor = 1.2
 			capital_scope = { has_province_modifier = bomb_damage }
+		}
+		modifier = {
+			factor = 0.8
+			has_global_flag = nukes_used_global
 		}
 	}
 

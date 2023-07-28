@@ -721,7 +721,7 @@ province_event = {
         }
         modifier = {
             factor = 0.9
-            owner = { invention = engineering_consent }
+            owner = { invention = modern_intelligence_agency }
         }
         #190%
         modifier = {

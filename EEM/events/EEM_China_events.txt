@@ -5184,6 +5184,7 @@ country_event = {
 
 #RTR and TPG cores are removed by westernizing
 
+#166510 Free reforms for uncivs that get stuck
 
 #166600 Xinhai
 

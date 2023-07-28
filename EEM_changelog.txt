@@ -19,10 +19,10 @@ army = 26
 navy = 22 + 5
 
 1930 aesthetics						 5
-1930 philosphy						 5
-1930 social thought					 2
-1936 political thought				 3
-1930 psychology						 2
+1930 philosphy						 4
+1930 social thought					 3
+1936 political thought				 4
+1930 psychology						 1
 
 culture = 17
 
@@ -43,60 +43,21 @@ commerce = 15
 industry = 20 + 4
 
 ####################################################################################################
-Coming soon: 
-#TODO: Why are there sometimes random British cores in Alberta?
-#TODO: the CSA is really ugly without Arkansas 
-#TODO: fix accepting black pops in the New World
+v0.5.8m
+Uncivs whose capital has slavery now always spread slavery
+Arkansas no longer bans slavery when it becomes a state
+fanatic_army also gives -0.01 militancy so the Taiping don't drown in reactionaries as often
 
-#TODO: purchase battleship
+liberal and socialist party scandals reduce even more consciousness
+increased engineering_consent consciousness reduction from -0.03 to -0.05
+removed limited_media_effects, added modern_intelligence_agency to political thought with the same effects. modern_intelligence_agency now increases genocide speed instead of engineering_consent
+moved nuclear_theory from philosophy_7 to social_thought_7
+Nuclear programs progress faster if someone has ever dropped nukes
 
-#TODO: all dds graphics should be done in GIMP to prevent compression issues
-#TODO: rebalance military: army atk should x1.4 previous tier, increase support value of arty and planes
-
-#TODO: Great Power Rivary
-#TODO: Democratic convention: (leader of the free world)
-#TODO: Communist convention
-#TODO: Western governments have crippled ____ with sanctions, and then sent in friendly NGOs to pick up the slack.
-
-#TODO: healthcare -> public health? Safety already includes no dumping waste, but more stuff can be included?
-	Give pensions and unemployment benefits in later tiers, to model government health insurance?
-#TODO: 3rd Plague Pandemic: starts in Yunnan in 1855 (after the Panthay Rebellion) trigger: neither Yunnan nor Panthay doesn't exist, after it spreads to Hong Kong, spreads to rest of the world's ports (esp. British India)
-#TODO: Hindus don't poo in loo -> more cholera
-
-#TODO: finish invention localizations
-
-#TODO: coastal provinces and provinces next to major rivers get boosted RGO production (so there's no factory overproduction issues)
-	The ease of transport along rivertine and maritime routes contributed significantly to economic development, but this is not modeled in Victoria 2.
-	local_steamboats, modifier gets replaced by local_modern_transportation
-#TODO: local_steamboats and local_modern_transportation don't spread when at war and get removed if you're poor / occupied / blockaded
-#TODO: yangtze river patrol decision, giving China free local_steamboats, but also local western_presence? What benefit does the Western power get?
-
-#TODO: weather and climate
-
-#TODO: integrate East Turkestan into Turkestan
-#TODO: Turkestan turns into Uzbekistan if it explodes
-#TODO: integrate Bahrain, Qatar, Trucial States, Oman, and Kuwait into Arabia
-
-#TODO: 946 Polotsk nearly always turns Jewish
-#TODO: 1534 Ulaan Chab Chuulghan turns into South Han or Hakka super often
-
-#TODO: let you keep the Suez if you want to release Egypt during the arab revolt - the arabs won't be as happy as actually releasing egypt fully
-#TODO: check if Australia, New Zealand, South Africa, and the Boer Republics have the New World immigration modifier
-
-#TODO: split up Asian Minor
-
-#TODO: let immigrants of the same primary culture move further than just neighbor countries (eg: between puppets and overlords)
-#TODO: reactivate high literacy / high clerk ratio population debuffs, but make it local
-
-#TODO: make the nobel prizes use variables for which years have been issued instead of global flags
-
-#TODO: move 1488 Jiayuguan to from Inner Mongolia to Gansu? 
-	but keeping it in Inner Mongolia makes better Warlord Era borders...
-	remember to check relevant events such as the Greater Mongolia event
-#TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia) with Mongol accepted only
-
-#TODO: AI Austria will only form the SGF puppet if they have an army (to stomp on any sudden rebellions)
-#TODO: non-Europeans can't form the United Baltic Dutchy puppet
+removed the unciv puppet research debuff
+Reverted the naval reform gating back in because uncivs are still westernizing too quickly
+Added events for the AI to get economic reforms after 1900 if they are at least 50% civilized and don't have a port or at least 90% civilized (which is where uncivs always get stuck) so they won't stuck trying to westernize.
+edited some localizations
 
 ####################################################################################################
 v0.5.8la
@@ -110,9 +71,8 @@ added 1 CV hull to carrier_task_force_doctrine
 added 1 CL attack and 1 CL hull to large_cruisers
 
 Made the unciv puppet research debuff work properly.
-Chinese, Japanese, and Koreans are now immune to the unciv puppet research debuff
+Chinese, Japanese, Koreans are now immune to the unciv puppet research debuff
 
-####################################################################################################
 v0.5.8l
 Red Turban cores can now spread into the Huang He flood zone
 clearing out the manchu elite reduces north han militancy and consciousness further

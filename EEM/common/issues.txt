@@ -1343,10 +1343,11 @@ economic_reforms = {
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 2 } }
                     #}
-                    random_owned = {
-                        limit = { owner = { money = 2000 } }
-                        owner = { treasury = -2000 }
-                    }
+                    #random_owned = {
+                    #    limit = { owner = { money = 2000 } }
+                    #    owner = { treasury = -2000 }
+                    #}
+                    treasury = -2000
                     set_country_flag = activate_experimental_railroad
                     activate_technology = experimental_railroad
 
@@ -1398,10 +1399,11 @@ economic_reforms = {
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 10 } }
                     #}
-                    random_owned = {
-                        limit = { owner = { money = 10000 } }
-                        owner = { treasury = -10000 }
-                    }
+                    #random_owned = {
+                    #    limit = { owner = { money = 10000 } }
+                    #    owner = { treasury = -10000 }
+                    #}
+                    treasury = -10000
                     activate_technology = guild_based_production
                     build_factory_in_capital_state = small_arms_factory
 
@@ -1453,10 +1455,11 @@ economic_reforms = {
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 2 } }
                     #}
-                    random_owned = {
-                        limit = { owner = { money = 2000 } }
-                        owner = { treasury = -2000 }
-                    }
+                    #random_owned = {
+                    #    limit = { owner = { money = 2000 } }
+                    #    owner = { treasury = -2000 }
+                    #}
+                    treasury = -2000
                     build_factory_in_capital_state = cement_factory
 
                     any_pop = {
@@ -1501,10 +1504,11 @@ economic_reforms = {
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 7 } }
                     #}
-                    random_owned = {
-                        limit = { owner = { money = 7000 } }
-                        owner = { treasury = -7000 }
-                    }
+                    #random_owned = {
+                    #    limit = { owner = { money = 7000 } }
+                    #    owner = { treasury = -7000 }
+                    #}
+                    treasury = -7000
                     activate_technology = piston_steam_engine
                     build_factory_in_capital_state = fabric_factory
 
@@ -1642,11 +1646,11 @@ military_reforms = {
                     #    }
                     #    owner = { change_variable = { which = owed_cash_money value = 2 } }
                     #}
-                    random_owned = {
-                        limit = { owner = { money = 2000 } }
-                        owner = { treasury = -2000 }
-                    }
-
+                    #random_owned = {
+                    #    limit = { owner = { money = 2000 } }
+                    #    owner = { treasury = -2000 }
+                    #}
+                    treasury = -2000
                     activate_technology = post_napoleonic_thought
                     build_fort_in_capital = {
                         in_whole_capital_state = no # no = just in main capital province.
@@ -1764,7 +1768,8 @@ military_reforms = {
             research_points_on_conquer = 0.25
 
             allow = {
-                OR = { ai = yes any_owned_province = { port = yes } }
+                any_owned_province = { port = yes }
+                #OR = { ai = yes any_owned_province = { port = yes } }
                 #OR = {
                 #    ai = no
                 #    AND = {
@@ -1808,7 +1813,8 @@ military_reforms = {
 
             allow = {
                 NOT = { has_country_flag = lacking_writing_system }
-                OR = { ai = yes any_owned_province = { port = yes } }
+                any_owned_province = { port = yes }
+                #OR = { ai = yes any_owned_province = { port = yes } }
                 #OR = {
                 #    ai = no
                 #    AND = {
@@ -1851,7 +1857,8 @@ military_reforms = {
             civilization_progress_modifier = 0.1
 
             allow = {
-                OR = { ai = yes any_owned_province = { port = yes } }
+                any_owned_province = { port = yes }
+                #OR = { ai = yes any_owned_province = { port = yes } }
                 #OR = {
                 #    ai = no
                 #    AND = {
@@ -1895,7 +1902,8 @@ military_reforms = {
             civilization_progress_modifier = 0.1
 
             allow = {
-                OR = { ai = yes any_owned_province = { port = yes } }
+                any_owned_province = { port = yes }
+                #OR = { ai = yes any_owned_province = { port = yes } }
                 #OR = {
                 #    ai = no
                 #    AND = {

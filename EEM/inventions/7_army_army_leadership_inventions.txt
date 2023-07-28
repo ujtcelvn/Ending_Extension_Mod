@@ -16,7 +16,7 @@ computerized_army_intelligence = {
         }
         modifier = {
             factor = 2
-            invention = general_computer_programming
+            invention = modern_intelligence_agency
         }
     }
     effect = {

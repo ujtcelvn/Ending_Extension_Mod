@@ -1,1 +1,298 @@
-#No longer used
+country_event = {
+    id = 166510
+    title = "EVTNAME166510"
+    desc = "EVTDESC166510"
+    picture = "Outside_influences"
+
+    trigger = {
+        civilized = no
+        OR = {
+            AND = {
+                civilization_progress = 0.5
+                any_owned_province = { port = no }
+            }
+            civilization_progress = 0.9
+        }
+        year = 1900
+        ai = yes
+        NOT = { has_country_flag = lacking_writing_system }
+        NOT = { has_country_modifier = reactionary_demands }
+        NOT = { has_country_modifier = law_changed_by_force }
+        NOT = { has_country_modifier = academic_confusion }
+        NOT = { has_country_modifier = national_confusion }
+        land_reform = no_land_reform
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 1.2
+            ruling_party_ideology = reactionary
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = uncivilized_isolationism
+        }
+    }
+
+    option = {
+        name = "EVTOPTA166510"
+        set_country_flag = unciv_forced_land_reform
+        add_country_modifier = { name = academic_confusion duration = 1000 }
+        economic_reform = yes_land_reform #15%
+        research_points = -10000
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "EVTOPTB166510"
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 4
+                ruling_party_ideology = reactionary
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 166511
+    title = "EVTNAME166511"
+    desc = "EVTDESC166511"
+    picture = "Outside_influences"
+
+    trigger = {
+        civilized = no
+        OR = {
+            AND = {
+                civilization_progress = 0.5
+                any_owned_province = { port = no }
+            }
+            civilization_progress = 0.9
+        }
+        year = 1900
+        ai = yes
+        NOT = { has_country_flag = lacking_writing_system }
+        NOT = { has_country_modifier = reactionary_demands }
+        NOT = { has_country_modifier = law_changed_by_force }
+        NOT = { has_country_modifier = academic_confusion }
+        NOT = { has_country_modifier = national_confusion }
+        admin_reform = no_admin_reform
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 1.2
+            ruling_party_ideology = reactionary
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = uncivilized_isolationism
+        }
+    }
+
+    option = {
+        name = "EVTOPTA166510"
+        set_country_flag = unciv_forced_admin_reform
+        add_country_modifier = { name = academic_confusion duration = 1200 }
+        economic_reform = yes_admin_reform #15%
+        research_points = -12000
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "EVTOPTB166510"
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 4
+                ruling_party_ideology = reactionary
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 166512
+    title = "EVTNAME166512"
+    desc = "EVTDESC166512"
+    picture = "Outside_influences"
+
+    trigger = {
+        civilized = no
+        OR = {
+            AND = {
+                civilization_progress = 0.5
+                any_owned_province = { port = no }
+            }
+            civilization_progress = 0.9
+        }
+        year = 1900
+        ai = yes
+        NOT = { has_country_flag = lacking_writing_system }
+        NOT = { has_country_modifier = reactionary_demands }
+        NOT = { has_country_modifier = law_changed_by_force }
+        NOT = { has_country_modifier = academic_confusion }
+        NOT = { has_country_modifier = national_confusion }
+        education_reform = no_education_reform
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 1.2
+            ruling_party_ideology = reactionary
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = uncivilized_isolationism
+        }
+    }
+
+    option = {
+        name = "EVTOPTA166510"
+        set_country_flag = unciv_forced_education_reform
+        add_country_modifier = { name = academic_confusion duration = 1250 }
+        economic_reform = yes_education_reform #15%
+        research_points = -12500
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "EVTOPTB166510"
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 4
+                ruling_party_ideology = reactionary
+            }
+        }
+    }
+}
+
+country_event = {
+    id = 166513
+    title = "EVTNAME166513"
+    desc = "EVTDESC166513"
+    picture = "Outside_influences"
+
+    trigger = {
+        civilized = no
+        OR = {
+            AND = {
+                civilization_progress = 0.5
+                any_owned_province = { port = no }
+            }
+            civilization_progress = 0.9
+        }
+        year = 1900
+        ai = yes
+        NOT = { has_country_flag = lacking_writing_system }
+        NOT = { has_country_modifier = reactionary_demands }
+        NOT = { has_country_modifier = law_changed_by_force }
+        NOT = { has_country_modifier = academic_confusion }
+        NOT = { has_country_modifier = national_confusion }
+        research_reform = no_research_reform
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 1.2
+            ruling_party_ideology = reactionary
+        }
+        modifier = {
+            factor = 2
+            has_country_modifier = uncivilized_isolationism
+        }
+    }
+
+    option = {
+        name = "EVTOPTA166510"
+        add_country_modifier = { name = academic_confusion duration = 2200 }
+        set_country_flag = unciv_forced_research_reform
+        economic_reform = yes_research_reform #25%
+        activate_technology = late_enlightenment_philosophy
+        research_points = -22000
+        any_pop = {
+            scaled_militancy = {
+                ideology = liberal
+                factor = 1
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = 3
+            }
+        }
+        ai_chance = {
+            factor = 80
+        }
+    }
+
+    option = {
+        name = "EVTOPTB166510"
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 4
+                ruling_party_ideology = reactionary
+            }
+        }
+    }
+}

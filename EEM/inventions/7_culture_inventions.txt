@@ -289,14 +289,12 @@ deductive_nomological_model = {
 
 #deconstrutionism should actually occur in 1967 
 
-#nuclear_theory (in own file)
-
 ###########################################political_thought_7
 mass_surveillance = {
     limit = { political_thought_7 = 1 }
     news = no
     chance = {
-        base = 0
+        base = 2
         modifier = {
             factor = 3
             OR = {
@@ -309,12 +307,8 @@ mass_surveillance = {
             nationalvalue = nv_order
         }
         modifier = {
-            factor = 1
-            invention = national_radio_networks
-        }
-        modifier = {
-            factor = 1
-            invention = general_computer_programming
+            factor = -6
+            NOT = { invention = modern_intelligence_agency }
         }
     }
 
@@ -436,6 +430,35 @@ anticolonialism = {
 #    }
 #}
 
+modern_intelligence_agency = {
+    limit = { political_thought_7 = 1 }
+    news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = 1
+            OR = {
+                ruling_party_ideology = fascist
+                ruling_party_ideology = communist
+            }
+        }
+        modifier = {
+            factor = 1
+            nationalvalue = nv_order
+        }
+        modifier = {
+            factor = 2
+            invention = national_radio_networks
+        }
+        modifier = {
+            factor = 2
+            invention = general_computer_programming
+        }
+    }
+    effect = { }
+    core_pop_consciousness_modifier = -0.02
+}
+
 ##########################################psychology_7
 tv_broadcasting = {
     limit = { psychology_7 = 1 }
@@ -462,27 +485,27 @@ tv_broadcasting = {
 }
 
 
-limited_media_effects = {
-    limit = { psychology_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = -6
-            NOT = { invention = the_talkies }
-        }
-        modifier = {
-            factor = 2
-            average_consciousness = 3
-        }
-        modifier = {
-            factor = 2
-            invention = tv_broadcasting
-        }
-    }
-    effect = { }
-    core_pop_consciousness_modifier = -0.02
-}
+#limited_media_effects = {
+#    limit = { psychology_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = -6
+#            NOT = { invention = the_talkies }
+#        }
+#        modifier = {
+#            factor = 2
+#            average_consciousness = 3
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = tv_broadcasting
+#        }
+#    }
+#    effect = { }
+#    core_pop_consciousness_modifier = -0.02
+#}
 
 
 ##########################################social_thought_7
@@ -518,6 +541,8 @@ general_computer_programming = {
     }
 }
 
+#nuclear_theory (in own file)
+
 #Edward Bernays, a nephew of Sigmund Freud, is also sometimes referred to as the father of PR and the profession's first theorist for his work in the 1920s
 #Crystallizing Public Opinion (1923), Propaganda (1928), and The Engineering of Consent (1947)
 engineering_consent = {
@@ -546,7 +571,7 @@ engineering_consent = {
     }
     effect = {
     }
-    core_pop_consciousness_modifier = -0.03
+    core_pop_consciousness_modifier = -0.05 #-0.03
 }
 
 
@@ -555,3 +580,5 @@ engineering_consent = {
 #anarcho-syndicalism and libertarian socialism.  
 #Manufacturing Consent: The Political Economy of the Mass Media is a 1988 book by Edward S. Herman and Noam Chomsky.
 #The book introduced the propaganda model of communication, which is still developing today.  
+
+

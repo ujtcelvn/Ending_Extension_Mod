@@ -129,6 +129,13 @@ country_event = {
             modifier = {
                 factor = 0
                 owner = {
+                    civilized = no
+                    capital_scope = { state_scope = { is_slave = yes } }
+                }
+            }
+            modifier = {
+                factor = 0
+                owner = {
                     tag = CSA
                 }
             }
@@ -138,6 +145,7 @@ country_event = {
                 any_owned_province = {
                     OR = {
                         province_id = 200 #Florida
+                        province_id = 143 #Arkansas
                         is_core = TEX
                         is_core = CUB
                         is_core = RGR

@@ -1,5 +1,5 @@
 nuclear_theory = {
-    limit = { philosophy_7 = 1 }
+    limit = { social_thought_7 = 1 }
     news = no
     chance = {
         base = 0
@@ -13,15 +13,15 @@ nuclear_theory = {
         }
         modifier = {
             factor = 2
-            electric_furnace = 1
+            invention = rocket_experiments
         }
         modifier = {
             factor = 2
-            social_thought_7 = 1
+            general_computer_programming = 1
         }
         modifier = {
             factor = 2
-            average_consciousness = 5
+            invention = quantum_theory #anti__rationalism, 1900
         }
     }
     effect = {

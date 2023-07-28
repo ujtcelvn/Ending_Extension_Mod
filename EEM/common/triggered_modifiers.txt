@@ -539,18 +539,18 @@ ryotwari = {
     icon = 16
 }
 
-unciv_puppet = {
-    trigger = {
-        exists = yes
-        is_vassal = yes
-        civilized = no
-        NOT = { is_culture_group = east_asian }
-        NOT = { is_culture_group = far_east_asian }
-    }
-
-    research_points_modifier = -0.20
-    icon = 10
-}
+#unciv_puppet = {
+#    trigger = {
+#        exists = yes
+#        is_vassal = yes
+#        civilized = no
+#        NOT = { is_culture_group = east_asian }
+#        NOT = { is_culture_group = far_east_asian }
+#    }
+#
+#    research_points_modifier = -0.20
+#    icon = 10
+#}
 
 # atlantic_only_nation = {
     # trigger = {
