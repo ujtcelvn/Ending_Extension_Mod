@@ -20,6 +20,8 @@ country_event = {
         NOT = { has_country_modifier = law_changed_by_force }
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = national_confusion }
+        NOT = { is_culture_group = east_asian }
+        NOT = { is_culture_group = far_east_asian }
         land_reform = no_land_reform
     }
 
@@ -112,6 +114,8 @@ country_event = {
         NOT = { has_country_modifier = law_changed_by_force }
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = national_confusion }
+        NOT = { is_culture_group = east_asian }
+        NOT = { is_culture_group = far_east_asian }
         admin_reform = no_admin_reform
     }
 
@@ -204,6 +208,8 @@ country_event = {
         NOT = { has_country_modifier = law_changed_by_force }
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = national_confusion }
+        NOT = { is_culture_group = east_asian }
+        NOT = { is_culture_group = far_east_asian }
         land_reform = yes_land_reform
         admin_reform = yes_admin_reform
         education_reform = no_education_reform
@@ -297,6 +303,8 @@ country_event = {
         NOT = { has_country_modifier = law_changed_by_force }
         NOT = { has_country_modifier = academic_confusion }
         NOT = { has_country_modifier = national_confusion }
+        NOT = { is_culture_group = east_asian }
+        NOT = { is_culture_group = far_east_asian }
         land_reform = yes_land_reform
         admin_reform = yes_admin_reform
         education_reform = yes_education_reform
