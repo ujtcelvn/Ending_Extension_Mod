@@ -38,7 +38,7 @@ country_event = {
     option = {
         name = "EVTOPTA166510"
         set_country_flag = unciv_forced_land_reform
-        add_country_modifier = { name = academic_confusion duration = 1000 }
+        add_country_modifier = { name = academic_confusion duration = 2000 }
         economic_reform = yes_land_reform #15%
         research_points = -10000
         any_pop = {
@@ -113,7 +113,7 @@ country_event = {
     option = {
         name = "EVTOPTA166510"
         set_country_flag = unciv_forced_admin_reform
-        add_country_modifier = { name = academic_confusion duration = 1200 }
+        add_country_modifier = { name = academic_confusion duration = 2400 }
         economic_reform = yes_admin_reform #15%
         research_points = -12000
         any_pop = {
@@ -188,7 +188,7 @@ country_event = {
     option = {
         name = "EVTOPTA166510"
         set_country_flag = unciv_forced_education_reform
-        add_country_modifier = { name = academic_confusion duration = 1250 }
+        add_country_modifier = { name = academic_confusion duration = 2500 }
         economic_reform = yes_education_reform #15%
         research_points = -12500
         any_pop = {
@@ -261,7 +261,7 @@ country_event = {
 
     option = {
         name = "EVTOPTA166510"
-        add_country_modifier = { name = academic_confusion duration = 2200 }
+        add_country_modifier = { name = academic_confusion duration = 4400 }
         set_country_flag = unciv_forced_research_reform
         economic_reform = yes_research_reform #25%
         activate_technology = late_enlightenment_philosophy
