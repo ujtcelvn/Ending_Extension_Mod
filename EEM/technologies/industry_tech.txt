@@ -51,8 +51,12 @@ piston_steam_engine = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 1.5
-            NOT = { money = 100000 }
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -110,8 +114,12 @@ high_pressure_steam_engine = {
             industrial_score = 150
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -169,8 +177,12 @@ compound_steam_engines = {
             industrial_score = 250
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -232,8 +244,12 @@ steam_turbine = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -291,8 +307,12 @@ combustion_engine = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -347,8 +367,12 @@ electrical_power_generation = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 3
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -404,8 +428,12 @@ tech_power_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 3
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -444,6 +472,10 @@ mechanical_production = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 1.02
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 1.2
             industrial_score = 10
         }
@@ -452,8 +484,8 @@ mechanical_production = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -509,8 +541,12 @@ interchangeable_parts = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 1.02
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -577,8 +613,12 @@ semi_automatization = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 1.02
+            tech_school = japanese_tech_school
+        }
+        modifier = {
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -618,6 +658,10 @@ pneumatic_and_hydraulics = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 1.02
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
@@ -629,8 +673,8 @@ pneumatic_and_hydraulics = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -662,12 +706,16 @@ assembly_line = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 3
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -700,12 +748,16 @@ shift_work = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 3
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -739,12 +791,16 @@ mechanization_7 = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 3
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -817,6 +873,10 @@ hot_blast = {
                 tag = RUS
             }
         }
+        modifier = {
+            factor = 1.5
+            tech_school = japanese_tech_school
+        }
 
         modifier = {
             factor = 0.25
@@ -829,8 +889,8 @@ hot_blast = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -941,6 +1001,10 @@ mechanized_mining = {
                 tag = RUS
             }
         }
+        modifier = {
+            factor = 1.5
+            tech_school = japanese_tech_school
+        }
 
         modifier = {
             factor = 0.25
@@ -953,8 +1017,8 @@ mechanized_mining = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1044,6 +1108,10 @@ regenerative_furnaces = {
                 tag = RUS
             }
         }
+        modifier = {
+            factor = 1.5
+            tech_school = japanese_tech_school
+        }
 
         modifier = {
             factor = 0.25
@@ -1056,8 +1124,8 @@ regenerative_furnaces = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1155,6 +1223,10 @@ drilling_and_blasting = {
                 tag = RUS
             }
         }
+        modifier = {
+            factor = 1.5
+            tech_school = japanese_tech_school
+        }
 
         modifier = {
             factor = 0.25
@@ -1167,8 +1239,8 @@ drilling_and_blasting = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1259,6 +1331,10 @@ advanced_metallurgy = {
                 tag = RUS
             }
         }
+        modifier = {
+            factor = 1.5
+            tech_school = japanese_tech_school
+        }
 
         modifier = {
             factor = 0.25
@@ -1271,8 +1347,8 @@ advanced_metallurgy = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1351,6 +1427,10 @@ electric_furnace = {
             tech_school = industrial_tech_school
         }
         modifier = {
+            factor = 3
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = {
                 literacy = 0.4
@@ -1358,8 +1438,8 @@ electric_furnace = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1416,10 +1496,24 @@ metallurgy_7 = {
         modifier = {
             factor = 5
             is_greater_power = yes
+            OR = {
+                industrial_score = 10
+                tag = RUS
+            }
+            any_owned_province = {
+                OR = {
+                    produces = iron
+                    produces = coal
+                }
+            }
         }
         modifier = {
             factor = 3
             tech_school = industrial_tech_school
+        }
+        modifier = {
+            factor = 3
+            tech_school = japanese_tech_school
         }
         modifier = {
             factor = 0.25
@@ -1429,8 +1523,8 @@ metallurgy_7 = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1487,6 +1581,10 @@ experimental_railroad = {
             factor = 1.02
             tech_school = industrial_tech_school
         }
+        modifier = {
+            factor = 1.02
+            tech_school = japanese_tech_school
+        }
     }
 }
 early_railroad = {
@@ -1533,6 +1631,10 @@ early_railroad = {
             factor = 1.02
             tech_school = industrial_tech_school
         }
+        modifier = {
+            factor = 1.02
+            tech_school = japanese_tech_school
+        }
     }
 }
 iron_railroad = {
@@ -1567,6 +1669,10 @@ iron_railroad = {
             factor = 1.4
             tech_school = prussian_tech_school
         }
+        modifier = {
+            factor = 1.2
+            tech_school = japanese_tech_school
+        }
     }
 }
 steel_railroad = {
@@ -1598,6 +1704,10 @@ steel_railroad = {
             factor = 4
             tech_school = prussian_tech_school
         }
+        modifier = {
+            factor = 2
+            tech_school = japanese_tech_school
+        }
     }
 }
 integral_rail_system = {
@@ -1624,6 +1734,10 @@ integral_rail_system = {
         modifier = {
             factor = 1.4
             tech_school = prussian_tech_school
+        }
+        modifier = {
+            factor = 1.2
+            tech_school = japanese_tech_school
         }
         modifier = {
             factor = 0.25
@@ -1654,6 +1768,10 @@ limited_access_roads = {
         modifier = {
             factor = 1.4
             tech_school = prussian_tech_school
+        }
+        modifier = {
+            factor = 1.2
+            tech_school = japanese_tech_school
         }
         modifier = {
             factor = 0.25
@@ -1690,6 +1808,10 @@ tech_infrastructure_7 = {
             tech_school = prussian_tech_school
         }
         modifier = {
+            factor = 1.2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
@@ -1714,11 +1836,8 @@ basic_chemistry = {
             tech_school = industrial_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
+            factor = 2
+            tech_school = japanese_tech_school
         }
     }
 }
@@ -1748,11 +1867,8 @@ medicine = {
             tech_school = army_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
+            factor = 1.02
+            tech_school = japanese_tech_school
         }
     }
 }
@@ -1818,11 +1934,8 @@ inorganic_chemistry = {
             tech_school = prussian_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
+            factor = 2
+            tech_school = japanese_tech_school
         }
     }
 }
@@ -1864,16 +1977,13 @@ organic_chemistry = {
             tech_school = prussian_tech_school
         }
         modifier = {
+            factor = 2
+            tech_school = japanese_tech_school
+        }
+        modifier = {
             factor = 0.5
             is_greater_power = no
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -1914,11 +2024,8 @@ electricity = {
             tech_school = prussian_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
+            factor = 2
+            tech_school = japanese_tech_school
         }
     }
 
@@ -1952,11 +2059,8 @@ synthetic_polymers = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
+            factor = 1.02
+            tech_school = japanese_tech_school
         }
     }
 }
@@ -1989,11 +2093,8 @@ chemistry_and_electricity_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
+            factor = 1.02
+            tech_school = japanese_tech_school
         }
     }
 }

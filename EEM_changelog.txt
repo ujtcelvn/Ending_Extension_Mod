@@ -42,6 +42,40 @@ commerce = 15
 
 industry = 20 + 4
 
+
+####################################################################################################
+v0.5.8n #118 Naval adjustments
+Monitors no longer use fuel, instead, they just use oil. Monitors were always coal-powered, even the latest newest monitors built by the USA - the Arkansas-class monitors - in 1902-1903 were all purely coal powered as well. Oil-firing only became a thing in the 1900s. However, monitors did use oil lubricants, so the oil requirement is kept:  https://www.marinersmuseum.org/2022/02/uss-monitor-oil-reservoirs/
+
+scripted AI Japan and several daimyo to make them take the western shipyard reform if commodore perry's expedition is successful
+The winner of the Boshin War (or if Tokugawa unites Japan peacefully) gains an ironclad and a maximum of 4 ships from each of the daimyo
+When the Ezo Republic is founded they also gain an admiral Enomoto Takeaki (expert, war college) and the reminants of the Tokugawa navy: 4 Steam Frigates and 4 Troopships (or Frigates and Clipper Transports if they don't have the relevant inventions)
+
+added 4 Qing naval bases (Lüshun, Shanghai, Fuzhou, and Canton), 16 frigates, and 2 clipper transports (compared to 8 naval bases, 5 man-of-wars, and 20 frigates in older versions of HPM) because the Qing did have permanent fleets, several of which did a "large-scale sea patrol" every year.
+	Fengtian Navy: Lüshun
+	Shandong Navy: There were bases in Dengzhou (Weihaiwei) and Jiaozhou (Qingdao). However, the source does not mention anything past 1753 so to prevent the Qing navy from being too large these naval bases are NOT included.
+	Zhili Navy: Tianjin. The fleet was shut down for corruption and renamed the "Daigu Navy" but still "was far smaller than the Shandong or Fengtian navies" so this naval base is NOT included
+	Jiangsu navy, Jiangnan Naval Force: Shanghai 
+	Zhejiang Navy: Adding a naval base in, say, Jiaxing, would be too close to Shanghai and to prevent the Qing navy from being too big this naval base is NOT included.
+	Fujian Coast/ Taiwan Strait: Fuzhou
+	Guangdong: Canton 
+	Po, Chung-Yam. Conceptualizing the Blue Frontier: The Great Qing and the Maritime World in the Long Eighteenth Century. Ruprecht Karl University of Heidelberg, 2015. DOI: 10.11588/heidok.00018877
+	Fong, Sau-yi. Guns, Boats, and Diplomacy: Late Qing China and the World’s Naval Technology. Columbia Academic Commons. 2022. DOI: 10.7916/wj8n-pj44
+
+Added Red Turban cores to the first two Huang He flood areas (Luoyang, Jinan) if the floods occur after red turban cores are unlocked but the Taiping or Red Turban rebellion didn't occur yet. Technically the Nian rebels there were affiliated with the White Lotus and wore red turbans too.
+The Taiping and the Red Turbans now spawn with a navy the same size they would get if they took the conscript fishermen decision.
+The conscipt fishermen decision is reverted back to the HPM version
+
+Vietnam now starts with forts in Hanoi, Hue, and Saigon, as well as 2 clipper frigates.
+	From 1802 to 1821, Vietnam built Vauban-style pre-napoleonic forts, the first two under the direction of French officers. After 1821, one of the French officers brought new books back from France and Vietnam began building polygonal post-napoleonic forts. Vietnam also had many European-style ships but disbanded most of them in 1802. Only 2 ships remained in the 1810s, but ship construction increased again in 1819. https://doi.org/10.1017/S0022463403000468 
+	George Finlayson, during the Crawfurd expedition of 1821, commented that "Hué, is surrounded by fortifications that would do credit to the first fortress in Europe" and built "according to the principles of European fortification. https://www.gutenberg.org/cache/epub/45505/pg45505-images.html
+	US Navy Lieutenant John White visited Vietnam in 1819 and saw the Saigon citadel and "two frigates of European construction, under the superintendance of French officers" as well as about 200 galleys. https://archive.org/details/voyagetocochinch00whitrich
+
+increased unlock chance of aircraft carriers
+adjusted AI research, unciv AI reform behavior, and AI naval weights
+added a crutch to reduce AI rebel spirals
+fixed some other stuff
+
 ####################################################################################################
 v0.5.8m
 Uncivs whose capital has slavery now always spread slavery
@@ -50,16 +84,15 @@ fanatic_army also gives -0.01 militancy so the Taiping don't drown in reactionar
 
 liberal and socialist party scandals reduce even more consciousness
 increased engineering_consent consciousness reduction from -0.03 to -0.05
-removed limited_media_effects, added modern_intelligence_agency to political thought with the same effects. modern_intelligence_agency now increases genocide speed instead of engineering_consent
+removed limited_media_effects, added modern_intelligence_agency to political thought with the same effects. modern_intelligence_agency now increases genocide speed instead of engineering_consent #95
 moved nuclear_theory from philosophy_7 to social_thought_7
 Nuclear programs progress faster if someone has ever dropped nukes
 
 removed the unciv puppet research debuff
 Reverted the naval reform gating back in because uncivs are still westernizing too quickly
-Added events for the AI to get economic reforms after 1900 if they are at least 50% civilized and don't have a port or at least 90% civilized (which is where uncivs always get stuck) so they won't stuck trying to westernize.
+Added events for the AI to get economic reforms after 1900 if they are at least 50% civilized and don't have a port or at least 90% civilized (which is where uncivs always get stuck) so they won't stuck trying to westernize. #115
 edited some localizations
 
-####################################################################################################
 v0.5.8la
 fixed wrong invention chance for converted_hulk_air_carriers
 Increase AI research of naval engineering up to Advanced Naval Design even more so they can invent carriers

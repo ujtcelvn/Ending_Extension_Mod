@@ -638,6 +638,112 @@ army = {
         home = 1583
     }
 }
+navy = {
+	name = "Fengtian Navy"
+	location = 1481
+	ship = {
+		name = "1. Fengtian Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "2. Fengtian Frigate"
+		type = frigate
+	}
+}
+
+navy = {
+	name = "Shandong Navy"
+	location = 1569
+	ship = {
+		name = "1. Shandong Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "2. Shandong Frigate"
+		type = frigate
+	}
+}
+
+navy = {
+	name = "Daigu Navy"
+	location = 1617
+	ship = {
+		name = "1. Daigu Frigate"
+		type = frigate
+	}
+}
+
+navy = {
+	name = "Jiangnan Naval Force"
+	location = 1538
+	ship = {
+		name = "1. Jiangnan Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "2. Jiangnan Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "3. Jiangnan Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "4. Jiangnan Frigate"
+		type = frigate
+	}
+}
+
+navy = {
+	name = "Zhejiang Navy"
+	location = 1606
+	ship = {
+		name = "1. Zhejiang Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "2. Zhejiang Frigate"
+		type = frigate
+	}
+}
+
+navy = {
+	name = "Fujian Navy"
+	location = 1482
+	ship = {
+		name = "1. Fujian Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "2. Fujian Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "1. Haitan Clipper Transport"
+		type = clipper_transport
+	}
+	ship = {
+		name = "1. Jinmen Clipper Transport"
+		type = clipper_transport
+	}
+}
+
+navy = {
+	name = "Guangdong Navy"
+	location = 1493
+	ship = {
+		name = "1. Guangdong Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "2. Guangdong Frigate"
+		type = frigate
+	}
+	ship = {
+		name = "3. Guangdong Frigate"
+		type = frigate
+	}
+}
 
 leader = {
     name = "Guan Tianpei"

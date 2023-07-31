@@ -1379,6 +1379,63 @@ country_event = {
             }
             civilized = yes
         }
+
+        #EEM ship counter
+
+        any_country = {
+            limit = {
+                exists = yes
+                OR = {
+                    tag = CHO
+                    tag = SAT
+                    tag = TOS
+                    tag = KAG
+                    tag = SEN
+                    tag = YZW
+
+                    tag = JAP
+                    tag = TKG
+                }
+                NOT = { tag = THIS }
+            }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 2
+                        NOT = { invention = steamer_transports }
+                    }
+                }
+                REB = { change_variable = { which = jap_clipper_counter value = 1 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 4
+                        NOT = { invention = steamer_transports }
+                    }
+                }
+                REB = { change_variable = { which = jap_clipper_counter value = 1 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 2
+                        invention = steamer_transports
+                    }
+                }
+                REB = { change_variable = { which = jap_steam_counter value = 1 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 4
+                        invention = steamer_transports
+                    }
+                }
+                REB = { change_variable = { which = jap_steam_counter value = 1 } }
+            }
+        }
         inherit = TKG
         TKG = {
             all_core = {
@@ -1400,6 +1457,7 @@ country_event = {
                 owner = { NOT = { tag = JAP } }
             }
             owner = {
+                #EEM ship counter
                 inherit = JAP
                 capital = 1657
                 change_tag = JAP
@@ -1460,6 +1518,9 @@ country_event = {
             }
             THIS = { civilized = yes }
         }
+
+        #EEM ship counter
+
         JAP = { inherit = THIS }
         ai_chance = {
             factor = 100
@@ -1638,6 +1699,64 @@ country_event = {
             }
             civilized = yes
         }
+        
+        #EEM ship counter
+        
+        any_country = {
+            limit = {
+                exists = yes
+                OR = {
+                    tag = CHO
+                    tag = SAT
+                    tag = TOS
+                    tag = KAG
+                    tag = SEN
+                    tag = YZW
+
+                    tag = JAP
+                    tag = TKG
+                }
+                NOT = { tag = THIS }
+            }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 2
+                        NOT = { invention = steamer_transports }
+                    }
+                }
+                REB = { change_variable = { which = jap_clipper_counter value = 1 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 4
+                        NOT = { invention = steamer_transports }
+                    }
+                }
+                REB = { change_variable = { which = jap_clipper_counter value = 1 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 2
+                        invention = steamer_transports
+                    }
+                }
+                REB = { change_variable = { which = jap_steam_counter value = 1 } }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        total_amount_of_ships = 4
+                        invention = steamer_transports
+                    }
+                }
+                REB = { change_variable = { which = jap_steam_counter value = 1 } }
+            }
+        }
+
         random_country = {
             limit = {
                 has_country_flag = imperial_war_leader
@@ -1651,6 +1770,9 @@ country_event = {
                 tag = JAP
                 exists = yes
             }
+            
+            #EEM ship counter
+            
             annex_to = THIS
         }
         any_country = {
@@ -1690,6 +1812,10 @@ country_event = {
             }
             THIS = { civilized = yes }
         }
+
+
+        #EEM ship counter
+
         TKG = { inherit = THIS }
         ai_chance = {
             factor = 100
@@ -3106,6 +3232,51 @@ country_event = {
                 personality = implacable
                 background = school_of_firepower
             }
+            define_admiral = {
+                name = "Enomoto Takeaki"
+                personality = expert
+                background = war_college
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1642
+                    owner = { invention = commerce_raiders }
+                }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1642 
+                    owner = { invention = steamer_transports }
+                }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1642 
+                    NOT = { owner = { invention = commerce_raiders } }
+                }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+            }
+            random_owned = {
+                limit = {
+                    province_id = 1642 
+                    NOT = { owner = { invention = steamer_transports } }
+                }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+           }
         }
     }
 }

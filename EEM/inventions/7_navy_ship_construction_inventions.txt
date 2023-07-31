@@ -4,19 +4,31 @@
 converted_hulk_air_carriers = {
     limit = { oil_driven_ships = 1 }
     chance = {
-        base = 2
+        base = 5
         modifier = {
-            factor = -5
+            factor = -10
+            NOT = { invention = wright_n_langleys_aeroplanes }
+        }
+        modifier = {
+            factor = -8
             NOT = { invention = on_board_recon_aircraft }
+        }
+        modifier = {
+            factor = 2
+            war = yes
+            war_countries = { invention = converted_hulk_air_carriers }
         }
         modifier = {
             factor = 1
             any_neighbor_country = { invention = converted_hulk_air_carriers }
         }
         modifier = {
-            factor = 2
-            war = yes
-            war_countries = { invention = converted_hulk_air_carriers }
+            factor = 1
+            ship_construction_7 = 2
+        }
+        modifier = {
+            factor = 1
+            invention = late_interwar_bombers
         }
     }
     effect = {

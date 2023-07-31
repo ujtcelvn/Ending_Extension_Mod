@@ -29,8 +29,8 @@ private_banks = {
             literacy = 0.6
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -67,8 +67,8 @@ stock_exchange = {
             literacy = 0.6
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -109,8 +109,8 @@ business_banks = {
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -150,8 +150,8 @@ investment_banks = {
             colonial_nation = yes
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -187,8 +187,8 @@ bank_inspection_board = {
             literacy = 0.6
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -216,8 +216,8 @@ mutual_funds = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -247,8 +247,8 @@ financial_institutions_7 = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -275,8 +275,8 @@ no_standard = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -312,8 +312,8 @@ ad_hoc_money_bill_printing = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -341,8 +341,8 @@ private_bank_money_bill_printing = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -374,8 +374,8 @@ central_bank_money_bill_printing = {
             has_country_modifier = leader_of_kalmar
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -411,8 +411,8 @@ modern_central_bank_system = {
             tech_school = commerce_tech_school
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -445,8 +445,8 @@ market_determined_exchange_rates = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -479,8 +479,8 @@ monetary_system_7 = {
             NOT = { literacy = 0.4 }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -513,13 +513,6 @@ early_classical_theory_and_critique = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -562,13 +555,6 @@ late_classical_theory = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 collectivist_theory = {
@@ -608,13 +594,6 @@ collectivist_theory = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -656,13 +635,6 @@ the_historical_theory = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 neoclassical_theory = {
@@ -702,13 +674,6 @@ neoclassical_theory = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -750,13 +715,6 @@ keynesian_economics = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 economic_thought_and_critique_7 = {
@@ -796,13 +754,6 @@ economic_thought_and_critique_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -854,8 +805,8 @@ freedom_of_trade = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -922,8 +873,8 @@ market_structure = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -978,8 +929,8 @@ business_regulations = {
             }
         }
         modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
+            factor = 2
+            NOT = { money = 250000 }
             is_vassal = no
             is_substate = no
             war = no
@@ -1034,13 +985,6 @@ market_regulations = {
                 }
             }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 
 }
@@ -1076,13 +1020,6 @@ economic_responsibility = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 
@@ -1120,13 +1057,6 @@ government_interventionism = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 
 }
@@ -1162,13 +1092,6 @@ market_functionality_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 
@@ -1210,13 +1133,6 @@ guild_based_production = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -1274,13 +1190,6 @@ organized_factories = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 scientific_management = {
@@ -1329,13 +1238,6 @@ scientific_management = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 time_saving_measures = {
@@ -1371,13 +1273,6 @@ time_saving_measures = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -1415,13 +1310,6 @@ management_strategy = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 organizational_development = {
@@ -1457,13 +1345,6 @@ organizational_development = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -1501,13 +1382,6 @@ tech_organization_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { money = 100000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }

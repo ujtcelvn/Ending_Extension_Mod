@@ -869,6 +869,24 @@ country_event = {
                 personality = audacious
                 background = expert_raider
             }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
+            }
             random_owned = {
                 limit = { QNG = { land_reform = yes_land_reform } }
                 RTR = { economic_reform = yes_land_reform }
@@ -1070,6 +1088,24 @@ country_event = {
                 name = "Li Jingui"
                 personality = audacious
                 background = expert_raider
+            }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
             }
             random_owned = {
                 limit = { QNG = { land_reform = yes_land_reform } }
@@ -2963,6 +2999,24 @@ country_event = {
                 personality = audacious
                 background = expert_raider
             }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
+            }
             random_owned = {
                 limit = { TPG = { land_reform = yes_land_reform } }
                 RTR = { economic_reform = yes_land_reform }
@@ -3101,6 +3155,24 @@ country_event = {
                 name = "Li Jingui"
                 personality = audacious
                 background = expert_raider
+            }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
             }
             random_owned = {
                 limit = { TPG = { land_reform = yes_land_reform } }

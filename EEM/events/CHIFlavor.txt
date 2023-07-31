@@ -35,6 +35,32 @@ country_event = {
                 duration = 1800
             }
         }
+        random_owned = {
+		    limit = {
+		        province_id = 1510
+		        owner = {
+                    has_country_flag = tiandihui
+		            tag = QNG
+                    NOT = { has_global_flag = ming_has_happened }
+                    NOT = { has_global_flag = taiping_has_happened }
+                    NOT = { has_global_flag = ming_has_been_prevented }
+		        }
+		    }
+            state_scope = {
+                any_owned = {
+                    limit = { NOT = { is_core = RTR } }
+                    remove_province_modifier = christian_pamphlets
+                    remove_province_modifier = christian_repression
+                    add_core = RTR
+                }
+            }
+            owner = {
+                change_variable = {
+                    which = ming_provinces
+                    value = 1
+                }
+            }
+        }
     }
 }
 
@@ -66,6 +92,32 @@ country_event = {
             add_province_modifier = {
                 name = chinese_floods
                 duration = 1800
+            }
+        }
+        random_owned = {
+		    limit = {
+		        province_id = 1563
+		        owner = {
+                    has_country_flag = tiandihui
+		            tag = QNG
+                    NOT = { has_global_flag = ming_has_happened }
+                    NOT = { has_global_flag = taiping_has_happened }
+                    NOT = { has_global_flag = ming_has_been_prevented }
+		        }
+		    }
+            state_scope = {
+                any_owned = {
+                    limit = { NOT = { is_core = RTR } }
+                    remove_province_modifier = christian_pamphlets
+                    remove_province_modifier = christian_repression
+                    add_core = RTR
+                }
+            }
+            owner = {
+                change_variable = {
+                    which = ming_provinces
+                    value = 1
+                }
             }
         }
     }

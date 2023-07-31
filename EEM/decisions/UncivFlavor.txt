@@ -807,7 +807,7 @@ political_decisions = {
     conscript_fishermen = {
         picture = dreams_of_empire
         potential = {
-            #civilized = no
+            civilized = no
             civilization_progress = 0.2
             NOT = {
                 has_country_flag = lacking_writing_system
@@ -841,13 +841,6 @@ political_decisions = {
                     chance = 5
                     sub_unit = {
                         type = manowar
-                        value = current
-                    }
-                }
-                random = {
-                    chance = 5
-                    sub_unit = {
-                        type = clipper_transport
                         value = current
                     }
                 }

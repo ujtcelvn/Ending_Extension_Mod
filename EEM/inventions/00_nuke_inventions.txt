@@ -17,7 +17,7 @@ nuclear_theory = {
         }
         modifier = {
             factor = 2
-            general_computer_programming = 1
+            invention = general_computer_programming
         }
         modifier = {
             factor = 2

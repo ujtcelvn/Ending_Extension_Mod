@@ -240,7 +240,7 @@ human_relations_theory = {
         }
         modifier = {
             factor = 2
-            invention = hawthrone_study
+            tech_organization_7 = 1
         }
     }
     effect = {

@@ -95,6 +95,10 @@ tv_first_golden_age = { #previously "movies" but movies are actually "the talkie
             invention = national_radio_networks 
         }
         modifier = {
+            factor = 2
+            nationalvalue = nv_liberty
+        }
+        modifier = {
             factor = -6
             NOT = { invention = tv_broadcasting }
         }
