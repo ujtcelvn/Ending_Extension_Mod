@@ -10,7 +10,7 @@ converted_hulk_air_carriers = {
             NOT = { invention = wright_n_langleys_aeroplanes }
         }
         modifier = {
-            factor = -8
+            factor = -6
             NOT = { invention = on_board_recon_aircraft }
         }
         modifier = {
@@ -67,6 +67,10 @@ light_air_carriers = { #and escort_air_carriers
     chance = {
         base = 0
         modifier = {
+            factor = -6
+            NOT = { invention = on_board_recon_aircraft }
+        }
+        modifier = {
             factor = 2
             invention = purpose_built_air_carriers
         }
@@ -96,6 +100,10 @@ fleet_air_carriers = {
             NOT = { invention = purpose_built_air_carriers }
         }
         modifier = {
+            factor = -6
+            NOT = { invention = on_board_recon_aircraft }
+        }
+        modifier = {
             factor = 2
             invention = light_air_carriers
         }
@@ -119,9 +127,7 @@ large_air_carriers = {
         base = 0
         modifier = {
             factor = -6
-			NOT = {
-                invention = fleet_air_carriers
-		    }
+			NOT = { invention = fleet_air_carriers }
         }
         modifier = {
             factor = 2

@@ -240,9 +240,7 @@ naval_fighters = {
         }
         modifier = {
             factor = -6
-            NOT = {
-                invention = purpose_built_air_carriers
-            }
+            NOT = { invention = purpose_built_air_carriers }
         }
     }
     effect = {
@@ -272,9 +270,7 @@ naval_bombers = {
         }
         modifier = {
             factor = -6
-            NOT = {
-                invention = purpose_built_air_carriers
-            }
+            NOT = { invention = purpose_built_air_carriers }
         }
     }
     effect = {
