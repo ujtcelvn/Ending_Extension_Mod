@@ -1703,15 +1703,15 @@ military_reforms = {
 
             allow = {
                 any_owned_province = { port = yes }
-                OR = {
-                    ai = no
-                    AND = {
-                        has_country_flag = using_foreign_ships
-                        has_country_flag = using_foreign_shipyards
-                        has_country_flag = using_foreign_weapons
-                        has_country_flag = using_foreign_artillery
-                    }
-                }
+                #OR = {
+                #    ai = no
+                #    AND = {
+                #        has_country_flag = using_foreign_ships
+                #        has_country_flag = using_foreign_shipyards
+                #        has_country_flag = using_foreign_weapons
+                #        has_country_flag = using_foreign_artillery
+                #    }
+                #}
             }
 
             on_execute = {
@@ -1747,15 +1747,15 @@ military_reforms = {
             allow = {
                 NOT = { has_country_flag = lacking_writing_system }
                 any_owned_province = { port = yes }
-                OR = {
-                    ai = no
-                    AND = {
-                        has_country_flag = using_foreign_ships
-                        has_country_flag = using_foreign_shipyards
-                        has_country_flag = using_foreign_weapons
-                        has_country_flag = using_foreign_artillery
-                    }
-                }
+                #OR = {
+                #    ai = no
+                #    AND = {
+                #        has_country_flag = using_foreign_ships
+                #        has_country_flag = using_foreign_shipyards
+                #        has_country_flag = using_foreign_weapons
+                #        has_country_flag = using_foreign_artillery
+                #    }
+                #}
             }
 
             on_execute = {
@@ -1790,13 +1790,13 @@ military_reforms = {
 
             allow = {
                 any_owned_province = { port = yes }
-                OR = {
-                    ai = no
-                    AND = {
-                        has_country_flag = using_foreign_weapons
-                        has_country_flag = using_foreign_artillery
-                    }
-                }
+                #OR = {
+                #    ai = no
+                #    AND = {
+                #        has_country_flag = using_foreign_weapons
+                #        has_country_flag = using_foreign_artillery
+                #    }
+                #}
             }
 
             on_execute = {
@@ -1834,13 +1834,13 @@ military_reforms = {
 
             allow = {
                 any_owned_province = { port = yes }
-                OR = {
-                    ai = no
-                    AND = {
-                        has_country_flag = using_foreign_weapons
-                        has_country_flag = using_foreign_artillery
-                    }
-                }
+                #OR = {
+                #    ai = no
+                #    AND = {
+                #        has_country_flag = using_foreign_weapons
+                #        has_country_flag = using_foreign_artillery
+                #    }
+                #}
             }
 
             on_execute = {
