@@ -200,14 +200,11 @@ country_event = {
         war_policy = jingoism
 
         NOT = { has_global_flag = nanking_massacre }
+        NOT = { has_country_modifier = signed_the_geneva_convention }
     }
 
     mean_time_to_happen = {
         months = 3
-		modifier = {
-			factor = 10
-			has_country_modifier = signed_the_geneva_convention
-		}
 		modifier = {
 			factor = 0.1
 			has_country_modifier = withdrew_from_geneva_convention
@@ -681,10 +678,10 @@ country_event = {
     title = "EVTNAME165200" #The Red Turban Rebellion
     desc = "EVTDESC165200"
     picture = "red_turban_attack"
-    #news = yes
-    #news_desc_long = "Secret society members have revolted in the Qing Empire!"
-    #news_desc_medium = "Secret society members have revolted in the Qing Empire!"
-    #news_desc_short = "Secret society members have revolted in the Qing Empire!"
+    news = yes
+    news_desc_long = "EVTDESC165200_NEWS_LONG"
+    news_desc_medium = "EVTDESC165200_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC165200_NEWS_SHORT"
     major = yes
 
     trigger = {
@@ -843,6 +840,12 @@ country_event = {
         set_global_flag = ming_has_happened
 
         RTR = {
+            capital = 1504
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            
             add_country_modifier = { name = fanatic_army duration = 1825 }
             define_general = {
                 name = "Chen Kai"
@@ -1063,6 +1066,12 @@ country_event = {
         }
         set_global_flag = ming_has_happened
         RTR = {
+            capital = 1504
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            
             add_country_modifier = { name = fanatic_army duration = 1825 }
             define_general = {
                 name = "Chen Kai"
@@ -1213,6 +1222,7 @@ country_event = {
         tag = QNG
         NOT = { exists = RTR }
         NOT = { has_global_flag = ming_has_been_defeated }
+        NOT = { has_global_flag = ming_has_been_defeated_mini }
     }
 
     mean_time_to_happen = { days = 1 }
@@ -1925,39 +1935,12 @@ country_event = {
     option = {
         name = "EVTOPTA165209"
         set_country_flag = triad_ming
-
         government = bourgeois_dictatorship
-        ruling_party_ideology = anarcho_liberal
-
         upper_house = {
             ideology = anarcho_liberal
             value = 1
         }
 
-        political_reform = none_voting
-        political_reform = party_appointed
-
-        clr_country_flag = communist_gov
-        clr_country_flag = absolute_monarchy_gov
-        clr_country_flag = semi_constitutional_monarchy_gov
-        clr_country_flag = constitutional_monarchy_gov
-        clr_country_flag = democracy_gov
-        clr_country_flag = presidential_dictatorship_gov
-        clr_country_flag = fascist_gov
-        set_country_flag = anarcho_liberal_gov
-        clr_country_flag = theocratic_government
-        clr_country_flag = election_started
-        clr_country_flag = conservative_party_in_power
-        clr_country_flag = liberal_party_in_power
-        clr_country_flag = reactionary_party_in_power
-        clr_country_flag = socialist_party_in_power
-        clr_country_flag = communist_party_in_power
-        clr_country_flag = fascist_party_in_power
-        clr_country_flag = anarcho_liberal_party_in_power
-        add_country_modifier = {
-            name = national_confusion
-            duration = 1825
-        }
         any_pop = {
             limit = {
                 OR = {
@@ -1967,32 +1950,480 @@ country_event = {
             }
             ideology = {
                 value = anarcho_liberal
-                factor = 0.01
-            }
-            ideology = {
-                value = liberal
                 factor = 0.05
             }
         }
 
-        any_pop = {
-            scaled_militancy = {
-                ideology = anarcho_liberal
-                factor = -9
+        clr_country_flag = theocratic_government
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        clr_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        clr_country_flag = democracy_gov
+        clr_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        set_country_flag = anarcho_liberal_gov
+
+
+
+        ruling_party_ideology = anarcho_liberal
+
+        political_reform = none_voting
+        #political_reform = universal_voting
+        political_reform = party_appointed
+        #political_reform = no_meeting
+        #political_reform = state_press
+        #political_reform = no_trade_unions
+        #political_reform = underground_parties
+        #political_reform = debtors_prisons
+        #social_reform = no_minimum_wage
+        #social_reform = no_work_hour_limit
+        #social_reform = no_safety
+        #social_reform = no_subsidies
+        #social_reform = no_pensions
+        #social_reform = no_health_care
+
+        add_country_modifier = {
+            name = national_confusion
+            duration = 365
+        }
+
+        #prestige_factor = -0.25
+        plurality = -25
+
+
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = conservative
+                }
+            }
+            owner = { set_country_flag = conservative_party_in_power }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = liberal
+                }
+            }
+            owner = { set_country_flag = liberal_party_in_power }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = reactionary
+                }
+            }
+            owner = { set_country_flag = reactionary_party_in_power }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = socialist
+                }
+            }
+            owner = { set_country_flag = socialist_party_in_power }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = communist
+                }
+            }
+            owner = { set_country_flag = communist_party_in_power }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = fascist
+                }
+            }
+            owner = { set_country_flag = fascist_party_in_power }
+        }
+        random_owned = {
+            limit = {
+                owner = {
+                    OR = {
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                    ruling_party_ideology = anarcho_liberal
+                }
+            }
+            owner = { set_country_flag = anarcho_liberal_party_in_power }
+        }
+
+        random_owned = {
+            limit = {
+                owner = {
+                    has_country_modifier = regency_government
+                    NOT = {
+                        government = absolute_monarchy
+                        government = prussian_constitutionalism
+                        government = hms_government
+                    }
+                }
+            }
+            owner = { remove_country_modifier = regency_government }
+        }
+        random_owned = {
+            limit = { owner = { has_country_modifier = santa_ana_rule } }
+            owner = { remove_country_modifier = santa_ana_rule }
+        }
+        political_reform = open_borders
+
+        clr_country_flag = wants_to_unify
+        clr_country_flag = does_not_want_to_unify
+        clr_country_flag = rebels_in_capital
+        remove_country_modifier = fight_the_power
+        random_owned = {
+            limit = {
+                owner = {
+                    NOT = { ruling_party_ideology = anarcho_liberal }
+                }
+            }
+            owner = { ruling_party_ideology = liberal }
+        }
+        capital_scope = {
+            any_pop = {
+                limit = { literacy = 0.4 }
+                ideology = { factor = 0.1 value = anarcho_liberal }
             }
         }
         any_pop = {
-            scaled_militancy = {
-                ideology = conservative
-                factor = 4
-            }
+            limit = { pop_majority_ideology = anarcho_liberal }
+            ideology = { factor = 0.1 value = anarcho_liberal }
         }
         any_pop = {
             scaled_militancy = {
                 ideology = reactionary
-                factor = 9
+                factor = 4
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = fascist
+                factor = -2
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = anarcho_liberal
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = socialist
+                factor = 2
+            }
+            scaled_militancy = {
+                ideology = communist
+                factor = 4
             }
         }
+        random_country = {
+            limit = {
+                is_sphere_leader_of = THIS
+                NOT = { is_our_vassal = THIS }
+            }
+            diplomatic_influence = {
+                who = THIS
+                value = -200
+            }
+            relation = {
+                who = THIS
+                value = -50
+            }
+            set_country_flag = former_sphere_leader
+            leave_alliance = THIS
+            country_event = 800056
+        }
+        random_country = {
+            limit = { is_our_vassal = THIS }
+            release_vassal = THIS
+            leave_alliance = THIS
+            diplomatic_influence = {
+                who = THIS
+                value = -200
+            }
+            relation = {
+                who = THIS
+                value = -50
+            }
+            set_country_flag = former_overlord
+            country_event = 800055
+        }
+        any_country = {
+            limit = {
+                neighbour = THIS
+                civilized = yes
+                NOT = {
+                    OR = {
+                        ruling_party_ideology = anarcho_liberal
+                        government = democracy
+                    }
+                }
+            }
+            any_pop = {
+                scaled_militancy = {
+                    ideology = anarcho_liberal
+                    factor = 5
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                government = proletarian_dictatorship
+                NOT = {
+                    has_country_flag = former_sphere_leader
+                    has_country_flag = former_overlord
+                }
+                is_greater_power = yes
+            }
+            diplomatic_influence = {
+                who = THIS
+                value = -50
+            }
+        }
+        any_country = {
+            limit = {
+                NOT = {
+                    OR = {
+                        ruling_party_ideology = anarcho_liberal
+                        government = proletarian_dictatorship
+                    }
+                    has_country_flag = former_sphere_leader
+                    has_country_flag = former_overlord
+                }
+                is_greater_power = yes
+            }
+            diplomatic_influence = {
+                who = THIS
+                value = -25
+            }
+        }
+        any_country = {
+            limit = {
+                ruling_party_ideology = anarcho_liberal
+                NOT = {
+                    has_country_flag = former_sphere_leader
+                    has_country_flag = former_overlord
+                }
+            }
+            relation = {
+                who = THIS
+                value = 50
+            }
+        }
+        any_country = {
+            limit = {
+                government = proletarian_dictatorship
+                NOT = {
+                    has_country_flag = former_sphere_leader
+                    has_country_flag = former_overlord
+                }
+            }
+            leave_alliance = THIS
+            relation = {
+                who = THIS
+                value = -100
+            }
+        }
+        any_country = {
+            limit = {
+                NOT = {
+                    OR = {
+                        government = proletarian_dictatorship
+                        ruling_party_ideology = anarcho_liberal
+                        ruling_party_ideology = liberal
+                    }
+                    has_country_flag = former_overlord
+                }
+            }
+            relation = {
+                who = THIS
+                value = -25
+            }
+        }
+        any_country = {
+            limit = {
+                alliance_with = THIS
+                NOT = {
+                    ruling_party_ideology = anarcho_liberal
+                    vassal_of = THIS
+                    substate_of = THIS
+                    in_sphere = THIS
+                }
+            }
+            relation = { who = THIS value = -100 }
+            leave_alliance = THIS
+        }
+        #Genocide Cleanup
+        ##Set Up Timer based on time the thing ran
+        random_owned = {
+            limit = { owner = { NOT = { check_variable = { which = evidence_count value = 2 } } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 1460 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 2 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 1825 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 4 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 2190 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 6 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 2555 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 8 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 2920 } }
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = evidence_count value = 10 } } }
+            owner = { add_country_modifier = { name = law_changed_by_force duration = 3285 } } #9 years
+        }
+        ##Clean Variables
+        set_variable = { which = evidence_count value = 0 }
+        set_variable = { which = slowdown_point value = 0 }
+        #Delete Modifiers
+        random_owned = {
+            limit = { owner = { has_country_modifier = interment_camps } }
+            owner = { remove_country_modifier = interment_camps }
+        }
+        #Delete Block
+        clr_country_flag = government_busy_with_something
+        #Flag for pops
+        clr_country_flag = internment_camps_open
+        #Place
+        clr_country_flag = interning_on_colonies
+        clr_country_flag = interning_on_homeland
+        clr_country_flag = interning_everywhere
+        #Who
+        clr_country_flag = interning_cultures
+        clr_country_flag = interning_religions
+        #Specific religions
+        clr_country_flag = interning_catholics
+        clr_country_flag = interning_protestants
+        clr_country_flag = interning_mormons
+        clr_country_flag = interning_orthodoxies
+        clr_country_flag = interning_coptics
+        clr_country_flag = interning_sunnis
+        clr_country_flag = interning_shiites
+        clr_country_flag = interning_ibadis
+        clr_country_flag = interning_druzi
+        clr_country_flag = interning_jewish
+        clr_country_flag = interning_yazidis
+        clr_country_flag = interning_mahayanas
+        clr_country_flag = interning_gelugpas
+        clr_country_flag = interning_theravadas
+        clr_country_flag = interning_hindus
+        clr_country_flag = interning_shintos
+        clr_country_flag = interning_sikhs
+        clr_country_flag = interning_animists
+        #Specific Cultures
+        clr_country_flag = interning_germanics
+        clr_country_flag = interning_jewish_cultures
+        clr_country_flag = interning_beneluxian
+        clr_country_flag = interning_pan_swiss
+        clr_country_flag = interning_scandinavian
+        clr_country_flag = interning_british
+        clr_country_flag = interning_italian
+        clr_country_flag = interning_iberian
+        clr_country_flag = interning_french
+        clr_country_flag = interning_south_slavic
+        clr_country_flag = interning_pan_albanian
+        clr_country_flag = interning_pan_romanian
+        clr_country_flag = interning_hungarian_culture_group
+        clr_country_flag = interning_polish_culture_group
+        clr_country_flag = interning_czecho_slovak_culture_group
+        clr_country_flag = interning_east_slavic
+        clr_country_flag = interning_baltic
+        clr_country_flag = interning_levantine
+        clr_country_flag = interning_turko_semitic
+        clr_country_flag = interning_caucasian
+        clr_country_flag = interning_arab
+        clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_central_asian
+        clr_country_flag = interning_south_asian
+        clr_country_flag = interning_indo_iranian
+        clr_country_flag = interning_southeast_asian
+        clr_country_flag = interning_east_asian
+        clr_country_flag = interning_far_east_asian
+        clr_country_flag = interning_oceanic
+        clr_country_flag = interning_native_american
+        clr_country_flag = interning_american_cultures
+        clr_country_flag = interning_neo_european_cultures
+        clr_country_flag = interning_latin_american_cultures
+        clr_country_flag = interning_african_diaspora_cultures
+        clr_country_flag = interning_west_african
+        clr_country_flag = interning_central_african
+        clr_country_flag = interning_east_african
+        clr_country_flag = interning_southern_african
+        clr_country_flag = interning_finnougric
+        clr_country_flag = animists_run
+        ##
+        #Prevent rebel spiraling for the AI
+        random_owned = {
+            limit = { NOT = { owner = { plurality = 5 } } ai = no }
+            random = {
+                chance = 50
+                THIS = {
+                    any_pop = {
+                        limit = { is_primary_culture = yes }
+                        militancy = -4
+                        consciousness = -2
+                    }
+                    any_pop = {
+                        limit = { is_accepted_culture = yes }
+                        militancy = -2
+                        consciousness = -1
+                    }
+                    any_pop = {
+                        limit = { is_primary_culture = no is_accepted_culture = no }
+                        consciousness = 2
+                    }
+                    change_variable = { which = rebel_spiral_crutch value = 1 }
+                }
+            }
+        }
+
 
         ai_chance = {
             factor = 50
@@ -2973,6 +3404,12 @@ country_event = {
         }
         set_global_flag = ming_has_happened_2
         RTR = {
+            capital = 1504
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            
             add_country_modifier = { name = fanatic_army duration = 1825 }
             define_general = {
                 name = "Chen Kai"
@@ -3130,6 +3567,12 @@ country_event = {
         }
         set_global_flag = ming_has_happened_2
         RTR = {
+            capital = 1504
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            
             add_country_modifier = { name = fanatic_army duration = 1825 }
             define_general = {
                 name = "Chen Kai"
@@ -5252,12 +5695,15 @@ country_event = {
     }
 }
 
-
-
 #RTR and TPG cores are removed by westernizing
 
+#################### EEM_China_debug.txt ####################
 #166510 Free reforms for uncivs that get stuck
+#166520 mini Taiping
+#166530 mini Red Turbans
 
+
+########################################
 #166600 Xinhai
 
 #166700 Trade Zones

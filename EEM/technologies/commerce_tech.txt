@@ -28,13 +28,6 @@ private_banks = {
             factor = 1.1
             literacy = 0.6
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 stock_exchange = {
@@ -65,13 +58,6 @@ stock_exchange = {
         modifier = {
             factor = 1.15
             literacy = 0.6
-        }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -108,13 +94,6 @@ business_banks = {
             factor = 10
             colonial_nation = yes
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 investment_banks = {
@@ -149,13 +128,6 @@ investment_banks = {
             factor = 20
             colonial_nation = yes
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 bank_inspection_board = {
@@ -186,13 +158,6 @@ bank_inspection_board = {
             factor = 1.05
             literacy = 0.6
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 mutual_funds = {
@@ -214,13 +179,6 @@ mutual_funds = {
         modifier = {
             factor = 1.02
             tech_school = commerce_tech_school
-        }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -246,13 +204,6 @@ financial_institutions_7 = {
             factor = 1.02
             tech_school = commerce_tech_school
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 
@@ -273,13 +224,6 @@ no_standard = {
         modifier = {
             factor = 1.02
             tech_school = commerce_tech_school
-        }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -311,13 +255,6 @@ ad_hoc_money_bill_printing = {
             factor = 1.02
             tech_school = commerce_tech_school
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 private_bank_money_bill_printing = {
@@ -339,13 +276,6 @@ private_bank_money_bill_printing = {
         modifier = {
             factor = 1.02
             tech_school = commerce_tech_school
-        }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -372,13 +302,6 @@ central_bank_money_bill_printing = {
         modifier = {
             factor = 30
             has_country_modifier = leader_of_kalmar
-        }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }
@@ -410,13 +333,6 @@ modern_central_bank_system = {
             factor = 3
             tech_school = commerce_tech_school
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 market_determined_exchange_rates = {
@@ -444,13 +360,6 @@ market_determined_exchange_rates = {
             factor = 0.25
             NOT = { literacy = 0.4 }
         }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
-        }
     }
 }
 monetary_system_7 = {
@@ -477,13 +386,6 @@ monetary_system_7 = {
         modifier = {
             factor = 0.25
             NOT = { literacy = 0.4 }
-        }
-        modifier = {
-            factor = 2
-            NOT = { money = 250000 }
-            is_vassal = no
-            is_substate = no
-            war = no
         }
     }
 }

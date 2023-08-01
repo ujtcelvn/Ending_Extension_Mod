@@ -55,7 +55,7 @@ piston_steam_engine = {
             tech_school = japanese_tech_school
         }
         modifier = {
-            factor = 1.5
+            factor = 2
             NOT = { money = 250000 }
             is_vassal = no
             is_substate = no

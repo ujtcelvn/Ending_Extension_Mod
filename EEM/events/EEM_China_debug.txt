@@ -377,3 +377,926 @@ country_event = {
         }
     }
 }
+
+
+#################### 166520: Mini Taiping ####################
+
+#Main Rebellion Event
+country_event = {
+    id = 166520
+    title = "EVTNAME160001" #The Taiping Rebellion - Mini
+    desc = "EVTDESC160001"
+    picture = "taiping_attack"
+    news = yes
+    news_desc_long = "EVTDESC160001_NEWS_LONG"
+    news_desc_medium = "EVTDESC160001_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC160001_NEWS_SHORT"
+    major = yes
+
+    trigger = {
+        tag = QNG
+        has_global_flag = ming_has_happened
+        NOT = { has_global_flag = taiping_has_happened_mini }
+        NOT = { has_global_flag = ming_has_been_defeated_mini }
+        NOT = { has_global_flag = taiping_has_been_prevented }
+        has_global_flag = hong
+        has_global_flag = yang
+        owns = 2221
+        RTR = { exists = yes }
+        OR = {
+            2221 = { average_militancy = 5 } #Nanjing
+            2221 = { controlled_by_rebels = yes } #Nanjing
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 0.2
+            war = yes
+        }
+    }
+
+    option = {
+        name = "EVT160001OPTA"
+        set_global_flag = taiping_has_happened
+        set_global_flag = taiping_has_happened_mini
+
+        any_owned = {
+            limit = {
+                is_core = TPG
+                not = { province_id = 1616 }
+				OR = {
+					region = CHI_2221 #South Jiangsu
+					region = CHI_1540 #North Jiangsu
+					region = CHI_1604 #Zhejiang
+					region = CHI_1470 #South Anhui
+					region = CHI_1477 #North Anhui
+				}
+            }
+            secede_province = TPG
+        }
+        capital = 1616
+
+        any_owned = {
+            limit = {
+                is_core = TPG
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_core = TPG
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
+        }
+        war = {
+            target = TPG
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = civil_war
+            }
+        }
+
+
+        TPG = {
+            capital = 2221
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+
+            add_country_modifier = { name = fanatic_army duration = 1825 }
+
+            define_general = {
+                name = "Li Xiucheng"
+                personality = stout
+                background = innovative_tactician
+            }
+
+            define_general = {
+                name = "Feng Yunshan"
+                personality = spirited
+                background = gifted_administrator
+            }
+
+            define_general = {
+                name = "Xiao Chaogui"
+                personality = deeply_religious
+                background = incompetent
+            }
+
+            define_general = {
+                name = "Shi Dakai"
+                personality = audacious
+                background = expert_raider
+            }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
+            }
+        }
+
+        random_owned = {
+            limit = { owner = { land_reform = yes_land_reform } }
+            TPG = { economic_reform = yes_land_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { admin_reform = yes_admin_reform } }
+            TPG = { economic_reform = yes_admin_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = yes_finance_reform } }
+            TPG = { economic_reform = yes_finance_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = finance_reform_two } }
+            TPG = { economic_reform = finance_reform_two }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = yes_monetary_reform } }
+            TPG = { economic_reform = yes_monetary_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = monetary_reform_two } }
+            TPG = { economic_reform = monetary_reform_two activate_technology = no_standard }
+        }
+
+        random_owned = {
+            limit = { owner = { education_reform = yes_education_reform } }
+            TPG = { economic_reform = yes_education_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { research_reform = yes_research_reform } }
+            TPG = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_training = yes_foreign_training } }
+            TPG = { military_reform = yes_foreign_training }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_weapons = yes_foreign_weapons } }
+            TPG = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_officers = yes_foreign_officers } }
+            TPG = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+        }
+
+        random_owned = {
+            limit = { owner = { army_schools = yes_army_schools } }
+            TPG = { military_reform = yes_army_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_naval_officers = yes_foreign_naval_officers } }
+            TPG = { military_reform = yes_foreign_naval_officers }
+        }
+
+        random_owned = {
+            limit = { owner = { naval_schools = yes_naval_schools } }
+            TPG = { military_reform = yes_naval_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_navies = yes_foreign_navies } }
+            TPG = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+        }
+
+        random_owned = {
+            limit = { owner = { western_shipyards = yes_western_shipyards } }
+            TPG = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_artillery = yes_foreign_artillery } }
+            TPG = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+        }
+
+        ai_chance = { factor = 100 }
+    }
+
+    option = {
+        name = "EVT160001OPTB"
+        set_global_flag = taiping_has_happened
+        set_global_flag = taiping_has_happened_mini
+
+        any_owned = {
+            limit = {
+                is_core = TPG
+                not = { province_id = 1616 }
+				OR = {
+					region = CHI_2221 #South Jiangsu
+					region = CHI_1540 #North Jiangsu
+					region = CHI_1604 #Zhejiang
+					region = CHI_1470 #South Anhui
+					region = CHI_1477 #North Anhui
+				}
+            }
+            secede_province = TPG
+        }
+        capital = 1616
+
+        any_owned = {
+            limit = {
+                is_core = TPG
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
+        }
+
+        any_owned = {
+            limit = {
+                is_core = TPG
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
+        }
+        war = {
+            target = TPG
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = civil_war
+            }
+        }
+
+
+        TPG = {
+            capital = 2221
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+
+            add_country_modifier = { name = fanatic_army duration = 1825 }
+
+            define_general = {
+                name = "Li Xiucheng"
+                personality = stout
+                background = innovative_tactician
+            }
+
+            define_general = {
+                name = "Feng Yunshan"
+                personality = spirited
+                background = gifted_administrator
+            }
+
+            define_general = {
+                name = "Xiao Chaogui"
+                personality = deeply_religious
+                background = incompetent
+            }
+
+            define_general = {
+                name = "Shi Dakai"
+                personality = audacious
+                background = expert_raider
+            }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
+            }
+        }
+
+        random_owned = {
+            limit = { owner = { land_reform = yes_land_reform } }
+            TPG = { economic_reform = yes_land_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { admin_reform = yes_admin_reform } }
+            TPG = { economic_reform = yes_admin_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = yes_finance_reform } }
+            TPG = { economic_reform = yes_finance_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { finance_reform = finance_reform_two } }
+            TPG = { economic_reform = finance_reform_two }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = yes_monetary_reform } }
+            TPG = { economic_reform = yes_monetary_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { monetary_reform = monetary_reform_two } }
+            TPG = { economic_reform = monetary_reform_two activate_technology = no_standard }
+        }
+
+        random_owned = {
+            limit = { owner = { education_reform = yes_education_reform } }
+            TPG = { economic_reform = yes_education_reform }
+        }
+
+        random_owned = {
+            limit = { owner = { research_reform = yes_research_reform } }
+            TPG = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_training = yes_foreign_training } }
+            TPG = { military_reform = yes_foreign_training }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_weapons = yes_foreign_weapons } }
+            TPG = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_officers = yes_foreign_officers } }
+            TPG = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+        }
+
+        random_owned = {
+            limit = { owner = { army_schools = yes_army_schools } }
+            TPG = { military_reform = yes_army_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_naval_officers = yes_foreign_naval_officers } }
+            TPG = { military_reform = yes_foreign_naval_officers }
+        }
+
+        random_owned = {
+            limit = { owner = { naval_schools = yes_naval_schools } }
+            TPG = { military_reform = yes_naval_schools }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_navies = yes_foreign_navies } }
+            TPG = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+        }
+
+        random_owned = {
+            limit = { owner = { western_shipyards = yes_western_shipyards } }
+            TPG = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+        }
+
+        random_owned = {
+            limit = { owner = { foreign_artillery = yes_foreign_artillery } }
+            TPG = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+        }
+        change_tag_no_core_switch = TPG
+
+        ai_chance = { factor = 0 }
+    }
+}
+
+
+
+#If the Taiping Rebellion is Defeated - Mini
+country_event = {
+    id = 166521
+    title = "EVTNAME160002" #Taiping Rebellion Defeated - Mini
+    desc = "EVTDESC160002"
+    picture = "taiping_defeated"
+
+    trigger = {
+        has_global_flag = taiping_has_happened_mini
+        tag = QNG
+        NOT = { exists = TPG }
+        NOT = { has_global_flag = taiping_has_been_defeated_mini }
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = "EVT160002OPTA"
+        set_global_flag = taiping_has_been_defeated_mini
+        prestige = 10
+        any_owned = {
+            limit = {
+                is_core = TPG
+                not = { province_id = 1616 }
+				OR = {
+					region = CHI_2221 #South Jiangsu
+					region = CHI_1540 #North Jiangsu
+					region = CHI_1604 #Zhejiang
+					region = CHI_1470 #South Anhui
+					region = CHI_1477 #North Anhui
+				}
+            }
+            any_pop = {
+                militancy = -6
+                reduce_pop = 0.90
+            }
+        }
+        TPG = { all_core = { remove_core = TPG } }
+    }
+}
+
+#################### 166530: Mini Red Turbans ####################
+
+
+#Main Rebellion Event
+country_event = {
+    id = 166530
+    title = "EVTNAME165200" #The Red Turban Rebellion - Mini
+    desc = "EVTDESC165200"
+    picture = "red_turban_attack"
+    news = yes
+    news_desc_long = "EVTDESC165200_NEWS_LONG"
+    news_desc_medium = "EVTDESC165200_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC165200_NEWS_SHORT"
+    major = yes
+
+    trigger = {
+        tag = QNG
+        has_global_flag = taiping_has_happened
+        NOT = { has_global_flag = ming_has_happened_mini }
+        NOT = { has_global_flag = ming_has_been_defeated_mini }
+        NOT = { has_global_flag = ming_has_been_prevented }
+        has_country_flag = ming_larpers
+        has_country_flag = tiandihui
+        has_country_flag = gelaohui
+        owns = 1504
+        TPG = { exists = yes }
+        OR = {
+            1504 = { average_militancy = 5 } #Pingle / Xiujing
+            1504 = { controlled_by_rebels = yes }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 60
+        modifier = {
+            factor = 0.2
+            war = yes
+        }
+    }
+
+    option = {
+        name = "EVTOPTA165200"
+
+        set_global_flag = ming_has_happened
+        set_global_flag = ming_has_happened_mini
+
+		any_owned = {
+			limit = {
+				is_core = RTR
+				NOT = { province_id = 1493 } #Canton
+				NOT = { province_id = 1616 }
+				OR = {
+					is_core = GNG		
+					is_core = GXI
+					region = CHI_1508 #Nian Rebellion
+					region = CHI_1510
+					region = CHI_1563
+					region = CHI_1565
+				}
+			}
+			secede_province = RTR
+		}
+        capital = 1616
+	
+
+        any_owned = {
+            limit = {
+                is_core = RTR
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
+        }
+        war = {
+            target = RTR
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = civil_war
+            }
+        }
+        RTR = {
+            capital = 1504
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            
+            add_country_modifier = { name = fanatic_army duration = 1825 }
+            define_general = {
+                name = "Chen Kai"
+                personality = charismatic
+                background = gifted_administrator
+            }
+            define_general = {
+                name = "Li Wenmao"
+                personality = diplomatic
+                background = gifted_administrator
+            }
+            define_general = {
+                name = "Huang Dingfeng"
+                personality = scared
+                background = spoiled
+            }
+            define_general = {
+                name = "Li Wencai"
+                personality = indifferent
+                background = old_school
+            }
+            define_general = {
+                name = "Li Jingui"
+                personality = audacious
+                background = expert_raider
+            }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
+            }
+            random_owned = {
+                limit = { QNG = { land_reform = yes_land_reform } }
+                RTR = { economic_reform = yes_land_reform }
+            }
+            random_owned = {
+                limit = { QNG = { admin_reform = yes_admin_reform } }
+                RTR = { economic_reform = yes_admin_reform }
+            }
+            random_owned = {
+                limit = { QNG = { finance_reform = yes_finance_reform } }
+                RTR = { economic_reform = yes_finance_reform }
+            }
+            random_owned = {
+                limit = { QNG = { finance_reform = finance_reform_two } }
+                RTR = { economic_reform = finance_reform_two }
+            }
+            random_owned = {
+                limit = { QNG = { monetary_reform = yes_monetary_reform } }
+                RTR = { economic_reform = yes_monetary_reform }
+            }
+            random_owned = {
+                limit = { QNG = { monetary_reform = monetary_reform_two } }
+                RTR = { economic_reform = monetary_reform_two activate_technology = no_standard }
+            }
+            random_owned = {
+                limit = { QNG = { education_reform = yes_education_reform } }
+                RTR = { economic_reform = yes_education_reform }
+            }
+            random_owned = {
+                limit = { QNG = { research_reform = yes_research_reform } }
+                RTR = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_training = yes_foreign_training } }
+                RTR = { military_reform = yes_foreign_training }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_weapons = yes_foreign_weapons } }
+                RTR = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_officers = yes_foreign_officers } }
+                RTR = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+            }
+            random_owned = {
+                limit = { QNG = { army_schools = yes_army_schools } }
+                RTR = { military_reform = yes_army_schools }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_naval_officers = yes_foreign_naval_officers } }
+                RTR = { military_reform = yes_foreign_naval_officers }
+            }
+            random_owned = {
+                limit = { QNG = { naval_schools = yes_naval_schools } }
+                RTR = { military_reform = yes_naval_schools }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_navies = yes_foreign_navies } }
+                RTR = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+            }
+            random_owned = {
+                limit = { QNG = { western_shipyards = yes_western_shipyards } }
+                RTR = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_artillery = yes_foreign_artillery } }
+                RTR = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+            }
+            government = theocracy
+            ruling_party_ideology = conservative
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            clr_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+            set_country_flag = theocratic_government
+            clr_country_flag = election_started
+            clr_country_flag = conservative_party_in_power
+            clr_country_flag = liberal_party_in_power
+            clr_country_flag = reactionary_party_in_power
+            clr_country_flag = socialist_party_in_power
+            clr_country_flag = communist_party_in_power
+            clr_country_flag = fascist_party_in_power
+            clr_country_flag = anarcho_liberal_party_in_power
+        }
+        ai_chance = { factor = 100 }
+    }
+
+
+    option = {
+        name = "EVTOPTB165200"
+
+        set_global_flag = ming_has_happened
+        set_global_flag = ming_has_happened_mini
+
+		any_owned = {
+			limit = {
+				is_core = RTR
+				NOT = { province_id = 1493 } #Canton
+				NOT = { province_id = 1616 }
+				OR = {
+					is_core = GNG		
+					is_core = GXI
+					region = CHI_1508 #Nian Rebellion
+					region = CHI_1510
+					region = CHI_1563
+					region = CHI_1565
+				}
+			}
+			secede_province = RTR
+		}
+        capital = 1616
+	
+
+        any_owned = {
+            limit = {
+                is_core = RTR
+            }
+            add_province_modifier = {
+                name = anti_manchu_sentiment
+                duration = 730
+            }
+        }
+        war = {
+            target = RTR
+            attacker_goal = {
+                casus_belli = civil_war
+            }
+            defender_goal = {
+                casus_belli = civil_war
+            }
+        }
+        RTR = {
+            capital = 1504
+            any_pop = {
+                consciousness = -5
+                militancy = -5
+            }
+            
+            add_country_modifier = { name = fanatic_army duration = 1825 }
+            define_general = {
+                name = "Chen Kai"
+                personality = charismatic
+                background = gifted_administrator
+            }
+            define_general = {
+                name = "Li Wenmao"
+                personality = diplomatic
+                background = gifted_administrator
+            }
+            define_general = {
+                name = "Huang Dingfeng"
+                personality = scared
+                background = spoiled
+            }
+            define_general = {
+                name = "Li Wencai"
+                personality = indifferent
+                background = old_school
+            }
+            define_general = {
+                name = "Li Jingui"
+                personality = audacious
+                background = expert_raider
+            }
+
+            any_owned = {
+                limit = { port = yes }
+                random = {
+                    chance = 75
+                    sub_unit = {
+                        type = frigate
+                        value = current
+                    }
+                }
+                random = {
+                    chance = 5
+                    sub_unit = {
+                        type = manowar
+                        value = current
+                    }
+                }
+            }
+            random_owned = {
+                limit = { QNG = { land_reform = yes_land_reform } }
+                RTR = { economic_reform = yes_land_reform }
+            }
+            random_owned = {
+                limit = { QNG = { admin_reform = yes_admin_reform } }
+                RTR = { economic_reform = yes_admin_reform }
+            }
+            random_owned = {
+                limit = { QNG = { finance_reform = yes_finance_reform } }
+                RTR = { economic_reform = yes_finance_reform }
+            }
+            random_owned = {
+                limit = { QNG = { finance_reform = finance_reform_two } }
+                RTR = { economic_reform = finance_reform_two }
+            }
+            random_owned = {
+                limit = { QNG = { monetary_reform = yes_monetary_reform } }
+                RTR = { economic_reform = yes_monetary_reform }
+            }
+            random_owned = {
+                limit = { QNG = { monetary_reform = monetary_reform_two } }
+                RTR = { economic_reform = monetary_reform_two activate_technology = no_standard }
+            }
+            random_owned = {
+                limit = { QNG = { education_reform = yes_education_reform } }
+                RTR = { economic_reform = yes_education_reform }
+            }
+            random_owned = {
+                limit = { QNG = { research_reform = yes_research_reform } }
+                RTR = { economic_reform = yes_research_reform activate_technology = late_enlightenment_philosophy }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_training = yes_foreign_training } }
+                RTR = { military_reform = yes_foreign_training }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_weapons = yes_foreign_weapons } }
+                RTR = { military_reform = yes_foreign_weapons activate_technology = flintlock_rifles }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_officers = yes_foreign_officers } }
+                RTR = { military_reform = yes_foreign_officers activate_technology = military_staff_system }
+            }
+            random_owned = {
+                limit = { QNG = { army_schools = yes_army_schools } }
+                RTR = { military_reform = yes_army_schools }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_naval_officers = yes_foreign_naval_officers } }
+                RTR = { military_reform = yes_foreign_naval_officers }
+            }
+            random_owned = {
+                limit = { QNG = { naval_schools = yes_naval_schools } }
+                RTR = { military_reform = yes_naval_schools }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_navies = yes_foreign_navies } }
+                RTR = { military_reform = yes_foreign_navies activate_technology = clipper_design activate_technology = steamers }
+            }
+            random_owned = {
+                limit = { QNG = { western_shipyards = yes_western_shipyards } }
+                RTR = { military_reform = yes_western_shipyards activate_technology = post_nelsonian_thought }
+            }
+            random_owned = {
+                limit = { QNG = { foreign_artillery = yes_foreign_artillery } }
+                RTR = { military_reform = yes_foreign_artillery activate_technology = bronze_muzzle_loaded_artillery }
+            }
+            government = theocracy
+            ruling_party_ideology = conservative
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            clr_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+            set_country_flag = theocratic_government
+            clr_country_flag = election_started
+            clr_country_flag = conservative_party_in_power
+            clr_country_flag = liberal_party_in_power
+            clr_country_flag = reactionary_party_in_power
+            clr_country_flag = socialist_party_in_power
+            clr_country_flag = communist_party_in_power
+            clr_country_flag = fascist_party_in_power
+            clr_country_flag = anarcho_liberal_party_in_power
+        }
+        change_tag_no_core_switch = RTR
+        ai_chance = { factor = 0 }
+    }
+}
+
+
+#If the Red Turban Rebellion is Defeated - Mini
+country_event = {
+    id = 166531
+    title = "EVTNAME165201" #Red Turban Rebellion Defeated - Mini
+    desc = "EVTDESC165201"
+    picture = "taiping_defeated"
+
+    trigger = {
+        has_global_flag = ming_has_happened_mini
+        tag = QNG
+        NOT = { exists = RTR }
+        NOT = { has_global_flag = ming_has_been_defeated_mini }
+    }
+
+    mean_time_to_happen = { days = 1 }
+
+    option = {
+        name = "EVTOPTA165201"
+        set_global_flag = ming_has_been_defeated_mini
+        prestige = 10
+        any_owned = {
+            limit = {
+				is_core = RTR
+				NOT = { province_id = 1493 } #Canton
+				NOT = { province_id = 1616 }
+				OR = {
+					is_core = GNG		
+					is_core = GXI
+					region = CHI_1508 #Nian Rebellion
+					region = CHI_1510
+					region = CHI_1563
+					region = CHI_1565
+				}
+			}
+            any_pop = {
+                militancy = -6
+                reduce_pop = 0.90
+            }
+        }
+        RTR = { all_core = { remove_core = RTR } }
+    }
+}

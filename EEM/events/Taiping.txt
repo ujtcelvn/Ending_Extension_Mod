@@ -560,6 +560,7 @@ country_event = {
         tag = QNG
         NOT = { exists = TPG }
         NOT = { has_global_flag = taiping_has_been_defeated }
+        NOT = { has_global_flag = taiping_has_been_defeated_mini }
     }
 
     mean_time_to_happen = { days = 1 }
