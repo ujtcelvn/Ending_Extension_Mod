@@ -827,6 +827,32 @@ early_transplanters = {
             factor = 2
             synthetic_polymers = 1
         }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = grain
+                unemployment_by_type = { value = 0.05 type = farmers }
+                province_control_days = 1825
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = grain
+                unemployment_by_type = { value = 0.01 type = farmers }
+            }
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = grain
+                unemployment_by_type = { value = 0.03 type = farmers }
+            }
+        }
+
     }
     effect = {
 		rgo_goods_output = {

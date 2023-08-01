@@ -248,3 +248,50 @@ rubber_n_plastic_additives = {
 #        factory_goods_output = { cement = 0.05 }
 #    }
 #}
+
+improved_shaft_mining = {
+    limit = {
+        mechanized_mining = 1
+    }
+    #news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = bessemer_steel #1860
+        }
+        modifier = {
+            factor = 2
+            invention = portland_cement
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = coal
+                unemployment_by_type = { value = 0.05 type = labourers }
+                province_control_days = 1825
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = coal
+                unemployment_by_type = { value = 0.01 type = labourers }
+            }
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = coal
+                unemployment_by_type = { value = 0.03 type = labourers }
+            }
+        }
+    }
+    effect = {
+        rgo_goods_output = { coal = 0.4 }
+        rgo_goods_output = { iron = 0.2 }
+    }
+}
