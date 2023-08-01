@@ -41,14 +41,12 @@ political_decisions = {
                 consciousness = 1
             }
             any_pop = {
-                limit = {
-                    NOT = { has_pop_culture = manchu }
-                }
-                militancy = -2
-                consciousness = -1
+                limit = { has_pop_culture = beifaren }
+                militancy = -4
+                consciousness = -2
             }
             any_pop = {
-                limit = { has_pop_culture = beifaren }
+                limit = { has_pop_culture = nanfaren }
                 militancy = -2
                 consciousness = -1
             }
