@@ -292,6 +292,92 @@ improved_shaft_mining = {
     }
     effect = {
         rgo_goods_output = { coal = 0.4 }
-        rgo_goods_output = { iron = 0.2 }
+        rgo_goods_output = { iron = 0.25 }
+    }
+}
+
+steam_powered_pumps = {
+    limit = {
+        high_pressure_steam_engine = 1
+    }
+    #news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            compound_steam_engines = 1
+        }
+        modifier = {
+            factor = 2
+            early_railroad = 1
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.05 type = labourers }
+                province_control_days = 1825
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.01 type = labourers }
+            }
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = iron
+                unemployment_by_type = { value = 0.03 type = labourers }
+            }
+        }
+    }
+    effect = {
+        rgo_goods_output = { coal = 0.25 }
+        rgo_goods_output = { iron = 0.25 }
+    }
+}
+
+pneumatic_drills_and_cutters = {
+    limit = {
+        pneumatic_and_hydraulics = 1
+    }
+    #news = no
+    chance = {
+        base = 6
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = coal
+                unemployment_by_type = { value = 0.05 type = labourers }
+                province_control_days = 1825
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = coal
+                unemployment_by_type = { value = 0.01 type = labourers }
+            }
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = coal
+                unemployment_by_type = { value = 0.03 type = labourers }
+            }
+        }
+    }
+    effect = {
+        rgo_goods_output = { coal = 0.25 }
+        rgo_goods_output = { iron = 0.25 }
     }
 }

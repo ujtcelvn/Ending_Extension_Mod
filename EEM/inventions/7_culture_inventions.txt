@@ -460,7 +460,7 @@ modern_intelligence_agency = {
         }
     }
     effect = { }
-    core_pop_consciousness_modifier = -0.02
+    core_pop_consciousness_modifier = -0.04 #-0.02
 }
 
 ##########################################psychology_7
@@ -575,7 +575,7 @@ engineering_consent = {
     }
     effect = {
     }
-    core_pop_consciousness_modifier = -0.05 #-0.03
+    core_pop_consciousness_modifier = -0.04 #-0.05 #-0.03
 }
 
 

@@ -345,12 +345,12 @@ hussey_n_mccormicks_reaping_machine = {
         rgo_goods_output = {
             grain = 0.15
         }
-        rgo_goods_output = {
-            fruit = 0.15
-        }
-        rgo_goods_output = {
-            tea = 0.1
-        }
+        #rgo_goods_output = {
+        #    fruit = 0.15
+        #}
+        #rgo_goods_output = {
+        #    tea = 0.1
+        #}
     }
 }
 pitts_threshing_machine = {
@@ -396,12 +396,12 @@ pitts_threshing_machine = {
         rgo_goods_output = {
             grain = 0.15
         }
-        rgo_goods_output = {
-            fruit = 0.15
-        }
-        rgo_goods_output = {
-            tea = 0.15
-        }
+        #rgo_goods_output = {
+        #    fruit = 0.15
+        #}
+        #rgo_goods_output = {
+        #    tea = 0.15
+        #}
     }
 }
 mechanized_slaughtering_block = {
@@ -948,9 +948,8 @@ coke = {
         }
     }
     effect = {
-        rgo_goods_output = {
-            coal = 0.5
-        }
+        rgo_goods_output = { coal = 0.5 }
+        rgo_goods_output = { iron = 0.25 } #0
     }
 }
 #Regenerative Furnaces
@@ -994,7 +993,7 @@ advanced_ore_roasting_processes = {
     }
     effect = {
         rgo_goods_output = {
-            iron = 0.4
+            iron = 0.5 #0.4
         }
     }
 }
@@ -1038,7 +1037,7 @@ advanced_ore_grinding_processes = {
     }
     effect = {
         rgo_goods_output = {
-            iron = 0.25
+            iron = 0.3 #0.25
         }
     }
 }
@@ -1082,7 +1081,7 @@ advanced_ore_smelting_processes = {
     }
     effect = {
         rgo_goods_output = {
-            iron = 0.25
+            iron = 0.3 #0.25
         }
     }
 }
@@ -1809,6 +1808,31 @@ rotherham_plough = {
     limit = { high_pressure_steam_engine = 1 }
     chance = {
         base = 6
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = grain
+                unemployment_by_type = { value = 0.05 type = farmers }
+                province_control_days = 1825
+            }
+        }
+        modifier = {
+            factor = -1
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = grain
+                unemployment_by_type = { value = 0.01 type = farmers }
+            }
+        }
+        modifier = {
+            factor = -2
+            any_owned_province = {
+                controlled_by = THIS
+                trade_goods = grain
+                unemployment_by_type = { value = 0.03 type = farmers }
+            }
+        }
     }
     effect = {
         rgo_goods_output = {

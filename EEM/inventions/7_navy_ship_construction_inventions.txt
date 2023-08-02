@@ -24,7 +24,7 @@ converted_hulk_air_carriers = {
         }
         modifier = {
             factor = 1
-            ship_construction_7 = 2
+            ship_construction_7 = 1
         }
         modifier = {
             factor = 1

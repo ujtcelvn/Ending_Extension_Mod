@@ -1668,26 +1668,31 @@ witwatersrand_gold_rush = {
 }
 
 ##### RGO Spread Events #####
+local_steam_and_shaft_mining = { #EEM
+    mine_RGO_eff = 0.5
+    icon = 13
+}
+
 local_tractors = {
     farm_RGO_eff = 0.5
     icon = 13
 }
 
 local_nitroglycerin_and_machine_tools = {
-    mine_RGO_eff = 1 #0.5
+    mine_RGO_eff = 1 #0.5 #net 0.5 because replaces local_steam_and_shaft_mining
     mine_RGO_size = 0.5
     icon = 13
 }
 
 local_conveyors_and_excavators = {
-    mine_RGO_eff = 1 #0.5
+    mine_RGO_eff = 0.5
     mine_RGO_size = 0.5
     icon = 13
 }
 
 local_distribution_channels_und_electricity = {
     farm_RGO_eff = 0.5
-    mine_RGO_eff = 1 #0.5
+    mine_RGO_eff = 0.5
     local_factory_throughput = 0.1
     #local_artisan_output = 0.05 #0
     icon = 11
@@ -1698,6 +1703,22 @@ local_distribution_channels_und_electricity = {
 #    local_factory_throughput = 0.05
 #    icon = 13
 #}
+
+local_intensive_agriculture = { #EEM
+    farm_RGO_eff = 0.5
+    icon = 13
+}
+
+local_modern_transportation = { #EEM
+    farm_RGO_eff = 0.1
+    mine_RGO_eff = 0.1
+    local_factory_throughput = 0.1
+    #local_artisan_output = 0.05
+    movement_cost = -0.05
+    immigrant_attract = 0.05
+    icon = 11
+}
+
 
 switched_production = {
     local_RGO_throughput = -0.05
@@ -2618,21 +2639,6 @@ emergency_tax_measures2 = {
 }
 
 ### EEM economy ###
-
-local_intensive_agriculture = {
-    farm_RGO_eff = 0.5
-    icon = 13
-}
-
-local_modern_transportation = {
-    farm_RGO_eff = 0.1
-    mine_RGO_eff = 0.1
-    local_factory_throughput = 0.1
-    #local_artisan_output = 0.05
-    movement_cost = -0.05
-    immigrant_attract = 0.05
-    icon = 11
-}
 
 #local_pollution_problem = {
 #    farm_RGO_eff = -0.2
