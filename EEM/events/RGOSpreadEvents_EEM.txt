@@ -1035,6 +1035,7 @@ province_event = {
         owner = {
             invention = steam_powered_pumps
             invention = improved_shaft_mining
+            invention = coke
             experimental_railroad = 1
         }
         NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
@@ -1045,14 +1046,14 @@ province_event = {
         OR = {
             trade_goods = coal
             trade_goods = iron
-            trade_goods = oil
-            trade_goods = precious_metal
-            trade_goods = sulphur
+            #trade_goods = oil
+            #trade_goods = precious_metal
+            #trade_goods = sulphur
         }
     }
 
     mean_time_to_happen = {
-        months = 120 #700
+        months = 60 #700
 
         modifier = {
             factor = 0.75
@@ -1180,9 +1181,9 @@ province_event = {
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
-                        trade_goods = oil
-                        trade_goods = precious_metal
-                        trade_goods = sulphur
+                        #trade_goods = oil
+                        #trade_goods = precious_metal
+                        #trade_goods = sulphur
                     }
                 }
                 add_province_modifier = { name = local_steam_and_shaft_mining duration = -1 }
@@ -1210,9 +1211,9 @@ province_event = {
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
-                        trade_goods = oil
-                        trade_goods = precious_metal
-                        trade_goods = sulphur
+                        #trade_goods = oil
+                        #trade_goods = precious_metal
+                        #trade_goods = sulphur
                     }
                 }
                 state_scope = {
@@ -1221,9 +1222,9 @@ province_event = {
                             OR = {
                                 trade_goods = coal
                                 trade_goods = iron
-                                trade_goods = oil
-                                trade_goods = precious_metal
-                                trade_goods = sulphur
+                                #trade_goods = oil
+                                #trade_goods = precious_metal
+                                #trade_goods = sulphur
                             }
                         }
                         add_province_modifier = { name = local_steam_and_shaft_mining duration = -1 }
@@ -1254,9 +1255,9 @@ province_event = {
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
-                        trade_goods = oil
-                        trade_goods = precious_metal
-                        trade_goods = sulphur
+                        #trade_goods = oil
+                        #trade_goods = precious_metal
+                        #trade_goods = sulphur
                     }
                 }
             }
@@ -1280,9 +1281,9 @@ province_event = {
                             OR = {
                                 trade_goods = coal
                                 trade_goods = iron
-                                trade_goods = oil
-                                trade_goods = precious_metal
-                                trade_goods = sulphur
+                                #trade_goods = oil
+                                #trade_goods = precious_metal
+                                #trade_goods = sulphur
                             }
                         }
                     }
@@ -1292,9 +1293,9 @@ province_event = {
                                 OR = {
                                     trade_goods = coal
                                     trade_goods = iron
-                                    trade_goods = oil
-                                    trade_goods = precious_metal
-                                    trade_goods = sulphur
+                                    #trade_goods = oil
+                                    #trade_goods = precious_metal
+                                    #trade_goods = sulphur
                                 }
                             }
                         add_province_modifier = { name = local_steam_and_shaft_mining duration = -1 }
@@ -1326,9 +1327,9 @@ province_event = {
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
-                        trade_goods = oil
-                        trade_goods = precious_metal
-                        trade_goods = sulphur
+                        #trade_goods = oil
+                        #trade_goods = precious_metal
+                        #trade_goods = sulphur
                     }
                 }
             }
@@ -1352,9 +1353,9 @@ province_event = {
                             OR = {
                                 trade_goods = coal
                                 trade_goods = iron
-                                trade_goods = oil
-                                trade_goods = precious_metal
-                                trade_goods = sulphur
+                                #trade_goods = oil
+                                #trade_goods = precious_metal
+                                #trade_goods = sulphur
                             }
                         }
                     }
@@ -1365,9 +1366,9 @@ province_event = {
                                 OR = {
                                     trade_goods = coal
                                     trade_goods = iron
-                                    trade_goods = oil
-                                    trade_goods = precious_metal
-                                    trade_goods = sulphur
+                                    #trade_goods = oil
+                                    #trade_goods = precious_metal
+                                    #trade_goods = sulphur
                                 }
                             }
                         add_province_modifier = { name = local_steam_and_shaft_mining duration = -1 }
@@ -1399,9 +1400,9 @@ province_event = {
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
-                        trade_goods = oil
-                        trade_goods = precious_metal
-                        trade_goods = sulphur
+                        #trade_goods = oil
+                        #trade_goods = precious_metal
+                        #trade_goods = sulphur
                     }
                 }
             }
@@ -1425,9 +1426,9 @@ province_event = {
                             OR = {
                                 trade_goods = coal
                                 trade_goods = iron
-                                trade_goods = oil
-                                trade_goods = precious_metal
-                                trade_goods = sulphur
+                                #trade_goods = oil
+                                #trade_goods = precious_metal
+                                #trade_goods = sulphur
                             }
                         }
                     }
@@ -1438,9 +1439,9 @@ province_event = {
                                 OR = {
                                     trade_goods = coal
                                     trade_goods = iron
-                                    trade_goods = oil
-                                    trade_goods = precious_metal
-                                    trade_goods = sulphur
+                                    #trade_goods = oil
+                                    #trade_goods = precious_metal
+                                    #trade_goods = sulphur
                                 }
                             }
                         add_province_modifier = { name = local_steam_and_shaft_mining duration = -1 }
@@ -1472,9 +1473,9 @@ province_event = {
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
-                        trade_goods = oil
-                        trade_goods = precious_metal
-                        trade_goods = sulphur
+                        #trade_goods = oil
+                        #trade_goods = precious_metal
+                        #trade_goods = sulphur
                     }
                 }
             }
@@ -1498,9 +1499,9 @@ province_event = {
                             OR = {
                                 trade_goods = coal
                                 trade_goods = iron
-                                trade_goods = oil
-                                trade_goods = precious_metal
-                                trade_goods = sulphur
+                                #trade_goods = oil
+                                #trade_goods = precious_metal
+                                #trade_goods = sulphur
                             }
                         }
                     }
@@ -1511,9 +1512,9 @@ province_event = {
                                 OR = {
                                     trade_goods = coal
                                     trade_goods = iron
-                                    trade_goods = oil
-                                    trade_goods = precious_metal
-                                    trade_goods = sulphur
+                                    #trade_goods = oil
+                                    #trade_goods = precious_metal
+                                    #trade_goods = sulphur
                                 }
                             }
                         add_province_modifier = { name = local_steam_and_shaft_mining duration = -1 }
