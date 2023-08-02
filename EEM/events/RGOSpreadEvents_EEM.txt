@@ -1035,7 +1035,7 @@ province_event = {
         owner = {
             invention = steam_powered_pumps
             invention = improved_shaft_mining
-            early_railroad = 1
+            experimental_railroad = 1
         }
         NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }
         NOT = {
@@ -1052,7 +1052,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 700
+        months = 120 #700
 
         modifier = {
             factor = 0.75
