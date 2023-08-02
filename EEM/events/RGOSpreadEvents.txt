@@ -793,6 +793,7 @@ province_event = {
                     }
                 }
                 add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
+                remove_province_modifier = local_steam_and_shaft_mining
             }
         }
 
@@ -834,6 +835,7 @@ province_event = {
                             }
                         }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
+                        remove_province_modifier = local_steam_and_shaft_mining
                     }
                 }
             }
@@ -905,6 +907,7 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
+                        remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -978,6 +981,7 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
+                        remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -1051,6 +1055,7 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
+                        remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -1124,6 +1129,7 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
+                        remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }

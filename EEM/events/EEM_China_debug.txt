@@ -415,6 +415,10 @@ country_event = {
             factor = 0.2
             war = yes
         }
+        modifier = {
+            factor = 0.2
+            2221 = { controlled_by_rebels = yes }
+        }
     }
 
     option = {
@@ -881,6 +885,10 @@ country_event = {
         modifier = {
             factor = 0.2
             war = yes
+        }
+        modifier = {
+            factor = 0.2
+            1504 = { controlled_by_rebels = yes }
         }
     }
 
