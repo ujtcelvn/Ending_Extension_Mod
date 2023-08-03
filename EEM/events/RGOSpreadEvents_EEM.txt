@@ -1178,6 +1178,7 @@ province_event = {
         state_scope = {
             any_owned = {
                 limit = {
+                    NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
                     OR = {
                         trade_goods = coal
                         trade_goods = iron
@@ -1200,6 +1201,7 @@ province_event = {
                     any_neighbor_province = { has_province_modifier = local_steam_and_shaft_mining }
                     NOT = {
                         has_province_modifier = local_steam_and_shaft_mining
+                        has_province_modifier = local_nitroglycerin_and_machine_tools
                         is_overseas = yes
                         is_colonial = yes
                         unemployment_by_type = { value = 0.03 type = labourers }
@@ -1219,6 +1221,7 @@ province_event = {
                 state_scope = {
                     any_owned = {
                         limit = {
+                            NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
                             OR = {
                                 trade_goods = coal
                                 trade_goods = iron
@@ -1240,6 +1243,7 @@ province_event = {
                 any_owned_province = {
                     NOT = {
                         has_province_modifier = local_steam_and_shaft_mining
+                        has_province_modifier = local_nitroglycerin_and_machine_tools
                         unemployment_by_type = { value = 0.03 type = labourers }
                     }
                     state_scope = {
@@ -1274,6 +1278,7 @@ province_event = {
                         any_owned_province = {
                             NOT = {
                                 has_province_modifier = local_steam_and_shaft_mining
+                                has_province_modifier = local_nitroglycerin_and_machine_tools
                                 is_overseas = yes
                                 is_colonial = yes
                                 unemployment_by_type = { value = 0.03 type = labourers }
@@ -1290,6 +1295,7 @@ province_event = {
                     state_scope = {
                         any_owned = {
                             limit = {
+                                NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
                                 OR = {
                                     trade_goods = coal
                                     trade_goods = iron
@@ -1312,6 +1318,7 @@ province_event = {
                 any_owned_province = {
                     NOT = {
                         has_province_modifier = local_steam_and_shaft_mining
+                        has_province_modifier = local_nitroglycerin_and_machine_tools
                         unemployment_by_type = { value = 0.03 type = labourers }
                     }
                     state_scope = {
@@ -1346,6 +1353,7 @@ province_event = {
                         any_owned_province = {
                             NOT = {
                                 has_province_modifier = local_steam_and_shaft_mining
+                                has_province_modifier = local_nitroglycerin_and_machine_tools
                                 is_overseas = yes
                                 is_colonial = yes
                                 unemployment_by_type = { value = 0.03 type = labourers }
@@ -1363,6 +1371,7 @@ province_event = {
                         any_owned = {
                             limit = {
                                 NOT = { has_province_modifier = treaty_port }
+                                NOT = { has_province_modifier = local_nitroglycerin_and_machine_tools }
                                 OR = {
                                     trade_goods = coal
                                     trade_goods = iron
