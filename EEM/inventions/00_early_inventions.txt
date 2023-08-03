@@ -343,41 +343,4 @@ steam_powered_pumps = {
     }
 }
 
-pneumatic_drills_and_cutters = {
-    limit = {
-        pneumatic_and_hydraulics = 1
-    }
-    #news = no
-    chance = {
-        base = 6
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = coal
-                unemployment_by_type = { value = 0.05 type = labourers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = coal
-                unemployment_by_type = { value = 0.01 type = labourers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = coal
-                unemployment_by_type = { value = 0.03 type = labourers }
-            }
-        }
-    }
-    effect = {
-        rgo_goods_output = { coal = 0.25 }
-        rgo_goods_output = { iron = 0.25 }
-    }
-}
+#pneumatic_drills_and_cutters #already covered by pneumatic drills invention!

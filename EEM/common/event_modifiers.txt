@@ -1678,8 +1678,8 @@ local_tractors = {
     icon = 13
 }
 
-local_nitroglycerin_and_machine_tools = {
-    mine_RGO_eff = 1 #0.5 #net 0.5 because replaces local_steam_and_shaft_mining
+local_nitroglycerin_and_machine_tools = { #replaces local_steam_and_shaft_mining
+    mine_RGO_eff = 0.5
     mine_RGO_size = 0.5
     icon = 13
 }
