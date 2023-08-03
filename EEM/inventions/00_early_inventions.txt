@@ -292,7 +292,7 @@ improved_shaft_mining = {
     }
     effect = {
         rgo_goods_output = { coal = 0.4 }
-        rgo_goods_output = { iron = 0.25 }
+        rgo_goods_output = { iron = 0.4 }
     }
 }
 

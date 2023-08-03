@@ -403,18 +403,18 @@ country_event = {
         has_global_flag = yang
         owns = 2221
         RTR = { exists = yes }
-        OR = {
-            2221 = { average_militancy = 5 } #Nanjing
-            2221 = { controlled_by_rebels = yes } #Nanjing
-        }
+        #OR = {
+        #    2221 = { average_militancy = 5 } #Nanjing
+        #    2221 = { controlled_by_rebels = yes } #Nanjing
+        #}
     }
 
     mean_time_to_happen = {
         months = 60
-        modifier = {
-            factor = 0.2
-            war = yes
-        }
+        #modifier = {
+        #    factor = 0.2
+        #    war = yes
+        #}
         modifier = {
             factor = 0.2
             2221 = { controlled_by_rebels = yes }
@@ -874,18 +874,18 @@ country_event = {
         has_country_flag = gelaohui
         owns = 1504
         TPG = { exists = yes }
-        OR = {
-            1504 = { average_militancy = 5 } #Pingle / Xiujing
-            1504 = { controlled_by_rebels = yes }
-        }
+        #OR = {
+        #    1504 = { average_militancy = 5 } #Pingle / Xiujing
+        #    1504 = { controlled_by_rebels = yes }
+        #}
     }
 
     mean_time_to_happen = {
         months = 60
-        modifier = {
-            factor = 0.2
-            war = yes
-        }
+        #modifier = {
+        #    factor = 0.2
+        #    war = yes
+        #}
         modifier = {
             factor = 0.2
             1504 = { controlled_by_rebels = yes }

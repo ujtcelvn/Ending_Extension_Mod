@@ -1035,7 +1035,6 @@ province_event = {
         owner = {
             invention = steam_powered_pumps
             invention = improved_shaft_mining
-            invention = coke
             experimental_railroad = 1
         }
         NOT = { state_scope = { any_owned_province = { NOT = { controlled_by = THIS } } } }

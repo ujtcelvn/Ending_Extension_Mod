@@ -258,7 +258,7 @@ neocolonialism_doctrine = {
 ###Mining and Metallurgy
 pattinson_process = {
     limit = {
-        mechanized_mining = 1
+        hot_blast = 1 #mechanized_mining = 1
     }
     #news = no
     chance = {
@@ -412,7 +412,7 @@ electrolytic_refining = {
         }
     }
     effect = {
-        rgo_goods_output = { iron = 0.4 } #0.3
+        rgo_goods_output = { iron = 0.3 }
     }
 }
 
