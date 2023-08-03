@@ -1052,7 +1052,7 @@ province_event = {
     }
 
     mean_time_to_happen = {
-        months = 60 #700
+        months = 70 #700
 
         modifier = {
             factor = 0.75
@@ -1090,11 +1090,11 @@ province_event = {
             literacy = 0.6
         }
         modifier = {
-            factor = 1.5
+            factor = 3 #1.5
             NOT = { literacy = 0.5 }
         }
         modifier = {
-            factor = 3
+            factor = 6 #3
             NOT = { literacy = 0.25 }
         }
         modifier = {
@@ -1157,17 +1157,17 @@ province_event = {
         }
 
         modifier = {
-            factor = 2
+            factor = 4 #2
             state_scope = { has_pop_type = serfs }
         }
 
         modifier = {
-            factor = 8
+            factor = 16 #8
             state_scope = { is_colonial = yes}
         }
 
         modifier = {
-            factor = 4
+            factor = 8 #4
             is_overseas = yes
         }
     }
