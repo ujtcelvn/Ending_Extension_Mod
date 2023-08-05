@@ -342,15 +342,9 @@ hussey_n_mccormicks_reaping_machine = {
 
     }
     effect = {
-        rgo_goods_output = {
-            grain = 0.15
-        }
-        #rgo_goods_output = {
-        #    fruit = 0.15
-        #}
-        #rgo_goods_output = {
-        #    tea = 0.1
-        #}
+        rgo_goods_output = { grain = 0.1 } #0.15
+        rgo_goods_output = { fruit = 0.1 } #0.15
+        rgo_goods_output = { tea = 0.1 }
     }
 }
 pitts_threshing_machine = {
@@ -393,15 +387,9 @@ pitts_threshing_machine = {
 
     }
     effect = {
-        rgo_goods_output = {
-            grain = 0.15
-        }
-        #rgo_goods_output = {
-        #    fruit = 0.15
-        #}
-        #rgo_goods_output = {
-        #    tea = 0.15
-        #}
+        rgo_goods_output = { grain = 0.1 } #0.15
+        rgo_goods_output = { fruit = 0.1 } #0.15
+        rgo_goods_output = { tea = 0.15 }
     }
 }
 mechanized_slaughtering_block = {
@@ -1597,7 +1585,7 @@ carbon_soil_enrichment = {
         rgo_goods_output = { grain = 0.05 }
         rgo_goods_output = { opium = 0.05 }
         rgo_goods_output = { cattle = 0.05 }
-        rgo_goods_output = { fruit = 0.05 }
+        rgo_goods_output = { fruit = 0.05 } 
     }
 }
 cracking = {
@@ -1792,15 +1780,9 @@ tulls_seed_drill = {
         }
     }
     effect = {
-        rgo_goods_output = {
-            grain = 0.1
-        }
-        rgo_goods_output = {
-            fruit = 0.1
-        }
-        rgo_goods_output = {
-            coffee = 0.1
-        }
+        rgo_goods_output = { grain = 0.1 }
+        rgo_goods_output = { fruit = 0.1 }
+        rgo_goods_output = { coffee = 0.1 }
     }
 }
 
@@ -1836,7 +1818,7 @@ rotherham_plough = {
     }
     effect = {
         rgo_goods_output = {
-            grain = 0.15
+            grain = 0.1 #0.15
         }
     }
 }

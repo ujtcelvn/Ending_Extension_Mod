@@ -197,7 +197,7 @@ artificial_herbicides = {
     }
     effect = {
         #factory_goods_output = { fertilizer = 0.05 }
-        rgo_goods_output = { grain = 0.2 }
+        rgo_goods_output = { grain = 0.15 } #0.2
     }
 }
 

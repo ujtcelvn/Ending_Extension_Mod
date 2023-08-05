@@ -416,7 +416,7 @@ country_event = {
         #    war = yes
         #}
         modifier = {
-            factor = 0.2
+            factor = 0.01
             2221 = { controlled_by_rebels = yes }
         }
     }
@@ -432,7 +432,7 @@ country_event = {
                 not = { province_id = 1616 }
 				OR = {
 					region = CHI_2221 #South Jiangsu
-					region = CHI_1540 #North Jiangsu
+					#region = CHI_1540 #North Jiangsu
 					region = CHI_1604 #Zhejiang
 					region = CHI_1470 #South Anhui
 					region = CHI_1477 #North Anhui
@@ -623,7 +623,7 @@ country_event = {
                 not = { province_id = 1616 }
 				OR = {
 					region = CHI_2221 #South Jiangsu
-					region = CHI_1540 #North Jiangsu
+					#region = CHI_1540 #North Jiangsu
 					region = CHI_1604 #Zhejiang
 					region = CHI_1470 #South Anhui
 					region = CHI_1477 #North Anhui
@@ -833,7 +833,7 @@ country_event = {
                 not = { province_id = 1616 }
 				OR = {
 					region = CHI_2221 #South Jiangsu
-					region = CHI_1540 #North Jiangsu
+					#region = CHI_1540 #North Jiangsu
 					region = CHI_1604 #Zhejiang
 					region = CHI_1470 #South Anhui
 					region = CHI_1477 #North Anhui
@@ -887,7 +887,7 @@ country_event = {
         #    war = yes
         #}
         modifier = {
-            factor = 0.2
+            factor = 0.01
             1504 = { controlled_by_rebels = yes }
         }
     }

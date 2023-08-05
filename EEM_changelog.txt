@@ -1,50 +1,102 @@
-Tech Unlock Dates		number of inventions (10 + 100 = 110)
+Tech Unlock Dates		number of inventions (12 + 100 = 112)
 1930 15
 1936 10
 
-1936 army doctrine					 5
-1936 light armament					 3
-1936 heavy armament					 5
-1936 military science				 7
-1936 army leadership				 6
+1936 army doctrine				 5
+1936 light armament				 3
+1936 heavy armament				 5
+1936 military science			 7
+1936 army leadership			 6
 
 army = 26
 
-1936 naval doctrine					 3
-1930 ship construction				 4		1919 oil_driven_ships		3
-1930 naval engineering				 9      1919 modern_naval_design    2
-1936 naval science					 3
-1936 naval leadership				 3
+1936 naval doctrine				 3
+1930 ship construction			 4	1919 oil_driven_ships	3
+1930 naval engineering			 9	1919 modern_naval_d...	2
+1936 naval science				 3
+1936 naval leadership			 3
 
 navy = 22 + 5
 
-1930 aesthetics						 5
-1930 philosphy						 4
-1930 social thought					 3
-1936 political thought				 4
-1930 psychology						 1
+1930 aesthetics					 5
+1930 philosphy					 4
+1930 social thought				 3
+1936 political thought			 4
+1930 psychology					 1
 
 culture = 17
 
-1930 financial institutions			 1
-1930 monetary system				 2
-1930 economic thought and critique	 6
-1930 market functionality			 3
-1930 organisation					 3
+1930 financial institutions		 1
+1930 monetary system			 2
+1930 economic thought n critique 6
+1930 market functionality		 3
+1930 organisation				 3
 
 commerce = 15
 
-1930 power							 5
-1930 mechanization					 3      
-1930 metallurgy						 4		1905 electric_furnace		1 	1850 regenerative_furnaces 1
-1930 infrastructure					 0
-1936 chemistry and electricity		 8		1900 synthetic_polymers		2	1850 organic_chemistry 1
+1930 power						 5	1836 piston_steam_en...	1
+1930 mechanization				 3
+1930 metallurgy					 4	1905 electric_furnace	1 	1850 regenerative_f... 1	1840 mechanized_mining 1
+1930 infrastructure				 0
+1936 chemistry and electricity	 8	1900 synthetic_polymers	2	1850 organic_chemistry 1
 
-industry = 20 + 4
+industry = 20 + 7
+####################################################################################################
+
+#TODO: let the Taiping rebel from the Red Turbans
+#TODO: let the Sanhehui blob into Lanfang and Singapore
+
+#TODO: make the Xinhai Rebellion dynamic again
+#TODO: make the warlord era dynamic again
+
+#TODO: make sure the country flag existing_country actually gives and removes the flag from every country properly!
+#TODO: monitors
+
+#TODO: AI no longer adds dismantle constructions cb because they should blob instead.
+####################################################################################################
+v0.5.8o
+
+square_set_timbering increases iron (0->0.2)
+electrolytic_refining stays at 0.3
+advanced_ore_roasting_processes stays at 0.4
+advanced_ore_grinding_processes increases iron (0.25->0.3)
+advanced_ore_smelting_processes increases iron (0.25->0.3)
+pattinson_process stays at 0.1, moved from Mechanized Mining to Hot Blast 
+	it was invented in 1829 and patented in 1833 and needed "nothing more complex than a row of up to 13 iron pots, which were heated from below." https://en.wikipedia.org/wiki/Pattinson%27s_Process
+parkes_process stays at 0.1
+coke now increases iron (0->0.3)... it's in the localization!
+improved_hydraulic_drills now increases oil by (0.5->0.75)
+Added an improved_shaft_mining invention
+added a steam_powered_pumps invention
+
+new province modifier: local_steam_and_shaft_mining (Industrialized Mining)
+local_nitroglycerin_and_machine_tools stays at 0.5, replaces local_steam_and_shaft_mining
+local_conveyors_and_excavators stays at 0.5
+local_distribution_channels_und_electricity stays at 0.5
+
+made most grain (and fishing boat) inventions check for unemployment because grain production is ahistorically high
+made all the checks -2/-1/-2 for consistency (some were -3/-1/-1 for some reason)
+hussey_n_mccormicks_reaping_machine 0.15->0.1, once again increases fruit and tea productio
+pitts_threshing_machine 0.15->0.1, once again increases fruit and tea production
+rotherham_plough 0.15->0.1
+artificial_herbicides 0.2->0.15
+
+both engineering_consent and modern_intelligence_agency now reduce consciousness by 0.04
+
+sped up the Tiandihui event
+clearing out the manchu elite now only reduces north and south han militancy
+the Taiping and Red Turban rebellions may now BOTH fire, like they did in real life, if the other rebellion is still active and local militancy >5 or Nanjing / Pingle is captured by rebels. The 
+    if TPG first, RTR is limited to Guangdong and Guangxi and the Yellow River Flood Zone
+	if RTR first, TPG is limited to Jiangsu and neighbors
+The effects of the Sanhehui Coup now match that of a normal anarcho-liberal rebellion
+The Nanking massacre no longer happens if Japan signed the Geneva Convention
+Expanded a bunch of China localizations
+adjust AI tech weights again
+fixed some typos
 
 
 ####################################################################################################
-v0.5.8n #118 Naval adjustments
+v0.5.8n
 Monitors no longer use fuel, instead, they just use oil. Monitors were always coal-powered, even the latest newest monitors built by the USA - the Arkansas-class monitors - in 1902-1903 were all purely coal powered as well. Oil-firing only became a thing in the 1900s. However, monitors did use oil lubricants, so the oil requirement is kept:  https://www.marinersmuseum.org/2022/02/uss-monitor-oil-reservoirs/
 
 scripted AI Japan and several daimyo to make them take the western shipyard reform if commodore perry's expedition is successful
@@ -76,7 +128,6 @@ adjusted AI research, unciv AI reform behavior, and AI naval weights
 added a crutch to reduce AI rebel spirals
 fixed some other stuff
 
-####################################################################################################
 v0.5.8m
 Uncivs whose capital has slavery now always spread slavery
 Arkansas no longer bans slavery when it becomes a state
