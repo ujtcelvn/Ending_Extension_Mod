@@ -58,6 +58,7 @@ country_event = {
         CSA = {
             set_country_flag = unreleasable_country
             set_country_flag = exempt_from_vassal_contribution
+            set_country_flag = slavery_protected
             add_country_modifier = {
                 name = slavery_protected
                 duration = 14600

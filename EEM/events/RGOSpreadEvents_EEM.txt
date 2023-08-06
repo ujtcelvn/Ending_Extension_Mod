@@ -31,14 +31,15 @@ province_event = {
             terrain = new_world_mountain
         }
         OR = {
-            trade_goods = tobacco
-            trade_goods = tea
-            trade_goods = coffee
-            trade_goods = grain
-            trade_goods = opium
-            trade_goods = cotton
-            trade_goods = fruit
-            trade_goods = fish
+            #trade_goods = tobacco
+            #trade_goods = tea
+            #trade_goods = coffee
+            #trade_goods = grain
+            #trade_goods = opium
+            #trade_goods = cotton
+            #trade_goods = fruit
+            #trade_goods = fish
+            has_province_modifier = local_tractors
             trade_goods = cattle
             trade_goods = wool
         }
@@ -186,19 +187,13 @@ province_event = {
                         terrain = new_world_mountain
                     }
                     OR = {
-                        trade_goods = tobacco
-                        trade_goods = tea
-                        trade_goods = coffee
-                        trade_goods = grain
-                        trade_goods = opium
-                        trade_goods = cotton
-                        trade_goods = fruit
-                        trade_goods = fish
+                        has_province_modifier = local_tractors
                         trade_goods = cattle
                         trade_goods = wool
                     }
                 }
                 add_province_modifier = { name = local_intensive_agriculture  duration = -1 }
+                remove_province_modifier = local_tractors
             }
         }
 
@@ -236,14 +231,7 @@ province_event = {
                         terrain = new_world_mountain
                     }
                     OR = {
-                        trade_goods = tobacco
-                        trade_goods = tea
-                        trade_goods = coffee
-                        trade_goods = grain
-                        trade_goods = opium
-                        trade_goods = cotton
-                        trade_goods = fruit
-                        trade_goods = fish
+                        has_province_modifier = local_tractors
                         trade_goods = cattle
                         trade_goods = wool
                     }
@@ -265,19 +253,13 @@ province_event = {
                                 terrain = new_world_mountain
                             }
                             OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
+                                has_province_modifier = local_tractors
                                 trade_goods = cattle
                                 trade_goods = wool
                             }
                         }
                         add_province_modifier = { name = local_intensive_agriculture  duration = -1 }
+                        remove_province_modifier = local_tractors
                     }
                 }
             }
@@ -317,14 +299,7 @@ province_event = {
                         terrain = new_world_mountain
                     }
                     OR = {
-                        trade_goods = tobacco
-                        trade_goods = tea
-                        trade_goods = coffee
-                        trade_goods = grain
-                        trade_goods = opium
-                        trade_goods = cotton
-                        trade_goods = fruit
-                        trade_goods = fish
+                        has_province_modifier = local_tractors
                         trade_goods = cattle
                         trade_goods = wool
                     }
@@ -361,14 +336,7 @@ province_event = {
                                 terrain = new_world_mountain
                             }
                             OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
+                                has_province_modifier = local_tractors
                                 trade_goods = cattle
                                 trade_goods = wool
                             }
@@ -376,34 +344,28 @@ province_event = {
                     }
                     state_scope = {
                         any_owned = {
-                        limit = {
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
+                            limit = {
+                                OR = {
+                                    terrain = plains
+                                    terrain = steppe
+                                    terrain = savanna
+                                    terrain = forest
+                                    terrain = hills
+                                    terrain = dryhills
+                                    terrain = farmlands
+                                    terrain = mountain
+                                    terrain = urban
+                                    terrain = new_world_plains
+                                    terrain = new_world_mountain
+                                }
+                                OR = {
+                                    has_province_modifier = local_tractors
+                                    trade_goods = cattle
+                                    trade_goods = wool
+                                }
                             }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                                trade_goods = cattle
-                                trade_goods = wool
-                            }
-                        }
-                        add_province_modifier = { name = local_intensive_agriculture duration = -1 }
+                            add_province_modifier = { name = local_intensive_agriculture duration = -1 }
+                            remove_province_modifier = local_tractors
                         }
                     }
                 }
@@ -443,14 +405,7 @@ province_event = {
                         terrain = new_world_mountain
                     }
                     OR = {
-                        trade_goods = tobacco
-                        trade_goods = tea
-                        trade_goods = coffee
-                        trade_goods = grain
-                        trade_goods = opium
-                        trade_goods = cotton
-                        trade_goods = fruit
-                        trade_goods = fish
+                        has_province_modifier = local_tractors
                         trade_goods = cattle
                         trade_goods = wool
                     }
@@ -487,14 +442,7 @@ province_event = {
                                 terrain = new_world_mountain
                             }
                             OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
+                                has_province_modifier = local_tractors
                                 trade_goods = cattle
                                 trade_goods = wool
                             }
@@ -502,34 +450,28 @@ province_event = {
                     }
                     state_scope = {
                         any_owned = {
-                        limit = {
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
+                            limit = {
+                                OR = {
+                                    terrain = plains
+                                    terrain = steppe
+                                    terrain = savanna
+                                    terrain = forest
+                                    terrain = hills
+                                    terrain = dryhills
+                                    terrain = farmlands
+                                    terrain = mountain
+                                    terrain = urban
+                                    terrain = new_world_plains
+                                    terrain = new_world_mountain
+                                }
+                                OR = {
+                                    has_province_modifier = local_tractors
+                                    trade_goods = cattle
+                                    trade_goods = wool
+                                }
                             }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                                trade_goods = cattle
-                                trade_goods = wool
-                            }
-                        }
-                        add_province_modifier = { name = local_intensive_agriculture  duration = -1 }
+                            add_province_modifier = { name = local_intensive_agriculture  duration = -1 }
+                            remove_province_modifier = local_tractors
                         }
                     }
                 }
@@ -569,14 +511,7 @@ province_event = {
                         terrain = new_world_mountain
                     }
                     OR = {
-                        trade_goods = tobacco
-                        trade_goods = tea
-                        trade_goods = coffee
-                        trade_goods = grain
-                        trade_goods = opium
-                        trade_goods = cotton
-                        trade_goods = fruit
-                        trade_goods = fish
+                        has_province_modifier = local_tractors
                         trade_goods = cattle
                         trade_goods = wool
                     }
@@ -613,14 +548,7 @@ province_event = {
                                 terrain = new_world_mountain
                             }
                             OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
+                                has_province_modifier = local_tractors
                                 trade_goods = cattle
                                 trade_goods = wool
                             }
@@ -628,34 +556,28 @@ province_event = {
                     }
                     state_scope = {
                         any_owned = {
-                        limit = {
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
+                            limit = {
+                                OR = {
+                                    terrain = plains
+                                    terrain = steppe
+                                    terrain = savanna
+                                    terrain = forest
+                                    terrain = hills
+                                    terrain = dryhills
+                                    terrain = farmlands
+                                    terrain = mountain
+                                    terrain = urban
+                                    terrain = new_world_plains
+                                    terrain = new_world_mountain
+                                }
+                                OR = {
+                                    has_province_modifier = local_tractors
+                                    trade_goods = cattle
+                                    trade_goods = wool
+                                }
                             }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                                trade_goods = cattle
-                                trade_goods = wool
-                            }
-                        }
-                        add_province_modifier = { name = local_intensive_agriculture duration = -1 }
+                            add_province_modifier = { name = local_intensive_agriculture duration = -1 }
+                            remove_province_modifier = local_tractors
                         }
                     }
                 }
@@ -676,7 +598,7 @@ province_event = {
         owner = {
             invention = airliner 
             invention = fordism
-			iron_steamers = 1
+            iron_steamers = 1
             tech_infrastructure_7 = 1
         }
         NOT = {
@@ -1067,7 +989,7 @@ province_event = {
         modifier = {
             factor = 0.75
             any_pop = {
-                type = aristocrats #used to be farmers
+                type = aristocrats
                 cash_reserves = 200
                 location = { NOT = { is_overseas = yes } }
             }
@@ -1090,11 +1012,11 @@ province_event = {
             literacy = 0.6
         }
         modifier = {
-            factor = 3 #1.5
+            factor = 1.5
             NOT = { literacy = 0.5 }
         }
         modifier = {
-            factor = 6 #3
+            factor = 3
             NOT = { literacy = 0.25 }
         }
         modifier = {
@@ -1157,17 +1079,17 @@ province_event = {
         }
 
         modifier = {
-            factor = 4 #2
+            factor = 6 #2
             state_scope = { has_pop_type = serfs }
         }
 
         modifier = {
-            factor = 16 #8
+            factor = 24 #8
             state_scope = { is_colonial = yes}
         }
 
         modifier = {
-            factor = 8 #4
+            factor = 12 #4
             is_overseas = yes
         }
     }

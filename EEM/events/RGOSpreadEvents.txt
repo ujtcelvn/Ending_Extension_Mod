@@ -7,6 +7,7 @@ province_event = {
     trigger = {
         owner = { invention = tractors }
         NOT = { has_province_modifier = local_tractors }
+        NOT = { has_province_modifier = local_intensive_agriculture }
         NOT = {
             state_scope = { is_slave = yes }
             unemployment_by_type = { value = 0.03 type = farmers }
@@ -41,7 +42,10 @@ province_event = {
 
         modifier = {
             factor = 0.75
-            any_neighbor_province = { has_province_modifier = local_tractors }
+            OR = {
+                any_neighbor_province = { has_province_modifier = local_tractors }
+                any_neighbor_province = { has_province_modifier = local_intensive_agriculture }
+            }
         }
 
         modifier = {
@@ -187,6 +191,7 @@ province_event = {
                         trade_goods = fruit
                         trade_goods = fish
                     }
+                    NOT = { has_province_modifier = local_intensive_agriculture }
                 }
                 add_province_modifier = { name = local_tractors duration = -1 }
             }
@@ -200,11 +205,15 @@ province_event = {
                         literacy = 0.7
                     }
                     any_neighbor_province = {
-                        has_province_modifier = local_tractors
+                        OR = { 
+                            has_province_modifier = local_tractors
+                            has_province_modifier = local_intensive_agriculture
+                        }
                         unemployment_by_type = { value = 0.03 type = farmers }
                     }
                     NOT = {
                         has_province_modifier = local_tractors
+                        has_province_modifier = local_intensive_agriculture
                         is_overseas = yes
                         is_colonial = yes
                         state_scope = {
@@ -277,6 +286,7 @@ province_event = {
                 any_owned_province = {
                     NOT = {
                         has_province_modifier = local_tractors
+                        has_province_modifier = local_intensive_agriculture
                         unemployment_by_type = { value = 0.03 type = farmers }
                     }
                     NOT = {
@@ -329,6 +339,7 @@ province_event = {
                                 is_overseas = yes
                                 is_colonial = yes
                                 has_province_modifier = local_tractors
+                                has_province_modifier = local_intensive_agriculture
                                 unemployment_by_type = { value = 0.03 type = farmers }
                             }
                             OR = {
@@ -358,32 +369,33 @@ province_event = {
                     }
                     state_scope = {
                         any_owned = {
-                        limit = {
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
+                            limit = {
+                                OR = {
+                                    terrain = plains
+                                    terrain = steppe
+                                    terrain = savanna
+                                    terrain = forest
+                                    terrain = hills
+                                    terrain = dryhills
+                                    terrain = farmlands
+                                    terrain = mountain
+                                    terrain = urban
+                                    terrain = new_world_plains
+                                    terrain = new_world_mountain
+                                }
+                                OR = {
+                                    trade_goods = tobacco
+                                    trade_goods = tea
+                                    trade_goods = coffee
+                                    trade_goods = grain
+                                    trade_goods = opium
+                                    trade_goods = cotton
+                                    trade_goods = fruit
+                                    trade_goods = fish
+                                }
+                                NOT = { has_province_modifier = local_intensive_agriculture }
                             }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                            }
-                        }
-                        add_province_modifier = { name = local_tractors duration = -1 }
+                            add_province_modifier = { name = local_tractors duration = -1 }
                         }
                     }
                 }
@@ -397,6 +409,7 @@ province_event = {
                 any_owned_province = {
                     NOT = {
                         has_province_modifier = local_tractors
+                        has_province_modifier = local_intensive_agriculture
                         unemployment_by_type = { value = 0.03 type = farmers }
                     }
                     NOT = {
@@ -449,6 +462,7 @@ province_event = {
                                 is_overseas = yes
                                 is_colonial = yes
                                 has_province_modifier = local_tractors
+                                has_province_modifier = local_intensive_agriculture
                                 unemployment_by_type = { value = 0.03 type = farmers }
                             }
                             OR = {
@@ -478,32 +492,33 @@ province_event = {
                     }
                     state_scope = {
                         any_owned = {
-                        limit = {
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
+                            limit = {
+                                OR = {
+                                    terrain = plains
+                                    terrain = steppe
+                                    terrain = savanna
+                                    terrain = forest
+                                    terrain = hills
+                                    terrain = dryhills
+                                    terrain = farmlands
+                                    terrain = mountain
+                                    terrain = urban
+                                    terrain = new_world_plains
+                                    terrain = new_world_mountain
+                                }
+                                OR = {
+                                    trade_goods = tobacco
+                                    trade_goods = tea
+                                    trade_goods = coffee
+                                    trade_goods = grain
+                                    trade_goods = opium
+                                    trade_goods = cotton
+                                    trade_goods = fruit
+                                    trade_goods = fish
+                                }
+                                NOT = { has_province_modifier = local_intensive_agriculture }
                             }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                            }
-                        }
-                        add_province_modifier = { name = local_tractors duration = -1 }
+                            add_province_modifier = { name = local_tractors duration = -1 }
                         }
                     }
                 }
@@ -517,6 +532,7 @@ province_event = {
                 any_owned_province = {
                     NOT = {
                         has_province_modifier = local_tractors
+                        has_province_modifier = local_intensive_agriculture
                         unemployment_by_type = { value = 0.03 type = farmers }
                     }
                     NOT = {
@@ -569,6 +585,7 @@ province_event = {
                                 is_overseas = yes
                                 is_colonial = yes
                                 has_province_modifier = local_tractors
+                                has_province_modifier = local_intensive_agriculture
                                 unemployment_by_type = { value = 0.03 type = farmers }
                             }
                             OR = {
@@ -598,32 +615,33 @@ province_event = {
                     }
                     state_scope = {
                         any_owned = {
-                        limit = {
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
+                            limit = {
+                                OR = {
+                                    terrain = plains
+                                    terrain = steppe
+                                    terrain = savanna
+                                    terrain = forest
+                                    terrain = hills
+                                    terrain = dryhills
+                                    terrain = farmlands
+                                    terrain = mountain
+                                    terrain = urban
+                                    terrain = new_world_plains
+                                    terrain = new_world_mountain
+                                }
+                                OR = {
+                                    trade_goods = tobacco
+                                    trade_goods = tea
+                                    trade_goods = coffee
+                                    trade_goods = grain
+                                    trade_goods = opium
+                                    trade_goods = cotton
+                                    trade_goods = fruit
+                                    trade_goods = fish
+                                }
+                                NOT = { has_province_modifier = local_intensive_agriculture }
                             }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                            }
-                        }
-                        add_province_modifier = { name = local_tractors duration = -1 }
+                            add_province_modifier = { name = local_tractors duration = -1 }
                         }
                     }
                 }

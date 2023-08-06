@@ -232,7 +232,10 @@ political_reforms = {
                     NOT = { has_country_flag = the_slavery_debate }
                     year = 1875
                 }
-                NOT = { has_country_modifier = slavery_protected }
+                OR = {
+                    NOT = { has_country_flag = slavery_protected }
+                    year = 1900
+                }
             }
         }
 
@@ -245,7 +248,10 @@ political_reforms = {
                     NOT = { has_country_flag = the_slavery_debate }
                     year = 1875
                 }
-                NOT = { has_country_modifier = slavery_protected }
+                OR = {
+                    NOT = { has_country_flag = slavery_protected }
+                    year = 1900
+                }
             }
         }
     }

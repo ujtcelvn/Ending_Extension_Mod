@@ -1457,6 +1457,7 @@ the_slavery_debate = {
 
 slavery_protected = {
     non_accepted_pop_consciousness_modifier = 0.05
+    core_pop_consciousness_modifier = -0.01
     icon = 4
 }
 
@@ -1705,8 +1706,8 @@ local_distribution_channels_und_electricity = {
 #    icon = 13
 #}
 
-local_intensive_agriculture = { #EEM
-    farm_RGO_eff = 0.5
+local_intensive_agriculture = { #EEM, replaces local_tractors
+    farm_RGO_eff = 1 #0.5
     icon = 13
 }
 
