@@ -1669,11 +1669,11 @@ witwatersrand_gold_rush = {
 }
 
 ##### RGO Spread Events #####
-local_steam_and_shaft_mining = { #EEM
-    mine_RGO_eff = 0.25
-    mine_RGO_size = 0.25
-    icon = 13
-}
+#local_steam_and_shaft_mining = { #EEM
+#    mine_RGO_eff = 0.25
+#    mine_RGO_size = 0.25
+#    icon = 13
+#}
 
 local_tractors = {
     farm_RGO_eff = 0.5
