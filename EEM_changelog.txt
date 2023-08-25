@@ -42,17 +42,33 @@ commerce = 15
 
 industry = 20 + 7
 ####################################################################################################
+v0.5.8p
 
-#TODO: let the Taiping rebel from the Red Turbans
-#TODO: let the Sanhehui blob into Lanfang and Singapore
+reduce the iron buffs a bit - there's too much iron unemployment sometimes
+	reduced improved_shaft_mining iron from 0.4 to 0.25
+	increased improved_shaft_mining coal from 0.4 to 0.5
+	reduced coke iron from 0.3 to 0.25
+	reduced square_set_timbering iron from 0.2 to 0.1
 
-#TODO: make the Xinhai Rebellion dynamic again
-#TODO: make the warlord era dynamic again
+there massive late game farm RGO unemployment in late game - there is often 3x grain per capita by 1936 game but in real life, grain per capita only doubles every 100 years before 1960s. Now, grain per capita in game only increases by ~2.5x
+	returned the grain inventions back to HPM values and remove the grain unemployment gating
+	returned artificial_herbicides back to 0.2 grain
+	disabled local intensive agriculture - The Green Revolution only hit in the 1960s with improved plant breeding techniques.
+	reduced all power techs' farm_rgo_eff from 0.2 to 0.1
+	Added new province modifier: local_reapers_und_soil_enrichment unlocked by carbon_soil_enrichment and hussey_n_mccormicks_reaping_machine. It is unreasonable that heavy machinery like reapers and advanced artifical fertilizers can spread into some backwater colony immediately after it is invented. This modifier DOES spread into slave states, unlike tractors.
+	Tractors now only spread to provinces that already have local_reapers_und_soil_enrichment - mechanization is a slow process!
 
-#TODO: make sure the country flag existing_country actually gives and removes the flag from every country properly!
-#TODO: monitors
+disabled local modern transportation - make it apply in like infrastruture tier 8. The Interstate Highway System began right around the current end date, in 1956. (The Autobahn began in 1935 though)???
 
-#TODO: AI no longer adds dismantle constructions cb because they should blob instead.
+change consciousness effect of manufacturing consent from -0.04 back to -0.05
+
+New World War immigration debuff returned to -1.3
+
+removed local_steam_and_shaft_mining because now there's too much coal and iron
+local intensive agriculture now only appears on provinces that already has local tractors (or makes cattle or wool). Intensive agriculture appearing in a place without tractors makes no sense anyways.
+local_tractors no longer appears on provinces that already have local_intensive_agriculture
+Fixed CSA banning slavery too early
+
 ####################################################################################################
 v0.5.8o
 

@@ -168,36 +168,10 @@ artificial_herbicides = {
             factor = 2
             invention = improved_antibiotics
         }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
-
     }
     effect = {
         #factory_goods_output = { fertilizer = 0.05 }
-        rgo_goods_output = { grain = 0.15 } #0.2
+        rgo_goods_output = { grain = 0.2 } #0.2
     }
 }
 

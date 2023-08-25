@@ -84,32 +84,6 @@ tractors = {
             factor = 2
             economic_policy = laissez_faire
         }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
-
     }
     effect = {
         rgo_goods_output = { cotton = 0.03 }
@@ -314,36 +288,10 @@ hussey_n_mccormicks_reaping_machine = {
             factor = 2
             invention = work_specialization
         }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
-
     }
     effect = {
-        rgo_goods_output = { grain = 0.1 } #0.15
-        rgo_goods_output = { fruit = 0.1 } #0.15
+        rgo_goods_output = { grain = 0.15 }
+        rgo_goods_output = { fruit = 0.15 }
         rgo_goods_output = { tea = 0.1 }
     }
 }
@@ -359,36 +307,10 @@ pitts_threshing_machine = {
             factor = 2
             high_pressure_steam_engine = 1
         }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
-
     }
     effect = {
-        rgo_goods_output = { grain = 0.1 } #0.15
-        rgo_goods_output = { fruit = 0.1 } #0.15
+        rgo_goods_output = { grain = 0.15 }
+        rgo_goods_output = { fruit = 0.15 }
         rgo_goods_output = { tea = 0.15 }
     }
 }
@@ -937,7 +859,7 @@ coke = {
     }
     effect = {
         rgo_goods_output = { coal = 0.5 }
-        rgo_goods_output = { iron = 0.3 } #0
+        rgo_goods_output = { iron = 0.25 } #0
     }
 }
 #Regenerative Furnaces
@@ -1388,34 +1310,9 @@ artificial_fertilizers = {
             factor = 2
             invention = hussey_n_mccormicks_reaping_machine
         }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
     }
     effect = {
-		 rgo_goods_output = { tobacco = 0.25 }
+        rgo_goods_output = { tobacco = 0.25 }
         rgo_goods_output = { coffee = 0.25 }
 		rgo_goods_output = { tea = 0.25 }
         rgo_goods_output = { cotton = 0.02 }
@@ -1550,32 +1447,6 @@ carbon_soil_enrichment = {
             factor = 2
             invention = capital_for_investors
         }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
-
     }
     effect = {
         rgo_goods_output = { tobacco = 0.25 }
@@ -1753,31 +1624,6 @@ tulls_seed_drill = {
     limit = { piston_steam_engine = 1 }
     chance = {
         base = 6
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
     }
     effect = {
         rgo_goods_output = { grain = 0.1 }
@@ -1790,35 +1636,10 @@ rotherham_plough = {
     limit = { high_pressure_steam_engine = 1 }
     chance = {
         base = 6
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.05 type = farmers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.01 type = farmers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = grain
-                unemployment_by_type = { value = 0.03 type = farmers }
-            }
-        }
     }
     effect = {
         rgo_goods_output = {
-            grain = 0.1 #0.15
+            grain = 0.15
         }
     }
 }

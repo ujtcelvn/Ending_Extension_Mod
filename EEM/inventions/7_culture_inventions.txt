@@ -575,7 +575,7 @@ engineering_consent = {
     }
     effect = {
     }
-    core_pop_consciousness_modifier = -0.04 #-0.05 #-0.03
+    core_pop_consciousness_modifier = -0.05 #-0.04 #-0.03
 }
 
 

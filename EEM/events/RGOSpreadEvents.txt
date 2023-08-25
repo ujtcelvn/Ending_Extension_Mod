@@ -35,6 +35,7 @@ province_event = {
             trade_goods = fruit
             trade_goods = fish
         }
+        has_province_modifier = local_reapers_und_soil_enrichment
     }
 
     mean_time_to_happen = {
@@ -42,12 +43,13 @@ province_event = {
 
         modifier = {
             factor = 0.75
-            OR = {
-                any_neighbor_province = { has_province_modifier = local_tractors }
-                any_neighbor_province = { has_province_modifier = local_intensive_agriculture }
+            any_neighbor_province = {
+                OR = {
+                    has_province_modifier = local_tractors 
+                    has_province_modifier = local_intensive_agriculture
+                }
             }
         }
-
         modifier = {
             factor = 0.75
             any_pop = {
@@ -56,19 +58,16 @@ province_event = {
                 location = { NOT = { is_overseas = yes } }
             }
         }
-
         modifier = {
             factor = 0.7
             is_capital = yes
             NOT = { is_colonial = yes }
         }
-
         modifier = {
             factor = 0.8
             terrain = farmlands
             NOT = { is_colonial = yes }
         }
-
         modifier = {
             factor = 0.9
             literacy = 0.9
@@ -93,7 +92,6 @@ province_event = {
             factor = 3
             NOT = { literacy = 0.25 }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 30 } }
@@ -106,57 +104,50 @@ province_event = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 20 } }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 15 } }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 10 } }
         }
-
+        modifier = {
+            factor = 0.95
+            owner = { NOT = { num_of_cities = 5 } }
+        }
         modifier = {
             factor = 0.95
             average_consciousness = 6
         }
-
         modifier = {
             factor = 0.95
             average_consciousness = 7
         }
-
         modifier = {
             factor = 0.95
             average_consciousness = 8
         }
-
         modifier = {
             factor = 1.1
             average_militancy = 5
         }
-
         modifier = {
             factor = 1.2
             average_militancy = 6
         }
-
         modifier = {
             factor = 1.3
             average_militancy = 7
         }
-
         modifier = {
             factor = 8
             state_scope = { is_colonial = yes }
         }
-
         modifier = {
             factor = 2
             state_scope = { has_pop_type = serfs }
         }
-
         modifier = {
             factor = 4
             is_overseas = yes
@@ -191,9 +182,11 @@ province_event = {
                         trade_goods = fruit
                         trade_goods = fish
                     }
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = { has_province_modifier = local_intensive_agriculture }
                 }
                 add_province_modifier = { name = local_tractors duration = -1 }
+                remove_province_modifier = local_reapers_und_soil_enrichment
             }
         }
 
@@ -209,8 +202,9 @@ province_event = {
                             has_province_modifier = local_tractors
                             has_province_modifier = local_intensive_agriculture
                         }
-                        unemployment_by_type = { value = 0.03 type = farmers }
+                        NOT = { unemployment_by_type = { value = 0.03 type = farmers } }
                     }
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -271,8 +265,11 @@ province_event = {
                                 trade_goods = fruit
                                 trade_goods = fish
                             }
+                            has_province_modifier = local_reapers_und_soil_enrichment
+                            NOT = { has_province_modifier = local_intensive_agriculture }
                         }
                         add_province_modifier = { name = local_tractors duration = -1 }
+                        remove_province_modifier = local_reapers_und_soil_enrichment
                     }
                 }
             }
@@ -284,6 +281,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 20
                 any_owned_province = {
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -335,6 +333,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -393,9 +392,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
@@ -407,6 +408,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 30
                 any_owned_province = {
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -458,6 +460,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -516,9 +519,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
@@ -530,6 +535,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 40
                 any_owned_province = {
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -581,6 +587,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -639,9 +646,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
@@ -683,12 +692,10 @@ province_event = {
             factor = 0.75
             any_neighbor_province = { has_province_modifier = local_nitroglycerin_and_machine_tools }
         }
-
         modifier = {
             factor = 0.7
             is_capital = yes
         }
-
         modifier = {
             factor = 0.75
             any_pop = {
@@ -697,7 +704,6 @@ province_event = {
                 location = { NOT = { is_overseas = yes } }
             }
         }
-
         modifier = {
             factor = 0.9
             literacy = 0.9
@@ -730,67 +736,54 @@ province_event = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 25 } }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 20 } }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 15 } }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 10 } }
         }
-
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 5 } }
         }
-
         modifier = {
             factor = 0.95
             average_consciousness = 6
         }
-
         modifier = {
             factor = 0.95
             average_consciousness = 7
         }
-
         modifier = {
             factor = 0.95
             average_consciousness = 8
         }
-
         modifier = {
             factor = 1.1
             average_militancy = 5
         }
-
         modifier = {
             factor = 1.2
             average_militancy = 6
         }
-
         modifier = {
             factor = 1.3
             average_militancy = 7
         }
-
         modifier = {
             factor = 2
             state_scope = { has_pop_type = serfs }
         }
-
         modifier = {
             factor = 8
             state_scope = { is_colonial = yes}
         }
-
         modifier = {
             factor = 4
             is_overseas = yes
@@ -811,7 +804,6 @@ province_event = {
                     }
                 }
                 add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
-                #remove_province_modifier = local_steam_and_shaft_mining
             }
         }
 
@@ -853,7 +845,6 @@ province_event = {
                             }
                         }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
-                        #remove_province_modifier = local_steam_and_shaft_mining
                     }
                 }
             }
@@ -925,7 +916,6 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
-                        #remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -999,7 +989,6 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
-                        #remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -1073,7 +1062,6 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
-                        #remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -1147,7 +1135,6 @@ province_event = {
                                 }
                             }
                         add_province_modifier = { name = local_nitroglycerin_and_machine_tools duration = -1 }
-                        #remove_province_modifier = local_steam_and_shaft_mining
                         }
                     }
                 }
@@ -1468,8 +1455,8 @@ province_event = {
                 number_of_states = 40
                 any_owned_province = {
                     NOT = { has_province_modifier = local_distribution_channels_und_electricity }
-                    unemployment_by_type = { value = 0.03 type = labourers }
-                    unemployment_by_type = { value = 0.03 type = farmers }
+                    NOT = { unemployment_by_type = { value = 0.03 type = labourers } }
+                    NOT = { unemployment_by_type = { value = 0.03 type = farmers } }
                     NOT = {
                         state_scope = {
                             is_slave = yes

@@ -162,7 +162,7 @@ magnetic_separation = {
     }
     effect = {
         rgo_goods_output = { iron = 0.20 }
-        rgo_goods_output = { coal = 0.05 } #0.05
+        rgo_goods_output = { coal = 0.05 }
     }
 }
 
@@ -291,8 +291,8 @@ improved_shaft_mining = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.4 }
-        rgo_goods_output = { iron = 0.4 }
+        rgo_goods_output = { coal = 0.5 } #0.4
+        rgo_goods_output = { iron = 0.25 } #0.4
     }
 }
 
