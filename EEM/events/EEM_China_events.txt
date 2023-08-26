@@ -286,12 +286,18 @@ country_event = {
             which = ming_provinces
             value = 0
         }
-        1504 = {
-            any_pop = {
-                limit = { is_primary_culture = no }
-                militancy = 3
-                consciousness = 2
-            }
+        #1504 = {
+        #    any_pop = {
+        #        limit = { is_primary_culture = no }
+        #        militancy = 3
+        #        consciousness = 2
+        #    }
+        #}
+        GXI = { all_core = { add_core = RTR } }
+        GNG = { all_core = { add_core = RTR } }
+        change_variable = {
+            which = ming_provinces
+            value = 3
         }
     }
 }
@@ -342,11 +348,21 @@ country_event = {
     option = {
         name = "EVTOPTA165101"
         set_country_flag = tiandihui
-        GXI = { all_core = { add_core = RTR } }
-        GNG = { all_core = { add_core = RTR } }
-        change_variable = {
-            which = ming_provinces
-            value = 3
+        #GXI = { all_core = { add_core = RTR } }
+        #GNG = { all_core = { add_core = RTR } }
+        #change_variable = {
+        #    which = ming_provinces
+        #    value = 3
+        #}
+        any_owned = {
+            limit = {
+                is_core = RTR
+            }
+            any_pop = {
+                limit = { is_primary_culture = no }
+                militancy = 3
+                consciousness = 2
+            }
         }
     }
 }
