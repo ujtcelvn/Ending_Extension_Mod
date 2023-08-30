@@ -435,7 +435,7 @@ country_event = {
 					#region = CHI_1540 #North Jiangsu
 					region = CHI_1604 #Zhejiang
 					region = CHI_1470 #South Anhui
-					region = CHI_1477 #North Anhui
+					#region = CHI_1477 #North Anhui
 				}
             }
             secede_province = TPG
@@ -626,7 +626,7 @@ country_event = {
 					#region = CHI_1540 #North Jiangsu
 					region = CHI_1604 #Zhejiang
 					region = CHI_1470 #South Anhui
-					region = CHI_1477 #North Anhui
+					#region = CHI_1477 #North Anhui
 				}
             }
             secede_province = TPG
@@ -836,7 +836,7 @@ country_event = {
 					#region = CHI_1540 #North Jiangsu
 					region = CHI_1604 #Zhejiang
 					region = CHI_1470 #South Anhui
-					region = CHI_1477 #North Anhui
+					#region = CHI_1477 #North Anhui
 				}
             }
             any_pop = {
@@ -901,15 +901,16 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = RTR
-				NOT = { province_id = 1493 } #Canton
+				#NOT = { province_id = 1493 } #Canton
+				NOT = { region = CHI_1493 } #East Canton
 				NOT = { province_id = 1616 }
 				OR = {
 					is_core = GNG		
 					is_core = GXI
-					region = CHI_1508 #Nian Rebellion
-					region = CHI_1510
-					region = CHI_1563
-					region = CHI_1565
+					#region = CHI_1508 #Nian Rebellion
+					#region = CHI_1510
+					#region = CHI_1563
+					#region = CHI_1565
 				}
 			}
 			secede_province = RTR
@@ -1087,15 +1088,16 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = RTR
-				NOT = { province_id = 1493 } #Canton
+				#NOT = { province_id = 1493 } #Canton
+				NOT = { region = CHI_1493 } #East Canton
 				NOT = { province_id = 1616 }
 				OR = {
 					is_core = GNG		
 					is_core = GXI
-					region = CHI_1508 #Nian Rebellion
-					region = CHI_1510
-					region = CHI_1563
-					region = CHI_1565
+					#region = CHI_1508 #Nian Rebellion
+					#region = CHI_1510
+					#region = CHI_1563
+					#region = CHI_1565
 				}
 			}
 			secede_province = RTR
@@ -1289,15 +1291,16 @@ country_event = {
         any_owned = {
             limit = {
 				is_core = RTR
-				NOT = { province_id = 1493 } #Canton
+				#NOT = { province_id = 1493 } #Canton
+				NOT = { region = CHI_1493 } #East Canton
 				NOT = { province_id = 1616 }
 				OR = {
 					is_core = GNG		
 					is_core = GXI
-					region = CHI_1508 #Nian Rebellion
-					region = CHI_1510
-					region = CHI_1563
-					region = CHI_1565
+					#region = CHI_1508 #Nian Rebellion
+					#region = CHI_1510
+					#region = CHI_1563
+					#region = CHI_1565
 				}
 			}
             any_pop = {

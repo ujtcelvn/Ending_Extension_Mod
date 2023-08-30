@@ -100,7 +100,7 @@ jan_tinbergen = {
     }
     news = no
     chance = {
-        base = 3
+        base = 2
         modifier = {
             factor = 2
             invention = ragnar_frisch

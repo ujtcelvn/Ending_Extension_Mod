@@ -23,9 +23,9 @@ lubrication_oil = {
     }
     effect = {
         factory_goods_output = { machine_parts = 0.01 } #0.02
-        rgo_goods_output = { coal = 0.2 } #0.05
+        rgo_goods_output = { coal = 0.1 } #0.2 #0.05
         rgo_goods_output = { iron = 0.1 } #0.05
-        rgo_goods_output = { sulphur = 0.05 }
+        rgo_goods_output = { sulphur = 0.1 } #0.05
     }
 }
 
@@ -122,49 +122,49 @@ haber_process = {
 #In the 1900s, high intensity magnetic separation was inaugurated which allowed the separation of pragmatic materials.[3] 
 #After the Second World War, systems that were the most common were electromagnets. The technique was used in scrap yards. 
 #Magnetic separation was developed again in the late 1970s with new technologies being inaugurated.[2] The new forms of magnetic separation included magnetic pulleys, overhead magnets and magnetic drums. 
-magnetic_separation = {
-    limit = { regenerative_furnaces = 1 }
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = electrical_lighting #electromagnet
-        }
-        modifier = {
-            factor = 2
-            assembly_line = 1 #1870
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = iron
-                unemployment_by_type = { value = 0.05 type = labourers }
-                province_control_days = 1825
-            }
-       }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = iron
-                unemployment_by_type = { value = 0.01 type = labourers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = iron
-                unemployment_by_type = { value = 0.03 type = labourers }
-            }
-        }
-    }
-    effect = {
-        rgo_goods_output = { iron = 0.20 }
-        rgo_goods_output = { coal = 0.05 }
-    }
-}
+#magnetic_separation = {
+#    limit = { regenerative_furnaces = 1 }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = electrical_lighting #electromagnet
+#        }
+#        modifier = {
+#            factor = 2
+#            assembly_line = 1 #1870
+#        }
+#        modifier = {
+#            factor = -2
+#            any_owned_province = {
+#                controlled_by = THIS
+#                trade_goods = iron
+#                unemployment_by_type = { value = 0.05 type = labourers }
+#                province_control_days = 1825
+#            }
+#       }
+#        modifier = {
+#            factor = -1
+#            any_owned_province = {
+#                controlled_by = THIS
+#                trade_goods = iron
+#                unemployment_by_type = { value = 0.01 type = labourers }
+#            }
+#        }
+#        modifier = {
+#            factor = -2
+#            any_owned_province = {
+#                controlled_by = THIS
+#                trade_goods = iron
+#                unemployment_by_type = { value = 0.03 type = labourers }
+#            }
+#        }
+#    }
+#    effect = {
+#        rgo_goods_output = { iron = 0.20 }
+#        rgo_goods_output = { coal = 0.05 }
+#    }
+#}
 
 #Tetraethyllead (commonly styled tetraethyl lead), abbreviated TEL, is an organolead compound with the formula (CH3CH2)4Pb. It is a petro-fuel additive, first being mixed with gasoline beginning in the 1920s as a patented octane rating booster that allowed engine compression to be raised substantially. This in turn caused increased vehicle performance and fuel economy.[3][4] TEL had been identified chemically in the mid-19th century, but its antiknock effectiveness was discovered in 1921 by the General Motors research laboratory, which had spent several years attempting to find an additive that was both highly effective and inexpensive.
 #Concerns were later raised over the toxic effects of lead, especially on children. Lead also poisons catalytic converters and is a major cause of spark plug fouling.[5] From the 1970s many countries began phasing out and eventually banning TEL in automotive fuel. In 2011, a study backed by the United Nations estimated that the removal of TEL had resulted in $2.4 trillion in annual benefits, and 1.2 million fewer premature deaths.[6] 
@@ -249,52 +249,51 @@ rubber_n_plastic_additives = {
 #    }
 #}
 
-improved_shaft_mining = {
-    limit = {
-        mechanized_mining = 1
-    }
-    #news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 2
-            invention = bessemer_steel #1860
-        }
-        modifier = {
-            factor = 2
-            invention = portland_cement
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = coal
-                unemployment_by_type = { value = 0.05 type = labourers }
-                province_control_days = 1825
-            }
-        }
-        modifier = {
-            factor = -1
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = coal
-                unemployment_by_type = { value = 0.01 type = labourers }
-            }
-        }
-        modifier = {
-            factor = -2
-            any_owned_province = {
-                controlled_by = THIS
-                trade_goods = coal
-                unemployment_by_type = { value = 0.03 type = labourers }
-            }
-        }
-    }
-    effect = {
-        rgo_goods_output = { coal = 0.5 } #0.4
-        rgo_goods_output = { iron = 0.25 } #0.4
-    }
-}
+#improved_shaft_mining = {
+#    limit = {
+#        mechanized_mining = 1
+#    }
+#    chance = {
+#        base = 2
+#        modifier = {
+#            factor = 2
+#            invention = bessemer_steel #1860
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = portland_cement
+#        }
+#        modifier = {
+#            factor = -2
+#            any_owned_province = {
+#                controlled_by = THIS
+#                trade_goods = coal
+#                unemployment_by_type = { value = 0.05 type = labourers }
+#                province_control_days = 1825
+#            }
+#        }
+#        modifier = {
+#            factor = -1
+#            any_owned_province = {
+#                controlled_by = THIS
+#                trade_goods = coal
+#                unemployment_by_type = { value = 0.01 type = labourers }
+#            }
+#        }
+#        modifier = {
+#            factor = -2
+#            any_owned_province = {
+#                controlled_by = THIS
+#                trade_goods = coal
+#                unemployment_by_type = { value = 0.03 type = labourers }
+#            }
+#        }
+#    }
+#    effect = {
+#        rgo_goods_output = { coal = 0.5 } #0.4
+#        rgo_goods_output = { iron = 0.25 } #0.4
+#    }
+#}
 
 steam_powered_pumps = {
     limit = {
@@ -315,7 +314,7 @@ steam_powered_pumps = {
             factor = -2
             any_owned_province = {
                 controlled_by = THIS
-                trade_goods = iron
+                trade_goods = coal
                 unemployment_by_type = { value = 0.05 type = labourers }
                 province_control_days = 1825
             }
@@ -324,7 +323,7 @@ steam_powered_pumps = {
             factor = -1
             any_owned_province = {
                 controlled_by = THIS
-                trade_goods = iron
+                trade_goods = coal
                 unemployment_by_type = { value = 0.01 type = labourers }
             }
         }
@@ -332,7 +331,7 @@ steam_powered_pumps = {
             factor = -2
             any_owned_province = {
                 controlled_by = THIS
-                trade_goods = iron
+                trade_goods = coal
                 unemployment_by_type = { value = 0.03 type = labourers }
             }
         }

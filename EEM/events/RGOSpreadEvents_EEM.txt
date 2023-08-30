@@ -598,7 +598,7 @@ province_event = {
 #            unemployment_by_type = { value = 0.03 type = labourers }
 #            unemployment_by_type = { value = 0.03 type = farmers }
 #            state_scope = {
-#                #is_slave = yes
+#                is_slave = yes
 #                any_owned_province = { NOT = { controlled_by = THIS } }
 #            }
 #        }
@@ -708,10 +708,6 @@ province_event = {
 #        modifier = {
 #            factor = 4
 #            is_overseas = yes
-#        }
-#        modifier = {
-#            factor = 4
-#            state_scope = { is_slave = yes }
 #        }
 #    }
 
@@ -957,16 +953,16 @@ province_event = {
 
     trigger = {
         owner = {
-            #invention = artificial_fertilizers #inorganic_chemistry 1836
-            invention = carbon_soil_enrichment #organic_chemistry 1850
+            invention = artificial_fertilizers #inorganic_chemistry 1836
+            #invention = carbon_soil_enrichment #organic_chemistry 1850
             invention = hussey_n_mccormicks_reaping_machine #interchangeable_parts 1836
-            #invention = pitts_threshing_machine #interchangeable_parts 1836
+            invention = pitts_threshing_machine #interchangeable_parts 1836
         }
         NOT = { has_province_modifier = local_reapers_und_soil_enrichment }
         NOT = { has_province_modifier = local_tractors }
         NOT = { has_province_modifier = local_intensive_agriculture }
         NOT = {
-            #state_scope = { is_slave = yes }
+            state_scope = { is_slave = yes }
             unemployment_by_type = { value = 0.03 type = farmers }
         }
         OR = {
@@ -1107,10 +1103,6 @@ province_event = {
         modifier = {
             factor = 4
             is_overseas = yes
-        }
-        modifier = {
-            factor = 4
-            state_scope = { is_slave = yes }
         }
     }
 

@@ -1,4 +1,4 @@
-Tech Unlock Dates		number of inventions (12 + 100 = 112)
+Tech Unlock Dates		number of inventions (10 + 100 = 110)
 1930 15
 1936 10
 
@@ -34,16 +34,54 @@ culture = 17
 
 commerce = 15
 
-1930 power						 5	1836 piston_steam_en...	1
+1930 power						 5	1836 high_pressure...	1
 1930 mechanization				 3
-1930 metallurgy					 4	1905 electric_furnace	1 	1850 regenerative_f... 1	1840 mechanized_mining 1
+1930 metallurgy					 4	1905 electric_furnace	1 	1850 regenerative_f... 0	1840 mechanized_mining 0
 1930 infrastructure				 0
 1936 chemistry and electricity	 8	1900 synthetic_polymers	2	1850 organic_chemistry 1
 
-industry = 20 + 7
+industry = 20 + 5
+####################################################################################################
+#TODO: add a demote craftsmen and clerks in colonies option/decision
+#TODO: move the EEM setup decisions into its own setup decision
+
+#TODO: move 1488 Jiayuguan to from Inner Mongolia to Gansu
+	remember to check relevant events such as the Greater Mongolia event
+#TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia)
+	https://en.wikipedia.org/wiki/Mongolia_under_Qing_rule
+	capital: Hohhot 
+	the Qing attitude towards Han Chinese colonization of Mongolian lands grew more and more favorable under pressure of events, particularly after the Amur Annexation by Russia in 1860. This would reach a peak during the early 20th century, under the name of "New Policies" or "New Administration" (xinzheng). 
+
+
+#TODO: let the Taiping rebel from the Red Turbans
+#TODO: make picking the gelaohui in the Red Turban power struggle event not force you to get uncivilized_isolationism
+#TODO: let the Sanhehui blob into Lanfang and Singapore
+#TODO: make even more sure the mini-Taiping and mini-Red Turban rebellions work correctly, including core removal
+
+#TODO: more flavor for the Red Turbans - why would you pick them over the generic anti-Qing rebels becoming China? Maybe the Red Turbans can get all cultures accepted, like normal China?
+
+#TODO: pro-Qing intervention in the Taiping / Red Turban rebellions
+
+####################################################################################################
+v0.5.8q
+Japan now gets more daimyo ships
+local_reapers_und_soil_enrichment no longer spreads to slave states
+Slightly less coal, slightly more iron. Coal shouldn't much surpluses before 1900 (coal is the limiting factor in industralization, but there is still more coal than in v0.5.8n). Iron surplus/unemployment is allowed, this tweak is to get the timing right. (Iron overproduction caused the Long Depression)
+	Removed improved_shaft_mining and magnetic_separation 
+	square_set_timbering increases coal from 0.2 to 0.25
+	lubrication_oil increases coal from 0.2 to 0.1
+	lubrication_oil increases sulphur from 0.05 to 0.1
+	coke increases iron from 0.25 to 0.5
+	square_set_timbering increases iron from 0.1 to 0.25
+	steam_powered_pumps now checks for coal, not iron unemployment
+mini-Taiping no longer gets North Anhui
+mini-Red Turbans no longer get the entire state of East Canton because the Red Turbans started in West Canton and spent a lot of time fighting around Guangzhou trying to capture it
+mini-Red Turbans no longer get the Nian rebellion flood zone because the Nian rebellion is better represented by generic anti-Qing rebels
+local_reapers_und_soil_enrichment now depends on artificial_fertilizers, pitts_threshing_machine, and hussey_n_mccormicks_reaping_machine, and no longer requires carbon_soil_enrichment
+changed several inventions' base chance from 3 to 2 for consistency
+
 ####################################################################################################
 v0.5.8p
-
 reduce the iron buffs a bit - there's too much iron unemployment sometimes
 	reduced improved_shaft_mining iron from 0.4 to 0.25
 	increased improved_shaft_mining coal from 0.4 to 0.5
@@ -68,6 +106,7 @@ removed local_steam_and_shaft_mining because now there's too much coal and iron
 local intensive agriculture now only appears on provinces that already has local tractors (or makes cattle or wool). Intensive agriculture appearing in a place without tractors makes no sense anyways.
 local_tractors no longer appears on provinces that already have local_intensive_agriculture
 Fixed CSA banning slavery too early
+Red Turban cores now appear earlier
 
 ####################################################################################################
 v0.5.8o
@@ -110,8 +149,6 @@ Expanded a bunch of China localizations
 adjust AI tech weights again
 fixed some typos
 
-
-####################################################################################################
 v0.5.8n
 Monitors no longer use fuel, instead, they just use oil. Monitors were always coal-powered, even the latest newest monitors built by the USA - the Arkansas-class monitors - in 1902-1903 were all purely coal powered as well. Oil-firing only became a thing in the 1900s. However, monitors did use oil lubricants, so the oil requirement is kept:  https://www.marinersmuseum.org/2022/02/uss-monitor-oil-reservoirs/
 

@@ -916,42 +916,150 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
 
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 2
-                            NOT = { invention = steamer_transports }
-                        }
-                    }
-                    REB = { change_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 4
-                            NOT = { invention = steamer_transports }
-                        }
-                    }
-                    REB = { change_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 2
-                            invention = steamer_transports
-                        }
-                    }
-                    REB = { change_variable = { which = jap_steam_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 4
-                            invention = steamer_transports
-                        }
-                    }
-                    REB = { change_variable = { which = jap_steam_counter value = 1 } }
-                }
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 1
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 2
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 3
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 4
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 5
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 6
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 7
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 8
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 1
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 2
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 3
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 4
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 5
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 6
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 7
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 8
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
             }
 
 
@@ -1194,42 +1302,150 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
 
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 2
-                            NOT = { invention = steamer_transports }
-                        }
-                    }
-                    REB = { change_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 4
-                            NOT = { invention = steamer_transports }
-                        }
-                    }
-                    REB = { change_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 2
-                            invention = steamer_transports
-                        }
-                    }
-                    REB = { change_variable = { which = jap_steam_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 4
-                            invention = steamer_transports
-                        }
-                    }
-                    REB = { change_variable = { which = jap_steam_counter value = 1 } }
-                }
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 1
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 2
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 3
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 4
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 5
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 6
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 7
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 8
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 1
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 2
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 3
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 4
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 5
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 6
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 7
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 8
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
             }
 
 
@@ -1308,42 +1524,150 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
 
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 2
-                            NOT = { invention = steamer_transports }
-                        }
-                    }
-                    REB = { change_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 4
-                            NOT = { invention = steamer_transports }
-                        }
-                    }
-                    REB = { change_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 2
-                            invention = steamer_transports
-                        }
-                    }
-                    REB = { change_variable = { which = jap_steam_counter value = 1 } }
-                }
-                random_owned = {
-                    limit = {
-                        owner = {
-                            total_amount_of_ships = 4
-                            invention = steamer_transports
-                        }
-                    }
-                    REB = { change_variable = { which = jap_steam_counter value = 1 } }
-                }
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 1
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 2
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 3
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 4
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 5
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 6
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 7
+							NOT = { invention = steamer_transports }
+						}
+					}
+					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 8
+							NOT = { invention = commerce_raiders }
+						}
+					}
+					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 1
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 2
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 3
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 4
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 5
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 6
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 7
+							invention = steamer_transports
+						}
+					}
+					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							total_amount_of_ships = 8
+							invention = commerce_raiders
+						}
+					}
+					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+				}
             }
             any_country = {
                 limit = {
@@ -2160,8 +2484,10 @@ political_decisions = {
                 }
             }
             OR = {
-                REB = { check_variable = { which = jap_clipper_counter value = 1 } }
-                REB = { check_variable = { which = jap_steam_counter value = 1 } }
+                REB = { check_variable = { which = jap_clipper_transport_counter value = 1 } }
+                REB = { check_variable = { which = jap_frigate_counter value = 1 } }
+                REB = { check_variable = { which = jap_steam_transport_counter value = 1 } }
+                REB = { check_variable = { which = jap_commerce_raider_counter value = 1 } }
            }
            CHO = { exists = no }
            SAT = { exists = no }
@@ -2217,19 +2543,26 @@ political_decisions = {
                 }
                 sub_unit = { type = ironclad value = current }
             }
+
             random_owned = {
                 limit = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 5 } }
+                    REB = { check_variable = { which = jap_clipper_transport_counter value = 16 } }
                 }
-                REB = { change_variable = { which = jap_clipper_counter value = -5 } }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
+                REB = { change_variable = { which = jap_clipper_transport_counter value = -16 } }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
                 sub_unit = { type = clipper_transport value = current }
                 sub_unit = { type = clipper_transport value = current }
                 sub_unit = { type = clipper_transport value = current }
@@ -2241,14 +2574,45 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 5 } }
+                    REB = { check_variable = { which = jap_frigate_counter value = 16 } }
                 }
-                REB = { change_variable = { which = jap_steam_counter value = -5 } }
-                sub_unit = { type = commerce_raider value = current }
-                sub_unit = { type = commerce_raider value = current }
-                sub_unit = { type = commerce_raider value = current }
-                sub_unit = { type = commerce_raider value = current }
-                sub_unit = { type = commerce_raider value = current }
+                REB = { change_variable = { which = jap_frigate_counter value = -16 } }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+            }
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_steam_transport_counter value = 16 } }
+                }
+                REB = { change_variable = { which = jap_steam_transport_counter value = -16 } }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
                 sub_unit = { type = steam_transport value = current }
                 sub_unit = { type = steam_transport value = current }
                 sub_unit = { type = steam_transport value = current }
@@ -2260,38 +2624,25 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 5 } }
+                    REB = { check_variable = { which = jap_commerce_raider_counter value = 16 } }
                 }
-                REB = { change_variable = { which = jap_clipper_counter value = -5 } }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = frigate value = current }
-                sub_unit = { type = clipper_transport value = current }
-                sub_unit = { type = clipper_transport value = current }
-                sub_unit = { type = clipper_transport value = current }
-                sub_unit = { type = clipper_transport value = current }
-                sub_unit = { type = clipper_transport value = current }
-            }
-            random_owned = {
-                limit = {
-                    has_building = naval_base
-                    is_core = THIS
-                    controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 5 } }
-                }
-                REB = { change_variable = { which = jap_steam_counter value = -5 } }
+                REB = { change_variable = { which = jap_commerce_raider_counter value = -16 } }
                 sub_unit = { type = commerce_raider value = current }
                 sub_unit = { type = commerce_raider value = current }
                 sub_unit = { type = commerce_raider value = current }
                 sub_unit = { type = commerce_raider value = current }
                 sub_unit = { type = commerce_raider value = current }
-                sub_unit = { type = steam_transport value = current }
-                sub_unit = { type = steam_transport value = current }
-                sub_unit = { type = steam_transport value = current }
-                sub_unit = { type = steam_transport value = current }
-                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
             }
 
             random_owned = {
@@ -2299,10 +2650,16 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 1 } }
+                    REB = { check_variable = { which = jap_clipper_transport_counter value = 8 } }
                 }
-                REB = { change_variable = { which = jap_clipper_counter value = -1 } }
-                sub_unit = { type = frigate value = current }
+                REB = { change_variable = { which = jap_clipper_transport_counter value = -8 } }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
                 sub_unit = { type = clipper_transport value = current }
             }
             random_owned = {
@@ -2310,10 +2667,33 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 1 } }
+                    REB = { check_variable = { which = jap_frigate_counter value = 8 } }
                 }
-                REB = { change_variable = { which = jap_steam_counter value = -1 } }
-                sub_unit = { type = commerce_raider value = current }
+                REB = { change_variable = { which = jap_frigate_counter value = -8 } }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+            }
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_steam_transport_counter value = 8 } }
+                }
+                REB = { change_variable = { which = jap_steam_transport_counter value = -8 } }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
                 sub_unit = { type = steam_transport value = current }
             }
             random_owned = {
@@ -2321,10 +2701,30 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 1 } }
+                    REB = { check_variable = { which = jap_commerce_raider_counter value = 8 } }
                 }
-                REB = { change_variable = { which = jap_clipper_counter value = -1 } }
-                sub_unit = { type = frigate value = current }
+                REB = { change_variable = { which = jap_commerce_raider_counter value = -8 } }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+            }
+
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_clipper_transport_counter value = 4 } }
+                }
+                REB = { change_variable = { which = jap_clipper_transport_counter value = -4 } }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
+                sub_unit = { type = clipper_transport value = current }
                 sub_unit = { type = clipper_transport value = current }
             }
             random_owned = {
@@ -2332,10 +2732,25 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 1 } }
+                    REB = { check_variable = { which = jap_frigate_counter value = 4 } }
                 }
-                REB = { change_variable = { which = jap_steam_counter value = -1 } }
-                sub_unit = { type = commerce_raider value = current }
+                REB = { change_variable = { which = jap_frigate_counter value = -4 } }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+            }
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_steam_transport_counter value = 4 } }
+                }
+                REB = { change_variable = { which = jap_steam_transport_counter value = -4 } }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
+                sub_unit = { type = steam_transport value = current }
                 sub_unit = { type = steam_transport value = current }
             }
             random_owned = {
@@ -2343,10 +2758,24 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 1 } }
+                    REB = { check_variable = { which = jap_commerce_raider_counter value = 4 } }
                 }
-                REB = { change_variable = { which = jap_clipper_counter value = -1 } }
-                sub_unit = { type = frigate value = current }
+                REB = { change_variable = { which = jap_commerce_raider_counter value = -4 } }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+            }
+
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_clipper_transport_counter value = 2 } }
+                }
+                REB = { change_variable = { which = jap_clipper_transport_counter value = -2 } }
+                sub_unit = { type = clipper_transport value = current }
                 sub_unit = { type = clipper_transport value = current }
             }
             random_owned = {
@@ -2354,10 +2783,21 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 1 } }
+                    REB = { check_variable = { which = jap_frigate_counter value = 2 } }
                 }
-                REB = { change_variable = { which = jap_steam_counter value = -1 } }
-                sub_unit = { type = commerce_raider value = current }
+                REB = { change_variable = { which = jap_frigate_counter value = -2 } }
+                sub_unit = { type = frigate value = current }
+                sub_unit = { type = frigate value = current }
+            }
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_steam_transport_counter value = 2 } }
+                }
+                REB = { change_variable = { which = jap_steam_transport_counter value = -2 } }
+                sub_unit = { type = steam_transport value = current }
                 sub_unit = { type = steam_transport value = current }
             }
             random_owned = {
@@ -2365,10 +2805,23 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 1 } }
+                    REB = { check_variable = { which = jap_commerce_raider_counter value = 2 } }
                 }
-                REB = { change_variable = { which = jap_clipper_counter value = -1 } }
-                sub_unit = { type = frigate value = current }
+                REB = { change_variable = { which = jap_commerce_raider_counter value = -2 } }
+                sub_unit = { type = commerce_raider value = current }
+                sub_unit = { type = commerce_raider value = current }
+            }
+
+
+
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                REB = { change_variable = { which = jap_clipper_transport_counter value = -1 } }
                 sub_unit = { type = clipper_transport value = current }
             }
             random_owned = {
@@ -2376,33 +2829,30 @@ political_decisions = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 1 } }
+                    REB = { check_variable = { which = jap_frigate_counter value = 1 } }
                 }
-                REB = { change_variable = { which = jap_steam_counter value = -1 } }
-                sub_unit = { type = commerce_raider value = current }
-                sub_unit = { type = steam_transport value = current }
-            }
-            random_owned = {
-                limit = {
-                    has_building = naval_base
-                    is_core = THIS
-                    controlled_by = THIS
-                    REB = { check_variable = { which = jap_clipper_counter value = 1 } }
-                }
-                REB = { change_variable = { which = jap_clipper_counter value = -1 } }
+                REB = { change_variable = { which = jap_frigate_counter value = -1 } }
                 sub_unit = { type = frigate value = current }
-                sub_unit = { type = clipper_transport value = current }
             }
             random_owned = {
                 limit = {
                     has_building = naval_base
                     is_core = THIS
                     controlled_by = THIS
-                    REB = { check_variable = { which = jap_steam_counter value = 1 } }
+                    REB = { check_variable = { which = jap_steam_transport_counter value = 1 } }
                 }
-                REB = { change_variable = { which = jap_steam_counter value = -1 } }
-                sub_unit = { type = commerce_raider value = current }
+                REB = { change_variable = { which = jap_steam_transport_counter value = -1 } }
                 sub_unit = { type = steam_transport value = current }
+            }
+            random_owned = {
+                limit = {
+                    has_building = naval_base
+                    is_core = THIS
+                    controlled_by = THIS
+                    REB = { check_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                REB = { change_variable = { which = jap_commerce_raider_counter value = -1 } }
+                sub_unit = { type = commerce_raider value = current }
             }
         }
 

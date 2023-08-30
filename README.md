@@ -20,7 +20,9 @@ Motorized Infantry
 Aircraft Carriers
 
 Economic adjustments and rebalance
-
+* The growth of coal and iron production more closely matches the real life increase in coal and iron, with a great increase in supply corresponding to the Second Industrial Revolution. Unlike in HPM where coal and iron are always in short supply, in EEM, they sometime exceed demand by the 1880s (which caused the Long Depression in real life). Overall, the supply in EEM is much increased compared to HPM.
+* Historically, agricultural production per capita only doubled in the 100 years from 1836 to 1936; however, in HPM it increases by 3~4 times, often causing mass late game RGO unemployment. In EEM, the growth in agricultural production is now more historical. Crop yields per capita increased from 1830-1870 but was nearly flat until the 1930s, when it begin to grow again. Crop yield would only begin increasing massively after the development of scientific breeding techniques in the late 1950s.
+	
 Improved AI
 
 Tax refund event to prevent the liquidity crisis
