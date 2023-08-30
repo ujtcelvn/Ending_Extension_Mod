@@ -598,7 +598,7 @@ province_event = {
 #            unemployment_by_type = { value = 0.03 type = labourers }
 #            unemployment_by_type = { value = 0.03 type = farmers }
 #            state_scope = {
-#                #is_slave = yes
+#                is_slave = yes
 #                any_owned_province = { NOT = { controlled_by = THIS } }
 #            }
 #        }
@@ -708,10 +708,6 @@ province_event = {
 #        modifier = {
 #            factor = 4
 #            is_overseas = yes
-#        }
-#        modifier = {
-#            factor = 4
-#            state_scope = { is_slave = yes }
 #        }
 #    }
 
@@ -966,7 +962,7 @@ province_event = {
         NOT = { has_province_modifier = local_tractors }
         NOT = { has_province_modifier = local_intensive_agriculture }
         NOT = {
-            #state_scope = { is_slave = yes }
+            state_scope = { is_slave = yes }
             unemployment_by_type = { value = 0.03 type = farmers }
         }
         OR = {
@@ -1107,10 +1103,6 @@ province_event = {
         modifier = {
             factor = 4
             is_overseas = yes
-        }
-        modifier = {
-            factor = 4
-            state_scope = { is_slave = yes }
         }
     }
 
