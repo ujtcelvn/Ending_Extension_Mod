@@ -953,10 +953,10 @@ province_event = {
 
     trigger = {
         owner = {
-            #invention = artificial_fertilizers #inorganic_chemistry 1836
-            invention = carbon_soil_enrichment #organic_chemistry 1850
+            invention = artificial_fertilizers #inorganic_chemistry 1836
+            #invention = carbon_soil_enrichment #organic_chemistry 1850
             invention = hussey_n_mccormicks_reaping_machine #interchangeable_parts 1836
-            #invention = pitts_threshing_machine #interchangeable_parts 1836
+            invention = pitts_threshing_machine #interchangeable_parts 1836
         }
         NOT = { has_province_modifier = local_reapers_und_soil_enrichment }
         NOT = { has_province_modifier = local_tractors }

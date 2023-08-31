@@ -58,11 +58,14 @@ industry = 20 + 5
 #TODO: let the Sanhehui blob into Lanfang and Singapore
 #TODO: make even more sure the mini-Taiping and mini-Red Turban rebellions work correctly, including core removal
 
+#TODO: more flavor for the Red Turbans - why would you pick them over the generic anti-Qing rebels becoming China? Maybe the Red Turbans can get all cultures accepted, like normal China?
+
+#TODO: pro-Qing intervention in the Taiping / Red Turban rebellions
+
 ####################################################################################################
 v0.5.8q
 Japan now gets more daimyo ships
 local_reapers_und_soil_enrichment no longer spreads to slave states
-
 Slightly less coal, slightly more iron. Coal shouldn't much surpluses before 1900 (coal is the limiting factor in industralization, but there is still more coal than in v0.5.8n). Iron surplus/unemployment is allowed, this tweak is to get the timing right. (Iron overproduction caused the Long Depression)
 	Removed improved_shaft_mining and magnetic_separation 
 	square_set_timbering increases coal from 0.2 to 0.25
@@ -70,6 +73,12 @@ Slightly less coal, slightly more iron. Coal shouldn't much surpluses before 190
 	lubrication_oil increases sulphur from 0.05 to 0.1
 	coke increases iron from 0.25 to 0.5
 	square_set_timbering increases iron from 0.1 to 0.25
+	steam_powered_pumps now checks for coal, not iron unemployment
+mini-Taiping no longer gets North Anhui
+mini-Red Turbans no longer get the entire state of East Canton because the Red Turbans started in West Canton and spent a lot of time fighting around Guangzhou trying to capture it
+mini-Red Turbans no longer get the Nian rebellion flood zone because the Nian rebellion is better represented by generic anti-Qing rebels
+local_reapers_und_soil_enrichment now depends on artificial_fertilizers, pitts_threshing_machine, and hussey_n_mccormicks_reaping_machine, and no longer requires carbon_soil_enrichment
+changed several inventions' base chance from 3 to 2 for consistency
 
 ####################################################################################################
 v0.5.8p
