@@ -24,7 +24,7 @@ semi_automatic_rifle_armament = {
             supply_consumption = 0.20
         }
         engineer = {
-            attack = 1
+            attack = 2
             defence = 2
             supply_consumption = 0.20
         }
@@ -61,57 +61,7 @@ semi_automatic_rifle_armament = {
     }
 }
 
-assault_rifle_experiments = {
-    limit = { light_armament_7 = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = semi_automatic_rifle_armament
-        }
-        modifier = {
-            factor = 2
-            invention = motorized_infantry_activation
-        }
-        modifier = {
-            factor = 1
-            war = yes
-            war_countries = { invention = assault_rifle_experiments }
-        }
-        modifier = {
-            factor = -4
-            not = { machine_guns = 1 }
-        }
-    }
-    effect = {
-        irregular = {
-            attack = 1
-            defence = 1
-            supply_consumption = 0.05
-        }
-		infantry = {
-            attack = 2
-            defence = 2
-            supply_consumption = 0.05
-        }
-        guard = {
-            attack = 2
-            defence = 3
-            supply_consumption = 0.20
-        }
-        engineer = {
-            attack = 2
-            defence = 1
-            supply_consumption = 0.05
-        }
-        motorized_infantry = {
-            attack = 2
-            defence = 1
-            supply_consumption = 0.05
-        }
-    }
-}
-
+#assault_rifle_experiments
 
 shaped_charge = {
     limit = { light_armament_7 = 1 }
@@ -131,20 +81,21 @@ shaped_charge = {
             defence = 1
             supply_consumption = 0.05
         }
+        motorized_infantry = {
+            defence = 1
+            supply_consumption = 0.05
+        }
         tank = {
             defence = 1
             supply_consumption = 0.05
         }
         engineer  = {
             siege = 1
-            defence = 1
-            supply_consumption = 0.25
-        }
-        irregular = {
+            attack = 1
             defence = 1
             supply_consumption = 0.05
         }
-        motorized_infantry = {
+        irregular = {
             defence = 1
             supply_consumption = 0.05
         }
