@@ -1,25 +1,27 @@
-saturation_bombing_doctrine = {
+motorized_infantry_activation = {
     limit = { army_doctrine_7 = 1 }
     chance = {
-        base = 2
+        base = 0
         modifier = {
             factor = 2
-            invention = strategic_destruction_doctrine
+            invention = army_motorization
         }
         modifier = {
             factor = 2
-            invention = gun_and_bomb_sights
+            invention = firepower_vs_mobility
         }
         modifier = {
             factor = -6
-            not = { invention = late_interwar_bombers }
+            NOT = { invention = interwar_cavalry }
+        }
+        modifier = {
+            factor = 2
+            war = yes
+            war_countries = { invention = motorized_infantry_activation }
         }
     }
     effect = {
-        plane = {
-            attack = 0.1
-            supply_consumption = 0.20
-        }
+        activate_unit = motorized_infantry
     }
 }
 
@@ -45,24 +47,31 @@ army_motorization = {
             maximum_speed = 1
             supply_consumption = 0.20
         }
-     
-        #ceremonial_cavalry
         cuirassier = {
-            attack = 1
+            attack = 2
             defence = 2
-            supply_consumption = -0.20
+            supply_consumption = 0.20
         }
         dragoon = {
             defence = 2
+            supply_consumption = -0.20
         }
         hussar = {
             defence = 2
-            supply_consumption = 0.10
+            supply_consumption = -0.10
+        }
+        motorized_infantry = {
+            attack = 1
+            maximum_speed = 1
+            supply_consumption = 0.20
+        }
+        tank = {
+            attack = 2
         }
         cavalry = {
             attack = 1
             defence = 2
-            supply_consumption = 0.10
+            supply_consumption = 0.05
         }
     }
 }
@@ -98,13 +107,13 @@ mechanized_assault_doctrine = {
         }
         engineer = {
             maximum_speed = 1
-            supply_consumption = 0.20
+            supply_consumption = 0.30
         }
     }
 }
 
 
-paratrooper_doctrine = {
+paratrooper_doctrine = { #special forces
     limit = { army_doctrine_7 = 1 }
     chance = {
         base = 2
@@ -125,12 +134,15 @@ paratrooper_doctrine = {
     effect = {
         guard = {
             attack = 1
-            supply_consumption = 0.05
+            supply_consumption = 0.2
         }
-        plane = {
-            attack = 0.1
-            maximum_speed = 1
-            supply_consumption = 0.30
+        tank = {
+            attack = 2
+            supply_consumption = 0.2
+        }
+        engineer = {
+            attack = 1
+            supply_consumption = 0.2
         }
     }
 }
@@ -157,7 +169,7 @@ paratrooper_doctrine = {
 #}
 
 
-combined_arms_offensive = {
+combined_arms_offensive = { #Kampfgruppe vs Deep Operations vs Regimental Combat
     limit = { army_doctrine_7 = 1 }
     chance = {
         base = 2
@@ -172,7 +184,7 @@ combined_arms_offensive = {
         }
         modifier = {
             factor = 1
-            invention = paratrooper_doctrine
+            military_science_7 = 1
         }
         modifier = {
             factor = 1
@@ -182,25 +194,74 @@ combined_arms_offensive = {
     }
     effect = {
         infantry = {
-            attack = 2
+            attack = 4
         }
         guard = {
-            attack = 2
-        }
-        artillery = {
-            attack = 0.1
+            attack = 4
         }
         engineer = {
-            attack = 2
+            attack = 1
         }
         tank = {
             attack = 2
         }
         plane = {
-            attack = 0.1
+            maximum_speed = 1
+        }
+        dragoon = {
+            attack = 1
+        }
+        hussar = {
+            attack = 1
+        }
+        motorized_infantry = {
+            attack = 4
+        }
+        cavalry = {
+            attack = 1
+        }
+        irregular = {
+            attack = 1
+        }
+        army_base = {
+            supply_consumption = 0.05
+        }
+    }
+}
+
+infiltration_assault_vs_attritional_containment = {
+    limit = { army_doctrine_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -6
+            NOT = { invention = semi_automatic_rifle_armament }
+        }
+        modifier = {
+            factor = 2
+            invention = heavy_artillery
+        }
+        modifier = {
+            factor = 1
+            invention = paratrooper_doctrine
+        }
+        modifier = {
+            factor = 1
+            war = yes
+            war_countries = { invention = infiltration_assault_vs_attritional_containment }
+        }
+    }
+    effect = {
+        infantry = {
+            attack = 1
+            defence = 3
+        }
+        guard = {
+            attack = 1
+            defence = 3
         }
         cuirassier = {
-            attack = 2
+            attack = 1
         }
         dragoon = {
             attack = 2
@@ -209,13 +270,19 @@ combined_arms_offensive = {
             attack = 2
         }
         motorized_infantry = {
+            reconnaissance = 1
             attack = 2
         }
-        cavalry = {
+        tank = {
+            defence = 2
+        }
+        engineer = {
             attack = 1
+            defence = 1
         }
         irregular = {
             attack = 1
+            defence = 2
         }
         army_base = {
             supply_consumption = 0.05

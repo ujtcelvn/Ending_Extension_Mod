@@ -2,13 +2,13 @@ Tech Unlock Dates		number of inventions (10 + 100 = 110)
 1930 15
 1936 10
 
-1936 army doctrine				 5
-1936 light armament				 3
-1936 heavy armament				 5
+1936 army doctrine				 6
+1936 light armament				 2
+1936 heavy armament				 7
 1936 military science			 7
-1936 army leadership			 6
+1936 army leadership			 5
 
-army = 26
+army = 27
 
 1936 naval doctrine				 3
 1930 ship construction			 4	1919 oil_driven_ships	3
@@ -20,11 +20,11 @@ navy = 22 + 5
 
 1930 aesthetics					 5
 1930 philosphy					 4
-1930 social thought				 3
+1930 social thought				 2
 1936 political thought			 4
 1930 psychology					 1
 
-culture = 17
+culture = 16
 
 1930 financial institutions		 1
 1930 monetary system			 2
@@ -45,27 +45,60 @@ industry = 20 + 5
 #TODO: add a demote craftsmen and clerks in colonies option/decision
 #TODO: move the EEM setup decisions into its own setup decision
 
-#TODO: move 1488 Jiayuguan to from Inner Mongolia to Gansu
-	remember to check relevant events such as the Greater Mongolia event
-#TODO: add a inner mongolia / Mengjiang tag (can unite with Mongolia by event and rebels and decision by Mongolia)
-	https://en.wikipedia.org/wiki/Mongolia_under_Qing_rule
-	capital: Hohhot 
-	the Qing attitude towards Han Chinese colonization of Mongolian lands grew more and more favorable under pressure of events, particularly after the Amur Annexation by Russia in 1860. This would reach a peak during the early 20th century, under the name of "New Policies" or "New Administration" (xinzheng). 
-
-
 #TODO: let the Taiping rebel from the Red Turbans
 #TODO: make picking the gelaohui in the Red Turban power struggle event not force you to get uncivilized_isolationism
 #TODO: let the Sanhehui blob into Lanfang and Singapore
 #TODO: make even more sure the mini-Taiping and mini-Red Turban rebellions work correctly, including core removal
-
-#TODO: more flavor for the Red Turbans - why would you pick them over the generic anti-Qing rebels becoming China? Maybe the Red Turbans can get all cultures accepted, like normal China?
-
 #TODO: pro-Qing intervention in the Taiping / Red Turban rebellions
+#TODO: look at terrain in China and Japan
+
+#TODO: East Shandong trade zone keeps disappearing and reappearing for some reason. The only things they border are the Red Turbans, Japan, and the USA... maybe Japan keeps trying to influence it?
+
+#TODO: add more events for China giving up treaty ports
+#TODO: check if the Boxer rebellion ever actually happens
+
+#TODO: remove the forced intervention choices for the gunboat unciv events
+
+#TODO: optimize events and decisions
+	#TODO: have the olympics and nobel prize work using variables so the save file isn't clogged up with a bunch of global flags
+
+#TODO: Change behavior if the generic anti-Qing rebels win
+	#TODO: make sure China immediately annexes the trade zones
+	#TODO: The merge China with the Red Turbans / Taiping event is now immediately triggered by the anti-Qing victory event (different versions firing depending on if Red Turbans / Taiping have been defeated / cores removed yet)
+	#TODO: make sure ALL periphery territories are lost:
+		#TODO: Manchuria ganes cores on Chengde 1613
+		#TODO: Mongolia gets cores on Inner Mongolia
+		#TODO: make sure All Manchuria / Mongolia / Tuva / Kumul / Xinjiang / Kashgaria / Tibet / Qinghai / Yunnan / Guangxi / Guangdong / Fujian / Taiwan cores given to those countries and are released
+		#TODO: maybe also make it add the warlord cores and release the warlord tags?
+
+	#TODO: check the conditions under which Russia gets to puppet Mongolia. Maybe make it trigger an event for Mongolia warning Russia is going to puppet it, and Tuva gets to refuse and start a war? Mongolia always refuses if Russia doesn't border it?
+	#TODO: check the conditions under which Russia gets to annex Tuva. Maybe make it trigger an event for Tuva warning Russia is going to annex it, and Tuva gets to refuse and start a war? Tuva always refuses if Russia doesn't border it?
+
+####################################################################################################
+v0.5.8r
+rebalanced military: late game military techs and inventions now are more consistent with the older inventions. Late game combat is now faster and more deadly.
+	Artillery and Plane support values now continously increase.
+	Buffed tank attack by quite a bit
+	renamed semi-automatic rifle main armament to semi-automatic rifle armament
+	renamed paratrooper doctrine to Special Forces Doctrine
+	removed assault rifle, and motorized recon
+	renamed combined arms doctrine to Kampfgruppe vs Deep Operations vs Regimental Combat
+	added Infiltration Assault vs Attritional Containment, tank destroyer, and self-propelled anti-aircraft gun
+	renamed from army mechanization to Aerial warfare b/c it now completely focues on planes
+	moved saturation bombing doctrine from combined arms to Aerial warfare
+	moved motorized_infantry_activation to combined arms
+	adjusted a bunch of the invention modifiers
+
+merged anticolonialism into national_liberation
+moved 1488 Jiayuguan from Inner Mongolia CHI_1532 to Gansu CHI_1490
+changed several invention base chance from 3 to 2 for consistency
+piston_steam_engine and high_pressure_steam_engine farm output increased to 0.2
+steam_turbine, combustion_engine, electrical_power_generation, tech_power_7 farm output decreased to 0.05
 
 ####################################################################################################
 v0.5.8q
 Japan now gets more daimyo ships
-local_reapers_und_soil_enrichment no longer spreads to slave states
+
 Slightly less coal, slightly more iron. Coal shouldn't much surpluses before 1900 (coal is the limiting factor in industralization, but there is still more coal than in v0.5.8n). Iron surplus/unemployment is allowed, this tweak is to get the timing right. (Iron overproduction caused the Long Depression)
 	Removed improved_shaft_mining and magnetic_separation 
 	square_set_timbering increases coal from 0.2 to 0.25
@@ -74,13 +107,13 @@ Slightly less coal, slightly more iron. Coal shouldn't much surpluses before 190
 	coke increases iron from 0.25 to 0.5
 	square_set_timbering increases iron from 0.1 to 0.25
 	steam_powered_pumps now checks for coal, not iron unemployment
+	
 mini-Taiping no longer gets North Anhui
 mini-Red Turbans no longer get the entire state of East Canton because the Red Turbans started in West Canton and spent a lot of time fighting around Guangzhou trying to capture it
 mini-Red Turbans no longer get the Nian rebellion flood zone because the Nian rebellion is better represented by generic anti-Qing rebels
-local_reapers_und_soil_enrichment now depends on artificial_fertilizers, pitts_threshing_machine, and hussey_n_mccormicks_reaping_machine, and no longer requires carbon_soil_enrichment
-changed several inventions' base chance from 3 to 2 for consistency
 
-####################################################################################################
+local_reapers_und_soil_enrichment no longer spreads to slave states and now depends on artificial_fertilizers, pitts_threshing_machine, and hussey_n_mccormicks_reaping_machine, and no longer requires carbon_soil_enrichment
+
 v0.5.8p
 reduce the iron buffs a bit - there's too much iron unemployment sometimes
 	reduced improved_shaft_mining iron from 0.4 to 0.25
@@ -108,7 +141,6 @@ local_tractors no longer appears on provinces that already have local_intensive_
 Fixed CSA banning slavery too early
 Red Turban cores now appear earlier
 
-####################################################################################################
 v0.5.8o
 
 square_set_timbering increases iron (0->0.2)

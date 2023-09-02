@@ -21,8 +21,9 @@ self_propelled_artillery = {
     effect = {
         artillery = {
             attack = 0.1
+            support = 0.1
             maximum_speed = 1
-            supply_consumption = 0.40
+            supply_consumption = 0.20
         }
         tank = {
             attack = 2
@@ -59,7 +60,8 @@ rocket_artillery = {
     effect = {
         artillery = {
             attack = 0.1
-            supply_consumption = 0.05
+            support = 0.1
+            supply_consumption = 0.1
         }
     }
 }
@@ -83,13 +85,14 @@ proximity_fuze = {
         artillery = {
             attack = 0.1
             defence = 0.5
-            supply_consumption = 0.05
+            support = 0.1
+            supply_consumption = 0.1
         }
     }
 }
 
 #but the first tanks to be completely fitted with sloped armour were the French SOMUA S35 (1936) and other contemporary French tanks like the Renault R35, which had fully cast hulls and turrets. It was also used to a greater effect on the famous Soviet T-34 (1940) 
-sloped_armor = {
+sloped_armor = { #Medium and Heavy Tanks
     limit = { heavy_armament_7 = 1 }
     chance = {
         base = 2
@@ -100,6 +103,50 @@ sloped_armor = {
         modifier = {
             factor = 2
             invention = basic_oxygen_steelmaking
+        }
+    }
+    effect = {
+        tank = {
+            attack = 4
+            defence = 2
+            supply_consumption = 1
+        }
+    }
+}
+
+tank_destroyer = {
+    limit = { heavy_armament_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -4
+            NOT = { invention = sloped_armor }
+        }
+        modifier = {
+            factor = 2
+            invention = grand_battle_plan_vs_superior_firepower
+        }
+    }
+    effect = {
+        tank = {
+            attack = 4
+            defence = 2
+            supply_consumption = 1
+        }
+    }
+}
+
+self-propelled_anti-aircraft_gun = {
+    limit = { heavy_armament_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = -4
+            NOT = { invention = sloped_armor }
+        }
+        modifier = {
+            factor = 2
+            invention = gun_and_bomb_sights
         }
     }
     effect = {
@@ -120,6 +167,7 @@ main_battle_tank = {
 			OR = {
                 NOT = { invention = self_propelled_artillery } #formerally assault_gun
                 NOT = { invention = sloped_armor }
+                NOT = { invention = tank_destroyer }
             }
         }
         modifier = {
@@ -133,9 +181,8 @@ main_battle_tank = {
     }
     effect = {
         tank = {
-            attack = 2
-            defence = 1
-            supply_consumption = 0.5
+            attack = 4
+            defence = 2
         }
     }
 }

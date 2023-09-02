@@ -2626,7 +2626,7 @@ heavy_armament_7 = {
     artillery = {
         attack = 0.5
         defence = 0.5
-        #support = 1
+        support = 1
         supply_consumption = 0.3
     }
 

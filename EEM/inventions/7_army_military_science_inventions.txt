@@ -1,34 +1,3 @@
-motorized_infantry_activation = {
-    limit = { military_science_7 = 1 }
-    chance = {
-        base = 0
-        modifier = {
-            factor = 2
-            invention = interwar_cavalry
-        }
-        modifier = {
-            factor = 2
-            invention = firepower_vs_mobility
-        }
-        modifier = {
-            factor = 2
-            invention = armoured_cars
-        }
-        modifier = {
-            factor = -4
-            NOT = { invention = army_motorization }
-        }
-        modifier = {
-            factor = 2
-            war = yes
-            war_countries = { invention = motorized_infantry_activation }
-        }
-    }
-    effect = {
-        activate_unit = motorized_infantry
-    }
-}
-
 
 #direct_petrol_injection
 
@@ -55,10 +24,20 @@ gun_and_bomb_sights = {
         }
     }
     effect = {
+        tank = {
+            attack = 2
+            defence = 1
+            supply_consumption = 0.5
+        }
+        artillery = {
+            attack = 0.1
+            support = 0.1
+            supply_consumption = 0.1
+        }
         plane = {
             attack = 0.5
-            defence = 0.5
-            supply_consumption = 0.20
+            support = 0.5
+            supply_consumption = 0.25
         }
     }
 }
@@ -95,11 +74,12 @@ remote_control = {
     effect = {
         plane = {
             attack = 0.1
-            supply_consumption = 0.20
+            supply_consumption = 0.25
         }
         engineer = {
             siege = 1
-            supply_consumption = 0.20
+            attack = 1
+            supply_consumption = 0.10
         }
         tank = {
             siege = 1
@@ -128,7 +108,7 @@ rocket_powered_aircraft = {
     }
     effect = {
         plane = {
-            defence = 0.5
+            attack = 0.1
             maximum_speed = 1
             supply_consumption = 0.25
         }
@@ -157,8 +137,9 @@ turbojet = {
     }
     effect = {
         plane = {
-            maximum_speed = 1
             attack = 0.1
+            support = 0.5
+            maximum_speed = 1
             supply_consumption = 0.75
         }
     }
@@ -181,6 +162,7 @@ strategic_rocket = {
     effect = {
         artillery = {
             attack = 0.1
+            support = 0.1
             supply_consumption = 0.10
         }
     }
@@ -199,6 +181,33 @@ helicopter = {
     effect = {
         plane = {
             reconnaissance = 1
+            attack = 0.1
+            supply_consumption = 0.25
+        }
+    }
+}
+
+saturation_bombing_doctrine = {
+    limit = { military_science_7 = 1 }
+    chance = {
+        base = 2
+        modifier = {
+            factor = 2
+            invention = operations_research
+        }
+        modifier = {
+            factor = 2
+            invention = air_to_air_radar
+        }
+        modifier = {
+            factor = -6
+            NOT = { invention = gun_and_bomb_sights }
+        }
+    }
+    effect = {
+        plane = {
+            attack = 0.1
+            support = 0.5
             supply_consumption = 0.25
         }
     }

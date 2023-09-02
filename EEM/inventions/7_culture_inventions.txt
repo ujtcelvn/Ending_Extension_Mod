@@ -264,7 +264,7 @@ absurdism = {
         }
         modifier = {
             factor = 2
-            invention = anticolonialism
+            invention = national_liberation
         }
     }
     effect = {
@@ -357,6 +357,14 @@ national_liberation = {
             faction = partisan_rebels
             value = 0.75
         }
+        rebel_org_gain = {
+            faction = independence_rebels
+            value = 0.50
+        }
+        rebel_org_gain = {
+            faction = native_rebels
+            value = 0.50
+        }
     }
 }
 
@@ -383,34 +391,34 @@ national_liberation = {
 #    }
 #}
 
-anticolonialism = {
-    limit = { political_thought_7 = 1 }
-    news = no
-    chance = {
-        base = 1
-        modifier = {
-            factor = 2
-            OR = {
-                nationalvalue = nv_liberty
-                nationalvalue = nv_equality
-            }
-        }
-        modifier = {
-            factor = 2
-            invention = national_liberation
-        }
-    }
-    effect = {
-        rebel_org_gain = {
-            faction = independence_rebels
-            value = 0.50
-        }
-        rebel_org_gain = {
-            faction = native_rebels
-            value = 0.50
-        }
-    }
-}
+#anticolonialism = {
+#    limit = { political_thought_7 = 1 }
+#    news = no
+#    chance = {
+#        base = 1
+#        modifier = {
+#            factor = 2
+#            OR = {
+#                nationalvalue = nv_liberty
+#                nationalvalue = nv_equality
+#            }
+#        }
+#        modifier = {
+#            factor = 2
+#            invention = national_liberation
+#        }
+#    }
+#    effect = {
+#        rebel_org_gain = {
+#            faction = independence_rebels
+#            value = 0.50
+#        }
+#        rebel_org_gain = {
+#            faction = native_rebels
+#            value = 0.50
+#        }
+#    }
+#}
 
 #on_guerrilla_warfare = {
 #    limit = { political_thought_7 = 1 }
@@ -477,7 +485,7 @@ tv_broadcasting = {
             factor = -6
             NOT = { invention = the_talkies }
         }
-	modifier = {
+	    modifier = {
             factor = -1
             NOT = { press_rights = free_press }
         }
