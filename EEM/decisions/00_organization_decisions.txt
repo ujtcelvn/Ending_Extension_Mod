@@ -40,6 +40,49 @@ political_decisions = {
         ai_will_do = { factor = 0 }
     }
 
+    enable_options_2 = {
+        picture = starting_options
+        alert = yes
+        potential = {
+            ai = no
+            NOT = { has_global_flag = looking_through_options_2 }
+            NOT = { year = 1837 }
+        }
+
+        allow = {
+            NOT = { year = 1837 }
+        }
+
+        effect = {
+            set_global_flag = looking_through_options_2
+            set_country_flag = country_looking_through_options_2
+        }
+
+        ai_will_do = { factor = 0 }
+    }
+
+    disable_options_2 = {
+        picture = starting_options
+        alert = no
+        potential = {
+            ai = no
+            has_country_flag = country_looking_through_options_2
+            NOT = { year = 1837 }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            clr_global_flag = looking_through_options_2
+            clr_country_flag = country_looking_through_options_2
+        }
+
+        ai_will_do = { factor = 0 }
+    }
+
+
+
     turn_on_government_decisions = {
         picture = government_decisions
         alert = no

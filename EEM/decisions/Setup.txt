@@ -24,8 +24,7 @@ political_decisions = {
         alert = no
         potential = {
             ai = no
-            has_country_flag = country_looking_through_options
-            NOT = { has_global_flag = permanently_hide_options }
+            has_country_flag = country_looking_through_options_2
             NOT = { has_global_flag = splendid_isolation }
             NOT = { year = 1837 }
         }
@@ -364,7 +363,7 @@ political_decisions = {
         alert = no
         potential = {
             ai = no
-            has_country_flag = country_looking_through_options
+            has_country_flag = country_looking_through_options_2
             NOT = { year = 1837 }
             NOT = { has_global_flag = tax_refund_disabled }
         }
@@ -383,7 +382,7 @@ political_decisions = {
         alert = no
         potential = {
             ai = no
-            has_country_flag = country_looking_through_options
+            has_country_flag = country_looking_through_options_2
             NOT = { year = 1837 }
             NOT = { has_global_flag = starting_infamy }
         }
