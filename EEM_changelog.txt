@@ -42,39 +42,26 @@ commerce = 15
 
 industry = 20 + 5
 ####################################################################################################
-#TODO: add a demote craftsmen and clerks in colonies option/decision
-#TODO: move the EEM setup decisions into its own setup decision
+v0.5.8s
 
-#TODO: let the Taiping rebel from the Red Turbans
-#TODO: make picking the gelaohui in the Red Turban power struggle event not force you to get uncivilized_isolationism
-#TODO: let the Sanhehui blob into Lanfang and Singapore
-#TODO: make even more sure the mini-Taiping and mini-Red Turban rebellions work correctly, including core removal
-#TODO: pro-Qing intervention in the Taiping / Red Turban rebellions
-#TODO: look at terrain in China and Japan
+1644 Meakan (Nemuro), not Ishikari (Sapporo), is now the target of the Hokkaido gold rush. The Konomai gold mine is located there, not in Sapporo.
+1643 Ishikari (Sapporo) now shifts to coal after 1870
+	The Ishikari coalfield contains the largest quantity of coal of Japan. Coal was discovered there in 1868 and mining began in 1874.
+	Japanese coal is found in the extreme ends of the country, in Hokkaidō and Kyūshū, which have, respectively, 45 and 40 percent of the country's coal deposits. Kyūshū's coal is generally of poor quality and hard to extract, but the proximity of the Kyūshū mines to ports facilitates transportation. In Hokkaido, the seams are wider, can be worked mechanically, and offer a higher-quality coal.
+1104 Sheki now starts as silk (instead grain) and no longer shifts to oil
+	Sheki had a significant silk industry, and the Baku oil fields don't go that far inland anyways
+	"During 1850–70, Shaki became international silk production centre.[39] More than 200 European companies opened offices in the city, while silkworms to the tune of 3 million roubles were sold to them in a year.[39]"
+	https://www.bbc.com/travel/article/20230816-sheki-the-caucasus-unsung-culture-capital
+	There is evidence of sericulture (silkworm breeding and silk production) in the region dating back to the 6th Century, but it was the Sheki khans who turned it into a thriving business. "By the 18th and 19th Centuries, Sheki silk was considered amongst the finest in the world," said Gudratli.
 
-#TODO: East Shandong trade zone keeps disappearing and reappearing for some reason. The only things they border are the Red Turbans, Japan, and the USA... maybe Japan keeps trying to influence it?
+EEM's and the HPM Politics & Economy mod's options setup decisions are now grouped under its own header instead of being clumped with all the HPM setup options
+Added a demote craftsmen and clerks stranded in colonies option/decision so there won't be eternally unemployed workers annoying you, reset the pop promotion chances to HPM's
+craftsmen exploit no longer gives infamy
 
-#TODO: add more events for China giving up treaty ports
-#TODO: check if the Boxer rebellion ever actually happens
+Removed the AI war encouragement event options in the Civilization and Gunboats events
 
-#TODO: remove the forced intervention choices for the gunboat unciv events
 
-#TODO: optimize events and decisions
-	#TODO: have the olympics and nobel prize work using variables so the save file isn't clogged up with a bunch of global flags
-
-#TODO: Change behavior if the generic anti-Qing rebels win
-	#TODO: make sure China immediately annexes the trade zones
-	#TODO: The merge China with the Red Turbans / Taiping event is now immediately triggered by the anti-Qing victory event (different versions firing depending on if Red Turbans / Taiping have been defeated / cores removed yet)
-	#TODO: make sure ALL periphery territories are lost:
-		#TODO: Manchuria ganes cores on Chengde 1613
-		#TODO: Mongolia gets cores on Inner Mongolia
-		#TODO: make sure All Manchuria / Mongolia / Tuva / Kumul / Xinjiang / Kashgaria / Tibet / Qinghai / Yunnan / Guangxi / Guangdong / Fujian / Taiwan cores given to those countries and are released
-		#TODO: maybe also make it add the warlord cores and release the warlord tags?
-
-	#TODO: check the conditions under which Russia gets to puppet Mongolia. Maybe make it trigger an event for Mongolia warning Russia is going to puppet it, and Tuva gets to refuse and start a war? Mongolia always refuses if Russia doesn't border it?
-	#TODO: check the conditions under which Russia gets to annex Tuva. Maybe make it trigger an event for Tuva warning Russia is going to annex it, and Tuva gets to refuse and start a war? Tuva always refuses if Russia doesn't border it?
-
-####################################################################################################
+###################################################################################################
 v0.5.8r
 rebalanced military: late game military techs and inventions now are more consistent with the older inventions. Late game combat is now faster and more deadly.
 	Artillery and Plane support values now continously increase.

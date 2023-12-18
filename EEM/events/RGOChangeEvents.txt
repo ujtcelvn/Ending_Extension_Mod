@@ -1718,6 +1718,7 @@ province_event = {
                     province_id = 953   #Stanislavov
                     province_id = 714   #Tarnow
                     province_id = 704   #Nowy Sacz
+                    province_id = 1643   #Ishikari (Sapporo), largest coalfield in Japan, discovered in 1868 and mining began in 1874
                 }
             }
             AND = {
