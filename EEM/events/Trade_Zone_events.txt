@@ -185,6 +185,7 @@ country_event = {
         any_country = {
             limit = {
                 is_greater_power = yes
+                THIS = { any_owned_province = { port = yes } }
                 OR = {
                     #owns = 1498 #Macao
                     #owns = 1538 #Shanghai

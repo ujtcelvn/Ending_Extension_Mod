@@ -380,6 +380,12 @@ country_event = {
 
     mean_time_to_happen = {
         months = 24
+        modifier = {
+            factor = 0.01
+            tag = LOM
+            #has_country_flag = milan_called_for_aid
+            has_country_flag = milan_got_aid
+        }
     }
 
     option = {
@@ -1058,5 +1064,58 @@ country_event = {
         prestige = 2
         add_country_modifier = { name = reading duration = 730 }
         any_pop = { scaled_consciousness = { factor = 1    } }
+    }
+}
+
+# Liberal Unrest in the Papal States
+country_event = {
+    id = 110055
+    title = "EVTNAME110055"
+    desc = "EVTDESC110055"
+    picture = "riot"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+
+    option = {
+        name = "EVT110055OPTA"
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+                NOT = { type = aristocrats }
+                NOT = { type = officers }
+            }
+            ideology = {
+                value = reactionary
+                factor = -0.4
+            }
+            ideology = {
+                value = liberal
+                factor = 0.05
+            }
+        }
+        any_pop = {
+            limit = {
+                is_primary_culture = no
+                is_accepted_culture = yes
+                NOT = { type = aristocrats }
+                NOT = { type = officers }
+            }
+            ideology = {
+                value = reactionary
+                factor = -0.45
+            }
+            ideology = {
+                value = liberal
+                factor = 0.25
+            }
+            consciousness = 3
+        }
+
+        any_owned = {
+            limit = { state_id = 741 }
+            add_province_modifier = { name = liberal_agitation duration = 730 }
+        }
     }
 }

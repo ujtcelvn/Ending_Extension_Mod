@@ -1054,10 +1054,10 @@ country_event = {
                 }
             }
         }
-        any_country = {
-            limit = { is_greater_power = yes }
-            diplomatic_influence = { who = THIS value = -200 }
-        }
+        #any_country = {
+        #    limit = { is_greater_power = yes }
+        #    diplomatic_influence = { who = THIS value = -200 }
+        #}
 
         any_country = {
             limit = {
@@ -1081,6 +1081,426 @@ country_event = {
             }
             civilized = yes
         }
+
+        any_country = {
+            limit = {
+                tag = QNG
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = QNG }
+                    NOT = { sphere_owner = { tag = QNG } }
+                }
+                diplomatic_influence = {
+                    who = QNG
+                    value = -400
+                }
+                relation = {
+                    who = QNG
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = CHI
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = CHI }
+                    NOT = { sphere_owner = { tag = CHI } }
+                }
+                diplomatic_influence = {
+                    who = CHI
+                    value = -400
+                }
+                relation = {
+                    who = CHI
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = TPG
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = TPG }
+                    NOT = { sphere_owner = { tag = TPG } }
+                }
+                diplomatic_influence = {
+                    who = TPG
+                    value = -400
+                }
+                relation = {
+                    who = TPG
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = RTR
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = RTR }
+                    NOT = { sphere_owner = { tag = RTR } }
+                }
+                diplomatic_influence = {
+                    who = RTR
+                    value = -400
+                }
+                relation = {
+                    who = RTR
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = KMT
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = KMT }
+                    NOT = { sphere_owner = { tag = KMT } }
+                }
+                diplomatic_influence = {
+                    who = KMT
+                    value = -400
+                }
+                relation = {
+                    who = KMT
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = FJN
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = FJN }
+                    NOT = { sphere_owner = { tag = FJN } }
+                }
+                diplomatic_influence = {
+                    who = FJN
+                    value = -400
+                }
+                relation = {
+                    who = FJN
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = GMJ
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = GMJ }
+                    NOT = { sphere_owner = { tag = GMJ } }
+                }
+                diplomatic_influence = {
+                    who = GMJ
+                    value = -400
+                }
+                relation = {
+                    who = GMJ
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = GNG
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = GNG }
+                    NOT = { sphere_owner = { tag = GNG } }
+                }
+                diplomatic_influence = {
+                    who = GNG
+                    value = -400
+                }
+                relation = {
+                    who = GNG
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = GXI
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = GXI }
+                    NOT = { sphere_owner = { tag = GXI } }
+                }
+                diplomatic_influence = {
+                    who = GXI
+                    value = -400
+                }
+                relation = {
+                    who = GXI
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = HNN
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = HNN }
+                    NOT = { sphere_owner = { tag = HNN } }
+                }
+                diplomatic_influence = {
+                    who = HNN
+                    value = -400
+                }
+                relation = {
+                    who = HNN
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = HUI
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = HUI }
+                    NOT = { sphere_owner = { tag = HUI } }
+                }
+                diplomatic_influence = {
+                    who = HUI
+                    value = -400
+                }
+                relation = {
+                    who = HUI
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = MCK
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = MCK }
+                    NOT = { sphere_owner = { tag = MCK } }
+                }
+                diplomatic_influence = {
+                    who = MCK
+                    value = -400
+                }
+                relation = {
+                    who = MCK
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = SXI
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = SXI }
+                    NOT = { sphere_owner = { tag = SXI } }
+                }
+                diplomatic_influence = {
+                    who = SXI
+                    value = -400
+                }
+                relation = {
+                    who = SXI
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = SZC
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = SZC }
+                    NOT = { sphere_owner = { tag = SZC } }
+                }
+                diplomatic_influence = {
+                    who = SZC
+                    value = -400
+                }
+                relation = {
+                    who = SZC
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = TAI
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = TAI }
+                    NOT = { sphere_owner = { tag = TAI } }
+                }
+                diplomatic_influence = {
+                    who = TAI
+                    value = -400
+                }
+                relation = {
+                    who = TAI
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = XBI
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = XBI }
+                    NOT = { sphere_owner = { tag = XBI } }
+                }
+                diplomatic_influence = {
+                    who = XBI
+                    value = -400
+                }
+                relation = {
+                    who = XBI
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = XIN
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = XIN }
+                    NOT = { sphere_owner = { tag = XIN } }
+                }
+                diplomatic_influence = {
+                    who = XIN
+                    value = -400
+                }
+                relation = {
+                    who = XIN
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = YNN
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = YNN }
+                    NOT = { sphere_owner = { tag = YNN } }
+                }
+                diplomatic_influence = {
+                    who = YNN
+                    value = -400
+                }
+                relation = {
+                    who = YNN
+                    value = -200
+                }
+            }
+        }
+        any_country = {
+            limit = {
+                tag = MAO
+                part_of_sphere = no
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { is_culture_group = east_asian }
+                    NOT = { alliance_with = MAO }
+                    NOT = { sphere_owner = { tag = MAO } }
+                }
+                diplomatic_influence = {
+                    who = MAO
+                    value = -400
+                }
+                relation = {
+                    who = MAO
+                    value = -200
+                }
+            }
+        }
+
 
     }
 }

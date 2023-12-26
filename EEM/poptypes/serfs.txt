@@ -23,7 +23,7 @@ life_needs = {
     grain =  2.5 #2.25     #2                       # 2.5     #5.5     2.2
 }
 
-#HPM: 43.75 (73.75 with opium)
+#HPM: 43.75 (75.75 with opium)
 everyday_needs = {
     coal = 1
     tobacco = 5

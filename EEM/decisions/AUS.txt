@@ -249,12 +249,23 @@ political_decisions = {
             set_country_flag = hungarian_revolution_began
             small_arms = 10
             regular_clothes = 10
-            leadership = 40
+            #leadership = 40
             define_general = {
                 name = "Józef Bem"
                 personality = intelligent
                 background = natural_born_leader
             }
+            define_general = {
+                name = "Mór Perczel"
+                personality = charismatic
+                background = politician
+            }
+            define_general = {
+                name = "Artúr Görgei"
+                personality = disciplined
+                background = engineer
+            }
+
             add_country_modifier = {
                 name = begin_revolution
                 duration = 365
@@ -1134,6 +1145,70 @@ political_decisions = {
                 factor = 0
                 NOT = { has_country_modifier = benefactor_ai }
             }
+        }
+    }
+
+
+
+    austria_call_allies_against_italy = {
+        picture = gtfo
+        potential = {
+            tag = AUS
+            ai = yes
+            NOT = { has_country_flag = austria_called_allies_against_italy }
+            #year = 1840 #age of liberalism
+            NOT = { year = 1855 } #springtime of nations should be 1847~1848
+            has_global_flag = venetian_revolution_occurred
+            has_global_flag = milanese_revolution_occurred
+            OR = {
+                AND = {
+                    owns = 730
+                    war_with = VEN
+                }
+                AND = {
+                    owns = 727
+                    OR = {
+                        war_with = LOM
+                        AND = {
+                            OR = {
+                                tag = SAR
+                                tag = SVY
+                            }
+                            LOM = { has_country_flag = milan_got_aid }
+                        }
+                    }
+                }
+            }
+            
+            OR = {
+                national_provinces_occupied = .25
+                any_greater_power = { war_with = THIS }
+                capital_scope = {
+                    NOT = { controlled_by = THIS }
+                    NOT = { controlled_by = HUN }
+                    NOT = { controlled_by = REB }
+                }
+            }
+        }
+        allow = {
+        }
+        effect = {
+            set_country_flag = austria_called_allies_against_italy
+            prestige = -10
+            any_country = {
+                limit = {
+                    OR = {
+                        primary_culture = north_italian
+                        primary_culture = south_italian
+                    }
+                    alliance_with = THIS
+                }
+                leave_alliance = THIS
+            }
+            country_event = 96001
+        }
+        ai_will_do = {
+            factor = 1
         }
     }
 

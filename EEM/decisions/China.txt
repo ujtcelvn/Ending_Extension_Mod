@@ -870,6 +870,16 @@ political_decisions = {
             }
             any_country = {
                 limit = {
+                    rank = 16
+                    NOT = { any_owned_province = { is_core = CHI } }
+                }
+                relation = {
+                    who = THIS
+                    value = 100
+                }
+            }
+            any_country = {
+                limit = {
                     exists = yes
                     OR = {
                         has_country_flag = kuomintang_faction
@@ -1151,6 +1161,16 @@ political_decisions = {
                     change_tag = CHI
                     primary_culture = beifaren
                     add_accepted_culture = nanfaren
+                }
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { any_owned_province = { is_core = CHI } }
+                }
+                relation = {
+                    who = THIS
+                    value = 100
                 }
             }
             any_country = {
@@ -1478,6 +1498,16 @@ political_decisions = {
                 }
                 CHI = {
                     all_core = { add_core = RTR }
+                }
+            }
+            any_country = {
+                limit = {
+                    rank = 16
+                    NOT = { any_owned_province = { is_core = CHI } }
+                }
+                relation = {
+                    who = THIS
+                    value = 100
                 }
             }
             any_country = {
