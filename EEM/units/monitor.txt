@@ -29,9 +29,9 @@ monitor = {
         canned_food = 20          # 320  | was 12 - 192
         regular_clothes = 20      # 116  | was 12 - 69.6
         #HPM: fuel = 10                 # 250    | was 0
-        oil = 10                 # 120    | HPM: was 0
+        coal = 20                 # 46    | HPM: was 0
     }
-    # Total: 6756 | HPM: 6886 | was 2606.6
+    # Total: 6636 | HPM: 6886 | was 2606.6
     min_port_level = 3
     limit_per_port = -1
     supply_consumption_score = 3
@@ -43,8 +43,7 @@ monitor = {
         canned_food = 0.4
         ammunition = 0.3
         regular_clothes = 0.1
-        #HPM: fuel = 0.5
-        oil = 0.5 #HPM: 0
+        fuel = 0.5
         coal = 0.5
         tobacco = 0.6
     }

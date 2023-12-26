@@ -803,7 +803,12 @@ political_decisions = {
             random_country = {
                 limit = {
                     tag = AUS
-                    owns = 726
+                    OR = {
+                       owns = 726
+                       owns = 727
+                       owns = 728
+                       owns = 2669
+                    }
                 }
                 THIS = {
                     war = {
@@ -822,7 +827,12 @@ political_decisions = {
             random_country = {
                 limit = {
                     tag = KUK
-                    owns = 726
+                    OR = {
+                       owns = 726
+                       owns = 727
+                       owns = 728
+                       owns = 2669
+                    }
                 }
                 THIS = {
                     war = {
@@ -1506,6 +1516,49 @@ political_decisions = {
         effect = {
             add_accepted_culture = maltese
             854 = { add_core = ITA }
+        }
+    }
+
+    milan_calls_for_aid = {
+        picture = gtfo
+        potential = {
+            tag = LOM
+            #has_country_flag = milanese_revolution_began
+            has_global_flag = milanese_revolution_occurred 
+            NOT = { has_country_flag = milan_called_for_aid }
+            war_with = AUS
+            OR = {
+                SAR = {
+                    exists = yes
+                    is_vassal = no
+                }
+                SVY = {
+                    exists = yes
+                    is_vassal = no
+                }
+            }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_country_flag = milan_called_for_aid
+            random_country = {
+                limit = {
+                    OR = {
+                       tag = SAR
+                       tag = SVY
+                    }
+                    is_vassal = no
+                    exists = yes
+                }
+                country_event = 10341
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
         }
     }
 

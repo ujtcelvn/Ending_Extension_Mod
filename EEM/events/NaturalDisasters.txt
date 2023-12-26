@@ -421,6 +421,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -441,6 +443,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -461,6 +465,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -481,6 +487,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -501,6 +509,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -521,6 +531,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -541,6 +553,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_drought duration = 365 }
                         }
                     }
@@ -563,6 +577,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -583,6 +599,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -603,6 +621,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -623,6 +643,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -643,6 +665,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -663,6 +687,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -683,6 +709,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_productive_year
+                            remove_province_modifier = homeland_drought
                             add_province_modifier = { name = severe_homeland_drought duration = 365 }
                         }
                     }
@@ -760,6 +788,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }
@@ -780,6 +810,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }
@@ -800,6 +832,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }
@@ -820,6 +854,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }
@@ -840,6 +876,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }
@@ -860,6 +898,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }
@@ -880,6 +920,8 @@ country_event = {
                                     terrain = arctic
                                 }
                             }
+                            remove_province_modifier = homeland_drought
+                            remove_province_modifier = severe_homeland_drought
                             add_province_modifier = { name = homeland_productive_year duration = 365 }
                         }
                     }

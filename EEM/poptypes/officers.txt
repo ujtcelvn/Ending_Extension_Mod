@@ -60,10 +60,10 @@ everyday_needs = {
     artillery = 0.1
     steel = 0.25
     cement = 0.25
-    lumber = 0.25 #0.5   #cost = 1.0 per unit
+    lumber = 0.5 #0.25 #0.5   #cost = 1.0 per unit
 
-    opium = 0.25 #0
-    wool = 0.5   #0    #cost = 0.7 per unit
+    #opium = 0.25 #0
+    #wool = 0.5   #0    #cost = 0.7 per unit
 }
 
 #Total cash needed: 437.4 - Vanilla value: 383.4
@@ -74,7 +74,7 @@ luxury_needs = {
     canned_food = 0.75
     fruit = 1
     wool = 3
-    opium = 0.75 #1
+    opium = 1
     luxury_clothes = 1
     luxury_furniture = 1
     telephones = 1.25

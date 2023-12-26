@@ -1932,6 +1932,7 @@ political_decisions = {
             QNG = { country_event = { id = 160009 days = 5 } }
             ENG = { country_event = { id = 98200 days = 3 } }
             HAI = { country_event = { id = 45106 days = 3 } }
+            PAP = { country_event = { id = 110055 days = 2 } }
             ##########################################################
 
             ################Uncivs Close their borders###########################
@@ -2794,6 +2795,7 @@ political_decisions = {
                     exists = yes
                     is_greater_power = yes
                     NOT = { is_our_vassal = NEH }
+                    NOT = { tag = PRU }
                 }
                 diplomatic_influence = { who = NEH value = -400 }
             }

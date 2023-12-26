@@ -28,11 +28,11 @@ country_event = {
         }
 
         OR = {
-            AND = {
-                money =  1100000 
-                NOT = { total_pops = 4000000 }
-                NOT = { no_standard = 1 }
-            }
+            #AND = {
+            #    money =  1100000 
+            #    NOT = { total_pops = 4000000 }
+            #    NOT = { no_standard = 1 }
+            #}
             AND = {
                 money =  2100000 
                 NOT = { total_pops = 8000000 }
@@ -54,18 +54,23 @@ country_event = {
                 NOT = { modern_central_bank_system = 1 }
             }
             AND = {
-                money = 10100000 
+                money =  10100000 
                 NOT = { total_pops = 128000000 }
-                NOT = { monetary_system_7 = 1 }
+                NOT = { market_determined_exchange_rates = 1 }
             }
             AND = {
-                money = 15010000 
-                OR = {
-                    total_pops = 258000000
-                    monetary_system_7 = 1
-                }
+                money = 15100000 
+                NOT = { total_pops = 258000000 }
+                NOT = { monetary_system_7 = 1 }
             }
-            money =     20010000
+            #AND = {
+                money = 20010000
+            #    OR = {
+            #        total_pops = 512000000
+            #        monetary_system_7 = 1
+            #    }
+            #}
+            #money =     25010000
         }
     }
 

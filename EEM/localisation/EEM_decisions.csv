@@ -261,3 +261,7 @@ option_enable_demote_colonial_craftsmen_title;Option: Enable Colonial Craftsmen 
 option_enable_demote_colonial_craftsmen_desc;Sometimes craftsmen and clerks who somehow find themselves trapped in a colonial state take forever to demote. This option enables a government decision that demotes them instantly.;;;;;;;;;;;;;
 demote_colonial_craftsmen_title;Demote Colonial Craftsmen and Clerks;;;;;;;;;;;;;
 demote_colonial_craftsmen_desc;There are many unemployed factory workers trapped in our colonies. We can help them find work better suited to the local area.;;;;;;;;;;;;;
+milan_calls_for_aid_title;Request Aid from Piedmont;;;;;;;;;;;;;
+milan_calls_for_aid_desc;We are too weak to fight against the Austrians alone - in the name of Itanian independence, we can call on the Piedmontese for aid.;;;;;;;;;;;;;
+austria_call_allies_against_italy_title;Call Allies;;;;;;;;;;;;;
+austria_call_allies_against_italy_desc;the Milanese and Venetian revolutionaries have brought in foreign intervention on their side, elevating what should be an internal affair into an international incident. This gives us justification to call the allies on our side into the war as well. This would reveal our weakness to the world, but we must not give in to rabble without a fight.;;;;;;;;;;;;;

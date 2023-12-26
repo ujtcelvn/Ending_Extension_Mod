@@ -42,6 +42,46 @@ commerce = 15
 
 industry = 20 + 5
 ####################################################################################################
+v0.5.8t
+
+removed lowest tax refund tier
+
+When the Warlord Era begins, each Warlord gets -200 relations and Hostile influence with every GP and SP if not already in their sphere or allied with them or if they're Chinese
+When the Warlord Era ends, the surviving China gets 100 relations with all GP / SPs who don't own any CHI cores
+Imperial faction gets slightly fewer supporters in the Boshin War if you manually killed Emperor Komei
+
+begin_hungarian_revolution gets scripted generals instead of just 40 leadership: Artúr Görgei (disciplined, drillmaster) and Mór Perczel (charismatic, politician) as generals. (Józef Bem was already guaranteed, while other famous generals like György Klapka, Károly Vécsey, and János Damjanich weren't even colonels yet by September 1848).
+
+The AI script for war_italian_independence now also considers Sondrio 2669 and checks for more edge cases
+
+Added events for the Milanese and Venetian rebellions
+    venetian_revolution_1848.tga
+	milanese_revolution_1848.tga
+Austria will only call allies when fighting Venice or Lombardy under the same conditions as them calling allies in the Hungarian revolution (national_provinces_occupied = .25 OR war with any_greater_power)
+Lombardy gets released with only Milan in the rebellion and starts with correct laws
+Lombardy gets to call for aid from S-P
+S-P gets 10 prestige for helping Milan
+Event for non-democratic South Italians to stop supporting Venice
+setup event to make Papal pops more liberal
+Austria no longer gets free prestige in the Hungarian Revolution
+Austria can call allies against the Italians if Austria is losing
+
+Neuchatel now starts sphered by Prussia
+
+reverted all pop needs back to HPM-master values
+Increased opium price back to $3.2 (opium was only $3 in HPM's beta tests where opium RGOs printed money directly, otherwise it was always $3.2)
+
+Made the 3 North German states that start in the Austrian sphere (Hesse-Kassel, Hesse-Darmstadt, Frankfurt am Main) start allied with Austria instead of with Prussia. Nassau now starts allied to BOTH Austria and Prussia.
+
+Trade zone revocation event war only fires if your favorite China has a coastline
+
+return power tech farm_rgo_eff back to 0.2
+Monitors now cost coal to build, instead of oil or fuel
+Monitors need fuel as supply again
+
+Homeland drought and productive year now mutually exclusive
+
+####################################################################################################
 v0.5.8s
 
 1644 Meakan (Nemuro), not Ishikari (Sapporo), is now the target of the Hokkaido gold rush. The Konomai gold mine is located there, not in Sapporo.
@@ -60,8 +100,6 @@ craftsmen exploit no longer gives infamy
 
 Removed the AI war encouragement event options in the Civilization and Gunboats events
 
-
-###################################################################################################
 v0.5.8r
 rebalanced military: late game military techs and inventions now are more consistent with the older inventions. Late game combat is now faster and more deadly.
 	Artillery and Plane support values now continously increase.
@@ -82,7 +120,6 @@ changed several invention base chance from 3 to 2 for consistency
 piston_steam_engine and high_pressure_steam_engine farm output increased to 0.2
 steam_turbine, combustion_engine, electrical_power_generation, tech_power_7 farm output decreased to 0.05
 
-####################################################################################################
 v0.5.8q
 Japan now gets more daimyo ships
 
