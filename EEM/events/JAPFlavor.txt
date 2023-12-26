@@ -1085,6 +1085,10 @@ country_event = {
                 factor = 1.2
                 has_country_flag = tozama_daimyo
             }
+            modifier = {
+                factor = 0.8
+                has_global_flag = killed_emperor_komei
+            }
         }
     }
 
