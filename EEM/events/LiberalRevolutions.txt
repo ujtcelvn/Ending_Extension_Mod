@@ -6128,7 +6128,8 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        months = 1
+        #months = 1
+        days = 7
     }
 
     immediate = {
@@ -6184,7 +6185,7 @@ country_event = {
                 }
                 diplomatic_influence = {
                     who = VEN
-                    value = 100
+                    value = 200
                 }
             }
             any_country = {
@@ -6198,15 +6199,6 @@ country_event = {
                 relation = {
                     who = VEN
                     value = 100
-                }
-            }
-            any_country = {
-                limit = {
-                    is_culture_group = italian
-                    NOT = { in_sphere = AUS }
-                    NOT = { in_sphere = KUK }
-                    NOT = { tag = THIS }
-                    ai = yes
                 }
                 create_alliance = VEN
             }
@@ -6522,7 +6514,7 @@ country_event = {
                 }
                 diplomatic_influence = {
                     who = VEN
-                    value = 100
+                    value = 200
                 }
             }
             any_country = {
@@ -6536,15 +6528,6 @@ country_event = {
                 relation = {
                     who = VEN
                     value = 100
-                }
-            }
-            any_country = {
-                limit = {
-                    primary_culture = north_italian
-                    NOT = { in_sphere = AUS }
-                    NOT = { in_sphere = KUK }
-                    NOT = { tag = THIS }
-                    ai = yes
                 }
                 create_alliance = VEN
             }
