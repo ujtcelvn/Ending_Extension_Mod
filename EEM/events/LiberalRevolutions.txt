@@ -6207,7 +6207,6 @@ country_event = {
                     NOT = { in_sphere = KUK }
                     NOT = { tag = THIS }
                     ai = yes
-                    NOT = { government = theocracy } #Pope doesn't join
                 }
                 create_alliance = VEN
             }
@@ -6546,7 +6545,6 @@ country_event = {
                     NOT = { in_sphere = KUK }
                     NOT = { tag = THIS }
                     ai = yes
-                    NOT = { government = theocracy } #Pope doesn't join
                 }
                 create_alliance = VEN
             }
