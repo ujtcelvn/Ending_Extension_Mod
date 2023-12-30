@@ -724,16 +724,14 @@ political_decisions = {
                 has_country_flag = war_italian_independence
             }
             OR = {
-                AUS = {
-                    owns = 726
-                    owns = 727
-                    owns = 728
-                }
-                KUK = {
-                    owns = 726
-                    owns = 727
-                    owns = 728
-                }
+                726 = { owned_by = AUS }
+                727 = { owned_by = AUS }
+                728 = { owned_by = AUS }
+                2669 = { owned_by = AUS }
+                726 = { owned_by = KUK }
+                727 = { owned_by = KUK }
+                728 = { owned_by = KUK }
+                2669 = { owned_by = KUK }
             }
         }
 
@@ -803,7 +801,12 @@ political_decisions = {
             random_country = {
                 limit = {
                     tag = AUS
-                    owns = 726
+                    OR = {
+                       owns = 726
+                       owns = 727
+                       owns = 728
+                       owns = 2669
+                    }
                 }
                 THIS = {
                     war = {
@@ -822,7 +825,12 @@ political_decisions = {
             random_country = {
                 limit = {
                     tag = KUK
-                    owns = 726
+                    OR = {
+                       owns = 726
+                       owns = 727
+                       owns = 728
+                       owns = 2669
+                    }
                 }
                 THIS = {
                     war = {
@@ -1509,4 +1517,44 @@ political_decisions = {
         }
     }
 
+    begin_venetian_revolution = {
+        picture = gtfo
+        potential = {
+            tag = VEN
+            has_global_flag = venetian_revolution_occurred
+            NOT = { has_country_flag = venetian_revolution_began }
+        }
+
+        allow = {
+            war_with = AUS
+        }
+
+        effect = {
+            set_country_flag = venetian_revolution_began
+            small_arms = 10
+            regular_clothes = 10
+            define_general = {
+                name = "Daniele Manin"
+                personality = maladroit
+                background = nationalist
+            }
+            add_country_modifier = {
+                name = begin_revolution
+                duration = 365
+            }
+            any_pop = {
+                limit = {
+                    OR = {
+                        has_pop_culture = north_italian
+                        has_pop_culture = south_italian
+                    }
+                }
+                militancy = -8
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }

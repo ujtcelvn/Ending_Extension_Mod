@@ -249,12 +249,23 @@ political_decisions = {
             set_country_flag = hungarian_revolution_began
             small_arms = 10
             regular_clothes = 10
-            leadership = 40
+            #leadership = 40
             define_general = {
                 name = "Józef Bem"
                 personality = intelligent
                 background = natural_born_leader
             }
+            define_general = {
+                name = "Mór Perczel"
+                personality = charismatic
+                background = politician
+            }
+            define_general = {
+                name = "Artúr Görgei"
+                personality = disciplined
+                background = engineer
+            }
+
             add_country_modifier = {
                 name = begin_revolution
                 duration = 365

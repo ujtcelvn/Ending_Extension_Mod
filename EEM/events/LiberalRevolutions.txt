@@ -5833,3 +5833,922 @@ country_event = {
         }
     }
 }
+
+
+country_event = {
+    id = 10340
+    title = "EVTNAME10340" #5 Days of Milan
+    desc = "EVTDESC10340"
+    picture = "milanese_revolution_1848"
+
+    fire_only_once = yes
+
+    trigger = {
+        NOT = { has_global_flag = milanese_revolution_occurred }
+        tag = AUS
+        726 = { owned_by = AUS }
+        OR = {
+            726 = { controlled_by = AUS }
+            726 = { controlled_by = REB }
+        }
+        OR = {
+            AUS = { has_country_modifier = springtime_of_nations }
+            AND = {
+                726 = { controlled_by = REB }
+                AUS = { has_country_flag = liberal_revolution_in_progress }
+            }
+        }
+        NOT = {
+            LOM = { involved_in_crisis = yes }
+            exists = LOM
+            #exists = ITA
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_global_flag = milanese_revolution_occurred
+    }
+
+    option = {
+        name = "EVT10340OPTA"
+
+        any_pop = {
+            limit = {
+                has_pop_culture = north_italian
+                location = { is_core = LOM }
+            }
+            militancy = 6
+        }
+
+        any_owned = {
+            limit = {
+                is_core = LOM
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1095
+            }
+        }
+
+        random_country = {
+            limit = {
+                OR = {
+                   tag = SAR
+                   tag = SVY
+                }
+                is_vassal = no
+            }
+            country_event = 10341
+        }
+
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "EVT10340OPTB"
+        set_country_flag = austria_let_lombardy_go
+        prestige = -10
+        badboy = -2
+        any_owned = {
+            limit = {
+                is_core = LOM
+            }
+            secede_province = LOM
+        }
+
+        relation = { who = LOM value = -100 }
+        prestige = -10
+        casus_belli = {
+            target = LOM
+            type = conquest
+            months = 60
+        }
+        casus_belli = {
+            target = LOM
+            type = cut_down_to_size
+            months = 60
+        }
+
+        any_pop = {
+            limit = {
+                has_pop_culture = north_italian
+                location = { is_core = ITA }
+            }
+            militancy = 6
+        }
+
+        any_owned = {
+            limit = {
+                is_core = ITA
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1095
+            }
+        }
+
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                national_provinces_occupied = 0.25
+            }
+            modifier = {
+                factor = 0
+                war = no
+                NOT = { revolt_percentage = 0.25 }
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 10341
+    title = "EVTNAME10341" #5 Days of Milan
+    desc = "EVTDESC10341"
+    picture = "milanese_revolution_1848"
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT10341OPTA"
+
+        #any_country = {
+        #    limit = {
+        #        is_culture_group = italian
+        #        NOT = { in_sphere = AUS }
+        #        NOT = { in_sphere = KUK }
+        #        NOT = { tag = THIS }
+        #        ai = yes
+        #        THIS = { ai = yes }
+        #    }
+        #    relation = {
+        #        who = THIS
+        #        value = 100
+        #    }
+        #    create_alliance = THIS
+        #}
+        #add_country_modifier = {
+        #    name = small_country_draft
+        #    duration = 365
+        #}
+        any_country = {
+            limit = {
+                tag = FRA
+                alliance_with = THIS
+                THIS = { is_greater_power = no }
+            }
+            set_country_flag = restore_alliance
+            leave_alliance = THIS
+        }
+
+        relation = {
+            who = AUS
+            value = -100
+        }
+
+        random_country = {
+            limit = {
+                tag = AUS
+                is_sphere_leader_of = VEN
+            }
+            diplomatic_influence = {
+                who = VEN
+                value = -200
+            }
+        }
+
+        war = {
+            target = AUS
+            attacker_goal = {
+                casus_belli = unification_casus_belli
+                state_province_id = 726
+            }
+            defender_goal = {
+                casus_belli = humiliate
+            }
+            call_ally = yes
+        }
+
+        any_country = {
+            limit = {
+                tag = FRA
+                has_country_flag = restore_alliance
+            }
+            clr_country_flag = restore_alliance
+            create_alliance = THIS
+        }
+
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "EVT10341OPTB"
+        prestige = -10
+
+        any_pop = {
+            limit = {
+                is_culture_group = italian
+            }
+            scaled_militancy = {
+                issue = jingoism
+                factor = 3
+            }
+        }
+
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                national_provinces_occupied = 0.25
+            }
+            modifier = {
+                factor = 0
+                war = no
+                NOT = { revolt_percentage = 0.25 }
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 10342
+    title = "EVTNAME10342" #Venetian revolution
+    desc = "EVTDESC10342"
+    picture = "venetian_revolution_1848"
+
+    fire_only_once = yes
+
+    trigger = {
+        NOT = { has_global_flag = venetian_revolution_occurred }
+        tag = AUS
+        729 = { owned_by = AUS }
+        OR = {
+            729 = { controlled_by = AUS }
+            729 = { controlled_by = REB }
+        }
+        OR = {
+            AUS = { has_country_modifier = springtime_of_nations }
+            AND = {
+                729 = { controlled_by = REB }
+                AUS = { has_country_flag = liberal_revolution_in_progress }
+            }
+        }
+        NOT = {
+            VEN = { involved_in_crisis = yes }
+            exists = VEN
+            #exists = ITA
+        }
+
+        OR = {
+            has_global_flag = milanese_revolution_occurred
+            exists = LOM
+            NOT = { 726 = { owned_by = AUS }}
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_global_flag = venetian_revolution_occurred
+    }
+
+    option = {
+        name = "EVT10342OPTA"
+
+        any_owned = {
+            limit = {
+                region = AUS_729
+                NOT = { province_id = 730 }
+            }
+            secede_province = VEN
+        }
+
+        any_owned = {
+            limit = {
+                is_core = VEN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1095
+            }
+        }
+
+        VEN = {
+            capital = 729
+            government = democracy
+            political_reform = mandatory_service
+            political_reform = non_secret_ballots
+            political_reform = universal_weighted_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            set_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+            ruling_party_ideology = liberal
+            random_country = {
+                limit = {
+                    is_culture_group = italian
+                    is_greater_power = yes
+                    VEN = {
+                        NOT = { sphere_owner = { is_culture_group = italian } }
+                    }
+                }
+                diplomatic_influence = {
+                    who = VEN
+                    value = 100
+                }
+            }
+            any_country = {
+                limit = {
+                    is_culture_group = italian
+                    NOT = { in_sphere = AUS }
+                    NOT = { in_sphere = KUK }
+                    NOT = { tag = THIS }
+                    ai = yes
+                }
+                relation = {
+                    who = VEN
+                    value = 100
+                }
+            }
+            any_country = {
+                limit = {
+                    is_culture_group = italian
+                    NOT = { in_sphere = AUS }
+                    NOT = { in_sphere = KUK }
+                    NOT = { tag = THIS }
+                    ai = yes
+                    NOT = { government = theocracy } #Pope doesn't join
+                }
+                create_alliance = VEN
+            }
+        }
+
+        war = {
+            target = VEN
+            attacker_goal = {
+                casus_belli = restore_austrian_empire
+                state_province_id = 729
+            }
+            defender_goal = {
+                casus_belli = acquire_core_state
+                state_province_id = 730
+            }
+            call_ally = yes
+        }
+
+        ##Debt Law
+        random_owned = {
+            limit = { owner = { debt_law = peonage } }
+            VEN = { political_reform = peonage }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = debtors_prisons } }
+            VEN = { political_reform = debtors_prisons }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            VEN = { political_reform = bankruptcy }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            VEN = { political_reform = bankruptcy }
+        }
+
+        ##Trade Unions
+        random_owned = {
+            limit = { owner = { trade_unions = state_controlled } }
+            VEN = { political_reform = state_controlled }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = non_socialist } }
+            VEN = { political_reform = non_socialist }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = all_trade_unions } }
+            VEN = { political_reform = all_trade_unions }
+        }
+
+
+        #Child labor
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_restricted } }
+            VEN = { social_reform = child_labor_restricted }
+        }
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_illegal } }
+            VEN = { social_reform = child_labor_illegal }
+        }
+
+        ##Health Care
+        random_owned = {
+            limit = { owner = { health_care = trinket_health_care } }
+            VEN = { social_reform = trinket_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = low_health_care } }
+            VEN = { social_reform = low_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = acceptable_health_care } }
+            VEN = { social_reform = acceptable_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = good_health_care } }
+            VEN = { social_reform = good_health_care }
+        }
+
+        ##Schools
+        random_owned = {
+            limit = { owner = { school_reforms = low_schools } }
+            VEN = { social_reform = low_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = acceptable_schools } }
+            VEN = { social_reform = acceptable_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = good_schools } }
+            VEN = { social_reform = good_schools }
+        }
+
+        ##Penal System
+        random_owned = {
+            limit = { owner = { penal_system = colonial_transportation } }
+            VEN = { social_reform = colonial_transportation }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = incarceration } }
+            VEN = { social_reform = incarceration }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = rehabilitation } }
+            VEN = { social_reform = rehabilitation }
+        }
+
+
+        ##Min Wage
+        random_owned = {
+            limit = { owner = { wage_reform = trinket_wage } }
+            VEN = { social_reform = trinket_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = low_minimum_wage } }
+            VEN = { social_reform = low_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = acceptable_minimum_wage } }
+            VEN = { social_reform = acceptable_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = good_minimum_wage } }
+            VEN = { social_reform = good_minimum_wage }
+        }
+
+        ##Work Hours
+        random_owned = {
+            limit = { owner = { work_hours = fourteen_hours } }
+            VEN = { social_reform = fourteen_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = twelve_hours } }
+            VEN = { social_reform = twelve_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = ten_hours } }
+            VEN = { social_reform = ten_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = eight_hours } }
+            VEN = { social_reform = eight_hours }
+        }
+
+        ##Safety Regulations
+        random_owned = {
+            limit = { owner = { safety_regulations = trinket_safety } }
+            VEN = { social_reform = trinket_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = low_safety } }
+            VEN = { social_reform = low_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = acceptable_safety } }
+            VEN = { social_reform = acceptable_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = good_safety } }
+            VEN = { social_reform = good_safety }
+        }
+
+        ##unemployment_subsidies
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = trinket_subsidies } }
+            VEN = { social_reform = trinket_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = low_subsidies } }
+            VEN = { social_reform = low_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
+            VEN = { social_reform = acceptable_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = good_subsidies } }
+            VEN = { social_reform = good_subsidies }
+        }
+
+        ##pensions
+        random_owned = {
+            limit = { owner = { pensions = trinket_pensions } }
+            VEN = { social_reform = trinket_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = low_pensions } }
+            VEN = { social_reform = low_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = acceptable_pensions } }
+            VEN = { social_reform = acceptable_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = good_pensions } }
+            VEN = { social_reform = good_pensions }
+        }
+
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "EVT10342OPTB"
+        set_country_flag = austria_let_venice_go
+        prestige = -10
+        badboy = -2
+        any_owned = {
+            limit = {
+                region = AUS_729
+            }
+            secede_province = VEN
+        }
+
+        relation = { who = VEN value = -100 }
+        prestige = -10
+        casus_belli = {
+            target = VEN
+            type = conquest
+            months = 60
+        }
+        casus_belli = {
+            target = VEN
+            type = cut_down_to_size
+            months = 60
+        }
+
+
+        any_pop = {
+            limit = {
+                has_pop_culture = north_italian
+                location = { is_core = ITA }
+            }
+            militancy = 6
+        }
+
+        any_owned = {
+            limit = {
+                is_core = ITA
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1095
+            }
+        }
+
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                national_provinces_occupied = 0.25
+            }
+            modifier = {
+                factor = 0
+                war = no
+                NOT = { revolt_percentage = 0.25 }
+            }
+        }
+    }
+
+
+    option = {
+        name = "EVT10342OPTC"
+
+        any_owned = {
+            limit = {
+                region = AUS_729
+                NOT = { province_id = 730 }
+            }
+            secede_province = VEN
+        }
+
+        any_owned = {
+            limit = {
+                is_core = VEN
+            }
+            add_province_modifier = {
+                name = nationalist_agitation
+                duration = 1095
+            }
+        }
+
+        VEN = {
+            capital = 729
+            government = democracy
+            political_reform = mandatory_service
+            political_reform = non_secret_ballots
+            political_reform = universal_weighted_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            set_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+            ruling_party_ideology = liberal
+            random_country = {
+                limit = {
+                    is_culture_group = italian
+                    is_greater_power = yes
+                    VEN = {
+                        NOT = { sphere_owner = { is_culture_group = italian } }
+                    }
+                }
+                diplomatic_influence = {
+                    who = VEN
+                    value = 100
+                }
+            }
+            any_country = {
+                limit = {
+                    is_culture_group = italian
+                    NOT = { in_sphere = AUS }
+                    NOT = { in_sphere = KUK }
+                    NOT = { tag = THIS }
+                    ai = yes
+                }
+                relation = {
+                    who = VEN
+                    value = 100
+                }
+            }
+            any_country = {
+                limit = {
+                    primary_culture = north_italian
+                    NOT = { in_sphere = AUS }
+                    NOT = { in_sphere = KUK }
+                    NOT = { tag = THIS }
+                    ai = yes
+                    NOT = { government = theocracy } #Pope doesn't join
+                }
+                create_alliance = VEN
+            }
+        }
+
+        war = {
+            target = VEN
+            attacker_goal = {
+                casus_belli = restore_austrian_empire
+                state_province_id = 729
+            }
+            defender_goal = {
+                casus_belli = acquire_core_state
+                state_province_id = 730
+            }
+            call_ally = yes
+        }
+
+        ##Debt Law
+        random_owned = {
+            limit = { owner = { debt_law = peonage } }
+            VEN = { political_reform = peonage }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = debtors_prisons } }
+            VEN = { political_reform = debtors_prisons }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            VEN = { political_reform = bankruptcy }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            VEN = { political_reform = bankruptcy }
+        }
+
+        ##Trade Unions
+        random_owned = {
+            limit = { owner = { trade_unions = state_controlled } }
+            VEN = { political_reform = state_controlled }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = non_socialist } }
+            VEN = { political_reform = non_socialist }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = all_trade_unions } }
+            VEN = { political_reform = all_trade_unions }
+        }
+
+
+        #Child labor
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_restricted } }
+            VEN = { social_reform = child_labor_restricted }
+        }
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_illegal } }
+            VEN = { social_reform = child_labor_illegal }
+        }
+
+        ##Health Care
+        random_owned = {
+            limit = { owner = { health_care = trinket_health_care } }
+            VEN = { social_reform = trinket_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = low_health_care } }
+            VEN = { social_reform = low_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = acceptable_health_care } }
+            VEN = { social_reform = acceptable_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = good_health_care } }
+            VEN = { social_reform = good_health_care }
+        }
+
+        ##Schools
+        random_owned = {
+            limit = { owner = { school_reforms = low_schools } }
+            VEN = { social_reform = low_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = acceptable_schools } }
+            VEN = { social_reform = acceptable_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = good_schools } }
+            VEN = { social_reform = good_schools }
+        }
+
+        ##Penal System
+        random_owned = {
+            limit = { owner = { penal_system = colonial_transportation } }
+            VEN = { social_reform = colonial_transportation }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = incarceration } }
+            VEN = { social_reform = incarceration }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = rehabilitation } }
+            VEN = { social_reform = rehabilitation }
+        }
+
+
+        ##Min Wage
+        random_owned = {
+            limit = { owner = { wage_reform = trinket_wage } }
+            VEN = { social_reform = trinket_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = low_minimum_wage } }
+            VEN = { social_reform = low_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = acceptable_minimum_wage } }
+            VEN = { social_reform = acceptable_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = good_minimum_wage } }
+            VEN = { social_reform = good_minimum_wage }
+        }
+
+        ##Work Hours
+        random_owned = {
+            limit = { owner = { work_hours = fourteen_hours } }
+            VEN = { social_reform = fourteen_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = twelve_hours } }
+            VEN = { social_reform = twelve_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = ten_hours } }
+            VEN = { social_reform = ten_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = eight_hours } }
+            VEN = { social_reform = eight_hours }
+        }
+
+        ##Safety Regulations
+        random_owned = {
+            limit = { owner = { safety_regulations = trinket_safety } }
+            VEN = { social_reform = trinket_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = low_safety } }
+            VEN = { social_reform = low_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = acceptable_safety } }
+            VEN = { social_reform = acceptable_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = good_safety } }
+            VEN = { social_reform = good_safety }
+        }
+
+        ##unemployment_subsidies
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = trinket_subsidies } }
+            VEN = { social_reform = trinket_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = low_subsidies } }
+            VEN = { social_reform = low_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
+            VEN = { social_reform = acceptable_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = good_subsidies } }
+            VEN = { social_reform = good_subsidies }
+        }
+
+        ##pensions
+        random_owned = {
+            limit = { owner = { pensions = trinket_pensions } }
+            VEN = { social_reform = trinket_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = low_pensions } }
+            VEN = { social_reform = low_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = acceptable_pensions } }
+            VEN = { social_reform = acceptable_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = good_pensions } }
+            VEN = { social_reform = good_pensions }
+        }
+
+        change_tag_no_core_switch = VEN
+
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
