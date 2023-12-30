@@ -6038,7 +6038,7 @@ country_event = {
                 state_province_id = 726
             }
             defender_goal = {
-                casus_belli = humiliate
+                casus_belli = status_quo
             }
             call_ally = yes
         }
