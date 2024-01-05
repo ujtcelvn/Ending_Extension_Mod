@@ -5999,6 +5999,16 @@ country_event = {
             }
         }
 
+        AUS = {
+            any_owned = {
+                limit = {
+                    province_id = 726
+                }
+                secede_province = THIS
+            }
+        }
+
+
         #any_country = {
         #    limit = {
         #        is_culture_group = italian
@@ -6030,7 +6040,7 @@ country_event = {
 
         relation = {
             who = AUS
-            value = -100
+            value = -200
         }
 
         random_country = {
@@ -6048,10 +6058,11 @@ country_event = {
             target = AUS
             attacker_goal = {
                 casus_belli = unification_casus_belli
-                state_province_id = 726
+                state_province_id = 727 #the rest of Lombardia
             }
             defender_goal = {
-                casus_belli = status_quo
+                casus_belli = acquire_state
+                state_province_id = 726 #Milan
             }
             call_ally = yes
         }
