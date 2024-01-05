@@ -6481,6 +6481,236 @@ country_event = {
             }
         }
 
+
+        VEN = {
+            capital = 729
+            government = democracy
+            political_reform = mandatory_service
+            political_reform = non_secret_ballots
+            political_reform = universal_weighted_voting
+            political_reform = population_equal_weight
+            political_reform = free_press
+            political_reform = yes_meeting
+            clr_country_flag = communist_gov
+            clr_country_flag = absolute_monarchy_gov
+            clr_country_flag = semi_constitutional_monarchy_gov
+            clr_country_flag = constitutional_monarchy_gov
+            set_country_flag = democracy_gov
+            clr_country_flag = presidential_dictatorship_gov
+            clr_country_flag = fascist_gov
+            clr_country_flag = anarcho_liberal_gov
+            ruling_party_ideology = liberal
+            random_country = {
+                limit = {
+                    is_culture_group = italian
+                    is_greater_power = yes
+                    VEN = {
+                        NOT = { sphere_owner = { is_culture_group = italian } }
+                    }
+                }
+                diplomatic_influence = {
+                    who = VEN
+                    value = 200
+                }
+            }
+            any_country = {
+                limit = {
+                    is_culture_group = italian
+                    NOT = { in_sphere = AUS }
+                    NOT = { in_sphere = KUK }
+                    NOT = { tag = THIS }
+                    ai = yes
+                }
+                relation = {
+                    who = VEN
+                    value = 200
+                }
+                create_alliance = VEN
+            }
+        }
+
+        ##Debt Law
+        random_owned = {
+            limit = { owner = { debt_law = peonage } }
+            VEN = { political_reform = peonage }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = debtors_prisons } }
+            VEN = { political_reform = debtors_prisons }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            VEN = { political_reform = bankruptcy }
+        }
+        random_owned = {
+            limit = { owner = { debt_law = bankruptcy } }
+            VEN = { political_reform = bankruptcy }
+        }
+
+        ##Trade Unions
+        random_owned = {
+            limit = { owner = { trade_unions = state_controlled } }
+            VEN = { political_reform = state_controlled }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = non_socialist } }
+            VEN = { political_reform = non_socialist }
+        }
+        random_owned = {
+            limit = { owner = { trade_unions = all_trade_unions } }
+            VEN = { political_reform = all_trade_unions }
+        }
+
+
+        #Child labor
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_restricted } }
+            VEN = { social_reform = child_labor_restricted }
+        }
+        random_owned = {
+            limit = { owner = { child_labor = child_labor_illegal } }
+            VEN = { social_reform = child_labor_illegal }
+        }
+
+        ##Health Care
+        random_owned = {
+            limit = { owner = { health_care = trinket_health_care } }
+            VEN = { social_reform = trinket_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = low_health_care } }
+            VEN = { social_reform = low_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = acceptable_health_care } }
+            VEN = { social_reform = acceptable_health_care }
+        }
+        random_owned = {
+            limit = { owner = { health_care = good_health_care } }
+            VEN = { social_reform = good_health_care }
+        }
+
+        ##Schools
+        random_owned = {
+            limit = { owner = { school_reforms = low_schools } }
+            VEN = { social_reform = low_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = acceptable_schools } }
+            VEN = { social_reform = acceptable_schools }
+        }
+        random_owned = {
+            limit = { owner = { school_reforms = good_schools } }
+            VEN = { social_reform = good_schools }
+        }
+
+        ##Penal System
+        random_owned = {
+            limit = { owner = { penal_system = colonial_transportation } }
+            VEN = { social_reform = colonial_transportation }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = incarceration } }
+            VEN = { social_reform = incarceration }
+        }
+        random_owned = {
+            limit = { owner = { penal_system = rehabilitation } }
+            VEN = { social_reform = rehabilitation }
+        }
+
+
+        ##Min Wage
+        random_owned = {
+            limit = { owner = { wage_reform = trinket_wage } }
+            VEN = { social_reform = trinket_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = low_minimum_wage } }
+            VEN = { social_reform = low_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = acceptable_minimum_wage } }
+            VEN = { social_reform = acceptable_minimum_wage }
+        }
+        random_owned = {
+            limit = { owner = { wage_reform = good_minimum_wage } }
+            VEN = { social_reform = good_minimum_wage }
+        }
+
+        ##Work Hours
+        random_owned = {
+            limit = { owner = { work_hours = fourteen_hours } }
+            VEN = { social_reform = fourteen_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = twelve_hours } }
+            VEN = { social_reform = twelve_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = ten_hours } }
+            VEN = { social_reform = ten_hours }
+        }
+        random_owned = {
+            limit = { owner = { work_hours = eight_hours } }
+            VEN = { social_reform = eight_hours }
+        }
+
+        ##Safety Regulations
+        random_owned = {
+            limit = { owner = { safety_regulations = trinket_safety } }
+            VEN = { social_reform = trinket_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = low_safety } }
+            VEN = { social_reform = low_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = acceptable_safety } }
+            VEN = { social_reform = acceptable_safety }
+        }
+        random_owned = {
+            limit = { owner = { safety_regulations = good_safety } }
+            VEN = { social_reform = good_safety }
+        }
+
+        ##unemployment_subsidies
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = trinket_subsidies } }
+            VEN = { social_reform = trinket_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = low_subsidies } }
+            VEN = { social_reform = low_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = acceptable_subsidies } }
+            VEN = { social_reform = acceptable_subsidies }
+        }
+        random_owned = {
+            limit = { owner = { unemployment_subsidies = good_subsidies } }
+            VEN = { social_reform = good_subsidies }
+        }
+
+        ##pensions
+        random_owned = {
+            limit = { owner = { pensions = trinket_pensions } }
+            VEN = { social_reform = trinket_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = low_pensions } }
+            VEN = { social_reform = low_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = acceptable_pensions } }
+            VEN = { social_reform = acceptable_pensions }
+        }
+        random_owned = {
+            limit = { owner = { pensions = good_pensions } }
+            VEN = { social_reform = good_pensions }
+        }
+
+
+
         ai_chance = {
             factor = 5
             modifier = {
