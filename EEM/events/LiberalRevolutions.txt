@@ -6243,8 +6243,8 @@ country_event = {
         war = {
             target = VEN
             attacker_goal = {
-                casus_belli = restore_austrian_empire
-                state_province_id = 729
+                casus_belli = conquest
+                #state_province_id = 729
             }
             defender_goal = {
                 casus_belli = acquire_core_state
