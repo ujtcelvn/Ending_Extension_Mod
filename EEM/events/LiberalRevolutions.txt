@@ -5894,13 +5894,6 @@ country_event = {
             }
         }
 
-        any_owned = {
-            limit = {
-                is_core = LOM
-            }
-            secede_province = LOM
-        }
-
         random_country = {
             limit = {
                 OR = {
@@ -5921,7 +5914,6 @@ country_event = {
         name = "EVT10340OPTB"
         set_country_flag = austria_let_lombardy_go
         prestige = -10
-        badboy = -2
         any_owned = {
             limit = {
                 is_core = LOM
@@ -5992,6 +5984,20 @@ country_event = {
 
     option = {
         name = "EVT10341OPTA"
+
+        any_pop = {
+            limit = {
+                is_culture_group = italian
+            }
+            ideology = {
+                value =  liberal
+                factor = 0.05
+            }
+            scaled_militancy = {
+                issue = liberal
+                factor = -5
+            }
+        }
 
         #any_country = {
         #    limit = {
@@ -6076,6 +6082,10 @@ country_event = {
                 issue = jingoism
                 factor = 3
             }
+            scaled_militancy = {
+                issue = liberal
+                factor = 5
+            }
         }
 
         ai_chance = {
@@ -6136,7 +6146,7 @@ country_event = {
 
     mean_time_to_happen = {
         #months = 1
-        days = 5
+        days = 7
     }
 
     immediate = {
@@ -6213,7 +6223,7 @@ country_event = {
                 }
                 relation = {
                     who = VEN
-                    value = 100
+                    value = 200
                 }
                 create_alliance = VEN
             }
@@ -6421,7 +6431,6 @@ country_event = {
         name = "EVT10342OPTB"
         set_country_flag = austria_let_venice_go
         prestige = -10
-        badboy = -2
         any_owned = {
             limit = {
                 region = AUS_729
@@ -6550,7 +6559,7 @@ country_event = {
                 }
                 relation = {
                     who = VEN
-                    value = 100
+                    value = 200
                 }
                 create_alliance = VEN
             }
