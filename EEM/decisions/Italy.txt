@@ -1517,39 +1517,41 @@ political_decisions = {
         }
     }
 
-    begin_venetian_revolution = {
+    milan_calls_for_aid = {
         picture = gtfo
         potential = {
-            tag = VEN
-            has_global_flag = venetian_revolution_occurred
-            NOT = { has_country_flag = venetian_revolution_began }
+            tag = LOM
+            #has_country_flag = milanese_revolution_began
+            has_global_flag = milanese_revolution_occurred 
+            NOT = { has_country_flag = milan_called_for_aid }
+            war_with = AUS
+            OR = {
+                SAR = {
+                    exists = yes
+                    is_vassal = no
+                }
+                SVY = {
+                    exists = yes
+                    is_vassal = no
+                }
+            }
         }
 
         allow = {
-            war_with = AUS
         }
 
         effect = {
-            set_country_flag = venetian_revolution_began
-            small_arms = 10
-            regular_clothes = 10
-            define_general = {
-                name = "Daniele Manin"
-                personality = maladroit
-                background = nationalist
-            }
-            add_country_modifier = {
-                name = begin_revolution
-                duration = 365
-            }
-            any_pop = {
+            set_country_flag = milan_called_for_aid
+            random_country = {
                 limit = {
                     OR = {
-                        has_pop_culture = north_italian
-                        has_pop_culture = south_italian
+                       tag = SAR
+                       tag = SVY
                     }
+                    is_vassal = no
+                    exists = yes
                 }
-                militancy = -8
+                country_event = 10341
             }
         }
 
@@ -1557,4 +1559,5 @@ political_decisions = {
             factor = 1
         }
     }
+
 }
