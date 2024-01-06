@@ -5994,7 +5994,7 @@ country_event = {
                 factor = 0.05
             }
             scaled_militancy = {
-                issue = liberal
+                ideology = liberal
                 factor = -5
             }
         }
@@ -6094,7 +6094,7 @@ country_event = {
                 factor = 3
             }
             scaled_militancy = {
-                issue = liberal
+                ideology = liberal
                 factor = 5
             }
         }
