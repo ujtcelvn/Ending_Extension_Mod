@@ -1066,3 +1066,56 @@ country_event = {
         any_pop = { scaled_consciousness = { factor = 1    } }
     }
 }
+
+# Liberal Unrest in the Papal States
+country_event = {
+    id = 110055
+    title = "EVTNAME110055"
+    desc = "EVTDESC110055"
+    picture = "riot"
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+
+    option = {
+        name = "EVT110055OPTA"
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+                NOT = { type = aristocrats }
+                NOT = { type = officers }
+            }
+            ideology = {
+                value = reactionary
+                factor = -0.4
+            }
+            ideology = {
+                value = liberal
+                factor = 0.05
+            }
+        }
+        any_pop = {
+            limit = {
+                is_primary_culture = no
+                is_accepted_culture = yes
+                NOT = { type = aristocrats }
+                NOT = { type = officers }
+            }
+            ideology = {
+                value = reactionary
+                factor = -0.45
+            }
+            ideology = {
+                value = liberal
+                factor = 0.25
+            }
+            consciousness = 3
+        }
+
+        any_owned = {
+            limit = { state_id = 741 }
+            add_province_modifier = { name = liberal_agitation duration = 730 }
+        }
+    }
+}
