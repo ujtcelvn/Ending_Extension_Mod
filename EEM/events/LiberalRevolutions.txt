@@ -7704,12 +7704,15 @@ country_event = {
             war_exhaustion = 20
             AND = {
                 tag = SIC
-                war_with = SYC
-                NOT = { SYC = { alliance_with = AUS }}
-            }
-            AND = {
-                tag = SIC
-                PAP = { has_country_flag = abandoned_venice }
+                OR = {
+                    government = absolute_monarchy
+                    PAP = { has_country_flag = abandoned_venice }
+                    NOT = { PAP = { government = theocracy } }
+                    AND = {
+                        war_with = SYC
+                        NOT = { SYC = { alliance_with = AUS }}
+                    }
+                }
             }
             AND = {
                 tag = PAP
@@ -7724,8 +7727,7 @@ country_event = {
     }
 
     mean_time_to_happen = {
-        #months = 1
-        days = 14
+        months = 1
     }
 
     option = {
@@ -7755,14 +7757,10 @@ country_event = {
             }
             modifier = {
                 factor = 0
-                tag = SIC
-                war_with = SYC
-                NOT = { SYC = { alliance_with = AUS }}
-            }
-            modifier = {
-                factor = 0
-                tag = PAP
-                PAP = { government = theocracy }
+                OR = {
+                    government = absolute_monarchy
+                    government = theocracy
+                }
                 OR = {
                     AUS = { government = absolute_monarchy }
                     AUS = { government = prussian_constitutionalism }
