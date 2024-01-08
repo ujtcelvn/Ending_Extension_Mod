@@ -3960,7 +3960,7 @@ country_event = {
                 }
             }
             owner = {
-                prestige = 20
+                #prestige = 20
                 war = {
                     target = HUN
                     attacker_goal = {
@@ -4294,7 +4294,7 @@ country_event = {
                 }
             }
             owner = {
-                prestige = 10
+                #prestige = 10
                 war = {
                     target = HUN
                     attacker_goal = {
