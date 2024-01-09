@@ -6808,8 +6808,8 @@ country_event = {
                 war = {
                     target = VEN
                     attacker_goal = {
-                        casus_belli = restore_austrian_empire
-                        state_province_id = 729
+                        casus_belli = conquest_any
+                        #state_province_id = 729
                     }
                     defender_goal = {
                         casus_belli = acquire_core_state
@@ -6832,8 +6832,8 @@ country_event = {
                 war = {
                     target = VEN
                     attacker_goal = {
-                        casus_belli = restore_austrian_empire
-                        state_province_id = 729
+                        casus_belli = conquest_any
+                        #state_province_id = 729
                     }
                     defender_goal = {
                         casus_belli = acquire_core_state
@@ -7042,7 +7042,7 @@ country_event = {
         relation = { who = VEN value = -100 }
         casus_belli = {
             target = VEN
-            type = conquest
+            type = conquest_any
             months = 60
         }
         casus_belli = {
@@ -7448,8 +7448,8 @@ country_event = {
                 war = {
                     target = VEN
                     attacker_goal = {
-                        casus_belli = restore_austrian_empire
-                        state_province_id = 729
+                        casus_belli = conquest_any
+                        #state_province_id = 729
                     }
                     defender_goal = {
                         casus_belli = acquire_core_state
@@ -7472,8 +7472,8 @@ country_event = {
                 war = {
                     target = VEN
                     attacker_goal = {
-                        casus_belli = restore_austrian_empire
-                        state_province_id = 729
+                        casus_belli = conquest_any
+                        #state_province_id = 729
                     }
                     defender_goal = {
                         casus_belli = acquire_core_state
