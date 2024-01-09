@@ -5926,7 +5926,7 @@ country_event = {
                 war = {
                     target = LOM
                     attacker_goal = {
-                        casus_belli = conquest
+                        casus_belli = conquest_any
                     }
                     defender_goal = {
                         casus_belli = acquire_core_state
@@ -5949,7 +5949,7 @@ country_event = {
                 war = {
                     target = LOM
                     attacker_goal = {
-                        casus_belli = conquest
+                        casus_belli = conquest_any
                     }
                     defender_goal = {
                         casus_belli = acquire_core_state
@@ -6223,7 +6223,7 @@ country_event = {
         relation = { who = LOM value = -100 }
         casus_belli = {
             target = LOM
-            type = conquest
+            type = conquest_any
             months = 60
         }
         casus_belli = {
