@@ -5961,7 +5961,7 @@ country_event = {
 
 
         LOM = {
-            capital = 729
+            capital = 726
             government = democracy
             political_reform = mandatory_service
             political_reform = non_secret_ballots
@@ -6251,7 +6251,7 @@ country_event = {
         }
 
         LOM = {
-            capital = 729
+            capital = 726
             government = democracy
             political_reform = mandatory_service
             political_reform = non_secret_ballots
