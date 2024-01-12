@@ -724,14 +724,16 @@ political_decisions = {
                 has_country_flag = war_italian_independence
             }
             OR = {
-                726 = { owned_by = AUS }
-                727 = { owned_by = AUS }
-                728 = { owned_by = AUS }
-                2669 = { owned_by = AUS }
-                726 = { owned_by = KUK }
-                727 = { owned_by = KUK }
-                728 = { owned_by = KUK }
-                2669 = { owned_by = KUK }
+                AUS = {
+                    owns = 726
+                    owns = 727
+                    owns = 728
+                }
+                KUK = {
+                    owns = 726
+                    owns = 727
+                    owns = 728
+                }
             }
         }
 
