@@ -593,7 +593,7 @@ political_reforms = {
         }
     }
 
-        debt_law = {
+    debt_law = {
         next_step_only = yes
         serfdom = {
             education_efficiency_modifier = -0.15

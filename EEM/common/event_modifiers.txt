@@ -1670,13 +1670,13 @@ witwatersrand_gold_rush = {
 
 ##### RGO Spread Events #####
 
-local_reapers_und_soil_enrichment = {
-    farm_RGO_eff = 0.5
-    icon = 13
-}
+#local_reapers_und_soil_enrichment = { #disabled
+#    farm_RGO_eff = 0.5
+#    icon = 13
+#}
 
-local_tractors = { #replaces local_reapers_und_soil_enrichment
-    farm_RGO_eff = 1 #0.5
+local_tractors = { #(formerly) replaces local_reapers_und_soil_enrichment
+    farm_RGO_eff = 0.5
     icon = 13
 }
 
@@ -1706,18 +1706,22 @@ local_distribution_channels_und_electricity = {
 #    icon = 13
 #}
 
-local_intensive_agriculture = { #EEM, replaces local_tractors
-    farm_RGO_eff = 1 #net 0.5
+local_intensive_agriculture = { #replaces local_tractors
+    farm_RGO_eff = 1
     icon = 13
 }
 
-local_modern_transportation = { #EEM
-    farm_RGO_eff = 0.1
-    mine_RGO_eff = 0.1
+local_steamers = {
+    farm_RGO_eff = 0.2
+    mine_RGO_eff = 0.2
+    local_factory_throughput = 0.01
+    icon = 11
+}
+
+local_modern_transportation = { #replaces local_steamers
+    farm_RGO_eff = 0.5
+    mine_RGO_eff = 0.5
     local_factory_throughput = 0.1
-    #local_artisan_output = 0.05
-    movement_cost = -0.05
-    immigrant_attract = 0.05
     icon = 11
 }
 

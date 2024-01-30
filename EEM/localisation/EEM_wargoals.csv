@@ -5,5 +5,5 @@ pacific_islands_cb_short;Acquire $STATE$;;;;;;;;;;;;;
 pacific_islands_cb_setup;Acquire $STATE$ from $RECIPIENT$.;;;;;;;;;;;;;
 AGRESSION_CIVIL_WAR_NAME_QNG_RTR;$ORDER$Red Turban Rebellion;;;;;;;;;;;;;
 NORMAL_CIVIL_WAR_NAME_QNG_RTR;$ORDER$Red Turban Rebellion;;;;;;;;;;;;;
-AGRESSION_WAR_CONQUEST_ANY_NAME_QNG_MAO;$ORDER$Miao Rebellion;;;;;;;;;;;;;
-NORMAL_WAR_CONQUEST_ANY_NAME_QNG_MAO;$ORDER$Miao Rebellion;;;;;;;;;;;;;
+AGRESSION_CIVIL_WAR_NAME_QNG_MAO;$ORDER$Miao Rebellion;;;;;;;;;;;;;
+NORMAL_CIVIL_WAR_NAME_QNG_MAO;$ORDER$Miao Rebellion;;;;;;;;;;;;;

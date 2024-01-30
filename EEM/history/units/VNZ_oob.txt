@@ -18,12 +18,11 @@ SPC = {
 }
 
 leader = {
-    name = "Juan Illingworth"
-    picture = european_general_1
+    name = "José Antonio Páez"
     type = land
     date="1830.1.1"
     personality = soldierly
-    background = nationalist
+    background = cavalry_school
 }
 
 leader = {
@@ -36,7 +35,7 @@ leader = {
 
 army = {
     name = "Ejército de Venezuela"
-    location = 2264
+    location = 2268
     regiment = {
         name= "1. División de Infantería"
         type = infantry

@@ -2585,7 +2585,7 @@ country_event = {
         war = {
             target = MAO
             attacker_goal = {
-                casus_belli = conquest
+                casus_belli = civil_war
             }
         }
 
@@ -2723,7 +2723,7 @@ country_event = {
         war = {
             target = MAO
             attacker_goal = {
-                casus_belli = conquest
+                casus_belli = civil_war
             }
         }
 
