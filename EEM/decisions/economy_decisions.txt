@@ -36,6 +36,7 @@ political_decisions = {
         }
 
         allow = {
+            NOT = { government = bourgeois_dictatorship }
             OR = {
                 moralism = 2
                 government = proletarian_dictatorship
@@ -354,5 +355,41 @@ political_decisions = {
         }
     }
 
+    build_electric_gear_factory = {
+        picture = nationalize
+        alert = yes
+        potential = {
+            NOT = { has_country_flag = built_electric_gear_factory }
+            ai = yes
+            invention = edison_light_bulb
+            can_build_factory_in_capital_state = electric_gear_factory
+            rank = 16
+            NOT = { economic_policy = laissez_faire }
+            NOT = { economic_policy = interventionism }
+            money = 20000
+            war = no
+            NOT = { num_of_revolts = 1 }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            set_country_flag = built_electric_gear_factory
+
+            #machine_parts 300 * 36.5
+            #steel 200 * 4.7
+            #cement 200 * 16
+            #total = 15090
+            treasury = -20000
+
+
+            build_factory_in_capital_state = electric_gear_factory
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
 }

@@ -63,3 +63,68 @@ province_event = {
 #        public_illumination = -1
 #    }
 #}
+
+province_event = {
+    id = 60168006
+    title = "EVTNAME60168006"
+    desc = "EVTDESC60168006"
+
+    allow_multiple_instances = no
+
+    trigger = {
+        has_province_modifier = local_distribution_channels_und_electricity
+        is_state_capital = yes
+        OR = {
+            unit_in_battle = yes
+            country_units_in_province = REB
+        }
+    }
+
+    mean_time_to_happen = { months = 600 }
+
+    option = {
+        name = "EVT60168006OPTA"
+        state_scope = {
+            any_owned = {
+                limit = {
+    				has_province_modifier = local_distribution_channels_und_electricity
+                }
+                remove_province_modifier = local_distribution_channels_und_electricity
+            }
+        }
+    }
+}
+
+province_event = {
+    id = 60168007
+    title = "EVTNAME60168007"
+    desc = "EVTDESC60168007"
+
+    allow_multiple_instances = no
+
+    trigger = {
+        has_province_modifier = local_steamers
+        OR = {
+            unit_in_battle = yes
+            country_units_in_province = REB
+            AND = {
+                is_port = yes
+                is_blockaded = yes
+            }
+        }
+    }
+
+    mean_time_to_happen = { months = 600 }
+
+    option = {
+        name = "EVT60168007OPTA"
+        state_scope = {
+            any_owned = {
+                limit = {
+    				has_province_modifier = local_steamers
+                }
+                remove_province_modifier = local_steamers
+            }
+        }
+    }
+}

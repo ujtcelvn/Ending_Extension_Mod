@@ -372,8 +372,8 @@ square_set_timbering = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.25 } #0.2
-        rgo_goods_output = { iron = 0.25 } #0.2 #0
+        rgo_goods_output = { coal = 0.25 } #0.25 #0.2
+        rgo_goods_output = { iron = 0.25 } #0.25 #0.2 #0
     }
 }
 
@@ -451,7 +451,7 @@ dynamite = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.25 }
+        rgo_goods_output = { coal = 0.25 } #0.25
         rgo_size = { coal = 0.25 }
         rgo_size = { iron = 0.25 }
         rgo_size = { sulphur = 0.25 }
@@ -492,7 +492,7 @@ deep_mining = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.25 } #0.25
+        rgo_goods_output = { coal = 0.4 } #0.25
     }
 }
 
@@ -534,7 +534,7 @@ percussion_drill = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.25 } #0.25
+        rgo_goods_output = { coal = 0.3 } #0.25
     }
 }
 
@@ -573,7 +573,7 @@ friction_hoist = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.1 } #0.1
+        rgo_goods_output = { coal = 0.3 } #0.1
     }
 }
 
@@ -691,7 +691,7 @@ trinitrotoluene = {
         }
     }
     effect = {
-        rgo_goods_output = { coal = 0.4 }
+        rgo_goods_output = { coal = 0.5 } # 0.4
         rgo_size = { coal = 0.3 }
         rgo_size = { iron = 0.3 }
         rgo_size = { sulphur = 0.3 }
