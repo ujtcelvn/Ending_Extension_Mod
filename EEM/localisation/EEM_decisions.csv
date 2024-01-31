@@ -264,4 +264,6 @@ demote_colonial_craftsmen_desc;There are many unemployed factory workers trapped
 milan_calls_for_aid_title;Request Aid from Piedmont;;;;;;;;;;;;;
 milan_calls_for_aid_desc;We are too weak to fight against the Austrians alone - in the name of Itanian independence, we can call on the Piedmontese for aid.;;;;;;;;;;;;;
 austria_call_allies_against_italy_title;Call Allies;;;;;;;;;;;;;
-austria_call_allies_against_italy_desc;the Milanese and Venetian revolutionaries have brought in foreign intervention on their side, elevating what should be an internal affair into an international incident. This gives us justification to call the allies on our side into the war as well. This would reveal our weakness to the world, but we must not give in to rabble without a fight.;;;;;;;;;;;;;
+austria_call_allies_against_italy_desc;the Milanese and Venetian revolutionaries have brought in foreign intervention on their side, elevating what should be an internal affair into an international incident. This gives us justification to call the allies on our side into the war as well. This would reveal our weakness to the world, but we shall not give in to rabble without a fight.;;;;;;;;;;;;;
+build_electric_gear_factory_title;Subsidize Electric Industry;;;;;;;;;;;;;
+build_electric_gear_factory_desc;The electric industry in our capital is lacking. We should rectify that.;;;;;;;;;;;;;
