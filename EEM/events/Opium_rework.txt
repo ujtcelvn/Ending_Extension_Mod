@@ -815,7 +815,7 @@ province_event = {
 province_event = {
     id = 166822
     title = "Drug Addiction Spreads to $PROVINCENAME$"
-    desc = "Although opium has been safely used as medicine for centuries, more potent, addictive, and dangerous forms of this drug are being sold, causing a noticible rise in overdose and withdrawal rates in this location."
+    desc = "Although opium has been safely used as medicine for centuries, more potent, addictive, and dangerous forms of this drug are being sold, causing a noticible rise in overdose and addiction rates in this location."
 
     trigger = {
         OR = {
@@ -888,7 +888,7 @@ province_event = {
     }
 
     option = {
-        name = "Crack down on the addicts!"
+        name = "Crack down on the menance!"
         any_pop = {
             militancy = 2
         }
