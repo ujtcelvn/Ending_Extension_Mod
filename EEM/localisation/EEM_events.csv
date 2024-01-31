@@ -244,3 +244,6 @@ EVT10343OPTB;We will make peace with Austria and withdraw from Venice.;;;;;;;;;;
 EVTNAME110055;Liberalism in the Papal States;;;;;;;;;;;;;
 EVTDESC110055;During the Napoleonic Wars, liberal and Italian nationalist ideas spread into the Papal States, especially in the north. Riots in Romagna in 1820 and 1830 were suppressed with only the aid of French and Austrian troops. Anti-papal societies are still active in Romagna and there remains significant liberal unrest.;;;;;;;;;;;;;
 EVT110055OPTA;Rebellion will not be tolerated.;;;;;;;;;;;;;
+EVTNAME50010;Revolution of the Reforms;;;;;;;;;;;;;
+EVTDESC50010;Dissatisfied soliders revolted in June 1835 and demanded an end of the oligarchal government and the reconstitution of Gran Colombia. After loyal forces recaptured the capital and a pardon was issued, most of the rebels surrendered. The last of the revolutionaries are still holding out in San Felipe, but it should not take long before they are defeated as well.;;;;;;;;;;;;;
+EVT50010OPTA;We will restore order.;;;;;;;;;;;;;
