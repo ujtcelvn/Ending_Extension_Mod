@@ -36,6 +36,7 @@ political_decisions = {
         }
 
         allow = {
+            NOT = { government = bourgeois_dictatorship }
             OR = {
                 moralism = 2
                 government = proletarian_dictatorship
