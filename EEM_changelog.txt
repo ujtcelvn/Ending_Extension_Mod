@@ -29,18 +29,107 @@ culture = 16
 1930 financial institutions		 1
 1930 monetary system			 2
 1930 economic thought n critique 6
-1930 market functionality		 3
-1930 organisation				 3
+1930 market functionality		 5
+1930 organisation				 2
 
-commerce = 15
+commerce = 16
 
 1930 power						 5	1836 high_pressure...	1
-1930 mechanization				 3
-1930 metallurgy					 4	1905 electric_furnace	1 	1850 regenerative_f... 0	1840 mechanized_mining 0
+1930 mechanization				 4
+1930 metallurgy					 3	1905 electric_furnace	1 	1850 regenerative_f... 0	1840 mechanized_mining 0
 1930 infrastructure				 0
-1936 chemistry and electricity	 8	1900 synthetic_polymers	2	1850 organic_chemistry 1
+1936 chemistry and electricity	 7	1900 synthetic_polymers	2	1850 organic_chemistry 1
 
-industry = 20 + 5
+industry = 19 + 5
+####################################################################################################
+
+#### TODO: do and upload the below ####
+
+
+
+#TODO: 1481 Lushun - Port Arthur now gets Qing cores after the event/decision that gives them cores all over Manchuria
+
+#TODO: let bombing destroy local_distribution_channels_und_electricity and local_steamers 
+
+#TODO: the CSA / FSA gets local_steamers when they are released
+
+
+#TODO: add Yangtze River Patrol decision / event for
+	USA / top 4 euro / new world GP owning Hawaii / Philipines / Shanghai that triggers an event to the most "downstream" Chinese owner of the Yangtze river
+	
+	the GP gets prestige and a flag called yangtze_river_patrol_demanded
+	adds a flag to China called yangtze_river_patrol_accepted
+	Yangtze river gets local steamboat commerce and a bunch of consciousness
+	flag and local steamboat commerce removed if reactionary / boxer rebels win
+	China gets a western prescence / trading post in Shanghai (if Shanghai is owned by them) - or else in Nanjing
+	https://www.usni.org/sites/default/files/Yangtze%20ND19.png
+
+	if China refuses the request, requesting power gets free treaty port cb / war
+		make them want to pick Shanghai as the treaty port in the decisions (using the yangtze_river_patrol_demanded flag), adds a decision that fires an event to force China to accept the patrol
+
+#TODO: enable the Grand Canal waterway provinces in Setup.txt
+
+#TODO: make an event and flag "Grand Canal Damaged" that fires if there is an active chinese flood (natural AND manmade) and mention that the Grand Canal is broken, removing boat traffic on these provinces.
+
+#TODO: let the Qing cause an artifical flood with the Grand Canal / yellow river dikes to slow down the Taiping / Red turbans
+
+#TODO: decision to "Repair the Grand Canal" that enables boat traffic along the Grand Canal provinces if the canal was damaged
+	check requirements - make it need drilling and blasting and dynamite?
+	make AI only want to do it if they have steamers so they can benefit from it?
+
+
+
+#TODO: Made opium a money printer worth $3 again and pops no longer eat opium again?
+#TODO: make opium events much more brutal so you'll actually want to ban opium
+
+
+#TODO: let the synthetic factory inventions get a 1% chance of unlocking when you have researched the next tier of techs
+
+####################################################################################################
+v0.5.8v
+disable local_steamers, reenable local_reapers_und_soil_enrichment because the economy died again.
+
+
+####################################################################################################
+v0.5.8u
+
+increase square_set_timbering coal and iron from 0.25 to 0.3 and then back to 0.25
+increase dynamite coal from 0.25 to 0.3 and then back to 0.25
+increase friction_hoist coal from 0.1 to 0.3
+increase deep_mining coal from 0.25 to 0.4
+increase percussion_drill coal from 0.25 to 0.3
+increase trinitrotoluene coal from 0.4 to 0.5
+
+Increase power tech research by big wood producers
+
+disable local_reapers_und_soil_enrichment (it's bloat and the power tech farm_rgo_eff was reverted back to 0.2 anyways)
+Add Ferries and Freighters (local_steamers), which will be replaced by local_modern_transportation (not yet enabled)
+	enabled by steamer_shipyard_construction
+	only spreads into marginal terrian (mountain, dry areas, jungle, marsh) after mechanized_fishing_vessels (1855)
+	only spreads into very marginal terrian (alpine tundra, desert, island) after fish_trawlers (1900)
+	never spreads into tundra and taiga
+	The economic value of major waterways was not modeled at all in vic2 - overall this change should slightly reduce basic (grain, fruit, cotton, fish) and cash (tobacco, tea, coffee, opium) crops (still more than in HPM) and increase the supply of industrial goods
+decrease local_steamers bonus from 0.25 to 0.2
+reformat some RGOSpreadEvents
+local_distribution_channels_und_electricity and local_steamers can now be removed by battle / rebel occupation / blockade (for local_steamers)
+
+Subsidize Electric Industry decision that lets SPs and above build an electric gear factory in the capital once.
+
+Revolution of the Reforms  #81
+	Replaced Venezuela's starting leader Juan Illingworth with José Antonio Páez. Juan Illingworth worked for Ecuador!
+	Venezuela starts with 20 war exhaustion
+	2268 San Felipe starts occupied by rebels
+	Move "Ejército de Venezuela" from 2264 to 2268 to liberate the province
+
+Disabled quantitative_easing - it was first used in Japan in 2001. 
+Reactivated closed_economy
+moved hydrodesulphurization from metallurgy_7 to market_functionality_7
+moved synthetic_rubber from chemistry_and_electricity_7 to market_functionality_7
+moved airliner from tech_organization_7 to mechanization_7, now increases aeroplanes production by 0.02 instead of increasing factory_output by 0.01, to reduce late game overproduction
+Fix bug that makes bourgeois dictatorships keep banning and unbanning opium
+
+Fix Qing infamy bug from Miao rebellion
+
 ####################################################################################################
 v0.5.8t
 
@@ -120,6 +209,7 @@ changed several invention base chance from 3 to 2 for consistency
 piston_steam_engine and high_pressure_steam_engine farm output increased to 0.2
 steam_turbine, combustion_engine, electrical_power_generation, tech_power_7 farm output decreased to 0.05
 
+####################################################################################################
 v0.5.8q
 Japan now gets more daimyo ships
 

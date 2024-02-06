@@ -35,7 +35,7 @@ province_event = {
             trade_goods = fruit
             trade_goods = fish
         }
-        #has_province_modifier = local_reapers_und_soil_enrichment
+        has_province_modifier = local_reapers_und_soil_enrichment
     }
 
     mean_time_to_happen = {
@@ -182,11 +182,11 @@ province_event = {
                         trade_goods = fruit
                         trade_goods = fish
                     }
-                    #has_province_modifier = local_reapers_und_soil_enrichment
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = { has_province_modifier = local_intensive_agriculture }
                 }
                 add_province_modifier = { name = local_tractors duration = -1 }
-                #remove_province_modifier = local_reapers_und_soil_enrichment
+                remove_province_modifier = local_reapers_und_soil_enrichment
             }
         }
 
@@ -204,7 +204,7 @@ province_event = {
                         }
                         NOT = { unemployment_by_type = { value = 0.03 type = farmers } }
                     }
-                    #has_province_modifier = local_reapers_und_soil_enrichment
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -265,11 +265,11 @@ province_event = {
                                 trade_goods = fruit
                                 trade_goods = fish
                             }
-                            #has_province_modifier = local_reapers_und_soil_enrichment
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = { has_province_modifier = local_intensive_agriculture }
                         }
                         add_province_modifier = { name = local_tractors duration = -1 }
-                        #remove_province_modifier = local_reapers_und_soil_enrichment
+                        remove_province_modifier = local_reapers_und_soil_enrichment
                     }
                 }
             }
@@ -280,7 +280,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 10
                 any_owned_province = {
-                    #has_province_modifier = local_reapers_und_soil_enrichment
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -332,7 +332,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
-                            #has_province_modifier = local_reapers_und_soil_enrichment
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -391,11 +391,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
-                                #has_province_modifier = local_reapers_und_soil_enrichment
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
-                            #remove_province_modifier = local_reapers_und_soil_enrichment
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
@@ -408,7 +408,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 20
                 any_owned_province = {
-                    #has_province_modifier = local_reapers_und_soil_enrichment
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -460,7 +460,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
-                            #has_province_modifier = local_reapers_und_soil_enrichment
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -519,11 +519,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
-                                #has_province_modifier = local_reapers_und_soil_enrichment
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
-                            #remove_province_modifier = local_reapers_und_soil_enrichment
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
@@ -535,7 +535,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 30
                 any_owned_province = {
-                    #has_province_modifier = local_reapers_und_soil_enrichment
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -587,7 +587,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
-                            #has_province_modifier = local_reapers_und_soil_enrichment
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -646,11 +646,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
-                                #has_province_modifier = local_reapers_und_soil_enrichment
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
-                            #remove_province_modifier = local_reapers_und_soil_enrichment
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
@@ -662,7 +662,7 @@ province_event = {
                 tag = THIS
                 number_of_states = 40
                 any_owned_province = {
-                    #has_province_modifier = local_reapers_und_soil_enrichment
+                    has_province_modifier = local_reapers_und_soil_enrichment
                     NOT = {
                         has_province_modifier = local_tractors
                         has_province_modifier = local_intensive_agriculture
@@ -714,7 +714,7 @@ province_event = {
                             is_slave = yes
                         }
                         any_owned_province = {
-                            #has_province_modifier = local_reapers_und_soil_enrichment
+                            has_province_modifier = local_reapers_und_soil_enrichment
                             NOT = {
                                 is_overseas = yes
                                 is_colonial = yes
@@ -773,11 +773,11 @@ province_event = {
                                     trade_goods = fruit
                                     trade_goods = fish
                                 }
-                                #has_province_modifier = local_reapers_und_soil_enrichment
+                                has_province_modifier = local_reapers_und_soil_enrichment
                                 NOT = { has_province_modifier = local_intensive_agriculture }
                             }
                             add_province_modifier = { name = local_tractors duration = -1 }
-                            #remove_province_modifier = local_reapers_und_soil_enrichment
+                            remove_province_modifier = local_reapers_und_soil_enrichment
                         }
                     }
                 }
