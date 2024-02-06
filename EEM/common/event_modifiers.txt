@@ -1675,8 +1675,8 @@ local_reapers_und_soil_enrichment = {
     icon = 13
 }
 
-local_tractors = { #(formerly) replaces local_reapers_und_soil_enrichment
-    farm_RGO_eff = 0.5
+local_tractors = { #replaces local_reapers_und_soil_enrichment
+    farm_RGO_eff = 1 #0.5
     icon = 13
 }
 
@@ -1707,7 +1707,7 @@ local_distribution_channels_und_electricity = {
 #}
 
 local_intensive_agriculture = { #replaces local_tractors
-    farm_RGO_eff = 1
+    farm_RGO_eff = 1.5
     icon = 13
 }
 
