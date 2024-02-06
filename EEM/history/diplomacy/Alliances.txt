@@ -48,25 +48,27 @@ alliance = {
     end_date = 1936.1.1
 }
 
-
 alliance = {
         first = AUS
         second = FRM
         start_date = 1835.1.1
         end_date = 1867.1.1
     }
+	
 alliance = {
         first = AUS
         second = HEK
         start_date = 1835.1.1
         end_date = 1867.1.1
     }
+	
 alliance = {
         first = AUS
         second = HES
         start_date = 1835.1.1
         end_date = 1867.1.1
     }
+
 alliance = {
         first = AUS
         second = NAS
