@@ -19,13 +19,13 @@ political_decisions = {
         ai_will_do = { factor = 0 }
     }
 
-    enable_splendid_isolation = {
+    disable_splendid_isolation = {
         picture = starting_options
         alert = no
         potential = {
             ai = no
             has_country_flag = country_looking_through_options_2
-            NOT = { has_global_flag = splendid_isolation }
+            NOT = { has_global_flag = splendid_isolation_disabled }
             NOT = { year = 1837 }
         }
 
@@ -33,7 +33,7 @@ political_decisions = {
         }
 
         effect = {
-        set_global_flag = splendid_isolation
+            set_global_flag = splendid_isolation_disabled
         }
 
         ai_will_do = { factor = 0 }
@@ -392,15 +392,15 @@ political_decisions = {
 
         effect = {
             set_global_flag = starting_infamy
-            EGY = { badboy = 21.39 }
-            FRA = { badboy = 7 }
-            GAZ = { badboy = 10 }
-            MAS = { badboy = 2.8 }
-            RUS = { badboy = 13.86 }
-            SOK = { badboy = 24 }
-            SPA = { badboy = 10 }
-            XHO = { badboy = 5 }
-            ZUL = { badboy = 10 }
+            EGY = { badboy = -21.39 }
+            FRA = { badboy = -7 }
+            GAZ = { badboy = -10 }
+            MAS = { badboy = -2.8 }
+            RUS = { badboy = -13.86 }
+            SOK = { badboy = -24 }
+            SPA = { badboy = -10 }
+            XHO = { badboy = -5 }
+            ZUL = { badboy = -10 }
         }
         ai_will_do = { factor = 0 }
     }
@@ -789,11 +789,11 @@ political_decisions = {
 
         effect = {
             1498 = { add_province_modifier = { name = colonial_exploitation duration = 7300 } }
-            relation = { who = ZUL value = 400 }
-            relation = { who = XHO value = 400 }
-            relation = { who = SUA value = 400 }
-            relation = { who = MAT value = 400 }
-            relation = { who = AGC value = -400 }
+            #relation = { who = ZUL value = 400 }
+            #relation = { who = XHO value = 400 }
+            #relation = { who = SUA value = 400 }
+            #relation = { who = MAT value = 400 }
+            #relation = { who = AGC value = -400 }
             any_pop = {
                 limit = {
                     OR = {

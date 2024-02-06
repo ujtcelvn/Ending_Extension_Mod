@@ -28,11 +28,11 @@ everyday_needs = {
     furniture = 4
     paper = 5
     glass = 1
-    tobacco = 3 #1.5 #3
-    tea = 5 #4.5 #5
+    tobacco = 1.5 #3
+    tea = 4.5 #5
     coffee = 2
 
-    #opium = 1 #0
+    opium = 1 #0
     #((2*1.1) + (1*2.6)) / 3.2 = 1.5 
     #((1.5*1.1) + (0.5*2.6)) / 3.2 = 0.921875
 }

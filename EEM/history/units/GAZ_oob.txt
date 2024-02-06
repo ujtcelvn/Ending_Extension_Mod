@@ -1,3 +1,5 @@
+badboy = 10.100
+
 POR = {
     truce_until = 1841.1.1
     value = -100

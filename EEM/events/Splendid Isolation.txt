@@ -11,7 +11,7 @@ country_event = {
 			alliance_with = ENG
 		}
 		NOT = { exists = IRE }
-        has_global_flag = splendid_isolation
+        NOT = { has_global_flag = splendid_isolation_disabled }
 		NOT = { exists = GER }
 		rank = 1
 		NOT = { year = 1870 }

@@ -8,38 +8,33 @@ My name and trip is: Extender-anon !2RLc/0ninY
 ## Featuring:
 
 Extended play to 1956
-
-1 new technology for each technology group
-
-Over 100 new inventions
-
-Nukes!
-
-Motorized Infantry
-
-Aircraft Carriers
+* 1 more tier of technologies
+* Over 100 new inventions
+* Nukes!
+* Motorized Infantry
+* Aircraft Carriers
 
 Economic adjustments and rebalance
 * The growth of coal and iron production more closely matches the real life increase in coal and iron, with a great increase in supply corresponding to the Second Industrial Revolution. Unlike in HPM where coal and iron are always in short supply, in EEM, they sometime exceed demand by the 1880s (which caused the Long Depression in real life). Overall, the supply in EEM is much increased compared to HPM.
 * Historically, agricultural production per capita only doubled in the 100 years from 1836 to 1936; however, in HPM it increases by 3~4 times, often causing mass late game RGO unemployment. In EEM, the growth in agricultural production is now more historical. Crop yields per capita increased from 1830-1870 but was nearly flat until the 1930s, when it begin to grow again. Crop yield would only begin increasing massively after the development of scientific breeding techniques in the late 1950s.
-	
+
 Improved AI
 
-Tax refund event to prevent the liquidity crisis
-
-A bunch of bugfixes compared to HPM
+A bunch of bugfixes for HPM
 
 More China flavor and suffering. Trade access (sphering) of parts of China after the Taiping rebellion if you own treaty ports.
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
 
-Splendid Isolation option for the UK, taken from HPMP
+Integrated Xylephone's HPM Politics & Economy Patch 4.0's Political & National Value Changes, Setup Changes, and some of the optional changes
 
-Integrated Xylephone's HPM Politics & Economy Patch 3.1's Political & National Value Changes, Setup Changes (so far). Starting infamy is also included as an option.
+Tax refund event to prevent the liquidity crisis (can be disabled in options)
 
-Some of the new inventions don't have any localizations yet because they are still being rebalanced.
+Splendid Isolation for the UK, taken from HPMP (can be disabled in options)
 
-Please read the changelog.txt for more details.
+HPM P&PE Starting infamy (can be removed in options)
+
+Many other changes - please read the changelog.txt for more details.
 
 ## Acknowledgements:
 

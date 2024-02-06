@@ -19,7 +19,7 @@ ZUL = {
 }
 
 ENG = {
-    value = 75
+    value = 50
 }
 
 leader = {

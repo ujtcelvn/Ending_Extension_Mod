@@ -1,3 +1,5 @@
+badboy = 10.100
+
 #Sphere of Influence
 #Europe
 POR = {
@@ -176,7 +178,7 @@ FRA = { value = 125 }
 AUS = { value = -15 }
 USA = { value = -50 }
 PRU = { value = -15 }
-TUR = { value = -10 }
+TUR = { value = 15 }
 RUS = { value = -15 }
 
 

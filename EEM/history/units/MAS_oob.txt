@@ -1,3 +1,5 @@
+badboy = 2.900
+
 DND = {
     value = 30
 }

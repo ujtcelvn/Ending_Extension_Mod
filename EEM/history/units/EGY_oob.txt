@@ -1,3 +1,5 @@
+badboy = 21.490
+
 DAR = {
     value = 80
 }
@@ -35,7 +37,7 @@ USA = {
 }
 
 FRA = {
-	value = 20
+	value = 50
 }
 
 RUS = {
@@ -47,6 +49,10 @@ TUR = {
 }
 
 AUS = {
+	value = -50
+}
+
+PRU = {
 	value = -25
 }
 

@@ -85,6 +85,9 @@ SAT = {
 HAI = {
 	value = -50
 }
+TUR = {
+	value = 15
+}
 
 army = {
     name = "Borneo Garnizoen"
