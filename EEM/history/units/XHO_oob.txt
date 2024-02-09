@@ -1,8 +1,11 @@
+badboy = 5.030
+
 BSH = { value = 50 }
 SUA = { value = 30 }
 ZUL = { value = -70 }
 MAT = { value = 50 }
 GAZ = { value = -70 }
+ENG = { value = -150 }
 
 leader = {
    name = "Maqoma"

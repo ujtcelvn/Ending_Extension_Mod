@@ -151,7 +151,7 @@ MOR = {
 }
 
 DEN = {
-    value = -100
+    value = 30
 	level = 2
 	influence_value = 15
 }
@@ -186,7 +186,7 @@ POR = {
 	value = 20
 }
 OMA = {
-	value = 125
+	value = 50
 	level = 3
 }
 

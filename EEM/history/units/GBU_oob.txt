@@ -3,7 +3,7 @@ NET = {
 }
 
 POR = {
-    value = 100
+    value = 75
 }
 
 SEG = {

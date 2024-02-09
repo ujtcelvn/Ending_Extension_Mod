@@ -1,3 +1,5 @@
+badboy = 13.890
+
 #Sphere of Influence
 
 #Europe
@@ -87,7 +89,7 @@ NET = {
 
 #Africa
 EGY = {
-	value = -50
+	value = -125
 	influence = 0
 	influence_value = 0
 }

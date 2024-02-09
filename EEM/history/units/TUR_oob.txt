@@ -112,14 +112,20 @@ PAP = {
 	level = 1
 	influence_value = 0
 }
+NET = {
+	value = 15
+}
+BEL = {
+	value = 15
+}
 
 #Other GP's
 USA = { value = 0 }
 PRU = { value = 50 }
-SPA = { value = -10 }
+SPA = { value = 15 }
 AUS = { value = 50 }
 RUS = { value = 125 }
-ENG = { value = 30 }
+ENG = { value = 50 }
 FRA = { value = -30 }
 
 army = {

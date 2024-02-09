@@ -1,3 +1,5 @@
+badboy = 7.100
+
 #Sphere of Influence
 BEL = {
     value = 125        #relation
@@ -39,7 +41,7 @@ GRE = {
     influence_value = 10
 }
 EGY = {
-	value = 20
+	value = 50
 	level = 2
 	influence_value = 25
 }

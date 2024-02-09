@@ -185,7 +185,7 @@ MOR = {
     value = 75
 }
 EGY = {
-    value = -25
+    value = -50
     level = 2
     influence_value = 0
 }

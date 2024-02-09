@@ -6,9 +6,6 @@ GAZ = {
 AGC = {
     value = -400
 }
-OMA = {
-    value = 400
-}
 ENG = {
     value = 200
 }
@@ -28,7 +25,7 @@ BEN = {
     value = 50
 }
 ZUL = {
-    value = 50
+    value = -50
 }
 DAH = {
     value = 40
@@ -52,7 +49,7 @@ LOA = {
     value = 75
 }
 GBU = {
-    value = 100
+    value = 75
 }
 TOO = {
     value = 35

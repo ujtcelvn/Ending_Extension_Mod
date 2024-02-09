@@ -20,6 +20,9 @@ PRU = {
 POR = {
 	value = 80
 }
+TUR = {
+	value = 15
+}
 
 army = {
     name = "1e Infanterie Divisie"
