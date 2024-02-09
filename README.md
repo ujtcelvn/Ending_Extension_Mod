@@ -25,21 +25,21 @@ Economic adjustments and rebalance
 	
 Improved AI
 
-Tax refund event to prevent the liquidity crisis
-
-A bunch of bugfixes compared to HPM
+A bunch of bugfixes for HPM
 
 More China flavor and suffering. Trade access (sphering) of parts of China after the Taiping rebellion if you own treaty ports.
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
 
-Splendid Isolation option for the UK, taken from HPMP
+Integrated Xylephone's HPM Politics & Economy Patch 4.0's Political & National Value Changes, Setup Changes, and some of the optional changes
 
-Integrated Xylephone's HPM Politics & Economy Patch 4.0's Political & National Value Changes, Setup Changes, and Starting infamy (which can be removed in the options panel).
+Tax refund event to prevent the liquidity crisis (can be disabled in options)
 
-Some of the new inventions don't have any localizations yet because they are still being rebalanced.
+Splendid Isolation for the UK, taken from HPMP (can be disabled in options)
 
-Please read the changelog.txt for more details.
+HPM P&PE Starting infamy (can be removed in options)
+
+Many other changes - please read the changelog.txt for more details.
 
 ## Acknowledgements:
 
