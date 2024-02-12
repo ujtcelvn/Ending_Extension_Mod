@@ -24,7 +24,7 @@ piston_steam_engine = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {
@@ -88,7 +88,7 @@ high_pressure_steam_engine = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {
@@ -152,7 +152,7 @@ compound_steam_engines = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {
@@ -216,7 +216,7 @@ steam_turbine = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {
@@ -284,7 +284,7 @@ combustion_engine = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {
@@ -349,7 +349,7 @@ electrical_power_generation = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {
@@ -411,7 +411,7 @@ tech_power_7 = {
                 big_producer = silk
                 big_producer = tobacco
                 big_producer = fruit
-                big_producer = timber
+                #big_producer = timber
             }
         }
         modifier = {

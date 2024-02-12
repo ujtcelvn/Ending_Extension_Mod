@@ -255,111 +255,6 @@ province_event = {
             }
         }
 
-        random_country = {
-            limit = {
-                tag = THIS
-                number_of_states = 10
-                any_owned_province = {
-                    NOT = {
-                        has_province_modifier = local_intensive_agriculture 
-                        unemployment_by_type = { value = 0.03 type = farmers }
-                    }
-                    NOT = {
-                        state_scope = {
-                            is_slave = yes
-                            has_pop_type = serfs
-                            any_owned_province = { NOT = { controlled_by = THIS } }
-                        }
-                    }
-                    state_scope = { literacy = 0.7 }
-                    NOT = { is_overseas = yes }
-                    NOT = { is_colonial = yes }
-                    OR = {
-                        terrain = plains
-                        terrain = steppe
-                        terrain = savanna
-                        terrain = forest
-                        terrain = hills
-                        terrain = dryhills
-                        terrain = farmlands
-                        terrain = mountain
-                        terrain = urban
-                        terrain = new_world_plains
-                        terrain = new_world_mountain
-                    }
-                    OR = {
-                        has_province_modifier = local_tractors
-                        trade_goods = cattle
-                        trade_goods = wool
-                    }
-                }
-            }
-            random = {
-                chance = 50
-                random_state = {
-                    limit = {
-                        literacy = 0.7
-                        NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
-                        NOT = {
-                            has_pop_type = serfs
-                            is_slave = yes
-                        }
-                        any_owned_province = {
-                            NOT = {
-                                is_overseas = yes
-                                is_colonial = yes
-                                has_province_modifier = local_intensive_agriculture 
-                                unemployment_by_type = { value = 0.03 type = farmers }
-                            }
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
-                            }
-                            OR = {
-                                has_province_modifier = local_tractors
-                                trade_goods = cattle
-                                trade_goods = wool
-                            }
-                        }
-                    }
-                    state_scope = {
-                        any_owned = {
-                            limit = {
-                                OR = {
-                                    terrain = plains
-                                    terrain = steppe
-                                    terrain = savanna
-                                    terrain = forest
-                                    terrain = hills
-                                    terrain = dryhills
-                                    terrain = farmlands
-                                    terrain = mountain
-                                    terrain = urban
-                                    terrain = new_world_plains
-                                    terrain = new_world_mountain
-                                }
-                                OR = {
-                                    has_province_modifier = local_tractors
-                                    trade_goods = cattle
-                                    trade_goods = wool
-                                }
-                            }
-                            add_province_modifier = { name = local_intensive_agriculture duration = -1 }
-                            remove_province_modifier = local_tractors
-                        }
-                    }
-                }
-            }
-        }
 
         random_country = {
             limit = {
@@ -820,7 +715,6 @@ province_event = {
         name = "EVTOPTA29906"
         state_scope = {
             any_owned = {
-                remove_province_modifier = local_steamers
                 add_province_modifier = { name = local_modern_transportation duration = -1 }
             }
         }
@@ -848,7 +742,6 @@ province_event = {
                 }
                 state_scope = {
                     any_owned = {
-                        remove_province_modifier = local_steamers
                         add_province_modifier = { name = local_modern_transportation duration = -1 }
                     }
                 }
@@ -891,10 +784,7 @@ province_event = {
                         }
                         literacy = 0.7
                     }
-                    state_scope = { any_owned = {
-                        remove_province_modifier = local_steamers 
-                        add_province_modifier = { name = local_modern_transportation duration = -1
-                    } } }
+                    state_scope = { any_owned = { add_province_modifier = { name = local_modern_transportation duration = -1 } } }
                 }
             }
         }
@@ -935,9 +825,7 @@ province_event = {
                         }
                         literacy = 0.7
                     }
-                    state_scope = { any_owned = { 
-                        remove_province_modifier = local_steamers
-                        add_province_modifier = { name = local_modern_transportation duration = -1 } } }
+                    state_scope = { any_owned = { add_province_modifier = { name = local_modern_transportation duration = -1 } } }
                 }
             }
         }
@@ -978,9 +866,7 @@ province_event = {
                         }
                         literacy = 0.7
                     }
-                    state_scope = { any_owned = { 
-                        remove_province_modifier = local_steamers
-                        add_province_modifier = { name = local_modern_transportation duration = -1 } } }
+                    state_scope = { any_owned = { add_province_modifier = { name = local_modern_transportation duration = -1 } } }
                 }
             }
         }
@@ -1021,9 +907,7 @@ province_event = {
                         }
                         literacy = 0.7
                     }
-                    state_scope = { any_owned = { 
-                        remove_province_modifier = local_steamers
-                        add_province_modifier = { name = local_modern_transportation duration = -1 } } }
+                    state_scope = { any_owned = { add_province_modifier = { name = local_modern_transportation duration = -1 } } }
                 }
             }
         }
@@ -1067,8 +951,6 @@ province_event = {
     title = "EVTNAME29908"
     desc = "EVTDESC29908"
 
-    #is_triggered_only = yes
-
     trigger = {
         owner = {
             invention = artificial_fertilizers #inorganic_chemistry 1836
@@ -1095,14 +977,14 @@ province_event = {
             terrain = urban
             terrain = new_world_plains
             terrain = new_world_mountain
-       }
-       OR = {
+        }
+        OR = {
             trade_goods = tobacco
             trade_goods = tea
             trade_goods = coffee
             trade_goods = grain
             trade_goods = opium
-           trade_goods = cotton
+            trade_goods = cotton
             trade_goods = fruit
             trade_goods = fish
         }
@@ -1125,9 +1007,9 @@ province_event = {
             any_pop = {
                 type = aristocrats #used to be farmers
                 cash_reserves = 200
-               location = { NOT = { is_overseas = yes } }
-           }
-       }
+                location = { NOT = { is_overseas = yes } }
+            }
+        }
         modifier = {
             factor = 0.7
             is_capital = yes
@@ -1175,13 +1057,13 @@ province_event = {
             owner = { NOT = { num_of_cities = 20 } }
         }
         modifier = {
-           factor = 0.95
+            factor = 0.95
             owner = { NOT = { num_of_cities = 15 } }
         }
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 10 } }
-       }
+        }
         modifier = {
             factor = 0.95
             owner = { NOT = { num_of_cities = 5 } }
@@ -1342,132 +1224,6 @@ province_event = {
             }
         }
 
-
-        random_country = {
-            limit = {
-                tag = THIS
-                number_of_states = 10
-                any_owned_province = {
-                    NOT = {
-                        has_province_modifier = local_reapers_und_soil_enrichment
-                        has_province_modifier = local_tractors
-                        has_province_modifier = local_intensive_agriculture
-                        unemployment_by_type = { value = 0.03 type = farmers }
-                    }
-                    NOT = {
-                        state_scope = {
-                            is_slave = yes
-                            has_pop_type = serfs
-                            any_owned_province = { NOT = { controlled_by = THIS } }
-                        }
-                    }
-                    state_scope = { literacy = 0.7 }
-                    NOT = { is_overseas = yes }
-                    NOT = { is_colonial = yes }
-                    OR = {
-                        terrain = plains
-                        terrain = steppe
-                        terrain = savanna
-                        terrain = forest
-                        terrain = hills
-                        terrain = dryhills
-                        terrain = farmlands
-                        terrain = mountain
-                        terrain = urban
-                        terrain = new_world_plains
-                        terrain = new_world_mountain
-                    }
-                    OR = {
-                        trade_goods = tobacco
-                        trade_goods = tea
-                        trade_goods = coffee
-                        trade_goods = grain
-                        trade_goods = opium
-                        trade_goods = cotton
-                        trade_goods = fruit
-                        trade_goods = fish
-                    }
-                }
-            }
-            random = {
-                chance = 50
-                random_state = {
-                    limit = {
-                        literacy = 0.7
-                        NOT = { any_owned_province = { NOT = { controlled_by = THIS } } }
-                        NOT = {
-                            has_pop_type = serfs
-                            is_slave = yes
-                        }
-                        any_owned_province = {
-                            NOT = {
-                                is_overseas = yes
-                                is_colonial = yes
-                                has_province_modifier = local_reapers_und_soil_enrichment
-                                has_province_modifier = local_tractors
-                                has_province_modifier = local_intensive_agriculture
-                                unemployment_by_type = { value = 0.03 type = farmers }
-                            }
-                            OR = {
-                                terrain = plains
-                                terrain = steppe
-                                terrain = savanna
-                                terrain = forest
-                                terrain = hills
-                                terrain = dryhills
-                                terrain = farmlands
-                                terrain = mountain
-                                terrain = urban
-                                terrain = new_world_plains
-                                terrain = new_world_mountain
-                            }
-                            OR = {
-                                trade_goods = tobacco
-                                trade_goods = tea
-                                trade_goods = coffee
-                                trade_goods = grain
-                                trade_goods = opium
-                                trade_goods = cotton
-                                trade_goods = fruit
-                                trade_goods = fish
-                            }
-                        }
-                    }
-                    state_scope = {
-                        any_owned = {
-                            limit = {
-                                OR = {
-                                    terrain = plains
-                                    terrain = steppe
-                                    terrain = savanna
-                                    terrain = forest
-                                    terrain = hills
-                                    terrain = dryhills
-                                    terrain = farmlands
-                                    terrain = mountain
-                                    terrain = urban
-                                    terrain = new_world_plains
-                                    terrain = new_world_mountain
-                                }
-                                OR = {
-                                    trade_goods = tobacco
-                                    trade_goods = tea
-                                    trade_goods = coffee
-                                    trade_goods = grain
-                                    trade_goods = opium
-                                    trade_goods = cotton
-                                    trade_goods = fruit
-                                    trade_goods = fish
-                                }
-                                NOT = { has_province_modifier = local_tractors }
-                                NOT = { has_province_modifier = local_intensive_agriculture }
-                            }
-                            add_province_modifier = { name = local_reapers_und_soil_enrichment duration = -1 }
-                        }
-                    }
-                }
-            }
-        }
 
         random_country = {
             limit = {
