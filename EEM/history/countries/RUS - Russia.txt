@@ -46,7 +46,7 @@ border_policy = closed_borders
 
 set_country_flag = orthodox_country
 
-ruling_party = RUS_reactionary
+ruling_party = RUS_conservative
 upper_house = {
     fascist = 0
     liberal = 19
