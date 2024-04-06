@@ -4030,9 +4030,9 @@ country_event = {
             owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
         }
         random_list = {
-            34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
-            33 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
-            33 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
+            25 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }
+            25 = { add_country_modifier = { name = global_baby_boom duration = 3285 } }
+            25 = { add_country_modifier = { name = global_baby_boom duration = 4015 } }
         }
         random_owned = {
             limit = {

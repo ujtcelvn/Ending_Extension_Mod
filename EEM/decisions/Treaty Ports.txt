@@ -48,7 +48,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1498 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -96,7 +96,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1496 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -131,7 +131,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1538 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -174,7 +174,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1566 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -230,7 +230,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1481 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -277,7 +277,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1569 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -322,7 +322,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1606 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -387,7 +387,7 @@ political_decisions = {
             1485 = { secede_province = THIS change_controller = THIS }
             2562 = { secede_province = THIS change_controller = THIS }
             2681 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
 
         ai_will_do = {
@@ -433,7 +433,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1499 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -488,7 +488,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             2632 = { secede_province = THIS change_controller = THIS }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1
@@ -543,7 +543,7 @@ political_decisions = {
         effect = {
             remove_country_modifier = negotiating_treaty
             1608 = { secede_province = THIS change_controller = THIS add_province_modifier = { name = treaty_port duration = -1 } }
-            add_country_modifier = { name = chinese_treaty_port duration = 1095 }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
         }
         ai_will_do = {
             factor = 1

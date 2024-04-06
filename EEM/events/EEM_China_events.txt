@@ -5375,7 +5375,7 @@ country_event = {
 #CHI join the TPG?
 country_event = {
     id = 166505
-    title = "The Fate of China"
+    title = "Unite with the Taiping?"
     desc = "EVTDESC166505"
     picture = "triumphal_procession_after_the_campaign_against_the_nian"
 
@@ -5412,6 +5412,10 @@ country_event = {
             modifier = {
                 factor = 2
                 TPG = { brigades_compare = 2 }
+            }
+            modifier = {
+                factor = 0
+                truce_with = TPG
             }
         }
     }
@@ -5463,7 +5467,7 @@ country_event = {
 #CHI join the RTR?
 country_event = {
     id = 166506
-    title = "The Fate of China"
+    title = "Unite with the Red Turbans?"
     desc = "EVTDESC166506"
     picture = "triumphal_procession_after_the_campaign_against_the_nian"
 
@@ -5500,6 +5504,10 @@ country_event = {
             modifier = {
                 factor = 2
                 RTR = { brigades_compare = 2 }
+            }
+            modifier = {
+                factor = 0
+                truce_with = RTR
             }
         }
     }
@@ -5551,7 +5559,7 @@ country_event = {
 #CHI join the TPG or the RTR?
 country_event = {
     id = 166507
-    title = "The Fate of China"
+    title = "Unite with Taiping or Read Turbans?"
     desc = "EVTDESC166507"
     picture = "triumphal_procession_after_the_campaign_against_the_nian"
 
@@ -5589,6 +5597,10 @@ country_event = {
                 factor = 2
                 TPG = { brigades_compare = 2 }
             }
+            modifier = {
+                factor = 0
+                truce_with = TPG
+            }
         }
     }
 
@@ -5605,6 +5617,10 @@ country_event = {
             modifier = {
                 factor = 2
                 RTR = { brigades_compare = 2 }
+            }
+            modifier = {
+                factor = 0
+                truce_with = RTR
             }
         }
     }
