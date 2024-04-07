@@ -114,7 +114,7 @@ fleet_air_carriers = {
     }
     effect = {
         aircraft_carrier = {
-            maximum_speed = 2
+            maximum_speed = 1
             hull = 2
 			gun_power = 4 #2
         }

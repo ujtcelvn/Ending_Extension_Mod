@@ -1200,6 +1200,7 @@ ship_construction_7 = {
     steam_transport = { maximum_speed = 1 } #35
     cruiser = { maximum_speed = 1 }         #40
     dreadnought = { maximum_speed = 1 }        #38
+    aircraft_carrier = { maximum_speed = 1 }
 
     ai_chance = {
         factor = 1
