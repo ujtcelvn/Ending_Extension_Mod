@@ -100,7 +100,7 @@ country_event = {
                 owner = { has_country_flag = dissolving_parliament }
             }
             owner = {
-                upper_house = { ideology = liberal value = 0.9 }
+                upper_house = { ideology = liberal value = 9 }
                 any_pop = {
                     scaled_militancy = {
                         ideology = reactionary
@@ -129,7 +129,7 @@ country_event = {
                 owner = { has_country_flag = dissolving_parliament }
             }
             owner = {
-                upper_house = { ideology = reactionary value = 0.9 }
+                upper_house = { ideology = reactionary value = 9 }
                 any_pop = {
                     scaled_militancy = {
                         ideology = liberal
@@ -176,10 +176,7 @@ country_event = {
                 }
             }
             owner = {
-                upper_house = {
-                    ideology = socialist
-                    value = 0.9
-                }
+                upper_house = { ideology = socialist value = 9 }
                 any_pop = {
                     scaled_militancy = {
                         ideology = liberal
