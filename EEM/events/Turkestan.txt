@@ -308,6 +308,7 @@ country_event = {
 
     option = {
         name = "EVT32546OPTA"
+        set_global_flag = tajikistan_created
         1201 = { add_core = TAJ }
         1208 = { add_core = TAJ }
         1207 = {
@@ -506,7 +507,7 @@ country_event = {
     }
 
     fire_only_once = yes
-    mean_time_to_happen = { days = 1 }
+    mean_time_to_happen = { months = 1 }
 
     option = {
         name = "Ok"

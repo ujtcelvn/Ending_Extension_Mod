@@ -284,11 +284,14 @@ political_decisions = {
                 }
             }
             TAJ = {
-                all_core = {
-                    OR = {
-                        owner = { in_sphere = THIS }
-                        owner = { vassal_of = THIS }
-                        owned_by = THIS
+                OR = {
+                    NOT = { has_global_flag = tajikistan_created }
+                    all_core = {
+                        OR = {
+                            owner = { in_sphere = THIS }
+                            owner = { vassal_of = THIS }
+                            owned_by = THIS
+                        }
                     }
                 }
             }
