@@ -233,7 +233,7 @@ EVTDESC10341;Milanese revolutionaries have contacted us, asking for our aid to e
 EVT10341OPTA;We will liberate Lombardy!;;;;;;;;;;;;;
 EVT10341OPTB;They must fight on their own.;;;;;;;;;;;;;
 EVTNAME10342;Rebellion in Venice;;;;;;;;;;;;;
-EVTDESC10342;Revolutionaries have siezed control of the Venetian arsenal, naval yeard, and munition depot. News spread reapidly and much of the state has joined the revolt, proclaiming a new Venetian republic. Field Marshal Radetzky was able maintain control over Verona, but the situation remains tense.;;;;;;;;;;;;;
+EVTDESC10342;Revolutionaries have siezed control of the Venetian arsenal, naval yard, and munition depot. News spread reapidly and much of the state has joined the revolt, proclaiming a new Venetian republic. Field Marshal Radetzky was able maintain control over Verona, but the situation remains tense.;;;;;;;;;;;;;
 EVT10342OPTA;We will restore order!;;;;;;;;;;;;;
 EVT10342OPTB;We have to evacuate Venetia completely.;;;;;;;;;;;;;
 EVT10342OPTC;Throw off Hapsburg rule!;;;;;;;;;;;;;
@@ -242,7 +242,7 @@ EVTDESC10343;Radical liberal and republican ideas are spreading from Venice into
 EVT10343OPTA;The war must continue.;;;;;;;;;;;;;
 EVT10343OPTB;We will make peace with Austria and withdraw from Venice.;;;;;;;;;;;;;
 EVTNAME110055;Liberalism in the Papal States;;;;;;;;;;;;;
-EVTDESC110055;During the Napoleonic Wars, liberal and Italian nationalist ideas spread into the Papal States, especially in the north. Riots in Romagna in 1820 and 1830 were suppressed with only the aid of French and Austrian troops. Anti-papal societies are still active in Romagna and there remains significant liberal unrest.;;;;;;;;;;;;;
+EVTDESC110055;During the Napoleonic Wars, liberal and Italian nationalist ideas spread into the Papal States, especially in Romagna. Riots in 1820 and 1830 were suppressed with only the aid of French and Austrian troops. Anti-papal societies are still active in Romagna and there remains significant liberal unrest.;;;;;;;;;;;;;
 EVT110055OPTA;Rebellion will not be tolerated.;;;;;;;;;;;;;
 EVTNAME50010;Revolution of the Reforms;;;;;;;;;;;;;
 EVTDESC50010;Dissatisfied soliders revolted in June 1835 and demanded an end of the oligarchal government and the reconstitution of Gran Colombia. After loyal forces recaptured the capital and a pardon was issued, most of the rebels surrendered. The last of the revolutionaries are still holding out in San Felipe, but it should not take long before they are defeated as well.;;;;;;;;;;;;;
