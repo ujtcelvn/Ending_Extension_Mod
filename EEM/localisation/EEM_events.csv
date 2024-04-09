@@ -238,7 +238,7 @@ EVT10342OPTA;We will restore order!;;;;;;;;;;;;;
 EVT10342OPTB;We have to evacuate Venetia completely.;;;;;;;;;;;;;
 EVT10342OPTC;Throw off Hapsburg rule!;;;;;;;;;;;;;
 EVTNAME10343;Peace with Austria;;;;;;;;;;;;;
-EVTDESC10343;Radical liberal and republican ideas are spreading from Venice into $COUNTRY$, threatenomg to destabilize our nation. By ending our support of Venice, we can stop the inflow of liberalism while also mending our relations with Austria.;;;;;;;;;;;;;
+EVTDESC10343;Radical liberal and republican ideas are spreading from Venice into $COUNTRY$, threatenimg to destabilize our nation. By ending our support of Venice, we can stop the inflow of liberalism while also mending our relations with Austria.;;;;;;;;;;;;;
 EVT10343OPTA;The war must continue.;;;;;;;;;;;;;
 EVT10343OPTB;We will make peace with Austria and withdraw from Venice.;;;;;;;;;;;;;
 EVTNAME110055;Liberalism in the Papal States;;;;;;;;;;;;;
