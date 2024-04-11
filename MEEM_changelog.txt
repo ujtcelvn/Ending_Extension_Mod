@@ -1,0 +1,8 @@
+MEEM - experiMental Ending Extension Mod
+
+####################################################################################################
+v0.0.1
+
+Soldiers now only live in state capitals
+Land unit build times reduced to ~1/4x
+

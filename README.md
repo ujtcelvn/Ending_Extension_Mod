@@ -36,6 +36,14 @@ HPM P&PE Starting infamy (can be removed in options)
 
 Many other changes - please read the changelog.txt for more details.
 
+## Submod - MEEM (experiMental EEM)
+
+This is a submod for EEM. To use it, activate it and EEM at the same time on the mod selector. 
+
+Current features include:
+* Soldiers now only live in state capitals for convenience purposes
+* Land unit build times reduced to ~1/4x
+
 ## Acknowledgements:
 
 * Thanks to arkhometha and everyone else who contributed to HPM for making HPM so this mod could be based on it
