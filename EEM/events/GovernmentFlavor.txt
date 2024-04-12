@@ -744,3 +744,92 @@ country_event = {
         ai_chance = { factor = 0 }
     }
 }
+
+country_event = {
+    id = 11003
+    title = "EVTNAME11003" #Economic Interdependence
+    desc = "EVTDESC11003"
+    picture = "coe_bretton_woods_1944"
+
+    trigger = {
+		economic_policy = laissez_faire
+		trade_policy = free_trade
+		government_interventionism = 1 #1900
+        war = no
+		crisis_exist = no
+		NOT = { badboy = 0.75 }
+		NOT = { has_country_modifier = nationalization_in_progress }
+    }
+
+    mean_time_to_happen = {
+        months = 480
+
+        modifier = {
+            factor = 0.8
+			market_functionality_7 = 1 #1930
+        }
+		
+        modifier = {
+            factor = 0.8
+			OR = {
+				vote_franschise = universal_weighted_voting
+				vote_franschise = universal_voting
+				AND = {
+					government = democracy
+					vote_franschise = wealth_voting
+				}
+			}
+			OR = {
+				political_parties = non_secret_ballots
+				political_parties = secret_ballots
+				AND = {
+					government = democracy
+					political_parties = gerrymandering
+				}
+			}
+        }
+    }
+
+    option = {
+        name = "EVT11003OPTA"
+
+		any_neighbor_country = {
+			limit = {
+				exists = yes
+				war = no
+				NOT = {
+					any_core = { owned_by = THIS }
+					any_owned_province = { is_core = THIS }
+				}
+				economic_policy = laissez_faire
+				trade_policy = free_trade
+				government_interventionism = 1 #1900
+				NOT = { has_country_modifier = nationalization_in_progress }
+			}
+	       relation = { who = THIS value = 50 }
+		}
+
+		any_country = {
+			limit = {
+				exists = yes
+				war = no
+				NOT = {
+					any_core = { owned_by = THIS }
+					any_owned_province = { is_core = THIS }
+				}
+				economic_policy = laissez_faire
+				trade_policy = free_trade
+				government_interventionism = 1 #1900
+				NOT = { has_country_modifier = nationalization_in_progress }
+			}
+	       relation = { who = THIS value = 25 }
+		}
+        ai_chance = { factor = 100 }
+    }
+
+    option = {
+        name = "EVT11003OPTB"
+        ai_chance = { factor = 0 }
+    }
+}
+

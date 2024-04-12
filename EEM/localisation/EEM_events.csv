@@ -247,3 +247,7 @@ EVT110055OPTA;Rebellion will not be tolerated.;;;;;;;;;;;;;
 EVTNAME50010;Revolution of the Reforms;;;;;;;;;;;;;
 EVTDESC50010;Dissatisfied soliders revolted in June 1835 and demanded an end of the oligarchal government and the reconstitution of Gran Colombia. After loyal forces recaptured the capital and a pardon was issued, most of the rebels surrendered. The last of the revolutionaries are still holding out in San Felipe, but it should not take long before they are defeated as well.;;;;;;;;;;;;;
 EVT50010OPTA;We will restore order.;;;;;;;;;;;;;
+EVTNAME11003;Commercial Peace;;;;;;;;;;;;;
+EVTDESC11003;Diplomats and other senior $COUNTRY_ADJ$ government figures in $CAPITAL$ are suggesting we organize a summit with other economically liberal leaders to discuss the current issues of our time. Our interdependent economies make maintaining good relations of vital importance if we aim to protect our globalized markets from disruption. As Immanuel Kant wrote: "the spirit of commerce... sooner or later takes hold of every nation, and is incompatible with war.";;;;;;;;;;;;;
+EVT11003OPTA;The natural effect of commerce is to lead to peace.;;;;;;;;;;;;;
+EVT11003OPTB;This is not in our interest at this time.;;;;;;;;;;;;;
