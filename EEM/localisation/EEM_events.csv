@@ -251,3 +251,6 @@ EVTNAME11003;Commercial Peace;;;;;;;;;;;;;
 EVTDESC11003;Diplomats and other senior $COUNTRY_ADJ$ government figures in $CAPITAL$ are suggesting we organize a summit with other economically liberal leaders to discuss the current issues of our time. Our interdependent economies make maintaining good relations of vital importance if we aim to protect our globalized markets from disruption. As Immanuel Kant wrote: "the spirit of commerce... sooner or later takes hold of every nation, and is incompatible with war.";;;;;;;;;;;;;
 EVT11003OPTA;The natural effect of commerce is to lead to peace.;;;;;;;;;;;;;
 EVT11003OPTB;This is not in our interest at this time.;;;;;;;;;;;;;
+EVTNAMEC50001;The Regency Period;;;;;;;;;;;;;
+EVTDESC50001;The 10-year-old Dom Pedro II, Emperor of Brazil, is yet too young to rule the country, due to his father abdicating in 1831 in order to restore his daughter Maria to her rightful throne of Portugal. Until the child Emperor is of age, the country will be looked over by parliamentary officials and a court of regents.;;;;;;;;;;;;;
+EVTOPTA50001;He will make a good leader, someday.;;;;;;;;;;;;;

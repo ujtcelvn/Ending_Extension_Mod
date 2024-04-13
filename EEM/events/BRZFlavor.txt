@@ -1,5 +1,22 @@
+#Event for Brazil to establish the regency of Pedro II
 country_event = {
+    id = 50001
+    title = "EVTNAMEC50001"
+    desc = "EVTDESC50001"
+    picture = "brz_regency"
+    is_triggered_only = yes
 
+    option = {
+        name = "EVTOPTA50001"
+        add_country_modifier = {
+            name = regency_government
+            duration = -1
+        }
+    }
+}
+
+
+country_event = {
     id = 46300
     news = yes
     news_desc_long = "EVTDESC46300_NEWS_LONG"
@@ -218,7 +235,7 @@ country_event = {
         }
     }
 
-option = {
+    option = {
         name = "vargasopt2"
         any_owned = {
             limit = {
@@ -253,7 +270,9 @@ country_event = {
 
     trigger = {
         tag = BRZ
-        year = 1889
+        has_country_flag = coronation_of_pedro
+        #year = 1889
+        slavery = no_slavery
         OR = {
             average_militancy = 3
             average_consciousness = 6
@@ -263,10 +282,15 @@ country_event = {
             government = prussian_constitutionalism
             government = hms_government
         }
-        has_country_flag = coronation_of_pedro
     }
 
-    mean_time_to_happen = { months = 24 }
+    mean_time_to_happen = { 
+        months = 24
+        modifier = {
+            factor = 0.5
+            has_country_flag = golden_law_passed
+        }
+    }
 
     fire_only_once = yes
 
@@ -296,10 +320,10 @@ country_event = {
             limit = { NOT = { owner = { public_meetings = yes_meeting } } }
             owner = { political_reform = yes_meeting }
         }
-        random_owned = {
-            limit = { NOT = { owner = { citizens_rights = all_voting_pops } } }
-            owner = { social_reform = all_voting_pops }
-        }
+        #random_owned = {
+        #    limit = { NOT = { owner = { citizens_rights = all_voting_pops } } }
+        #    owner = { social_reform = all_voting_pops }
+        #}
         random_owned = {
             limit = { NOT = { owner = { voting_system = first_past_the_post } } }
             owner = { political_reform = first_past_the_post }
@@ -312,7 +336,7 @@ country_event = {
             limit = { owner = { OR = { political_parties = underground_parties political_parties = harassment } } }
             owner = { political_reform = gerrymandering }
         }
-        ruling_party_ideology = liberal
+        ruling_party_ideology = conservative #liberal
         election = yes
         any_pop = { ideology = { factor = 0.02 value = liberal } }
         rich_strata = { militancy = -1 consciousness = -3 }

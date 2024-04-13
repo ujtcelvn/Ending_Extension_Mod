@@ -1646,10 +1646,10 @@ political_decisions = {
         }
 
         effect = {
-            add_country_modifier = {
-                name = regency_government
-                duration = -1
-            }
+            #add_country_modifier = {
+            #    name = regency_government
+            #    duration = -1
+            #}
             any_pop = { limit = { has_pop_culture = french } literacy = 0.4 }
             2435 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.11 } }
             BRZ_2462 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
@@ -1860,9 +1860,9 @@ political_decisions = {
             CLM_1723 = { any_pop = { limit = { has_pop_culture = central_american } literacy = 0.02 } } #Panama
             2247 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
             VNZ = { #Venezuela
-				2264 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
-				2268 = { change_controller = REB }
-			}
+                2264 = { any_pop = { limit = { is_primary_culture = yes } literacy = 0.05 } }
+                2268 = { change_controller = REB }
+            }
         }
     }
 
@@ -1937,6 +1937,7 @@ political_decisions = {
             HAI = { country_event = { id = 45106 days = 3 } }
             PAP = { country_event = { id = 110055 days = 2 } }
             VNZ = { country_event = { id = 50010 days = 2 } }
+            BRZ = { country_event = { id = 50001 days = 2 } }
             ##########################################################
 
             ################Uncivs Close their borders###########################

@@ -25,12 +25,12 @@ political_decisions = {
         potential = {
             tag = BRZ
             NOT = { has_country_flag = golden_law_passed }
+            NOT = { slavery = no_slavery }
             OR = {
                 government = hms_government
                 government = prussian_constitutionalism
                 government = absolute_monarchy
             }
-            NOT = { slavery = no_slavery }
         }
 
         allow = {
@@ -42,14 +42,39 @@ political_decisions = {
                 upper_house = { ideology = socialist value = 0.2 }
             }
         }
-
+    
         effect = {
             set_country_flag = golden_law_passed
+            prestige = 10
             badboy = -1
-            add_accepted_culture = afro_brazilian
+            #add_accepted_culture = afro_brazilian
             political_reform = no_slavery
             any_pop = { limit = { type = slaves } consciousness = -5 militancy = -6 }
-            any_pop = { limit = { type = aristocrats } militancy = 3 consciousness = 5 }
+            #any_pop = { limit = { type = aristocrats } militancy = 3 consciousness = 5 }
+            any_pop = {
+                limit = {
+                    is_primary_culture = yes
+                    OR = {
+                        type = aristocrats
+                        type = officers
+                    }
+                }
+                militancy = 8
+                consciousness = 7
+                ideology = { factor = 0.02 value = reactionary } 
+            }
+            any_pop = {
+                limit = {
+                    is_primary_culture = yes
+                    OR = {
+                        type = soldiers
+                        type = artisans
+                    }
+                }
+                militancy = 3
+                consciousness = 5
+                ideology = { factor = 0.02 value = reactionary } 
+            }
         }
     }
 
@@ -253,33 +278,33 @@ political_decisions = {
             }
         }
     }
-	
-	brazilian_coal = {
+    
+    brazilian_coal = {
         picture = mining_union_upper_katanga
         potential = {
-			2463 = {
-				owned_by = THIS
-				NOT = { trade_goods = coal }
-			}
-			NOT = { has_country_flag = brazilian_coal }
+            2463 = {
+                owned_by = THIS
+                NOT = { trade_goods = coal }
+            }
+            NOT = { has_country_flag = brazilian_coal }
         }
 
         allow = {
             war = no
-			money = 20000
-			OR = {
+            money = 20000
+            OR = {
                 invention = trinitrotoluene
-			    electrical_power_generation = 1
-			}
+                electrical_power_generation = 1
+            }
         }
 
         effect = {
             set_country_flag = brazilian_coal
-			treasury = -20000
+            treasury = -20000
             2463 = {
-				trade_goods = coal
-				add_province_modifier = { name = switched_production duration = 3650 }
-			}
+                trade_goods = coal
+                add_province_modifier = { name = switched_production duration = 3650 }
+            }
         }
     }
 
