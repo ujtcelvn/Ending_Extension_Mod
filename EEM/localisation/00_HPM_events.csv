@@ -1,6 +1,6 @@
 Key;English;French;German;Polish;Spanish;Italian;Swedish;Czech;Hungarian;Dutch;Portuguese;Russian;Finnish;
 EVTNAME6016828;Mines Close in $PROVINCENAME$;;;;;;;;;;;;;
-EVTDESC6016828;Several mines in $PROVINCENAME$ were closed in $YEAR$ due to a variety of factors: dropping local commodity prices, exhaustion of veils and poor quality of the remaining ones. The mines are not economical anymore, leading to the workfoce and local production shifting away from mineral activity.;;;;;;;;;;;;;
+EVTDESC6016828;Several mines in $PROVINCENAME$ were closed in $YEAR$ due to a variety of factors: dropping local commodity prices, exhaustion of veils and poor quality of the remaining ones. The mines are not economical anymore, leading to the workforce and local production shifting away from mineral activity.;;;;;;;;;;;;;
 EVT6016828OPTA;Life goes on.;;;;;;;;;;;;;
 EVTNAME60071;Constitutional Setback;;;;;;;;;;;;;
 EVTDESC60071;Recent developments in $CAPITAL$ saw the $COUNTRY_ADJ$ monarch seize more power and greatly increase his clout in the inner workings of the $COUNTRY_ADJ$ government.;;;;;;;;;;;;;
