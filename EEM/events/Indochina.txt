@@ -688,7 +688,7 @@ country_event = {
                 vassal_of = THIS
             }
             SIA = { release = CHK }
-            FROM = { inherit = THIS }
+            FROM = { inherit = CHK }
         }
 
         any_owned = {

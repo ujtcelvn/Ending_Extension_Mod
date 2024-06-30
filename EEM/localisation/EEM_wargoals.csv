@@ -7,3 +7,7 @@ AGRESSION_CIVIL_WAR_NAME_QNG_RTR;$ORDER$Red Turban Rebellion;;;;;;;;;;;;;
 NORMAL_CIVIL_WAR_NAME_QNG_RTR;$ORDER$Red Turban Rebellion;;;;;;;;;;;;;
 AGRESSION_CIVIL_WAR_NAME_QNG_MAO;$ORDER$Miao Rebellion;;;;;;;;;;;;;
 NORMAL_CIVIL_WAR_NAME_QNG_MAO;$ORDER$Miao Rebellion;;;;;;;;;;;;;
+make_puppet_no_infamy;Make puppet;;;;;;;;;;;;;
+make_puppet_no_infamy_short;$RECIPIENT$ becomes a puppet of $ACTOR$;;;;;;;;;;;;;
+make_puppet_no_infamy_setup;$RECIPIENT$ becomes a puppet of $ACTOR$;;;;;;;;;;;;;
+make_puppet_no_infamy_desc;Become a puppet;;;;;;;;;;;;;

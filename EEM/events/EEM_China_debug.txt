@@ -901,8 +901,10 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = RTR
-				#NOT = { province_id = 1493 } #Canton
-				NOT = { region = CHI_1493 } #East Canton
+				NOT = { province_id = 1493 } #Canton #region = CHI_1493 East Canton
+				NOT = { province_id = 1502 } #Nanning
+				NOT = { province_id = 1503 } #Guilin
+				
 				NOT = { province_id = 1616 }
 				OR = {
 					is_core = GNG		
@@ -1088,8 +1090,10 @@ country_event = {
 		any_owned = {
 			limit = {
 				is_core = RTR
-				#NOT = { province_id = 1493 } #Canton
-				NOT = { region = CHI_1493 } #East Canton
+				NOT = { province_id = 1493 } #Canton #region = CHI_1493 East Canton
+				NOT = { province_id = 1502 } #Nanning
+				NOT = { province_id = 1503 } #Guilin
+				
 				NOT = { province_id = 1616 }
 				OR = {
 					is_core = GNG		

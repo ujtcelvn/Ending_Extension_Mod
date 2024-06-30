@@ -40,9 +40,9 @@ Many other changes - please read the changelog.txt for more details.
 
 This is a submod for EEM. To use it, activate it and EEM at the same time on the mod selector. 
 
-Current features include:
-* Soldiers now only live in state capitals for convenience purposes
-* Land unit build times reduced to ~1/4x
+Current features:
+* Soldiers now only live in state capitals.
+* Land unit build times reduced to ~1/4x.
 
 ## Acknowledgements:
 

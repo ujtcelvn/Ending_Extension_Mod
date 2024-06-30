@@ -1537,6 +1537,7 @@ political_decisions = {
             civilized = yes
             NOT = { has_country_flag = vietnam_organized }
             any_owned_province = { is_core = DAI }
+            NOT = { tag = DAI }
         }
 
         allow = {

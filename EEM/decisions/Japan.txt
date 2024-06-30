@@ -819,6 +819,159 @@ political_decisions = {
         }
     }
 
+    japanese_korea = {
+        picture = annex_korea
+        potential = {
+            OR = {
+                tag = JAP
+                tag = TKG
+            }
+            OR = {
+                owns = 1619 #Pyongyang
+                owns = 1627 #Sariwon
+                owns = 1630 #Kangnung
+                owns = 1632 #Pusan
+            }
+            civilized = yes
+            NOT = { has_global_flag = japanese_korea }
+        }
+        allow = {
+            owns = 1619 #Pyongyang
+            owns = 1627 #Sariwon
+            owns = 1630 #Kangnung
+            owns = 1632 #Pusan
+        }
+        effect = {
+            prestige = 5
+            1619 = {
+                change_province_name = "Heijo"
+                state_scope = {
+                    change_region_name = "Heijo"
+                }
+            }
+            1620 = { change_province_name = "Shingishu" }
+            1621 = { change_province_name = "Kanko" }
+            1622 = { change_province_name = "Seishin" }
+            1623 = { change_province_name = "Joshin" }
+            1624 = {
+                change_province_name = "Keijo"
+                state_scope = {
+                    change_region_name = "Keijo"
+                }
+            }
+            1625 = { change_province_name = "Kaijo" }
+            1626 = { change_province_name = "Kaishu" }
+            1627 = {
+                change_province_name = "Shariin"
+                state_scope = {
+                    change_region_name = "Shariin"
+                }
+            }
+            1628 = { change_province_name = "Jinsen" }
+            1629 = { change_province_name = "Genzan" }
+            1630 = { change_province_name = "Koryo" }
+            1631 = { change_province_name = "Genshu" }
+            1632 = { change_province_name = "Fuzan" }
+            1633 = { change_province_name = "Taikyu" }
+            1634 = { change_province_name = "Geijitsu" }
+            1635 = {
+                change_province_name = "Koushu"
+                state_scope = {
+                    change_region_name = "Fuzan"
+                }
+            }
+            1636 = { change_province_name = "Taiden" }
+            1637 = { change_province_name = "Saishu" }
+
+            set_global_flag = japanese_korea
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+
+    korean_korea = {
+        picture = annex_korea
+        potential = {
+            OR = {
+                primary_culture = korean
+                is_culture_group = east_asian
+            }
+            OR = {
+                owns = 1619 #Pyongyang
+                owns = 1627 #Sariwon
+                owns = 1630 #Kangnung
+                owns = 1632 #Pusan
+            }
+            has_global_flag = japanese_korea
+        }
+        allow = {
+            owns = 1619 #Pyongyang
+            owns = 1627 #Sariwon
+            owns = 1630 #Kangnung
+            owns = 1632 #Pusan
+        }
+        effect = {
+            prestige = 5
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = TKG
+                        tag = JAP
+                    }
+                    exists = yes
+                }
+                prestige = -10
+            }
+
+            1619 = {
+                change_province_name = "Pyongyang"
+                state_scope = {
+                    change_region_name = "Pyongyang"
+                }
+            }
+            1620 = { change_province_name = "Chonchon" }
+            1621 = { change_province_name = "Hamhung" }
+            1622 = { change_province_name = "Chongjin" }
+            1623 = { change_province_name = "Kimchaek" }
+            1624 = {
+                change_province_name = "Sariwon"
+                state_scope = {
+                    change_region_name = "Sariwon"
+                }
+            }
+            1625 = { change_province_name = "Kaesong" }
+            1626 = { change_province_name = "Haejin" }
+            1627 = {
+                change_province_name = "Sariwon"
+                state_scope = {
+                    change_region_name = "Sariwon"
+                }
+            }
+            1628 = { change_province_name = "Inchon" }
+            1629 = { change_province_name = "Wonsan" }
+            1630 = { change_province_name = "Kangnung" }
+            1631 = { change_province_name = "Wonju" }
+            1632 = { change_province_name = "Pusan" }
+            1633 = { change_province_name = "Taegu" }
+            1634 = { change_province_name = "Pohang" }
+            1635 = {
+                change_province_name = "Kwangju"
+                state_scope = {
+                    change_region_name = "Pusan"
+                }
+            }
+            1636 = { change_province_name = "Taejon" }
+            1637 = { change_province_name = "Cheju" }
+
+
+            clr_global_flag = japanese_korea
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
     order_to_expel_barbarians = {
         potential = {
             tag = JAP
@@ -1741,7 +1894,8 @@ political_decisions = {
             owns = 2562
             owns = 2681
             owns = 2406
-            NOT = { has_country_flag = taiwan_administration }
+            #NOT = { has_country_flag = taiwan_administration }
+            NOT = { has_global_flag = japanese_taiwan }
         }
         allow = {
             civilized = yes
@@ -1773,7 +1927,55 @@ political_decisions = {
                 change_province_name = "Tainan Cho"
                 state_scope = { change_region_name = "Takasago" }
             }
-            set_country_flag = taiwan_administration
+            #set_country_flag = taiwan_administration
+            set_global_flag = japanese_taiwan
+        }
+    }
+
+
+    clr_taiwan_administration = {
+        picture = taipei_china
+        potential = {
+            is_culture_group = east_asian
+            owns = 1485
+            owns = 2562
+            owns = 2681
+            owns = 2406
+            has_global_flag = japanese_taiwan
+        }
+        allow = {
+            #civilized = yes
+            owns = 1485
+            owns = 2562
+            owns = 2681
+            owns = 2406
+        }
+        effect = {
+            prestige = 1
+            any_country = {
+                limit = {
+                    OR = {
+                        tag = TKG
+                        tag = JAP
+                    }
+                    exists = yes
+                }
+                prestige = -5
+            }
+            2681 = {
+                change_province_name = "Taipei"
+            }
+            2562 = {
+                change_province_name = "Taitung"
+            }
+            2406 = {
+                change_province_name = "Penghu"
+            }
+            1485 = {
+                change_province_name = "Tainan"
+                state_scope = { change_region_name = "Taiwan" } #Formosa
+            }
+            clr_global_flag = japanese_taiwan
         }
     }
 

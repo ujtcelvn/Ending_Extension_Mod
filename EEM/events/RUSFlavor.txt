@@ -3014,9 +3014,20 @@ country_event = {
         1208 = { remove_core = AFG }
         random_owned = {
             limit = { owner = { owns = 1208 } }
-            owner = { random_country = { limit = { tag = FROM owns = 1207 } 1208 = { secede_province = THIS } } }
+            owner = { 
+                random_country = { 
+                    limit = { tag = FROM owns = 1207 } 
+                    1208 = { secede_province = THIS } 
+                } 
+            }
         }
-        random_country = { limit = { is_sphere_leader_of = THIS NOT = { tag = FROM } } relation = { who = FROM value = 50 } }
+        random_country = { 
+            limit = { 
+                is_sphere_leader_of = THIS 
+                NOT = { tag = FROM } 
+            } 
+            relation = { who = FROM value = 50 } 
+        }
         relation = { who = FROM value = 50 }
 
         ai_chance = {

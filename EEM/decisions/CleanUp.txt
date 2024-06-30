@@ -4004,4 +4004,31 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+    ghost_overlord_cleanup = {
+        potential = {
+            ai = yes
+            is_vassal = yes
+            overlord = { exists = no }
+            war = no
+        }
+
+        allow = {
+        }
+
+        effect = {
+            random_country = {
+                limit = {
+                    NOT = { tag = THIS }
+                    ai = yes
+                    is_vassal = no
+                    is_substate = no
+                    war = no
+                }
+                create_vassal = THIS
+                release_vassal = THIS
+                release_vassal = THIS
+            }
+        }
+    }
+
 }
