@@ -1,6 +1,6 @@
 ENG = {
     value = -25
-}=
+}
 PRU = {
     value = 49
 }
