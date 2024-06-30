@@ -377,36 +377,7 @@ country_event = {
 country_event = {
 
     id = 36206
-
-    trigger = {
-        tag = DEN
-        year = 1896
-        neighbour = GER
-        NOT = {
-            year = 1901
-            has_country_flag = SchlewsigDENesGermanized
-            }
-        }
-
-    mean_time_to_happen =  {
-        months = 8
-
-        modifier = {
-            factor = 0.75 #increase likelihood to happen
-            year = 1897
-        }
-
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1898
-        }
-
-        modifier = {
-            factor = 0.95 #increase likelihood to happen
-            year = 1899
-        }
-    }
+    is_triggered_only = yes
 
     title = "EVTNAME36206"
     desc = "EVTDESC36206"
