@@ -3315,6 +3315,9 @@ cut_down_to_size = {
             }
         }
 
+
+        owner = { clr_country_flag = tore_up_unequal_treaties }
+
     }
 }
 
