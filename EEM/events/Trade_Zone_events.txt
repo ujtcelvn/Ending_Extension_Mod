@@ -287,13 +287,13 @@ country_event = {
 country_event = {
     id = 166703
     title = "$FROMCOUNTRY$ Dishonours Treaties"
-    desc = "The new regime in China has once again banned Western merchants from access to the interior of the Chinese market. Action must be taken to reopen the market!"
+    desc = "The $FROMCOUNTRY_ADJ$ regime has expelled $COUNTRY_ADJ$ merchants from the country. There is talk of preparing a punitive expedition to force $FROMCOUNTRY$ to open their markets again."
     picture = "arrow_incident"
 
     is_triggered_only = yes
 
     option = {
-        name = "Launch a punitive expedition immediately!"
+        name = "Launch an expedition immediately!"
         prestige = -2
         leave_alliance = FROM
         relation = { who = FROM value = -400 }
@@ -322,6 +322,10 @@ country_event = {
                 }
             }
             modifier = {
+                factor = 0
+                truce_with = FROM
+            }
+            modifier = {
                 factor = 2
                 war_policy = jingism
             }
@@ -329,9 +333,8 @@ country_event = {
         }
     }
 
-
     option = {
-        name = "Our forces are not ready at this time"
+        name = "Make preparations for an expedition."
         prestige = -2
         leave_alliance = FROM
         relation = { who = FROM value = -400 }
@@ -342,6 +345,14 @@ country_event = {
             months = 120
         }
         ai_chance = { factor = 50 }
+    }
+
+    option = {
+        name = "We don't need the $FROMCOUNTRY_ADJ$ market anyways..."
+        prestige = -5
+        relation = { who = FROM value = 50 }
+
+        ai_chance = { factor = 0 }
     }
 }
 
