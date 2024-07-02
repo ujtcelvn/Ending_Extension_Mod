@@ -4008,16 +4008,8 @@ political_decisions = {
         potential = {
             ai = yes
             is_vassal = yes
-            exists = yes
             overlord = { exists = no }
             war = no
-            any_greater_power = {
-                NOT = { tag = THIS }
-                ai = yes
-                is_vassal = no
-                is_substate = no
-                war = no
-            }
         }
 
         allow = {
