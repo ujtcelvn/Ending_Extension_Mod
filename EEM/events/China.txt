@@ -199,8 +199,23 @@ country_event = {
                     vassal_of = THIS
                 }
                 OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 }
+                civilized = no
             }
             civilized = yes
+        }
+
+
+
+        any_country = {
+            limit = {
+                exists = yes
+                OR = {
+                    substate_of = THIS
+                    vassal_of = THIS
+                }
+                OR = { tag = TZ1 tag = TZ2 tag = TZ3 tag = TZ4 tag = TZ5 tag = TZ6 tag = TZ7 tag = TZ8 }
+            }
+            #civilized = yes
             country_event = 166702
         }
     }
