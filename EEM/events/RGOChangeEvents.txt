@@ -1645,7 +1645,7 @@ province_event = {
             AND = {
                 year = 1900
                 OR = {
-					province_id = 491      #Ciudad Real  - Spain - https://static.cambridge.org/binary/version/id/urn:cambridge.org:id:binary:20191101091046822-0455:S0020859019000567:S0020859019000567_fig1g.gif?pub-status=live
+                    province_id = 491      #Ciudad Real  - Spain
                     province_id = 2334      #Punta Arenas
                     province_id = 2332      #Osorno
                     province_id = 1408    #Padang (Ombilin)
@@ -1892,7 +1892,7 @@ province_event = {
             province_id = 1679 #Amami, Japan
             province_id = 1671 #Akita, Japan
             province_id = 1642 #Hakodate, Japan
-            province_id = 1507 #Zhenyuan, China
+            #province_id = 1507 #Zhenyuan, China (now Tongren, sulphur)
         }
         NOT = { trade_goods = iron }
         NOT = { has_province_modifier = switched_production }
@@ -6430,9 +6430,9 @@ province_event = {
                     province_id = 1302
                     province_id = 1261
                     province_id = 1262
-                    province_id = 1628
+                    province_id = 1628 #Inchon, Korea
                     province_id = 2640
-                    province_id = 1624
+                    province_id = 1624 #Hanseong, Korea
                     province_id = 1222
                     province_id = 1231
                     province_id = 1228
@@ -6443,9 +6443,9 @@ province_event = {
                     province_id = 1307
                     province_id = 1295
                     province_id = 1233
-                    province_id = 1635
-                    province_id = 1632
-                    province_id = 1636
+                    province_id = 1635 #Kwangju, Korea
+                    province_id = 1632 #Pusan, Korea
+                    province_id = 1636 #Taejon, Korea
                     province_id = 1252
                     province_id = 1511 #Zhengzhou
                 }
@@ -6456,7 +6456,7 @@ province_event = {
                     province_id = 1297
                     province_id = 1266
                     province_id = 1290
-                    province_id = 1593
+                    province_id = 1593 #Tawang, Tibet-India
                     province_id = 1248
                     province_id = 1350
                     province_id = 1359
@@ -6466,18 +6466,18 @@ province_event = {
                     province_id = 1274
                     province_id = 1327
                     province_id = 1236
-                    province_id = 1569
-                    province_id = 1502
-                    province_id = 1662
-                    province_id = 1565
-                    province_id = 1540
-                    province_id = 1547
-                    province_id = 1474
-                    province_id = 1524
-                    province_id = 1541 #Tongzhou
+                    #province_id = 1569 #Weihaiwei
+                    province_id = 1502 #Nanning
+                    province_id = 1662 #Kagoshima, Japan
+                    #province_id = 1565 #Laizhou
+                    #province_id = 1540 #Nantong
+                    province_id = 1547 #Jian
+                    province_id = 1474 #Luzhou
+                    province_id = 1524 #Changsha
+                    #province_id = 1541 #Tongzhou
                     province_id = 1471 #Chizhou
                     province_id = 1473 #Huizhou
-                    province_id = 1509 #Anshun
+                    #province_id = 1509 #Anshun
                 }
             }
 
@@ -6490,12 +6490,12 @@ province_event = {
                     province_id = 1326
                     province_id = 1308
                     province_id = 1312
-                    province_id = 1537
-                    province_id = 1541
-                    province_id = 1507 #Zhenyuan - China
+                    province_id = 1537 #Changzhou
+                    #province_id = 1541 #Tongzhou (already appeared in 1870)
+                    #province_id = 1507 #Zhenyuan - China (now Tongren, sulphur)
                     province_id = 1503 #Guilin
-					province_id = 1549 #Jiujiang
-					province_id = 1545 #Nanchang
+                    province_id = 1549 #Jiujiang
+                    province_id = 1545 #Nanchang
                 }
             }
 
@@ -6506,17 +6506,10 @@ province_event = {
                     province_id = 1259
                     province_id = 1260
                     province_id = 1328
-                    province_id = 1486 #Tingzhou
+                    #province_id = 1486 #Tingzhou
                     province_id = 1482 #Fuzhou
                 }
             }
-
-            #AND = {
-            #    year = 1970
-            #    OR = {
-            #        province_id = 2562 #Taitung
-            #    }
-            #}
 
         }
     }
