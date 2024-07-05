@@ -58,7 +58,7 @@ country_event = {
                 name = chinese_floods
                 duration = 1800
             }
-			infrastructure = -6
+            infrastructure = -6
         }
         1522 = {
             any_pop = {
@@ -68,7 +68,7 @@ country_event = {
                 name = chinese_floods
                 duration = 1800
             }
-			infrastructure = -6
+            infrastructure = -6
         }
         1475 = {
             any_pop = {
@@ -78,7 +78,7 @@ country_event = {
                 name = chinese_floods
                 duration = 1800
             }
-			infrastructure = -6
+            infrastructure = -6
         }
         1470 = {
             any_pop = {
@@ -88,7 +88,7 @@ country_event = {
                 name = chinese_floods
                 duration = 1800
             }
-			infrastructure = -6
+            infrastructure = -6
         }
     }
 }
@@ -121,7 +121,7 @@ country_event = {
                 name = chinese_floods
                 duration = 1800
             }
-			infrastructure = -6
+            infrastructure = -6
         }
         1520 = { #Jingzhou 
             any_pop = {
@@ -131,7 +131,7 @@ country_event = {
                 name = chinese_floods
                 duration = 1800
             }
-			infrastructure = -6
+            infrastructure = -6
         }
     }
 }
@@ -174,7 +174,7 @@ country_event = {
     desc = "EVTDESC165004"
     picture = "nanking_destruction"
     fire_only_once = yes
-	
+    
     trigger = {
         OR = {
             tag = JAP
@@ -182,11 +182,11 @@ country_event = {
         }
         has_global_flag = the_dragon_wakes 
 
-		war_exhaustion = 5
+        war_exhaustion = 5
 
-		#Nanking
-		2221 = {
-			controlled_by = THIS
+        #Nanking
+        2221 = {
+            controlled_by = THIS
             is_capital = yes
             NOT = { province_control_days = 365 }
             owner = { war_with = THIS }
@@ -196,7 +196,7 @@ country_event = {
                 owner = { tag = RTR }
                 owner = { tag = TPG }
             }
-		}
+        }
         war_policy = jingoism
 
         NOT = { has_global_flag = nanking_massacre }
@@ -205,10 +205,10 @@ country_event = {
 
     mean_time_to_happen = {
         months = 3
-		modifier = {
-			factor = 0.1
-			has_country_modifier = withdrew_from_geneva_convention
-		}
+        modifier = {
+            factor = 0.1
+            has_country_modifier = withdrew_from_geneva_convention
+        }
     }
 
     option = {
@@ -220,7 +220,7 @@ country_event = {
             }
             country_event = 165005
         }
-		set_global_flag = nanking_massacre
+        set_global_flag = nanking_massacre
         prestige = -10
     }
 }
@@ -251,8 +251,8 @@ country_event = {
                 name = the_massacre
                 duration = 365
             }
-			infrastructure = -6
-			fort = -6
+            infrastructure = -6
+            fort = -6
         }
     }
 }
@@ -266,7 +266,7 @@ country_event = {
     desc = "EVTDESC165100"
 
     picture = "white_lotus"
-	
+    
     fire_only_once = yes
 
     trigger = {
@@ -307,7 +307,7 @@ country_event = {
     title = "EVTNAME165101" #The Tiandihui
     desc = "EVTDESC165101"
     picture = "tiandihui"
-	
+    
     fire_only_once = yes
 
     trigger = {
@@ -372,7 +372,7 @@ country_event = {
     title = "EVTNAME165102" #The Gelaohui
     desc = "EVTDESC165102"
     picture = "gelaohui"
-	
+    
     fire_only_once = yes
 
     trigger = {
@@ -2703,18 +2703,18 @@ country_event = {
             }
             secede_province = MAO
         }
-        CHI_1578 = { add_core = MAO } #West Sichuan
-        CHI_1601 = { add_core = MAO } #Yunnan
-        1502 = { add_core = MAO } #Guangxi
-        1503 = { add_core = MAO } #Guangxi
-        1504 = { add_core = MAO } #Guangxi
-        3326 = { add_core = MAO } #Guangxi
-        CHI_1499 = { add_core = MAO } #West Canton
-        1493 = { add_core = MAO } #Canton
-        CHI_1524 = { add_core = MAO } #North Hunan
-        1371 = { add_core = MAO } #Cao Bang
-        1372 = { add_core = MAO } #Son La
-        1356 = { add_core = MAO } #Luang Prabang
+        #CHI_1578 = { add_core = MAO } #West Sichuan
+        #CHI_1601 = { add_core = MAO } #Yunnan
+        #1502 = { add_core = MAO } #Guangxi
+        #1503 = { add_core = MAO } #Guangxi
+        #1504 = { add_core = MAO } #Guangxi
+        #3326 = { add_core = MAO } #Guangxi
+        #CHI_1499 = { add_core = MAO } #West Canton
+        #1493 = { add_core = MAO } #Canton
+        #CHI_1524 = { add_core = MAO } #North Hunan
+        #1371 = { add_core = MAO } #Cao Bang
+        #1372 = { add_core = MAO } #Son La
+        #1356 = { add_core = MAO } #Luang Prabang
         any_pop = {
             limit = { OR = { culture = miao culture = yi culture = asian_minor } }
             consciousness = 2
@@ -2866,8 +2866,14 @@ country_event = {
     fire_only_once = yes
 
     trigger = {
-        tag = QNG
         owns = 1493 #Canton
+        OR = {
+            tag = QNG
+            AND = {
+                tag = TZ7
+                overlord = { tag = QNG }
+            }
+        }
         war = no
         has_global_flag = taiping_has_been_defeated
         has_global_flag = ming_has_been_defeated
@@ -2880,7 +2886,7 @@ country_event = {
         name = "EVTOPTA165225"
         set_global_flag = punti_hakka_war_happened
         CHI_1493 = {
-			#12.72 million population * 0.05 = ~636,000 casulties
+            #12.72 million population * 0.05 = ~636,000 casulties
             any_pop = {
                 limit = { culture = hakka }
                 militancy = 2
@@ -3840,7 +3846,7 @@ country_event = {
                 duration = 3650
             }
         }
-		
+        
         country_event = 166700
     }
 }
@@ -3865,6 +3871,7 @@ country_event = {
         neighbour = TPG
         TPG = { owns = 1532 }
         is_vassal = no
+        is_substate = no
     }
 
     mean_time_to_happen = {
@@ -3914,6 +3921,7 @@ country_event = {
         neighbour = TPG
         TPG = { owns = 1616 }
         is_vassal = no
+        is_substate = no
     }
 
     mean_time_to_happen = {
@@ -3962,6 +3970,7 @@ country_event = {
         neighbour = TPG
         TPG = { owns = 1490 }
         is_vassal = no
+        is_substate = no
     }
 
     mean_time_to_happen = {
@@ -4010,6 +4019,7 @@ country_event = {
         neighbour = TPG
         TPG = { owns = 1490 }
         is_vassal = no
+        is_substate = no
     }
 
     mean_time_to_happen = {
@@ -4389,7 +4399,7 @@ country_event = {
         OR = {
             AND = { has_global_flag = kowloon_incident_war truce_with = ENG }
             has_global_flag = kowloon_incident_no_war 
-		}
+        }
         AND = {
             owns = 1538 #Shanghai
             owns = 1496 #Hong Kong
@@ -4432,7 +4442,7 @@ country_event = {
         OR = {
             AND = { has_global_flag = second_opium_war truce_with = ENG }
             has_global_flag = second_opium_no_war 
-		}
+        }
         AND = {
             owns = 1538 #Shanghai
             owns = 1496 #Hong Kong
@@ -4779,7 +4789,7 @@ country_event = {
                 #neighbour = THIS
                 has_country_modifier = international_negotiations
             }
-			annex_to = THIS
+            annex_to = THIS
         }
 
         any_country = {
@@ -5099,14 +5109,14 @@ country_event = {
 
         any_owned = {
             limit = {
-			    owner = {
+                owner = {
                     NOT = {
                         check_variable = {
                             which = ming_provinces
                             value = 5
                         }
                     }
-			    }
+                }
                 any_neighbor_province = { owned_by = RTR }
                 NOT = { is_core = QNG }
                 culture = nanfaren
@@ -5120,14 +5130,14 @@ country_event = {
 
         any_owned = {
             limit = {
-			    owner = {
+                owner = {
                     NOT = {
                         check_variable = {
                             which = taiping_provinces
                             value = 5
                         }
                     }
-			    }
+                }
                 any_neighbor_province = { owned_by = TPG }
                 NOT = { is_core = QNG }
                 NOT = { is_core = RTR }
