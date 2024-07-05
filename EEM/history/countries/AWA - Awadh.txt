@@ -3,7 +3,7 @@ primary_culture = avadhi
 religion = shiite
 government = absolute_monarchy
 plurality = 0.0
-nationalvalue = nv_order
+nationalvalue = nv_tradition
 literacy = 0.02
 non_state_culture_literacy = 0.01
 
