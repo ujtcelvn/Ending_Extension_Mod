@@ -42,9 +42,98 @@ commerce = 16
 
 industry = 19 + 5
 ####################################################################################################
+v0.5.8x
+
+Fix Denmark oob #172
+remove has_country_flag = congo_master from the_dark_continent invention because that flag is for the other Congo, not the Belgian Congo #173
+Make Germanification in Northern Schleswig triggered only #174
+
+Decisions to rename Korean provinces with their Japanese name and vice versa
+Decision to rename Takasago to Taiwan if freed from Japan. After WW2 the ROC demanded everyone call Formosa Taiwan.
+
+Recolored Chinese sphere puppets to be paler so they look more similar to Qing colors.
+	TZ1 kept as 255 154 51 orange
+	TZ2 32 99 54 green -> 213 242 99 yellow green
+	TZ3 24 80 67 dark green -> 127 138 68 leaf green
+	TZ4 0 0 102 blue -> 230 196 170 orange
+	TZ5 102 150 210 light blue -> 166 173 139 pale tan green
+	TZ6 0 153 254 bright blue -> 204 196 137 yellow-grey
+	TZ7 95 158 160 blue -> 223 115 64 orange
+	TZ8 kept as 220 112 90 grapefruit
+
+tore_up_unequal_treaties event now gives you treaty_port_casus_belli or cut_down_to_size (for when China doesn't own any treaty ports) and doesn't force you to war (unless you are AI)
+cut_down_to_size cb also clears tore_up_unequal_treaties flag
+
+Add a clean up decision that sets vassals of nations that no longer exist free
+Fix bug where China civilizing annexes the trade zones as colonies instead of states
+
+Added a make_puppet_no_infamy cb 
+	to let Japan get Chinese puppets with >5000000 pops in the China in Chaos event.
+	puppet revolution event now also uses this cb
+
+organize_vietnam is no longer available for Vietnam because it already gets the event it fires when it westernizes #177
+
+Even more China RGO changes
+	1569 Weihaiwei grain -> fish, no longer flips to tea. It was just a fishing village with a naval base.
+	1565 Laizhou (Yantai) fish -> fruit, no longer flips to tea. It is a major fruit and wine area.
+	1540 Nantong fish -> cotton, no longer flips to tea (very major cotton area)
+	1541 Tongzhou no longer flips to tea. It represents fishing in the entire Jiangsu area!
+	1509 Anshun no longer flips to tea. Guizhou's forestry is too significant.
+	1507 Tongren no longer keeps flipping between iron and tea in HPM. It stays producing sulphur (mercury). 
+	1549 Jiujiang now starts as silk. It flips to tea by event.
+	1486 Tingzhou no longer flips to tea. Fujian's forests are too important to flip.
+	1571 Yizhou tea -> fish to compensate for Laizhou (Yantai) fish -> fruit (Shandong is top 3rd China fishing area)
+	1575 Pingyang fruit -> cattle. Linfen is known for its cattle fair. Shanxi only grows grains and animals anyways.
+	1494 Chaozhou fruit -> grain. Guangdong has one of the highest rice yields yet previously it produced no grain.
+	1497 Huizhou silk -> fruit to compensate for above. Guangdong also makes lots of fruit.
+	1600 Ürümqi cotton -> fruit (Turfan is major producer of grapes and wine since since 4th century BC)
+	1596 Tulta (cotton in HPM, grain in EEM) -> back to cotton to compensate for Ürümqi
+
+Merge HPM Politics & Economy Patch 4.2 optional module: all uncivs that start with Order that aren't at war with an European power at game start now have Tradition. #183
+
+
+Fixed bug where the "Siamese Border Treaty" sometimes lets you annex all of Siam #143
+	The event looks like it's supposed to let you annex Champassak if you border them and they're Siam's vassal, but there was a typo that made you annex Siam instead.
+
+Improved some file formatting
+
+Manzhouli 1002 is renamed to Hailar
+	province size increased, taking land from 15532 Qiqihar and 1553 Aigun.
+Greater Mongolia decision now also adds cores to 1533 Jirim Chuulgan
+
+Remove stupid Guizhou cores
+punti hakka clan wars can now happen for Kwangtung (the trade zone puppet) as well as for the Qing
+added is_substate = no to some scripted Taiping wars
+
+
+
+####################################################################################################
+v0.5.8w
+Russia starts conservative again
+remove local_factory_throughput from local_steamers
+reduce chinese_treaty_port duration from 1095 days to 31 days #169
+reword "The Fate of China" event titles to make it more clear that China may get annexed #168
+make China not want to join the Red Turbans or the Taiping if China has a truce or is at war with them
+somehow fixed Bug?: The "Baby Boom" modifier upon westernizing always gives the shortest possible duration #167
+Turkestan can now be formed without forming tajikistan first #163
+move 1 carrier speed from fleet_air_carriers to ship_construction_7
+Buffed "Dissolve the Upper House" #53
+Forming Poland now possible without prestige after mass_politics #149
+Add 3d model for aircraft carriers
+	gfx/anims
+		Carrier.xac
+		CarrierDiffuse.dds
+	units/aircraft_carrier.txt
+add L-F and Government Interventionism relationship improving event #161
+Brazil improvements #47 #49 
+	Brazil Regency setup event
+	Lei Aurea no longer gives Afro-Brazilian as Accepted, makes pops more mad and reactionary, and now gives prestige
+	The Pedro II Abdication now just checks if Brazil has no_slavery instead of gating it to 1889 and the democracy it makes is slightly less liberal.
+Typo fixes by klorpa
+
+####################################################################################################
 v0.5.8v
 Merge HPMP&EP 4.0
-	Starting infamy is now built in and the option decision now removes starting infamy
 	Remove HPM's diplomatic relations for Portugal in Africa in the setup file
 	Britain has been given some influence in Xhosa and Basotho
 	A rebalance of the diplomatic situation surrounding the Oriental Crisis
@@ -52,9 +141,8 @@ Merge HPMP&EP 4.0
 	LUCCA: Ruling Party: Reactionary -> Conservative
 	BAVARIA: Ruling Party: Conservative -> Reactionary
 	FUTA TOORO, SOKOTO: Ruling Party: Conservative -> Reactionary
-
 splendid isolation is now built in
-
+Starting infamy is now built in and the option decision now removes starting infamy
 aristocrats: luxury 30 -> 7.5
 artisans: everyday 0 -> 1, tobacco 3 -> 1.5, tea 5 -> 4.5, luxury 1 (as usual)
 capitalists: luxury 20 -> 5
