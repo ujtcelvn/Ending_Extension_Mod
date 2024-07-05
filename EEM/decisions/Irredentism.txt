@@ -236,9 +236,9 @@ political_decisions = {
                 add_core = MGL
             }
             1002 = { add_core = MGL }
+            1533 = { add_core = MGL }
             2670 = { add_core = MGL }
             2671 = { add_core = MGL }
-            1075 = { add_core = MGL }
             1469 = { add_core = MGL }
             1599 = { add_core = MGL }
             1557 = { add_core = MGL }
