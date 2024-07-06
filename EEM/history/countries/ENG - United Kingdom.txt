@@ -110,7 +110,7 @@ govt_flag = {
 foreign_investment = {
     BEL = 20000
     POR = 60000
-    DEN = 2000
+    #DEN = 2000
 }
 
 oob = "ENG_oob.txt"

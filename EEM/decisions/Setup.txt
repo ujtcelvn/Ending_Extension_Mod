@@ -1576,7 +1576,7 @@ political_decisions = {
         }
 
         effect = {
-            relation = { who = DEN value = 150 }
+            #relation = { who = DEN value = 150 }
             relation = { who = KHI value = -25 }
             relation = { who = BUK value = -25 }
             relation = { who = KAZ value = -25 }
