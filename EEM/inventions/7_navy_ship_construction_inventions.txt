@@ -7,7 +7,7 @@ converted_hulk_air_carriers = {
         base = 5
         modifier = {
             factor = -10
-            NOT = { invention = wright_n_langleys_aeroplanes }
+            NOT = { invention = military_aviation }
         }
         modifier = {
             factor = -6
