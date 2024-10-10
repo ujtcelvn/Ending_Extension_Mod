@@ -253,10 +253,10 @@ political_decisions = {
     #        tag = MCK
     #        QNG = { exists = no }
     #        TPG = { exists = no }
-	#        RTR = { exists = no }
-	#        CHI = { exists = no }
-	#        KMT = { exists = no }
-	#        NOT = { has_global_flag = qing_restored }
+    #        RTR = { exists = no }
+    #        CHI = { exists = no }
+    #        KMT = { exists = no }
+    #        NOT = { has_global_flag = qing_restored }
     #    }
     #
     #    allow = {
@@ -324,7 +324,6 @@ political_decisions = {
         potential = {
             owns = 1504
             NOT = { tag = RTR }
-            #NOT = { tag = LAN }
             is_culture_group = east_asian
             has_global_flag = xiu_capital_decreted
         }
@@ -400,22 +399,20 @@ political_decisions = {
             }
             any_country = {
                 limit = {
+                    is_culture_group = east_asian
                     OR = {
-                        tag = FJN
-                        tag = GMJ
-                        tag = GNG
-                        tag = GXI
-                        tag = HNN
-                        tag = HUI
-                        tag = MCK
-                        tag = SXI
-                        tag = SZC
-                        tag = TAI
-                        tag = XBI
-                        tag = XIN
-                        tag = YNN
-                        tag = MAO
+                        is_vassal = no
+                        AND = {
+                            is_vassal = yes
+                            NOT = { overlord = { tag = THIS } }
+                        }
                     }
+                    OR = {
+                        part_of_sphere = no
+                        NOT = { in_sphere = THIS }
+                    }
+                    NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                 }
                 relation = { who = THIS value = -400 }
             }
@@ -424,88 +421,88 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-	blow_yellow_river_dikes = {
-		#title = "Destroy the Yellow River Dikes?"
-		#desc = "If the dikes, levees, and dams along the Yellow River were to be destroyed, it would create an artifical flood across Henan, Anhui, and Jiangsu that could slow the Japanese advance."
-		picture = yellow_river_dikes
+    blow_yellow_river_dikes = {
+        #title = "Destroy the Yellow River Dikes?"
+        #desc = "If the dikes, levees, and dams along the Yellow River were to be destroyed, it would create an artifical flood across Henan, Anhui, and Jiangsu that could slow the Japanese advance."
+        picture = yellow_river_dikes
         alert = yes
-		potential = {
-			owns = 1511
-			controls = 1511
-    		OR = {
-    			tag = TPG
-				tag = CHI
-				tag = KMT
-				tag = RTR
-			}
-			has_global_flag = huang5 #past 1931
-			NOT = { has_global_flag = yellow_river_dikes_blown }
-			civilized = yes
-			OR = {
-				war_with = JAP
-				war_with = TKG
-			}
-			OR = {
-				has_country_modifier = great_war
-				has_country_modifier = great_war2
-				has_country_modifier = great_war3
-			}
-			national_provinces_occupied = 0.2
-			1616 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
-			OR = {
-				1511 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
-				1575 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
-			}
-			OR = {
-				1542 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
-				1536 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
-			}
-		}
-
-		allow = {
-		}
-
-		effect = {
-			set_global_flag = yellow_river_dikes_blown
-            any_owned = {
-				limit = {
-					OR = {
-						province_id = 1511
-						province_id = 1508
-						province_id = 1512
-						province_id = 1509
-						province_id = 1478
-						province_id = 1472
-						province_id = 1476
-					}
-				}
-				any_pop = {
-					reduce_pop = 0.90
-				}
-				add_province_modifier = {
-					name = chinese_floods
-					duration = 1800
-				}
-				infrastructure = -6
+        potential = {
+            owns = 1511
+            controls = 1511
+            OR = {
+                tag = TPG
+                tag = CHI
+                tag = KMT
+                tag = RTR
             }
-		}
+            has_global_flag = huang5 #past 1931
+            NOT = { has_global_flag = yellow_river_dikes_blown }
+            civilized = yes
+            OR = {
+                war_with = JAP
+                war_with = TKG
+            }
+            OR = {
+                has_country_modifier = great_war
+                has_country_modifier = great_war2
+                has_country_modifier = great_war3
+            }
+            national_provinces_occupied = 0.2
+            1616 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+            OR = {
+                1511 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+                1575 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+            }
+            OR = {
+                1542 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+                1536 = { OR = { owned_by = JAP owned_by = TKG controlled_by = JAP controlled_by = TKG } }
+            }
+        }
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					government = proletarian_dictatorship
-					government = bourgeois_dictatorship
-					government = absolute_monarchy
-					government = prussian_constitutionalism
-					government = hms_government
-					war_policy = pacifism
-					war_policy = anti_military
-				}
-			}
-		}
-	}
+        allow = {
+        }
+
+        effect = {
+            set_global_flag = yellow_river_dikes_blown
+            any_owned = {
+                limit = {
+                    OR = {
+                        province_id = 1511
+                        province_id = 1508
+                        province_id = 1512
+                        province_id = 1509
+                        province_id = 1478
+                        province_id = 1472
+                        province_id = 1476
+                    }
+                }
+                any_pop = {
+                    reduce_pop = 0.90
+                }
+                add_province_modifier = {
+                    name = chinese_floods
+                    duration = 1800
+                }
+                infrastructure = -6
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                OR = {
+                    government = proletarian_dictatorship
+                    government = bourgeois_dictatorship
+                    government = absolute_monarchy
+                    government = prussian_constitutionalism
+                    government = hms_government
+                    war_policy = pacifism
+                    war_policy = anti_military
+                }
+            }
+        }
+    }
 
 
     revoke_simla_convention = {

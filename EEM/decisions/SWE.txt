@@ -9,8 +9,19 @@ political_decisions = {
         }
 
         allow = {
-            NOT = { is_greater_power = yes }
+            is_greater_power = no
             average_consciousness = 4
+            war = no
+            OR = {
+                AND = {
+                    invention = national_fraternity
+                    invention = biased_multiculturalism
+                    #is_greater_power = no
+                    is_secondary_power = no
+                }
+                war_policy = anti_military
+                war_policy = pacifism
+            }
         }
 
         effect = {

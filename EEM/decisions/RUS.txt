@@ -1889,7 +1889,8 @@ political_decisions = {
                 1208 = { owner = { in_sphere = THIS is_vassal = no } }
             }
             civilized = yes
-            any_owned_province = { is_core = BDK }
+            #any_owned_province = { is_core = BDK }
+            NOT = { has_global_flag = afghan_northern_borders_done }
         }
 
         allow = {
@@ -1902,13 +1903,15 @@ political_decisions = {
 
         effect = {
             prestige = 5
-            BDK = { all_core = { remove_core = BDK } }
+            set_global_flag = afghan_northern_borders_done
+            #BDK = { all_core = { remove_core = BDK } }
             random_owned = {
                 limit = { owner = { owns = 1210 } }
                 owner = { 
                     1208 = { remove_core = AFG } 
-                    208 = { remove_core = BUK } 
-                    208 = { remove_core = UZB } 
+                    1208 = { remove_core = BDK } 
+                    1208 = { remove_core = BUK } 
+                    1208 = { remove_core = UZB } 
                     1211 = { remove_core = BUK } 
                 }
             }

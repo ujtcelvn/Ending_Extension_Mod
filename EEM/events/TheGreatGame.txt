@@ -104,6 +104,24 @@ country_event = {
                         is_vassal = yes
                     }
                 }
+                HER = {
+                    OR = {
+                        exists = no
+                        is_vassal = yes
+                    }
+                }
+                KAN = {
+                    OR = {
+                        exists = no
+                        is_vassal = yes
+                    }
+                }
+                KAB = {
+                    OR = {
+                        exists = no
+                        is_vassal = yes
+                    }
+                }
             }
             KAS = {
                 exists = yes
@@ -190,6 +208,48 @@ country_event = {
                     truce_with = THIS
                 }
             }
+            HER = {
+                exists = yes
+                civilized = no
+                is_vassal = no
+                OR = {
+                    neighbour = ENG
+                    any_neighbor_country = { vassal_of = ENG }
+                }
+                NOT = {
+                    has_country_modifier = border_incident
+                    in_sphere = THIS
+                    truce_with = THIS
+                }
+            }
+            KAN = {
+                exists = yes
+                civilized = no
+                is_vassal = no
+                OR = {
+                    neighbour = ENG
+                    any_neighbor_country = { vassal_of = ENG }
+                }
+                NOT = {
+                    has_country_modifier = border_incident
+                    in_sphere = THIS
+                    truce_with = THIS
+                }
+            }
+            KAB = {
+                exists = yes
+                civilized = no
+                is_vassal = no
+                OR = {
+                    neighbour = ENG
+                    any_neighbor_country = { vassal_of = ENG }
+                }
+                NOT = {
+                    has_country_modifier = border_incident
+                    in_sphere = THIS
+                    truce_with = THIS
+                }
+            }
         }
         NOT = {
             any_greater_power = { war_with = THIS }
@@ -206,6 +266,9 @@ country_event = {
             casus_belli = KHI
             casus_belli = BUK
             casus_belli = CRL
+            casus_belli = HER
+            casus_belli = KAN
+            casus_belli = KAB
             war_with = SIN
             war_with = KAL
             war_with = MAK
@@ -215,6 +278,9 @@ country_event = {
             war_with = KHI
             war_with = BUK
             war_with = CRL
+            war_with = HER
+            war_with = KAN
+            war_with = KAB
         }
     }
 
@@ -255,6 +321,9 @@ country_event = {
                     tag = KHI
                     tag = BUK
                     tag = CRL
+                    tag = HER
+                    tag = KAN
+                    tag = KAB
                     AND = {
                         tag = AFG
                         neighbour = RUS
@@ -284,6 +353,24 @@ country_event = {
                             }
                         }
                         KAS = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        HER = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAN = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAB = {
                             OR = {
                                 exists = no
                                 is_vassal = yes
@@ -345,6 +432,9 @@ country_event = {
                     tag = KOK
                     tag = KHI
                     tag = BUK
+                    tag = HER
+                    tag = KAN
+                    tag = KAB
                     AND = {
                         tag = AFG
                         neighbour = RUS
@@ -374,6 +464,24 @@ country_event = {
                             }
                         }
                         KAS = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        HER = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAN = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAB = {
                             OR = {
                                 exists = no
                                 is_vassal = yes
@@ -554,6 +662,24 @@ country_event = {
                         is_vassal = yes
                     }
                 }
+                HER = {
+                    OR = {
+                        exists = no
+                        is_vassal = yes
+                    }
+                }
+                KAN = {
+                    OR = {
+                        exists = no
+                        is_vassal = yes
+                    }
+                }
+                KAB = {
+                    OR = {
+                        exists = no
+                        is_vassal = yes
+                    }
+                }
             }
             KAS = {
                 exists = yes
@@ -640,6 +766,48 @@ country_event = {
                     truce_with = THIS
                 }
             }
+            HER = {
+                exists = yes
+                civilized = no
+                is_vassal = no
+                OR = {
+                    neighbour = RUS
+                    any_neighbor_country = { vassal_of = RUS }
+                }
+                NOT = {
+                    has_country_modifier = border_incident
+                    in_sphere = THIS
+                    truce_with = THIS
+                }
+            }
+            KAN = {
+                exists = yes
+                civilized = no
+                is_vassal = no
+                OR = {
+                    neighbour = RUS
+                    any_neighbor_country = { vassal_of = RUS }
+                }
+                NOT = {
+                    has_country_modifier = border_incident
+                    in_sphere = THIS
+                    truce_with = THIS
+                }
+            }
+            KAB = {
+                exists = yes
+                civilized = no
+                is_vassal = no
+                OR = {
+                    neighbour = RUS
+                    any_neighbor_country = { vassal_of = RUS }
+                }
+                NOT = {
+                    has_country_modifier = border_incident
+                    in_sphere = THIS
+                    truce_with = THIS
+                }
+            }
         }
         NOT = {
             any_greater_power = { war_with = THIS }
@@ -659,6 +827,9 @@ country_event = {
             casus_belli = CRL
             casus_belli = KAZ
             casus_belli = BDK
+            casus_belli = HER
+            casus_belli = KAN
+            casus_belli = KAB
             war_with = SIN
             war_with = KAL
             war_with = MAK
@@ -670,6 +841,9 @@ country_event = {
             war_with = CRL
             war_with = KAZ
             war_with = BDK
+            war_with = HER
+            war_with = KAN
+            war_with = KAB
         }
     }
 
@@ -712,6 +886,9 @@ country_event = {
                     tag = CRL
                     tag = KAZ
                     tag = BDK
+                    tag = HER
+                    tag = KAN
+                    tag = KAB
                     AND = {
                         tag = AFG
                         neighbour = RUS
@@ -741,6 +918,24 @@ country_event = {
                             }
                         }
                         KAZ = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        HER = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAN = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAB = {
                             OR = {
                                 exists = no
                                 is_vassal = yes
@@ -805,6 +1000,9 @@ country_event = {
                     tag = CRL
                     tag = KAZ
                     tag = BDK
+                    tag = HER
+                    tag = KAN
+                    tag = KAB
                     AND = {
                         tag = AFG
                         neighbour = RUS
@@ -834,6 +1032,24 @@ country_event = {
                             }
                         }
                         KAZ = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        HER = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAN = {
+                            OR = {
+                                exists = no
+                                is_vassal = yes
+                            }
+                        }
+                        KAB = {
                             OR = {
                                 exists = no
                                 is_vassal = yes
@@ -904,6 +1120,9 @@ country_event = {
             tag = CRL
             tag = KAZ
             tag = BDK
+            tag = HER
+            tag = KAN
+            tag = KAB
             AND = {
                 tag = PNJ
                 has_country_flag = ranjit_singh_dead
@@ -1006,7 +1225,12 @@ country_event = {
         }
         modifier = {
             factor = 4
-            tag = AFG
+            OR = {
+                tag = AFG
+                tag = HER
+                tag = KAN
+                tag = KAB
+            }
         }
         modifier = {
             factor = 0.75

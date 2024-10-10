@@ -1261,19 +1261,15 @@ country_event = {
         FROM = { country_event = 32551 }
         ai_chance = {
             factor = 60
-                modifier = {
-                    factor = 0.8
-                    is_greater_power = no
-                }
-                modifier = {
-                    factor = 0.7
-                    alliance_with = FROM
-                }
-                modifier = {
-                    factor = 0.7
-                    relation = { who = FROM value = 150 }
-                }
+            modifier = {
+                factor = 0.6
+                FROM = { is_greater_power = no }
             }
+            modifier = {
+                factor = 0.8
+                is_greater_power = yes
+            }
+        }
     }
 
     option = {
@@ -1281,20 +1277,23 @@ country_event = {
         FROM = { country_event = 32552 }
         ai_chance = {
             factor = 40
-                modifier = {
-                    factor = 0.2
-                    is_greater_power = no
-                }
-
-                modifier = {
-                    factor = 0.6
-                    FROM = { is_greater_power = no }
-                }
-                modifier = {
-                    factor = 0.1
-                    NOT = { relation = { who = FROM value = 0 } }
-                }
+            modifier = {
+                factor = 0.2
+                is_greater_power = no
             }
+            modifier = {
+                factor = 0.5
+                is_secondary_power = no
+            }
+            modifier = {
+                factor = 0.7
+                alliance_with = FROM
+            }
+            modifier = {
+                factor = 0.7
+                relation = { who = FROM value = 150 }
+            }
+        }
     }
 }
 

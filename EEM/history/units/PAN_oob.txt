@@ -3,7 +3,7 @@ CRL = {
     truce_until = 1837.1.1
 }
 
-AFG = {
+KAB = {
     value = -100
 }
 ENG = {

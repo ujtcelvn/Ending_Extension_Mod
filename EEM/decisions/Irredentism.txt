@@ -42,7 +42,7 @@ political_decisions = {
             is_vassal = no
             nationalism_n_imperialism = 1
             NOT = { government = hms_government }
-            NOT = {    government = democracy }
+            NOT = { government = democracy }
             war_policy = jingoism
             OR = {
                 owns = 994
@@ -1168,8 +1168,8 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
-	
-	greater_korea = {
+    
+    greater_korea = {
         picture = annex_korea
         potential = {
             tag = KOR
@@ -1191,5 +1191,51 @@ political_decisions = {
         }
         ai_will_do = { factor = 1 }
     }
+
+    greater_philippines = {
+        picture = map_east_indies
+        potential = {
+            tag = PHL
+            NOT = { has_country_flag = greater_philippines_claimed }
+        }
+
+        allow = {
+            war = no
+            owns = 1464 #Jolo
+            civilized = yes
+            is_vassal = no
+            OR = {
+                war_policy = jingoism
+                war_policy = pro_military
+            }
+            military_score = 30
+        }
+
+        effect = {
+            set_country_flag = greater_philippines_claimed
+            badboy = 2
+            BRU_1396 = { add_core = PHL } #Sabah
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                1396 = {
+                    NOT = { owned_by = THIS }
+                    owner = { is_greater_power = yes }
+                }
+            }
+
+            #modifier = {
+            #    factor = 0
+            #    1397 = {
+            #        NOT = { owned_by = THIS }
+            #        owner = { is_greater_power = yes }
+            #    }
+            #}
+        }
+    }
+
 
 }

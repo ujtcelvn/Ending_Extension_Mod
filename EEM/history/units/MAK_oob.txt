@@ -1,3 +1,5 @@
+#KAN = { value = 200 }
+
 army = {
     name = "Army of the Nawab of Makran"
     location = 1222

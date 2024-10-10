@@ -745,20 +745,19 @@ political_decisions = {
                 civilized = yes
             }
 
-            random_country = {
+            random_owned = {
                 limit = {
-                    tag = KOR
-                    ai = no
+                    KOR = { ai = no }
                 }
-                casus_belli = {
-                    target = THIS
-                    type = become_independent
-                    months = 12
-                }
-                war = {
-                    target = KOR
-                    attacker_goal = { casus_belli = conquest_any }
-                    defender_goal = { casus_belli = become_independent }
+
+                owner = {
+                    release_vassal = KOR
+                    leave_alliance = KOR
+                    war = {
+                        target = KOR
+                        attacker_goal = { casus_belli = conquest_any }
+                        defender_goal = { casus_belli = become_independent }
+                    }
                 }
             }
         }

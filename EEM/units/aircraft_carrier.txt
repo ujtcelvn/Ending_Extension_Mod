@@ -41,16 +41,16 @@ aircraft_carrier = {
 
     supply_consumption = 1.0
     supply_cost = {
-        steamer_convoy = 1.0	#1.2
+        steamer_convoy = 1.2
         artillery = 0.1
         canned_food = 1
         telephones = 0.01
         fuel = 10
-        ammunition = 0.5
+        ammunition = 1
         regular_clothes = 0.5
         tobacco = 2
         radio = 0.02
-        aeroplanes = 0.2		#0.1
+        aeroplanes = 0.1
     }
 
     #Naval Abilities

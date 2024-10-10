@@ -1,6 +1,4 @@
-BUK = {
-    value = -50
-}
+BUK = { value = -50 }
 
 KHI = { value = -50 }
 
@@ -10,7 +8,9 @@ RUS = { value = -50 }
 
 TUR = { value = -25 }
 
-AFG = { value = -50 }
+HER = { value = -50 }
+KAN = { value = -50 }
+KAB = { value = -50 }
 
 leader = {
     name = "Muhammad Shah"
@@ -99,7 +99,7 @@ army = {
     regiment = {
         name= "3. Nezam"
         type = infantry
-        home = 1142
+        home = 1127
     }
 
     regiment = {

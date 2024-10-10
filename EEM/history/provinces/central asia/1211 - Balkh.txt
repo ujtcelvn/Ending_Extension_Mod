@@ -1,6 +1,7 @@
 owner = BUK
 controller = BUK
 add_core = BDK
+add_core = KAB
 add_core = AFG
 terrain = dryhills
 trade_goods = grain

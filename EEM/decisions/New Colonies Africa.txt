@@ -4180,9 +4180,9 @@ political_decisions = {
             NOT = {
                 exists = TSW
                 has_global_flag = botswana_organized
-                capital_scope = { continent = africa }
             }
             owns = 2074
+            capital_scope = { continent = africa }
         }
 
         allow = {

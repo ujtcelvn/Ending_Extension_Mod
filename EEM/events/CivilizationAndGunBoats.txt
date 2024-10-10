@@ -3652,6 +3652,7 @@ country_event = {
                     owns = 1606 #Jiaxing
                     owns = 2681 #Taibei
                     owns = 2562 #Tainan
+                    owns = 2406 #Penghu
                     owns = 1499 #Hainan
                     owns = 2632 #Kwangchowan
                     #owns = 1540 #Nantong
@@ -4340,11 +4341,11 @@ province_event = {
                     type = soldiers
                     type = clergymen
                     type = serfs
-                    }
                 }
-            pop_type = labourers
             }
+            pop_type = labourers
         }
+    }
 }
 
 

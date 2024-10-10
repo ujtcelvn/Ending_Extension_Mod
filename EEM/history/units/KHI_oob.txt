@@ -1,14 +1,25 @@
-AFG = { value = 400 }
+HER = { value = 200 }
+KAB = { value = 25 } #200
+KAN = { value = -50 }
 
 PER = { value = -50 }
+BUK = { value = 50 }
 
 leader = {
-    name = "Muhammad Rahim Quli"
+    name = "Allah Quli Bahadur"
     type = land
     date = 1825.1.1
     personality = resourceful
-    background = aristocrat
+    background = expert_raider
 }
+
+#leader = {
+#    name = "Muhammad Rahim Quli"
+#    type = land
+#    date = 1825.1.1
+#    personality = resourceful
+#    background = aristocrat
+#}
 
 army = {
     name = "Army of the Khanate of Khiva"
@@ -28,13 +39,13 @@ army = {
     regiment = {
         name= "3.Yomud"
         type = cavalry
-        home = 1192
+        home = 1191 #1192
     }
 
     regiment = {
         name= "1.Kirgiz"
         type = cavalry
-        home = 1192
+        home = 1191 #1192
     }
 
     regiment = {

@@ -476,6 +476,7 @@ country_event = {
             owns = 1569 #Weihaiwei
             owns = 1606 #Jiaxing
             owns = 2562 #Tainan
+            owns = 2406 #Penghu
             owns = 1499 #Hainan
             owns = 2632 #Kwangchowan
             owns = 1608 #Ningbo
@@ -577,6 +578,7 @@ country_event = {
                     owns = 1569 #Weihaiwei
                     owns = 1606 #Jiaxing
                     owns = 2562 #Tainan
+                    owns = 2406 #Penghu
                     owns = 1499 #Hainan
                     owns = 2632 #Kwangchowan
                     owns = 1608 #Ningbo
@@ -596,6 +598,7 @@ country_event = {
                     owns = 1569 #Weihaiwei
                     owns = 1606 #Jiaxing
                     owns = 2562 #Tainan
+                    owns = 2406 #Penghu
                     owns = 1499 #Hainan
                     owns = 2632 #Kwangchowan
                     owns = 1608 #Ningbo
@@ -615,6 +618,7 @@ country_event = {
                     owns = 1569 #Weihaiwei
                     owns = 1606 #Jiaxing
                     owns = 2562 #Tainan
+                    owns = 2406 #Penghu
                     owns = 1499 #Hainan
                     owns = 2632 #Kwangchowan
                     owns = 1608 #Ningbo
@@ -658,6 +662,7 @@ country_event = {
                     owns = 1569 #Weihaiwei
                     owns = 1606 #Jiaxing
                     owns = 2562 #Tainan
+                    owns = 2406 #Penghu
                     owns = 1499 #Hainan
                     owns = 2632 #Kwangchowan
                     owns = 1608 #Ningbo
@@ -811,6 +816,91 @@ country_event = {
 
     option = {
         name = "EVT90909OPTB"
+        relation = { who = FROM value = -200 }
+        leave_alliance = FROM
+        end_military_access = FROM
+        add_casus_belli = { target = FROM type = treaty_port_casus_belli months = 30 } diplomatic_influence = { who = FROM value = -400 }
+        random_country = {
+            limit = { alliance_with = FROM is_greater_power = yes }
+            casus_belli = { target = THIS type = treaty_port_casus_belli months = 50 }
+            relation = { who = THIS value = -200 }
+            diplomatic_influence = { who = THIS value = -400 }
+        }
+
+        random_country = {
+            limit = { tag = FROM ai = yes }
+            war = { target = THIS attacker_goal = { casus_belli = treaty_port_casus_belli } call_ally = yes }
+        }
+
+        ai_chance = {
+            factor = 0.2
+            modifier = { factor = 0 vassal_of = FROM }
+            modifier = { factor = 0.25 in_sphere = FROM }
+            modifier = { factor = 0.8 relation = { who = FROM value = 150 } }
+            modifier = { factor = 0.4 has_recently_lost_war = yes }
+            modifier = { factor = 0.1 is_disarmed = yes }
+            modifier = { factor = 0.9 any_owned_province = { country_units_in_province = REB } }
+            modifier = { factor = 0.8 num_of_revolts = 3 }
+            modifier = { factor = 1.25 military_score = FROM }
+        }
+    }
+}
+
+country_event = {
+    id = 91000
+    title = "EVTNAME91000"
+    desc = "EVTDESC91000"
+    picture = "asian_administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT91000OPTA"
+		1493 = {
+			random_pop = {
+				limit = {
+					has_pop_culture = yue #line doesn't work
+					OR = {
+						type = serfs
+						type = bureaucrats
+						type = soldiers
+						#type = artisans
+					}
+				}
+				move_pop = 1496
+			}
+		}
+
+		1496 = {
+			add_province_modifier = {
+				name = recently_built_city
+				duration = 365
+			}
+			any_pop = {
+				limit = {
+					#is_primary_culture = no
+					#is_accepted_culture = no
+					is_culture_group = east_asian
+					OR = {
+						#type = artisans
+						type = soldiers
+						type = bureaucrats
+						#type = clergymen
+						type = serfs
+					}
+				}
+				pop_type = labourers
+			}
+		}
+
+        any_pop = { limit = { is_culture_group = east_asian } militancy = 1 }
+        prestige_factor = -0.1
+        ai_chance = { factor = 0.8 }
+    }
+
+
+    option = {
+        name = "EVT91000OPTB"
         relation = { who = FROM value = -200 }
         leave_alliance = FROM
         end_military_access = FROM

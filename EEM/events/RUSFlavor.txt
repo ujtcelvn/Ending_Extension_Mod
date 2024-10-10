@@ -3089,7 +3089,18 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 90
+            factor = 80
+            modifier = {
+                factor = 0.5
+                OR = {
+                    FROM = { part_of_sphere = no }
+                    FROM = { in_sphere = THIS }
+                }
+                OR = {
+                    war_policy = jingoism
+                    war_policy = pro_military
+                }
+            }
         }
     }
 
@@ -3097,6 +3108,7 @@ country_event = {
         name = "EVT325462OPTB"
         badboy = 2
         relation = { who = RUS value = -100 }
+        relation = { who = FIN value = -100 }
         FIN = {
             all_core = {
                 limit = {
@@ -3113,10 +3125,22 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 10
+            factor = 20
             modifier = {
                 factor = 4
                 is_greater_power = yes
+            }
+            modifier = {
+                factor = 2
+                is_secondary_power = yes
+            }
+            modifier = {
+                factor = 2
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = pacifism
             }
             modifier = {
                 factor = 0.5

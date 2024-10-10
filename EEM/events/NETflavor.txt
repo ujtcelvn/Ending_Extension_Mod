@@ -17,6 +17,7 @@ country_event = {
 
     option = {
         name = "EVT952500OPTA"
+        tech_school = developing_tech_school
         NET = { inherit = THIS }
         ai_chance = { factor = 95 }
     }

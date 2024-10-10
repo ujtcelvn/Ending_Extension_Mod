@@ -1,6 +1,5 @@
-USA = {
-	value = 50
-}
+USA = { value = 50 }
+ENG = { value = 100 }
 
 army = {
     name = "Army of the Sultan of Muscat"
@@ -12,8 +11,13 @@ army = {
     }
     regiment = {
         name= "2. Brigade"
-        type = irregular
+        type = infantry
         home = 1166
+    }
+    regiment = {
+        name= "3. Brigade"
+        type = irregular
+        home = 1170
     }
 }
 
@@ -32,12 +36,31 @@ army = {
         type = infantry
         home = 2029
     }
+
     regiment = {
-        name= "3. Brigade"
+        name= "4. Brigade"
         type = irregular
-        home = 2048
+        home = 1174
     }
 }
+
+army = {
+    name = "Bandar Abbas Garrison"
+    location = 1142
+
+    regiment = {
+        name= "3. Askaris"
+        type = infantry
+        home = 1142
+    }
+
+    regiment = {
+        name= "4. Askaris"
+        type = irregular
+        home = 1145
+    }
+}
+
 
 navy = {
     name = "Omani Fleet"

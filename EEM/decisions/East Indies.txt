@@ -751,6 +751,13 @@ political_decisions = {
                     }
                 }
             }
+
+            OR = {
+                1396 = { owner = { in_sphere = no } }
+                1396 = { owner = { in_sphere = THIS } }
+                1397 = { owner = { in_sphere = no } }
+                1397 = { owner = { in_sphere = THIS } }
+            }
         }
 
         effect = {
@@ -779,7 +786,48 @@ political_decisions = {
                 }
             }
         }
+
+        ai_will_do = { factor = 1 }
     }
+
+    suppress_moro_piracy = {
+        picture = map_east_indies
+        potential = {
+            NOT = { has_country_flag = suppressed_moro_piracy }
+            NOT = { owns = 1464 }
+            SUL = {
+                exists = yes
+                civilized = no
+                owns = 1464 #Jolo
+                is_vassal = no
+            }
+            any_owned_province = { is_core = PHL }
+            any_owned_province = { has_building = naval_base }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1 #1850
+            iron_steamers = 1 #1855
+            NOT = { truce_with = SUL }
+            NOT = { is_sphere_leader_of = SUL }
+            owns = 1462
+        }
+
+        effect = {
+            set_country_flag = suppressed_moro_piracy
+            war = {
+                target = SUL
+                attacker_goal = {
+                    casus_belli = demand_concession_casus_belli_no_infamy
+                    state_province_id = 1464
+                }
+            }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
+
 
     sulu_protectorate = {
         picture = map_east_indies
@@ -813,7 +861,8 @@ political_decisions = {
         allow = {
             war = no
             SUL = {    war = no }
-            nationalism_n_imperialism = 1
+            #nationalism_n_imperialism = 1 #1850
+            has_global_flag = berlin_conference #1885
             OR = {
                 SUL = {
                     part_of_sphere = no

@@ -2,6 +2,8 @@ KAZ = {
     value = -200
 }
 
+HER = { value = 50 }
+
 army = {
     name = "Kokand Army"
     location = 1202
@@ -69,5 +71,5 @@ leader = {
     type = land
     date = 1820.8.20
     background = aristocrat
-    personality = merciless
+    personality = resourceful #merciless
 }

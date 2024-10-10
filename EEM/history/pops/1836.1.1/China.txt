@@ -1066,7 +1066,7 @@
     farmers = {
         culture = min
         religion = mahayana
-        size = 308250
+        size = 338250
     }
 
     slaves = {
@@ -1078,7 +1078,7 @@
     serfs = {
         culture = min
         religion = mahayana
-        size = 80000
+        size = 50000
     }
 
     aristocrats = {
@@ -1268,7 +1268,13 @@
     farmers = {
         culture = nanfaren
         religion = mahayana
-        size = 216625
+        size = 196625
+    }
+
+    serfs = {
+        culture = min
+        religion = mahayana
+        size = 20000
     }
 
     aristocrats = {
@@ -1512,7 +1518,13 @@
     farmers = {
         culture = min
         religion = mahayana
-        size = 95125
+        size = 85125
+    }
+
+    serfs = {
+        culture = min
+        religion = mahayana
+        size = 10000
     }
 }
 #Gansu Region (16020000)

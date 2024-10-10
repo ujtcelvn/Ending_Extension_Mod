@@ -844,3 +844,152 @@ country_event = {
         ai_chance = { factor = 10 }
     }
 }
+
+
+
+#Persia-Afghanistan Border Treaty
+country_event = {
+
+    id = 110100
+    title = "EVTNAME110100"
+    desc = "EVTDESC110100"
+    picture = "greatpowers"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT110100OPTA"
+        badboy = -2
+        relation = { who = FROM value = 400 }
+
+        AFG_1209 = { remove_core = PER add_core = AFG }
+        AFG_1214 = { remove_core = PER add_core = AFG }
+		any_owned = {
+			limit = {
+			    is_core = AFG
+			    NOT = { is_core = PER }
+			    NOT = { is_core = HER }
+			    NOT = { is_core = KAN }
+			    NOT = { is_core = KAB }
+			    AFG = { exists = no }
+			    HER = { exists = no }
+			    KAN = { exists = no }
+			    KAB = { exists = no }
+			}
+			secede_province = FROM
+		}
+
+		any_owned = {
+			limit = {
+			    is_core = HER
+			    NOT = { is_core = PER }
+			    HER = { exists = yes }
+			}
+			secede_province = HER
+		}
+
+		any_owned = {
+			limit = {
+			    is_core = KAN
+			    NOT = { is_core = PER }
+			    KAN = { exists = yes }
+			}
+			secede_province = KAN
+		}
+
+		any_owned = {
+			limit = {
+			    is_core = KAB
+			    NOT = { is_core = PER }
+			    KAB = { exists = yes }
+			}
+			secede_province = KAB
+		}
+
+		any_owned = {
+			limit = {
+			    is_core = AFG
+			    NOT = { is_core = PER }
+			    AFG = { exists = yes }
+			}
+			secede_province = AFG
+		}
+
+
+		any_owned = {
+			limit = {
+			    is_core = HER
+			    NOT = { is_core = PER }
+			    HER = { exists = no }
+			    AFG = { exists = no }
+			}
+			secede_province = HER
+		}
+
+		any_owned = {
+			limit = {
+			    is_core = KAN
+			    NOT = { is_core = PER }
+			    KAN = { exists = no }
+			    AFG = { exists = no }
+			}
+			secede_province = KAN
+		}
+
+		any_owned = {
+			limit = {
+			    is_core = KAB
+			    NOT = { is_core = PER }
+			    KAB = { exists = no }
+			    AFG = { exists = no }
+			}
+			secede_province = KAB
+		}
+
+
+		any_owned = {
+			limit = {
+			    is_core = AFG
+			}
+			secede_province = FROM
+		}
+
+
+
+        FROM = {
+			diplomatic_influence = { who = THIS value = 50 }
+			any_owned = {
+				limit = {
+					is_core = PER
+					NOT = { is_core = FROM }
+					OR = {
+						region = PER_1140 #Kerman
+						region = PER_1148 #Khorasan
+					}
+					NOT = { province_id = 1071 } #Qeshm
+				}
+				secede_province = PER
+			}
+		}
+
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 100
+                OR = {
+                    vassal_of = FROM
+                    in_sphere = FROM
+                }
+            }
+            modifier = {
+                factor = 0
+                has_country_flag = greater_iran
+            }
+        }
+    }
+
+    option = {
+        name = "EVT110100OPTB"
+        relation = { who = FROM value = -100 }
+    }
+}

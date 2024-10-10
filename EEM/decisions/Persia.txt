@@ -1,9 +1,8 @@
 political_decisions = {
 
-	#Trip to Europe
-	travel_to_europe = {
+    #Trip to Europe
+    travel_to_europe = {
         picture = dreams_of_empire
-
         potential = {
             tag = PER
             NOT = {    has_country_flag = travel_to_europe }
@@ -18,36 +17,34 @@ political_decisions = {
             prestige = 2
             years_of_research = 0.25
             relation = { who = ENG value = 50 }
-			any_country = {
-				limit = { capital_scope = { continent = europe } }
-				relation = { who = PER value = 100 }
-			}
+            any_country = {
+                limit = { capital_scope = { continent = europe } }
+                relation = { who = PER value = 100 }
+            }
             set_country_flag = travel_to_europe
         }
 
         ai_will_do = { factor = 1 }
-
     }
 
-	#Persian Cinema
-	persian_cinema = {
-    picture = fatherland_altar
-
-    potential = {
-        tag = PER
-        NOT = { has_country_flag = persian_cinema }
-        NOT = { has_country_modifier = silver_age }
-        year = 1880
-    }
-
-    allow = {
-        OR = {
-            any_greater_power = { invention = the_talkies relation = { who = THIS value = 50 } }
-            invention = the_talkies
+    #Persian Cinema
+    persian_cinema = {
+        picture = fatherland_altar
+        potential = {
+            tag = PER
+            NOT = { has_country_flag = persian_cinema }
+            NOT = { has_country_modifier = silver_age }
+            year = 1880
         }
-    }
 
-    effect = {
+        allow = {
+            OR = {
+                any_greater_power = { invention = the_talkies relation = { who = THIS value = 50 } }
+                invention = the_talkies
+            }
+        }
+
+        effect = {
             set_country_flag = persian_cinema
             prestige = 2
             years_of_research = 0.5
@@ -56,29 +53,28 @@ political_decisions = {
             }
         }
 
-
-    ai_will_do = { factor = 1 }
+        ai_will_do = { factor = 1 }
     }
 
-	#Greater Iran
-	greater_iran = {
-    picture = greater_iran
+    #Greater Iran
+    greater_iran = {
+        picture = greater_iran
 
-    potential = {
-        tag = PER
-        civilized = yes
-        NOT = { has_country_flag = greater_iran }
-    }
+        potential = {
+            tag = PER
+            civilized = yes
+            NOT = { has_country_flag = greater_iran }
+        }
 
-    allow = {
-        nationalism_n_imperialism = 1
-        is_greater_power = yes
-        war_policy = jingoism
-    }
+        allow = {
+            nationalism_n_imperialism = 1
+            is_greater_power = yes
+            war_policy = jingoism
+        }
 
-    effect = {
+        effect = {
             set_country_flag = greater_iran
-            badboy = 13
+            badboy = 14
             any_country = { limit = { neighbour = THIS NOT = { vassal_of = THIS } } relation = { who = THIS value = -50 } }
             RUS_1102 = { add_core = PER }
             RUS_1098 = { add_core = PER }
@@ -91,15 +87,15 @@ political_decisions = {
             1090 = { add_core = PER }
             1053 = { add_core = PER }
             1052 = { add_core = PER }
+            686 = { add_core = PER } #Merv
         }
 
-
-    ai_will_do = { factor = 1 }
+        ai_will_do = { factor = 1 }
     }
 
 
-	# Establish the Dar ul-Funun
-	establish_the_dar_al_funun = {
+    # Establish the Dar ul-Funun
+    establish_the_dar_al_funun = {
         picture = suezcanalcompany
         potential = {
             tag = PER
@@ -146,7 +142,7 @@ political_decisions = {
         }
     }
 
-	revoke_kurdish_autonomy = {
+    revoke_kurdish_autonomy = {
         picture = map_kurdistan
         potential = {
             tag = PER
@@ -183,108 +179,106 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-	#Establish the Majles
-	establish_the_majles = {
-    picture = caucasus_viceroyalty
-    potential = {
-        tag = PER
-        year = 1900
-        NOT = { has_country_flag = majles_established }
-    }
-
-    allow = {
-        OR = {
-            government = prussian_constitutionalism
-            government = hms_government
-            government = democracy
+    #Establish the Majles
+    establish_the_majles = {
+        picture = caucasus_viceroyalty
+        potential = {
+            tag = PER
+            year = 1900
+            NOT = { has_country_flag = majles_established }
         }
-    }
 
-    effect = {
-        set_country_flag = majles_established
-        prestige = 2
-        plurality = 5
-        any_pop = { consciousness = 1 }
-        clr_country_flag = per_backed_down
-    }
-    ai_will_do = { factor = 1 }
-}
-
-	# End the bazaari strike.
-	end_bazaari_strike = {
-    picture = PER_bazaari_strike
-    potential = {
-        has_country_modifier = bazaari_strike
-    }
-
-    allow = {
-        has_country_modifier = bazaari_strike
-    }
-
-    effect = {
-        prestige_factor = -0.1
-        remove_country_modifier = bazaari_strike
-        years_of_research = -1
-        add_country_modifier = { name = uncivilized_isolationism duration = -1 }
-        remove_country_modifier = western_influences
-        random_owned = {
-            limit = { owner = { NOT = { border_policy = closed_borders } } }
-            owner = { political_reform = closed_borders }
-        }
-        treasury = -50000
-        any_country = {
-            limit = { is_greater_power = yes }
-            diplomatic_influence = { who = THIS value = -200 }
-            relation = { who = THIS value = -100 }
-        }
-        random_country = {
-            limit = { is_greater_power = yes is_sphere_leader_of = THIS }
-            treasury = 50000
-        }
-        clr_country_flag = ulama_no
-    }
-    ai_will_do = { factor = 1 }
-}
-
-	# Appoint Amir Kabir Mirza Taghi Khan
-	appoint_amir_kabir = {
-    picture = amir_kabir
-    potential = {
-        tag = PER
-        NOT = { year = 1852 }
-        NOT = {    has_country_flag = amir_kabir }
-        has_country_modifier = silver_age
-    }
-
-    allow = {
-        has_country_modifier = silver_age
-    }
-
-    effect = {
-        set_country_flag = amir_kabir
-        add_country_modifier = { name = amir_kabir duration = -1 }
-        any_pop = {
-            scaled_militancy = {
-                ideology = liberal
-                factor = -3
-            }
-            scaled_militancy = {
-                ideology = conservative
-                factor = 1
-            }
-            scaled_militancy = {
-                ideology = reactionary
-                factor = 3
+        allow = {
+            OR = {
+                government = prussian_constitutionalism
+                government = hms_government
+                government = democracy
             }
         }
+
+        effect = {
+            set_country_flag = majles_established
+            prestige = 2
+            plurality = 5
+            any_pop = { consciousness = 1 }
+            clr_country_flag = per_backed_down
+        }
+        ai_will_do = { factor = 1 }
     }
 
-    ai_will_do = { factor = 1 }
-}
+    # End the bazaari strike.
+    end_bazaari_strike = {
+        picture = PER_bazaari_strike
+        potential = {
+            has_country_modifier = bazaari_strike
+        }
 
+        allow = {
+            has_country_modifier = bazaari_strike
+        }
 
-	#Bring Tea to Iran
-	bring_tea_to_iran = {
+        effect = {
+            prestige_factor = -0.1
+            remove_country_modifier = bazaari_strike
+            years_of_research = -1
+            add_country_modifier = { name = uncivilized_isolationism duration = -1 }
+            remove_country_modifier = western_influences
+            random_owned = {
+                limit = { owner = { NOT = { border_policy = closed_borders } } }
+                owner = { political_reform = closed_borders }
+            }
+            treasury = -50000
+            any_country = {
+                limit = { is_greater_power = yes }
+                diplomatic_influence = { who = THIS value = -200 }
+                relation = { who = THIS value = -100 }
+            }
+            random_country = {
+                limit = { is_greater_power = yes is_sphere_leader_of = THIS }
+                treasury = 50000
+            }
+            clr_country_flag = ulama_no
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    # Appoint Amir Kabir Mirza Taghi Khan
+    appoint_amir_kabir = {
+        picture = amir_kabir
+        potential = {
+            tag = PER
+            NOT = { year = 1852 }
+            NOT = {    has_country_flag = amir_kabir }
+            has_country_modifier = silver_age
+        }
+
+        allow = {
+            has_country_modifier = silver_age
+        }
+
+        effect = {
+            set_country_flag = amir_kabir
+            add_country_modifier = { name = amir_kabir duration = -1 }
+            any_pop = {
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = -3
+                }
+                scaled_militancy = {
+                    ideology = conservative
+                    factor = 1
+                }
+                scaled_militancy = {
+                    ideology = reactionary
+                    factor = 3
+                }
+            }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+    #Bring Tea to Iran
+    bring_tea_to_iran = {
         picture = prince_mirza
         potential = {
             tag = PER
@@ -319,4 +313,58 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
+	end_bandar_abbas_lease = {
+        picture = qeshm_iran
+
+        potential = {
+            tag = PER
+            NOT = { has_country_flag = ended_bandar_abbas_lease }
+            OMA = {
+                OR = {
+                    owns = 1071 #Qeshm
+                    owns = 1142 #Bandar Abbas
+                    owns = 1145 #Jask
+                }
+                #does not own any other PER cores
+                NOT = {
+                    any_owned_province = {
+                        is_core = PER
+                        NOT = { province_id = 1071 }
+                        NOT = { province_id = 1142 }
+                        NOT = { province_id = 1145 }
+                    }
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            NOT = { truce_with = OMA }
+            owns = 1139 #Sirjan
+            OR = {
+                exists = ZAN
+                OMA = {
+                   NOT = { owns = 2048 } 
+                   NOT = { owns = 1166 } 
+                }
+                NOT = {
+                    OMA = {
+                        OR = {
+                            government = absolute_monarchy
+                            government = prussian_constitutionalism
+                            government = hms_government
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = ended_bandar_abbas_lease
+            badboy = 1
+            OMA = { country_event = 38507 }
+        }
+
+        ai_will_do = { factor = 1 }
+    }
 }
