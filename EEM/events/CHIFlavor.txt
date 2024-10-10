@@ -915,6 +915,7 @@ country_event = {
                     province_id = 1606 #Jiaxing
                     province_id = 2681 #Taibei
                     province_id = 2562 #Tainan
+                    province_id = 2406 #Penghu
                     province_id = 1499 #Hainan
                     province_id = 2632 #Kwangchowan
                 }

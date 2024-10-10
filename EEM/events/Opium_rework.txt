@@ -107,6 +107,7 @@ province_event = {
             1606 = { owner = { NOT = { is_culture_group = east_asian } } }
             2681 = { owner = { NOT = { is_culture_group = east_asian } } }
             2562 = { owner = { NOT = { is_culture_group = east_asian } } }
+            2406 = { owner = { NOT = { is_culture_group = east_asian } } } #Penghu
             1499 = { owner = { NOT = { is_culture_group = east_asian } } }
             2632 = { owner = { NOT = { is_culture_group = east_asian } } }
 

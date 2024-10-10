@@ -138,3 +138,266 @@ country_event = {
         ai_chance = { factor = 0 }
     }
 }
+
+
+#Singapore Free Port
+country_event = {
+    id = 956600
+    title = "EVTNAME956600"
+    desc = "EVTDESC956600"
+    picture = "singapore"
+
+    fire_only_once = yes
+
+    trigger = {
+        is_canal_enabled = 2
+        owns = 1384
+        1384 = { controlled_by = THIS }
+        war = no
+        #NOT = { exists = SGP }
+        revolution_n_counterrevolution = 1
+        market_regulations = 1
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "EVTOPTA956600"
+
+        random_owned = {
+            limit = { SGP = { exists = no } }
+            SGP = {
+                tech_school = developing_tech_school
+                set_country_flag = post_colonial_country
+            }
+        }
+
+        1384 = {
+            trade_goods = precious_goods
+            add_core = SGP
+
+            add_province_modifier = {
+                name = colonial_recruitment
+                duration = 1095
+            }
+        }
+        ai_chance = { factor = 100 }
+    }
+}
+
+#Migration to Singapore
+province_event = {
+    id = 956601
+    title = "EVTNAME956601"
+    desc = "EVTDESC956601"
+
+    fire_only_once = yes
+
+    trigger = {
+        province_id = 1384
+        is_core = SGP
+        owner = {
+            civilized = yes
+            OR = {
+                capital_scope = { NOT = { continent = asia } }
+                tag = SGP
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        1482 = {
+            state_scope = {
+                random_pop = {
+                    limit = {
+                        OR = {
+                            type = serfs
+                            type = artisans
+                        }
+                        has_pop_culture = min
+                        location = { is_coastal = yes }
+                    }
+                    move_pop = 1384
+                }
+            }
+        }
+        #SGP = { add_accepted_culture = min }
+    }
+
+    option = {
+        name = "EVTOPTA956601"
+
+        any_pop = {
+            limit = {
+                is_primary_culture = no
+                is_accepted_culture = no
+                has_pop_culture = min
+                OR = {
+                    type = artisans
+                    type = soldiers
+                    type = clergymen
+                    type = serfs
+                }
+            }
+            pop_type = labourers
+        }
+        ai_chance = { factor = 100 }
+    }
+}
+
+
+
+#Independence of Singapore
+country_event = {
+  id = 956602
+  title = "EVTNAME956602"
+  desc = "EVTDESC956602" 
+  picture = "singapore"
+  fire_only_once = yes
+
+    trigger = {
+        tag = MLY
+        is_vassal = no
+        SGP = { exists = no }
+        owns = 1384
+        civilized = yes
+        num_of_cities = 2
+        OR = {
+            AND = {
+                1384 = { average_militancy = 4 }
+                citizens_rights = primary_culture_only
+            }
+            AND = {
+                1384 = { average_militancy = 5 }
+                citizens_rights = culture_voting_only
+                #accepted_culture = yue
+            }
+            AND = {
+                1384 = { average_militancy = 6 }
+                citizens_rights = all_voting_pops
+            }
+            1384 = { controlled_by_rebels = yes }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+        modifier = {
+            factor = 0.01
+            1384 = { controlled_by_rebels = yes }
+        }
+        modifier = {
+            factor = 0.9
+            1384 = { average_militancy = 7 }
+        }
+        modifier = {
+            factor = 0.75
+            1384 = { average_militancy = 8 }
+        }
+        modifier = {
+            factor = 0.75
+            1384 = { average_militancy = 9 }
+        }
+        #modifier = {
+        #    factor = 0.5
+        #    NOT = { accepted_culture = yue }
+        #}
+    }
+
+    option = {
+        name = "EVTOPTA956602"
+        badboy = -4
+        any_pop = {
+            limit = { has_pop_culture = malay }
+            consciousness = 2
+        }
+
+        any_pop = {
+            limit = { is_culture_group = east_asian }
+            militancy = -4
+        }
+        SGP = {
+            all_core = { remove_core = MLY }
+            civilized = yes
+        }
+        
+        release = SGP
+        SGP = {
+            government = democracy
+            ruling_party_ideology = conservative
+            political_reform = universal_voting
+            political_reform = harassment
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { upper_house_composition = party_appointed }
+                        owner = { upper_house_composition = appointed }
+                    }
+                }
+                owner = { political_reform = state_equal_weight }
+            }
+            random_owned = {
+                limit = {
+                    OR = {
+                        owner = { debt_law = serfdom }
+                        owner = { debt_law = peonage }
+                    }
+                }
+                owner = { political_reform = debtors_prisons }
+            }
+            political_reform = no_slavery
+            random_owned = {
+                limit = {
+                    owner = { citizens_rights = primary_culture_only }
+                }
+                owner = { social_reforms = culture_voting_only }
+            }
+
+            clr_country_flag = election_started
+            set_country_flag = conservative_party_in_power
+            clr_country_flag = liberal_party_in_power
+            clr_country_flag = reactionary_party_in_power
+            clr_country_flag = socialist_party_in_power
+            clr_country_flag = communist_party_in_power
+            clr_country_flag = fascist_party_in_power
+            clr_country_flag = anarcho_liberal_party_in_power
+            election = yes
+        }
+        sphere_owner = { diplomatic_influence = { who = SGP value = 200 } }
+
+        ai_chance = {
+            factor = 80
+            modifier = {
+                factor = 0
+                war_policy = jingoism
+            }
+        }
+    }
+
+    #"Grant Singapore special status in Malaysia"
+
+    option = {
+        name = "EVTOPTB956602"
+        prestige = -20
+        1384 = {
+            any_pop = { limit = { is_culture_group = east_asian } militancy = 10 }
+            add_province_modifier = { name = nationalist_agitation duration = 7300 }
+        }
+        any_pop = { limit = { is_culture_group = east_asian } militancy = 5 }
+
+        ai_chance = {
+            factor = 20
+            modifier = {
+                factor = 0
+                citizenship_policy = full_citizenship
+            }
+        }
+    }
+
+}

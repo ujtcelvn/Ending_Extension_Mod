@@ -74,6 +74,7 @@ political_decisions = {
 
         allow = {
             war = no
+            NOT = { num_of_revolts = 1 }
             NOT = { ruling_party_ideology = reactionary }
             NOT = { ruling_party_ideology = fascist }
             NOT = { citizens_rights = primary_culture_only }
@@ -81,7 +82,7 @@ political_decisions = {
                 all_core = {
                     owned_by = THIS
                     is_colonial = no
-                    any_pop = { is_primary_culture = yes }
+                    #any_pop = { is_primary_culture = yes }
                 }
                 nationalvalue = nv_equality
             }
@@ -252,6 +253,7 @@ political_decisions = {
 
         allow = {
             war = no
+            NOT = { num_of_revolts = 1 }
             NOT = { citizens_rights = all_voting_pops }
             citizenship_policy = limited_citizenship
             experimental_psychology = 1
@@ -259,7 +261,7 @@ political_decisions = {
             all_core = {
                 owned_by = THIS
                 is_colonial = no
-                any_pop = { is_primary_culture = yes }
+                #any_pop = { is_primary_culture = yes }
             }
             OR = {
                 upper_house = { ideology = reactionary value = 0.4 }
@@ -364,6 +366,7 @@ political_decisions = {
 
         allow = {
             war = no
+            NOT = { num_of_revolts = 1 }
             citizens_rights = primary_culture_only
             NOT = { government = democracy }
             NOT = { government = hms_government }
@@ -375,7 +378,7 @@ political_decisions = {
             all_core = {
                 owned_by = THIS
                 is_colonial = no
-                any_pop = { is_primary_culture = yes }
+                #any_pop = { is_primary_culture = yes }
             }
             OR = {
                 upper_house = { ideology = reactionary value = 0.51 }

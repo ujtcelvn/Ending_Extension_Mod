@@ -2508,11 +2508,13 @@ country_event = {
         has_global_flag = warlord_era_has_begun
         is_culture_group = east_asian
         NOT = { tag = LAN }
+        NOT = { tag = SGP }
         #NOT = { tag = MAO }
         is_vassal = no
         any_neighbor_country = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             #NOT = { tag = MAO }
             NOT = { war_with = THIS }
             NOT = { brigades_compare = 1 }
@@ -2556,6 +2558,7 @@ country_event = {
                 is_culture_group = east_asian
                 neighbour = THIS
                 NOT = { tag = LAN }
+                NOT = { tag = SGP }
                 #NOT = { tag = MAO }
                 NOT = { war_with = THIS }
                 NOT = { brigades_compare = 1 }
@@ -2870,6 +2873,7 @@ country_event = {
             war_with = THIS
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             #NOT = { tag = MAO }
         }
         1485 = {
@@ -3095,6 +3099,7 @@ country_event = {
                 neighbour = THIS
                 is_culture_group = east_asian
                 NOT = { tag = LAN }
+                NOT = { tag = SGP }
                 #NOT = { tag = MAO }
             }
             country_event = 16050215
@@ -3116,6 +3121,7 @@ country_event = {
             limit = {
                 is_culture_group = east_asian
                 NOT = { tag = LAN }
+                NOT = { tag = SGP }
                 #NOT = { tag = MAO }
                 war_with = FROM
             }
@@ -3147,6 +3153,7 @@ country_event = {
     trigger = {
         is_culture_group = east_asian
         NOT = { tag = LAN }
+        NOT = { tag = SGP }
         #NOT = { tag = MAO }
         war = yes
         ai = yes
@@ -3174,6 +3181,7 @@ country_event = {
         any_country = {
             limit = {
                 NOT = { tag = LAN }
+                NOT = { tag = SGP }
                 #NOT = { tag = MAO }
                 is_culture_group = east_asian
                 war_with = THIS
@@ -3254,6 +3262,7 @@ country_event = {
     trigger = {
         is_culture_group = east_asian
         NOT = { tag = LAN }
+        NOT = { tag = SGP }
         #NOT = { tag = MAO }
         has_global_flag = warlord_era_has_begun
         war = yes
@@ -3279,6 +3288,7 @@ country_event = {
             limit = {
                 is_culture_group = east_asian
                 NOT = { tag = LAN }
+                NOT = { tag = SGP }
                 #NOT = { tag = MAO }
                 war_with = THIS
                 ai = yes

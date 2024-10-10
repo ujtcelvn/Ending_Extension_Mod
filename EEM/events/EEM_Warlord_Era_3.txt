@@ -1504,3 +1504,133 @@ country_event = {
 
     }
 }
+
+
+country_event = {
+    id = 131731
+    title = "EVTNAME131731"
+    desc = "EVTDESC131731"
+    picture = "1946_assembly_cn"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT131731OPTA"
+
+        add_country_modifier = { name = national_confusion duration = 365 }
+
+        political_reform = universal_voting
+
+        random_owned = {
+            limit = {
+                OR = {
+                    owner = { upper_house_composition = party_appointed }
+                    owner = { upper_house_composition = appointed }
+                }
+            }
+            owner = { political_reform = state_equal_weight }
+        }
+        political_reform = yes_meeting
+        political_reform = free_press
+        #trade_unions
+        random_owned = {
+            limit = {
+                OR = {
+                    owner = { political_parties = underground_parties }
+                    owner = { political_parties = harassment }
+                }
+            }
+            owner = { political_reform = gerrymandering }
+        }
+        random_owned = {
+            limit = {
+                OR = {
+                    owner = { debt_law = serfdom }
+                    owner = { debt_law = peonage }
+                }
+            }
+            owner = { political_reform = debtors_prisons }
+        }
+        political_reform = no_slavery
+        random_owned = {
+            limit = {
+                owner = { citizens_rights = primary_culture_only }
+            }
+            owner = { social_reforms = culture_voting_only }
+        }
+
+
+        any_owned = {
+            limit = { is_colonial = no }
+            any_pop = {
+                militancy = -2
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = -8
+                }
+                scaled_consciousness = {
+                    ideology = liberal
+                    factor = -4
+                }
+            }
+            remove_province_modifier = liberal_agitation
+        }
+
+
+        government = democracy
+
+        clr_country_flag = election_started
+        set_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+
+        election = yes
+
+        ai_chance = { factor = 80 }
+    }
+
+    option = {
+        name = "EVT131731OPTB"
+
+        any_owned = {
+            limit = { is_colonial = no }
+            add_province_modifier = {
+                name = liberal_agitation
+                duration = 365
+            }
+            any_pop = {
+                ideology = {
+                    value = liberal
+                    factor = 0.05
+                }
+                scaled_militancy = {
+                    ideology = liberal
+                    factor = 4
+                }
+                dominant_issue = {
+                    value = wealth_voting
+                    factor = 0.1
+                }
+            }
+        }
+
+
+        # Military Pleased
+        soldiers = {
+            limit = { is_primary_culture = yes }
+            militancy = -3
+            consciousness = -3
+        }
+        officers = {
+            limit = { is_primary_culture = yes }
+            militancy = -3
+            consciousness = -3
+        }
+
+        ai_chance = { factor = 20 }
+    }
+}

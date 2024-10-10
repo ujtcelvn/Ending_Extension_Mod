@@ -1,0 +1,45 @@
+
+RUS = { value = -25 }
+
+KAB = { value = -100 }
+KAB = { truce_until = 1840.1.1 }
+
+HER = { value = -100 }
+
+KAL = { value = 200 }
+
+#MAK = { value = 200 }
+
+PER = { value = -50 }
+
+leader = {
+    name = "Kohan-Dil-Khan"
+    type = land
+    date = 1836.1.1
+    personality = lackluster
+    background = incompetent
+}
+
+
+army = {
+    name = "Army of Kohan-dil-Khan"
+    location = 1215
+    regiment = {
+        name= "1. Durranni"
+        type = cavalry
+        home = 1215
+    }
+
+    regiment = {
+        name= "2. Durranni"
+        type = irregular
+        home = 2133
+    }
+
+    regiment = {
+        name= "3. Durranni"
+        type = irregular
+        home = 1214
+    }
+
+}

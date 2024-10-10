@@ -67,7 +67,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = javanese_integrated
-            JAV = { tech_school = developing_tech_school country_event = 952500 }
+            JAV = { country_event = 952500 }
             badboy = 1
         }
 

@@ -179,6 +179,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = neutral_faction
             NOT = {
@@ -245,6 +246,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                     NOT = { tag = THIS }
                 }
                 relation = { who = THIS value = -100 }
@@ -262,6 +264,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = kuomintang_faction
             NOT = {
@@ -310,6 +313,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                     NOT = { tag = THIS }
                 }
                 relation = { who = THIS value = -100 }
@@ -327,6 +331,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = communist_faction
             NOT = {
@@ -378,6 +383,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                     NOT = { tag = THIS }
                 }
                 relation = { who = THIS value = -100 }
@@ -395,6 +401,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = beiyang_faction
             NOT = {
@@ -442,6 +449,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                     NOT = { tag = THIS }
                 }
                 relation = { who = THIS value = -100 }
@@ -459,6 +467,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = kuomintang_faction
             NOT = { tag = KMT }
@@ -503,6 +512,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                     NOT = { has_country_flag = kuomintang_faction }
                 }
                 relation = { who = THIS value = -100 }
@@ -520,6 +530,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = beiyang_faction
             CHI = { exists = no }
@@ -545,6 +556,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                 }
                 relation = { who = THIS value = -100 }
                 leave_alliance = THIS
@@ -561,6 +573,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = communist_faction
             CHI = { exists = no }
@@ -586,6 +599,7 @@ political_decisions = {
                 limit = {
                     is_culture_group = east_asian
                     NOT = { tag = LAN }
+                    NOT = { tag = SGP }
                     NOT = { has_country_flag = communist_faction }
                 }
                 relation = { who = THIS value = -100 }
@@ -603,6 +617,7 @@ political_decisions = {
         potential = {
             is_culture_group = east_asian
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             has_global_flag = warlord_era_has_begun
             has_country_flag = kuomintang_faction
             NOT = { tag = KMT }
@@ -872,10 +887,11 @@ political_decisions = {
                 limit = {
                     rank = 16
                     NOT = { any_owned_province = { is_core = CHI } }
+                    NOT = { war_with = THIS }
                 }
                 relation = {
                     who = THIS
-                    value = 100
+                    value = 150
                 }
             }
             any_country = {
@@ -894,6 +910,14 @@ political_decisions = {
                 }
                 country_event = 131745
             }
+
+            random_owned = {
+                limit = {
+                    owner = { government = presidential_dictatorship }
+                    owner = { ruling_party_ideology = conservative }
+                }
+                owner = { country_event = 131731 }
+            }
         }
 
         ai_will_do = {
@@ -907,6 +931,7 @@ political_decisions = {
             is_culture_group = east_asian
             NOT = { tag = QNG }
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             NOT = { tag = KMT }
             has_country_flag = communist_faction
             has_global_flag = warlord_era_has_begun
@@ -1167,10 +1192,11 @@ political_decisions = {
                 limit = {
                     rank = 16
                     NOT = { any_owned_province = { is_core = CHI } }
+                    NOT = { war_with = THIS }
                 }
                 relation = {
                     who = THIS
-                    value = 100
+                    value = 150
                 }
             }
             any_country = {
@@ -1201,6 +1227,7 @@ political_decisions = {
             is_culture_group = east_asian
             NOT = { tag = QNG }
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             NOT = { tag = KMT }
             NOT = { has_country_flag = communist_faction }
             OR = {
@@ -1504,10 +1531,11 @@ political_decisions = {
                 limit = {
                     rank = 16
                     NOT = { any_owned_province = { is_core = CHI } }
+                    NOT = { war_with = THIS }
                 }
                 relation = {
                     who = THIS
-                    value = 100
+                    value = 150
                 }
             }
             any_country = {
@@ -1596,6 +1624,7 @@ political_decisions = {
             NOT = { has_global_flag = kumul_over }
             neighbour = KML
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             NOT = { tag = MGL }
             OR = {
                 civilized = yes
@@ -1696,7 +1725,6 @@ political_decisions = {
         picture = heavenly_seal
         potential = {
             NOT = { tag = TPG }
-            #NOT = { tag = LAN }
             is_culture_group = east_asian
             has_global_flag = heavenly_capital_decreted
         }

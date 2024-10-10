@@ -1,0 +1,456 @@
+political_decisions = {
+
+    form_afghanistan = {
+        picture = form_durrani_empire
+        potential = {
+            NOT = { exists = AFG }
+            NOT = { exists = DUR }
+            OR = {
+                any_owned_province = { is_core = AFG }
+                HER = { in_sphere = THIS }
+                HER = { vassal_of = THIS }
+                KAN = { in_sphere = THIS }
+                KAN = { vassal_of = THIS }
+                KAB = { in_sphere = THIS }
+                KAB = { vassal_of = THIS }
+            }
+        }
+
+        allow = {
+            war = no
+            nationalism_n_imperialism = 1
+            AFG = {
+                all_core = {
+                    OR = {
+                        owned_by = THIS
+                        owner = { in_sphere = THIS }
+                        owner = { vassal_of = THIS }
+                    }
+                }
+            }
+            HER = { war = no }
+            KAN = { war = no }
+            KAB = { war = no }
+        }
+
+        effect = {
+            prestige = 5
+
+            random_country = {
+                limit = {
+                    tag = HER
+                    exists = yes
+                    NOT = { number_of_states = 2 }
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = KAN
+                    exists = yes
+                    NOT = { number_of_states = 2 }
+                }
+                annex_to = THIS
+            }
+            random_country = {
+                limit = {
+                    tag = KAB
+                    exists = yes
+                    NOT = { number_of_states = 2 }
+                }
+                annex_to = THIS
+            }
+            any_country = {
+                limit = {
+                    NOT = { tag = THIS }
+                    any_owned_province = { is_core = AFG }
+                    exists = yes
+                }
+                any_owned = { limit = { is_core = AFG } secede_province = THIS }
+            }
+
+            AFG_1209 = { add_core = AFG }
+            AFG_1214 = { add_core = AFG }
+            AFG = { tech_school = developing_tech_school }
+
+
+            set_global_flag = centralized_afghanistan
+            HER = {
+                tech_school = developing_tech_school
+                all_core = { remove_core = HER }
+            }
+            KAN = {
+                tech_school = developing_tech_school
+                all_core = { remove_core = KAN }
+            }
+            KAB = {
+                tech_school = developing_tech_school
+                all_core = { remove_core = KAB }
+            }
+
+
+            any_owned = {
+                limit = {
+                    is_core = THIS
+                    is_core = AFG
+                }
+                remove_core = AFG
+            }
+            release_vassal = AFG
+            relation = { who = AFG value = 400 }
+            diplomatic_influence = { who = AFG value = 400 }
+            random_owned = {
+                limit = {
+                    owner = {
+                        tag = ENG
+                        is_greater_power = yes
+                        neighbour = AFG
+                        NOT = { has_country_flag = durand_line }
+                    }
+                }
+                set_country_flag = durand_line
+                AFG = { country_event = 3697010 }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                is_culture_group = south_asian
+            }
+            modifier = {
+                factor = 0
+                is_culture_group = indo_iranian
+            }
+            modifier = {
+                factor = 0
+                is_culture_group = iranian_turanian
+            }
+        }
+    }
+
+    #Unite Afghanistan
+    form_afghanistan_existing = {
+        picture = form_durrani_empire
+        potential = {
+            NOT = { tag = DUR }
+            NOT = { tag = HER }
+            NOT = { tag = KAN }
+            NOT = { tag = KAB }
+            AFG = { exists = yes }
+            OR = {
+                tag = AFG
+                AFG = {
+                    exists = yes
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                }
+            }
+
+            OR = {
+                HER = {
+                    exists = yes
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                }
+                KAN = {
+                    exists = yes
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                }
+                KAB = {
+                    exists = yes
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                }
+            }
+        }
+
+        allow = {
+            nationalism_n_imperialism = 1
+            war = no
+            HER = {
+                war = no
+                OR = {
+                    vassal_of = THIS
+                    in_sphere = THIS
+                    all_core = {
+                    OR = {
+                            owned_by = THIS
+                            owner = { in_sphere = THIS }
+                            owner = { vassal_of = THIS }
+                        }
+                    }
+                }
+            }
+            KAN = {
+                war = no
+                OR = {
+                    vassal_of = THIS
+                    in_sphere = THIS
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = { in_sphere = THIS }
+                            owner = { vassal_of = THIS }
+                        }
+                    }
+                }
+            }
+            KAB = {
+                war = no
+                OR = {
+                    vassal_of = THIS
+                    in_sphere = THIS
+                    all_core = {
+                        OR = {
+                            owned_by = THIS
+                            owner = { in_sphere = THIS }
+                            owner = { vassal_of = THIS }
+                        }
+                    }
+                }
+            }
+            OR = {
+                tag = AFG
+                AFG = {
+                    OR = {
+                        vassal_of = THIS
+                        in_sphere = THIS
+                    }
+                }
+            }
+        }
+
+        effect = {
+            prestige = 5
+            AFG_1209 = { add_core = AFG }
+            AFG_1214 = { add_core = AFG }
+            AFG = {
+                inherit = HER
+                inherit = KAN
+                inherit = KAB
+            }
+
+
+            set_global_flag = centralized_afghanistan
+            KAB = { all_core = { remove_core = KAB } }
+            KAN = { all_core = { remove_core = KAN } }
+            HER = { all_core = { remove_core = KAN } }
+
+        }
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                is_culture_group = south_asian
+            }
+            modifier = {
+                factor = 0
+                is_culture_group = indo_iranian
+            }
+        }
+    }
+
+
+    become_afghanistan = {
+        picture = form_durrani_empire
+        potential = {
+            OR = {
+                tag = HER
+                tag = KAN
+                tag = KAB
+            }
+        }
+
+        allow = {
+            war = no
+            NOT = { exists = AFG }
+            NOT = { exists = DUR }
+            owns = 1209 #Kabul
+            owns = 1215 #Kandahar
+        }
+
+        effect = {
+            prestige = 5
+            change_tag = AFG
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+    centralize_afghanistan = {
+        picture = form_durrani_empire
+        potential = {
+            NOT = { has_global_flag = centralized_afghanistan }
+            OR = {
+                tag = AFG
+                tag = DUR
+            }
+        }
+
+        allow = {
+            war = no
+            #NOT = { exists = BDK }
+            NOT = { exists = HER }
+            NOT = { exists = KAN }
+            NOT = { exists = KAB }
+            civilized = yes
+            owns = 1209 #Kabul
+            owns = 1212 #Herat
+            owns = 1215 #Kandahar
+            NOT = { num_of_revolts = 1 }
+            NOT = { has_country_modifier = national_confusion }
+        }
+
+        effect = {
+            set_global_flag = centralized_afghanistan
+            add_country_modifier = { name = national_confusion duration = 365 }
+            any_pop = {
+                limit = { is_primary_culture = no }
+                militancy = 2
+                consciousness = 1
+            }
+
+            KAB = { all_core = { remove_core = KAB } }
+            KAN = { all_core = { remove_core = KAN } }
+            HER = { all_core = { remove_core = KAN } }
+
+            #random_owned = {
+            #    limit = { owner = { accepted_culture = tajik } }
+            #    BDK = {
+            #        all_core = {
+            #            remove_core = BDK
+            #        }
+            #    }
+            #}
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+
+    form_durrani_empire = {
+        potential = {
+            #primary_culture = pashtun
+            NOT = { has_global_flag = durrani_formed }
+            #NOT = { tag = PAK }
+            #NOT = { tag = CRL }
+            tag = AFG
+            NOT = { has_country_flag = post_colonial_country }
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            prestige = 50
+            owns = 1219 #Quetta
+            owns = 1218 #Peshawar
+            owns = 1223 #Chitral
+            owns = 1211 #Balkh
+            owns = 1209 #Kabul
+            owns = 1215 #Kandahar
+        }
+
+        effect = {
+            set_global_flag = durrani_formed
+            prestige = 5
+            all_core = {
+                add_core = DUR
+                remove_core = THIS
+            }
+            change_tag = DUR
+            PER_1148 = { add_core = DUR } #Mashhad
+            SIN_1288 = { add_core = DUR } #Sindh
+            PAN_1227 = { add_core = DUR } #Lahore
+            1219 = { add_core = DUR } #Quetta
+            1220 = { add_core = DUR } #Dalbandin
+            1221 = { add_core = DUR } #Kalat
+            1222 = { add_core = DUR } #Makran
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    PER_AFG_border_treaty = {
+        picture = treaty_signing
+        potential = {
+            OR = {
+                #tag = DUR #the event only takes into account AFG cores
+                tag = AFG
+                and = {
+                    tag = ENG
+                    is_greater_power = yes
+                }
+            }
+            #neighbour = PER
+            PER = { exists = yes }
+            NOT = { has_country_flag = PER_AFG_border_treaty_flag }
+            OR = {
+                1212 = { is_core = PER } #Herat
+                1214 = { is_core = PER } #Zaranj
+            }
+
+            OR = {
+                owns = 1209 #Kabul
+                owns = 1212 #Herat
+                owns = 1214 #Kandahar
+                AFG = { in_sphere = THIS }
+                AFG = { vassal_of = THIS }
+            }
+
+        }
+
+        allow = {
+            war = no
+            PER = { war = no }
+            OR = {
+                AND = {
+                    tag = ENG
+                    nationalism_n_imperialism = 1
+                }
+                AND = {
+                    tag = AFG
+                    owns = 1212 #Herat
+                    owns = 1214 #Zaranj
+                }
+            }
+            OR = {
+                PER = { in_sphere = THIS }
+                PER = { vassal_of = THIS }
+                PER = { is_disarmed = yes }
+                AND = {
+                    truce_with = PER
+                    PER = { has_recently_lost_war = yes }
+                }
+            }
+
+            #NOT = { year = 1910 }
+            #NOT = { relation = { who = PER value = 100 } }
+        }
+
+        effect = {
+            set_country_flag = PER_AFG_border_treaty_flag
+            PER = { country_event = 110100 }
+        }
+        ai_will_do = { factor = 1 }
+    }
+
+}

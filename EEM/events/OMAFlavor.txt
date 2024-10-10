@@ -877,3 +877,145 @@ province_event = {
         trade_goods = grain
     }
 }
+
+
+# Persia demands Bandar Abbas
+country_event = {
+    id = 38507
+    title = "EVTNAME38507"
+    desc = "EVTDESC38507"
+    picture = "PER_bazaari"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT38507OPTA"
+        #prestige_factor = -0.15
+        badboy = -1
+        random_owned = { limit = { province_id = 1071 } secede_province = FROM remove_core = THIS } #Qeshm
+        random_owned = { limit = { province_id = 1142 } secede_province = FROM remove_core = THIS } #Bandar Abbas
+        random_owned = { limit = { province_id = 1145 } secede_province = FROM remove_core = THIS } #Jask
+        relation = { who = FROM value = 100 }
+        any_pop = { limit = { is_primary_culture = yes } militancy = 1 }
+
+        ai_chance = {
+            factor = 80
+            modifier = { factor = 1.5 in_sphere = FROM }
+            modifier = { factor = 10 vassal_of = FROM }
+        }
+    }
+
+    option = {
+        name = "EVT38507OPTB"
+        relation = { who = FROM value = -400 }
+        FROM = { diplomatic_influence = { who = THIS value = -400 } }
+        random_country = { limit = { tag = FROM is_our_vassal = THIS } release_vassal = THIS }
+        any_pop = { limit = { culture = persian } militancy = 1 }
+        FROM = {
+            war = {
+                target = THIS
+                attacker_goal = {
+                    casus_belli = acquire_core_state
+                    state_province_id = 1142
+                }
+            }
+        }
+
+        ai_chance = {
+            factor = 20
+            modifier = { factor = 1.5 part_of_sphere = yes NOT = { in_sphere = FROM } }
+            modifier = { factor = 1.25 civilized = yes }
+            modifier = { factor = 2 military_score = FROM }
+            modifier = { factor = 0.1 part_of_sphere = no }
+        }
+    }
+}
+
+
+# Gwadar Purchase 1/3
+country_event = {
+    id = 38508
+    title = "EVTNAME38508"
+    desc = "EVTDESC38508"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT38508OPTA"
+        badboy = -1
+        money = 500000
+        2640 = { remove_core = THIS }
+
+        FROM = { country_event = 38509 }
+        ai_chance = {
+            factor = 60
+            modifier = {
+                factor = 0.6
+                FROM = { is_greater_power = no }
+            }
+            modifier = {
+                factor = 0.8
+                is_greater_power = yes
+            }
+        }
+    }
+
+    option = {
+        name = "EVT38508OPTB"
+        FROM = { country_event = 38510 }
+        ai_chance = {
+            factor = 40
+            modifier = {
+                factor = 0.2
+                is_greater_power = no
+            }
+            modifier = {
+                factor = 0.5
+                is_secondary_power = no
+            }
+            modifier = {
+                factor = 0.7
+                alliance_with = FROM
+            }
+            modifier = {
+                factor = 0.7
+                relation = { who = FROM value = 150 }
+            }
+        }
+    }
+}
+
+# Gwadar Purchase 2/3
+country_event = {
+    id = 38509
+    title = "EVTNAME38509"
+    desc = "EVTDESC38509"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT38509OPTA"
+        prestige = 5
+        money = -500000
+        2640 = { secede_province = THIS }
+        relation = { who = FROM value = 50 }
+        any_pop = { consciousness = -1 }
+    }
+}
+
+# Gwadar Purchase 3/3
+country_event = {
+    id = 38510
+    title = "EVTNAME38510"
+    desc = "EVTDESC38510"
+    picture = "administration"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT38510OPTA"
+        relation = { who = FROM value = -100 }
+    }
+}

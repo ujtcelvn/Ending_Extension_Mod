@@ -1,10 +1,9 @@
-CRL = {
-    truce_until = 1840.1.1
-}
+CRL = { truce_until = 1840.1.1 }
 
 BUK = { value = 25 }
+BUK = { truce_until = 1840.1.1 }
 
-KHI = { value = 400 }
+KHI = { value = 25 } #200
 
 RUS = { value = -25 }
 
@@ -12,6 +11,11 @@ PER = { value = -50 }
 
 PNJ = { value = -100 }
 
+#HER = { value = -100 }
+HER = { truce_until = 1840.1.1 }
+
+KAN = { value = -100 }
+KAN = { truce_until = 1840.1.1 }
 
 leader = {
     name = "Dost Mohammed"
@@ -22,11 +26,11 @@ leader = {
 }
 
 leader = {
-    name = "Yar Mohammed"
+    name = "Wazir Akbar"
     type = land
     date = 1836.1.1
-    personality = intuitive
-    background = aristocrat
+    personality = daring
+    background = rising_star
 }
 
 army = {
@@ -44,39 +48,40 @@ army = {
         home = 1209
     }
 
-    regiment = {
-        name= "3. Mohammedzi"
-        type = irregular
-        home = 1216
-    }
+    #regiment = {
+    #    name= "3. Mohammedzi"
+    #    type = irregular
+    #    home = 1216
+    #}
 
     regiment = {
         name= "1. Barakzai"
         type = cavalry
-        home = 1209
+        home = 1219
     }
 
     regiment = {
         name= "2. Barakzai"
         type = cavalry
-        home = 1209
+        home = 1219
     }
 
-    regiment = {
-        name= "3. Barakzai"
-        type = cavalry
-        home = 1216
-    }
+    #regiment = {
+    #    name= "3. Barakzai"
+    #    type = cavalry
+    #    home = 1216
+    #}
 
 }
 
 army = {
-    name = "Army of Kamran Shah"
-    location = 1212
+    name = "Army of Wazir Akbar"
+    location = 1213
+
     regiment = {
         name= "1. Popozai"
         type = irregular
-        home = 1212
+        home = 1213
     }
 
     regiment = {
@@ -86,50 +91,8 @@ army = {
     }
 
     regiment = {
-        name= "3. Popozai"
-        type = irregular
-        home = 1213
-    }
-
-    regiment = {
         name= "1. Tajiki"
         type = irregular
         home = 1213
     }
-
-    regiment = {
-        name= "2. Tajiki"
-        type = irregular
-        home = 1212
-    }
-
-    regiment = {
-        name= "3. Tajiki"
-        type = irregular
-        home = 1212
-    }
-
-}
-
-army = {
-    name = "Army of Kohun-dil-Khan"
-    location = 1215
-    regiment = {
-        name= "1. Durranni"
-        type = irregular
-        home = 1215
-    }
-
-    regiment = {
-        name= "2. Durranni"
-        type = irregular
-        home = 1215
-    }
-
-    regiment = {
-        name= "3. Durranni"
-        type = irregular
-        home = 1214
-    }
-
 }

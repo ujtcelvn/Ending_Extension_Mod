@@ -208,7 +208,13 @@ political_decisions = {
             29 = { trade_goods = cotton }
             1195 = { trade_goods = silk }
             1199 = { trade_goods = silk }
-            1202 = { trade_goods = tobacco } #kokand
+            any_owned = {
+                limit = {
+                    province_id = 1202 #kokand
+                    NOT = { trade_goods = oil }
+                }
+                trade_goods = tobacco
+            }
         }
         ai_will_do = {  factor = 1 }
     }

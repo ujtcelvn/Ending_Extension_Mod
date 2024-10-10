@@ -519,6 +519,7 @@ province_event = {
         NOT = {
 			trade_goods = rubber
 			trade_goods = coal
+			trade_goods = precious_goods
 		}
 
         owner = {

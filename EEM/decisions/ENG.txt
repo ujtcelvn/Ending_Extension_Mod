@@ -294,7 +294,7 @@ political_decisions = {
     }
 
     treaty_of_nanking = {
-    picture = treaty_of_nanking
+        picture = treaty_of_nanking
         potential = {
             OR = {
                 tag = ENG
@@ -794,7 +794,7 @@ political_decisions = {
             set_country_flag = renaming_act
             2068 = { state_scope = { change_region_name = "Southern Rhodesia" } }
         }
-    ai_will_do = { factor = 1 }
+        ai_will_do = { factor = 1 }
     }
 
     durand_line = {
@@ -841,10 +841,10 @@ political_decisions = {
                     OR = {
                         vassal_of = THIS
                         in_sphere = THIS
-                        }
                     }
                 }
             }
+        }
 
         allow = {
             nationalism_n_imperialism = 1

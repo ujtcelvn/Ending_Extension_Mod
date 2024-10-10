@@ -1377,6 +1377,11 @@ naval_design_bureaus = {
             oil_driven_ships = 1
             is_greater_power = yes
         }
+        modifier = {
+            factor = 1.5
+            ship_construction_7 = 1
+            is_greater_power = yes
+        }
     }
 }
 fire_control_systems = {
@@ -1486,6 +1491,11 @@ fire_control_systems = {
         modifier = {
             factor = 1.5
             oil_driven_ships = 1
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 1.5
+            ship_construction_7 = 1
             is_greater_power = yes
         }
     }
@@ -1616,6 +1626,11 @@ weapon_platforms = {
             oil_driven_ships = 1
             is_greater_power = yes
         }
+        modifier = {
+            factor = 1.5
+            ship_construction_7 = 1
+            is_greater_power = yes
+        }
     }
 }
 main_armament = {
@@ -1735,6 +1750,11 @@ main_armament = {
             oil_driven_ships = 1
             is_greater_power = yes
         }
+        modifier = {
+            factor = 1.5
+            ship_construction_7 = 1
+            is_greater_power = yes
+        }
     }
 }
 advanced_naval_design = {
@@ -1850,6 +1870,11 @@ advanced_naval_design = {
         modifier = {
             factor = 1.5
             oil_driven_ships = 1
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 1.5
+            ship_construction_7 = 1
             is_greater_power = yes
         }
     }

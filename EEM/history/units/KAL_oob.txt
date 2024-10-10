@@ -1,3 +1,5 @@
+KAN = { value = 200 }
+
 leader = {
     name = "Mehreb Khan"
     date = 1836.1.1

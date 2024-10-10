@@ -116,6 +116,7 @@ From;To;Type;Through;Data;Comment
 1461;1463;land;2850;0;Davao Strait
 1462;1460;land;2850;0;Iloilo Strait
 1462;1464;sea;2851;0;Sulu Strait
+1397;1464;sea;2851;0;Sibutu Passage #North Borneo-Philippines
 1440;1439;sea;2810;0;Sumbawa-Flores Strait
 1440;1441;sea;2808;0;Sumbawa-Sumba Strait
 1441;1443;sea;2809;0;Sumba-Roti Strait

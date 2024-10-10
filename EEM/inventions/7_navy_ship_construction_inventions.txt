@@ -7,7 +7,7 @@ converted_hulk_air_carriers = {
         base = 5
         modifier = {
             factor = -10
-            NOT = { invention = wright_n_langleys_aeroplanes }
+            NOT = { invention = military_aviation }
         }
         modifier = {
             factor = -6
@@ -116,7 +116,7 @@ fleet_air_carriers = {
         aircraft_carrier = {
             maximum_speed = 1
             hull = 2
-			gun_power = 4 #2
+			gun_power = 5 #2
         }
     }
 }
@@ -147,7 +147,7 @@ large_air_carriers = {
             maximum_speed = 1
             hull = 2
             torpedo_attack = 2
-			gun_power = 2
+			gun_power = 4
         }
     }
 }

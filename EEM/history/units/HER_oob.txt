@@ -1,0 +1,52 @@
+BUK = { value = 200 }
+KHI = { value = 200 }
+KOK = { value = 50 }
+
+#KAB = { value = -100 }
+KAB = { truce_until = 1840.1.1 }
+
+KAN = { value = -100 }
+
+PER = { value = -50 }
+
+ENG = { value = 50 }
+RUS = { value = -25 }
+
+leader = {
+    name = "Kamran Shah Durrani"
+    type = land
+    date = 1836.1.1
+    personality = merciless
+    background = womanizer
+}
+
+leader = {
+    name = "Yar Mohammed"
+    type = land
+    date = 1836.1.1
+    personality = intuitive
+    background = aristocrat
+}
+
+army = {
+    name = "Army of Kamran Shah"
+    location = 1212
+    regiment = {
+        name= "1. Herati"
+        type = cavalry
+        home = 1212
+    }
+
+    regiment = {
+        name= "2. Herati"
+        type = irregular
+        home = 1212
+    }
+
+    regiment = {
+        name= "3. Herati"
+        type = irregular
+        home = 1212
+    }
+}
+

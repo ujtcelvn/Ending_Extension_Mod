@@ -302,7 +302,10 @@ hydrodesulphurization = {
         }
     }
     effect = {
-        activate_building = hydrodesulphurization_plant
+        #activate_building = hydrodesulphurization_plant
+        rgo_goods_output = {
+            sulphur = 0.2
+        }
     }
 }
 

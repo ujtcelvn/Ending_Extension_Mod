@@ -5,7 +5,7 @@ POR = {
 	value = -100
 }
 URU = {
-	150
+	value = 150
 }
 HAI = {
 	value = -50

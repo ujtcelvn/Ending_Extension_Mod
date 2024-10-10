@@ -90,8 +90,8 @@ NET = {
 #Africa
 EGY = {
 	value = -125
-	influence = 0
-	influence_value = 0
+	#influence = 0
+	#influence_value = 0
 }
 
 #Asia
@@ -110,7 +110,13 @@ XIN = {
     level = 0
     influence_value = 0
 }
-AFG = {
+KAB = {
+	value = -25
+}
+HER = {
+	value = -25
+}
+KAN = {
 	value = -25
 }
 CIR = {

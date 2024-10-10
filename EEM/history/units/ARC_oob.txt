@@ -10,9 +10,6 @@ CHL = {
 PEU = {
     value = -200
 }
-PRG = {
-    value = -50
-}
 SBA = {
     value = 150
 }

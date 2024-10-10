@@ -1,5 +1,7 @@
-owner = AFG
-controller = AFG
+owner = HER
+controller = HER
+add_core = HER
 add_core = AFG
+add_core = PER
 trade_goods = fruit
 life_rating = 35

@@ -275,7 +275,7 @@ naval_bombers = {
     }
     effect = {
         aircraft_carrier = {
-            gun_power = 4 #2
+            gun_power = 5 #2
             torpedo_attack = 4
         }
     }
@@ -302,7 +302,7 @@ improved_naval_aircraft = {
     effect = {
         aircraft_carrier = {
             hull = 2
-            gun_power = 4 #2
+            gun_power = 5 #2
             torpedo_attack = 4
         }
         cruiser = {

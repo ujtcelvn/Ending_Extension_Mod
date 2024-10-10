@@ -283,3 +283,33 @@ alliance = {
     start_date = 1831.1.1
     end_date = 1936.1.1
 }
+
+#Herat 
+alliance = {
+    first = HER
+    second = BUK
+    start_date = 1835.1.1
+    end_date = 1936.1.1
+}
+
+alliance = {
+    first = HER
+    second = KHI
+    start_date = 1835.1.1
+    end_date = 1936.1.1
+}
+
+#Kandahar 
+alliance = {
+    first = KAN
+    second = KAL
+    start_date = 1835.1.1
+    end_date = 1936.1.1
+}
+
+#alliance = {
+#    first = KAN
+#    second = MAK
+#    start_date = 1835.1.1
+#    end_date = 1936.1.1
+#}

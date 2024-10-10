@@ -116,6 +116,7 @@ acquire_substate_region
 demand_concession_BC_casus_belli
 demand_concession_NI_casus_belli
 demand_concession_casus_belli
+demand_concession_casus_belli_no_infamy
 rude_boy
 conquest
 conquest_any
@@ -3268,6 +3269,7 @@ cut_down_to_size = {
                         owns = 2681 #Taibei
                         owns = 2562 #Tainan
                         owns = 1499 #Hainan
+                        owns = 2406 #Penghu
                         owns = 2632 #Kwangchowan
                         #owns = 1540 #Nantong
                         owns = 1071 #Qeshm
@@ -4115,6 +4117,7 @@ china_acquire_state = {
         }
         THIS = {
             NOT = { tag = LAN }
+            NOT = { tag = SGP }
             #NOT = { tag = MAO }
             NOT = { tag = TZ1 }
             NOT = { tag = TZ2 }
@@ -4200,7 +4203,7 @@ china_acquire_state = {
     allowed_states = {
         OR = {
             any_owned_province = {
-                NOT = {    is_core = THIS }
+                NOT = { is_core = THIS }
                 is_core = CHI
             }
             any_owned_province = {
@@ -4523,6 +4526,52 @@ demand_concession_casus_belli = {
 
     on_po_accepted = {
     }
+}
+
+demand_concession_casus_belli_no_infamy = {
+    sprite_index = 7
+    is_triggered_only = yes
+    months = 0
+	constructing_cb = no
+    crisis = no
+
+    badboy_factor = 0
+    prestige_factor = 1
+    peace_cost_factor = 0.6
+    penalty_factor = 1
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 48
+
+    good_relation_prestige_factor = 0
+    good_relation_infamy_factor = 0
+    good_relation_militancy_factor = 0
+
+    always = no
+
+    can_use = {
+    }
+
+    allowed_states = {
+    }
+
+    po_demand_state = yes
+
+    war_name = WAR_CONCESSION_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.1
+        }
+    }
+
+
+	on_po_accepted = {
+	}
 }
 
 demand_concession_NI_casus_belli = {
@@ -8394,6 +8443,7 @@ acquire_any_state = {
                         owns = 1569
                         owns = 1606
                         owns = 2632
+                        owns = 2406 #Penghu
                     }
                 }
                 THIS = {
@@ -8534,6 +8584,7 @@ treaty_port_casus_belli = {
             owns = 2681 #Taibei
             owns = 2562 #Tainan
             owns = 1499 #Hainan
+            owns = 2406 #Penghu
             owns = 2632 #Kwangchowan
             owns = 1608 #Ningbo
             owns = 1071 #Qeshm
@@ -8577,6 +8628,7 @@ treaty_port_casus_belli = {
                         owns = 2681 #Taibei
                         owns = 2562 #Tainan
                         owns = 1499 #Hainan
+                        owns = 2406 #Penghu
                         owns = 2632 #Kwangchowan
                         owns = 1608 #Ningbo
                         owns = 1071 #Qeshm

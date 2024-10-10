@@ -62,12 +62,12 @@ admin_reform = yes_admin_reform
 
 # Technologies
 flintlock_rifles = 1
+post_napoleonic_thought = 1
+military_staff_system = 1
+post_nelsonian_thought = 1
 
 # Inventions
 modern_winemaking = yes
 small_arms_production = yes
 ammunition_production = yes
-post_napoleonic_thought = yes
-military_staff_system = yes
-post_nelsonian_thought = yes
 set_country_flag = using_foreign_shipyards
