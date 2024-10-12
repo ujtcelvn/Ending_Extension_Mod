@@ -11,3 +11,7 @@ make_puppet_no_infamy;Make puppet;;;;;;;;;;;;;
 make_puppet_no_infamy_short;$RECIPIENT$ becomes a puppet of $ACTOR$;;;;;;;;;;;;;
 make_puppet_no_infamy_setup;$RECIPIENT$ becomes a puppet of $ACTOR$;;;;;;;;;;;;;
 make_puppet_no_infamy_desc;Become a puppet;;;;;;;;;;;;;
+demand_concession_casus_belli_no_infamy;Demand Concession;Demande de concession;Konzession verlangen;;;;;;;;;;;
+demand_concession_casus_belli_no_infamy_desc;Force an §Yuncivilized country§W to secede territory to form a colonial concession.;;;;;;;;;;;;;
+demand_concession_casus_belli_no_infamy_setup;Demand that $RECIPIENT$ secede territory to form a colonial concession.;;;;;;;;;;;;;
+demand_concession_casus_belli_no_infamy_short;Demand $STATE$;;;;;;;;;;;;;
