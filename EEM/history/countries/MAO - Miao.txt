@@ -49,6 +49,7 @@ upper_house = {
     communist = 0
 }
 
+foreign_weapons = yes_foreign_weapons
 govt_flag = {
 	government = presidential_dictatorship
 	flag = theocracy
@@ -57,6 +58,7 @@ govt_flag = {
 # Technologies
 
 # Inventions
+flintlock_rifles = 1
 #bottling_process = yes
 modern_winemaking = yes
 small_arms_production = yes
