@@ -415,7 +415,8 @@ country_event = {
         }
         modifier = {
             factor = 0.8
-            NOT = { owns = 2562 } #Tainan
+            #NOT = { owns = 2562 } #Tainan
+            NOT = { owns = 2406 } #Penghu
         }
         modifier = {
             factor = 0.8
@@ -510,7 +511,13 @@ province_event = {
         is_core = CHI
         is_primary_culture = no
         average_consciousness = 4
-        any_neighbor_province = { is_core = RTR }
+        OR = {
+            any_neighbor_province = { is_core = RTR }
+            AND = {
+                region = CHI_1485 #Formosa
+                1482 = { is_core = RTR } #Fuzhou
+            }
+        }
         OR = {
             NOT = { culture = beifaren }
             region = CHI_1508 #Nian Rebellion
@@ -3261,6 +3268,7 @@ country_event = {
                 owns = 1606 #Jiaxing
                 owns = 2681 #Taibei
                 owns = 2562 #Tainan
+                owns = 2406 #Penghu
                 owns = 1499 #Hainan
                 owns = 2632 #Kwangchowan
             }
@@ -3366,6 +3374,7 @@ country_event = {
                 owns = 1606 #Jiaxing
                 owns = 2681 #Taibei
                 owns = 2562 #Tainan
+                owns = 2406 #Penghu
                 owns = 1499 #Hainan
                 owns = 2632 #Kwangchowan
             }
@@ -4264,7 +4273,13 @@ province_event = {
         is_core = CHI
         is_primary_culture = no
         average_consciousness = 4
-        any_neighbor_province = { is_core = RTR }
+        OR = {
+            any_neighbor_province = { is_core = RTR }
+            AND = {
+                region = CHI_1485 #Formosa
+                1482 = { is_core = RTR } #Fuzhou
+            }
+        }
         OR = {
             culture = nanfaren
             culture = yue
@@ -4408,6 +4423,7 @@ country_event = {
             owns = 1606 #Jiaxing
             owns = 2681 #Taibei
             owns = 2562 #Tainan
+            owns = 2406 #Penghu
             owns = 1499 #Hainan
             owns = 2632 #Kwangchowan
         }
@@ -4451,6 +4467,7 @@ country_event = {
             owns = 1606 #Jiaxing
             owns = 2681 #Taibei
             owns = 2562 #Tainan
+            owns = 2406 #Penghu
             owns = 1499 #Hainan
             owns = 2632 #Kwangchowan
         }
@@ -4514,6 +4531,7 @@ country_event = {
         owns = 1606 #Jiaxing
         owns = 2681 #Taibei
         owns = 2562 #Tainan
+        owns = 2406 #Penghu
         owns = 1499 #Hainan
         owns = 2632 #Kwangchowan
         1082 = { is_core = CHI } #Haishenwai
@@ -4599,6 +4617,7 @@ country_event = {
             NOT = { owns = 1606 } #Jiaxing
             NOT = { owns = 2681 } #Taibei
             NOT = { owns = 2562 } #Tainan
+            NOT = { owns = 2406 } #Penghu
             NOT = { owns = 1499 } #Hainan
             NOT = { owns = 2632 } #Kwangchowan
             NOT = { 1082 = { is_core = CHI } } #Haishenwai
@@ -4638,10 +4657,15 @@ country_event = {
 country_event = {
     id = 166504
     title = "Anti-Qing Rebels Victorious"
-    desc = "Resistance to the Qing Dynasty has cumulated in a bloody storming of the Forbidden City. As the last defenders are overwhelmed and the chaos in $CAPITAL$ fades, it is clear to the reminants of the imperial court that $COUNTRY$ has fallen."
+    desc = "Resistance to the Qing Dynasty has cumulated in a bloody storming of the Forbidden City. As the last Qing defenders are overwhelmed and the chaos in $CAPITAL$ fades, it is clear to the reminants of the imperial court that $COUNTRY$ has fallen."
 
-    picture = "nian_rebellion"
+    #picture = "nian_rebellion"
     is_triggered_only = yes
+
+    news_desc_long = "EVTDESC166504_NEWS_LONG"
+    news_desc_medium = "EVTDESC166504_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC166504_NEWS_SHORT"
+    major = yes
 
     option = {
         name = "It's the end of an era."
@@ -5183,7 +5207,8 @@ country_event = {
         clr_country_flag = does_not_want_to_unify
         clr_country_flag = rebels_in_capital
         set_country_flag = angry_rioters_victorious
-        ruling_party_ideology = reactionary
+        #ruling_party_ideology = reactionary
+        ruling_party_ideology = conservative
 
         random = {
             chance = 50
@@ -5205,20 +5230,20 @@ country_event = {
             years_of_research = -3
         }
 
-        random = {
-            chance = 30
-            remove_random_economic_reforms = 1
-        }
+        #random = {
+        #    chance = 30
+        #    remove_random_economic_reforms = 1
+        #}
 
-        random = {
-            chance = 20
-            remove_random_economic_reforms = 1
-        }
+        #random = {
+        #    chance = 20
+        #    remove_random_economic_reforms = 1
+        #}
 
-        random = {
-            chance = 10
-            remove_random_economic_reforms = 1
-        }
+        #random = {
+        #    chance = 10
+        #    remove_random_economic_reforms = 1
+        #}
 
         random_list = {
             20 = {

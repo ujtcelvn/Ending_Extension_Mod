@@ -584,6 +584,61 @@ political_decisions = {
             }
     }
 
+    penghu_treaty_port = {
+        picture = penghu_china
+        potential = {
+            #has_country_modifier = negotiating_treaty
+            #2406 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
+            2406 = { owner = { civilized = no } }
+            ai = no
+            NOT = { has_country_modifier = chinese_treaty_port }
+        }
+
+        allow = {
+        }
+
+        effect = {
+            remove_country_modifier = negotiating_treaty
+            2406 = { secede_province = THIS change_controller = THIS }
+            add_country_modifier = { name = chinese_treaty_port duration = 31 } #1095
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                tag = ENG
+                NOT = { owns = 1496 }
+                1496 = { owner = { civilized = no truce_with = THIS } }
+            }
+            modifier = {
+                factor = 0
+                tag = ENG
+                NOT = { owns = 1569 }
+                1569 = { owner = { civilized = no truce_with = THIS } }
+            }
+            modifier = {
+                factor = 0
+                tag = ENG
+                NOT = { owns = 1566 }
+                1566 = { owner = { civilized = no truce_with = THIS } }
+            }
+            modifier = {
+                factor = 0
+                tag = RUS
+                NOT = { owns = 1481 }
+                1481 = { owner = { civilized = no truce_with = THIS } }
+            }
+            modifier = {
+                factor = 0
+                OR = {
+                    capital_scope = { continent = asia }
+                    invention = radio_telegraphy
+                }
+            }
+        }
+    }
+
 
     gwadar_treaty_port = {
         picture = gwadar_pakistan
@@ -701,9 +756,11 @@ political_decisions = {
 #weihaiwei      1569 won't pick if 1496  1566*            *ENG should pick weihaiwei before qingdao, removed
 #jiaxing        1606 won't pick if 1496  1566  1569 
 #taibei         2406 1485 2562 2681 
-#                    won't pick if 1496  1566  1569 
+#                    won't pick if 1496  1566  1569, can't pick unless capital is in asia or has radio_telegraphy
 #hainan         1499 won't pick if 1496  1566  1569 
 #kwangchowan    2632 won't pick if 1496  1566  1569 
 #ningbo         1608 won't pick if 1496  1566  1569
+#penghu         2406
+#                    won't pick if 1496  1566  1569, capital is in asia, or has radio_telegraphy
 #                                       qingdao  
 #                                  hongkong    weihaiwei
