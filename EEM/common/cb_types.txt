@@ -8442,6 +8442,7 @@ acquire_any_state = {
                         owns = 1569
                         owns = 1606
                         owns = 2632
+                        owns = 2406 #Penghu
                     }
                 }
                 THIS = {
