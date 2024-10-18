@@ -587,10 +587,8 @@ political_decisions = {
     penghu_treaty_port = {
         picture = penghu_china
         potential = {
-            #has_country_modifier = negotiating_treaty
-            #2406 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
-            2406 = { owner = { civilized = no } }
-            ai = no
+            has_country_modifier = negotiating_treaty
+            2406 = { owner = { has_country_modifier = negotiating_unequal_treaty civilized = no truce_with = THIS } }
             NOT = { has_country_modifier = chinese_treaty_port }
         }
 
