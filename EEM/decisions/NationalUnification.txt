@@ -169,6 +169,7 @@ political_decisions = {
                         tag = BAD
                         tag = BAV
                         tag = SGM
+                        tag = ALS
                     }
                     in_sphere = THIS
                 }
