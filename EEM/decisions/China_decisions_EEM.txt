@@ -400,22 +400,18 @@ political_decisions = {
             }
             any_country = {
                 limit = {
-                    OR = {
-                        tag = FJN
-                        tag = GMJ
-                        tag = GNG
-                        tag = GXI
-                        tag = HNN
-                        tag = HUI
-                        tag = MCK
-                        tag = SXI
-                        tag = SZC
-                        tag = TAI
-                        tag = XBI
-                        tag = XIN
-                        tag = YNN
-                        tag = MAO
-                    }
+                    is_culture_group = east_asian
+					OR = {
+						is_vassal = no
+						AND = {
+							is_vassal = yes
+    						NOT = { overlord = { tag = THIS } }
+						}
+					}
+					OR = {
+						part_of_sphere = no
+						NOT = { in_sphere = THIS }
+					}
                 }
                 relation = { who = THIS value = -400 }
             }
