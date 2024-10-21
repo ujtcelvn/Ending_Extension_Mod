@@ -872,10 +872,11 @@ political_decisions = {
                 limit = {
                     rank = 16
                     NOT = { any_owned_province = { is_core = CHI } }
+                    NOT = { war_with = THIS }
                 }
                 relation = {
                     who = THIS
-                    value = 100
+                    value = 150
                 }
             }
             any_country = {
@@ -893,6 +894,14 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
                 country_event = 131745
+            }
+
+            random_owned = {
+                limit = {
+                    owner = { government = presidential_dictatorship }
+                    owner = { ruling_party_ideology = conservative }
+                }
+                owner = { country_event = 131731 }
             }
         }
 
@@ -1167,10 +1176,11 @@ political_decisions = {
                 limit = {
                     rank = 16
                     NOT = { any_owned_province = { is_core = CHI } }
+                    NOT = { war_with = THIS }
                 }
                 relation = {
                     who = THIS
-                    value = 100
+                    value = 150
                 }
             }
             any_country = {
@@ -1504,10 +1514,11 @@ political_decisions = {
                 limit = {
                     rank = 16
                     NOT = { any_owned_province = { is_core = CHI } }
+                    NOT = { war_with = THIS }
                 }
                 relation = {
                     who = THIS
-                    value = 100
+                    value = 150
                 }
             }
             any_country = {
