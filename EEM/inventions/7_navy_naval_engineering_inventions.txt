@@ -176,7 +176,7 @@ acoustic_homing_torpedo = {
             factor = 2
             invention = oscilloscope
         }
-		modifier = {
+        modifier = {
             factor = 2
             invention = cavity_magnetron
         }
@@ -186,7 +186,7 @@ acoustic_homing_torpedo = {
         }
     }
     effect = {
-	    cruiser = {
+        cruiser = {
             torpedo_attack = 5
         }
         aircraft_carrier = {
@@ -203,7 +203,7 @@ hydraulic_aircraft_catapult = {
             factor = 2
             invention = naval_bombers
         }
-		modifier = {
+        modifier = {
             factor = 2
             invention = refrigerator_technology
         }
@@ -234,7 +234,7 @@ naval_fighters = {
             factor = 2
             invention = t_air_superiority
         }
-	    modifier = {
+        modifier = {
             factor = 2
             invention = flying_circus_doctrine
         }
@@ -256,7 +256,7 @@ naval_bombers = {
     limit = { modern_naval_design = 1 }
     chance = {
         base = 0
-	    modifier = {
+        modifier = {
             factor = 2
             invention = early_interwar_bombers
         }
@@ -302,7 +302,7 @@ improved_naval_aircraft = {
     effect = {
         aircraft_carrier = {
             hull = 2
-            gun_power = 5 #2
+            gun_power = 4 #5 #2
             torpedo_attack = 4
         }
         cruiser = {

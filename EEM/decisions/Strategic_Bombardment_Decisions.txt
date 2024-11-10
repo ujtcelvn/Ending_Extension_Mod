@@ -1,68 +1,68 @@
 political_decisions = {
 
-	start_strategic_bombardment = {
-		alert = yes
-		
-		picture = start_strat_bomb
-		
-		potential = {
-			war = yes
-			aeronautics = 1
-			NOT = { has_country_modifier = strat_bombers }
-			is_disarmed = no
-		}
-		
-		allow = {
-			invention = strategic_destruction_doctrine
-			invention = late_interwar_bombers
-			money = 1000000
-			military_score = 500
-			NOT = { war_policy = pacifism }
-			NOT = { national_provinces_occupied = 0.5 }
-			is_vassal = no
-			is_disarmed = no
-		}
+    start_strategic_bombardment = {
+        alert = yes
+        
+        picture = start_strat_bomb
+        
+        potential = {
+            war = yes
+            aeronautics = 1
+            NOT = { has_country_modifier = strat_bombers }
+            is_disarmed = no
+        }
+        
+        allow = {
+            invention = strategic_destruction_doctrine
+            invention = late_interwar_bombers
+            money = 1000000
+            military_score = 500
+            NOT = { war_policy = pacifism }
+            NOT = { national_provinces_occupied = 0.5 }
+            is_vassal = no
+            is_disarmed = no
+        }
 
-		effect = {
-			prestige = -25
-			add_country_modifier = { name = strat_bombers duration = -1 }
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
+        effect = {
+            prestige = -25
+            add_country_modifier = { name = strat_bombers duration = -1 }
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
-	end_strategic_bombardment = {
-		alert = yes
-		
-		picture = end_strat_bomb
-		
-		potential = {
-			has_country_modifier = strat_bombers
-			OR = {
-				ai = no
-				war_policy = pacifism
-				is_vassal = yes 
-				NOT = { money = 5000 }
-				NOT = { military_score = 250 } 
-				war = no 
-				is_disarmed = yes
-			}
-		}
-		
-		allow = {
-		}
+    end_strategic_bombardment = {
+        alert = yes
+        
+        picture = end_strat_bomb
+        
+        potential = {
+            has_country_modifier = strat_bombers
+            OR = {
+                ai = no
+                war_policy = pacifism
+                is_vassal = yes 
+                NOT = { money = 5000 }
+                NOT = { military_score = 250 } 
+                war = no 
+                is_disarmed = yes
+            }
+        }
+        
+        allow = {
+        }
 
-		effect = {
-			remove_country_modifier = strat_bombers
-			clr_country_flag = first_nuclear_bombing_campaign
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
+        effect = {
+            remove_country_modifier = strat_bombers
+            clr_country_flag = first_nuclear_bombing_campaign
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
 }
 

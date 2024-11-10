@@ -1,7 +1,8 @@
 owner = KAB
 controller = KAB
 add_core = AFG
-add_core = KAN
+add_core = HER
 add_core = KAB
+add_core = KAN
 trade_goods = wool
 life_rating = 35

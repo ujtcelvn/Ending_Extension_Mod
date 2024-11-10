@@ -218,18 +218,18 @@ political_decisions = {
         picture = nationalize
 
         potential = {
-			exists = yes
-			civilized = yes
+            exists = yes
+            civilized = yes
             can_nationalize = yes
             NOT = { has_country_modifier = nationalization_in_progress }
         }
 
         allow = {
-			can_nationalize = yes
+            can_nationalize = yes
             NOT = {
-				part_of_sphere = yes
-				is_vassal = yes
-			}
+                part_of_sphere = yes
+                is_vassal = yes
+            }
             OR = {
                 economic_policy = state_capitalism
                 economic_policy = planned_economy
@@ -238,15 +238,15 @@ political_decisions = {
             OR = {
                 ai = no
                 military_score = 400
-				 is_greater_power = yes
+                 is_greater_power = yes
                 AND = {
                     NOT = {
-						has_recently_lost_war = yes
-						is_disarmed = yes
-						war_policy = pacifism
-						num_of_revolts = 1
-						average_militancy = 7
-					}
+                        has_recently_lost_war = yes
+                        is_disarmed = yes
+                        war_policy = pacifism
+                        num_of_revolts = 1
+                        average_militancy = 7
+                    }
                     total_amount_of_divisions = 20
                     military_score = 100
                     OR = {
@@ -255,7 +255,7 @@ political_decisions = {
                         ruling_party_ideology = anarcho_liberal
                         AND = {
                             military_score = 200
-							is_secondary_power = yes
+                            is_secondary_power = yes
                             OR = {
                                 war_policy = jingoism
                                 war_policy = pro_military
@@ -263,9 +263,9 @@ political_decisions = {
                         }
                         AND = {
                             any_greater_power = {
-								alliance_with = THIS
-								military_score = 100
-							}
+                                alliance_with = THIS
+                                military_score = 100
+                            }
                             OR = {
                                 war_policy = jingoism
                                 war_policy = pro_military
@@ -919,17 +919,17 @@ political_decisions = {
                 AND = { tag = ALB owns = 849 NOT = { capital = 849 } }
                 AND = { tag = SLO owns = 768 NOT = { capital = 768 } }
                 AND = { tag = ASH civilized = yes owns = 1907 NOT = { capital = 1907 } }
-				AND = { tag = RHO civilized = yes owns = 2068 NOT = { capital = 2068 } }
+                AND = { tag = RHO civilized = yes owns = 2068 NOT = { capital = 2068 } }
 
-				AND = { tag = KMT owns = 2221 NOT = { capital = 2221 } }
-				AND = { tag = QNG owns = 1616 NOT = { capital = 1616 } }
+                AND = { tag = KMT owns = 2221 NOT = { capital = 2221 } }
+                AND = { tag = QNG owns = 1616 NOT = { capital = 1616 } }
             }
         }
 
         allow = { war = no }
 
         effect = {
-			random_owned = { limit = { owner = { tag = RHO } } owner = { capital = 2068 } }
+            random_owned = { limit = { owner = { tag = RHO } } owner = { capital = 2068 } }
             random_owned = { limit = { owner = { tag = SLO } } owner = { capital = 768 } }
             random_owned = { limit = { owner = { tag = ALB } } owner = { capital = 849 } }
             random_owned = { limit = { owner = { tag = KOR } } owner = { capital = 1624 } }

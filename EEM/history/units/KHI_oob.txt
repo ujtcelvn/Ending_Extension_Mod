@@ -4,6 +4,7 @@ KAN = { value = -50 }
 
 PER = { value = -50 }
 BUK = { value = 50 }
+BUK = { truce_until = 1838.1.1 }
 
 leader = {
     name = "Allah Quli Bahadur"

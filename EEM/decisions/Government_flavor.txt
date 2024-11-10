@@ -281,13 +281,13 @@ political_decisions = {
             }
         }
     }
-	
-	#democratic_peace
-	#picture = democratic_peace
-	#Removed because democratic peace theory isn't real
+    
+    #democratic_peace
+    #picture = democratic_peace
+    #Removed because democratic peace theory isn't real
 
-	#communist_international_summit
-	#picture = communist_international
-	#Removed because democratic peace summit removed
-	
+    #communist_international_summit
+    #picture = communist_international
+    #Removed because democratic peace summit removed
+    
 }

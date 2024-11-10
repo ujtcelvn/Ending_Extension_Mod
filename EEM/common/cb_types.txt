@@ -110,6 +110,7 @@ humiliate
 place_in_the_sun
 dismantle_forts
 china_acquire_state
+#afghan_acquire_state
 acquire_state
 acquire_any_state
 acquire_substate_region
@@ -3367,6 +3368,9 @@ great_game_cb = {
             tag = KAL
             tag = MAK
             tag = AFG
+            tag = HER
+            tag = KAN
+            tag = KAB
             tag = KAS
             tag = KOK
             tag = KHI
@@ -4225,6 +4229,84 @@ china_acquire_state = {
         }
     }
 }
+
+
+# Afghan Reunification
+#afghan_acquire_state = {
+#    sprite_index = 22
+#    is_triggered_only = yes
+#    months = 12
+#    crisis = no
+
+#    badboy_factor = 0
+#    prestige_factor = 0
+#    peace_cost_factor = 1
+#    penalty_factor = 1
+
+#    break_truce_prestige_factor = 1
+#    break_truce_infamy_factor = 0
+#    break_truce_militancy_factor = 0
+#    truce_months = 84
+
+#    good_relation_prestige_factor = 1
+#    good_relation_infamy_factor = 1
+#    good_relation_militancy_factor = 1
+
+#    always = yes
+
+#    can_use = {
+#        NOT = { is_our_vassal = THIS }
+#        neighbour = THIS
+#        OR = {
+#            any_owned_province = {
+#                NOT = { is_core = THIS }
+#                is_core = AFG
+#            }
+#            primary_culture = pashtun
+#        }
+#        THIS = {
+#            NOT = { tag = AFG }
+#            NOT = { tag = DUR }
+#            NOT = { tag = CRL }
+#            primary_culture = pashtun
+#            NOT = {
+#                has_country_modifier = neutrality_modifier
+#                war_policy = pacifism
+#            }
+#        }
+#        is_vassal = no
+#        OR = {
+#            war_with = THIS
+#            THIS = { NOT = { has_country_modifier = no_more_war } }
+#        }
+#    }
+
+#    allowed_states = {
+#        OR = {
+#            any_owned_province = {
+#                NOT = { is_core = THIS }
+#               is_core = AFG
+#            }
+#            any_owned_province = {
+#                owner = { primary_culture = pashtun }
+#                NOT = { is_core = AFG }
+#            }
+#        }
+#    }
+
+#    po_demand_state = yes
+
+#    war_name = WAR_AFGHAN_REUNIFICATION
+
+#    on_add = {
+#        move_issue_percentage = {
+#            from = jingoism
+#            to = pro_military
+#            value = 0.10
+#        }
+#    }
+#}
+
 
 sahel_jihad_cb = {
     sprite_index = 29

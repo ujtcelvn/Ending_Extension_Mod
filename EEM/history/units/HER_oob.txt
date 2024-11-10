@@ -6,8 +6,10 @@ KOK = { value = 50 }
 KAB = { truce_until = 1840.1.1 }
 
 KAN = { value = -100 }
+KAN = { truce_until = 1840.1.1 }
 
-PER = { value = -50 }
+PER = { value = -100 }
+PER = { truce_until = 1837.1.1 }
 
 ENG = { value = 50 }
 RUS = { value = -25 }

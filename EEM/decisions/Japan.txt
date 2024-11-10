@@ -1068,150 +1068,150 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
 
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 1
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 2
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 3
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 4
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 5
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 6
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 7
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 8
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 1
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 2
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 3
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 4
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 5
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 6
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 7
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 8
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 1
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 2
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 3
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 4
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 5
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 6
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 7
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 8
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 1
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 2
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 3
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 4
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 5
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 6
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 7
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 8
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
             }
 
 
@@ -1454,150 +1454,150 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
 
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 1
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 2
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 3
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 4
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 5
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 6
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 7
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 8
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 1
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 2
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 3
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 4
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 5
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 6
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 7
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 8
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 1
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 2
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 3
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 4
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 5
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 6
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 7
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 8
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 1
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 2
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 3
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 4
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 5
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 6
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 7
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 8
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
             }
 
 
@@ -1676,150 +1676,150 @@ political_decisions = {
                     NOT = { tag = THIS }
                 }
 
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 1
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 2
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 3
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 4
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 5
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 6
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 7
-							NOT = { invention = steamer_transports }
-						}
-					}
-					REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 8
-							NOT = { invention = commerce_raiders }
-						}
-					}
-					REB = { change_variable = { which = jap_frigate_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 1
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 2
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 3
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 4
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 5
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 6
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 7
-							invention = steamer_transports
-						}
-					}
-					REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
-				}
-				random_owned = {
-					limit = {
-						owner = {
-							total_amount_of_ships = 8
-							invention = commerce_raiders
-						}
-					}
-					REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
-				}
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 1
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 2
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 3
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 4
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 5
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 6
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 7
+                            NOT = { invention = steamer_transports }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_clipper_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 8
+                            NOT = { invention = commerce_raiders }
+                        }
+                    }
+                    REB = { change_variable = { which = jap_frigate_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 1
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 2
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 3
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 4
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 5
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 6
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 7
+                            invention = steamer_transports
+                        }
+                    }
+                    REB = { change_variable = { which = jap_steam_transport_counter value = 1 } }
+                }
+                random_owned = {
+                    limit = {
+                        owner = {
+                            total_amount_of_ships = 8
+                            invention = commerce_raiders
+                        }
+                    }
+                    REB = { change_variable = { which = jap_commerce_raider_counter value = 1 } }
+                }
             }
             any_country = {
                 limit = {

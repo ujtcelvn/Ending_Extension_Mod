@@ -49,32 +49,32 @@ alliance = {
 }
 
 alliance = {
-        first = AUS
-        second = FRM
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = FRM
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 	
 alliance = {
-        first = AUS
-        second = HEK
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = HEK
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 	
 alliance = {
-        first = AUS
-        second = HES
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = HES
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 
 alliance = {
-        first = AUS
-        second = NAS
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = NAS
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 
 #Anglo-Portuguese Alliance
 alliance = {
@@ -103,133 +103,133 @@ alliance = {
 
 #Circassia and Caucasian Imamate
 alliance = {
-        first = CIR
-        second = DAG
-        start_date = 1835.1.1
-        end_date = 1838.1.1
+    first = CIR
+    second = DAG
+    start_date = 1835.1.1
+    end_date = 1838.1.1
 }
 
 #Moroccan-Algerian
 alliance = {
-        first = MOR
-        second = ALD
-        start_date = 1835.1.1
-        end_date = 1838.1.1
-    }
+    first = MOR
+    second = ALD
+    start_date = 1835.1.1
+    end_date = 1838.1.1
+}
 #########UK and Puppets
 alliance = {
-        first = ENG
-        second = ABU
-        start_date = 1835.1.1
-        end_date = 1936.1.1
-    }
+    first = ENG
+    second = ABU
+    start_date = 1835.1.1
+    end_date = 1936.1.1
+}
 
 alliance = {
-        first = ENG
-        second = BHP
-        start_date = 1835.1.1
-        end_date = 1936.1.1
+    first = ENG
+    second = BHP
+    start_date = 1835.1.1
+    end_date = 1936.1.1
     }
 #########Prussia and their allies
 alliance = {
-        first = PRU
-        second = SGM
-        start_date = 1835.1.1
-        end_date = 1870.1.1
+    first = PRU
+    second = SGM
+    start_date = 1835.1.1
+    end_date = 1870.1.1
 }
 alliance = {
-        first = PRU
-        second = MEC
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = MEC
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = HAM
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = HAM
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = LUB
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = LUB
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 
 alliance = {
-        first = PRU
-        second = ANH
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = ANH
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 
 alliance = {
-        first = PRU
-        second = BRE
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = BRE
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = BRA
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = BRA
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = COB
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = COB
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = LIP
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = LIP
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = MEI
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = MEI
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = NAS
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = NAS
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = OLD
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = OLD
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = PRU
-        second = WEI
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = PRU
+    second = WEI
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 #Austria/Sphereling
 alliance = {
-        first = AUS
-        second = MOD
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = MOD
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = AUS
-        second = PAR
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = PAR
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 alliance = {
-        first = AUS
-        second = TUS
-        start_date = 1835.1.1
-        end_date = 1867.1.1
-    }
+    first = AUS
+    second = TUS
+    start_date = 1835.1.1
+    end_date = 1867.1.1
+}
 #Russia/Montenegro
 alliance = {
     first = RUS
@@ -255,18 +255,18 @@ alliance = {
 # }
 
 alliance = {
-        first = QNG
-        second = KML
-        start_date = 1835.1.1
-        end_date = 1936.1.1
-    }
+    first = QNG
+    second = KML
+    start_date = 1835.1.1
+    end_date = 1936.1.1
+}
 
 alliance = {
-        first = QNG
-        second = TNT
-        start_date = 1835.1.1
-        end_date = 1936.1.1
-    }
+    first = QNG
+    second = TNT
+    start_date = 1835.1.1
+    end_date = 1936.1.1
+}
 
 #Siam/Champassak
 alliance = {

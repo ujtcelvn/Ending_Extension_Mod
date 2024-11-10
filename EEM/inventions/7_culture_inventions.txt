@@ -442,35 +442,6 @@ national_liberation = {
 #    }
 #}
 
-modern_intelligence_agency = {
-    limit = { political_thought_7 = 1 }
-    news = no
-    chance = {
-        base = 2
-        modifier = {
-            factor = 1
-            OR = {
-                ruling_party_ideology = fascist
-                ruling_party_ideology = communist
-            }
-        }
-        modifier = {
-            factor = 1
-            nationalvalue = nv_order
-        }
-        modifier = {
-            factor = 2
-            invention = national_radio_networks
-        }
-        modifier = {
-            factor = 2
-            invention = general_computer_programming
-        }
-    }
-    effect = { }
-    core_pop_consciousness_modifier = -0.04 #-0.02
-}
-
 ##########################################psychology_7
 tv_broadcasting = {
     limit = { psychology_7 = 1 }
@@ -485,7 +456,7 @@ tv_broadcasting = {
             factor = -6
             NOT = { invention = the_talkies }
         }
-	    modifier = {
+        modifier = {
             factor = -1
             NOT = { press_rights = free_press }
         }
@@ -519,6 +490,35 @@ tv_broadcasting = {
 #    core_pop_consciousness_modifier = -0.02
 #}
 
+
+modern_intelligence_agency = {
+    limit = { psychology_7 = 1 } #political_thought_7
+    news = no
+    chance = {
+        base = 2
+        modifier = {
+            factor = 1
+            OR = {
+                ruling_party_ideology = fascist
+                ruling_party_ideology = communist
+            }
+        }
+        modifier = {
+            factor = 1
+            nationalvalue = nv_order
+        }
+        modifier = {
+            factor = 2
+            invention = national_radio_networks
+        }
+        modifier = {
+            factor = 2
+            invention = general_computer_programming
+        }
+    }
+    effect = { }
+    core_pop_consciousness_modifier = -0.05 #-0.04 #-0.02
+}
 
 ##########################################social_thought_7
 

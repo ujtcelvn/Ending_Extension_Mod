@@ -8,12 +8,12 @@ political_decisions = {
             NOT = { is_culture_group = far_east_asian }
             NOT = { has_global_flag = demanded_hong_kong_new_territories }
 
-			1493 = {
-				owner = {
-					civilized = no
-					is_culture_group = east_asian
-				}
-			}
+            1493 = {
+                owner = {
+                    civilized = no
+                    is_culture_group = east_asian
+                }
+            }
         }
 
         allow = {
@@ -23,42 +23,42 @@ political_decisions = {
             nationalism_n_imperialism = 1
             has_global_flag = berlin_conference
 
-			1493 = {
-				owner = {
-					OR = {
-						has_recently_lost_war = yes
-						AND = {
-							tag = TZ7
-							overlord = {
-								#has_recently_lost_war = yes 
-								is_culture_group = east_asian
-								civilized = no
-							}
-						}
-					}
-				}
-			}
+            1493 = {
+                owner = {
+                    OR = {
+                        has_recently_lost_war = yes
+                        AND = {
+                            tag = TZ7
+                            overlord = {
+                                #has_recently_lost_war = yes 
+                                is_culture_group = east_asian
+                                civilized = no
+                            }
+                        }
+                    }
+                }
+            }
 
         }
 
         effect = {
             set_global_flag = demanded_hong_kong_new_territories
             badboy = 1
-	
+    
             random_country = {
                 limit = {
-					OR = {
-						AND = {
-							owns = 1493
-							NOT = { tag = TZ7 }
-						}
-						AND = {
-							NOT = { owns = 1493 }
-							is_our_vassal = TZ7
-						}
-					}
+                    OR = {
+                        AND = {
+                            owns = 1493
+                            NOT = { tag = TZ7 }
+                        }
+                        AND = {
+                            NOT = { owns = 1493 }
+                            is_our_vassal = TZ7
+                        }
+                    }
                 }
-				country_event = 91000
+                country_event = 91000
             }
         }
 

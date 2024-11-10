@@ -8,9 +8,10 @@ RUS = { value = -50 }
 
 TUR = { value = -25 }
 
-HER = { value = -50 }
-KAN = { value = -50 }
-KAB = { value = -50 }
+HER = { value = -100 }
+HER = { truce_until = 1837.1.1 }
+KAN = { value = 50 }
+#KAB = { value = -50 }
 
 leader = {
     name = "Muhammad Shah"

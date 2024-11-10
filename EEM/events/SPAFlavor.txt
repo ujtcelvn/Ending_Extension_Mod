@@ -4225,6 +4225,7 @@ country_event = {
             }
             any_owned = { limit = { province_id = 1686 } secede_province = MOR }
         }
+        set_global_flag = western_sahara_cored
         1696 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
         1773 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
         1774 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
@@ -4551,5 +4552,30 @@ country_event = {
         }
 
         ai_chance = { factor = 3 }
+    }
+}
+
+country_event = {
+    id = 971715
+    title = "EVTNAME971715"
+    desc = "EVTDESC971715"
+    picture = "tangier_photo"
+
+    fire_only_once = yes
+
+    trigger = {
+        owns = 1696
+        NOT = { MOR = { is_core = 1696 } }
+        NOT = { has_global_flag = western_sahara_cored }
+    }
+
+    mean_time_to_happen = { months = 1 }
+
+    option = {
+        name = "EVT971715OPTA"
+        set_global_flag = western_sahara_cored
+        1696 = { add_core = MOR }
+        1773 = { add_core = MOR }
+        1774 = { add_core = MOR }
     }
 }

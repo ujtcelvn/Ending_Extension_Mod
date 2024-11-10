@@ -616,19 +616,19 @@ political_decisions = {
             OR = {
                 is_vassal = no
                 overlord = { has_country_modifier = leader_of_kalmar }
-				overlord = { has_country_modifier = kalmar_union }
+                overlord = { has_country_modifier = kalmar_union }
             }
-			OR = {
-				any_greater_power = {
-					has_country_modifier = leader_of_kalmar
-					NOT = { truce_with = THIS }
-					OR = {
-						is_sphere_leader_of = THIS
-						is_our_vassal = THIS
-					}
-				}
-				overlord = { has_country_modifier = kalmar_union }
-			}
+            OR = {
+                any_greater_power = {
+                    has_country_modifier = leader_of_kalmar
+                    NOT = { truce_with = THIS }
+                    OR = {
+                        is_sphere_leader_of = THIS
+                        is_our_vassal = THIS
+                    }
+                }
+                overlord = { has_country_modifier = kalmar_union }
+            }
         }
 
         effect = {

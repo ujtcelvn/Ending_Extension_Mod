@@ -297,3 +297,7 @@ form_afghanistan_existing_title;Unite Afghanistan;;;;;;;;;;;;;
 form_afghanistan_existing_desc;In order to better manage the area, we should centralize administration of Afghanistan in a single polity.;;;;;;;;;;;;;
 PER_AFG_border_treaty_title;The Persian-Afghanistan Border;;;;;;;;;;;;;
 PER_AFG_border_treaty_desc;We can try and sign an agreement with Persia for fixing the limits of their respective spheres of influence as well as improving diplomatic relations. This should put an end to Persian claims in Afghanistan, pass any Afghan provinces they might own to us (and any Persian territory in Kerman and Khorasan, except Qeshm, we own will pass to them), and normalize relations.;;;;;;;;;;;;;
+advance_to_kabul_title;Advance to Kabul;;;;;;;;;;;;;
+advance_to_kabul_desc;We must claim our birthright, march to Kabul, and reunite the Pashtun lands!;;;;;;;;;;;;;
+claim_greater_turkestan_title;Greater Turkestan;;;;;;;;;;;;;
+claim_greater_turkestan_desc;The Turkmen and Tajik tribes in Khorasan and North Afghanistan should be united into our great nation.;;;;;;;;;;;;;

@@ -10,7 +10,7 @@ political_decisions = {
                 exists = SGF
                 exists = GER
                 tag = DNB
-				tag = BAN
+                tag = BAN
                 AND = {
                     tag = AUS
                     NOT = { has_country_flag = austrian_greater_germany }
@@ -306,7 +306,7 @@ political_decisions = {
                 exists = GER
                 exists = NGF
                 tag = UBD
-				tag = VRP
+                tag = VRP
             }
         }
         allow = {
@@ -588,7 +588,7 @@ political_decisions = {
                     NOT = { tag = PRU }
                     NOT = { tag = BAN }
                     NOT = { tag = UBD }
-					NOT = { tag = VRP }
+                    NOT = { tag = VRP }
                     NOT = { has_country_flag = post_colonial_country }
                     OR = {
                         all_core = { owned_by = THIS }
@@ -710,7 +710,7 @@ political_decisions = {
                     NOT = { tag = PRU }
                     NOT = { tag = BAN }
                     NOT = { tag = UBD }
-					NOT = { tag = VRP }
+                    NOT = { tag = VRP }
                     NOT = { has_country_flag = post_colonial_country }
                     OR = {
                         all_core = { owned_by = THIS }
@@ -1089,7 +1089,7 @@ political_decisions = {
                 exists = GER
                 exists = NGF
                 tag = UBD
-				tag = VRP
+                tag = VRP
             }
             revolution_n_counterrevolution = 1
         }
@@ -1184,7 +1184,7 @@ political_decisions = {
                 tag = AUS
                 tag = KUK
                 tag = DNB
-				tag = BAN
+                tag = BAN
             }
             revolution_n_counterrevolution = 1
         }
@@ -1247,8 +1247,8 @@ political_decisions = {
                     NOT = { tag = KUK }
                     NOT = { tag = DNB }
                     NOT = { tag = BAN }
-					NOT = { tag = UBD }
-					NOT = { tag = VRP }
+                    NOT = { tag = UBD }
+                    NOT = { tag = VRP }
                     NOT = { has_country_flag = post_colonial_country }
                     NOT = {
                         AND = {

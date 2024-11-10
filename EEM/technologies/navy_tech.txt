@@ -1373,12 +1373,12 @@ naval_design_bureaus = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.5
+            factor = 2
             oil_driven_ships = 1
             is_greater_power = yes
         }
         modifier = {
-            factor = 1.5
+            factor = 3
             ship_construction_7 = 1
             is_greater_power = yes
         }
@@ -1489,12 +1489,12 @@ fire_control_systems = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.5
+            factor = 2
             oil_driven_ships = 1
             is_greater_power = yes
         }
         modifier = {
-            factor = 1.5
+            factor = 3
             ship_construction_7 = 1
             is_greater_power = yes
         }
@@ -1622,12 +1622,12 @@ weapon_platforms = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.5
+            factor = 2
             oil_driven_ships = 1
             is_greater_power = yes
         }
         modifier = {
-            factor = 1.5
+            factor = 3
             ship_construction_7 = 1
             is_greater_power = yes
         }
@@ -1746,12 +1746,12 @@ main_armament = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.5
+            factor = 2
             oil_driven_ships = 1
             is_greater_power = yes
         }
         modifier = {
-            factor = 1.5
+            factor = 3
             ship_construction_7 = 1
             is_greater_power = yes
         }
@@ -1868,12 +1868,12 @@ advanced_naval_design = {
         }
         # We need to invent on board recon aircraft in order to invent aircraft carriers!
         modifier = {
-            factor = 1.5
+            factor = 2
             oil_driven_ships = 1
             is_greater_power = yes
         }
         modifier = {
-            factor = 1.5
+            factor = 3
             ship_construction_7 = 1
             is_greater_power = yes
         }
@@ -1981,8 +1981,18 @@ modern_naval_design = {
         }
         #Our carriers need better planes!
         modifier = {
-            factor = 1.25
+            factor = 2
             invention = purpose_built_air_carriers
+        }
+        modifier = {
+            factor = 2
+            invention = fleet_air_carriers
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 2
+            invention = large_air_carriers
+            is_greater_power = yes
         }
         # We're late with this!
         modifier = {
@@ -2089,8 +2099,18 @@ naval_engineering_7 = {
         }
         #Our carriers need better planes!
         modifier = {
-            factor = 1.25
+            factor = 2
             invention = purpose_built_air_carriers
+        }
+        modifier = {
+            factor = 2
+            invention = fleet_air_carriers
+            is_greater_power = yes
+        }
+        modifier = {
+            factor = 2
+            invention = large_air_carriers
+            is_greater_power = yes
         }
         # We're late with this!
         modifier = {

@@ -911,13 +911,14 @@ country_event = {
         FROM = { diplomatic_influence = { who = THIS value = -400 } }
         random_country = { limit = { tag = FROM is_our_vassal = THIS } release_vassal = THIS }
         any_pop = { limit = { culture = persian } militancy = 1 }
-        FROM = {
-            war = {
-                target = THIS
-                attacker_goal = {
-                    casus_belli = acquire_core_state
-                    state_province_id = 1142
-                }
+        war = {
+            target = FROM #THIS
+            attacker_goal = {
+                casus_belli = humiliate
+            }
+            defender_goal = {
+                casus_belli = acquire_core_state
+                state_province_id = 1142
             }
         }
 

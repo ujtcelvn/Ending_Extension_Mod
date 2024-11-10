@@ -42,8 +42,189 @@ commerce = 16
 
 industry = 19 + 5
 ####################################################################################################
-v0.5.8x
 
+v0.5.9a
+remove Afghan reunification cb
+Remove Persian cores from 1214 Zaranj
+HER starts with cores on 1214, 1215, 1217, 2133
+KAB also starts with cores on 1214, 1215, 1217 2133
+Add Kandahar cores to 1212
+add decision for Herat (and Kandahar) to claim Kabul
+Kandahar no longer starts with Tajik accepted
+Becoming Afghanistan adds Tajik and removes Persian
+Reset form_durrani_empire
+become_afghanistan adds tajik and removes persian as accepted
+Persia-Afghanistan Border Treaty event now takes into account Herat and Kanshadar's potential extra cores
+Forming Afghanistan externally now properly annexes all the Afghan statelets
+south_asian, indo_iranian, and iranian_turanian can no longer form Afghanistan externally
+Persian - Herat War event chain
+event for Persian claim on 1214 Zaranj
+PER-HER relations: -50 -> -100
+PER-KAN relations: -50 -> 50
+PER-KAB relations: -50 -> 0
+PER-HER truce until 1837
+HER-KAN truce until 1840
+KOK-BUK truce until 1838
+KHI-BUK truce until 1838
+ENG influence on PER: friendly -> cordial
+ENG influence on HER: friendly -> cordial
+Becoming Afghanistan moves capital to Kabul
+Becoming Afghanistan causes afghan statelets to stop being sphered
+reduce KAB starting troops so they don't all die from attrition trying to attack Kunduz
+Dost Mohammed: stalwart -> implacable, debutante -> aristocrat
+Wazir Akbar: daring -> merciless
+Fix HPM bug where Western Sahara (1696, 1773, 1774) sometimes doesn't have any cores
+centralize_afghanistan now takeable as an unciv past 1900
+Warlord Era now properly releases Beiyang China from KMT
+Turkestani Irredentism #187
+Persia demanding Bandar Abbas no longer gives infamy and no longer calls in anyone's sphere master
+
+Spacing
+adjust AI naval research
+Change invention bonus of fleet_auxiliary_carrier_doctrine, light_air_carriers, fleet_air_carriers to avoid redundancy
+coordinated_strike_doctrine gun_power 2 -> 4
+improved_naval_aircraft gun_power 5 -> 4 
+fleet_air_carriers gun_power 5 -> 4
+modern_intelligence_agency core_pop_consciousness_modifier -0.04 -> -0.05
+modern_intelligence_agency moved from political_thought_7 to psychology_7
+aircraft_carrier colonial_points 30 -> 40
+
+
+####################################################################################################
+v0.5.9
+Stop Goa 1303 from flipping to tea #194
+carriers require military_aviation instead of wright_n_langleys_aeroplanes #196
+
+add the Sibutu Passage connecting Sandakan (1397) and Jolo (1464) #195
+Philippines can get cores on Sabah (1396 and 1397) (North Borneo dispute)
+Add a suppress_moro_piracy decision to attack Jolo so the Philippine border is more historical
+The sulu_protectorate now needs the revolution_n_counterrevolution instead of nationalism_n_imperialism
+The north_borneo_company now requires the owner of North Borneo to be in your sphere or not in a sphere
+add a demand_concession_casus_belli_no_infamy cb
+end_the_javanese_sultanates only sets Java to developing tech school if they agree in event 952500 #199
+
+commodity_production_in_uzbekistan no longer turns Kokland 1202 into tobacco if it's already making oil #186
+
+AI_NAVY_TAXBASE_FRACTION 0.2 -> 0.25 so they build more ships
+Increase AI research of naval_engineering techs when they can unlock carriers
+Carrier gun_power:
+	fleet_air_carriers 4 -> 5
+	large_air_carriers 2 -> 4
+	naval_bombers 4 -> 5
+	improved_naval_aircraft 4 -> 5
+Carrier supply cost:
+	steamer_convoy 1.0 -> 1.2
+	ammunition 0.5 -> 1
+	aeroplanes 0.2 -> 0.1
+
+Anti-Qing Rebel victory is now a major event #205
+Anti-Qing Rebels no longer remove economic reforms and now install conservatives
+Red Turbans cores spread to Taiwan if Fujian has Red Turban cores
+Guizhou MAO no longer accepts Yi, its cores start on the map, and starts with guns
+Penghu can be claimed as a treaty port (AI won't pick if it can claim all of Taiwan) #206
+
+Prussia no longer accepts south_german again (v0.5.8d)
+Austrian create SGF decision integrates Elsass #207
+
+Natives' Status decisions no longer require is_primary_culture = yes but require no active rebellions #114
+
+Fairs can now occur past 1935
+
+Fix HPM issues
+	Changed the form India decision to not require Tranquebar (2591) by Libeccio-DD
+	The tag that unites Turkestan now correctly inherits its puppets by Libeccio-DD
+	Population of Malta by Libeccio-DD
+	Ukrainian Catholics by Libeccio-DD
+	Restrict Eiffel Tower World Fair exploit by moretrim
+	Fix annex_korea war against the player by moretrim
+	Guard use of change_region_name by moretrim
+	Fix uses of highlander_raids province modifiers by moretrim
+	Exclude the Arab Union from losing Mashriqi by moretrim
+
+empire_of_china no longer decreases your puppets' or spherelings' relations
+Reactionary rebels keep theocracies as theocracies instead of turning them into monarchies
+Increased relationship normalization after reunifying China
+KMT gets event to become democracy after reunifying China
+
+Adjust penalty for dropping out of venetian revolution war
+
+minor fixes
+	In "The Paraguay Expedition" event for the US, the final sentence reads "the an American citizen" when it should just be "an American citizen"
+	In the "Socialist Conference in Zimmerwald" event, there are two commas after 1915 (one after a space)
+	In the event "Laurenco Marques" for Portugal, "was rebuilt and is prosper" should be "was rebuilt and is prospering".
+	There are no longer two identical, but mutually exclusive, "Organize Bechuanaland" decisions.
+
+More Rigorous Requirements for Sweden to Abandon Finland #56
+
+misc. setup fixes, added missing return and gtfo decisions
+Fixed austria_call_allies_against_italy decision so AI actually uses it
+irish_potato_blight now reduces farm_RGO_eff instead of factory and artisan output for some reason
+hydrodesulphurization no longer activates hydrodesulphurization_plant, increases sulphur output by 0.2 instead.	Sulphur is supposed to represent rare minerals in general
+Made the Belize Purchase AI logic actually make sense
+Added a hong_kong_new_territories decision and event because Hong Kong is often underpopulated
+Singapore SGP added
+	SGP, SGP_republic, SGP_monarchy use irl flag
+	SGP_communist uses Singapore Flag Draft E 
+	SGP_fascist ues "The All Red"
+	added event to add core and make Singapore print money
+	Malay-singapore split events
+	Remove Singapore from Chinese events and decisions
+	Split up serf pops among Fujian to facilitate migration to Singapore
+	Malaya nv_equality -> nv_order. There's no way they're equality (Ketuanan Melayu).
+Oman
+	Oman (OMA) should start with 1071 Qeshm, 1142 Bandar Abbas, and 1145 Jask
+	Decision and event for Persia to end the lease (irl 1868)
+	PER and OMA oob changes
+	Oman starts sphered by the UK because they were already managing their foreign affairs by 1800
+	Sale of Gwadar (2640) from Oman to Pakistan or Baluchi-primaries with cores
+Afghanistan Setup Changes #29
+	re-activate Hazarajat cores
+	Reshaped provinces so Kunduz no longer has an exclave
+	HER Emirate of Herat
+		1212 Herat
+		HER: Herat (1818–1842)
+		HER_monarchy: Herat (1818–1842)
+		HER_republic: Herat insurgents in 1979
+		HER_communist: Democratic Youth Organisation of Afghanistan
+		HER_fascist: Saqqawists in Herat (1929–1931)
+	KAN Principality of Kandahar
+		1215 Kandahar
+		1214 Zaranj
+		2133 Gizab
+		core on 1217 Ghazni
+		KAN: pure white Taliban flag (if they ever become a theocracy somehow)
+		KAN_monarchy: Historical flag is just black
+		KAN_republic: Flag of Pashtunistan (postal ver)
+		KAN_communist: Maoist flag
+		KAN_fascist: Flag of Pashtunistan (squiggly ver)
+	KAB Emirate of Kabul
+		1209 Kabul
+		1213 Bamyan
+		1216 Jalalabad
+		1217 Ghanzi
+		1219 Quetta
+		cores on: 1218, 1223, 1210, 1211
+		KAB: the old AFG.tga
+		KAB_monarchy: Afghanistan ca.1901-1919
+		KAB_republic: Northern Alliance flag (looks nice)
+		KAB_communist: People's Democratic Party of Afghanistan
+		KAB_fascist: 1974-78 Presidental Standard
+	AFG.tga -> Taliban flag (if they ever become a theocracy somehow)
+	afghan_acquire_state cb because giving them cores on each other doesn't work well
+	afghan_northern_borders no longer remove all BDK Kunduz cores
+	become_afghanistan and form_afghanistan if Afghanistan doesn't exist
+	form_afghanistan_existing to unite statelets into Afghanistan
+	centralize_afghanistan to remove cores that hang around
+	greater_iran also gives cores to 686 Merv, badboy 13->14
+	Persia starts with cores on 1212 Herat and 1214 Zaranj, PER_AFG_border_treaty and event 110100 to lose them
+	KHI no longer starts with "Muhammad Rahim Quli" (reign: 1842–1846), instead starts with "Allah Quli Bahadur" (reign: 1825–1842) (expert_raider instead of aristocrat), starts with 5 instead of 4 brigades
+	added some truces and relations and alliances so the whole place doesn't explode into war the moment the game starts
+	merged 2 Bukharan armies together so the AI doesn't do silly things
+	Gave Bukhara another leader "Muzaffar bin Nasrullah" (aristocrat diplomatic)
+	Kokand's "Muhammad Ali Khan" merciless -> resourceful
+
+####################################################################################################
+v0.5.8x
 Fix Denmark oob #172
 remove has_country_flag = congo_master from the_dark_continent invention because that flag is for the other Congo, not the Belgian Congo #173
 Make Germanification in Northern Schleswig triggered only #174
@@ -91,21 +272,22 @@ Even more China RGO changes
 
 Merge HPM Politics & Economy Patch 4.2 optional module: all uncivs that start with Order that aren't at war with an European power at game start now have Tradition. #183
 
-
 Fixed bug where the "Siamese Border Treaty" sometimes lets you annex all of Siam #143
 	The event looks like it's supposed to let you annex Champassak if you border them and they're Siam's vassal, but there was a typo that made you annex Siam instead.
 
 Improved some file formatting
 
-Manzhouli 1002 is renamed to Hailar
-	province size increased, taking land from 15532 Qiqihar and 1553 Aigun.
-Greater Mongolia decision now also adds cores to 1533 Jirim Chuulgan
-
 Remove stupid Guizhou cores
 punti hakka clan wars can now happen for Kwangtung (the trade zone puppet) as well as for the Qing
 added is_substate = no to some scripted Taiping wars
 
+Fix England sphereing Denmark too often and preventing Germany from forming #157
+	Reduce ENG - DEN starting relations from -25 to -50. (The end of the Sound Due Tolls is what normalized relations between them, giving +50 relations)
+	Remove ENG's starting investment of 2000 in DEN
+	ENG starts with level 1 (opposed) instead of level 2 (neutral) influence in DEN.
+	Properly removed USA's setup of 150 relation with DEN
 
+Change mini-Red Turban provinces to be more historically accurate.
 
 ####################################################################################################
 v0.5.8w
@@ -143,9 +325,10 @@ Merge HPMP&EP 4.0
 	FUTA TOORO, SOKOTO: Ruling Party: Conservative -> Reactionary
 splendid isolation is now built in
 Starting infamy is now built in and the option decision now removes starting infamy
-aristocrats: luxury 30 -> 7.5
-artisans: everyday 0 -> 1, tobacco 3 -> 1.5, tea 5 -> 4.5, luxury 1 (as usual)
-capitalists: luxury 20 -> 5
+opium
+	aristocrats: luxury 30 -> 7.5
+	artisans: everyday 0 -> 1, tobacco 3 -> 1.5, tea 5 -> 4.5, luxury 1 (as usual)
+	capitalists: luxury 20 -> 5
 
 ####################################################################################################
 v0.5.8u
