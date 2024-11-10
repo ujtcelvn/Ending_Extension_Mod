@@ -300,6 +300,7 @@ political_decisions = {
         effect = {
             badboy = 1
             prestige = 2
+            set_global_flag = western_sahara_cored
             1773 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
             1774 = { secede_province = THIS add_core = MOR any_pop = { literacy = -0.99 } }
             1696 = { secede_province = THIS change_province_name = "Tarfaya" add_core = MOR any_pop = { literacy = -0.99 } }

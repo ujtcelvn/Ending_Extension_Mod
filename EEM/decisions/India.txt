@@ -1056,7 +1056,7 @@ political_decisions = {
         allow = {
             war = no
             mass_politics = 1
-			has_global_flag = pakistan_born
+            has_global_flag = pakistan_born
         }
 
         effect = {
@@ -1128,20 +1128,20 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-	gwadar_purchase = {
+    gwadar_purchase = {
         picture = gwadar_pakistan
 
         potential = {
             OR = {
-				tag = PAK
-				primary_culture = baluchi
+                tag = PAK
+                primary_culture = baluchi
             }
             owns = 1222 #Bela
             NOT = { has_country_flag = gwadar_purchase }
-			2640 = {
-				owned_by = OMA
-				is_core = OMA
-				is_core = THIS
+            2640 = {
+                owned_by = OMA
+                is_core = OMA
+                is_core = THIS
             }
         }
 

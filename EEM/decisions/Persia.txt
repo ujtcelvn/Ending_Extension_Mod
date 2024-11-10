@@ -313,7 +313,7 @@ political_decisions = {
         ai_will_do = { factor = 1 }
     }
 
-	end_bandar_abbas_lease = {
+    end_bandar_abbas_lease = {
         picture = qeshm_iran
 
         potential = {
@@ -361,7 +361,7 @@ political_decisions = {
 
         effect = {
             set_country_flag = ended_bandar_abbas_lease
-            badboy = 1
+            #badboy = 1
             OMA = { country_event = 38507 }
         }
 

@@ -1,13 +1,17 @@
 #KOK = { value = 100 }
+KOK = { truce_until = 1838.1.1 }
 
 PER = { value = -50 }
 
 KHI = { value = 50 }
+KHI = { truce_until = 1838.1.1 }
 
 HER = { value = 200 }
 KAN = { value = -25 }
 KAB = { value = 25 }
 KAB = { truce_until = 1840.1.1 }
+
+#BDK = { truce_until = 1838.1.1 }
 
 army = {
     name = "Army of Nasrullah Khan"

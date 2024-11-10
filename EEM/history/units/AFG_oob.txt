@@ -7,7 +7,7 @@ KHI = { value = 25 } #200
 
 RUS = { value = -25 }
 
-PER = { value = -50 }
+#PER = { value = -50 }
 
 PNJ = { value = -100 }
 
@@ -21,21 +21,21 @@ leader = {
     name = "Dost Mohammed"
     type = land
     date = 1836.1.1
-    personality = stalwart
-    background = debutante
+    personality = implacable #stalwart
+    background = aristocrat #debutante
 }
 
 leader = {
     name = "Wazir Akbar"
     type = land
     date = 1836.1.1
-    personality = daring
+    personality = merciless #daring
     background = rising_star
 }
 
 army = {
     name = "Army of Dost Mohammed"
-    location = 1216
+    location = 1209 #1216
     regiment = {
         name= "1. Mohammedzi"
         type = irregular
@@ -74,25 +74,25 @@ army = {
 
 }
 
-army = {
-    name = "Army of Wazir Akbar"
-    location = 1213
+#army = {
+#    name = "Army of Wazir Akbar"
+#    location = 1213
 
-    regiment = {
-        name= "1. Popozai"
-        type = irregular
-        home = 1213
-    }
+#    regiment = {
+#        name= "1. Popozai"
+#        type = irregular
+#        home = 1213
+#    }
 
-    regiment = {
-        name= "2. Popozai"
-        type = irregular
-        home = 1213
-    }
+#    regiment = {
+#        name= "2. Popozai"
+#        type = irregular
+#        home = 1213
+#    }
 
-    regiment = {
-        name= "1. Tajiki"
-        type = irregular
-        home = 1213
-    }
-}
+#    regiment = {
+#        name= "1. Tajiki"
+#        type = cavalry #irregular
+#        home = 1213
+#    }
+#}

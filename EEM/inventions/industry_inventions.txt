@@ -1314,7 +1314,7 @@ artificial_fertilizers = {
     effect = {
         rgo_goods_output = { tobacco = 0.25 }
         rgo_goods_output = { coffee = 0.25 }
-		rgo_goods_output = { tea = 0.25 }
+        rgo_goods_output = { tea = 0.25 }
         rgo_goods_output = { cotton = 0.02 }
         rgo_goods_output = { grain = 0.02 }
         rgo_goods_output = { opium = 0.02 }
@@ -1451,8 +1451,8 @@ carbon_soil_enrichment = {
     effect = {
         rgo_goods_output = { tobacco = 0.25 }
         rgo_goods_output = { coffee = 0.25 }
-		rgo_goods_output = { tea = 0.25 }
-		rgo_goods_output = { cotton = 0.05 }
+        rgo_goods_output = { tea = 0.25 }
+        rgo_goods_output = { cotton = 0.05 }
         rgo_goods_output = { grain = 0.05 }
         rgo_goods_output = { opium = 0.05 }
         rgo_goods_output = { cattle = 0.05 }

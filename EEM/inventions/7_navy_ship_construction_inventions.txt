@@ -65,22 +65,22 @@ purpose_built_air_carriers = {
 light_air_carriers = { #and escort_air_carriers
     limit = { oil_driven_ships = 1  }
     chance = {
-        base = 0
+        base = 2
         modifier = {
             factor = -6
-            NOT = { invention = on_board_recon_aircraft }
+            NOT = { invention = converted_hulk_air_carriers } #on_board_recon_aircraft
         }
         modifier = {
             factor = 2
             invention = purpose_built_air_carriers
         }
+        #modifier = {
+        #    factor = 2
+        #    invention = converted_hulk_air_carriers
+        #}
         modifier = {
             factor = 2
-            invention = converted_hulk_air_carriers
-        }
-        modifier = {
-            factor = 2
-            invention = fleet_air_carriers
+            invention = fleet_auxiliary_carrier_doctrine #fleet_air_carriers
         }
     }
     effect = {
@@ -109,14 +109,14 @@ fleet_air_carriers = {
         }
         modifier = {
             factor = 2
-            invention = fleet_auxiliary_carrier_doctrine
+            invention = carrier_task_force_doctrine #fleet_auxiliary_carrier_doctrine
         }
     }
     effect = {
         aircraft_carrier = {
             maximum_speed = 1
             hull = 2
-			gun_power = 5 #2
+            gun_power = 4 #5 #2
         }
     }
 }
@@ -127,7 +127,7 @@ large_air_carriers = {
         base = 0
         modifier = {
             factor = -6
-			NOT = { invention = fleet_air_carriers }
+            NOT = { invention = fleet_air_carriers }
         }
         modifier = {
             factor = 2
@@ -137,7 +137,7 @@ large_air_carriers = {
             factor = 2
             invention = naval_radar
         }
-		modifier = {
+        modifier = {
             factor = 2
             invention = hydraulic_aircraft_catapult
         }
@@ -147,7 +147,7 @@ large_air_carriers = {
             maximum_speed = 1
             hull = 2
             torpedo_attack = 2
-			gun_power = 4
+            gun_power = 4
         }
     }
 }

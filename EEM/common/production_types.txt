@@ -302,18 +302,18 @@ synthetic_rubber_factory = {
     }
 }
 
-hydrodesulphurization_plant = {
-    template = factory_template
-    input_goods = {
-        oil = 2        #24    total input+maint = 33.825
-    }
-    output_goods = sulphur
-    value = 5.1 #6            #30.6 - profit = -3.225
-    bonus = {
-        trigger = { trade_goods_in_state = oil }
-        value = 0.25
-    }
-}
+#hydrodesulphurization_plant = {
+#    template = factory_template
+#    input_goods = {
+#        oil = 2        #24    total input+maint = 33.825
+#    }
+#    output_goods = sulphur
+#    value = 5.1 #6            #30.6 - profit = -3.225
+#    bonus = {
+#        trigger = { trade_goods_in_state = oil }
+#        value = 0.25
+#    }
+#}
 
 ############# ADVANCED FACTORIES
 

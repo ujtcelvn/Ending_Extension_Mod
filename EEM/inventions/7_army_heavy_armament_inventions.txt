@@ -164,7 +164,7 @@ main_battle_tank = {
         base = 0
         modifier = {
             factor = -4
-			OR = {
+            OR = {
                 NOT = { invention = self_propelled_artillery } #formerally assault_gun
                 NOT = { invention = sloped_armor }
                 NOT = { invention = tank_destroyer }

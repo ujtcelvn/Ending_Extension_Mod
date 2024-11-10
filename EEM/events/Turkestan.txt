@@ -493,12 +493,11 @@ country_event = {
     }
 }
 
-
-
+#Khivan Claims on Nukus
 country_event = {
     id = 95217
-    title = "Khivan Claims on Nukus"
-    desc = "The organized occupation of Nukus has prompted Khiva to raise a claim on the area."
+    title = "EVTNAME95217"
+    desc = "EVTDESC95217"
     picture = "central_asian_tribes"
 
     trigger = {
@@ -510,7 +509,7 @@ country_event = {
     mean_time_to_happen = { months = 1 }
 
     option = {
-        name = "Ok"
+        name = "EVT95217OPTA"
         set_global_flag = Nukus_cored
         1192 = { add_core = KHI }
     }

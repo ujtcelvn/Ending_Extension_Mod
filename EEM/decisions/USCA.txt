@@ -129,9 +129,9 @@ political_decisions = {
         potential = {
             is_greater_power = yes
             OR = {
-				capital_scope = { continent = north_america }
-				capital_scope = { continent = south_america }
-			}
+                capital_scope = { continent = north_america }
+                capital_scope = { continent = south_america }
+            }
             NOT = { has_country_flag = post_colonial_country }
             NOT = {
                 OR = {
@@ -148,7 +148,7 @@ political_decisions = {
         }
 
         allow = {
-			revolution_n_counterrevolution = 1
+            revolution_n_counterrevolution = 1
             GUA = {
                 OR = {
                     in_sphere = THIS

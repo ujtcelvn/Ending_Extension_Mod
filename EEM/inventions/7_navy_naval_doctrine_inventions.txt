@@ -4,18 +4,18 @@
 fleet_auxiliary_carrier_doctrine = {
     limit = { naval_doctrine_7 = 1 }
     chance = {
-        base = 0
+        base = 1
         modifier = {
-            factor = 1
-            invention = light_air_carriers 
-        }
-        modifier = {
-            factor = 1
-            invention = converted_hulk_air_carriers
+            factor = -5
+            NOT = { invention = converted_hulk_air_carriers }
         }
         modifier = {
             factor = 2
-            invention = fleet_air_carriers
+            invention = purpose_built_air_carriers 
+        }
+        modifier = {
+            factor = 2
+            invention = on_board_recon_aircraft
         }
     }
     effect = {
@@ -108,7 +108,7 @@ coordinated_strike_doctrine = {
     effect = {
         aircraft_carrier = {
             torpedo_attack = 5
-            gun_power = 2
+            gun_power = 4 #2
         }
     }
 }

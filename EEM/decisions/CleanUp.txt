@@ -1,63 +1,63 @@
 political_decisions = {
 
-	mark_down_landlocked = {
+    mark_down_landlocked = {
         potential = {
-			exists = yes
-			ai = yes
-			any_owned_province = {
-				port = no
-				NOT = {
-					has_province_modifier = landlocked_province
-					is_core = THIS
-					any_neighbor_province = { owned_by = THIS }
-				}
-			}
+            exists = yes
+            ai = yes
+            any_owned_province = {
+                port = no
+                NOT = {
+                    has_province_modifier = landlocked_province
+                    is_core = THIS
+                    any_neighbor_province = { owned_by = THIS }
+                }
+            }
         }
 
         allow = {
-			war = no
+            war = no
         }
 
         effect = {
-			any_owned = {
-				limit = {
-					port = no
-					NOT = {
-						is_core = THIS
-						any_neighbor_province = { owned_by = THIS }
-					}
-				}
-				add_province_modifier = { name = landlocked_province duration = 3650 }
-			}
+            any_owned = {
+                limit = {
+                    port = no
+                    NOT = {
+                        is_core = THIS
+                        any_neighbor_province = { owned_by = THIS }
+                    }
+                }
+                add_province_modifier = { name = landlocked_province duration = 3650 }
+            }
         }
         ai_will_do = { factor = 1 }
     }
-	
-	take_landlocked_provinces = {
+    
+    take_landlocked_provinces = {
         potential = {
-			exists = yes
-			any_owned_province = {
-				any_neighbor_province = {
-					is_core = THIS
-					has_province_modifier = landlocked_province
-				}
-			}
+            exists = yes
+            any_owned_province = {
+                any_neighbor_province = {
+                    is_core = THIS
+                    has_province_modifier = landlocked_province
+                }
+            }
         }
 
         allow = {
-			war = no
+            war = no
         }
 
         effect = {
            any_neighbor_country  = {
-				limit = {
-					any_owned_province = {
-						is_core = THIS
-						has_province_modifier = landlocked_province
-					}
-				}
-				country_event = 6016826
-			}
+                limit = {
+                    any_owned_province = {
+                        is_core = THIS
+                        has_province_modifier = landlocked_province
+                    }
+                }
+                country_event = 6016826
+            }
         }
         ai_will_do = { factor = 1 }
     }
@@ -1798,15 +1798,15 @@ political_decisions = {
                         owns = 2323
                         2323 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
                     }
-					AND = {
+                    AND = {
                         owns = 2156
                         2156 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
                     }
-					AND = {
+                    AND = {
                         owns = 2154
                         2154 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
                     }
-					AND = {
+                    AND = {
                         owns = 2179
                         2179 = { trade_goods = precious_metal NOT = { has_province_modifier = silver_mine } }
                     }
@@ -1830,9 +1830,9 @@ political_decisions = {
                             province_id = 312
                             province_id = 2322
                             province_id = 2323
-							province_id = 2156
-							province_id = 2154
-							province_id = 2179
+                            province_id = 2156
+                            province_id = 2154
+                            province_id = 2179
                         }
                     }
                     add_province_modifier = { name = silver_mine duration = -1 }
@@ -2321,16 +2321,16 @@ political_decisions = {
                 civilized = yes
                 is_disarmed = no
                 OR = {
-					AND = {
-						capital_scope = { continent = europe }
-						NOT = {
-							tag = TUR
-							tag = RUS
-						}
-					}
-					tech_school = naval_tech_school
-					tech_school = japanese_tech_school
-				}
+                    AND = {
+                        capital_scope = { continent = europe }
+                        NOT = {
+                            tag = TUR
+                            tag = RUS
+                        }
+                    }
+                    tech_school = naval_tech_school
+                    tech_school = japanese_tech_school
+                }
                 state_n_government = 1
                 OR = {
                     #Mozambique
@@ -3895,27 +3895,27 @@ political_decisions = {
 
     remove_unciv_modifiers_from_civs = {
         potential = {
-			civilized = yes
-			OR = {
+            civilized = yes
+            OR = {
                 has_country_modifier = uncivilized_isolationism
                 has_country_modifier = western_influences
             }
             ai = yes
             any_neighbor_country = {
                 ai = no
-				civilized = yes
-				OR = {
-					has_country_modifier = uncivilized_isolationism
-					has_country_modifier = western_influences
-				}
+                civilized = yes
+                OR = {
+                    has_country_modifier = uncivilized_isolationism
+                    has_country_modifier = western_influences
+                }
             }
             any_greater_power = {
                 ai = no
-				civilized = yes
-				OR = {
-					has_country_modifier = uncivilized_isolationism
-					has_country_modifier = western_influences
-				}
+                civilized = yes
+                OR = {
+                    has_country_modifier = uncivilized_isolationism
+                    has_country_modifier = western_influences
+                }
             }
         }
 
@@ -3938,7 +3938,7 @@ political_decisions = {
                     limit = { owner = { has_country_flag = activate_experimental_railroad } NOT = { experimental_railroad = 1 } }
                     owner = { activate_technology = experimental_railroad  clr_country_flag = activate_experimental_railroad }
                 }
-				
+                
                 #You got civilized by force no baby boom for you
                 #random_list = {
                 #    34 = { add_country_modifier = { name = global_baby_boom duration = 3650 } }

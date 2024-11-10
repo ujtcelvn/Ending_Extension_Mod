@@ -1238,4 +1238,56 @@ political_decisions = {
     }
 
 
+    claim_greater_turkestan = {
+        picture = unite_turkestan
+        potential = {
+            tag = TKS
+            NOT = { has_country_flag = claim_greater_turkestan }
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            is_disarmed = no
+            war_policy = jingoism
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            prestige = 45
+        }
+
+        effect = {
+            set_country_flag = claim_greater_turkestan
+            badboy = 4 #13
+            #Khorasan
+            1116 = { add_core = TKS }
+            1116 = { add_core = TKM }
+            1150 = { add_core = TKS }
+            1150 = { add_core = TKM }
+            #North Afghanistan
+            1210 = { add_core = TKS }
+            1210 = { add_core = TAJ } #already BDK core
+            1211 = { add_core = TKS }
+            1211 = { add_core = TAJ } #already BDK core
+			#North Mongolia
+            #2679 = { add_core = TKS }
+            #Urumqi
+            #1595 = { add_core = TKS }
+            #1596 = { add_core = TKS }
+            #1599 = { add_core = TKS }
+            #1560 = { add_core = TKS }
+            #Kashgar
+            #1594 = { add_core = TKS }
+            #1597 = { add_core = TKS }
+            #1598 = { add_core = TKS }
+            #2607 = { add_core = TKS }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
 }

@@ -5,12 +5,13 @@ KAB = { value = -100 }
 KAB = { truce_until = 1840.1.1 }
 
 HER = { value = -100 }
+HER = { truce_until = 1840.1.1 }
 
 KAL = { value = 200 }
 
 #MAK = { value = 200 }
 
-PER = { value = -50 }
+PER = { value = 50 }
 
 leader = {
     name = "Kohan-Dil-Khan"

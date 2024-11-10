@@ -862,115 +862,120 @@ country_event = {
         badboy = -2
         relation = { who = FROM value = 400 }
 
-        AFG_1209 = { remove_core = PER add_core = AFG }
-        AFG_1214 = { remove_core = PER add_core = AFG }
-		any_owned = {
-			limit = {
-			    is_core = AFG
-			    NOT = { is_core = PER }
-			    NOT = { is_core = HER }
-			    NOT = { is_core = KAN }
-			    NOT = { is_core = KAB }
-			    AFG = { exists = no }
-			    HER = { exists = no }
-			    KAN = { exists = no }
-			    KAB = { exists = no }
-			}
-			secede_province = FROM
-		}
-
-		any_owned = {
-			limit = {
-			    is_core = HER
-			    NOT = { is_core = PER }
-			    HER = { exists = yes }
-			}
-			secede_province = HER
-		}
-
-		any_owned = {
-			limit = {
-			    is_core = KAN
-			    NOT = { is_core = PER }
-			    KAN = { exists = yes }
-			}
-			secede_province = KAN
-		}
-
-		any_owned = {
-			limit = {
-			    is_core = KAB
-			    NOT = { is_core = PER }
-			    KAB = { exists = yes }
-			}
-			secede_province = KAB
-		}
-
-		any_owned = {
-			limit = {
-			    is_core = AFG
-			    NOT = { is_core = PER }
-			    AFG = { exists = yes }
-			}
-			secede_province = AFG
-		}
+        AFG_1209 = { remove_core = PER add_core = AFG } #North Afghanistan
+        AFG_1214 = { remove_core = PER add_core = AFG } #South Afghanistan
+        any_owned = {
+            limit = {
+                is_core = AFG
+                NOT = { is_core = PER }
+                NOT = { is_core = HER }
+                NOT = { is_core = KAN }
+                NOT = { is_core = KAB }
+                AFG = { exists = no }
+                HER = { exists = no }
+                KAN = { exists = no }
+                KAB = { exists = no }
+            }
+            secede_province = FROM
+        }
 
 
-		any_owned = {
-			limit = {
-			    is_core = HER
-			    NOT = { is_core = PER }
-			    HER = { exists = no }
-			    AFG = { exists = no }
-			}
-			secede_province = HER
-		}
+        any_owned = {
+            limit = {
+                is_core = KAN
+                region = AFG_1214 #South Afghanistan
+                NOT = { is_core = PER }
+                KAN = { exists = yes }
+            }
+            secede_province = KAN
+        }
 
-		any_owned = {
-			limit = {
-			    is_core = KAN
-			    NOT = { is_core = PER }
-			    KAN = { exists = no }
-			    AFG = { exists = no }
-			}
-			secede_province = KAN
-		}
+        any_owned = {
+            limit = {
+                is_core = HER
+                province_id = 1212 #Herat
+                NOT = { is_core = PER }
+                HER = { exists = yes }
+            }
+            secede_province = HER
+        }
 
-		any_owned = {
-			limit = {
-			    is_core = KAB
-			    NOT = { is_core = PER }
-			    KAB = { exists = no }
-			    AFG = { exists = no }
-			}
-			secede_province = KAB
-		}
+        any_owned = {
+            limit = {
+                is_core = KAB
+                NOT = { is_core = PER }
+                KAB = { exists = yes }
+            }
+            secede_province = KAB
+        }
+
+        any_owned = {
+            limit = {
+                is_core = AFG
+                NOT = { is_core = PER }
+                AFG = { exists = yes }
+            }
+            secede_province = AFG
+        }
 
 
-		any_owned = {
-			limit = {
-			    is_core = AFG
-			}
-			secede_province = FROM
-		}
+        any_owned = {
+            limit = {
+                is_core = HER
+                province_id = 1212 #Herat
+                NOT = { is_core = PER }
+                HER = { exists = no }
+                AFG = { exists = no }
+            }
+            secede_province = HER
+        }
+
+        any_owned = {
+            limit = {
+                is_core = KAN
+                region = AFG_1214 #South Afghanistan
+                NOT = { is_core = PER }
+                KAN = { exists = no }
+                AFG = { exists = no }
+            }
+            secede_province = KAN
+        }
+
+        any_owned = {
+            limit = {
+                is_core = KAB
+                NOT = { is_core = PER }
+                KAB = { exists = no }
+                AFG = { exists = no }
+            }
+            secede_province = KAB
+        }
+
+
+        any_owned = {
+            limit = {
+                is_core = AFG
+            }
+            secede_province = FROM
+        }
 
 
 
         FROM = {
-			diplomatic_influence = { who = THIS value = 50 }
-			any_owned = {
-				limit = {
-					is_core = PER
-					NOT = { is_core = FROM }
-					OR = {
-						region = PER_1140 #Kerman
-						region = PER_1148 #Khorasan
-					}
-					NOT = { province_id = 1071 } #Qeshm
-				}
-				secede_province = PER
-			}
-		}
+            diplomatic_influence = { who = THIS value = 50 }
+            any_owned = {
+                limit = {
+                    is_core = PER
+                    NOT = { is_core = FROM }
+                    OR = {
+                        region = PER_1140 #Kerman
+                        region = PER_1148 #Khorasan
+                    }
+                    NOT = { province_id = 1071 } #Qeshm
+                }
+                secede_province = PER
+            }
+        }
 
         ai_chance = {
             factor = 90
@@ -991,5 +996,370 @@ country_event = {
     option = {
         name = "EVT110100OPTB"
         relation = { who = FROM value = -100 }
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 2
+                owns = 1212
+            }
+            modifier = {
+                factor = 2
+                owns = 1214
+            }
+        }
     }
 }
+
+#Persian claim on Herat
+#country_event = {
+#    id = 110101
+#    title = "EVTNAME110101"
+#    desc = "EVTDESC110101"
+#    picture = "herat_citadel"
+
+    #trigger = {
+    #    tag = PER
+    #    war = no
+    #    is_vassal = no
+    #    NOT = { truce_with = HER }
+    #    neighbor = HER
+    #    HER = { owns = 1212 } #Herat
+    #}
+
+    #mean_time_to_happen = {
+    #    months = 9
+    #}
+#    fire_only_once = yes
+ 
+#    option = {
+#        name = "EVT110101OPTA"
+#        set_country_flag = claimed_herat#
+#        prestige = 2
+#        badboy = 1
+#        relation = { who = HER value = -200 }
+#        diplomatic_influence = { who = HER value = -200 }
+#        1212 = { add_core = PER }
+#        war = {
+#            target = HER
+#            attacker_goal = {
+#                casus_belli = acquire_all_cores
+#                country = PER
+#            }
+#            call_ally = yes
+#        }
+#        ai_chance = {
+#            factor = 90
+#        }
+#    }
+#    option = {
+#        name = "EVT110101OPTB"
+#        prestige = -5
+#        badboy = -1
+#       relation = { who = HER value = 50 }
+        #1212 = { remove_core = THIS }
+        #clr_country_flag = claimed_herat
+#        any_pop = { limit = { is_primary_culture = yes } consciousness = 1 }
+#        ai_chance = {
+#            factor = 10
+#            modifier = {
+#                factor = 0
+#                war_policy = jingoism
+#            }
+#            modifier = {
+#                factor = 0
+#                has_country_flag = greater_iran
+#            }
+#        }
+#    }
+#}
+
+country_event = {
+    id = 110102
+    title = "EVTNAME110102"
+    desc = "EVTDESC110102"
+    picture = "herat_citadel"
+
+    trigger = {
+        tag = ENG
+        NOT = { has_country_flag = PER_AFG_border_treaty_flag }
+        PER = {
+            #has_country_flag = claimed_herat
+            war_with = HER
+            is_core = 1212
+            civilized = no
+        }
+        NOT = { war_with = PER }
+        HER = { part_of_sphere = no }
+        #OR = {
+        #    1212 = { country_units_in_province = PER }
+        #    PER = { controls = 1212 }
+        #    PER = { owns = 1212 }
+        #}
+    }
+
+    mean_time_to_happen = { months = 3 }
+    fire_only_once = yes
+
+    option = {
+        name = "EVT110102OPTA"
+        relation = { who = PER value = -50 }
+        #diplomatic_influence = { who = PER value = -200 }
+
+
+        relation = { who = HER value = 100 }
+        diplomatic_influence = { who = HER value = 400 }
+
+        PER = { country_event = 110103 }
+
+
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 0
+                is_greater_power = no
+            }
+        }
+    }
+
+    option = {
+        name = "EVT110102OPTB"
+
+        diplomatic_influence = { who = HER value = -200 }
+
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 1.5
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.5
+                war = yes
+            }
+            modifier = {
+                factor = 1.5
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 2
+                war_policy = pacifism
+            }
+            #modifier = {
+            #    factor = 2
+            #    PER = { owns = 1212 }
+            #}
+        }
+    }
+}
+
+
+
+country_event = {
+    id = 110103
+    title = "EVTNAME110103"
+    desc = "EVTDESC110103"
+    picture = "herat_citadel"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT110103OPTA"
+        FROM = {
+            casus_belli = {
+                target = PER
+                type = liberate_country
+                months = 30
+            }
+            casus_belli = {
+                target = PER
+                type = cut_down_to_size
+                months = 30
+            }
+            #war = {
+            #    target = PER
+            #    attacker_goal = {
+            #        casus_belli = cut_down_to_size
+            #        country = PER
+            #    }
+            #    call_ally = no
+            #}
+        }
+
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0.5
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 2
+                war_policy = jingoism
+            }
+            modifier = {
+                factor = 0.5
+                war_policy = anti_military
+            }
+            modifier = {
+                factor = 0.1
+                war_policy = pacifism
+            }
+        }
+    }
+
+
+    option = {
+        name = "EVT110103OPTB"
+        prestige = -5
+        
+        #1212 = { remove_core = THIS }
+        any_owned = { limit = { province_id = 1212 } secede_province = HER }
+
+        clr_country_flag = claimed_herat
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+            }
+            militancy = 1
+        }
+
+        any_country = {
+            limit = {
+                war_with = THIS
+                OR = {
+                    tag = HER
+                    #tag = FROM
+                    alliance_with = HER
+                    #alliance_with = FROM
+                }
+            }
+            end_war = THIS
+        }
+
+
+        HER = { country_event = 110104 }
+
+        ai_chance = {
+            factor = 90
+        }
+    }
+
+}
+
+
+#Persia withdraws from Herat - to Herat
+country_event = {
+    id = 110104
+    title = "EVTNAME110104"
+    desc = "EVTDESC110104"
+    picture = "herat_citadel"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT110104OPTA"
+        any_pop = {
+            limit = {
+                is_primary_culture = yes
+            }
+            militancy = -9
+        }
+
+        ai_chance = { factor = 100 }
+    }
+}
+
+#Persian claim on 1214 Zaranj
+country_event = {
+    id = 110105
+    title = "EVTNAME110105"
+    desc = "EVTDESC110105"
+    picture = "kandahar"
+
+    trigger = {
+        tag = PER
+        war = no
+        is_vassal = no
+        owns = 1212
+        is_core = 1212
+        NOT = { is_core = 1214 } #Zaranj
+        civilized = no
+        #has_country_flag = claimed_herat
+    }
+
+    mean_time_to_happen = {
+        months = 9
+    }
+
+    fire_only_once = yes
+
+    option = {
+        name = "EVT110105OPTA"
+        badboy = 1
+        1214 = { add_core = PER }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = "EVT110105OPTB"
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+
+country_event = {
+    id = 110106
+    title = "EVTNAME110106"
+    desc = "EVTDESC110106"
+    picture = "kandahar"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT110106OPTA"
+        prestige_factor = -0.1
+        sphere_owner = { country_event = 110107 }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+}
+
+country_event = {
+    id = 110107
+    title = "EVTNAME110107"
+    desc = "EVTDESC110107"
+    picture = "kandahar"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT110107OPTA"
+        diplomatic_influence = { who = FROM value = -300 }
+        relation = { who = FROM value = -100 }
+        relation = { who = AFG value = 50 }
+        ai_chance = {
+            factor = 90
+        }
+    }
+
+    option = {
+        name = "EVT110107OPTB"
+        diplomatic_influence = { who = AFG value = -300 }
+        relation = { who = AFG value = -100 }
+        relation = { who = FROM value = 50 }
+        ai_chance = {
+            factor = 10
+        }
+    }
+}
+
