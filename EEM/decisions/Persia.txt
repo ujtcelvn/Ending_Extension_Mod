@@ -356,6 +356,7 @@ political_decisions = {
                         }
                     }
                 }
+                OMA = { has_country_modifier = reactionary_demands }
             }
         }
 
