@@ -176,614 +176,205 @@ province_event = {
 }
 
 
-
 province_event = {
     id = 166801
     trigger = {
         trade_goods = opium
-        owner = { has_country_flag = opium_ban }
         owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = cattle
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = cattle
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = cattle
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 866         # Afyon
-            province_id = 1127        # Isfahan
-            province_id = 2145        # Parral
-            province_id = 2133        # Gizab
-        }
+			has_country_flag = opium_ban 
+			war = no
+		}
     }
 
-    mean_time_to_happen = { months = 120 }
+    mean_time_to_happen = { 
+	    months = 120 
+	}
 
-    title = "Opium transition to Livestock in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to ranching livestock."
+    title = "Opium Plantations Close in $PROVINCENAME$"
+    desc = "The eradication of opium production has caused the locals to scramble to find new sources of income."
 
     option = {
         name = "Say NO to drugs!"
-        trade_goods = cattle
         add_province_modifier = {
             name = switched_production
             duration = 1825
         }
-    }
-}
-
-province_event = {
-    id = 166802
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = coffee
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = coffee
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = coffee
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1355        # Chiang Mai
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Coffee in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to growing coffee."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = coffee
         add_province_modifier = {
-            name = switched_production
-            duration = 1825
+            name = local_drug_habit
+            duration = 365
         }
-    }
-}
 
+		owner = {
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 866         # Afyon
+						province_id = 1127        # Isfahan
+						province_id = 2145        # Parral
+						province_id = 2133        # Gizab
+					}
+				}
+				trade_goods = cattle
+			}
 
-province_event = {
-    id = 166803
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = cotton
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = cotton
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = cotton
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1192        # Nukus
-            province_id = 1271        # Indore
-            province_id = 668         # Merv
-        }
-    }
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1355        # Chiang Mai
+					}
+				}
+				trade_goods = coffee
+			}
 
-    mean_time_to_happen = { months = 120 }
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1192        # Nukus
+						province_id = 1271        # Indore
+						province_id = 668         # Merv
+					}
+				}
+				trade_goods = cotton
+			}
 
-    title = "Opium transition to Cotton in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to growing cotton."
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1182	#Guryev
+						#province_id = 1174	#Salalah
+						#province_id = 1173	#Mukalla
+					}
+				}
+				trade_goods = fish
+			}
 
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = cotton
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1335	#Kyaukse
+						#province_id = 1166	#Muscat
+						#province_id = 1175	#Ghayda
+						province_id = 1122	#Hamadan
+						province_id = 1580	#Jiading
+					}
+				}
+				trade_goods = fruit
+			}
 
-province_event = {
-    id = 166804
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = fish
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = fish
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = fish
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1182	#Guryev
-            #province_id = 1174	#Salalah
-            #province_id = 1173	#Mukalla
-        }
-    }
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1348	#Nakhon Sawan
+						province_id = 1347	#Lopburi
+						province_id = 1349	#Sukothai
+						#province_id = 1170	#Nizwa
+						province_id = 1247	#Patna
+						province_id = 1333	#Toungoo
+						province_id = 1216	#Jalalabad
+						province_id = 2171	#Cololo
+						province_id = 1625	#Kaesong
+						province_id = 1218	#Peshawar
+						province_id = 1211	#Balkh
+						province_id = 1269	#Udaipur
+					}
+				}
+				trade_goods = grain
+			}
 
-    mean_time_to_happen = { months = 120 }
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1245	#Benares
+					}
+				}
+				trade_goods = silk
+			}
 
-    title = "Opium transition to Fish in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to catching fish."
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1258	#Gauhati
+						province_id = 1338	#Taunggye
+						province_id = 1498	#Macau
+						province_id = 1469	#Hong Kong
+					}
+				}
+				trade_goods = tea
+			}
 
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = fish
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 807	#Bitola
+						province_id = 1602	#Dali
+					}
+				}
+				trade_goods = timber
+			}
 
-province_event = {
-    id = 166805
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = fruit
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = fruit
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = fruit
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1335	#Kyaukse
-            #province_id = 1166	#Muscat
-            #province_id = 1175	#Ghayda
-            province_id = 1122	#Hamadan
-            province_id = 1580	#Jiading
-        }
-    }
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1135	#Shiraz
+					}
+				}
+				trade_goods = tobacco
+			}
 
-    mean_time_to_happen = { months = 120 }
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 1356	#Luang Prabang 
+					}
+				}
+				trade_goods = tropical_wood
+			}
 
-    title = "Opium transition to Fruit in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to growing fruit."
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+					OR = {
+						province_id = 808	#Petrich 
+						province_id = 1210	#Kunduz
+						province_id = 1215	#Kandahar
+						province_id = 2248	#Ibague
+					}
+				}
+				trade_goods = wool
+			}
 
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = fruit
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-province_event = {
-    id = 166806
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = grain
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = grain
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = grain
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1348	#Nakhon Sawan
-            province_id = 1347	#Lopburi
-            province_id = 1349	#Sukothai
-            #province_id = 1170	#Nizwa
-            province_id = 1247	#Patna
-            province_id = 1333	#Toungoo
-            province_id = 1216	#Jalalabad
-            province_id = 2171	#Cololo
-            province_id = 1625	#Kaesong
-            province_id = 1218	#Peshawar
-            province_id = 1211	#Balkh
-            province_id = 1269	#Udaipur
-
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Grain in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to farming grain."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = grain
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-province_event = {
-    id = 166807
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = silk
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = silk
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = silk
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1245	#Benares
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Silk in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to processing silk."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = silk
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-province_event = {
-    id = 166808
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = tea
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = tea
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = tea
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1258	#Gauhati
-            province_id = 1338	#Taunggye
-            province_id = 1498	#Macau
-            province_id = 1469	#Hong Kong
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Tea in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to growing tea."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = tea
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-
-province_event = {
-    id = 166809
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = timber
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = timber
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = timber
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 807	#Bitola
-            province_id = 1602	#Dali
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Timber in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to cutting wood."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = timber
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-
-province_event = {
-    id = 166810
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = tobacco
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = tobacco
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = tobacco
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1135	#Shiraz
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Tobacco in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to growing tobacco."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = tobacco
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-province_event = {
-    id = 166811
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = tropical_wood
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = tropical_wood
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = tropical_wood
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 1356	#Luang Prabang 
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Tropical Wood in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to cutting tropical wood."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = tropical_wood
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
-    }
-}
-
-
-province_event = {
-    id = 166812
-    trigger = {
-        trade_goods = opium
-        owner = { has_country_flag = opium_ban }
-        owner = {
-            war = no
-            OR = {
-                any_owned_province = {
-                    trade_goods = wool
-                    NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                }
-                any_neighbor_country = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = wool
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-                any_greater_power = {
-                    war = no
-                    any_owned_province = {
-                        trade_goods = wool
-                        NOT = { unemployment_by_type = { value = 0.20 type = farmers } }
-                    }
-                }
-            }
-        }
-        OR = {
-            province_id = 808	#Petrich 
-            province_id = 1210	#Kunduz
-            province_id = 1215	#Kandahar
-            province_id = 2248	#Ibague
-        }
-    }
-
-    mean_time_to_happen = { months = 120 }
-
-    title = "Opium transition to Wool in $PROVINCENAME$"
-    desc = "Opium production, long discouraged by the government, has finally been eradicated in this province. By and large, farmers here have shifted to herding sheep."
-
-    option = {
-        name = "Say NO to drugs!"
-        trade_goods = tropical_wood
-        add_province_modifier = {
-            name = switched_production
-            duration = 1825
-        }
+			#catch any leftovers
+			random_owned = {
+				limit = {
+					trade_goods = opium
+					has_province_modifier = switched_production
+				}
+				trade_goods = grain
+			}
+		}
     }
 }
 
