@@ -509,6 +509,7 @@ country_event = {
         name = "EVT97116OPTA"
         badboy = 2
         relation = { who = PNJ value = -100 }
+        diplomatic_influence = { who = PNJ value = -200 }
         leave_alliance = PNJ
         casus_belli = {
             target = PNJ
@@ -524,6 +525,7 @@ country_event = {
         name = "EVT97116OPTB"
         badboy = 2
         relation = { who = PNJ value = -300 }
+        diplomatic_influence = { who = PNJ value = -400 }
         leave_alliance = PNJ
         war = {
             target = PNJ
