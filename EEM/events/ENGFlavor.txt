@@ -3289,8 +3289,16 @@ province_event = {
 
     trigger = {
         trade_goods = precious_metal
-        province_id = 2400 # Rio Grande
-        year = 1893
+        OR = {
+            AND = {
+                province_id = 90 # San Diego
+                year = 1880
+            }
+            AND = {
+                province_id = 2400 # Rio Grande
+                year = 1893
+            }
+        }
     }
 
     mean_time_to_happen = {
@@ -3301,8 +3309,16 @@ province_event = {
         name = "EVTOPTA315001"
 
         owner = {
+            #random_owned = {
+            #    limit = { owner = { owns = 2400 2400 = { NOT = { trade_goods = grain } } } }
+            #    owner = { 2400 = { trade_goods = grain } }
+            #}
             random_owned = {
-                limit = { owner = { owns = 2400 2400 = { NOT = { trade_goods = grain } } } }
+                limit = { owner = { owns = 90 90 = { trade_goods = precious_metal year = 1880 } } }
+                owner = { 90 = { trade_goods = fruit } }
+            }
+            random_owned = {
+                limit = { owner = { owns = 2400 2400 = { trade_goods = precious_metal year = 1880 } } }
                 owner = { 2400 = { trade_goods = grain } }
             }
         }

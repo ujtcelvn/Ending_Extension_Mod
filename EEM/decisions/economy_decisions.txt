@@ -81,6 +81,7 @@ political_decisions = {
                     NOT = { has_country_flag = animist_country }
                 }
                 government = bourgeois_dictatorship
+                debt_law = serfdom
             }
 
         }
@@ -88,15 +89,23 @@ political_decisions = {
         allow = {
             OR = {
                 #filled with hippies
-                AND = { 
-                    pro_atheism = 5
-                    NOT = { moralism = 1 }
-                }
+                #AND = { 
+                #    pro_atheism = 5
+                #    NOT = { moralism = 1 }
+                #}
                 government = proletarian_dictatorship
                 government = fascist_dictatorship
                 government = presidential_dictatorship
                 government = bourgeois_dictatorship
                 government = absolute_monarchy
+                debt_law = serfdom
+            }
+            OR = {
+                is_vassal = no
+                AND = {
+                    is_vassal = yes
+                    overlord = { NOT = { has_country_flag = opium_ban } }
+                }
             }
         }
 

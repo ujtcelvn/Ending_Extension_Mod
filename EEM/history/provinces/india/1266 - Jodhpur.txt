@@ -3,4 +3,5 @@ controller = JOD
 add_core = JOD
 add_core = HND
 trade_goods = fruit
+terrain = semidesert
 life_rating = 32

@@ -3,4 +3,5 @@ controller = XIN
 add_core = CHI
 add_core = XIN
 trade_goods = fruit
+terrain = steppe
 life_rating = 32

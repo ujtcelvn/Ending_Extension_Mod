@@ -3,4 +3,5 @@ controller = MEW
 add_core = MEW
 add_core = HND
 trade_goods = opium
+terrain = steppe
 life_rating = 32

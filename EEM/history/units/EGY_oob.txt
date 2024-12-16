@@ -41,7 +41,7 @@ FRA = {
 }
 
 RUS = {
-	value = -50
+	value = -125
 }
 
 TUR = {

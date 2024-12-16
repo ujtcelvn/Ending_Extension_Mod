@@ -187,7 +187,19 @@ province_event = {
     }
 
     mean_time_to_happen = { 
-	    months = 120 
+	    months = 60 #120
+        modifier = {
+            factor = 0.9
+            unemployment_by_type = { value = 0.01 type = farmers }
+        }
+        modifier = {
+            factor = 0.9
+            unemployment_by_type = { value = 0.05 type = farmers }
+        }
+        modifier = {
+            factor = 0.9
+            unemployment_by_type = { value = 0.1 type = farmers }
+        }
 	}
 
     title = "Opium Plantations Close in $PROVINCENAME$"

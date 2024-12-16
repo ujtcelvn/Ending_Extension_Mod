@@ -71,10 +71,10 @@ province_event = {
     trigger = {
         year = 1848
         or = {
-            province_id = 89            # Los Angeles
-            province_id = 104            # San Francisco
+            #province_id = 104            # San Francisco
+            province_id = 86            # Truckee
+
             province_id = 3                # Kenai
-            province_id = 90            # San Diego
             province_id = 695            # Königsberg
             province_id = 2470            # Port Macquaire Australia
             province_id = 2471            # Bathurst Australia
@@ -153,6 +153,21 @@ province_event = {
             #province_id = 2400            # Rio Grande
             province_id = 1644            # Meakan (Nemuro), previously 1643 Sapporo
             province_id = 409            # Strasbourg
+
+
+            AND = {
+                province_id = 89            # Los Angeles
+                NOT = { trade_goods = oil }
+            }
+            AND = {
+                year = 1870
+                province_id = 90            # San Diego
+                NOT = { year = 1880 }
+            }
+            AND = {
+                province_id = 88            # Mojave
+                year = 1880
+            }
             AND = {
                 province_id = 2116            # Fianarantsoa (ambositra)
                 owner = { invention = cyanide_milling }
@@ -613,10 +628,12 @@ province_event = {
                     province_id = 1086        # Pogobi
                     province_id = 131        # Oklahoma City 1893
                     province_id = 1680        # Fez 1893
-                    province_id = 87        # Monterey 1896
+                    #province_id = 87        # Monterey 1896
                     province_id = 2162        # Veracruz 1896
                     province_id = 2163        # Tampico 1896
                     province_id = 702        # Lvov 1896
+
+                    province_id = 89        # Los Angeles 1892
                 }
             }
 
@@ -663,7 +680,6 @@ province_event = {
                 year = 1930
                 OR = {
                     province_id = 137        # East Texas 1930 (Clarksville / Dallas 43 already oil, so choose 137 San Antonio which did have oil wells instead)
-                    #province_id = 89        # Wilmington 1932 (Los Angeles)
                     province_id = 1162        # Awali, Bahrain 1932
                     province_id = 1137        # Agha Jari, Abadan, Iran 1930 1937 1938, (1132 already oil) 1137 is Yasuj, capital of Kohgiluyeh and Boyer-Ahmad Province, where the Aghajari and Gachsaran oil fields are
                     province_id = 935        # Burgan, Kuwait 1937

@@ -3,4 +3,5 @@ controller = KUT
 add_core = KUT
 add_core = HND
 trade_goods = cotton
+terrain = semidesert
 life_rating = 32

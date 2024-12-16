@@ -704,9 +704,6 @@ country_event = {
         1565 = {
             secede_province = TZ1
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1567 = { secede_province = TZ1 } 
         1570 = { secede_province = TZ1 }
@@ -714,13 +711,13 @@ country_event = {
         create_vassal = TZ1
         create_alliance = TZ1
         TZ1 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -728,6 +725,16 @@ country_event = {
                 owner = { political_reform = open_borders }
             }
             ruling_party_ideology = conservative
+        }
+
+        any_country = {
+            limit = {
+                tag = TZ1
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
         }
 
         random_owned = {
@@ -792,16 +799,6 @@ country_event = {
             }
         }
         TZ1 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
-
-        1565 = {
-            secede_province = TZ1
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1567 = { secede_province = TZ1 } 
-        1570 = { secede_province = TZ1 }
     }
 }
 
@@ -863,9 +860,6 @@ country_event = {
         1571 = {
             secede_province = TZ2
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1568 = { secede_province = TZ2 } 
         1564 = { secede_province = TZ2 }
@@ -873,13 +867,13 @@ country_event = {
         create_vassal = TZ2
         create_alliance = TZ2
         TZ2 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -889,6 +883,16 @@ country_event = {
             ruling_party_ideology = conservative
         }
 
+        any_country = {
+            limit = {
+                tag = TZ2
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
+        }
+        
         random_owned = {
             limit = { owner = { tag = QNG } }
             TZ2 = { add_accepted_culture  = manchu }
@@ -952,15 +956,6 @@ country_event = {
         }
         TZ2 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
-        1571 = {
-            secede_province = TZ2
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1568 = { secede_province = TZ2 } 
-        1564 = { secede_province = TZ2 }
     }
 }
 
@@ -1024,9 +1019,6 @@ country_event = {
         1539 = {
             secede_province = TZ4
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1537 = { secede_province = TZ4 } 
         1544 = { secede_province = TZ4 }
@@ -1034,13 +1026,13 @@ country_event = {
         create_vassal = TZ4
         create_alliance = TZ4
         TZ4 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -1048,6 +1040,16 @@ country_event = {
                 owner = { political_reform = open_borders }
             }
             ruling_party_ideology = conservative
+        }
+
+        any_country = {
+            limit = {
+                tag = TZ4
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
         }
 
         random_owned = {
@@ -1113,15 +1115,6 @@ country_event = {
         }
         TZ4 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
-        1539 = {
-            secede_province = TZ4
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1537 = { secede_province = TZ4 } 
-        1544 = { secede_province = TZ4 }
     }
 }
 
@@ -1182,9 +1175,6 @@ country_event = {
         1605 = {
             secede_province = TZ5
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1475 = { secede_province = TZ5 }
         1471 = { secede_province = TZ5 }
@@ -1193,13 +1183,13 @@ country_event = {
         create_vassal = TZ5
         create_alliance = TZ5
         TZ5 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -1207,6 +1197,16 @@ country_event = {
                 owner = { political_reform = open_borders }
             }
             ruling_party_ideology = conservative
+        }
+
+        any_country = {
+            limit = {
+                tag = TZ5
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
         }
 
         random_owned = {
@@ -1272,16 +1272,6 @@ country_event = {
         }
         TZ5 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
-        1605 = {
-            secede_province = TZ5
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1475 = { secede_province = TZ5 }
-        1471 = { secede_province = TZ5 }
-        1470 = { secede_province = TZ5 }
     }
 }
 
@@ -1342,9 +1332,6 @@ country_event = {
         1610 = {
             secede_province = TZ6
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1611 = { secede_province = TZ6 } 
         1609 = { secede_province = TZ6 }
@@ -1355,13 +1342,13 @@ country_event = {
         create_vassal = TZ6
         create_alliance = TZ6
         TZ6 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -1369,6 +1356,16 @@ country_event = {
                 owner = { political_reform = open_borders }
             }
             ruling_party_ideology = conservative
+        }
+
+        any_country = {
+            limit = {
+                tag = TZ6
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
         }
 
         random_owned = {
@@ -1434,18 +1431,6 @@ country_event = {
         }
         TZ6 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
 
-        1610 = {
-            secede_province = TZ6
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1611 = { secede_province = TZ6 } 
-        1609 = { secede_province = TZ6 }
-        1607 = { secede_province = TZ6 }
-        1604 = { secede_province = TZ6 }
-        1473 = { secede_province = TZ6 }
     }
 }
 
@@ -1506,9 +1491,6 @@ country_event = {
         1493 = {
             secede_province = TZ7
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1497 = { secede_province = TZ7 }
         1494 = { secede_province = TZ7 }
@@ -1517,13 +1499,13 @@ country_event = {
         create_vassal = TZ7
         create_alliance = TZ7
         TZ7 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -1531,6 +1513,16 @@ country_event = {
                 owner = { political_reform = open_borders }
             }
             ruling_party_ideology = conservative
+        }
+
+        any_country = {
+            limit = {
+                tag = TZ7
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
         }
 
         random_owned = {
@@ -1595,18 +1587,6 @@ country_event = {
             }
         }
         TZ7 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
-
-        1493 = {
-            secede_province = TZ7
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1497 = { secede_province = TZ7 }
-        1494 = { secede_province = TZ7 }
-        1500 = { secede_province = TZ7 }
-
     }
 }
 
@@ -1673,9 +1653,6 @@ country_event = {
         1495 = {
             secede_province = TZ8
             add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
         }
         1501 = { secede_province = TZ8 }
         3326 = { secede_province = TZ8 }
@@ -1683,13 +1660,13 @@ country_event = {
         create_vassal = TZ8
         create_alliance = TZ8
         TZ8 = {
-            remove_country_modifier = western_influences
+            remove_country_modifier = uncivilized_isolationism
             add_country_modifier = {
-                name = "uncivilized_isolationism"
+                name = "western_influences"
                 duration = -1
             }
             add_country_modifier = {
-                name = "legation_quarter"
+                name = "yong_ying"
                 duration = -1
             }
             random_owned = {
@@ -1697,6 +1674,16 @@ country_event = {
                 owner = { political_reform = open_borders }
             }
             ruling_party_ideology = conservative
+        }
+
+        any_country = {
+            limit = {
+                tag = TZ8
+                NOT = { country_flag = trade_zone_setup }
+            }
+            treasury = -500000
+            treasury = 10000 #2500
+            set_country_flag = trade_zone_setup
         }
 
         random_owned = {
@@ -1761,16 +1748,6 @@ country_event = {
             }
         }
         TZ8 = { add_country_modifier = { name = trade_zone_modifier duration = -1 } }
-
-        1495 = {
-            secede_province = TZ8
-            add_province_modifier = { name = local_opium_habit duration = 3650 }
-            add_province_modifier = { name = foreign_trading_post duration = 3650 }
-            add_province_modifier = { name = western_presence duration = 3650 }
-            add_province_modifier = { name = western_presence_research duration = 3650 }
-        }
-        1501 = { secede_province = TZ8 }
-        3326 = { secede_province = TZ8 }
     }
 }
 

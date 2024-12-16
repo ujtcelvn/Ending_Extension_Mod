@@ -1881,6 +1881,12 @@ province_event = {
                 }
                 year = 1900
             }
+            AND = {
+                OR = {
+                    province_id = 88 #Mojave
+                }
+                year = 1940
+            }
             province_id = 1404 #Palak Pinang - Belitung Island
             province_id = 513  #Granada, Spain
             province_id = 712  #Lodz, Poland, after 1850

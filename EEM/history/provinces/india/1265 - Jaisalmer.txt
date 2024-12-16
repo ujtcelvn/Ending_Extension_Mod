@@ -3,4 +3,5 @@ controller = JAS
 add_core = JAS
 add_core = HND
 trade_goods = wool
+terrain = desert
 life_rating = 32

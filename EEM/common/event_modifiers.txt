@@ -1712,9 +1712,9 @@ local_intensive_agriculture = { #replaces local_tractors
 }
 
 local_steamers = {
-    farm_RGO_eff = 0.2
-    mine_RGO_eff = 0.2
-    #local_factory_throughput = 0.01
+    farm_RGO_eff = 0.1 #0.2
+    mine_RGO_eff = 0.1 #0.2
+    #local_factory_throughput = 0.02 #0.01
     icon = 11
 }
 
@@ -2695,7 +2695,10 @@ local_drug_habit = {
 
 
 trade_zone_modifier = {
-    diplomatic_points_modifier = -1
+    diplomatic_points_modifier = -0.9
+    max_loan_modifier = -1.0 # no loan 4 u
+    administrative_efficiency_modifier = 0.15 #0
+    #max_tariff = -0.35 #0 #must be 0 or else they'll go broke
     icon = 7
 }
 
