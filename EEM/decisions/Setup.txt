@@ -2829,6 +2829,15 @@ political_decisions = {
                     owner = { set_country_flag = reactionary_party_in_power }
                 }
             }
+
+            any_country = {
+                limit = {
+                    government = presidential_dictatorship
+                    exists = yes
+                }
+                ruling_party_ideology = reactionary
+            }
+
         }
     }
 
