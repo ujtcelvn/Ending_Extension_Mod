@@ -598,6 +598,11 @@ country_event = {
 #        is_substate = no
 #        civilized = yes
 #        NOT = { exists = CHI }
+#        war = no
+#    }
+#
+#    mean_time_to_happen = {
+#        months = 12
 #    }
 #
 #    option = {
@@ -629,10 +634,11 @@ country_event = {
         is_substate = no
         civilized = yes
         NOT = { exists = HUI }
+        war = no
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 12
     }
 
     option = {
@@ -662,10 +668,11 @@ country_event = {
         is_substate = no
         civilized = yes
         NOT = { exists = GNG }
+        war = no
     }
 
     mean_time_to_happen = {
-        months = 1
+        months = 12
     }
 
     option = {
