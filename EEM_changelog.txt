@@ -41,6 +41,91 @@ commerce = 16
 1936 chemistry and electricity	 7	1900 synthetic_polymers	2	1850 organic_chemistry 1
 
 industry = 19 + 5
+
+####################################################################################################
+v0.5.9b
+
+greatly simplified opium plantation closure events (166801 ~ 166812) into just 1 event
+enact_opium_ban no longer immediately wipes out all your opium
+
+AI countries with serfdom now unban opium
+unbanning opium now checks for puppet status
+Opium Plantations Close mtth sped up
+
+trade_zone_modifier administrative_efficiency_modifier 0 -> 0.15, max_loan_modifier 0 -> -1, diplomatic_points_modifier -1 -> 0.9
+Trade Zones no longer start with uncivilized_isolationism legation_quarter, foreign_trading_post, western_presence, and western_presence_research
+Trade Zones now start with western_influences and yong_ying
+Trade Zones now start with $10,000 instead of an absurd $500,000
+Trade Zone reactionaries now have pacifism, conservatives anti-military, and liberals pro-military
+Removed trade zone duplicate lines and fixed whitespace
+
+strategic bombing has a chance of removing local_distribution_channels_und_electricity
+getting nuked removes local_distribution_channels_und_electricity
+local_steamers farm_RGO_eff mine_RGO_eff 0.2 -> 0.1
+
+Anglo-Sikh War event now removes the Sikh from the British sphere
+fixed bug where RUS-EGY had -50 instead of -125 relations and hostile influence 
+Add Khivan claim on Ashkhabad 1204
+Russia absorbs Kabul, Kandahar, and Herat if Afghanistan or the Durrani Empire exist
+
+Made India, Mongolia, and West China drier
+	India
+		1265 Jaisalmer forest -> desert Thar desert
+		1267 Bikaner grassland -> desert Thar desert
+		1266 Jodhpur grassland -> semidesert "scrub forest zone" @ edge of Thar Desert
+		
+		1264 Ajmer hills -> dryhills
+		1268 Jaipur grassland -> steppe
+		1269 Udaipur grassland -> steppe
+		1293 Mandvi grassland -> semidesert "Rann of Kutch"
+		1294 Patan grassland -> steppe
+		
+		1308 Kurnool grassland -> steppe
+		1311 Coimbatore grassland -> steppe
+
+	Mongolia
+		2679 Khovid grassland -> steppe
+		1468 Uliastai hills -> dryhills
+		1466 Dalandzadgad grassland -> steppe
+		2207 Sainshand grassland -> steppe
+		(Northern Mongolia is wetter and cold: 2608 Khatgal hills and 2678 Bulgan grassland, 1469 Urga hills, and 1467 Bayan Tumen forest)	
+	Inner Mongolia
+		1535 Yeke Juu Chuulghan grassland -> steppe (Tengger Desert)
+		1532 Guihua Tumed hills -> dryhills
+	Xinjiang
+		1596 Tulta (Turpan) hills -> dryhills
+		1598 Khotan cotton -> wool (return to HPM)
+		1600 Urumqi grassland -> steppe
+		1599 Kumul forest (wtf) -> dryhills (Hami Desert), wool -> fruit (Hami melons)
+	Qinghai
+		1556 Makhai hills -> dryhills
+	Gansu
+		1490 Lanzhou hills -> dryhills
+		1491 Ningxia hills -> dryhills
+
+Moved California state capital from Los Angeles 89 to Sacramento 84 (the capital after 1854)
+California RGOs			old									new
+	84 Sacramento		cattle 								grain
+	85 Sonoma 			fish								fruit
+	86 Truckee 			fruit 								timber -> precious_metal (1848)
+	87 Monterey 		fruit -> oil (1892)					cattle
+	88 Mojave 			fruit 								cattle -> precious_metal (1880) -> iron (1940)
+	89 Los Angeles	 	grain -> gold (1848) 				fruit -> precious_metal (1861) -> oil (1890)
+	90 San Diego 		grain -> gold (1848) -> oil (1882)	cattle -> precious_metal (1870-1880) -> fruit
+	104 San Francisco 	fruit -> gold (1848)				fish
+	3324 Santa Clara 	sulphur								sulphur
+
+steam_powered_pumps iron 0.25 -> 0.1
+coke iron 0.5 -> 0.25
+square_set_timbering iron 0.25 -> 0.1
+friction_hoist coal 0.3 -> 0.2
+improved_hydraulic_drills coal, iron, precious_metal 0.05 -> 0
+diesel_excavator coal 0 -> 0.05
+
+1836 presidential dictatorships once again are properly reactionary
+
+Fixed weird trade zone behavior
+
 ####################################################################################################
 
 v0.5.9a
