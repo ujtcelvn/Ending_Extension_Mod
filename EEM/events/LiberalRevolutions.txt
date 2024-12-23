@@ -6596,7 +6596,15 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 95
+            factor = 90
+            modifier = {
+                factor = 0.5
+                alliance_with = AUS
+            }
+            modifier = {
+                factor = 0.2
+                AUS = { is_sphere_leader_of = THIS }
+            }
         }
     }
 
@@ -6619,7 +6627,7 @@ country_event = {
         }
 
         ai_chance = {
-            factor = 5
+            factor = 10
             modifier = {
                 factor = 2
                 any_greater_power = { war_with = THIS }
@@ -6629,19 +6637,11 @@ country_event = {
                 national_provinces_occupied = 0.25
             }
             modifier = {
-                factor = 0
+                factor = 0.1
                 war = no
                 NOT = { revolt_percentage = 0.25 }
                 NOT = { alliance_with = AUS }
                 NOT = { AUS = { is_sphere_leader_of = THIS } }
-            }
-            modifier = {
-                factor = 2
-                alliance_with = AUS
-            }
-            modifier = {
-                factor = 2
-                AUS = { is_sphere_leader_of = THIS }
             }
         }
     }
@@ -7699,8 +7699,8 @@ country_event = {
         OR = {
             capital_scope = { controlled_by = REB }
             capital_scope = { controlled_by = AUS }
-            national_provinces_occupied = 0.20
-            revolt_percentage = 0.20
+            national_provinces_occupied = 0.10
+            revolt_percentage = 0.10
             war_exhaustion = 20
             AND = {
                 tag = SIC
@@ -7774,7 +7774,7 @@ country_event = {
         name = "EVT10343OPTB" #drop out
         set_country_flag = abandoned_venice
         prestige = -10
-        #war_exhaustion = -10
+        war_exhaustion = -10
         any_country = {
             limit = {
                 war_with = THIS

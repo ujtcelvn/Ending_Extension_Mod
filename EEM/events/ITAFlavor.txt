@@ -380,12 +380,12 @@ country_event = {
 
     mean_time_to_happen = {
         months = 24
-        modifier = {
-            factor = 0.01
-            tag = LOM
-            #has_country_flag = milan_called_for_aid
-            has_country_flag = milan_got_aid
-        }
+        #modifier = {
+        #    factor = 0.01
+        #    tag = LOM
+        #    #has_country_flag = milan_called_for_aid
+        #    has_country_flag = milan_got_aid
+        #}
     }
 
     option = {
