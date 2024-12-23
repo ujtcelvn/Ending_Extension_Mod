@@ -8,27 +8,27 @@ province_event = {
         NOT = { has_province_modifier = pearl_season }
         OR = {
             #original opium provinces flip back to opium if legal
-            province_id = 1192	#Nukus
-            province_id = 1135	#Shiraz
-            province_id = 866	#Afyon
-            province_id = 1348	#Nakhon Sawan
-            province_id = 1347	#Lopburi
-            province_id = 1349	#Sukothai
-            province_id = 1335	#Kyaukse
-            province_id = 1182	#Guryev
-            #province_id = 1170	#Nizwa
-            #province_id = 1174	#Salalah
-            #province_id = 1166	#Muscat
-            province_id = 1271	#Indore
-            province_id = 1269	#Udaipur
-            province_id = 1338	#Taunggye
-            province_id = 1355	#Chiang Mai
-            province_id = 1247	#Patna
-            province_id = 686	#Merv
-            province_id = 1245	#Benares
-            province_id = 1333	#Toungoo
-            #province_id = 1173	#Mukalla
-            #province_id = 1175	#Ghayda
+            province_id = 1192    #Nukus
+            province_id = 1135    #Shiraz
+            province_id = 866    #Afyon
+            province_id = 1348    #Nakhon Sawan
+            province_id = 1347    #Lopburi
+            province_id = 1349    #Sukothai
+            province_id = 1335    #Kyaukse
+            province_id = 1182    #Guryev
+            #province_id = 1170    #Nizwa
+            #province_id = 1174    #Salalah
+            #province_id = 1166    #Muscat
+            province_id = 1271    #Indore
+            province_id = 1269    #Udaipur
+            province_id = 1338    #Taunggye
+            province_id = 1355    #Chiang Mai
+            province_id = 1247    #Patna
+            province_id = 686    #Merv
+            province_id = 1245    #Benares
+            province_id = 1333    #Toungoo
+            #province_id = 1173    #Mukalla
+            #province_id = 1175    #Ghayda
             AND = {
                 year = 1840
                 province_id = 807         #  Bitola 
@@ -62,15 +62,13 @@ province_event = {
                 }
             }
             AND = {
-                year = 1920                  #actually 1924
+                year = 1925
                 OR = {
+                    #year = 1920                  #actually 1924
                     province_id = 1210        # Kunduz (Badakhshan)
                     province_id = 1216        # Jalalabad (Nangarhar)
-                }
-            }
-            AND = {
-                year = 1930
-                OR = {
+
+                    #year = 1930
                     province_id = 1625        # Kaesong
                     province_id = 2180        # Chilpancingo (Guerrero)
                     province_id = 2145        # Parral (Golden Triangle of Mexico)
@@ -81,18 +79,12 @@ province_event = {
                 OR = {
                     province_id = 1215        # Kandahar (Helmand)
                     province_id = 2133        # Gizab (Uruzgan)
-                }
-            }
-            AND = {
-                year = 1980
-                OR = {
+
+                    #year = 1980
                     province_id = 1218        # Peshawar
                     province_id = 2248        # Ibague (Tolima)
-                }
-            }
-            AND = {
-                year = 1990
-                OR = {
+                    
+                    #year = 1990
                     province_id = 1211        # 1211 Balkh (Balkh, and Jawzjan)
                 }
             }
@@ -129,20 +121,20 @@ province_event = {
             OR = {
                 any_owned_province = {
                     trade_goods = opium
-                    NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                    NOT = { unemployment_by_type = { value = 0.01 type = farmers } }
                 }
                 any_neighbor_country = {
                     war = no
                     any_owned_province = {
                         trade_goods = opium
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.01 type = farmers } }
                     }
                 }
                 any_greater_power = {
                     war = no
                     any_owned_province = {
                         trade_goods = opium
-                        NOT = { unemployment_by_type = { value = 0.05 type = farmers } }
+                        NOT = { unemployment_by_type = { value = 0.01 type = farmers } }
                     }
                 }
             }
@@ -172,7 +164,7 @@ province_event = {
     #    name = "No, $PROVINCENAME$'s original production is still useful."
     #    ai_chance = { factor = 0 }
     #}
-	
+    
 }
 
 
@@ -181,13 +173,13 @@ province_event = {
     trigger = {
         trade_goods = opium
         owner = {
-			has_country_flag = opium_ban 
-			war = no
-		}
+            has_country_flag = opium_ban 
+            war = no
+        }
     }
 
     mean_time_to_happen = { 
-	    months = 60 #120
+        months = 60 #120
         modifier = {
             factor = 0.9
             unemployment_by_type = { value = 0.01 type = farmers }
@@ -200,7 +192,7 @@ province_event = {
             factor = 0.9
             unemployment_by_type = { value = 0.1 type = farmers }
         }
-	}
+    }
 
     title = "Opium Plantations Close in $PROVINCENAME$"
     desc = "The eradication of opium production has caused the locals to scramble to find new sources of income."
@@ -216,177 +208,177 @@ province_event = {
             duration = 365
         }
 
-		owner = {
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 866         # Afyon
-						province_id = 1127        # Isfahan
-						province_id = 2145        # Parral
-						province_id = 2133        # Gizab
-					}
-				}
-				trade_goods = cattle
-			}
+        owner = {
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 866         # Afyon
+                        province_id = 1127        # Isfahan
+                        province_id = 2145        # Parral
+                        province_id = 2133        # Gizab
+                    }
+                }
+                trade_goods = cattle
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1355        # Chiang Mai
-					}
-				}
-				trade_goods = coffee
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1355        # Chiang Mai
+                    }
+                }
+                trade_goods = coffee
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1192        # Nukus
-						province_id = 1271        # Indore
-						province_id = 668         # Merv
-					}
-				}
-				trade_goods = cotton
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1192        # Nukus
+                        province_id = 1271        # Indore
+                        province_id = 668         # Merv
+                    }
+                }
+                trade_goods = cotton
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1182	#Guryev
-						#province_id = 1174	#Salalah
-						#province_id = 1173	#Mukalla
-					}
-				}
-				trade_goods = fish
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1182    #Guryev
+                        #province_id = 1174    #Salalah
+                        #province_id = 1173    #Mukalla
+                    }
+                }
+                trade_goods = fish
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1335	#Kyaukse
-						#province_id = 1166	#Muscat
-						#province_id = 1175	#Ghayda
-						province_id = 1122	#Hamadan
-						province_id = 1580	#Jiading
-					}
-				}
-				trade_goods = fruit
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1335    #Kyaukse
+                        #province_id = 1166    #Muscat
+                        #province_id = 1175    #Ghayda
+                        province_id = 1122    #Hamadan
+                        province_id = 1580    #Jiading
+                    }
+                }
+                trade_goods = fruit
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1348	#Nakhon Sawan
-						province_id = 1347	#Lopburi
-						province_id = 1349	#Sukothai
-						#province_id = 1170	#Nizwa
-						province_id = 1247	#Patna
-						province_id = 1333	#Toungoo
-						province_id = 1216	#Jalalabad
-						province_id = 2171	#Cololo
-						province_id = 1625	#Kaesong
-						province_id = 1218	#Peshawar
-						province_id = 1211	#Balkh
-						province_id = 1269	#Udaipur
-					}
-				}
-				trade_goods = grain
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1348    #Nakhon Sawan
+                        province_id = 1347    #Lopburi
+                        province_id = 1349    #Sukothai
+                        #province_id = 1170    #Nizwa
+                        province_id = 1247    #Patna
+                        province_id = 1333    #Toungoo
+                        province_id = 1216    #Jalalabad
+                        province_id = 2171    #Cololo
+                        province_id = 1625    #Kaesong
+                        province_id = 1218    #Peshawar
+                        province_id = 1211    #Balkh
+                        province_id = 1269    #Udaipur
+                    }
+                }
+                trade_goods = grain
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1245	#Benares
-					}
-				}
-				trade_goods = silk
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1245    #Benares
+                    }
+                }
+                trade_goods = silk
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1258	#Gauhati
-						province_id = 1338	#Taunggye
-						province_id = 1498	#Macau
-						province_id = 1469	#Hong Kong
-					}
-				}
-				trade_goods = tea
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1258    #Gauhati
+                        province_id = 1338    #Taunggye
+                        province_id = 1498    #Macau
+                        province_id = 1469    #Hong Kong
+                    }
+                }
+                trade_goods = tea
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 807	#Bitola
-						province_id = 1602	#Dali
-					}
-				}
-				trade_goods = timber
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 807    #Bitola
+                        province_id = 1602    #Dali
+                    }
+                }
+                trade_goods = timber
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1135	#Shiraz
-					}
-				}
-				trade_goods = tobacco
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1135    #Shiraz
+                    }
+                }
+                trade_goods = tobacco
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 1356	#Luang Prabang 
-					}
-				}
-				trade_goods = tropical_wood
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 1356    #Luang Prabang 
+                    }
+                }
+                trade_goods = tropical_wood
+            }
 
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-					OR = {
-						province_id = 808	#Petrich 
-						province_id = 1210	#Kunduz
-						province_id = 1215	#Kandahar
-						province_id = 2248	#Ibague
-					}
-				}
-				trade_goods = wool
-			}
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                    OR = {
+                        province_id = 808    #Petrich 
+                        province_id = 1210    #Kunduz
+                        province_id = 1215    #Kandahar
+                        province_id = 2248    #Ibague
+                    }
+                }
+                trade_goods = wool
+            }
 
-			#catch any leftovers
-			random_owned = {
-				limit = {
-					trade_goods = opium
-					has_province_modifier = switched_production
-				}
-				trade_goods = grain
-			}
-		}
+            #catch any leftovers
+            random_owned = {
+                limit = {
+                    trade_goods = opium
+                    has_province_modifier = switched_production
+                }
+                trade_goods = grain
+            }
+        }
     }
 }
 
