@@ -90,6 +90,7 @@ NET = {
 #Africa
 EGY = {
 	value = -125
+	level = 0
 	#influence = 0
 	#influence_value = 0
 }

@@ -1,0 +1,130 @@
+objectTypes = {
+
+	#### Ships ####
+	EMFXActorType = {
+		name = "GenericCarrier"
+		actorfile = "gfx\anims\Carrier.xac"
+		
+		idle   = "gfx\anims\ShipBigIdle.xsm"
+		move   = "gfx\anims\ShipBigIdle.xsm"
+		attack = "gfx\anims\ShipAttackA.xsm"
+		scale = 1.65
+		retargeting = yes
+	}	
+	
+	#### Mot and Mech ####
+	EMFXActorType = {
+		name = "PrussianGCMech"
+		actorfile = "gfx\anims\GermanMech.xac"
+		scale = 1.1
+		
+		animation = {
+			name = "idle"
+			file = "gfx\anims\GermanMechIdle.xsm"
+			defaultAnimationTime = 0.0
+		}
+		
+		animation = {
+			name = "move"
+			file = "gfx\anims\GermanMechMove.xsm"
+			defaultAnimationTime = 2.0
+		}
+		
+		animation = {
+			name = "attack"
+			file = "gfx\anims\GermanMechAttack.xsm"
+			defaultAnimationTime = 0.0
+		}	
+	}
+	
+	EMFXActorType = {
+		name = "UsGCMech"
+		actorfile = "gfx\anims\UsMech.xac"
+		scale = 1.1
+		
+				
+		animation = {
+			name = "idle"
+			file = "gfx\anims\UsMechIdle.xsm"
+			defaultAnimationTime = 0.0
+		}
+		
+		animation = {
+			name = "move"
+			file = "gfx\anims\UsMechMove.xsm"
+			defaultAnimationTime = 2.0
+		}
+		
+		animation = {
+			name = "attack"
+			file = "gfx\anims\UsMechAttack.xsm"
+			defaultAnimationTime = 0.0
+		}	
+	}
+	
+	EMFXActorType = {
+		name = "GenericMech"
+		actorfile = "gfx\anims\GenericMech.xac"
+		scale = 1.15
+			
+		animation = {
+			name = "idle"
+			file = "gfx\anims\GenericMechIdle.xsm"
+			defaultAnimationTime = 0.0
+		}
+		
+		animation = {
+			name = "move"
+			file = "gfx\anims\GenericMechMove.xsm"
+			defaultAnimationTime = 2.0
+		}
+		
+		animation = {
+			name = "attack"
+			file = "gfx\anims\GenericMechAttack.xsm"
+			defaultAnimationTime = 0.0
+		}		
+
+	}
+
+
+	EMFXActorType = {
+		name = "UsGCMotor"
+		actorfile = "gfx\anims\UsMotor.xac"
+		
+		idle   = "gfx\anims\UsMotorIdle.xsm"
+		move   = "gfx\anims\UsMotorMoving.xsm"
+		attack = "gfx\anims\GenericMechAttack.xsm"
+		scale = 0.59
+	}
+	
+	EMFXActorType = {
+		name = "UsGCMotor58"
+		actorfile = "gfx\anims\UsMotor.xac"
+		
+		idle   = "gfx\anims\UsMotorIdle.xsm"
+		move   = "gfx\anims\UsMotorMoving.xsm"
+		attack = "gfx\anims\GenericMechAttack.xsm"
+		scale = 0.58
+	}
+	
+	EMFXActorType = {
+		name = "PreussianGCMotor"
+		actorfile = "gfx\anims\GermanMotor.xac"
+		
+		idle   = "gfx\anims\GermanMotorIdle.xsm"
+		move   = "gfx\anims\GermanMotorMoving.xsm"
+		attack = "gfx\anims\GenericMechAttack.xsm"
+		scale = 0.59
+	}
+		
+	EMFXActorType = {
+		name = "GenericMotor"
+		actorfile = "gfx\anims\GenericMotor.xac"
+		
+		idle   = "gfx\anims\GenericMotorIdle.xsm"
+		move   = "gfx\anims\GenericMotorMoving.xsm"
+		attack = "gfx\anims\GenericMechAttack.xsm"
+		scale = 0.53
+	}
+}	
