@@ -10789,6 +10789,101 @@ country_event = {
 }
 
 country_event = {
+    id = 96088
+    title = "EVTNAME96085" #theocracy
+    desc = "EVTDESC96088"
+    news = yes
+    news_title = "EVTNAME96088_NEWS_TITLE"
+    news_desc_long = "EVTDESC96088_NEWS_LONG"
+    news_desc_medium = "EVTDESC96088_NEWS_MEDIUM"
+    news_desc_short = "EVTDESC96088_NEWS_SHORT"
+    picture = "unite"
+
+    is_triggered_only = yes
+
+    option = {
+        name = "EVTOPTA96088" #We welcome the new regime.
+        government = theocracy
+        ruling_party_ideology = reactionary
+    
+        political_reform = none_voting
+        political_reform = appointed
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = no_trade_unions
+        political_reform = gerrymandering
+        political_reform = underground_parties
+
+        clr_country_flag = communist_gov
+        clr_country_flag = absolute_monarchy_gov
+        clr_country_flag = semi_constitutional_monarchy_gov
+        clr_country_flag = constitutional_monarchy_gov
+        clr_country_flag = democracy_gov
+        clr_country_flag = presidential_dictatorship_gov
+        clr_country_flag = fascist_gov
+        clr_country_flag = anarcho_liberal_gov
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+
+        set_country_flag = theocratic_government
+
+        random_country = {
+            limit = {
+                is_sphere_leader_of = THIS
+                NOT = { has_country_flag = friendly_theocracy }
+            }
+            diplomatic_influence = { who = THIS value = -100 }
+        }
+        random_country = {
+            limit = {
+                has_country_flag = friendly_theocracy
+                truce_with = THIS
+            }
+            relation = { who = THIS value = 400 }
+            diplomatic_influence = { who = THIS value = 100 }
+            create_alliance = THIS
+            clr_country_flag = friendly_theocracy
+        }
+        capital_scope = {
+            any_pop = {
+                limit = {
+                    is_primary_culture = yes
+                    is_state_religion = yes
+                }
+                ideology = { factor = 0.1 value = reactionary }
+            }
+        }
+        any_pop = {
+            scaled_militancy = {
+                ideology = reactionary
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -4
+            }
+            scaled_militancy = {
+                ideology = communist
+                factor = 8
+            }
+            scaled_militancy = {
+                ideology = socialist
+                factor = 6
+            }
+            scaled_militancy = {
+                ideology = liberal
+                factor = 4
+            }
+        }
+    }
+
+country_event = {
     id = 96090
     title = "EVTNAME96090" #End of the Monarchy
     desc = "EVTDESC96090"

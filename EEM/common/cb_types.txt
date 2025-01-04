@@ -85,6 +85,7 @@ uninstall_communist_gov_cb
 install_democracy
 install_fascism
 install_communism
+install_theocracy_no_infamy
 unification_humiliate_cb
 take_from_sphere
 liberate_country
@@ -110,7 +111,6 @@ humiliate
 place_in_the_sun
 dismantle_forts
 china_acquire_state
-#afghan_acquire_state
 acquire_state
 acquire_any_state
 acquire_substate_region
@@ -4230,84 +4230,6 @@ china_acquire_state = {
     }
 }
 
-
-# Afghan Reunification
-#afghan_acquire_state = {
-#    sprite_index = 22
-#    is_triggered_only = yes
-#    months = 12
-#    crisis = no
-
-#    badboy_factor = 0
-#    prestige_factor = 0
-#    peace_cost_factor = 1
-#    penalty_factor = 1
-
-#    break_truce_prestige_factor = 1
-#    break_truce_infamy_factor = 0
-#    break_truce_militancy_factor = 0
-#    truce_months = 84
-
-#    good_relation_prestige_factor = 1
-#    good_relation_infamy_factor = 1
-#    good_relation_militancy_factor = 1
-
-#    always = yes
-
-#    can_use = {
-#        NOT = { is_our_vassal = THIS }
-#        neighbour = THIS
-#        OR = {
-#            any_owned_province = {
-#                NOT = { is_core = THIS }
-#                is_core = AFG
-#            }
-#            primary_culture = pashtun
-#        }
-#        THIS = {
-#            NOT = { tag = AFG }
-#            NOT = { tag = DUR }
-#            NOT = { tag = CRL }
-#            primary_culture = pashtun
-#            NOT = {
-#                has_country_modifier = neutrality_modifier
-#                war_policy = pacifism
-#            }
-#        }
-#        is_vassal = no
-#        OR = {
-#            war_with = THIS
-#            THIS = { NOT = { has_country_modifier = no_more_war } }
-#        }
-#    }
-
-#    allowed_states = {
-#        OR = {
-#            any_owned_province = {
-#                NOT = { is_core = THIS }
-#               is_core = AFG
-#            }
-#            any_owned_province = {
-#                owner = { primary_culture = pashtun }
-#                NOT = { is_core = AFG }
-#            }
-#        }
-#    }
-
-#    po_demand_state = yes
-
-#    war_name = WAR_AFGHAN_REUNIFICATION
-
-#    on_add = {
-#        move_issue_percentage = {
-#            from = jingoism
-#            to = pro_military
-#            value = 0.10
-#        }
-#    }
-#}
-
-
 sahel_jihad_cb = {
     sprite_index = 29
     is_triggered_only = yes
@@ -8230,6 +8152,74 @@ install_communism = {
             }
         }
         country_event = 96087
+    }
+}
+
+install_theocracy_no_infamy = {
+    sprite_index = 23
+    is_triggered_only = yes
+    months = 12
+    construction_speed = 1.5
+	crisis = no
+
+    badboy_factor = 0
+    prestige_factor = 1
+    peace_cost_factor = 50
+    penalty_factor = 1
+    always = yes
+
+    break_truce_prestige_factor = 1
+    break_truce_infamy_factor = 1
+    break_truce_militancy_factor = 1
+    truce_months = 48
+
+    good_relation_prestige_factor = 1
+    good_relation_infamy_factor = 1
+    good_relation_militancy_factor = 1
+
+
+    can_use = {
+        NOT = { is_our_vassal = THIS }
+        THIS = {
+            is_greater_power = yes
+            has_country_flag = catholic_country
+			religious_policy = moralism
+        }
+        OR = {
+            war_with = THIS
+            THIS = {
+                NOT = { has_country_modifier = neutrality_modifier }
+                military_score = 1
+            }
+        }
+        OR = {
+            THIS = {
+                OR = {
+                    war_policy = pro_military
+                    war_policy = jingoism
+                }
+            }
+        }
+        is_vassal = no
+        tag = PAP
+        NOT = { government = theocracy }
+    }
+
+    po_remove_prestige = yes
+
+    war_name = WAR_NAME
+
+    on_add = {
+        move_issue_percentage = {
+            from = jingoism
+            to = pro_military
+            value = 0.05
+        }
+    }
+
+    on_po_accepted = {		
+        THIS = { set_country_flag = friendly_theocracy }
+        country_event = 96088
     }
 }
 

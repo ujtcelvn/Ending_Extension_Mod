@@ -436,6 +436,7 @@ political_decisions = {
     }
 
     the_first_vatican_council = {
+        picture = the_first_vatican_council
         potential = {
             tag = PAP
             government = theocracy
