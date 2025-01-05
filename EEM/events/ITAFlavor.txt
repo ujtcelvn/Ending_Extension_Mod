@@ -1148,16 +1148,16 @@ country_event = {
         ruling_party_ideology = conservative
 
         any_pop = {
-            ideology = {
-                value = reactionary
-                factor = -0.1
-            }
+            #ideology = {
+            #    value = reactionary
+            #    factor = -0.1
+            #}
             scaled_militancy = {
                 factor = -8
                 ideology = liberal
             }
             scaled_consciousness = {
-                factor = 4
+                factor = 2
                 ideology = liberal
             }
         }

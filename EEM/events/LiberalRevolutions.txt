@@ -3932,11 +3932,11 @@ country_event = {
         }
         any_pop = {
             limit = {
-				OR = {
-					has_pop_culture = croat
-					has_pop_culture = romanian
-				}
-			}
+                OR = {
+                    has_pop_culture = croat
+                    has_pop_culture = romanian
+                }
+            }
             militancy = -2
         }
         random_owned = {
@@ -4275,11 +4275,11 @@ country_event = {
         }
         any_pop = {
             limit = {
-				OR = {
-					has_pop_culture = croat
-					has_pop_culture = romanian
-				}
-			}
+                OR = {
+                    has_pop_culture = croat
+                    has_pop_culture = romanian
+                }
+            }
             militancy = -2
         }
         random_owned = {
@@ -8049,26 +8049,26 @@ country_event = {
         NOT = { government = democracy }
 
 
-		has_global_flag = venetian_revolution_occurred
+        has_global_flag = venetian_revolution_occurred
 
-		OR = {
-			AND = {
-				730 = { owned_by = AUS } #Verona
-				VEN = {
-					exists = yes
-					war_with = AUS
-					alliance_with = THIS
-				}
-			}
-			AND = {
-				728 = { owned_by = AUS } #Brescia
-				LOM = {
-					exists = yes
-					war_with = AUS
-					alliance_with = THIS
-				}
-			}
-		}
+        OR = {
+            AND = {
+                730 = { owned_by = AUS } #Verona
+                VEN = {
+                    exists = yes
+                    war_with = AUS
+                    alliance_with = THIS
+                }
+            }
+            AND = {
+                728 = { owned_by = AUS } #Brescia
+                LOM = {
+                    exists = yes
+                    war_with = AUS
+                    alliance_with = THIS
+                }
+            }
+        }
 
         OR = {
             capital_scope = { controlled_by = REB }
@@ -8108,12 +8108,12 @@ country_event = {
         }
         modifier = {
             factor = 0.2
-			OR = {
-				capital_scope = { controlled_by = REB }
-				capital_scope = { controlled_by = AUS }
-				national_provinces_occupied = 0.5
-				revolt_percentage = 0.5
-			}
+            OR = {
+                capital_scope = { controlled_by = REB }
+                capital_scope = { controlled_by = AUS }
+                national_provinces_occupied = 0.5
+                revolt_percentage = 0.5
+            }
         }
     }
 
@@ -8140,10 +8140,10 @@ country_event = {
             factor = 20
             modifier = {
                 factor = 0.1
-				OR = {
-					capital_scope = { controlled_by = REB }
-					capital_scope = { controlled_by = AUS }
-				}
+                OR = {
+                    capital_scope = { controlled_by = REB }
+                    capital_scope = { controlled_by = AUS }
+                }
             }
             modifier = {
                 factor = 0
@@ -8178,29 +8178,29 @@ country_event = {
             war_exhaustion = -5
         }
 
-		random_owned = {
-			limit = {
-				730 = { owned_by = AUS } #Verona
-				VEN = {
-					exists = yes
-					war_with = AUS
-					alliance_with = THIS
-				}
-			}
+        random_owned = {
+            limit = {
+                730 = { owned_by = AUS } #Verona
+                VEN = {
+                    exists = yes
+                    war_with = AUS
+                    alliance_with = THIS
+                }
+            }
             owner = { leave_alliance = VEN }
-		}
+        }
 
-		random_owned = {
-			limit = {
-				728 = { owned_by = AUS } #Brescia
-				LOM = {
-					exists = yes
-					war_with = AUS
-					alliance_with = THIS
-				}
-			}
+        random_owned = {
+            limit = {
+                728 = { owned_by = AUS } #Brescia
+                LOM = {
+                    exists = yes
+                    war_with = AUS
+                    alliance_with = THIS
+                }
+            }
             owner = { leave_alliance = LOM }
-		}
+        }
 
         any_pop = {
             limit = {

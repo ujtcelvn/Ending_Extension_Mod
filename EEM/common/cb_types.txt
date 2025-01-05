@@ -446,7 +446,7 @@ acquire_core_state = {
         #NOT = { any_owned_province = { is_capital = yes } }
         OR = {
             THIS = { ai = no }
-			any_owned_province = { owner = { war_with = THIS } }
+            any_owned_province = { owner = { war_with = THIS } }
             AND = {
                 THIS = { total_amount_of_ships = 5 }
                 any_owned_province = { port = yes }
@@ -1015,12 +1015,12 @@ unification_casus_belli = {
                 any_core = {
                     this_culture_union = this_union
                     is_cultural_union = yes
-					NOT = {
-					    tag = SIE
-					    tag = BAN
-					    tag = UBD
-					    tag = VRP
-				   }
+                    NOT = {
+                        tag = SIE
+                        tag = BAN
+                        tag = UBD
+                        tag = VRP
+                   }
                 }
             }
             NOT = { any_owned_province = { is_capital = yes } }
@@ -1036,11 +1036,11 @@ unification_casus_belli = {
                 this_culture_union = this_union
                 is_cultural_union = yes
                 NOT = {
-					tag = SIE
-					tag = BAN
-					tag = UBD
-					tag = VRP
-				}
+                    tag = SIE
+                    tag = BAN
+                    tag = UBD
+                    tag = VRP
+                }
             }
         }
         NOT = { any_owned_province = { is_capital = yes } }
@@ -1160,12 +1160,12 @@ unification_annex_casus_belli = {
             any_core = {
                 this_culture_union = this_union
                 is_cultural_union = yes
-				NOT = {
-				    tag = SIE
-				    tag = BAN
-				    tag = UBD
-				    tag = VRP
-				}
+                NOT = {
+                    tag = SIE
+                    tag = BAN
+                    tag = UBD
+                    tag = VRP
+                }
             }
         }
         OR = {
@@ -1566,14 +1566,14 @@ unification_release_puppet_cb = {
         is_our_vassal = FROM
         FROM = { is_culture_group = THIS is_substate = no }
         FROM = {
-			NOT = {
-				is_substate = yes
-				has_country_flag = unreleasable_country
-				tag = SIE
-				tag = BAN
-				tag = VRP
-			}
-		}
+            NOT = {
+                is_substate = yes
+                has_country_flag = unreleasable_country
+                tag = SIE
+                tag = BAN
+                tag = VRP
+            }
+        }
     }
 
     po_release_puppet = yes
@@ -1627,12 +1627,12 @@ unification_add_to_sphere = {
         is_culture_group = THIS
         cultural_union = { exists = no }
         NOT = {
-			has_country_modifier = neutrality_modifier
-			tag = SIE
-			tag = BAN
-			tag = UBD
-			tag = VRP
-		}
+            has_country_modifier = neutrality_modifier
+            tag = SIE
+            tag = BAN
+            tag = UBD
+            tag = VRP
+        }
         THIS = {
             ai = yes
             is_greater_power = yes
@@ -2167,10 +2167,10 @@ liberate_country = {
     can_use = {
         OR = {
             NOT = { has_country_modifier = war_focus }
-			AND = {
-				THIS = { involved_in_crisis = yes }
-				FROM = { involved_in_crisis = yes }
-			}
+            AND = {
+                THIS = { involved_in_crisis = yes }
+                FROM = { involved_in_crisis = yes }
+            }
             THIS = {
                 NOT = {
                     has_country_flag = exclusive_acquire_all_cores_CB
@@ -2187,7 +2187,7 @@ liberate_country = {
         number_of_states = 2
         OR = {
             war_with = THIS
-			THIS = { involved_in_crisis = yes }
+            THIS = { involved_in_crisis = yes }
             THIS = {
                 NOT = { has_country_modifier = neutrality_modifier }
                 military_score = 1
@@ -2259,7 +2259,7 @@ liberate_country = {
             }
         }
         OR = {
-			AND = {
+            AND = {
                 THIS = { ai = yes }
                 war_countries = { any_owned_province = { is_core = FROM } }
             }
@@ -4295,7 +4295,7 @@ sahel_jihad_cb = {
         NOT = { any_owned_province = { is_core = THIS } }
         OR = {
             any_owned_province = { any_neighbor_province = { owned_by = THIS } }
-			THIS = { ai = no }
+            THIS = { ai = no }
         }
     }
 
@@ -4489,7 +4489,7 @@ demand_concession_casus_belli = {
                     THIS = {
                         ai = yes
                         oil_driven_ships = 1
-						modern_naval_doctrine = 1
+                        modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4499,7 +4499,7 @@ demand_concession_casus_belli = {
                     modern_divisional_structure = 1
                     army_nco_training = 1
                 }
-				OR = {
+                OR = {
                     any_owned_province = { is_overseas = no }
                     THIS = {
                         ai = no
@@ -4508,7 +4508,7 @@ demand_concession_casus_belli = {
                     THIS = {
                         ai = yes
                         invention = modern_battleships
-						modern_naval_doctrine = 1
+                        modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4536,7 +4536,7 @@ demand_concession_casus_belli_no_infamy = {
     sprite_index = 7
     is_triggered_only = yes
     months = 0
-	constructing_cb = no
+    constructing_cb = no
     crisis = no
 
     badboy_factor = 0
@@ -4574,8 +4574,8 @@ demand_concession_casus_belli_no_infamy = {
     }
 
 
-	on_po_accepted = {
-	}
+    on_po_accepted = {
+    }
 }
 
 demand_concession_NI_casus_belli = {
@@ -4750,7 +4750,7 @@ demand_concession_NI_casus_belli = {
                     THIS = {
                         ai = yes
                         oil_driven_ships = 1
-						modern_naval_doctrine = 1
+                        modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4760,7 +4760,7 @@ demand_concession_NI_casus_belli = {
                     modern_divisional_structure = 1
                     army_nco_training = 1
                 }
-				OR = {
+                OR = {
                     any_owned_province = { is_overseas = no }
                     THIS = {
                         ai = no
@@ -4769,7 +4769,7 @@ demand_concession_NI_casus_belli = {
                     THIS = {
                         ai = yes
                         invention = modern_battleships
-						modern_naval_doctrine = 1
+                        modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4959,7 +4959,7 @@ demand_concession_BC_casus_belli = {
                     THIS = {
                         ai = yes
                         oil_driven_ships = 1
-						modern_naval_doctrine = 1
+                        modern_naval_doctrine = 1
                     }
                 }
             }
@@ -4969,7 +4969,7 @@ demand_concession_BC_casus_belli = {
                     modern_divisional_structure = 1
                     army_nco_training = 1
                 }
-				OR = {
+                OR = {
                     any_owned_province = { is_overseas = no }
                     THIS = {
                         ai = no
@@ -4978,7 +4978,7 @@ demand_concession_BC_casus_belli = {
                     THIS = {
                         ai = yes
                         invention = modern_battleships
-						modern_naval_doctrine = 1
+                        modern_naval_doctrine = 1
                     }
                 }
             }
@@ -6959,10 +6959,10 @@ establish_protectorate_casus_belli = {
 
             AND = {
                 NOT = { total_pops = 2000000 }
-				OR = {
-					THIS = { machine_guns = 1 }
-					THIS = { total_pops = 3000000 }
-				}
+                OR = {
+                    THIS = { machine_guns = 1 }
+                    THIS = { total_pops = 3000000 }
+                }
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -6977,13 +6977,13 @@ establish_protectorate_casus_belli = {
             }
             AND = {
                 NOT = { total_pops = 3000000 }
-				OR = {
-					THIS = {
-						bolt_action_rifles = 1
-						army_risk_management = 1
-					}
-					THIS = { total_pops = 5000000 }
-				}
+                OR = {
+                    THIS = {
+                        bolt_action_rifles = 1
+                        army_risk_management = 1
+                    }
+                    THIS = { total_pops = 5000000 }
+                }
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -6998,13 +6998,13 @@ establish_protectorate_casus_belli = {
             }
             AND = {
                 total_pops = 3000000
-				OR = {
-					THIS = {
-						modern_divisional_structure = 1
-						army_nco_training = 1
-					}
-					THIS = { total_pops = 6000000 }
-				}
+                OR = {
+                    THIS = {
+                        modern_divisional_structure = 1
+                        army_nco_training = 1
+                    }
+                    THIS = { total_pops = 6000000 }
+                }
             }
         } ###End of Non-African Restrictions
 
@@ -7142,9 +7142,9 @@ establish_protectorate_NI_casus_belli = {
             AND = {
                 NOT = { total_pops = 2000000 }
                 OR = {
-					THIS = { machine_guns = 1 }
-					THIS = { total_pops = 3000000 }
-				}
+                    THIS = { machine_guns = 1 }
+                    THIS = { total_pops = 3000000 }
+                }
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7160,12 +7160,12 @@ establish_protectorate_NI_casus_belli = {
             AND = {
                 NOT = { total_pops = 3000000 }
                OR = {
-					THIS = {
-						bolt_action_rifles = 1
-						army_risk_management = 1
-					}
-					THIS = { total_pops = 5000000 }
-				}
+                    THIS = {
+                        bolt_action_rifles = 1
+                        army_risk_management = 1
+                    }
+                    THIS = { total_pops = 5000000 }
+                }
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7181,12 +7181,12 @@ establish_protectorate_NI_casus_belli = {
             AND = {
                 total_pops = 3000000
                 OR = {
-					THIS = {
-						modern_divisional_structure = 1
-						army_nco_training = 1
-					}
-					THIS = { total_pops = 6000000 }
-				}
+                    THIS = {
+                        modern_divisional_structure = 1
+                        army_nco_training = 1
+                    }
+                    THIS = { total_pops = 6000000 }
+                }
             }
         } ###End of Non-African Restrictions
     }
@@ -7335,9 +7335,9 @@ establish_protectorate_BC_casus_belli = {
             AND = {
                 NOT = { total_pops = 2000000 }
                 OR = {
-					THIS = { machine_guns = 1 }
-					THIS = { total_pops = 3000000 }
-				}
+                    THIS = { machine_guns = 1 }
+                    THIS = { total_pops = 3000000 }
+                }
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7353,12 +7353,12 @@ establish_protectorate_BC_casus_belli = {
             AND = {
                 NOT = { total_pops = 3000000 }
                 OR = {
-					THIS = {
-						bolt_action_rifles = 1
-						army_risk_management = 1
-					}
-					THIS = { total_pops = 5000000 }
-				}
+                    THIS = {
+                        bolt_action_rifles = 1
+                        army_risk_management = 1
+                    }
+                    THIS = { total_pops = 5000000 }
+                }
                 OR = {
                     capital_scope = { is_overseas = no }
                     THIS = {
@@ -7374,12 +7374,12 @@ establish_protectorate_BC_casus_belli = {
             AND = {
                 total_pops = 3000000
                 OR = {
-					THIS = {
-						modern_divisional_structure = 1
-						army_nco_training = 1
-					}
-					THIS = { total_pops = 6000000 }
-				}
+                    THIS = {
+                        modern_divisional_structure = 1
+                        army_nco_training = 1
+                    }
+                    THIS = { total_pops = 6000000 }
+                }
             }
         } ###End of Non-African Restrictions
     }
@@ -7592,8 +7592,8 @@ make_puppet_no_infamy = {
     prestige_factor = 1
     peace_cost_factor = 1
     penalty_factor = 1
-	constructing_cb = no
-	crisis = no
+    constructing_cb = no
+    crisis = no
 
     good_relation_prestige_factor = 1
     good_relation_infamy_factor = 1
@@ -7617,7 +7617,7 @@ make_puppet_no_infamy = {
             to = pro_military
             value = 0.25
         }
-	}
+    }
 
     on_po_accepted = {
         country_event = 19370
@@ -8160,7 +8160,7 @@ install_theocracy_no_infamy = {
     is_triggered_only = yes
     months = 12
     construction_speed = 1.5
-	crisis = no
+    crisis = no
 
     badboy_factor = 0
     prestige_factor = 1
@@ -8183,7 +8183,19 @@ install_theocracy_no_infamy = {
         THIS = {
             is_greater_power = yes
             has_country_flag = catholic_country
-			religious_policy = moralism
+            OR = {
+                religious_policy = moralism
+                AND = {
+                    religious_policy = pluralism
+                    OR = {
+                        government = theocracy
+                        government = absolute_monarchy
+                        government = prussian_constitutionalism
+                        government = hms_government
+                        government = presidental_dictatorship
+                    }
+                }
+            }
         }
         OR = {
             war_with = THIS
@@ -8217,7 +8229,7 @@ install_theocracy_no_infamy = {
         }
     }
 
-    on_po_accepted = {		
+    on_po_accepted = {        
         THIS = { set_country_flag = friendly_theocracy }
         country_event = 96088
     }
