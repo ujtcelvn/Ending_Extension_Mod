@@ -16,14 +16,15 @@ rebel = {
 
 #Total 11.5
 life_needs = {
-    cattle = 1   #0.725    #0.45                    # 1       #2.0
-    wool =   1   #0.9      #0.8                     # 1       #0.7
-    fish =   1   #0.9      #0.8                     # 1       #1.5
-    fruit =  1   #0.9      #0.8                     # 1       #1.8       
-    grain =  2.5 #2.25     #2                       # 2.5     #5.5     2.2
+    cattle = 1   #0.89     #0.725    #0.45                    # 1       #2.0
+    wool =   1   #0.95     #0.9      #0.8                     # 1       #0.7
+    fish =   1   #0.95     #0.9      #0.8                     # 1       #1.5
+    fruit =  1   #0.95     #0.9      #0.8                     # 1       #1.8       
+    grain =  2.5 #2.4      #2.25     #2                       # 2.5     #5.5     2.2
+    #opium = 0   #0.2      #0.5      #1                       # 0
 }
 
-#HPM: 43.75 (75.75 with opium)
+#HPM: 43.75
 everyday_needs = {
     coal = 1
     tobacco = 5
@@ -32,7 +33,7 @@ everyday_needs = {
     regular_clothes = 1.2
     furniture = 1.1
     opium = 10
-    fertilizer = 0.5 #0
+    fertilizer = 0.5
     explosives = 0.25
 }
 
