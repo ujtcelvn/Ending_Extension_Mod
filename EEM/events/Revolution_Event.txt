@@ -349,30 +349,6 @@ country_event = {
         clr_country_flag = interning_finnougric
         clr_country_flag = animists_run
         ##
-        #Prevent rebel spiraling for the AI
-        random_owned = {
-            limit = { NOT = { owner = { plurality = 5 } } ai = no }
-            random = {
-                chance = 50
-                THIS = {
-                    any_pop = {
-                        limit = { is_primary_culture = yes }
-                        militancy = -4
-                        consciousness = -2
-                    }
-                    any_pop = {
-                        limit = { is_accepted_culture = yes }
-                        militancy = -2
-                        consciousness = -1
-                    }
-                    any_pop = {
-                        limit = { is_primary_culture = no is_accepted_culture = no }
-                        consciousness = 2
-                    }
-                    change_variable = { which = rebel_spiral_crutch value = 1 }
-                }
-            }
-        }
     }
 }
 
@@ -876,30 +852,6 @@ country_event = {
         clr_country_flag = interning_finnougric
         clr_country_flag = animists_run
         ##
-        #Prevent rebel spiraling for the AI
-        random_owned = {
-            limit = { NOT = { owner = { plurality = 5 } } ai = no }
-            random = {
-                chance = 50
-                THIS = {
-                    any_pop = {
-                        limit = { is_primary_culture = yes }
-                        militancy = -4
-                        consciousness = -2
-                    }
-                    any_pop = {
-                        limit = { is_accepted_culture = yes }
-                        militancy = -2
-                        consciousness = -1
-                    }
-                    any_pop = {
-                        limit = { is_primary_culture = no is_accepted_culture = no }
-                        consciousness = 2
-                    }
-                    change_variable = { which = rebel_spiral_crutch value = 1 }
-                }
-            }
-        }
     }
 }
 
@@ -1318,30 +1270,6 @@ country_event = {
         clr_country_flag = interning_finnougric
         clr_country_flag = animists_run
         ##
-        #Prevent rebel spiraling for the AI
-        random_owned = {
-            limit = { NOT = { owner = { plurality = 5 } } ai = no }
-            random = {
-                chance = 50
-                THIS = {
-                    any_pop = {
-                        limit = { is_primary_culture = yes }
-                        militancy = -4
-                        consciousness = -2
-                    }
-                    any_pop = {
-                        limit = { is_accepted_culture = yes }
-                        militancy = -2
-                        consciousness = -1
-                    }
-                    any_pop = {
-                        limit = { is_primary_culture = no is_accepted_culture = no }
-                        consciousness = 2
-                    }
-                    change_variable = { which = rebel_spiral_crutch value = 1 }
-                }
-            }
-        }
     }
 }
 
@@ -1771,30 +1699,6 @@ country_event = {
         clr_country_flag = interning_finnougric
         clr_country_flag = animists_run
         ##
-        #Prevent rebel spiraling for the AI
-        random_owned = {
-            limit = { NOT = { owner = { plurality = 5 } } ai = no }
-            random = {
-                chance = 50
-                THIS = {
-                    any_pop = {
-                        limit = { is_primary_culture = yes }
-                        militancy = -4
-                        consciousness = -2
-                    }
-                    any_pop = {
-                        limit = { is_accepted_culture = yes }
-                        militancy = -2
-                        consciousness = -1
-                    }
-                    any_pop = {
-                        limit = { is_primary_culture = no is_accepted_culture = no }
-                        consciousness = 2
-                    }
-                    change_variable = { which = rebel_spiral_crutch value = 1 }
-                }
-            }
-        }
     }
 }
 

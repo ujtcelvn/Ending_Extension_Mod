@@ -10881,6 +10881,26 @@ country_event = {
                 factor = 4
             }
         }
+        any_country = {
+            limit = {
+                war_with = THIS
+				has_country_flag = catholic_country
+				OR = {
+					religious_policy = moralism
+					AND = {
+						religious_policy = pluralism
+						OR = {
+							government = theocracy
+							government = absolute_monarchy
+							government = prussian_constitutionalism
+							government = hms_government
+							government = presidental_dictatorship
+						}
+					}
+				}
+            }
+			country_event = 110203
+        }
     }
 
 country_event = {

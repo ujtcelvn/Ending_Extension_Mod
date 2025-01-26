@@ -572,6 +572,15 @@ fascist_rebels = {
         }
     }
     demands_enforced_effect = {
+        random_owned = {
+            limit = {
+                owner = {
+                    tag = PAP
+                    government = theocracy
+                }
+            }
+            owner = { country_event = { id = 110201 days = 2 } }
+        }
         clr_country_flag = theocratic_government
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
@@ -850,6 +859,15 @@ communist_rebels = {
         }
     }
     demands_enforced_effect = {
+        random_owned = {
+            limit = {
+                owner = {
+                    tag = PAP
+                    government = theocracy
+                }
+            }
+            owner = { country_event = { id = 110201 days = 2 } }
+        }
         clr_country_flag = theocratic_government
         set_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
@@ -1165,6 +1183,15 @@ anarcho_liberal_rebels = {
         }
     }
     demands_enforced_effect = {
+        random_owned = {
+            limit = {
+                owner = {
+                    tag = PAP
+                    government = theocracy
+                }
+            }
+            owner = { country_event = { id = 110201 days = 2 } }
+        }
         clr_country_flag = theocratic_government
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
@@ -1659,25 +1686,25 @@ pan_nationalist_rebels = {
             factor = 0
             country = { tag = DNB }
         }
-		modifier = {
+        modifier = {
             factor = 0
             country = { tag = UBD }
-			NOT = { cultural_union = {  neighbour = THIS } }
+            NOT = { cultural_union = {  neighbour = THIS } }
         }
-		modifier = {
+        modifier = {
             factor = 0
             country = { tag = BAN }
-			NOT = { cultural_union = {  neighbour = THIS } }
+            NOT = { cultural_union = {  neighbour = THIS } }
         }
-		modifier = {
+        modifier = {
             factor = 0
             country = { tag = VRP }
-			NOT = { cultural_union = {  neighbour = THIS } }
+            NOT = { cultural_union = {  neighbour = THIS } }
         }
-		modifier = {
+        modifier = {
             factor = 0
             country = { tag = SIE }
-			NOT = { cultural_union = {  neighbour = THIS } }
+            NOT = { cultural_union = {  neighbour = THIS } }
         }
         modifier = {
             factor = 0
@@ -3806,6 +3833,15 @@ liberal_rebels = {
         }
     }
     demands_enforced_effect = {
+        random_owned = {
+            limit = {
+                owner = {
+                    tag = PAP
+                    government = theocracy
+                }
+            }
+            owner = { country_event = { id = 110201 days = 2 } }
+        }
         clr_country_flag = theocratic_government
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
@@ -4776,6 +4812,15 @@ socialist_rebels = {
         }
     }
     demands_enforced_effect = {
+        random_owned = {
+            limit = {
+                owner = {
+                    tag = PAP
+                    government = theocracy
+                }
+            }
+            owner = { country_event = { id = 110201 days = 2 } }
+        }
         clr_country_flag = theocratic_government
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
@@ -6447,7 +6492,7 @@ anti_qing_rebels = {
         #    }
         #    militancy = -3
         #}
-		#change_controller = QNG
+        #change_controller = QNG
     }
 
     # Country scope

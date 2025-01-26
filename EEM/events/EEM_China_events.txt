@@ -2924,8 +2924,10 @@ country_event = {
     picture = "taiping"
 
     trigger = {
-        has_country_flag = catholic_country
-        owns = 749 #Rome
+        #has_country_flag = catholic_country
+        #owns = 749 #Rome
+        tag = PAP
+        government = theocracy
         has_global_flag = taiping_victorious
         NOT = { 
             has_global_flag = catholics_hate_taiping
@@ -2959,7 +2961,7 @@ country_event = {
         ai_chance = {
             factor = 80
             modifier = {
-                factor = 0.5
+                factor = 0
                 OR = {
                     badboy = 0.9
                     war_policy = pacifism
@@ -3042,7 +3044,7 @@ country_event = {
         war = no
         NOT = { has_global_flag = usa_taiping_missionaries_welcomed }
         NOT = { has_global_flag = usa_taiping_missionaries_not_welcomed }
-        OR = { exists = USA exists = CSA }
+        OR = { exists = USA exists = CSA exists = FSA }
     }
 
     mean_time_to_happen = {
@@ -3054,6 +3056,8 @@ country_event = {
         set_global_flag = usa_taiping_missionaries_welcomed
         add_country_modifier = { name = missionary_activity duration = -1 }
         relation = { who = USA value = 200 }
+        relation = { who = CSA value = 200 }
+        relation = { who = FSA value = 200 }
 
         ai_chance = {
             factor = 80
@@ -3064,6 +3068,8 @@ country_event = {
         name = "EVT166303OPTB" #discourage them
         set_global_flag = usa_taiping_missionaries_not_welcomed
         relation = { who = USA value = -50 }
+        relation = { who = CSA value = -50 }
+        relation = { who = FSA value = -50 }
         prestige = -5
 
         ai_chance = {

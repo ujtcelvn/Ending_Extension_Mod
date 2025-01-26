@@ -1141,7 +1141,7 @@ country_event = {
 
     title = "EVTNAME110200"
     desc = "EVTDESC110200"
-    picture = "st_peters_church"
+    picture = "pius_ix_election"
 
     option = {
         name = "EVTOPTA110200"
@@ -1185,3 +1185,281 @@ country_event = {
         }
     }
 }
+
+
+country_event = {
+    id = 110201
+
+    #trigger = {
+    #    tag = PAP
+    #    NOT = { government = theocracy }
+    #    NOT = { has_global_flag = pope_fled_to_gaeta }
+    #}
+
+    #fire_only_once = yes
+    is_triggered_only = yes
+
+    #mean_time_to_happen =  {
+    #    months = 1
+    #}
+
+    title = "EVTNAME110201"
+    desc = "EVTDESC110201"
+    picture = "st_peters_church"
+
+    option = {
+        name = "EVTOPTA110201"
+        set_global_flag = pope_fled_to_gaeta
+        prestige = -5
+
+
+        add_country_modifier = {
+            name = begin_revolution
+            duration = 730
+        }
+
+        any_country = {
+            limit = {
+                has_country_flag = catholic_country
+                OR = {
+                    religious_policy = moralism
+                    AND = {
+                        religious_policy = pluralism
+                        OR = {
+                            government = theocracy
+                            government = absolute_monarchy
+                            government = prussian_constitutionalism
+                            government = hms_government
+                            government = presidental_dictatorship
+                        }
+                    }
+                }
+                OR = {
+                    is_greater_power = yes
+                    AND = {
+                        neighbour = PAP
+                        is_secondary_power = yes
+                    }
+                }
+                exists = yes
+            }
+            country_event = 110202
+        }
+    }
+}
+
+country_event = {
+    id = 110202
+
+    is_triggered_only = yes
+
+    title = "EVTNAME110202"
+    desc = "EVTDESC110202"
+    picture = "st_peters_church"
+
+    option = {
+        name = "EVTOPTA110202"
+        prestige = 5
+
+        relation = { who = PAP value = -400 }
+        influence = { who = PAP value = -400 }
+
+        any_pop = {
+            limit = { is_state_religion = yes } 
+            scaled_militancy = {
+                factor = -2
+                ideology = reactionary
+            }
+        }
+
+        any_pop = {
+            limit = {
+                is_state_religion = yes
+                type = clergymen
+            }
+            scaled_militancy = {
+                factor = -6
+                ideology = moralism
+            }
+        }
+
+        war = {
+            target = PAP
+            attacker_goal = { casus_belli = install_theocracy_no_infamy }
+            defender_goal = { casus_belli = status_quo }
+        }
+
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 0
+                OR = {
+                    war_policy = pacifism
+                    war_policy = anti_military
+                    is_disarmed = yes
+                }
+            }
+            modifier = {
+                factor = 0.1
+                war = yes
+            }
+            modifier = {
+                factor = 0.1
+                tag = AUS
+                war_with = HUN
+            }
+            modifier = {
+                factor = 0
+                NOT = { tag = FRA }
+                NOT = { tag = AUS }
+                NOT = { tag = KUK }
+                #NOT = { tag = DNB }
+                NOT = { tag = SIC }
+                NOT = { ships = 10 }
+            }
+            modifier = {
+                factor = 0
+                NOT = { capital_scope = { continent = europe } }
+            }
+            modifier = {
+                factor = 0
+                is_secondary_power = yes
+                NOT = { neighbour = PAP }
+            }
+            modifier = {
+                factor = 0
+                primary_culture = north_italian
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTB110202"
+		prestige = -5
+        relation = { who = PAP value = -100 }
+        influence = { who = PAP value = -100 }
+
+        casus_belli = {
+            target = PAP
+            type = install_theocracy_no_infamy
+            months = 48
+        }
+
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+            modifier = {
+                factor = 0
+                primary_culture = north_italian
+            }
+        }
+    }
+
+    option = {
+        name = "EVTOPTC110202"
+        badboy = -2
+
+        relation = { who = PAP value = 50 }
+        any_pop = {
+            scaled_militancy = {
+                factor = -4
+                ideology = liberal
+            }
+        }
+
+        any_pop = {
+            limit = { is_state_religion = yes } 
+            scaled_militancy = {
+                factor = 2
+                ideology = reactionary
+            }
+        }
+
+        any_pop = {
+            limit = {
+                is_state_religion = yes
+                type = clergymen
+            }
+            scaled_militancy = {
+                factor = 6
+                ideology = moralism
+            }
+        }
+
+        ai_chance = {
+            factor = 5
+            modifier = {
+                factor = 0
+                OR = {
+                    government = theocracy
+                    government = absolute_monarchy
+                    government = prussian_constitutionalism
+                    #government = hms_government
+                    government = presidental_dictatorship
+                    religious_policy = moralism
+                }
+                NOT = { primary_culture = north_italian }
+            }
+            modifier = {
+                factor = 2
+                any_greater_power = { war_with = THIS }
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = 110203
+
+    is_triggered_only = yes
+
+    title = "EVTNAME110203"
+    desc = "EVTDESC110203"
+    picture = "st_peters_church"
+
+    option = {
+        name = "EVTOPTA110203"
+        war_exhaustion = -5
+        relation = { who = FROM value = 100 }
+        end_war = FROM
+
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = "EVTOPTB110203"
+        badboy = 2
+
+        any_pop = {
+            limit = { is_state_religion = yes } 
+            scaled_militancy = {
+                factor = 2
+                ideology = reactionary
+            }
+        }
+
+        any_pop = {
+            limit = {
+                is_state_religion = yes
+                type = clergymen
+            }
+            scaled_militancy = {
+                factor = 6
+                ideology = moralism
+            }
+        }
+
+        ai_chance = {
+            factor = 0
+        }
+    }
+
+}
+
+
