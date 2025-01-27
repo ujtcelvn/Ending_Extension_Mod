@@ -1,5 +1,5 @@
 ENG = {
-    value = -125
+    value = -200
 }
 PRU = {
     value = 49

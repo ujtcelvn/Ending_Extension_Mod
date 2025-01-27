@@ -328,7 +328,6 @@ province_event = {
                     has_province_modifier = switched_production
                     OR = {
                         province_id = 807    #Bitola
-                        province_id = 1602    #Dali
                     }
                 }
                 trade_goods = timber
@@ -340,6 +339,7 @@ province_event = {
                     has_province_modifier = switched_production
                     OR = {
                         province_id = 1135    #Shiraz
+                        province_id = 1602    #Dali (previously timber)
                     }
                 }
                 trade_goods = tobacco

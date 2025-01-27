@@ -55,17 +55,19 @@ govt_flag = {
 	flag = theocracy
 }
 
+foreign_weapons = yes_foreign_weapons
+admin_reform = yes_admin_reform
+
 # Technologies
+flintlock_rifles = 1
 
 # Inventions
-flintlock_rifles = 1
 #bottling_process = yes
 modern_winemaking = yes
-small_arms_production = yes
-ammunition_production = yes
 #big_sail_ships = yes
 #sail_ships_transport = yes
 #big_sail_support = yes
+
 
 # Starting Consciousness
 consciousness = 0

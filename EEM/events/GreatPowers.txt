@@ -2847,7 +2847,7 @@ country_event = {
     option = {
         name = "EVTOPTB810004" #We will pay everything
         prestige = 10 #5
-        diplomatic_influence = { who = FROM value = 200 }
+        diplomatic_influence = { who = FROM value = 100 }
         random_owned = {
             limit = {
                 owner = {
