@@ -1424,7 +1424,7 @@ country_event = {
     option = {
         name = "EVTOPTA110203"
         war_exhaustion = -5
-        relation = { who = FROM value = 100 }
+        relation = { who = FROM value = 300 }
         end_war = FROM
 
         ai_chance = {

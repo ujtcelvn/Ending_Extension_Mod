@@ -8,7 +8,7 @@ USA = {
 	value = 30
 }
 RUS = {
-	value = 49
+	value = 125
 }
 
 leader = {

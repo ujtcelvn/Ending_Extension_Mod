@@ -10874,16 +10874,17 @@ country_event = {
             }
             scaled_militancy = {
                 ideology = socialist
-                factor = 6
+                factor = 4
             }
             scaled_militancy = {
                 ideology = liberal
-                factor = 4
+                factor = 2
             }
         }
         any_country = {
             limit = {
                 war_with = THIS
+				THIS = { has_country_flag = catholic_country }
 				has_country_flag = catholic_country
 				OR = {
 					religious_policy = moralism

@@ -58,7 +58,7 @@ KRA = {
     influence_value = 0
 }
 DEN = {
-    value = 49
+    value = 125
 }
 MOL = {
     value = 75
