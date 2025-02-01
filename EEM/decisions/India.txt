@@ -752,7 +752,14 @@ political_decisions = {
         allow = {
             vassal_of = ENG
             any_neighbor_country = { has_country_flag = sepoy_rebellion }
-            1236 = { any_neighbor_province = { owned_by = ENG average_militancy = 7 } }
+            #1236 = { any_neighbor_province = { owned_by = ENG average_militancy = 7 } }
+			any_owned_province = {
+				any_neighbor_province = {
+					owned_by = ENG
+					is_core = HND
+					average_militancy = 7
+				}
+			}
         }
 
         effect = {
