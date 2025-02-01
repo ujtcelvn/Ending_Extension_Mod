@@ -187,10 +187,9 @@ NET = {
 
 }
 DEN = {
-    value = -200        #relation
+    value = -125        #relation
     level = 0        #3=cordial, 4 = friendly, 5 sphere
     influence_value = 0
-
 }
 SWE = {
     value = 25        #relation

@@ -59,6 +59,7 @@ KRA = {
 }
 DEN = {
     value = 125
+    level = 3
 }
 MOL = {
     value = 75

@@ -2718,6 +2718,15 @@ country_event = {
         treasury = 300000
         any_country = {
             limit = {
+                is_sphere_leader_of = THIS
+                capital_scope = { continent = europe }
+                NOT = { tag = TUR }
+            }
+            diplomatic_influence = { who = THIS value = -150 }
+            leave_alliance = THIS
+        }
+        any_country = {
+            limit = {
                 OR = {
                     AND = {
                         is_greater_power = yes
@@ -2731,6 +2740,7 @@ country_event = {
             }
             relation = { who = THIS value = 50 }
         }
+
         FROM = { country_event = { id = 810004 days = 7 } }
         ai_chance = { factor = 80 }
     }

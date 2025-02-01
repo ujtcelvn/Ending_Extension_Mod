@@ -153,7 +153,7 @@ MOR = {
 DEN = {
     value = 30
 	level = 2
-	influence_value = 15
+	influence_value = 0
 }
 
 QNG ={
