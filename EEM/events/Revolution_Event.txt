@@ -3404,11 +3404,6 @@ country_event = {
             owner = { remove_country_modifier = european_military_mission }
         }
 
-        random_owned = {
-            limit = { owner = { has_country_modifier = yong_ying } }
-            owner = { remove_country_modifier = yong_ying }
-        }
-
         random_country = {
             limit = {
                 is_sphere_leader_of = THIS

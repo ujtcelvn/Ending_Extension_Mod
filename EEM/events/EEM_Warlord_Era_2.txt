@@ -53,8 +53,10 @@ country_event = {
                 }
             }
             AND = {
-                tag = QNG
-                has_country_flag = manchu_elite_cleared_out
+                OR = {
+                    has_country_flag = manchu_elite_cleared_out
+                    has_country_flag = yong_ying_flag
+                }
                 NOT = { nationalvalue = nv_tradition }
             }
         }
@@ -211,29 +213,23 @@ country_event = {
         #}
 
         random_owned = {
-		    limit = {
+            limit = {
                 owner = { tag = QNG }
                 NOT = { exists = RTR }
             }
             RTR = { all_core = { remove_core = RTR } }
             set_global_flag = ming_has_happened
             set_global_flag = ming_has_been_defeated
-		}
+        }
         random_owned = {
-		    limit = {
+            limit = {
                 owner = { tag = QNG }
                 NOT = { exists = TPG }
             }
             TPG = { all_core = { remove_core = TPG } }
             set_global_flag = taiping_has_happened
             set_global_flag = taiping_has_been_defeated
-		}
-
-        random_owned = {
-            limit = { owner = { has_country_modifier = yong_ying } }
-            owner = { remove_country_modifier = yong_ying }
         }
-
     }
 }
 

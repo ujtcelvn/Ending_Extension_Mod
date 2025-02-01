@@ -6,6 +6,70 @@ political_decisions = {
     #kongsi_ming #removed for being dumb
     #move_capital_to_beijing_qing #merged into move_capital_to_historical_capital
 
+    china_arm_warlords = {
+        picture = clear_out_the_manchu_elite
+        potential = {
+            OR = {
+                tag = CHI
+                tag = TPG
+                tag = RTR
+            }
+            civilized = no
+            #NOT = { has_country_flag = yong_ying_flag }
+            NOT = { has_country_modifier = yong_ying }
+        }
+
+        allow = {
+            war_countries = {
+                OR = {
+                    civilized = yes
+                    has_country_modifier = yong_ying
+                }
+            }
+        }
+
+        effect = {
+            any_owned = {
+                limit = {
+                    owner = { NOT = { has_country_flag = yong_ying_flag } }
+                }
+                owner = { 
+					years_of_research = 0.1
+					set_country_flag = yong_ying_flag
+				}
+            }
+
+            add_country_modifier = {
+                name = yong_ying
+                duration = -1
+            }
+            any_pop = {
+                limit = {
+                    OR = {
+                        type = aristocrats
+                        type = bureaucrats
+                        type = officers
+                        type = soldiers
+                    }
+                    OR = {
+                        is_primary_culture = yes
+                        is_accepted_culture = yes
+                    }
+                }
+                militancy = -4
+                consciousness = 2
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                factor = 0
+                ruling_party_ideology = reactionary
+            }
+        }
+    }
+
     prevent_warlord_era = {
         picture = ww2_chinese_arty
         alert = yes

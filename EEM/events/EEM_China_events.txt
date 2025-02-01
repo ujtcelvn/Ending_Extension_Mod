@@ -4649,7 +4649,11 @@ country_event = {
         any_owned = {
             limit = { OR = { is_core = RTR is_core = TPG } }
             any_pop = {
-                limit = { is_culture_group = east_asian NOT = { culture = manchu } NOT = { culture = beifaren } }
+                limit = {
+					is_culture_group = east_asian
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
                 militancy = 1
                 consciousness = 1
             }
@@ -4674,7 +4678,7 @@ country_event = {
     major = yes
 
     option = {
-        name = "It's the end of an era."
+        name = "Out with the Qing!"
         set_global_flag = taiping_has_happened
         set_global_flag = ming_has_happened
 
@@ -5193,10 +5197,6 @@ country_event = {
         #    THIS = { annex_to = TPG }
         #}
 
-        random_owned = {
-            limit = { owner = { has_country_modifier = yong_ying } }
-            owner = { remove_country_modifier = yong_ying }
-        }
         random_owned = {
             limit = { owner = { has_country_modifier = the_female_shortage } }
             owner = { remove_country_modifier = the_female_shortage }
