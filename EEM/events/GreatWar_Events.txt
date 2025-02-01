@@ -10903,6 +10903,7 @@ country_event = {
 			country_event = 110203
         }
     }
+}
 
 country_event = {
     id = 96090
