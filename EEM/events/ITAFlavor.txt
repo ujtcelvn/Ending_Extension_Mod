@@ -1368,9 +1368,8 @@ country_event = {
 
     option = {
         name = "EVTOPTC110202"
-        badboy = -2
 
-        relation = { who = PAP value = 50 }
+        relation = { who = PAP value = 100 }
         any_pop = {
             scaled_militancy = {
                 factor = -4
@@ -1443,7 +1442,8 @@ country_event = {
 
     option = {
         name = "EVTOPTB110203"
-        badboy = 2
+        badboy = 1
+        war_exhaustion = 5
 
         any_pop = {
             limit = { is_state_religion = yes } 
