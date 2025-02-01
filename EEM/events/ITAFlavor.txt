@@ -1330,6 +1330,10 @@ country_event = {
                 factor = 0
                 primary_culture = north_italian
             }
+            modifier = {
+                factor = 0
+                tag = ITA
+            }
         }
     }
 
@@ -1354,6 +1358,10 @@ country_event = {
             modifier = {
                 factor = 0
                 primary_culture = north_italian
+            }
+            modifier = {
+                factor = 0
+                tag = ITA
             }
         }
     }
@@ -1402,6 +1410,7 @@ country_event = {
                     religious_policy = moralism
                 }
                 NOT = { primary_culture = north_italian }
+                NOT = { tag = ITA }
             }
             modifier = {
                 factor = 2
