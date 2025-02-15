@@ -22,9 +22,11 @@ Improved AI
 
 A bunch of bugfixes for HPM
 
-More China flavor and suffering. Trade access (sphering) of parts of China after the Taiping rebellion if you own treaty ports.
+Trade access (sphering) of parts of China after the Taiping rebellion if you own treaty ports.
 
 Danubian Federation cultures now guaranteed if militancy < 1 and its home country doesn't exist
+
+Catholics can now re-install the Pope into the Papal States.
 
 Integrated Xylephone's HPM Politics & Economy Patch 4.0's Political & National Value Changes, Setup Changes, and some of the optional changes
 

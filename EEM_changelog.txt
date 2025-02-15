@@ -43,6 +43,71 @@ commerce = 16
 industry = 19 + 5
 
 ####################################################################################################
+v0.5.9c
+Fixed bug where demoted craftsmen turn into farmers in provinces where they should be labourers
+
+opium RGO spread event 
+	merge year 1920 and 1930 brackets into 1925
+	merge year 1970, 1980, and 1990 brackets into 1975
+	farmer unemployment threshold 0.05 -> 0.01
+
+Faster AI abandonment of Venice
+S-P less likely to support Lombardy if they're sphered by Austria
+remove milan_got_aid mtth decrease for union with S-P event
+
+1528 Yuezhou tea -> fish (turns to iron after 1900)
+
+revert irish_potato_blight back to HPM version
+
+the_first_vatican_council.dds
+add install_theocracy_no_infamy cb
+add Pius IX event 
+1st Italian War of Independence drop out also works for S-P, for both LOM and VEN, and gives Austria -5 war exhaustion
+Milan revocation has an option to play as Lombardy
+
+Hungarian revolution also slightly decreases Austria's croat and romanian militancy
+
+1605 Huzhou tea -> silk
+1567 Qingzhou silk -> fish
+1528 Yuezhou fish -> back to tea
+1474 Luzhou (Hefei) cattle -> tea
+
+California RGOs
+	84 Sacramento		grain -> fruit
+	85 Sonoma 			fruit -> timber
+
+AI actually tries to restore the Pope now
+2 types of install theocracy cb - 1 for the event, 1 for manually justifying
+Tweaked some Taiping events
+Removed the rebel spiral crutch, it never properly triggered anyways
+
+artisan everyday tobacco 1.5 -> 1, tea 4.5 -> 4, opium 1 -> 1.5
+aircraft_carrier hull 20 -> 10, gun_power 14 -> 24
+
+AI_BIGSHIP_PROPORTION = 0.25 -> 0.3
+AI_TRANSPORT_PROPORTION = 0.35 -> 0.3
+
+Reduced install theocracy militancy gain, increased relations
+
+ENG - DEN relations -> -125, starts Hostile	
+1602 Dali turns into tobacco after opium is banned
+YNN, GXI, GNG, MAO, FJN, and TAI now start as civilized as QNG
+
+Copenhagen Convention removes DEN from sphere, if paid in full your influence gain 200 -> 100
+ENG relation with DEN -50 -> -125
+RUS relation with DEN 25 -> 49, level neutral -> cordial
+USA influence on DEN 15 -> 0
+
+buffed yong_ying
+unciv rebels, anti-qing rebels, form_china, and the Warlord Era event no longer remove yong_ying
+CHI, TPG, and RTR can also get yong_ying
+
+nv_autocracy can demote craftsmen as long as it does not have citizens_rights = all_voting_pops 
+nv_equality can only demote craftsmen if it ha no voting, residency, and not citizens_rights = all_voting_pops 
+
+"Declare a Jihad Against the British" now still works if Britain already returned cores to the Mughals #188
+
+####################################################################################################
 v0.5.9b
 
 greatly simplified opium plantation closure events (166801 ~ 166812) into just 1 event
