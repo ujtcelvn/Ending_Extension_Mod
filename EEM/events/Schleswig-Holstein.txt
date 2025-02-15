@@ -371,7 +371,11 @@ country_event = {
             leave_alliance = THIS
             relation = {
                 who = THIS
-                value = -50
+                value = -100 #-50
+            }
+            diplomatic_influence = {
+                who = THIS
+                value = -100
             }
         }
         war = {
@@ -703,6 +707,145 @@ country_event = {
                 factor = 0.2
                 relation = { who = DEN value = 180 }
             }
+        }
+    }
+}
+
+
+
+# Schleswig-Holstein looks for a protector
+country_event = {
+    id = 900501
+
+    title = "EVTNAME900501"
+    desc = "EVTDESC900501"
+    picture = "danishgovernment"
+
+    trigger = {
+        tag = SWH
+        war = no
+        is_vassal = no
+        is_substate = no
+        part_of_sphere = no
+        is_greater_power = no
+        NOT = { has_country_flag = swh_protected }
+		NOT = { badboy = 1 }
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    immediate = {
+        set_country_flag = swh_protected
+    }
+
+    option = {
+        name = "EVT900501OPTA"
+        any_country = {
+            limit = {
+                primary_culture = north_german
+            }
+            relation = {
+                who = SWH
+                value = 50
+            }
+        }
+
+        random_country = {
+            limit = {
+                primary_culture = north_german
+                is_greater_power = yes
+            }
+            country_event = 900502
+        }
+
+        ai_chance = {
+            factor = 66
+            modifier = {
+                factor = 0
+                NOT = { any_greater_power = { primary_culture = north_german } }
+            }
+            modifier = {
+                factor = 2
+                exists = NGF
+                NOT = ( exists = SGF }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT900501OPTB"
+        any_country = {
+            limit = {
+                primary_culture = south_german
+            }
+            relation = {
+                who = SWH
+                value = 50
+            }
+        }
+
+        random_country = {
+            limit = {
+                primary_culture = north_german
+                is_greater_power = yes
+            }
+            country_event = 900502
+        }
+
+        ai_chance = {
+            factor = 33
+            modifier = {
+                factor = 0
+                NOT = { any_greater_power = { primary_culture = south_german } }
+            }
+            modifier = {
+                factor = 2
+                exists = SGF
+                NOT = ( exists = NGF }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT900501OPTC"
+        prestige = 5
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+
+# Schleswig-Holstein looks for a protector
+country_event = {
+    id = 900502
+
+    title = "EVTNAME900502"
+    desc = "EVTDESC900502"
+    picture = "danishgovernment"
+
+    is_triggered_only = ye
+
+    option = {
+        name = "EVT900502OPTA"
+        diplomatic_influence = { who = FROM value = 400 }
+        relation = { who = SWH value = 200 }
+        create_alliance = SWH
+
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+    option = {
+        name = "EVT900502OPTB"
+
+        ai_chance = {
+            factor = 0
         }
     }
 }

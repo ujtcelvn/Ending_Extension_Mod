@@ -3,7 +3,7 @@
     #picture = "air_pollution"
     #NWO = { change_variable = { which = pollution_counter value = 1 } }
     #pollution remains responsible for approximately 9 million deaths per year, corresponding to one in six deaths worldwide. 
-	#add_province_modifier = { name = local_pollution_problem duration = 365 }
+    #add_province_modifier = { name = local_pollution_problem duration = 365 }
 
 
     #id = 12301

@@ -3,10 +3,10 @@ political_decisions = {
         picture = dissolve_the_parliament
         potential = {
             NOT = { has_country_modifier = interment_camps }
-            OR = {
+            # OR = {
                 has_country_flag = government_decisions_on
-                ai = yes
-            }
+            #    ai = yes
+            #}
             government = absolute_monarchy
             upper_house_composition = appointed
             NOT = { has_country_flag = dissolving_parliament }
@@ -196,10 +196,10 @@ political_decisions = {
         alert = no
         potential = {
             NOT = { is_greater_power = yes }
-            OR = {
+            #OR = {
                 has_country_flag = government_decisions_on
-                ai = yes
-            }
+            #    ai = yes
+            #}
         }
 
         allow = {
@@ -261,24 +261,24 @@ political_decisions = {
         }
 
         ai_will_do = {
-            factor = 1
-            modifier = {
-                factor = 0
-                NOT = {
-                    has_country_modifier = benefactor_ai
-                    has_country_modifier = coward_ai
-                }
-            }
+            factor = 0 #1
+            #modifier = {
+            #    factor = 0
+            #    NOT = {
+            #        has_country_modifier = benefactor_ai
+            #        has_country_modifier = coward_ai
+            #    }
+            #}
 
-            modifier = {
-                factor = 0
-                num_of_cities = 30
-            }
+            #modifier = {
+            #    factor = 0
+            #    num_of_cities = 30
+            #}
 
-            modifier = {
-                factor = 0
-                total_pops = 4000000
-            }
+            #modifier = {
+            #    factor = 0
+            #    total_pops = 4000000
+            #}
         }
     }
     

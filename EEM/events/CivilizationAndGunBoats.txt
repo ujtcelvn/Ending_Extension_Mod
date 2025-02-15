@@ -4160,8 +4160,8 @@ country_event = {
 
     trigger = {
        exists = yes
-	   is_greater_power = yes
-	   NOT = { FROM = { is_greater_power = yes } }
+       is_greater_power = yes
+       NOT = { FROM = { is_greater_power = yes } }
     }
 
     option = {
@@ -4183,15 +4183,15 @@ country_event = {
         relation = { who = FROM value = 100 }
         add_country_modifier = { name = factories_nationalized duration = 365 }
         rich_strata = {
-			scaled_militancy = {
-				issue = jingoism
-				factor = 3
-			}
-			scaled_consciousness = {
-				issue = jingoism
-				factor = 6
-			}
-		}
+            scaled_militancy = {
+                issue = jingoism
+                factor = 3
+            }
+            scaled_consciousness = {
+                issue = jingoism
+                factor = 6
+            }
+        }
     }
 }
 

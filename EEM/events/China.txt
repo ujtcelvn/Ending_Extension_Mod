@@ -12,7 +12,7 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-		exists = yes
+        exists = yes
         OR = {
             tag = CHI
             tag = TPG
@@ -164,23 +164,23 @@ country_event = {
         }
 
         random_owned = {
-		    limit = {
+            limit = {
                 owner = { NOT = { tag = RTR } }
                 NOT = { exists = RTR }
             }
             RTR = { all_core = { remove_core = RTR } }
             set_global_flag = ming_has_happened
             set_global_flag = ming_has_been_defeated
-		}
+        }
         random_owned = {
-		    limit = {
+            limit = {
                 owner = { NOT = { tag = TPG } }
                 NOT = { exists = TPG }
             }
             TPG = { all_core = { remove_core = TPG } }
             set_global_flag = taiping_has_happened
             set_global_flag = taiping_has_been_defeated
-		}
+        }
 
         random_owned = {
             limit = { owner = { has_country_modifier = yong_ying } }
@@ -287,7 +287,7 @@ country_event = {
     is_triggered_only = yes
 
     trigger = {
-		exists = yes
+        exists = yes
         NOT = { has_global_flag = the_dragon_wakes }
         OR = {
             tag = MCK
@@ -856,42 +856,42 @@ country_event = {
 
     option = {
         name = "EVT91000OPTA"
-		1493 = {
-			random_pop = {
-				limit = {
-					has_pop_culture = yue #line doesn't work
-					OR = {
-						type = serfs
-						type = bureaucrats
-						type = soldiers
-						#type = artisans
-					}
-				}
-				move_pop = 1496
-			}
-		}
+        1493 = {
+            random_pop = {
+                limit = {
+                    has_pop_culture = yue #line doesn't work
+                    OR = {
+                        type = serfs
+                        type = bureaucrats
+                        type = soldiers
+                        #type = artisans
+                    }
+                }
+                move_pop = 1496
+            }
+        }
 
-		1496 = {
-			add_province_modifier = {
-				name = recently_built_city
-				duration = 365
-			}
-			any_pop = {
-				limit = {
-					#is_primary_culture = no
-					#is_accepted_culture = no
-					is_culture_group = east_asian
-					OR = {
-						#type = artisans
-						type = soldiers
-						type = bureaucrats
-						#type = clergymen
-						type = serfs
-					}
-				}
-				pop_type = labourers
-			}
-		}
+        1496 = {
+            add_province_modifier = {
+                name = recently_built_city
+                duration = 365
+            }
+            any_pop = {
+                limit = {
+                    #is_primary_culture = no
+                    #is_accepted_culture = no
+                    is_culture_group = east_asian
+                    OR = {
+                        #type = artisans
+                        type = soldiers
+                        type = bureaucrats
+                        #type = clergymen
+                        type = serfs
+                    }
+                }
+                pop_type = labourers
+            }
+        }
 
         any_pop = { limit = { is_culture_group = east_asian } militancy = 1 }
         prestige_factor = -0.1

@@ -473,15 +473,15 @@ country_event = {
         OR = {
             election = yes
             NOT = { government = democracy }
-			year = 1848
+            year = 1848
         }
         COL = { exists = no }
         OR = {
             owns = 86
             owns = 81
-			owns = 91
-			owns = 113
-			owns = 80
+            owns = 91
+            owns = 113
+            owns = 80
         }
     }
 

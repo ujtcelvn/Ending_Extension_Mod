@@ -36,16 +36,16 @@ country_event = {
             }
         }
         random_owned = {
-		    limit = {
-		        province_id = 1510
-		        owner = {
+            limit = {
+                province_id = 1510
+                owner = {
                     has_country_flag = tiandihui
-		            tag = QNG
+                    tag = QNG
                     NOT = { has_global_flag = ming_has_happened }
                     NOT = { has_global_flag = taiping_has_happened }
                     NOT = { has_global_flag = ming_has_been_prevented }
-		        }
-		    }
+                }
+            }
             state_scope = {
                 any_owned = {
                     limit = { NOT = { is_core = RTR } }
@@ -95,16 +95,16 @@ country_event = {
             }
         }
         random_owned = {
-		    limit = {
-		        province_id = 1563
-		        owner = {
+            limit = {
+                province_id = 1563
+                owner = {
                     has_country_flag = tiandihui
-		            tag = QNG
+                    tag = QNG
                     NOT = { has_global_flag = ming_has_happened }
                     NOT = { has_global_flag = taiping_has_happened }
                     NOT = { has_global_flag = ming_has_been_prevented }
-		        }
-		    }
+                }
+            }
             state_scope = {
                 any_owned = {
                     limit = { NOT = { is_core = RTR } }

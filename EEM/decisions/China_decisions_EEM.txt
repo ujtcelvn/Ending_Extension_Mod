@@ -31,12 +31,28 @@ political_decisions = {
         effect = {
             any_owned = {
                 limit = {
-                    owner = { NOT = { has_country_flag = yong_ying_flag } }
+                    owner = {
+                        ai = no
+                        NOT = { has_country_flag = yong_ying_flag }
+                    }
                 }
                 owner = { 
-					years_of_research = 0.1
-					set_country_flag = yong_ying_flag
-				}
+                    years_of_research = 0.1
+                    set_country_flag = yong_ying_flag
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        ai = yes
+                        NOT = { has_country_flag = yong_ying_flag }
+                    }
+                }
+                owner = {
+                    years_of_research = 1
+                    set_country_flag = yong_ying_flag
+                }
             }
 
             add_country_modifier = {

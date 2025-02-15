@@ -1,5 +1,4 @@
 political_decisions = {
-
     start_strategic_bombardment = {
         alert = yes
         

@@ -3,16 +3,17 @@ political_decisions = {
         picture = gtfo
         alert = no
         potential = {
-            OR = {
+            #OR = {
                 has_country_flag = government_decisions_on
-                ai = yes
-            }
+            #    ai = yes
+            #}
             num_of_vassals_no_substates = 1
             is_vassal = no
             NOT = { has_country_flag = gtfo has_country_flag = gtfo_disabled }
         }
         allow = { civilized = yes ai = no }
         effect = { set_country_flag = gtfo }
+        ai_will_do = { factor = 0 }
     }
     gtfo_off = {
         picture = gtfo
@@ -23,20 +24,22 @@ political_decisions = {
         }
         allow = { ai = no }
         effect = { clr_country_flag = gtfo }
+        ai_will_do = { factor = 1 }
     }
     gtfo_disabled = {
         picture = gtfo
         alert = no
         potential = {
-            OR = {
+            #OR = {
                 has_country_flag = government_decisions_on
-                ai = yes
-            }
+            #    ai = yes
+            #}
             has_country_flag = gtfo
             NOT = { has_country_flag = gtfo_disabled }
         }
         allow = { ai = no }
         effect = { clr_country_flag = gtfo set_country_flag = gtfo_disabled }
+        ai_will_do = { factor = 0 }
     }
 
     gtfo_MNP = { picture = gtfo alert = no potential = { ai = no has_country_flag = gtfo MNP = { vassal_of = THIS NOT = { substate_of = THIS } } } allow = { war = no MNP = { war = no } } effect = { prestige_factor = -0.1 release_vassal = MNP diplomatic_influence = { who = MNP value = -100 } } }

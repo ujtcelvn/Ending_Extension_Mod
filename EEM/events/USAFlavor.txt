@@ -1386,9 +1386,9 @@ country_event = {
         name = "EVTOPTB441268"
         relation = { who = CSA value = -400 }
         CSA = {
-			diplomatic_influence = {
-				who = THIS
-				value = -400
+            diplomatic_influence = {
+                who = THIS
+                value = -400
             }
         }
         ai_chance = {

@@ -349,6 +349,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -533,6 +534,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -695,6 +697,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -747,36 +750,36 @@ country_event = {
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         government = absolute_monarchy
-		
-		add_country_modifier = { name = national_confusion duration = 365 }
-		
-		any_pop = {
-			scaled_militancy = {
-				factor = 8
-				ideology = liberal
-			}
-			
-			scaled_consciousness = {
-				factor = 9
-				ideology = liberal
-			}
-		}
-		
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = socialist } }
-			owner = {
-				any_pop = {
-					scaled_militancy = {
-						factor = 8
-						ideology = socialist
-					}
-					scaled_consciousness = {
-						factor = 9
-						ideology = socialist
-					}
-				}
-			}
-		}
+        
+        add_country_modifier = { name = national_confusion duration = 365 }
+        
+        any_pop = {
+            scaled_militancy = {
+                factor = 8
+                ideology = liberal
+            }
+            
+            scaled_consciousness = {
+                factor = 9
+                ideology = liberal
+            }
+        }
+        
+        random_owned = {
+            limit = { owner = { is_ideology_enabled = socialist } }
+            owner = {
+                any_pop = {
+                    scaled_militancy = {
+                        factor = 8
+                        ideology = socialist
+                    }
+                    scaled_consciousness = {
+                        factor = 9
+                        ideology = socialist
+                    }
+                }
+            }
+        }
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -864,6 +867,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1006,6 +1010,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1155,6 +1160,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1187,20 +1193,20 @@ country_event = { #Constitutional Monarchy flips to Semi-Constitutional
     trigger = {
         government = hms_government
         civilized = yes
-		OR = {
-			NOT = {
-				OR = {
-					political_parties = secret_ballots
-					political_parties = non_secret_ballots
-				}
-			}
-			NOT = {
-				OR = {
-					vote_franschise = universal_weighted_voting
-					vote_franschise = universal_voting
-				}
-			}
-		}
+        OR = {
+            NOT = {
+                OR = {
+                    political_parties = secret_ballots
+                    political_parties = non_secret_ballots
+                }
+            }
+            NOT = {
+                OR = {
+                    vote_franschise = universal_weighted_voting
+                    vote_franschise = universal_voting
+                }
+            }
+        }
     }
 
     mean_time_to_happen = {
@@ -1218,37 +1224,37 @@ country_event = { #Constitutional Monarchy flips to Semi-Constitutional
         clr_country_flag = fascist_gov
         clr_country_flag = anarcho_liberal_gov
         government = prussian_constitutionalism
-		
-		add_country_modifier = { name = national_confusion duration = 365 }
-		
-		any_pop = {
-			scaled_militancy = {
-				factor = 4
-				ideology = liberal
-			}
-			
-			scaled_consciousness = {
-				factor = 6
-				ideology = liberal
-			}
-		}
-		
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = socialist } }
-			owner = {
-				any_pop = {
-					scaled_militancy = {
-						factor = 4
-						ideology = socialist
-					}
-					scaled_consciousness = {
-						factor = 6
-						ideology = socialist
-					}
-				}
-			}
-		}
-		
+        
+        add_country_modifier = { name = national_confusion duration = 365 }
+        
+        any_pop = {
+            scaled_militancy = {
+                factor = 4
+                ideology = liberal
+            }
+            
+            scaled_consciousness = {
+                factor = 6
+                ideology = liberal
+            }
+        }
+        
+        random_owned = {
+            limit = { owner = { is_ideology_enabled = socialist } }
+            owner = {
+                any_pop = {
+                    scaled_militancy = {
+                        factor = 4
+                        ideology = socialist
+                    }
+                    scaled_consciousness = {
+                        factor = 6
+                        ideology = socialist
+                    }
+                }
+            }
+        }
+        
         #Genocide Cleanup
         ##Set Up Timer based on time the thing ran
         random_owned = {
@@ -1336,6 +1342,7 @@ country_event = { #Constitutional Monarchy flips to Semi-Constitutional
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1388,37 +1395,37 @@ country_event = {
     option = {
         name = "EVT60080OPTA"
         government = presidential_dictatorship
-		
-		add_country_modifier = { name = national_confusion duration = 365 }
-		
-		any_pop = {
-			scaled_militancy = {
-				factor = 8
-				ideology = liberal
-			}
-			
-			scaled_consciousness = {
-				factor = 9
-				ideology = liberal
-			}
-		}
-		
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = socialist } }
-			owner = {
-				any_pop = {
-					scaled_militancy = {
-						factor = 8
-						ideology = socialist
-					}
-					scaled_consciousness = {
-						factor = 9
-						ideology = socialist
-					}
-				}
-			}
-		}
-		
+        
+        add_country_modifier = { name = national_confusion duration = 365 }
+        
+        any_pop = {
+            scaled_militancy = {
+                factor = 8
+                ideology = liberal
+            }
+            
+            scaled_consciousness = {
+                factor = 9
+                ideology = liberal
+            }
+        }
+        
+        random_owned = {
+            limit = { owner = { is_ideology_enabled = socialist } }
+            owner = {
+                any_pop = {
+                    scaled_militancy = {
+                        factor = 8
+                        ideology = socialist
+                    }
+                    scaled_consciousness = {
+                        factor = 9
+                        ideology = socialist
+                    }
+                }
+            }
+        }
+        
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -1514,6 +1521,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1561,36 +1569,36 @@ country_event = {
     option = {
         name = "EVT60090OPTA"
         government = bourgeois_dictatorship
-		
-		add_country_modifier = { name = national_confusion duration = 365 }
-		
-		any_pop = {
-			scaled_militancy = {
-				factor = 8
-				ideology = liberal
-			}
-			
-			scaled_consciousness = {
-				factor = 9
-				ideology = liberal
-			}
-		}
-		
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = socialist } }
-			owner = {
-				any_pop = {
-					scaled_militancy = {
-						factor = 8
-						ideology = socialist
-					}
-					scaled_consciousness = {
-						factor = 9
-						ideology = socialist
-					}
-				}
-			}
-		}
+        
+        add_country_modifier = { name = national_confusion duration = 365 }
+        
+        any_pop = {
+            scaled_militancy = {
+                factor = 8
+                ideology = liberal
+            }
+            
+            scaled_consciousness = {
+                factor = 9
+                ideology = liberal
+            }
+        }
+        
+        random_owned = {
+            limit = { owner = { is_ideology_enabled = socialist } }
+            owner = {
+                any_pop = {
+                    scaled_militancy = {
+                        factor = 8
+                        ideology = socialist
+                    }
+                    scaled_consciousness = {
+                        factor = 9
+                        ideology = socialist
+                    }
+                }
+            }
+        }
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -1686,6 +1694,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1733,36 +1742,36 @@ country_event = {
     option = {
         name = "EVT60100OPTA"
         government = proletarian_dictatorship
-		
-		add_country_modifier = { name = national_confusion duration = 365 }
-		
-		any_pop = {
-			scaled_militancy = {
-				factor = 8
-				ideology = liberal
-			}
-			
-			scaled_consciousness = {
-				factor = 9
-				ideology = liberal
-			}
-		}
-		
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = socialist } }
-			owner = {
-				any_pop = {
-					scaled_militancy = {
-						factor = 8
-						ideology = socialist
-					}
-					scaled_consciousness = {
-						factor = 9
-						ideology = socialist
-					}
-				}
-			}
-		}
+        
+        add_country_modifier = { name = national_confusion duration = 365 }
+        
+        any_pop = {
+            scaled_militancy = {
+                factor = 8
+                ideology = liberal
+            }
+            
+            scaled_consciousness = {
+                factor = 9
+                ideology = liberal
+            }
+        }
+        
+        random_owned = {
+            limit = { owner = { is_ideology_enabled = socialist } }
+            owner = {
+                any_pop = {
+                    scaled_militancy = {
+                        factor = 8
+                        ideology = socialist
+                    }
+                    scaled_consciousness = {
+                        factor = 9
+                        ideology = socialist
+                    }
+                }
+            }
+        }
         set_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -1858,6 +1867,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -1906,36 +1916,36 @@ country_event = {
     option = {
         name = "EVT60110OPTA"
         government = fascist_dictatorship
-		
-		add_country_modifier = { name = national_confusion duration = 365 }
-		
-		any_pop = {
-			scaled_militancy = {
-				factor = 8
-				ideology = liberal
-			}
-			
-			scaled_consciousness = {
-				factor = 9
-				ideology = liberal
-			}
-		}
-		
-		random_owned = {
-			limit = { owner = { is_ideology_enabled = socialist } }
-			owner = {
-				any_pop = {
-					scaled_militancy = {
-						factor = 8
-						ideology = socialist
-					}
-					scaled_consciousness = {
-						factor = 9
-						ideology = socialist
-					}
-				}
-			}
-		}
+        
+        add_country_modifier = { name = national_confusion duration = 365 }
+        
+        any_pop = {
+            scaled_militancy = {
+                factor = 8
+                ideology = liberal
+            }
+            
+            scaled_consciousness = {
+                factor = 9
+                ideology = liberal
+            }
+        }
+        
+        random_owned = {
+            limit = { owner = { is_ideology_enabled = socialist } }
+            owner = {
+                any_pop = {
+                    scaled_militancy = {
+                        factor = 8
+                        ideology = socialist
+                    }
+                    scaled_consciousness = {
+                        factor = 9
+                        ideology = socialist
+                    }
+                }
+            }
+        }
         clr_country_flag = communist_gov
         clr_country_flag = absolute_monarchy_gov
         clr_country_flag = semi_constitutional_monarchy_gov
@@ -2031,6 +2041,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -2085,7 +2096,7 @@ country_event = {
             NOT = { tag = BAN }
             sphere_owner = { neighbour = THIS }
         }
-		OR = {
+        OR = {
             NOT = { tag = UBD }
             sphere_owner = { neighbour = THIS }
         }
@@ -2103,7 +2114,7 @@ country_event = {
             tag = FSA
             tag = UIL
             tag = UNB
-			tag = VRP
+            tag = VRP
             tag = INO
             tag = IRE
         }
@@ -4916,12 +4927,12 @@ country_event = {
     option = {
         name = "EVT6016826OPTA"
         any_owned = {
-			limit = {
-				is_core = FROM
-				has_province_modifier = landlocked_province
-			}
-			secede_province = FROM
-		}
+            limit = {
+                is_core = FROM
+                has_province_modifier = landlocked_province
+            }
+            secede_province = FROM
+        }
     }
 }
 
@@ -4933,24 +4944,24 @@ province_event = {
 
     trigger = {
         year = 1880
-		trade_goods = precious_metal
-		OR = {
-			province_id = 2179
-			province_id = 2156
-		}
+        trade_goods = precious_metal
+        OR = {
+            province_id = 2179
+            province_id = 2156
+        }
     }
-	
-	mean_time_to_happen = { months = 24 }
+    
+    mean_time_to_happen = { months = 24 }
 
     option = {
         name = "EVT6016828OPTA"
         remove_province_modifier = silver_mine
-		remove_province_modifier = local_nitroglycerin_and_machine_tools
-		remove_province_modifier = local_conveyors_and_excavators
-		random_list = {
-			33 = { trade_goods = coffee }
-			34 = { trade_goods = timber }
-		}
+        remove_province_modifier = local_nitroglycerin_and_machine_tools
+        remove_province_modifier = local_conveyors_and_excavators
+        random_list = {
+            33 = { trade_goods = coffee }
+            34 = { trade_goods = timber }
+        }
     }
 }
 

@@ -699,10 +699,13 @@ country_event = {
         name = "EVT166710OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ1_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ1_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ1_research
             }
         }
@@ -862,10 +865,13 @@ country_event = {
         name = "EVT166720OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ2_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ2_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ2_research
             }
         }
@@ -1026,10 +1032,13 @@ country_event = {
         name = "EVT166740OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ4_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ4_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ4_research
             }
         }
@@ -1187,10 +1196,13 @@ country_event = {
         name = "EVT166750OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ5_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ5_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ5_research
             }
         }
@@ -1350,10 +1362,13 @@ country_event = {
         name = "EVT166760OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ6_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ6_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ6_research
             }
         }
@@ -1517,10 +1532,13 @@ country_event = {
         name = "EVT166770OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ7_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ7_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ7_research
             }
         }
@@ -1687,10 +1705,13 @@ country_event = {
         name = "EVT166780OPTA"
         random_owned = {
             limit = {
-                owner = { NOT = { has_country_flag = TZ8_research } }
+                owner = {
+                    NOT = { has_country_flag = TZ8_research }
+                    ai = yes
+                }
             }
             owner = {
-                years_of_research = 0.5
+                years_of_research = 1
                 set_country_flag = TZ8_research
             }
         }

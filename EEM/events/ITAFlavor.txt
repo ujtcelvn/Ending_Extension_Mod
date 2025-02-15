@@ -1339,7 +1339,7 @@ country_event = {
 
     option = {
         name = "EVTOPTB110202"
-		prestige = -5
+        prestige = -5
         relation = { who = PAP value = -100 }
         influence = { who = PAP value = -100 }
 

@@ -3758,12 +3758,44 @@ country_event = {
         name = "EVTOPTA4433" #Religion
         random_owned = { limit = { owner = { NOT = { has_country_flag = animists_run } } } owner = { set_country_flag = animists_run } }
         set_country_flag = interning_religions
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                OR = {
+                    is_culture_group = germanic
+                    is_culture_group = pan_romanian
+                    primary_culture = bulgarian
+                    is_culture_group = french
+                    is_culture_group = baltic
+                    is_culture_group = beneluxian
+                    is_culture_group = east_slavic
+                    is_culture_group = scandinavian
+                    is_culture_group = czecho_slovak_culture_group
+                    is_culture_group = polish_culture_group
+                    primary_culture = serb
+                    primary_culture = turkish
+                }
+            }
+        }
     }
 
     option = {
         name = "EVTOPTB4433" #Culture
         random_owned = { limit = { owner = { NOT = { has_country_flag = animists_run } } } owner = { set_country_flag = animists_run } }
         set_country_flag = interning_cultures
+        ai_chance = {
+            factor = 50
+            modifier = {
+                factor = 0
+                OR = {
+                    primary_culture = croat
+                    tag = ISR
+                    tag = HND
+                    tag = BUR
+                }
+            }
+        }
     }
 }
 
@@ -3779,20 +3811,29 @@ country_event = {
     option = {
         name = "EVTOPTA4434" #Colonial Only
         set_country_flag = interning_on_colonies
+        ai_chance = {
+            factor = 0
+        }
     }
 
     option = {
         name = "EVTOPTB4434" #Non-Colonial Only
         set_country_flag = interning_on_homeland
+        ai_chance = {
+            factor = 0
+        }
     }
 
     option = {
         name = "EVTOPTC4434" #Everywhere
         set_country_flag = interning_everywhere
         change_variable = { which = slowdown_point value = 1 }
+        ai_chance = {
+            factor = 1
+        }
     }
-
 }
+
 
 #Fascist Government Coup Puppets - Set Up
 country_event = {

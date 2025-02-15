@@ -43,6 +43,136 @@ commerce = 16
 industry = 19 + 5
 
 ####################################################################################################
+v0.5.9d
+
+AI_ARMY_TAXBASE_FRACTION = 0.15 -> 0.2
+AI_NAVY_TAXBASE_FRACTION = 0.25 -> 0.3
+
+S-H now picks a sphere leader when it becomes independent and not at war
+ENG - DEN starting relation hostile -> opposed
+
+event 90054 Schleswig-Holstein Rebellion
+	Relation between DEN and north_germans -50 -> -100 and diplomatic_influence -100 so Prussia spheres DEN less
+
+Add generic capital sacked event, removed Nanking-specific event
+Fix for AI China STILL Westernizing 10~20 years too late
+	Trade zones now give 1 year of research but only to the AI
+	clear_out_the_manchu_elite and yong_ying now give 1 year of research but only to the AI
+Removed event 166225 Punti-Hakka wars because it's bloat
+
+Replaced many tabs with spaces
+
+removed check for ai = yes for government decisions that have ai_will_do = { factor = 0 }
+	dissolve_the_upper_house
+	send_pleasantries_to_great_power
+	gtfo_on
+	gtfo_disabled
+	reform_the_local_government
+ai no longer uses send_pleasantries_to_great_power
+
+pan_gypsy is now a separate culture group
+
+camps can now be turned on while at war
+being at war reduces camp efficency
+
+some AI countries will now use internment_camps 
+	if fascist and set up the the_terror + political_education OR totalitarian_system 
+	
+	interning_religions
+		primary_culture = croat
+			interning_jewish
+			interning_orthodoxies
+		tag = ISR
+			interning_sunnis
+			interning_shiites
+		tag = BUR
+		tag = HND
+			interning_sunnis
+
+	interning_cultures
+		primary_culture = serb
+		primary_culture = greek
+			interning_south_slavic
+			interning_pan_albanian
+			interning_turko_semitic
+			interning_pan_gypsy
+			interning_jewish_cultures
+		is_culture_group = germanic
+		is_culture_group = baltic
+			interning_jewish_cultures
+			interning_pan_gypsy
+			interning_polish_culture_group #will stop after all jews and gypsies are gone
+			interning_east_slavic #will stop after all jews and gypsies are gone
+		is_culture_group = czecho_slovak_culture_group
+		is_culture_group = hungarian
+		is_culture_group = french
+		is_culture_group = beneluxian
+			interning_jewish_cultures
+			interning_pan_gypsy
+		is_culture_group = pan_romanian
+		primary_culture = bulgarian
+		is_culture_group = scandinavian
+			interning_jewish_cultures
+		primary_culture = turkish
+			interning_levantine
+			interning_turko_semitic
+
+interning_religions now properly affects target religions even if they're an accepted culture
+
+AI closes internment_camps under certain conditions
+
+Word gets out
+	event conditions for reducing relations more restrictive
+	random infamy gain ~1.85 -> ~3 infamy
+		avg infamy gain ~1.85 + 4.8 = ~6.65 -> ~3 + 1.2 = ~4.2
+		max infamy gain 4 + 4.8 = 8.8 -> 5 + 1.2 = 6.2
+
+evidence_of_massacre
+	badboy 0.2 -> 0.05 you get it for 2 years, so that's 4.8 -> 1.2 infamy
+	non_accepted_pop_consciousness_modifier 0 -> 0.1
+	non_accepted_pop_militancy_modifier 0 -> 0.1
+	research_points_modifier 0 -> -0.05 ethical scientists stay away
+
+evidence_of_massacre2 
+	badboy 0.2 -> 0.02
+
+interment_camps
+	badboy 0.2 -> 0.01
+	research_points_modifier 0 -> -0.05 scientists busy running camps instead of actually doing research
+	suppression_points_modifier 0 -> -0.5 police busy catching minorities instead of rebels
+
+renamed Sukuma-Nyamwezi to Unyamwezi
+Moved some african culture groups around
+	east_african -> west_african (Niger-Congo A)
+		azande
+		nuba
+
+	east_african -> central_african (Niger-Congo B Bantu) (southern_african is also bantu + khoisan + malagasy)
+		baganda #Baganda
+		kikuyu #Kikuyu–Kamba
+		ruanda #Banyarwanda
+	#    sukuma
+		swahili #Swahili
+		unyamwezi #Unyamwezi (contains Sukuma)
+	#    kilombero #Kilombero (previously merged into lacustrine_bantu)
+
+	central_african -> east_african
+		baguirmi #Maban, Nilo-Saharan
+		teda #Toubou, Nilo-Saharan
+		kanuri #Kanuri, Nilo-Saharan
+		lendu #Lendu, Nilo-Saharan
+		sara #Sara-Baguirmi, Nilo-Saharan 
+
+	central_african -> west_african (Niger-Congo A)
+		ubangian #Ubangi
+
+	west_african -> arab
+		tuareg #Berber group
+
+	west_african -> east_african
+		hausa  #Chadic
+
+####################################################################################################
 v0.5.9c
 Fixed bug where demoted craftsmen turn into farmers in provinces where they should be labourers
 

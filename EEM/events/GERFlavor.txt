@@ -673,19 +673,19 @@ country_event = {
     option = {
         name = "EVT33020OPTA"
         prestige = 20
-		
-		FROM = {
-			any_owned = {
-				limit = { is_core = THIS }
-				secede_province = THIS
-			}
-		}
-		
-		any_owned = {
-			limit = { is_core = FROM }
-			secede_province = FROM
-		}
-		
+        
+        FROM = {
+            any_owned = {
+                limit = { is_core = THIS }
+                secede_province = THIS
+            }
+        }
+        
+        any_owned = {
+            limit = { is_core = FROM }
+            secede_province = FROM
+        }
+        
         GER = {
             prestige = 20
             any_greater_power = {
@@ -722,7 +722,7 @@ country_event = {
             }
             leave_alliance = THIS
         }
-		
+        
         any_country = {
             limit = {
                 OR = {
@@ -735,7 +735,7 @@ country_event = {
             }
             relation = { who = THIS value = 100 }
         }
-		
+        
         ai_chance = {
             factor = 90
             modifier = {

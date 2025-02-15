@@ -633,14 +633,15 @@ new_constitution = {
 #########
 evidence_of_massacre = {
     prestige = -0.08
-    badboy = 0.2
+    badboy = 0.05 #0.2
     influence_modifier = -0.1
+    research_points_modifier = -0.05 #0
     icon = 8
 }
 
 evidence_of_massacre2 = {
     prestige = -0.01
-    badboy = 0.2
+    badboy = 0.02 #0.2
     icon = 8
 }
 
@@ -650,7 +651,9 @@ interment_camps = {
     non_accepted_pop_militancy_modifier = 0.3
     tax_efficiency = -0.2
     administrative_efficiency_modifier = -0.4
-    badboy = 0.1
+    badboy = 0.01 #0.2
+    research_points_modifier = -0.05 #0
+	suppression_points_modifier = -0.5 #0
     icon = 18
 }
 
@@ -2198,7 +2201,7 @@ yong_ying = {
     war_exhaustion = -0.5
     land_unit_start_experience = 10    #army schools
     leadership_modifier = 0.1          #foreign officer training
-    land_organisation = 0.1            #foreign training methods 
+    land_organisation = 0.1            #foreign training methods
     naval_organisation = -0.2
     supply_consumption = 0.2
     core_pop_consciousness_modifier = 0.01

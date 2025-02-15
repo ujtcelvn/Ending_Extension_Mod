@@ -168,96 +168,6 @@ country_event = {
 }
 
 
-country_event = {
-    id = 165004
-    title = "EVTNAME165004" #Nanking Massacre
-    desc = "EVTDESC165004"
-    picture = "nanking_destruction"
-    fire_only_once = yes
-    
-    trigger = {
-        OR = {
-            tag = JAP
-            tag = TKG
-        }
-        has_global_flag = the_dragon_wakes 
-
-        war_exhaustion = 5
-
-        #Nanking
-        2221 = {
-            controlled_by = THIS
-            is_capital = yes
-            NOT = { province_control_days = 365 }
-            owner = { war_with = THIS }
-            OR = {
-                owner = { tag = CHI }
-                owner = { tag = KMT }
-                owner = { tag = RTR }
-                owner = { tag = TPG }
-            }
-        }
-        war_policy = jingoism
-
-        NOT = { has_global_flag = nanking_massacre }
-        NOT = { has_country_modifier = signed_the_geneva_convention }
-    }
-
-    mean_time_to_happen = {
-        months = 3
-        modifier = {
-            factor = 0.1
-            has_country_modifier = withdrew_from_geneva_convention
-        }
-    }
-
-    option = {
-        name = "EVTOPTA165004"
-        badboy = 5
-        any_country = {
-            limit = {
-                owns = 2221
-            }
-            country_event = 165005
-        }
-        set_global_flag = nanking_massacre
-        prestige = -10
-    }
-}
-
-country_event = {
-    id = 165005
-    title = "EVTNAME165005" #The Nanking Massacre
-    desc = "EVTDESC165005"
-    #news = yes
-    #news_desc_long = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
-    #news_desc_medium = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
-    #news_desc_short = "$FROMCOUNTRY_ADJ$ troops, frustrated from $COUNTRY_ADJ$ resistance to the $FROMCOUNTRY_ADJ$ advance, have decided to sack and pillage the $COUNTRY_ADJ$ capital, Nanjing."
-    picture = "nanking_destruction"
-    fire_only_once = yes
-    is_triggered_only = yes
-
-    option = {
-        name = "EVTOPTA165005"
-        add_country_modifier = {
-            name = drive_to_reunify 
-            duration = 1825
-        }
-        2221 = {
-            any_pop = {
-                reduce_pop = 0.75
-            }
-            add_province_modifier = {
-                name = the_massacre
-                duration = 365
-            }
-            infrastructure = -6
-            fort = -6
-        }
-    }
-}
-
-
 ########## Alternative Anti-Qing Rebellion: Ming LARPers 165100 ~ 165200 ##########
 #Memories of the Ming
 country_event = {
@@ -2370,6 +2280,7 @@ country_event = {
         clr_country_flag = interning_caucasian
         clr_country_flag = interning_arab
         clr_country_flag = interning_iranian_turanian
+        clr_country_flag = interning_pan_gypsy
         clr_country_flag = interning_central_asian
         clr_country_flag = interning_south_asian
         clr_country_flag = interning_indo_iranian
@@ -2865,54 +2776,54 @@ country_event = {
     }
 }
 
-country_event = {
-    id = 166225
-    title = "EVTNAME165225"
-    desc = "EVTDESC165225"
-    picture = "punti_hakka"
-    fire_only_once = yes
-
-    trigger = {
-        owns = 1493 #Canton
-        OR = {
-            tag = QNG
-            AND = {
-                tag = TZ7
-                overlord = { tag = QNG }
-            }
-        }
-        war = no
-        has_global_flag = taiping_has_been_defeated
-        has_global_flag = ming_has_been_defeated
-        NOT = { has_global_flag = punti_hakka_war_happened }
-    }
-
-    mean_time_to_happen = { months = 12 }
-
-    option = {
-        name = "EVTOPTA165225"
-        set_global_flag = punti_hakka_war_happened
-        CHI_1493 = {
-            #12.72 million population * 0.05 = ~636,000 casulties
-            any_pop = {
-                limit = { culture = hakka }
-                militancy = 2
-                consciousness = 5
-                reduce_pop = 0.9
-            }
-            any_pop = {
-                limit = { culture = yue }
-                militancy = 2
-                consciousness = 5
-                reduce_pop = 0.975
-            }
-            add_province_modifier = {
-                name = war_torn
-                duration = 1095 #3 years, 1855 to 1868
-            }
-        }
-    }
-}
+#country_event = {
+#    id = 166225
+#    title = "EVTNAME165225"
+#    desc = "EVTDESC165225"
+#    picture = "punti_hakka"
+#    fire_only_once = yes
+#
+#    trigger = {
+#        owns = 1493 #Canton
+#        OR = {
+#            tag = QNG
+#            AND = {
+#                tag = TZ7
+#                overlord = { tag = QNG }
+#            }
+#        }
+#        war = no
+#        has_global_flag = taiping_has_been_defeated
+#        has_global_flag = ming_has_been_defeated
+#        NOT = { has_global_flag = punti_hakka_war_happened }
+#    }
+#
+#    mean_time_to_happen = { months = 12 }
+#
+#    option = {
+#        name = "EVTOPTA165225"
+#        set_global_flag = punti_hakka_war_happened
+#        CHI_1493 = {
+#            #12.72 million population * 0.05 = ~636,000 casulties
+#            any_pop = {
+#                limit = { culture = hakka }
+#                militancy = 2
+#                consciousness = 5
+#                reduce_pop = 0.9
+#            }
+#            any_pop = {
+#                limit = { culture = yue }
+#                militancy = 2
+#                consciousness = 5
+#                reduce_pop = 0.975
+#            }
+#            add_province_modifier = {
+#                name = war_torn
+#                duration = 1095 #3 years, 1855 to 1868
+#            }
+#        }
+#    }
+#}
 
 
 ########## Western Powers react to Taiping 166300 ##########
@@ -4650,10 +4561,10 @@ country_event = {
             limit = { OR = { is_core = RTR is_core = TPG } }
             any_pop = {
                 limit = {
-					is_culture_group = east_asian
-					is_primary_culture = no
-					is_accepted_culture = no
-				}
+                    is_culture_group = east_asian
+                    is_primary_culture = no
+                    is_accepted_culture = no
+                }
                 militancy = 1
                 consciousness = 1
             }

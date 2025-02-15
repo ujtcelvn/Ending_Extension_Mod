@@ -936,7 +936,7 @@ province_event = {
     trigger = {
         is_colonial = yes
         average_militancy = 4
-		NOT = { has_province_modifier = colonial_mismanagement }
+        NOT = { has_province_modifier = colonial_mismanagement }
     }
 
     mean_time_to_happen = {
@@ -954,29 +954,29 @@ province_event = {
             NOT = { average_consciousness = 5 }
         }
        modifier = {
-			factor = 0.9
-			NOT = {
-				owner = { administration_spending = 0.3 }
-			}
-		}
-		modifier = {
-			factor = 0.8
-			NOT = {
-				owner = { administration_spending = 0.2 }
-			}
-		}
-		modifier = {
-			factor = 1.5
-			owner = { administration_spending = 0.4 }
-		}
+            factor = 0.9
+            NOT = {
+                owner = { administration_spending = 0.3 }
+            }
+        }
+        modifier = {
+            factor = 0.8
+            NOT = {
+                owner = { administration_spending = 0.2 }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            owner = { administration_spending = 0.4 }
+        }
     }
 
     option = {
         name = "EVTOPTA14620"
         state_scope = {
-			any_owned = {
-				add_province_modifier = { name = colonial_mismanagement duration = 1095 }
-			}
+            any_owned = {
+                add_province_modifier = { name = colonial_mismanagement duration = 1095 }
+            }
             any_pop = {
                 limit = { militancy = 4 }
                 militancy = -1
@@ -984,7 +984,7 @@ province_event = {
             }
             any_pop = {
                 limit = {
-					militancy = 4
+                    militancy = 4
                     OR = {
                         type = bureaucrats
                         type = clergymen
@@ -1005,16 +1005,16 @@ province_event = {
     option = {
         name = "EVTOPTB14620"
         state_scope = {
-			any_owned = {
-				add_province_modifier = { name = colonial_mismanagement duration = 1825 }
-			}
+            any_owned = {
+                add_province_modifier = { name = colonial_mismanagement duration = 1825 }
+            }
             any_pop = {
                 limit = { militancy = 4 }
                 militancy = -3
             }
             any_pop = {
                 limit = {
-					militancy = 4
+                    militancy = 4
                     OR = {
                         type = bureaucrats
                         type = clergymen

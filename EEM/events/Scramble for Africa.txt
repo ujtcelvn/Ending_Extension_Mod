@@ -298,7 +298,7 @@ country_event = {
                 neighbour = THIS
             }
             nationalism_n_imperialism = 1
-			num_of_ports = 1
+            num_of_ports = 1
         }
         NOT = {
             has_country_flag = refused_protectorate

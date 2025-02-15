@@ -87,7 +87,7 @@ province_event = {
         state_scope = {
             any_owned = {
                 limit = {
-    				has_province_modifier = local_distribution_channels_und_electricity
+                    has_province_modifier = local_distribution_channels_und_electricity
                 }
                 remove_province_modifier = local_distribution_channels_und_electricity
             }
@@ -121,7 +121,7 @@ province_event = {
         state_scope = {
             any_owned = {
                 limit = {
-    				has_province_modifier = local_steamers
+                    has_province_modifier = local_steamers
                 }
                 remove_province_modifier = local_steamers
             }

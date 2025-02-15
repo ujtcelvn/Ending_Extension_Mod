@@ -4033,8 +4033,8 @@ country_event = {
                 country_event = 96060
             }
         }
-		
-		#If Volga Republic does not exist, 25% chance to release it
+        
+        #If Volga Republic does not exist, 25% chance to release it
         any_country = {
             limit = {
                 tag = VRP
@@ -10884,23 +10884,23 @@ country_event = {
         any_country = {
             limit = {
                 war_with = THIS
-				THIS = { has_country_flag = catholic_country }
-				has_country_flag = catholic_country
-				OR = {
-					religious_policy = moralism
-					AND = {
-						religious_policy = pluralism
-						OR = {
-							government = theocracy
-							government = absolute_monarchy
-							government = prussian_constitutionalism
-							government = hms_government
-							government = presidental_dictatorship
-						}
-					}
-				}
+                THIS = { has_country_flag = catholic_country }
+                has_country_flag = catholic_country
+                OR = {
+                    religious_policy = moralism
+                    AND = {
+                        religious_policy = pluralism
+                        OR = {
+                            government = theocracy
+                            government = absolute_monarchy
+                            government = prussian_constitutionalism
+                            government = hms_government
+                            government = presidental_dictatorship
+                        }
+                    }
+                }
             }
-			country_event = 110203
+            country_event = 110203
         }
     }
 }

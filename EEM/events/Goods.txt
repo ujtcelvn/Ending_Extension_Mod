@@ -509,12 +509,12 @@ province_event = {
                     province_id = 1986
                     #province_id = 1988
                     #province_id = 1989
-					province_id = 1970
-					province_id = 1992
-					province_id = 1980
-					province_id = 1962
-					province_id = 1883
-					province_id = 1899
+                    province_id = 1970
+                    province_id = 1992
+                    province_id = 1980
+                    province_id = 1962
+                    province_id = 1883
+                    province_id = 1899
                     province_id = 1996
                     province_id = 2192
                     province_id = 2317
@@ -532,10 +532,10 @@ province_event = {
             }
         }
         NOT = {
-			trade_goods = rubber
-			trade_goods = coal
-			trade_goods = precious_goods
-		}
+            trade_goods = rubber
+            trade_goods = coal
+            trade_goods = precious_goods
+        }
 
         owner = {
             war = no
@@ -658,7 +658,7 @@ province_event = {
                     province_id = 1163        # Qatif 1910
                     province_id = 2270        # Maracaibo 1910
                     province_id = 1170        # Nizwa  1910
-					
+                    
                     province_id = 168        # Olney 1905 Illinois Oil Field
                 }
             }

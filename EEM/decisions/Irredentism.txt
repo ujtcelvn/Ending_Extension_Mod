@@ -1270,7 +1270,7 @@ political_decisions = {
             1210 = { add_core = TAJ } #already BDK core
             1211 = { add_core = TKS }
             1211 = { add_core = TAJ } #already BDK core
-			#North Mongolia
+            #North Mongolia
             #2679 = { add_core = TKS }
             #Urumqi
             #1595 = { add_core = TKS }

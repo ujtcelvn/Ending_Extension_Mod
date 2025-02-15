@@ -33,7 +33,33 @@ political_decisions = {
         allow = { average_consciousness = 3 }
 
         effect = {
-            years_of_research = 0.1
+            random_owned = {
+                limit = {
+                    owner = {
+                        ai = yes
+                        NOT = { has_country_flag = yong_ying_flag }
+                    }
+                }
+                owner = {
+                    years_of_research = 0.1
+                    set_country_flag = yong_ying_flag
+                }
+            }
+
+            random_owned = {
+                limit = {
+                    owner = {
+                        ai = yes
+                        NOT = { has_country_flag = yong_ying_flag }
+                    }
+                }
+                owner = {
+                    years_of_research = 1
+                    set_country_flag = yong_ying_flag
+                }
+            }
+
+
             add_accepted_culture = beifaren
             any_pop = {
                 limit = { has_pop_culture = manchu }
@@ -51,15 +77,6 @@ political_decisions = {
                 consciousness = -1
             }
             set_country_flag = manchu_elite_cleared_out
-
-            #random_owned = {
-            #    limit = {
-            #        owner = { ai = yes }
-            #    }
-            #    owner = {
-            #        years_of_research = 10
-            #    }
-            #}
 
             add_country_modifier = {
                 name = yong_ying
