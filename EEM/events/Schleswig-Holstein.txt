@@ -728,7 +728,7 @@ country_event = {
         is_substate = no
         part_of_sphere = no
         is_greater_power = no
-        NOT = { has_country_flag = swh_protected }
+        NOT = { has_global_flag = swh_protected }
 		NOT = { badboy = 1 }
     }
 
@@ -738,12 +738,9 @@ country_event = {
         months = 1
     }
 
-    immediate = {
-        set_country_flag = swh_protected
-    }
-
     option = {
         name = "EVT900501OPTA"
+        set_global_flag = swh_protected
         any_country = {
             limit = {
                 primary_culture = north_german
@@ -771,13 +768,14 @@ country_event = {
             modifier = {
                 factor = 2
                 exists = NGF
-                NOT = ( exists = SGF }
+                NOT = { exists = SGF }
             }
         }
     }
 
     option = {
         name = "EVT900501OPTB"
+        set_global_flag = swh_protected
         any_country = {
             limit = {
                 primary_culture = south_german
@@ -805,13 +803,14 @@ country_event = {
             modifier = {
                 factor = 2
                 exists = SGF
-                NOT = ( exists = NGF }
+                NOT = { exists = NGF }
             }
         }
     }
 
     option = {
         name = "EVT900501OPTC"
+        set_global_flag = swh_protected
         prestige = 5
         ai_chance = {
             factor = 1
@@ -828,7 +827,7 @@ country_event = {
     desc = "EVTDESC900502"
     picture = "danishgovernment"
 
-    is_triggered_only = ye
+    is_triggered_only = yes
 
     option = {
         name = "EVT900502OPTA"
