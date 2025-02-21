@@ -20,13 +20,13 @@ political_decisions = {
                 AND = {
                     ai = yes
                     ruling_party_ideology = fascist
-					OR = {
-						has_country_modifier = totalitarian_system
-						AND = {
-							has_country_modifier = the_terror
-							has_country_modifier = political_education
-						}
-					}
+                    OR = {
+                        has_country_modifier = totalitarian_system
+                        AND = {
+                            has_country_modifier = the_terror
+                            has_country_modifier = political_education
+                        }
+                    }
                     NOT = { badboy = 0.5 }
                     is_vassal = no
                     is_substate = no
@@ -73,9 +73,9 @@ political_decisions = {
                         }
 
                         AND = {
-							OR = {
-								primary_culture = serb
-								primary_culture = greek
+                            OR = {
+                                primary_culture = serb
+                                primary_culture = greek
                             }
                             any_owned_province = {
                                 any_pop = {
@@ -92,12 +92,21 @@ political_decisions = {
         
                         AND = {
                             OR = {
-                                is_culture_group = germanic #also targets polish_culture_group and east_slavic
-                                is_culture_group = baltic #also targets polish_culture_group and east_slavic
-                                is_culture_group = czecho_slovak_culture_group
-                                is_culture_group = hungarian
-                                is_culture_group = french
-                                is_culture_group = beneluxian
+                                primary_culture = north_german #also targets polish_culture_group and east_slavic
+                                primary_culture = south_german #also targets polish_culture_group and east_slavic
+                                primary_culture = lithuanian #also targets polish_culture_group and east_slavic
+                                primary_culture = latvian #also targets polish_culture_group and east_slavic
+                                primary_culture = estonian #also targets polish_culture_group and east_slavic
+                                primary_culture = czech
+                                primary_culture = slovak
+                                primary_culture = hungarian
+                                primary_culture = french
+                                primary_culture = breton
+                                primary_culture = occitan
+                                primary_culture = picard
+                                primary_culture = dutch
+                                primary_culture = flemish
+                                primary_culture = wallonian
                             }
                             any_owned_province = {
                                 any_pop = {
@@ -113,9 +122,12 @@ political_decisions = {
 
                         AND = {
                             OR = {
-                                is_culture_group = pan_romanian
+                                primary_culture = romanian
                                 primary_culture = bulgarian
-                                is_culture_group = scandinavian
+                                primary_culture = swedish
+                                primary_culture = danish
+                                primary_culture = norwegian
+                                primary_culture = icelandic
                             }
                             any_owned_province = {
                                 any_pop = {
@@ -169,7 +181,7 @@ political_decisions = {
         }
 
         effect = {
-            set_country_flag = has_ever_had_internment_camps
+            set_country_flag = ever_opened_internment_camps
             plurality = -50
             add_country_modifier = { name = interment_camps duration = -1 }
             set_country_flag = government_busy_with_something
@@ -277,8 +289,8 @@ political_decisions = {
                     is_vassal = no
                     is_substate = no
                     OR = {
-						primary_culture = serb
-						primary_culture = greek
+                        primary_culture = serb
+                        primary_culture = greek
                     }
                     NOT = {
                         any_owned_province = {
@@ -301,12 +313,21 @@ political_decisions = {
                     is_vassal = no
                     is_substate = no
                     OR = {
-                        is_culture_group = germanic #also targets polish_culture_group and east_slavic
-                        is_culture_group = baltic #also targets polish_culture_group and east_slavic
-                        is_culture_group = czecho_slovak_culture_group
-                        is_culture_group = hungarian
-                        is_culture_group = french
-                        is_culture_group = beneluxian
+                        primary_culture = north_german #also targets polish_culture_group and east_slavic
+                        primary_culture = south_german #also targets polish_culture_group and east_slavic
+                        primary_culture = lithuanian #also targets polish_culture_group and east_slavic
+                        primary_culture = latvian #also targets polish_culture_group and east_slavic
+                        primary_culture = estonian #also targets polish_culture_group and east_slavic
+                        primary_culture = czech
+                        primary_culture = slovak
+                        primary_culture = hungarian
+                        primary_culture = french
+                        primary_culture = breton
+                        primary_culture = occitan
+                        primary_culture = picard
+                        primary_culture = dutch
+                        primary_culture = flemish
+                        primary_culture = wallonian
                     }
                     NOT = {
                         any_owned_province = {
@@ -326,9 +347,12 @@ political_decisions = {
                     is_vassal = no
                     is_substate = no
                     OR = {
-                        is_culture_group = pan_romanian
+                        primary_culture = romanian
                         primary_culture = bulgarian
-                        is_culture_group = scandinavian
+                        primary_culture = swedish
+                        primary_culture = danish
+                        primary_culture = norwegian
+                        primary_culture = icelandic
                     }
                     NOT = {
                         any_owned_province = {
@@ -1900,15 +1924,27 @@ political_decisions = {
                 factor = 0
                 NOT = { primary_culture = serb }
                 NOT = { primary_culture = greek }
-                NOT = { is_culture_group = germanic }
-                NOT = { is_culture_group = hungarian }
-                NOT = { is_culture_group = pan_romanian }
+                NOT = { primary_culture = north_german }
+                NOT = { primary_culture = south_german }
+                NOT = { primary_culture = hungarian }
+                NOT = { primary_culture = romanian }
                 NOT = { primary_culture = bulgarian }
-                NOT = { is_culture_group = french }
-                NOT = { is_culture_group = baltic }
-                NOT = { is_culture_group = beneluxian }
-                NOT = { is_culture_group = scandinavian }
-                NOT = { is_culture_group = czecho_slovak_culture_group }
+                NOT = { primary_culture = french }
+                NOT = { primary_culture = breton }
+                NOT = { primary_culture = occitan }
+                NOT = { primary_culture = picard }
+                NOT = { primary_culture = lithuanian }
+                NOT = { primary_culture = latvian }
+                NOT = { primary_culture = estonian }
+                NOT = { primary_culture = dutch }
+                NOT = { primary_culture = flemish }
+                NOT = { primary_culture = wallonian }
+                NOT = { primary_culture = swedish }
+                NOT = { primary_culture = danish }
+                NOT = { primary_culture = norwegian }
+                NOT = { primary_culture = icelandic }
+                NOT = { primary_culture = czech }
+                NOT = { primary_culture = slovak }
             }
         }
     }
@@ -2015,12 +2051,21 @@ political_decisions = {
                 factor = 0
                 NOT = { primary_culture = serb }
                 NOT = { primary_culture = greek }
-                NOT = { is_culture_group = germanic }
-                NOT = { is_culture_group = czecho_slovak_culture_group }
-                NOT = { is_culture_group = baltic }
-                NOT = { is_culture_group = hungarian }
-                NOT = { is_culture_group = french }
-                NOT = { is_culture_group = beneluxian }
+                NOT = { primary_culture = north_german }
+                NOT = { primary_culture = south_german }
+                NOT = { primary_culture = czech }
+                NOT = { primary_culture = slovak }
+                NOT = { primary_culture = lithuanian }
+                NOT = { primary_culture = latvian }
+                NOT = { primary_culture = estonian }
+                NOT = { primary_culture = hungarian }
+                NOT = { primary_culture = french }
+                NOT = { primary_culture = breton }
+                NOT = { primary_culture = occitan }
+                NOT = { primary_culture = picard }
+                NOT = { primary_culture = dutch }
+                NOT = { primary_culture = flemish }
+                NOT = { primary_culture = wallonian }
             }
         }
     }
@@ -2117,8 +2162,11 @@ political_decisions = {
             factor = 1
             modifier = {
                 factor = 0
-                NOT = { is_culture_group = germanic }
-                NOT = { is_culture_group = baltic }
+                NOT = { primary_culture = north_german }
+                NOT = { primary_culture = south_german }
+                NOT = { primary_culture = lithuanian }
+                NOT = { primary_culture = latvian }
+                NOT = { primary_culture = estonian }
             }
         }
     }
@@ -2191,8 +2239,11 @@ political_decisions = {
             factor = 1
             modifier = {
                 factor = 0
-                NOT = { is_culture_group = germanic }
-                NOT = { is_culture_group = baltic }
+                NOT = { primary_culture = north_german }
+                NOT = { primary_culture = south_german }
+                NOT = { primary_culture = lithuanian }
+                NOT = { primary_culture = latvian }
+                NOT = { primary_culture = estonian }
             }
         }
     }
@@ -2265,4 +2316,1735 @@ political_decisions = {
         }
     }
 
+    expel_arabs = {
+        picture = soluch_concentration_camp
+
+        potential = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = theocracy
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                government = proletarian_dictatorship
+            }
+            invention = the_dark_continent
+
+            OR = {
+                capital_scope = { continent = europe }
+                tag = ISR
+            }
+            is_vassal = no
+            is_substate = no
+            
+            NOT = { has_country_flag = sunni_country }
+            NOT = { has_country_flag = shiite_country }
+            NOT = { has_country_flag = ibadi_country }
+            NOT = { has_country_flag = druze_country }
+            NOT = { is_culture_group = arab }
+            #NOT = { primary_culture = maghrebi }
+            #NOT = { primary_culture = misri }
+            #NOT = { primary_culture = mashriqi }
+            #NOT = { primary_culture = bedouin }
+            #NOT = { primary_culture = berber }
+            #NOT = { primary_culture = maures }
+            #NOT = { primary_culture = sudanese }
+            #NOT = { primary_culture = tuareg }
+
+            OR = {
+                AND = {
+                    has_country_flag = government_decisions_on
+                    ai = no
+                }
+                AND = {
+                    OR = {
+                        NOT = { badboy = 0.4 }
+                        has_country_modifier = interment_camps
+                    }
+                    OR = {
+                        ruling_party_ideology = fascist
+                        ruling_party_ideology = reactionary
+                        #AND = {
+                        #    ruling_party_ideology = conservative
+                        #    war_policy = jingoism
+                        #    citizenship_policy = residency
+                        #}
+                    }
+                    OR = {
+                        is_culture_group = italian
+                        is_culture_group = iberian
+                        is_culture_group = french
+                        is_culture_group = south_slavic
+                        is_primary_culture = greek
+                        tag = ISR
+                    }
+                }
+            }
+
+            OR = {
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_MOR_1694 }
+                    #Agadir
+                    owns = 1694 #Agadir
+                    owns = 1695 #Ifni
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_MOR_1693 }
+                    #Morocco
+                    owns = 1691 #Casablanca
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_MOR_1686 }
+                    #Fez
+                    owns = 1685 #Rabat
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_MOR_1688 }
+                    #Al Rif
+                    owns = 1686 #Tangir
+                    owns = 1689 #Melilla
+                    owns = 2590 #Cueta
+                    #owns = 1687 #Ajdir
+                    owns = 1688 #Tetouan
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_ALD_1704 }
+                    owns = 1704 #Oran
+                    owns = 1706 #Mustaghanim, Oran
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_FRA_1700 }
+                    owns = 1700 #Algers
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_TUN }
+                    owns = 1725 #Tunis
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_TRI }
+                    owns = 1731 #Tripoli
+                    owns = 1733 #Misratah
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_CYR }
+                    owns = 1735 #Benghazi
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_EGY_1758 }
+                    owns = 1752 #Martuh, Western Desert
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_EGY_1745 }
+                    owns = 1745 #Cario
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_EGY_1762 }
+                    owns = 1762 #Asyut, Middle Egypt
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_EGY_1771 }
+                    owns = 1767 #Luxor, Upper Egypt
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_EGY_1755 }
+                    owns = 1755 #Suez, Sinai
+                    owns = 1756 #Al Arish, Sinai
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_PLS }
+                    owns = 916 #Acre
+                    owns = 919 #Jaffa
+                    owns = 920 #Gaza
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_LEB }
+                    owns = 913 #Beirut
+                }
+                AND = {
+                    NOT = { has_global_flag = arabs_expelled_from_SYR }
+                    owns = 905 #Latakia
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            NOT = { num_of_revolts = 1 }
+            NOT = {
+                has_country_modifier = law_changed_by_force
+                has_country_modifier = national_confusion
+                has_recently_lost_war = yes
+            }
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = theocracy
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                government = proletarian_dictatorship
+            }
+            OR = {
+                ruling_party_ideology = reactionary
+                ruling_party_ideology = fascist
+                ruling_party_ideology = communist
+                AND = {
+                    ruling_party_ideology = conservative
+                    war_policy = jingoism
+                    citizenship_policy = residency
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = ever_expelled_arabs
+        
+            any_owned = {
+                limit = {
+                    state_id = 1694 #MOR_1694 #Agadir
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_MOR_1694 } owns = 1694 owns = 1695 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1699 #Warzazat
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1691 #MOR_1693 #Morocco
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_MOR_1693 } owns = 1691 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1690 #Marrakesh
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1685 #MOR_1686 #Fez
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_MOR_1686 } owns = 1685 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1680 #Fez
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1688 #MOR_1688 #al Rif, does NOT have a non-coastal province
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_MOR_1688 } owns = 1686 owns = 1689 owns = 2590 owns = 1688 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1681 #Wazzan, Fez
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1704 #ALD_1704 #Oran
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_ALD_1704 } owns = 1704 owns = 1706 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1707 #Mascara
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1700 #FRA_1700 #Algiers, does NOT have a non-coastal province
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_FRA_1700 } owns = 1700 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1708 #Constantine, Constantine ALD_1708
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1725 #TUN_1726 #Tunisia
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_TUN } owns = 1725 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1727 #Gafsa
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+
+            any_owned = {
+                limit = {
+                    state_id = 1731 #TRI_1731 #Tripolitania
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_TRI } owns = 1731 owns = 1733 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1732 #Gharyan
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+
+            any_owned = {
+                limit = {
+                    state_id = 1735 #TRI_1735 #Cyrenaica
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_CYR } owns = 1735 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1738 #Al Jaghbub
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1752 #EGY_1758 #Western Desert
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_EGY_1758 } owns = 1752 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1754 #Siwa
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1745 #EGY_1745 #Cairo (entire province)
+                    #is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_EGY_1745 } owns = 1745 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1759 #Bawiti, Western Desert
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+                    
+            any_owned = {
+                limit = {
+                    state_id = 1762 #EGY_1762 #Middle Egypt (entire province EXCEPT coast)
+                    is_coastal = no
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_EGY_1762 } owns = 1762 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1760 #Mut, Western Desert
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 1771 #EGY_1771 #Upper Egypt (entire province EXCEPT coast)
+                    is_coastal = no
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_EGY_1771 } owns = 1767 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1761 #Baris, Western Desert
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    #state_id = 1757 #EGY_1755 #Sinai (only 1755 1756 border the Med)
+                    #is_coastal = yes
+                    OR = {
+                        province_id = 1755
+                        province_id = 1756
+                    }
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_EGY_1755 } owns = 1755 owns = 1756 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 1757 #Sharm al-Shaykh (borders Gulf of Suez)
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 916 #EGY_921 #Palestine
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_PLS } owns = 916 owns = 919 owns = 920 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 918 #Nablus
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 913 #EGY_915 #Lebanon
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_LEB } owns = 913 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 912 #Baalbeck
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 905 #EGY_897 #Western Syria
+                    is_coastal = yes
+                    owner = { NOT = { has_global_flag = arabs_expelled_from_SYR } owns = 905 }
+                }
+                any_pop = { limit = { is_culture_group = arab } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = arab NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 897 #Aleppo
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = arab
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+            
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_MOR_1694 }
+                        #Agadir
+                        owns = 1694 #Agadir
+                        owns = 1695 #Ifni
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_MOR_1694 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_MOR_1693 }
+                        #Morocco
+                        owns = 1691 #Casablanca
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_MOR_1693 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_MOR_1686 }
+                        #Fez
+                        owns = 1685 #Rabat
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_MOR_1686 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_MOR_1688 }
+                        #Al Rif
+                        owns = 1686 #Tangir
+                        owns = 1689 #Melilla
+                        owns = 2590 #Cueta
+                        #owns = 1687 #Ajdir
+                        owns = 1688 #Tetouan
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_MOR_1688 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_ALD_1704 }
+                        owns = 1704 #Oran
+                        owns = 1706 #Mustaghanim, Oran
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_ALD_1704 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_FRA_1700 }
+                        owns = 1700 #Algers
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_FRA_1700 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_TUN }
+                        owns = 1725 #Tunis
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_TUN badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_CYR }
+                        owns = 1735 #Benghazi
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_CYR badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_EGY_1758 }
+                        owns = 1752 #Martuh, Western Desert
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_EGY_1758 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_EGY_1745 }
+                        owns = 1745 #Cario
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_EGY_1745 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_EGY_1762 }
+                        owns = 1762 #Asyut, Middle Egypt
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_EGY_1762 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_EGY_1771 }
+                        owns = 1767 #Luxor, Upper Egypt
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_EGY_1771 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_EGY_1755 }
+                        owns = 1755 #Suez, Sinai
+                        owns = 1756 #Al Arish, Sinai
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_EGY_1755 badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_PLS }
+                        owns = 916 #Acre
+                        owns = 919 #Jaffa
+                        owns = 920 #Gaza
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_PLS badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                        owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_LEB }
+                        owns = 913 #Beirut
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_LEB badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = arabs_expelled_from_SYR }
+                        owns = 905 #Latakia
+                    }
+                }
+                owner = { set_global_flag = arabs_expelled_from_SYR badboy = 1 }
+            }
+
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = { alliance_with = THIS }
+                    NOT = { in_sphere = THIS }
+                    is_vassal = no
+                    is_substate = no
+                    is_culture_group = arab
+                }
+                relation = { who = THIS value = -200 }
+                casus_belli = { target = THIS type = cut_down_to_size months = 48 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+
+    expel_southern_africans = {
+        picture = shark_island_concentration_camp
+
+        potential = {
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = theocracy
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                government = proletarian_dictatorship
+            }
+            invention = the_dark_continent
+
+            OR = {
+                capital_scope = { continent = europe }
+                primary_culture = boer
+            }
+            is_vassal = no
+            is_substate = no
+            NOT = { is_culture_group = southern_african }
+
+            NOT = { has_country_flag = sunni_country }
+            NOT = { has_country_flag = shiite_country }
+            NOT = { has_country_flag = ibadi_country }
+            NOT = { has_country_flag = druze_country }
+
+            OR = {
+                AND = {
+                    has_country_flag = government_decisions_on
+                    ai = no
+                }
+                AND = {
+                    OR = {
+                        NOT = { badboy = 0.4 }
+                        has_country_modifier = interment_camps
+                    }
+                    OR = {
+                        ruling_party_ideology = fascist
+                        ruling_party_ideology = reactionary
+                        AND = {
+                            ruling_party_ideology = conservative
+                            war_policy = jingoism
+                            citizenship_policy = residency
+                            primary_culture = north_german
+                        }
+                    }
+                    OR = {
+                        is_culture_group = germanic
+                        primary_culture = boer
+                    }
+                }
+            }
+
+            OR = {
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Hereroland }
+                    #Hereroland
+                    #owns = 2079 #coastal desert (target)
+                    owns = 2080 #Otjivanda
+                    #owns = 2081 #the handlebar (optional)
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Namaqualand }
+                    #Namaqualand
+                    #owns = 2084 #coastal desert (target)
+                    owns = 2085 #Nu-gouses
+                    #owns = 2083 #the enclave (optional)
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Benchuanaland }
+                    #Benchuanaland
+                    #owns = 2077 #Tsabong (target)
+                    owns = 2076 #Nokaneng
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Northern_Cape }
+                    #Northern Cape
+                    owns = 2088 #O'okiep
+                    #owns = 2093 #Hantam (target for Cape Colony)
+                    #owns = 2558 #Emthanjeni
+                    #owns = 2094 #Griqualand
+                    #owns = 2095 #Dikathong (optional) (target)
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Cape_Colony }
+                    #Cape Colony
+                    owns = 2087 #Cape Town
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Eastern_Cape }
+                    #Eastern Cape
+                    owns = 2096 #Port Elizabeth
+                    #owns = 2099 #Mathele (optional) (target)
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Basutoland }
+                    #Basutoland
+                    owns = 2101 #Thaba Nchu
+                    #owns = 2104 #Thaba Bosiu (optional) (target)
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Zululand }
+                    #Zululand
+                    owns = 2111 #eThekwini
+                    #owns = 2113 #uMgungundlovu (optional) (target)
+                }
+                AND = {
+                    NOT = { has_global_flag = africans_expelled_from_Tky_Gariep }
+                    #Tky-Gariep
+                    owns = 2108 #Mosega
+                    #owns = 2110 #Tsaneg (optional)
+                    #owns = 2114 #Lobamba (optional) (target)
+                }
+            }
+        }
+
+        allow = {
+            war = no
+            NOT = { num_of_revolts = 1 }
+            NOT = {
+                has_country_modifier = law_changed_by_force
+                has_country_modifier = national_confusion
+                has_recently_lost_war = yes
+            }
+            OR = {
+                government = absolute_monarchy
+                government = prussian_constitutionalism
+                government = hms_government
+                government = theocracy
+                government = fascist_dictatorship
+                government = presidential_dictatorship
+                government = proletarian_dictatorship
+            }
+            OR = {
+                ruling_party_ideology = reactionary
+                ruling_party_ideology = fascist
+                ruling_party_ideology = communist
+                AND = {
+                    ruling_party_ideology = conservative
+                    war_policy = jingoism
+                    citizenship_policy = residency
+                }
+            }
+        }
+
+        effect = {
+            set_country_flag = ever_expelled_southern_africans
+            any_owned = {
+                limit = {
+                    state_id = 2080 #Hereroland
+                    NOT = { province_id = 2079 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Hereroland } owns = 2080 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2079 #coastal desert (target)
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2085 #Namaqualand
+                    NOT = { province_id = 2084 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Namaqualand } owns = 2085 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2084 #coastal desert (target)
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2076 #Benchuanaland
+                    NOT = { province_id = 2077 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Benchuanaland } owns = 2076 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2077 #Tsabong (target)
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2088 #Northern Cape
+                    NOT = { province_id = 2095 }
+                    NOT = { province_id = 2093 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Northern_Cape } owns = 2088 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2095 #Dikathong
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2087 #Cape Colony
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Cape_Colony } owns = 2087 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2093 #Hantam, Northern Cape
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2096 #Eastern Cape
+                    NOT = { province_id = 2099 }
+                    NOT = { province_id = 2100 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Eastern_Cape } owns = 2096 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2099 #Mathele
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2101 #Basutoland
+                    NOT = { province_id = 2104 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Basutoland } owns = 2101 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2104 #Thaba Bosiu
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2111 #Zululand
+                    NOT = { province_id = 2113 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Zululand } owns = 2111 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2113 #uMgungundlovu (target)
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+
+            any_owned = {
+                limit = {
+                    state_id = 2108 #Tky-Gariep
+                    NOT = { province_id = 2114 }
+                    owner = { NOT = { has_global_flag = africans_expelled_from_Tky_Gariep } owns = 2108 }
+                }
+                any_pop = { limit = { is_culture_group = southern_african } militancy = 9 }
+                poor_strata = {
+                    limit = { is_culture_group = southern_african NOT = { pop_type = soldiers } }
+                    reduce_pop = 0.55
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    random = { chance = 50 reduce_pop = 0.9 }
+                    move_pop = 2114 #Lobamba
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = farmers }
+                    }
+                    pop_type = farmers
+                }
+                any_pop = {
+                    limit = {
+                        is_culture_group = southern_african
+                        OR = {
+                            pop_type = artisans
+                            pop_type = clergymen
+                            pop_type = bureaucrats
+                        }
+                        location = { has_pop_type = labourers }
+                    }
+                    pop_type = labourers
+                }
+                add_province_modifier = { name = mass_graves duration = 1095 }
+            }
+            
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Hereroland }
+                        #Hereroland
+                        #owns = 2079 #coastal desert (target)
+                        owns = 2080 #Otjivanda
+                        #owns = 2081 #the handlebar (optional)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Hereroland badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Namaqualand }
+                        #Namaqualand
+                        #owns = 2084 #coastal desert (target)
+                        owns = 2085 #Nu-gouses
+                        #owns = 2083 #the enclave (optional)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Namaqualand badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Benchuanaland }
+                        #Benchuanaland
+                        #owns = 2077 #Tsabong (target)
+                        owns = 2076 #Nokaneng
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Benchuanaland badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Northern_Cape }
+                        #Northern Cape
+                        owns = 2088 #O'okiep
+                        #owns = 2093 #Hantam (target for Cape Colony)
+                        #owns = 2558 #Emthanjeni
+                        #owns = 2094 #Griqualand
+                        #owns = 2095 #Dikathong (optional) (target)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Northern_Cape badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Cape_Colony }
+                        #Cape Colony
+                        owns = 2087 #Cape Town
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Cape_Colony badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Eastern_Cape }
+                        #Eastern Cape
+                        owns = 2096 #Port Elizabeth
+                        #owns = 2099 #Mathele (optional) (target)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Eastern_Cape badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Basutoland }
+                        #Basutoland
+                        owns = 2101 #Thaba Nchu
+                        #owns = 2104 #Thaba Bosiu (optional) (target)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Basutoland badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Zululand }
+                        #Zululand
+                        owns = 2111 #eThekwini
+                        #owns = 2113 #uMgungundlovu (optional) (target)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Zululand badboy = 1 }
+            }
+            random_owned = {
+                limit = {
+                    owner = {
+                        NOT = { has_global_flag = africans_expelled_from_Tky_Gariep }
+                        #Tky-Gariep
+                        owns = 2108 #Mosega
+                        #owns = 2110 #Tsaneg (optional)
+                        #owns = 2114 #Lobamba (optional) (target)
+                    }
+                }
+                owner = { set_global_flag = africans_expelled_from_Tky_Gariep badboy = 1 }
+            }
+
+            any_country = {
+                limit = {
+                    exists = yes
+                    NOT = { alliance_with = THIS }
+                    NOT = { in_sphere = THIS }
+                    is_vassal = no
+                    is_substate = no
+                    is_culture_group = southern_african
+                }
+                relation = { who = THIS value = -200 }
+                casus_belli = { target = THIS type = cut_down_to_size months = 48 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
 }
