@@ -3432,6 +3432,10 @@ political_decisions = {
                 }
                 AND = {
                     OR = {
+                        is_culture_group = germanic
+                        primary_culture = boer
+                    }
+                    OR = {
                         NOT = { badboy = 0.4 }
                         has_country_modifier = interment_camps
                     }
@@ -3443,11 +3447,8 @@ political_decisions = {
                             war_policy = jingoism
                             citizenship_policy = residency
                             primary_culture = north_german
+							2080 = { owner = THIS average_militancy = 7 } #Otjivanda
                         }
-                    }
-                    OR = {
-                        is_culture_group = germanic
-                        primary_culture = boer
                     }
                 }
             }
