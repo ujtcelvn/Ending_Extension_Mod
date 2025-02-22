@@ -2356,7 +2356,7 @@ political_decisions = {
                 AND = {
                     has_country_flag = government_decisions_on
                     ai = no
-                }
+                }    
                 AND = {
                     OR = {
                         NOT = { badboy = 0.4 }
@@ -3447,7 +3447,7 @@ political_decisions = {
                             war_policy = jingoism
                             citizenship_policy = residency
                             primary_culture = north_german
-							2080 = { owner = THIS average_militancy = 7 } #Otjivanda
+                            2080 = { owner = THIS average_militancy = 7 } #Otjivanda
                         }
                     }
                 }
