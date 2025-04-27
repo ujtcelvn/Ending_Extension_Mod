@@ -8,6 +8,12 @@ ENG = {
     value = -5        #relation
 }
 
+
+QNG = {
+    value = -50        #relation
+}
+
+
 leader = {
     name = "Tharrawaddy Min"
     type = land

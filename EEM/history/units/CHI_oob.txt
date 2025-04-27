@@ -26,6 +26,10 @@ MGL = {
     value = -50        #relation
 }
 
+BUR = {
+    value = -50        #relation
+}
+
 army = {
     name = "Army of Forbidden Banners"
     location = 1612
