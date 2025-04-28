@@ -863,7 +863,10 @@ country_event = {
 
     trigger = {
         tag = QNG
-        has_global_flag = taiping_has_happened
+        OR = {
+            has_global_flag = taiping_has_happened
+            has_global_flag = ming_has_happened
+        }
         NOT = {
             any_greater_power = { war_with = ENG }
             has_country_flag = arrow_incident
