@@ -27,7 +27,7 @@ MGL = {
 }
 
 BUR = {
-    value = -50        #relation
+    value = -100        #relation
 }
 
 army = {
