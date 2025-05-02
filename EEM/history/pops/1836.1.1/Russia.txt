@@ -1958,7 +1958,19 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 50700
+        size = 49000 #50700
+    }
+
+    craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 1700 #0
+    }
+
+    craftsmen = {
+        culture = north_german
+        religion = protestant
+        size = 100 #0
     }
 
     aristocrats = {
@@ -1988,7 +2000,7 @@
     artisans = {
         culture = north_german
         religion = protestant
-        size = 6850
+        size = 6750 #6850
     }
 
     soldiers = {
@@ -2012,7 +2024,13 @@
     farmers = {
         culture = finnish
         religion = protestant
-        size = 14000
+        size = 13800 #14000
+    }
+
+    craftsmen = {
+        culture = finnish
+        religion = protestant
+        size = 200 #0
     }
 
     ######Jews
@@ -2037,13 +2055,19 @@
     artisans = {
         culture = ashkenazi
         religion = jewish
-        size = 250
+        size = 200 #250
     }
 
     farmers = {
         culture = ashkenazi
         religion = jewish
-        size = 200
+        size = 150 #200
+    }
+
+    craftsmen = {
+        culture = ashkenazi
+        religion = jewish
+        size = 100 #0
     }
     ########
 }
@@ -3017,9 +3041,15 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 114725
+        size = 113200 #114725
     }
 
+    craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 1725 #0
+    }
+	
     serfs = {
         culture = russian
         religion = orthodox
@@ -3813,7 +3843,13 @@
     farmers = {
         culture = russian
         religion = orthodox
-        size = 61850
+        size = 61000 #61850
+    }
+
+    craftsmen = {
+        culture = russian
+        religion = orthodox
+        size = 850 #0
     }
 
     serfs = {
@@ -3867,7 +3903,13 @@
     farmers = {
         culture = ugrian
         religion = orthodox
-        size = 4675
+        size = 4550 #4675
+    }
+
+    craftsmen = {
+        culture = ugrian
+        religion = orthodox
+        size = 125 #0
     }
 }
 #Chistopol (608000/152000 POPS)

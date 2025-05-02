@@ -124,12 +124,22 @@
     farmers = {
         culture = dutch
         religion = protestant
-        size = 75200
+        size = 75000 #75200
     }
     farmers = {
         culture = dutch
         religion = catholic
-        size = 26437
+        size = 26337 #26437
+    }
+    craftsmen = {
+        culture = dutch
+        religion = catholic
+        size = 100 #0
+    }
+    craftsmen = {
+        culture = dutch
+        religion = protestant
+        size = 200 #0
     }
     artisans = {
         culture = flemish

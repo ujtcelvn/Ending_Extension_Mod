@@ -86,6 +86,8 @@ overseas = {
 
 coastal = {
     supply_limit = 5
+    farm_rgo_eff = 0.05
+    mine_rgo_eff = 0.05
 }
 
 non_coastal = {
@@ -109,8 +111,9 @@ land_province = {
 
 blockaded = {
     war_exhaustion = 0.05
-    farm_rgo_eff = -0.25
-    mine_rgo_eff = -0.25
+    farm_rgo_eff = -0.3 #-0.25
+    mine_rgo_eff = -0.3 #-0.25
+    local_factory_throughput = -0.05 #0
 }
 
 no_adjacent_controlled = {

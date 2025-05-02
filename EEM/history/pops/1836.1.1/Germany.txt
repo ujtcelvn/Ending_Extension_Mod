@@ -599,7 +599,13 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 89325
+        size = 89225 #89325
+    }
+
+    craftsmen = {
+        culture = north_german
+        religion = protestant
+        size = 100 #0
     }
 
     clergymen = {
@@ -2434,7 +2440,13 @@
     farmers = {
         culture = north_german
         religion = protestant
-        size = 47350
+        size = 47250 #47350
+    }
+
+    craftsmen = {
+        culture = north_german
+        religion = protestant
+        size = 100 #0
     }
 }
 #Hesse Region (1719600)
@@ -4763,7 +4775,13 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 30625
+        size = 30575 #30625
+    }
+
+    craftsmen = {
+        culture = south_german
+        religion = protestant
+        size = 50 #0
     }
 }
 #Swabia Region (833000)
@@ -4951,7 +4969,13 @@
     farmers = {
         culture = south_german
         religion = catholic
-        size = 93375
+        size = 93275 #93375
+    }
+
+    craftsmen = {
+        culture = south_german
+        religion = catholic
+        size = 100 #0
     }
 
     aristocrats = {
@@ -4981,7 +5005,13 @@
     farmers = {
         culture = south_german
         religion = protestant
-        size = 111275
+        size = 111175 #111275
+    }
+
+    craftsmen = {
+        culture = south_german
+        religion = protestant
+        size = 100 #0
     }
 
     ######Jews

@@ -1888,7 +1888,13 @@
     farmers = {
         culture = spanish
         religion = catholic
-        size = 62200
+        size = 62000 #62200
+    }
+
+    craftsmen = {
+        culture = spanish
+        religion = catholic
+        size = 200 #0
     }
 }
 #Cordoba (324000/81000 POPS)
@@ -1990,9 +1996,15 @@
     farmers = {
         culture = spanish
         religion = catholic
-        size = 64650
+        size = 64500 #64650
     }
 
+
+    craftsmen = {
+        culture = spanish
+        religion = catholic
+        size = 150 #0
+    }
 }
 #Alpujarras Region (1296000)
 #Granada (382000/95500 POPS)
@@ -2042,7 +2054,13 @@
     farmers = {
         culture = spanish
         religion = catholic
-        size = 72850
+        size = 72750 #72850
+    }
+
+    craftsmen = {
+        culture = spanish
+        religion = catholic
+        size = 100 #0
     }
 }
 #Malaga (402000/100500 POPS)

@@ -41,7 +41,7 @@
     craftsmen = {
         culture = north_italian
         religion = catholic
-        size = 3000
+        size = 4900 #3000
     }
 
     artisans = {
@@ -59,7 +59,7 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 199900
+        size = 198000 #199900
     }
 
     ######Jews
@@ -574,7 +574,13 @@
     farmers = {
         culture = north_italian
         religion = catholic
-        size = 159075
+        size = 158850 #159075
+    }
+
+    craftsmen = {
+        culture = north_italian
+        religion = catholic
+        size = 225 #0
     }
 }
 #Venetia Region (2060000)

@@ -70,7 +70,13 @@
     labourers = {
         culture = picard
         religion = catholic
-        size = 120500
+        size = 120000 #120500
+    }
+
+    craftsmen = {
+        culture = picard
+        religion = catholic
+        size = 500 #0
     }
 }
 #Dunkirk (396000/99000 POPS)
@@ -2161,6 +2167,12 @@
         size = 550
     }
 
+    craftsmen = {
+        culture = french
+        religion = catholic
+        size = 350 #0
+    }
+
     artisans = {
         culture = french
         religion = catholic
@@ -2182,7 +2194,7 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 63350
+        size = 63000 #63350
     }
 }
 #Bourges (264400/66100 POPS)
@@ -2498,9 +2510,14 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 134100
+        size = 133000 #134100
     }
 
+    craftsmen = {
+        culture = french
+        religion = catholic
+        size = 200 #0
+    }
 }
 #Auvergne Region (1418000)
 #Clermont-Ferrand (728000/182000 POPS)
@@ -2672,7 +2689,7 @@
     craftsmen = {
         culture = french
         religion = catholic
-        size = 6500
+        size = 8100 #6500
     }
 
     clergymen = {
@@ -2696,7 +2713,7 @@
     farmers = {
         culture = french
         religion = catholic
-        size = 103600
+        size = 102000 #103600
     }
 
     #####Jews

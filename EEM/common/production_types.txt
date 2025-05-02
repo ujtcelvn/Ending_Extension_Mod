@@ -557,10 +557,10 @@ ammunition_factory = {
     value = 2.5            #45 - profit = 14.9
     bonus = {
         trigger = { 
-            OR = { 
+            #OR = { 
                 trade_goods_in_state = sulphur 
-                has_building = hydrodesulphurization_plant 
-            } 
+            #    has_building = hydrodesulphurization_plant 
+            #} 
         }
         value = 0.1
     }
@@ -727,10 +727,10 @@ fertilizer_factory = {
     value = 5                #50 - profit = 14
     bonus = {
         trigger = { 
-            OR = { 
+            #OR = { 
                 trade_goods_in_state = sulphur 
-                has_building = hydrodesulphurization_plant 
-            } 
+            #    has_building = hydrodesulphurization_plant 
+            #} 
         }
         value = 0.25
     }
