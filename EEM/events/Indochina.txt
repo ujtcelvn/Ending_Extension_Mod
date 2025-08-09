@@ -1054,3 +1054,188 @@ country_event = {
         }
     }
 }
+
+
+#### Cambodian Rebellion of 1840 ####
+country_event = {
+    id = 95662
+    title = "EVTNAME95662"
+    desc = "EVTDESC95662"
+    picture = "ang_mey_cambodia"
+
+    trigger = {
+        tag = DAI
+        CAM = {
+            exists = yes
+            is_vassal = yes
+            overlord = { tag = DAI }
+        }
+        year = 1840
+    }
+
+    fire_only_once = yes
+
+    mean_time_to_happen = {
+        months = 9
+        modifier = {
+            factor = 0.01
+            1368 = { controlled_by_rebels = yes }
+        }
+    }
+
+    option = {
+        name = "EVT95662OPTA"
+        badboy = 5
+
+        any_pop = {
+            limit = {
+                has_pop_culture = khmer
+            }
+            militancy = 3
+            consciousness = 2
+        }
+        any_owned = {
+            limit = {
+                is_core = CAM
+            }
+            add_province_modifier = { name = nationalist_agitation duration = 1095 }
+        }
+        relation = { who = SIA value = -50 }
+        CAM = { country_event = 95663 }
+        ai_chance = {
+            factor = 90
+        }
+    }
+
+
+    option = {
+        name = "EVT95662OPTB"
+        
+        ai_chance = {
+            factor = 10
+            modifier = {
+                factor = 0
+                war = no
+            }
+        }
+    }
+}
+
+
+
+country_event = {
+    id = 95663
+    title = "EVTNAME95663"
+    desc = "EVTDESC95663"
+    picture = "ang_mey_cambodia"
+    
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT95663OPTA"
+        relation = { who = DAI value = -400 }
+        leave_alliance = DAI
+        
+        any_country = {
+            limit = { war_with = THIS }
+            end_war = THIS
+        }
+        
+        DAI = {
+            release_vassal = THIS
+            war = {
+                target = THIS
+                attacker_goal = { casus_belli = conquest_any }
+            }
+        }
+        SIA = { country_event = 95664 }
+
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 0.5
+                DAI = { truce_with = SIA }
+            }
+        }
+    }
+
+    option = {
+        name = "EVT95663OPTB"
+        annex_to = FROM
+
+        ai_chance = {
+            factor = 10
+        }
+    }
+}
+
+
+country_event = {
+    id = 95664
+    title = "EVTNAME95664"
+    desc = "EVTDESC95664"
+    picture = "ang_mey_cambodia"
+    is_triggered_only = yes
+
+    option = {
+        name = "EVT95664OPTA"
+        leave_alliance = DAI
+        relation = { who = DAI value = -100 }
+        create_alliance = CAM
+        relation = { who = CAM value = 200 }
+
+        any_pop = { 
+            limit = {
+                has_pop_culture = khmer
+            }
+            militancy = -3
+        }
+        random_owned = {
+            limit = { owner = { check_variable = { which = owed_cash_money value = 9 } } }
+            owner = { change_variable = { which = owed_cash_money value = 10 } }
+        }
+        random_owned = {
+            limit = { owner = { NOT = { check_variable = { which = owed_cash_money value = 1 } } } }
+            owner = { set_variable = { which = owed_cash_money value = 10 } }
+        }
+
+        CAM = {
+            treasury = 10000
+            country_event = 96001
+        }
+        ai_chance = {
+            factor = 90
+            modifier = {
+                factor = 0.5
+                alliance_with = DAI
+            }
+            modifier = {
+                factor = 0.5
+                DAI = { briages_compare = 1 }
+            }
+            modifier = {
+                factor = 0.5
+                war = yes
+            }
+        }
+    }
+
+    option = {
+        name = "EVT95664OPTB"
+        prestige = -10
+        any_pop = {
+            limit = {
+                has_pop_culture = khmer
+            }
+            militancy = 3
+        }
+        any_owned = {
+            limit = { is_core = CAM }
+            add_province_modifier = { name = nationalist_agitation duration = 1095 }
+        }
+
+        ai_chance = {
+            factor = 10
+        }
+    }
+}

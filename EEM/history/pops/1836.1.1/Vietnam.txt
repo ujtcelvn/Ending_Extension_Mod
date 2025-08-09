@@ -749,56 +749,56 @@
 #Pleiku (148000 37000 POPS)
 1378 = {
     aristocrats = {
-        culture = vietnamese
-        religion = mahayana
+        culture = asian_minor #vietnamese
+        religion = sunni #mahayana
         size = 700
     }
 
     clergymen = {
-        culture = vietnamese
-        religion = mahayana
+        culture = asian_minor #vietnamese
+        religion = animist #mahayana
         size = 325
     }
 
     artisans = {
-        culture = vietnamese
-        religion = mahayana
+        culture = asian_minor #vietnamese
+        religion = animist #mahayana
         size = 1700
     }
 
     soldiers = {
-        culture = vietnamese
-        religion = mahayana
+        culture = asian_minor #vietnamese
+        religion = animist #mahayana
         size = 350
     }
 
     farmers = {
-        culture = vietnamese
-        religion = mahayana
+        culture = asian_minor #vietnamese
+        religion = animist #mahayana
         size = 40925
     }
 
     slaves = {
-        culture = vietnamese
-        religion = mahayana
+        culture = asian_minor #vietnamese
+        religion = animist #mahayana
         size = 2000
     }
 
     clergymen = {
-        culture = vietnamese
-        religion = catholic
+        culture = asian_minor #vietnamese
+        religion = sunni #catholic
         size = 100
     }
 
     artisans = {
-        culture = vietnamese
-        religion = catholic
+        culture = asian_minor #vietnamese
+        religion = sunni #catholic
         size = 200
     }
 
     farmers = {
-        culture = vietnamese
-        religion = catholic
+        culture = asian_minor #vietnamese
+        religion = sunni #catholic
         size = 3750
     }
 }

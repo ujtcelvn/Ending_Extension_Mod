@@ -52,8 +52,10 @@ political_decisions = {
                                 any_pop = {
                                     is_primary_culture = no
                                     is_accepted_culture = no
-                                    has_pop_religion = sunni
-                                    has_pop_religion = shiite
+                                    OR = {
+                                        has_pop_religion = sunni
+                                        has_pop_religion = shiite
+                                    }
                                 }
                             }
                         }
@@ -259,8 +261,10 @@ political_decisions = {
                             any_pop = {
                                 is_primary_culture = no
                                 is_accepted_culture = no
-                                has_pop_religion = sunni
-                                has_pop_religion = shiite
+                                OR = {
+                                    has_pop_religion = sunni
+                                    has_pop_religion = shiite
+                                }
                             }
                         }
                     }
@@ -3447,7 +3451,7 @@ political_decisions = {
                             war_policy = jingoism
                             citizenship_policy = residency
                             primary_culture = north_german
-                            2080 = { owner = THIS average_militancy = 7 } #Otjivanda
+                            2080 = { owned_by = THIS average_militancy = 7 } #Otjivanda
                         }
                     }
                 }

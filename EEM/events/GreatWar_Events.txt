@@ -10854,9 +10854,9 @@ country_event = {
             any_pop = {
                 limit = {
                     is_primary_culture = yes
-                    is_state_religion = yes
                 }
                 ideology = { factor = 0.1 value = reactionary }
+                issue = { factor = 0.1 value = moralism }
             }
         }
         any_pop = {
@@ -10879,6 +10879,21 @@ country_event = {
             scaled_militancy = {
                 ideology = liberal
                 factor = 2
+            }
+        }
+        any_country = {
+            limit = {
+                tag = THIS
+                tag = PAP
+            }
+            any_pop = {
+                limit = {
+                    has_pop_religion = catholic
+                }
+                scaled_militancy = {
+                    issue = moralism
+                    factor = -9
+                }
             }
         }
         any_country = {

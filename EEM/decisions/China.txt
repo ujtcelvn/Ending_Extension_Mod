@@ -82,6 +82,7 @@ political_decisions = {
                 name = yong_ying
                 duration = -1
             }
+            remove_country_modifier = unciv_military_tradition
 
         }
 

@@ -1948,6 +1948,51 @@ political_decisions = {
                 }
                 political_reform = closed_borders
             }
+            any_country = {
+                limit = {
+                    civilized = no
+                    exists = yes
+                    nationalvalue = nv_tradition
+                    NOT = { has_country_modifier = unciv_military_tradition }
+                    #NOT = { has_country_modifier = muhammad_alis_reforms }
+                    #NOT = { has_country_modifier = shastar_vidya }
+                    #NOT = { has_country_modifier = yong_ying }
+                    OR = {
+                        primary_culture = nguni
+                        primary_culture = xhosa
+                        primary_culture = zulu
+
+                        primary_culture = uzbek
+                        primary_culture = kazak
+                        primary_culture = kirgiz
+                        primary_culture = tajik
+                        #primary_culture = uighur
+                        primary_culture = pashtun
+                        #primary_culture = baluchi
+                        primary_culture = hazara
+                        primary_culture = turkmen
+                        #primary_culture = tatar
+                        
+                        is_culture_group = caucasian
+                        
+                        primary_culture = maghrebi
+                        primary_culture = bedouin
+                        primary_culture = berber
+                        
+                        primary_culture = panjabi
+                        primary_culture = rajput
+                        
+                        primary_culture = fulbe
+                        
+                        primary_culture = somali
+                        
+                        primary_culture = amhara
+                        primary_culture = tigray
+                        primary_culture = oromo
+                    }
+                }
+                add_country_modifier = { name = unciv_military_tradition duration = -1 }
+            }
             ##########################################################
 
             #################Giving Starting Money to Pops and Countries######################

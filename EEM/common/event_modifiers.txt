@@ -2203,7 +2203,7 @@ yong_ying = {
     leadership_modifier = 0.1          #foreign officer training
     land_organisation = 0.1            #foreign training methods
     naval_organisation = -0.2
-    supply_consumption = 0.2
+    supply_consumption = 0.5
     core_pop_consciousness_modifier = 0.01
     research_points_on_conquer = -0.5  #foreign training methods + foreign officer training
     icon = 15
@@ -2824,4 +2824,12 @@ nuke_tier_2 = { #has_lotsa_bomb
 #further levels of nuclear are based purely on inventions
 
 
-### Anti-war ###
+### War and Anti-war ###
+unciv_military_tradition = {
+    land_organisation = 0.05
+    land_unit_start_experience = 5
+    icon = 15
+}
+
+
+

@@ -76,3 +76,17 @@ army = {
     }
 
 }
+
+navy = {
+    name = "Royal Siamese Navy"
+    location = 1346
+
+    ship = {
+        name= "Conqueror"
+        type = manowar
+    }
+    ship = {
+        name= "Ariel"
+        type = frigate
+    }
+}

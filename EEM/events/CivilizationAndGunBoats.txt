@@ -4060,6 +4060,7 @@ country_event = {
         remove_country_modifier = uncivilized_isolationism
         remove_country_modifier = trade_restrictions
         remove_country_modifier = sayings_of_the_dutch
+        remove_country_modifier = unciv_military_tradition
         remove_country_modifier = rangaku
         remove_country_modifier = sakoku
         clr_country_flag = using_foreign_weapons

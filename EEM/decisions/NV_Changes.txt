@@ -123,6 +123,7 @@ political_decisions = {
                 name = national_confusion
                 duration = 3650
             }
+            remove_country_modifier = unciv_military_tradition
             any_pop = {
                 scaled_militancy = {
                     ideology = reactionary
@@ -224,6 +225,7 @@ political_decisions = {
                 name = national_confusion
                 duration = 3650
             }
+            remove_country_modifier = unciv_military_tradition
             any_pop = {
                 scaled_militancy = {
                     ideology = reactionary
@@ -347,6 +349,7 @@ political_decisions = {
                 name = national_confusion
                 duration = 3650
             }
+            remove_country_modifier = unciv_military_tradition
             any_pop = {
                 scaled_militancy = {
                     ideology = reactionary
@@ -462,6 +465,7 @@ political_decisions = {
                 name = national_confusion
                 duration = 3650
             }
+            remove_country_modifier = unciv_military_tradition
             any_pop = {
                 scaled_militancy = {
                     ideology = reactionary
@@ -557,6 +561,7 @@ political_decisions = {
                 name = national_confusion
                 duration = 3650
             }
+            remove_country_modifier = unciv_military_tradition
             any_pop = {
                 scaled_militancy = {
                     ideology = reactionary

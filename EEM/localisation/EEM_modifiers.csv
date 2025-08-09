@@ -60,3 +60,5 @@ nuke_tier_1;Atomic Bombs;;;;;;;;;;;;;
 nuke_tier_1_desc;We have a limited supply of atomic bombs. Military spending needs to be greater than 40% for research to progress.;;;;;;;;;;;;;
 nuke_tier_2;Mass Produced Bombs;;;;;;;;;;;;;
 nuke_tier_2_desc;We have a large stockpile of atomic bombs. Military spending needs to be greater than 40% for research to progress.;;;;;;;;;;;;;
+unciv_military_tradition;Martial Tradition;;;;;;;;;;;;;
+unciv_military_tradition_desc;Our traditional military culture is a cut above most.;;;;;;;;;;;;;
