@@ -364,3 +364,7 @@ EVTNAME95664;$COUNTRY_ADJ$ Intervention in the Cambodian Rebellion;;;;;;;;;;;;;
 EVTDESC95664;The Cambodians have rebelled against their Vietnamese overlords. Cambodia has been a site of rivary between $COUNTRY$ and Dai Viet for centuries, so supporting the Cambodian rebels could be a good way to weaken our rivals.;;;;;;;;;;;;;
 EVT95664OPTA;Support Cambodia! §R(Pay or owe 10,000¤)§W;;;;;;;;;;;;;
 EVT95664OPTB;This is not a good idea.;;;;;;;;;;;;;
+EVTNAME44342;The Southern Rhodesia Dominion - Landlocked;;;;;;;;;;;;;
+EVTDESC44342;The colony of $COUNTRY_ADJ$ Southern Rhodesia is landlocked and has asked to be governed as an autonomous dominion within the empire.;;;;;;;;;;;;;
+EVTNAME44343;The Bechuanaland Dominion - Landlocked;;;;;;;;;;;;;
+EVTDESC44343;The colony of $COUNTRY_ADJ$ Bechuanaland is landlocked and has asked to be governed as an autonomous dominion within the empire.;;;;;;;;;;;;;

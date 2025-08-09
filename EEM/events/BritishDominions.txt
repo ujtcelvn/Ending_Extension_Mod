@@ -1427,10 +1427,10 @@ country_event = {
             militancy = -10
         }
         RHO = { all_core = { remove_core = ENG } }
-        any_owned = {
-            limit = { is_core = RHO }
-            secede_province = RHO
-        }
+        #any_owned = {
+        #    limit = { is_core = RHO }
+        #    secede_province = RHO
+        #}
         release_vassal = RHO
         relation = {
             who = RHO
@@ -1532,6 +1532,274 @@ country_event = {
                 factor = 0.8
                 militancy = 5
             }
+        }
+    }
+}
+
+
+
+#The Southern Rhodesia Dominion - Landlocked
+country_event = {
+    id = 44342
+
+    title = "EVTNAME44342"
+    desc = "EVTDESC44342"
+    picture = "danishgovernment"
+
+    major = yes
+
+    trigger = {
+        OR = {
+            tag = ENG
+            tag = ENL
+        }
+
+        is_possible_vassal = RHO
+        NOT = { exists = RHO }
+		OR = {
+			ai = yes
+			NOT = { has_country_flag = RHO_independence_refused }
+		}
+        war = no
+        any_owned_province = { is_core = RHO }
+        war = no
+        NOT = {
+            OR = {
+                owns = 2088 #Northern Cape
+                #--> Natal
+                AND = {
+                    owns = 2015
+                    owns = 2011
+                }
+                #--> Eastern Cape
+                AND = {
+                    owns = 2015
+                    owns = 2103
+                    owns = 2096
+                }
+                
+                #-->Namaqualand
+                AND = {
+                    owns = 2084 
+                    owns = 2074
+                }
+                
+                #--> Hereoland
+                AND = {
+                    owns = 2015
+                    owns = 2079
+                }
+                
+                #Mozambique
+                owns = 2050 
+                owns = 2058
+                owns = 2065
+                AND = {
+                    owns = 2067
+                    owns = 2060
+                }
+
+
+                #Angola
+                AND = {
+                    owns = 2007
+                    #Angola Coast
+                    OR = {
+                        owns = 2005
+                        owns = 2009
+                    }
+                }
+                
+                #Congo
+                AND = {
+                    owns = 1987
+                    owns = 1984
+                    owns = 1983
+                }
+
+                #Tangangkia
+                AND = {
+                    owns = 2042
+                    OR = {
+                        owns = 2041
+                        owns = 2045
+                        owns = 2019 #Uganda
+                    }
+                }
+            }
+        }
+        #exists = SAF
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "EVT44330OPTA"
+        clr_country_flag = RHO_independence_refused
+        prestige = -20
+        badboy = -5
+        any_pop = {
+            limit = { location = { is_core = RHO } }
+            militancy = -10
+        }
+        RHO = { all_core = { remove_core = ENG } }
+        #any_owned = {
+        #    limit = { is_core = RHO }
+        #    secede_province = RHO
+        #}
+        release_vassal = RHO
+        relation = {
+            who = RHO
+            value = 200
+        }
+        diplomatic_influence = {
+            who = RHO
+            value = 200
+        }
+        any_pop = {
+            consciousness = 1
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "EVT44330OPTB"
+        set_country_flag = RHO_independence_refused
+        any_owned = {
+            limit = { is_core = RHO }
+            any_pop = {
+                militancy = 3
+            }
+        }
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+#The Bechuanaland Dominion - Landlocked
+country_event = {
+    id = 44343
+
+    title = "EVTNAME44343"
+    desc = "EVTDESC44343"
+    picture = "danishgovernment"
+
+    major = yes
+
+    trigger = {
+        OR = {
+            tag = ENG
+            tag = ENL
+        }
+
+        is_possible_vassal = TSW
+        NOT = { exists = TSW }
+		OR = {
+			ai = yes
+			NOT = { has_country_flag = TSW_independence_refused }
+		}
+        war = no
+        any_owned_province = { is_core = TSW }
+        NOT = {
+            OR = {
+                owns = 2088 #Northern Cape
+                #--> Natal
+                AND = {
+                    owns = 2015
+                    owns = 2011
+                }
+                #--> Eastern Cape
+                AND = {
+                    owns = 2015
+                    owns = 2103
+                    owns = 2096
+                }
+                
+                owns = 2084 #Namaqualand
+                owns = 2079 #Hereoland
+                
+                #OR = {
+                #    owns = 2012 #NW Rhodesia
+                #    owns = 2016 #NE Rhodesia
+                #    owns = 2086 #SE Rhodesia
+                    owns = 2071 #SW Rhodesia
+                #}
+                AND = {
+                    owns = 2081 #Luhonono
+                    owns = 2012 #NW Rhodesia
+                }
+
+                #-->Angola
+                AND = {
+                    OR = {
+                        owns = 2081 #Luhonono
+                        AND = {
+                            owns = 2071 #SW Rhodesia
+                            owns = 2012 #NW Rhodesia
+                        }
+                    }
+                    owns = 2007
+                    OR = {
+                        owns = 2005
+                        owns = 2009
+                    }
+                }
+            }
+        }
+        #exists = SAF
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        name = "EVT44330OPTA"
+        clr_country_flag = TSW_independence_refused
+        prestige = -10
+        badboy = -2
+        any_pop = {
+            limit = { location = { is_core = TSW } }
+            militancy = -10
+        }
+        TSW = { all_core = { remove_core = ENG } }
+        #any_owned = {
+        #    limit = { is_core = TSW }
+        #    secede_province = TSW
+        #}
+        release_vassal = TSW
+        relation = {
+            who = TSW
+            value = 200
+        }
+        diplomatic_influence = {
+            who = TSW
+            value = 200
+        }
+        any_pop = {
+            consciousness = 1
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = {
+        name = "EVT44330OPTB"
+        set_country_flag = TSW_independence_refused
+        any_owned = {
+            limit = { is_core = TSW }
+            any_pop = {
+                militancy = 3
+            }
+        }
+        ai_chance = {
+            factor = 0
         }
     }
 }
