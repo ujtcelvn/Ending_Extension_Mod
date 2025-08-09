@@ -896,11 +896,10 @@ political_decisions = {
                 
                 primary_culture = fulbe
                 
-                primary_culture = somali
-                
-                primary_culture = amhara
-                primary_culture = tigray
-                primary_culture = oromo
+                #primary_culture = somali
+                #primary_culture = amhara
+                #primary_culture = tigray
+                #primary_culture = oromo
             }
         }
 

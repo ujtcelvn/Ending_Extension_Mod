@@ -1984,11 +1984,10 @@ political_decisions = {
                         
                         primary_culture = fulbe
                         
-                        primary_culture = somali
-                        
-                        primary_culture = amhara
-                        primary_culture = tigray
-                        primary_culture = oromo
+                        #primary_culture = somali
+                        #primary_culture = amhara
+                        #primary_culture = tigray
+                        #primary_culture = oromo
                     }
                 }
                 add_country_modifier = { name = unciv_military_tradition duration = -1 }
