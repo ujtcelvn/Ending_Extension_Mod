@@ -1093,6 +1093,7 @@ political_decisions = {
         }
 
         effect = {
+            add_country_modifier = { name = penal_colonies duration = -1 }
             1008 = { set_province_flag = moscow_city }
             1008 = { any_pop = { literacy = 0.1 } }
             994 = { any_pop = { literacy = 0.1 } }
