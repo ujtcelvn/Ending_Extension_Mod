@@ -10861,14 +10861,6 @@ country_event = {
         }
         any_pop = {
             scaled_militancy = {
-                ideology = reactionary
-                factor = -8
-            }
-            scaled_militancy = {
-                ideology = conservative
-                factor = -4
-            }
-            scaled_militancy = {
                 ideology = communist
                 factor = 8
             }
@@ -10879,6 +10871,14 @@ country_event = {
             scaled_militancy = {
                 ideology = liberal
                 factor = 2
+            }
+            scaled_militancy = {
+                ideology = reactionary
+                factor = -8
+            }
+            scaled_militancy = {
+                ideology = conservative
+                factor = -4
             }
         }
         any_country = {
