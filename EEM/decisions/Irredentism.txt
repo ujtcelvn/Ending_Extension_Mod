@@ -1272,11 +1272,12 @@ political_decisions = {
             1211 = { add_core = TAJ } #already BDK core
             #North Mongolia
             #2679 = { add_core = TKS }
+            #2679 = { add_core = KAZ }
             #Urumqi
             #1595 = { add_core = TKS }
             #1596 = { add_core = TKS }
             #1599 = { add_core = TKS }
-            #1560 = { add_core = TKS }
+            #1600 = { add_core = TKS }
             #Kashgar
             #1594 = { add_core = TKS }
             #1597 = { add_core = TKS }
@@ -1289,5 +1290,73 @@ political_decisions = {
         }
     }
 
+    uighurs_in_turkestan = {
+        picture = unite_turkestan
+        potential = {
+            tag = TKS
+            NOT = { has_country_flag = uighurs_in_turkestan }
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            is_disarmed = no
+			OR = {
+				war_policy = jingoism
+				UYG = {
+					exists = yes
+                    OR = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                    }
+				}
+				AND = {
+					owns = 1600 #Urumqi
+					owns = 1594 #Kashgar
+					owns = 1599 #Kumul
+				}
+			}
+            OR = {
+                is_greater_power = yes
+                is_secondary_power = yes
+            }
+            prestige = 45
+        }
+
+        effect = {
+            set_country_flag = uighurs_in_turkestan
+            badboy = 8
+
+            #North Mongolia
+            #2679 = { add_core = TKS }
+            #2679 = { add_core = KAZ }
+            #Urumqi
+            1595 = { add_core = TKS }
+            1596 = { add_core = TKS }
+            1599 = { add_core = TKS }
+            1600 = { add_core = TKS }
+            #Kashgar
+            1594 = { add_core = TKS }
+            1597 = { add_core = TKS }
+            1598 = { add_core = TKS }
+            2607 = { add_core = TKS }
+			
+            any_country = {
+                limit = {
+                    primary_culture = uighur
+                    OR = {
+                        in_sphere = THIS
+                        vassal_of = THIS
+                    }
+                    NOT = { tag = THIS }
+                }
+                annex_to = THIS
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
 }
