@@ -10892,9 +10892,12 @@ country_event = {
                 }
                 scaled_militancy = {
                     issue = moralism
-                    factor = -9
+                    factor = -2
                 }
             }
+            add_country_modifier = { name = state_of_emergency_modifier duration = 1095 }
+            add_country_modifier = { name = law_changed_by_force duration = 1825 } 
+            #to prevent state_of_emergency decision from being picked and state of emergency ends event from firing
         }
         any_country = {
             limit = {
