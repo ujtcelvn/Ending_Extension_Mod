@@ -700,9 +700,52 @@ province_event = {
                     province_id = 1157        # Ghawar 1948 Riyadh, arabia
                     #province_id = 932        # Az Zubayr 1949(Basra already oil)
                     province_id = 1488        # 1939-1941 Yumen / Jiuquan basin / Jiayuguan
+                    province_id = 1165        # Doha, Dukhan Field 1939
                 }
             }
-
+            AND = {
+                year = 1960
+                OR = {
+                    province_id = 1552        # Qiqihar 1960 (Daqing Oil Field)
+                    province_id = 1570        # Wuding 1961-64 (Shengli Oil Field)
+                    province_id = 1600        # Urumqi 1960s (Xinjiang (1951), Tarim (1989) oil fields)
+                    province_id = 383        # Groningen gas field, Netherlands 1959
+                    province_id = 1933        # Awka 1958, Nigerian Delta oil
+                    province_id = 1738        # Al Jahgbub, Zelten oil field, Sarir field, Lybia 1956-61
+                    province_id = 1719        # Ilizi 1956
+                }
+            }
+            AND = {
+                year = 1970
+                OR = {
+                    province_id = 310        # Christianssand 1969-71
+                    province_id = 266        # Aberdeen 1970-75
+                    province_id = 1724        # Orkney & Shetland 1977
+                    province_id = 1731        # Tripoli 1976-88
+                    province_id = 2599        # Fairbanks (Northern Alaska) 1967
+                    province_id = 2479        # Sale, Halibut Oil Field, Australia 1967
+                    province_id = 1183        # Aqtobe, Zhanazhol 1960-87, Kazakhstan (also Karachaganak Field (1972) )
+                    province_id = 2646        # Surgut 1965-69
+                }
+            }
+            AND = {
+                year = 1980
+                OR = {
+                    province_id = 74        # Saint Johns 1979
+                    province_id = 2451        # Santos 1985
+                    province_id = 1182        # Guryev 1979-93
+                    province_id = 2690        # Yugansk 1982-2000
+                    province_id = 2559        # Khalmer-Sede 1988-2009
+                    province_id = 2688        # Inta 1983-2013
+                }
+            }
+            AND = {
+                year = 2000
+                OR = {
+                    province_id = 2000        # Cabinda, Angola 1997
+                    province_id = 1909        # Sekondi 2007-10
+                }
+            }
         }
         not = { trade_goods = oil }
         owner = {

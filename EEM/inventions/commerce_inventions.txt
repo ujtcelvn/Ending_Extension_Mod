@@ -1684,22 +1684,29 @@ import_substitution_industrialization = {
     }
     news = no
     chance = {
-        base = 0
+        base = -1 #0
         modifier = {
-            factor = 4
+            factor = 3 #4
             economic_policy = planned_economy
         }
         modifier = {
-            factor = 3
+            factor = 2 #3
             economic_policy = state_capitalism
         }
         modifier = {
-            factor = 2
+            factor = 1 #2
             economic_policy = interventionism
         }
         modifier = {
             factor = 1
             trade_policy = protectionism
+        }
+        modifier = {
+            factor = -4 #0
+            NOT = {
+                synthetic_polymers = 1
+                electric_furnace = 1
+            }
         }
     }
     effect = {
