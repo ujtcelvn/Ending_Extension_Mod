@@ -815,7 +815,7 @@ pit_coal = {
     }
     effect = {
         rgo_goods_output = { coal = 0.5 }
-        rgo_goods_output = { iron = 0.1 } #0
+        rgo_goods_output = { iron = 0.25 } #0
     }
 }
 coke = {
@@ -858,7 +858,7 @@ coke = {
     }
     effect = {
         rgo_goods_output = { coal = 0.5 }
-        rgo_goods_output = { iron = 0.5 } #0.5 #0.25 #0
+        rgo_goods_output = { iron = 0.25 } #0.5 #0.25 #0
     }
 }
 #Regenerative Furnaces
