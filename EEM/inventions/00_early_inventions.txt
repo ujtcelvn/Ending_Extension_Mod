@@ -113,7 +113,7 @@ haber_process = {
         }
     }
     effect = {
-        factory_goods_output = { fertilizer = 0.25 }
+        factory_goods_output = { fertilizer = 0.2 } #0.25
     }
 }
 
@@ -216,9 +216,9 @@ rubber_n_plastic_additives = {
     }
     effect = {
         rgo_goods_output = { rubber = 0.5 }
-        factory_goods_output = { glass = 0.01 }
-        factory_goods_output = { fabric = 0.01 }
-        factory_goods_output = { cement = 0.01 }
+        #factory_goods_output = { glass = 0.01 }
+        #factory_goods_output = { fabric = 0.01 }
+        #factory_goods_output = { cement = 0.01 }
     }
 }
 

@@ -6313,6 +6313,7 @@ country_event = {
             #    }
             #    create_alliance = LOM
             #}
+            
             define_general = {
                 name = "Carlo Cattaneo"
                 personality = defiant
@@ -7124,8 +7125,8 @@ country_event = {
 
             define_general = {
                 name = "Daniele Manin"
-                personality = maladroit
-                background = nationalist
+                personality = inspiring
+                background = amateur
             }
             any_pop = {
                 limit = {
@@ -7473,8 +7474,8 @@ country_event = {
 
             define_general = {
                 name = "Daniele Manin"
-                personality = maladroit
-                background = nationalist
+                personality = inspiring
+                background = amateur
             }
             any_pop = {
                 limit = {
@@ -7764,8 +7765,8 @@ country_event = {
 
             define_general = {
                 name = "Daniele Manin"
-                personality = maladroit
-                background = nationalist
+                personality = inspiring
+                background = amateur
             }
             any_pop = {
                 limit = {

@@ -774,7 +774,7 @@ shift_work = {
 
 mechanization_7 = {
     area = mechanization
-    year = 1930
+    year = 1936
     cost = 25200
 
     rgo_output = 0.05
@@ -1789,7 +1789,7 @@ limited_access_roads = {
 
 tech_infrastructure_7 = {
     area = tech_infrastructure
-    year = 1930
+    year = 1936
     cost = 25200
 	
     #max_railroad = 1

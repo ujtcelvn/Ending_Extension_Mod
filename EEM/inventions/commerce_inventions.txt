@@ -1703,10 +1703,8 @@ import_substitution_industrialization = {
         }
         modifier = {
             factor = -4 #0
-            NOT = {
-                synthetic_polymers = 1
-                electric_furnace = 1
-            }
+            NOT = { synthetic_polymers = 1 }
+			NOT = { electric_furnace = 1 }
         }
     }
     effect = {

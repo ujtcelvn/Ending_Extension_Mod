@@ -478,6 +478,127 @@ country_event = {
     }
 }
 
+# Cholera Epidemic! - India
+country_event = {
+    title = "EVTNAME10230"
+    desc = "EVTDESC10230"
+    id = 10231
+    picture = "Cholera"
+
+    trigger = {
+        total_pops = 500000
+        OR = {
+            num_of_cities = 3
+            civilized = yes
+        }
+        NOT = { poor_strata_everyday_needs = 0.5 }
+        NOT = {
+            any_owned_province = {
+                OR = {
+                    has_province_modifier = cholera_epidemic_small
+                    has_province_modifier = cholera_epidemic_big
+                }
+            }
+        }
+        any_owned_province = {
+            total_pops = 500000
+            OR = {
+                region = ENG_1236 #United Provinces
+                region = ENG_1247 #Bihar
+                region = ENG_1251 #West Bengal
+                region = ENG_1252 #East Bengal
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 300
+        modifier = {
+            factor = 0.9
+            NOT = { poor_strata_life_needs = 0.9 }
+        }
+        modifier = {
+            factor = 0.9
+            NOT = { poor_strata_life_needs = 0.85 }
+        }
+        modifier = { 
+            factor = 0.9
+            NOT = { poor_strata_everyday_needs = 0.3 }
+        }
+        modifier = {
+            factor = 1.5
+            has_country_modifier = uncivilized_isolationism
+            NOT = { is_culture_group = indo_iranian }
+            NOT = { is_culture_group = south_asian }
+        }
+        modifier = {
+            factor = 2
+            medicine = 1
+        }
+        modifier = {
+            factor = 2
+            electricity = 1
+        }
+        modifier = {
+            factor = 2
+            health_care = acceptable_health_care
+        }
+        modifier = {
+            factor = 2
+            health_care = good_health_care
+        }
+        modifier = {
+            factor = 2
+            invention = improved_antibiotics
+        }
+    }
+
+    option = {
+        name = "EVTOPTA10230"
+        random_province = {
+            limit = {
+				total_pops = 500000
+				OR = {
+					region = ENG_1236 #United Provinces
+					region = ENG_1247 #Bihar
+					region = ENG_1251 #West Bengal
+					region = ENG_1252 #East Bengal
+				}
+            }
+            add_province_modifier = {
+                name = cholera_epidemic_small
+                duration = 180
+            }
+            any_pop = {
+                consciousness = 2
+                militancy = -1
+            }
+        }
+    }
+    option = {
+        name = "EVTOPTB10230"
+        random_province = {
+            limit = {
+				total_pops = 500000
+				OR = {
+					region = ENG_1236 #United Provinces
+					region = ENG_1247 #Bihar
+					region = ENG_1251 #West Bengal
+					region = ENG_1252 #East Bengal
+				}
+            }
+            add_province_modifier = {
+                name = cholera_epidemic_big
+                duration = 365
+            }
+            any_pop = {
+                consciousness = -2
+            }
+        }
+    }
+}
+
+
 # Cholera Spreads
 province_event = {
     title = "EVTNAME10240"
@@ -503,6 +624,16 @@ province_event = {
 
     mean_time_to_happen = {
         months = 150
+        modifier = {
+            factor = 0.9
+            total_pops = 500000
+            OR = {
+                region = ENG_1236 #United Provinces
+                region = ENG_1247 #Bihar
+                region = ENG_1251 #West Bengal
+                region = ENG_1252 #East Bengal
+            }
+        }
         modifier = {
             factor = 0.9
             NOT = { poor_strata_life_needs = 0.9 }

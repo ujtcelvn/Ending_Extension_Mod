@@ -1,4 +1,4 @@
 add_core = TSW
 terrain = semidesert
-trade_goods = grain
+trade_goods = cattle
 life_rating = 15

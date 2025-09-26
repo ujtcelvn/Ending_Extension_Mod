@@ -3,4 +3,5 @@ controller = BER
 add_core = BER
 add_core = HND
 trade_goods = fish
+terrain = steppe
 life_rating = 32

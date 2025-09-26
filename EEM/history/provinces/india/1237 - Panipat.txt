@@ -3,5 +3,6 @@ controller = ENG
 add_core = MUG
 add_core = HND
 trade_goods = cattle
+terrain = steppe
 life_rating = 32
 colonial = 2
