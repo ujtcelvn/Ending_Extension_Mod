@@ -1181,8 +1181,8 @@ female_suffrage = {
     core_pop_militancy_modifier = -0.02
     global_immigrant_attract = 0.05
 
-    global_population_growth = -0.001
-    factory_throughput = 0.01
+    #global_population_growth = -0.001
+    #factory_throughput = 0.01
     icon = 7
 }
 
@@ -2801,19 +2801,19 @@ recently_consulted_nuclear_plans = {
 #nuclear_program flag represents peaceful nuclear research and energy
 
 nuke_tier_0 = { #nuclear_weapons_program
-    supply_consumption = 0.25
+    supply_consumption = 0.5 #0.25
     icon = 19
 }
 
 nuke_tier_1 = { #has_f_bomb
     prestige = 0.001
-    supply_consumption = 0.5
+    supply_consumption = 1 #0.5
     icon = 19
 }
 
 nuke_tier_2 = { #has_lotsa_bomb
     prestige = 0.001
-    supply_consumption = 0.75
+    supply_consumption = 1.5 #0.75
     icon = 19
 }
 
