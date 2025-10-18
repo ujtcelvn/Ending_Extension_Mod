@@ -1,7 +1,7 @@
 owner = ENG
 controller = ENG
 add_core = AST
-trade_goods = grain
+trade_goods = fish
 terrain = dryhills
 life_rating = 32
 colonial = 2
